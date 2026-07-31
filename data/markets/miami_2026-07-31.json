@@ -6,7 +6,7 @@
   "station": "KMIA",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3215539",
     "question": "Will the highest temperature in Miami be between 96-97°F on July 31?",
@@ -32,7 +32,7 @@
     "stop_price": 0.25,
     "trailing_activated": true
   },
-  "actual_temp": null,
+  "actual_temp": 96.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -215,6 +215,16 @@
       "metar": 96,
       "best": 94,
       "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-07-31T20:37:46.723Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 95,
+      "hrrr": 96,
+      "metar": 92,
+      "best": 96,
+      "best_source": "hrrr"
     }
   ],
   "market_snapshots": [
@@ -307,6 +317,11 @@
       "ts": "2026-07-31T18:47:39.672Z",
       "top_bucket": "96-97F",
       "top_price": 0.905
+    },
+    {
+      "ts": "2026-07-31T20:37:46.723Z",
+      "top_bucket": "96-97F",
+      "top_price": 0.9975
     }
   ],
   "all_outcomes": [
@@ -360,7 +375,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 6720
+      "volume": 6733
     },
     {
       "question": "Will the highest temperature in Miami be between 94-95°F on July 31?",
@@ -373,7 +388,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 7663
+      "volume": 7671
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on July 31?",
@@ -382,11 +397,11 @@
         96,
         97
       ],
-      "bid": 0.905,
-      "ask": 0.095,
-      "price": 0.905,
-      "spread": -0.81,
-      "volume": 6001
+      "bid": 0.9975,
+      "ask": 0.0025,
+      "price": 0.9975,
+      "spread": -0.995,
+      "volume": 6796
     },
     {
       "question": "Will the highest temperature in Miami be between 98-99°F on July 31?",
@@ -395,11 +410,11 @@
         98,
         99
       ],
-      "bid": 0.069,
-      "ask": 0.931,
-      "price": 0.069,
-      "spread": 0.862,
-      "volume": 8109
+      "bid": 0.0025,
+      "ask": 0.9975,
+      "price": 0.0025,
+      "spread": 0.995,
+      "volume": 8666
     },
     {
       "question": "Will the highest temperature in Miami be between 100-101°F on July 31?",
@@ -408,11 +423,11 @@
         100,
         101
       ],
-      "bid": 0.0065,
-      "ask": 0.9935,
-      "price": 0.0065,
-      "spread": 0.987,
-      "volume": 1467
+      "bid": 0.0025,
+      "ask": 0.9975,
+      "price": 0.0025,
+      "spread": 0.995,
+      "volume": 1557
     },
     {
       "question": "Will the highest temperature in Miami be between 102-103°F on July 31?",
@@ -434,10 +449,10 @@
         104,
         105
       ],
-      "bid": 0.001,
-      "ask": 0.999,
-      "price": 0.001,
-      "spread": 0.998,
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
       "volume": 1065
     },
     {
