@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3198326",
     "question": "Will the highest temperature in Paris be 28°C on July 31?",
@@ -30,7 +30,7 @@
     "close_reason": "stop_loss",
     "closed_at": "2026-07-31T04:27:08.251Z"
   },
-  "actual_temp": null,
+  "actual_temp": 29,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -193,6 +193,16 @@
       "metar": 29,
       "best": 27.3,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T16:59:16.008Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 27.3,
+      "hrrr": null,
+      "metar": null,
+      "best": 27.3,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -275,6 +285,11 @@
       "ts": "2026-07-31T14:42:01.383Z",
       "top_bucket": "29-29C",
       "top_price": 0.76
+    },
+    {
+      "ts": "2026-07-31T16:59:16.008Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.988
     }
   ],
   "all_outcomes": [
@@ -289,7 +304,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 11559
+      "volume": 11781
     },
     {
       "question": "Will the highest temperature in Paris be 28°C on July 31?",
@@ -302,7 +317,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 12469
+      "volume": 15095
     },
     {
       "question": "Will the highest temperature in Paris be 29°C on July 31?",
@@ -311,11 +326,11 @@
         29,
         29
       ],
-      "bid": 0.76,
-      "ask": 0.24,
-      "price": 0.76,
-      "spread": -0.52,
-      "volume": 12294
+      "bid": 0.988,
+      "ask": 0.012,
+      "price": 0.988,
+      "spread": -0.976,
+      "volume": 18158
     },
     {
       "question": "Will the highest temperature in Paris be 30°C on July 31?",
@@ -324,11 +339,11 @@
         30,
         30
       ],
-      "bid": 0.255,
-      "ask": 0.745,
-      "price": 0.255,
-      "spread": 0.49,
-      "volume": 18727
+      "bid": 0.0105,
+      "ask": 0.9895,
+      "price": 0.0105,
+      "spread": 0.979,
+      "volume": 22804
     },
     {
       "question": "Will the highest temperature in Paris be 31°C on July 31?",
@@ -337,11 +352,11 @@
         31,
         31
       ],
-      "bid": 0.0065,
-      "ask": 0.9935,
-      "price": 0.0065,
-      "spread": 0.987,
-      "volume": 9366
+      "bid": 0.002,
+      "ask": 0.998,
+      "price": 0.002,
+      "spread": 0.996,
+      "volume": 10506
     },
     {
       "question": "Will the highest temperature in Paris be 32°C on July 31?",
@@ -350,11 +365,11 @@
         32,
         32
       ],
-      "bid": 0.004,
-      "ask": 0.996,
-      "price": 0.004,
-      "spread": 0.992,
-      "volume": 7107
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 7641
     },
     {
       "question": "Will the highest temperature in Paris be 33°C on July 31?",
@@ -363,10 +378,10 @@
         33,
         33
       ],
-      "bid": 0.002,
-      "ask": 0.998,
-      "price": 0.002,
-      "spread": 0.996,
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
       "volume": 2878
     },
     {

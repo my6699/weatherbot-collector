@@ -6,9 +6,9 @@
   "station": "EDDM",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 36,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -171,6 +171,16 @@
       "metar": 36,
       "best": 31.1,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T16:59:59.004Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 31.1,
+      "hrrr": null,
+      "metar": 24,
+      "best": 31.1,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -253,6 +263,11 @@
       "ts": "2026-07-31T14:42:02.284Z",
       "top_bucket": "36-36C",
       "top_price": 0.86
+    },
+    {
+      "ts": "2026-07-31T16:59:59.004Z",
+      "top_bucket": "36-36C",
+      "top_price": 0.9995
     }
   ],
   "all_outcomes": [
@@ -293,7 +308,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 5789
+      "volume": 5990
     },
     {
       "question": "Will the highest temperature in Munich be 35°C on July 31?",
@@ -306,7 +321,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 13794
+      "volume": 13998
     },
     {
       "question": "Will the highest temperature in Munich be 36°C on July 31?",
@@ -315,11 +330,11 @@
         36,
         36
       ],
-      "bid": 0.86,
-      "ask": 0.14,
-      "price": 0.86,
-      "spread": -0.72,
-      "volume": 11654
+      "bid": 0.9995,
+      "ask": 0.0005,
+      "price": 0.9995,
+      "spread": -0.999,
+      "volume": 15754
     },
     {
       "question": "Will the highest temperature in Munich be 37°C on July 31?",
@@ -328,11 +343,11 @@
         37,
         37
       ],
-      "bid": 0.145,
-      "ask": 0.855,
-      "price": 0.145,
-      "spread": 0.71,
-      "volume": 13507
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 16758
     },
     {
       "question": "Will the highest temperature in Munich be 38°C on July 31?",
@@ -341,11 +356,11 @@
         38,
         38
       ],
-      "bid": 0.006,
-      "ask": 0.994,
-      "price": 0.006,
-      "spread": 0.988,
-      "volume": 8138
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 10394
     },
     {
       "question": "Will the highest temperature in Munich be 39°C on July 31?",
@@ -358,7 +373,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 5709
+      "volume": 5721
     },
     {
       "question": "Will the highest temperature in Munich be 40°C on July 31?",

@@ -6,7 +6,7 @@
   "station": "LTAC",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3198354",
     "question": "Will the highest temperature in Ankara be 26°C on July 31?",
@@ -30,7 +30,7 @@
     "close_reason": "stop_loss",
     "closed_at": "2026-07-31T06:08:53.299Z"
   },
-  "actual_temp": null,
+  "actual_temp": 26,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -193,6 +193,16 @@
       "metar": 26,
       "best": 25.4,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T17:00:00.147Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 25.4,
+      "hrrr": null,
+      "metar": 22,
+      "best": 25.4,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -275,6 +285,11 @@
       "ts": "2026-07-31T14:42:03.230Z",
       "top_bucket": "26-26C",
       "top_price": 0.89
+    },
+    {
+      "ts": "2026-07-31T17:00:00.147Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.9995
     }
   ],
   "all_outcomes": [
@@ -328,7 +343,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 2966
+      "volume": 2992
     },
     {
       "question": "Will the highest temperature in Ankara be 26°C on July 31?",
@@ -337,11 +352,11 @@
         26,
         26
       ],
-      "bid": 0.89,
-      "ask": 0.11,
-      "price": 0.89,
-      "spread": -0.78,
-      "volume": 4751
+      "bid": 0.9995,
+      "ask": 0.0005,
+      "price": 0.9995,
+      "spread": -0.999,
+      "volume": 8424
     },
     {
       "question": "Will the highest temperature in Ankara be 27°C on July 31?",
@@ -350,11 +365,11 @@
         27,
         27
       ],
-      "bid": 0.11,
-      "ask": 0.89,
-      "price": 0.11,
-      "spread": 0.78,
-      "volume": 4851
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 7657
     },
     {
       "question": "Will the highest temperature in Ankara be 28°C on July 31?",
@@ -363,11 +378,11 @@
         28,
         28
       ],
-      "bid": 0.01,
-      "ask": 0.99,
-      "price": 0.01,
-      "spread": 0.98,
-      "volume": 4264
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 5067
     },
     {
       "question": "Will the highest temperature in Ankara be 29°C on July 31?",
@@ -376,11 +391,11 @@
         29,
         29
       ],
-      "bid": 0.003,
-      "ask": 0.997,
-      "price": 0.003,
-      "spread": 0.994,
-      "volume": 3377
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 3914
     },
     {
       "question": "Will the highest temperature in Ankara be 30°C on July 31?",
@@ -393,7 +408,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 2104
+      "volume": 2122
     },
     {
       "question": "Will the highest temperature in Ankara be 31°C on July 31?",
@@ -406,7 +421,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 1191
+      "volume": 1203
     },
     {
       "question": "Will the highest temperature in Ankara be 32°C or higher on July 31?",

@@ -24,11 +24,11 @@
     "forecast_src": "ecmwf",
     "sigma": 1.2,
     "opened_at": "2026-07-31T10:00:50.988Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null
+    "status": "closed",
+    "pnl": -4.76,
+    "exit_price": 0.16,
+    "close_reason": "stop_loss",
+    "closed_at": "2026-07-31T17:00:19.677Z"
   },
   "actual_temp": null,
   "resolved_outcome": null,
@@ -193,6 +193,16 @@
       "metar": null,
       "best": 26.3,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T16:59:16.008Z",
+      "horizon": "D+1",
+      "hours_left": 19,
+      "ecmwf": 26.3,
+      "hrrr": null,
+      "metar": null,
+      "best": 26.3,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -275,6 +285,11 @@
       "ts": "2026-07-31T14:42:01.383Z",
       "top_bucket": "28-28C",
       "top_price": 0.505
+    },
+    {
+      "ts": "2026-07-31T16:59:16.008Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.5
     }
   ],
   "all_outcomes": [
@@ -289,7 +304,7 @@
       "ask": 0.997,
       "price": 0.003,
       "spread": 0.994,
-      "volume": 718
+      "volume": 848
     },
     {
       "question": "Will the highest temperature in Paris be 26°C on August 1?",
@@ -302,7 +317,7 @@
       "ask": 0.985,
       "price": 0.015,
       "spread": 0.97,
-      "volume": 1774
+      "volume": 2092
     },
     {
       "question": "Will the highest temperature in Paris be 27°C on August 1?",
@@ -311,11 +326,11 @@
         27,
         27
       ],
-      "bid": 0.185,
-      "ask": 0.815,
-      "price": 0.185,
-      "spread": 0.63,
-      "volume": 3019
+      "bid": 0.17,
+      "ask": 0.83,
+      "price": 0.17,
+      "spread": 0.66,
+      "volume": 3282
     },
     {
       "question": "Will the highest temperature in Paris be 28°C on August 1?",
@@ -324,11 +339,11 @@
         28,
         28
       ],
-      "bid": 0.505,
-      "ask": 0.495,
-      "price": 0.505,
-      "spread": -0.01,
-      "volume": 2289
+      "bid": 0.5,
+      "ask": 0.5,
+      "price": 0.5,
+      "spread": 0,
+      "volume": 2935
     },
     {
       "question": "Will the highest temperature in Paris be 29°C on August 1?",
@@ -337,11 +352,11 @@
         29,
         29
       ],
-      "bid": 0.28,
-      "ask": 0.72,
-      "price": 0.28,
-      "spread": 0.44,
-      "volume": 3260
+      "bid": 0.31,
+      "ask": 0.69,
+      "price": 0.31,
+      "spread": 0.38,
+      "volume": 4054
     },
     {
       "question": "Will the highest temperature in Paris be 30°C on August 1?",
@@ -350,11 +365,11 @@
         30,
         30
       ],
-      "bid": 0.05,
-      "ask": 0.95,
-      "price": 0.05,
-      "spread": 0.9,
-      "volume": 1465
+      "bid": 0.045,
+      "ask": 0.955,
+      "price": 0.045,
+      "spread": 0.91,
+      "volume": 1670
     },
     {
       "question": "Will the highest temperature in Paris be 31°C on August 1?",
@@ -363,11 +378,11 @@
         31,
         31
       ],
-      "bid": 0.0055,
-      "ask": 0.9945,
-      "price": 0.0055,
-      "spread": 0.989,
-      "volume": 2001
+      "bid": 0.0045,
+      "ask": 0.9955,
+      "price": 0.0045,
+      "spread": 0.991,
+      "volume": 2137
     },
     {
       "question": "Will the highest temperature in Paris be 32°C on August 1?",
@@ -376,11 +391,11 @@
         32,
         32
       ],
-      "bid": 0.0045,
-      "ask": 0.9955,
-      "price": 0.0045,
-      "spread": 0.991,
-      "volume": 485
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 559
     },
     {
       "question": "Will the highest temperature in Paris be 33°C on August 1?",
@@ -389,11 +404,11 @@
         33,
         33
       ],
-      "bid": 0.0025,
-      "ask": 0.9975,
-      "price": 0.0025,
-      "spread": 0.995,
-      "volume": 774
+      "bid": 0.0015,
+      "ask": 0.9985,
+      "price": 0.0015,
+      "spread": 0.997,
+      "volume": 956
     },
     {
       "question": "Will the highest temperature in Paris be 34°C on August 1?",
