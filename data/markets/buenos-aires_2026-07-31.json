@@ -6,7 +6,7 @@
   "station": "SAEZ",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3215476",
     "question": "Will the highest temperature in Buenos Aires be 24°C on July 31?",
@@ -30,7 +30,7 @@
     "close_reason": "stop_loss",
     "closed_at": "2026-07-31T04:19:51.725Z"
   },
-  "actual_temp": null,
+  "actual_temp": 25,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -223,6 +223,16 @@
       "metar": 24,
       "best": 20.4,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T22:18:03.702Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 20.4,
+      "hrrr": null,
+      "metar": 25,
+      "best": 20.4,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -320,6 +330,11 @@
       "ts": "2026-07-31T20:38:50.247Z",
       "top_bucket": "24-24C",
       "top_price": 0.87
+    },
+    {
+      "ts": "2026-07-31T22:18:03.702Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.994
     }
   ],
   "all_outcomes": [
@@ -334,7 +349,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 1498
+      "volume": 1558
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on July 31?",
@@ -347,7 +362,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 8792
+      "volume": 8852
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 18°C on July 31?",
@@ -360,7 +375,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 6076
+      "volume": 6136
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 19°C on July 31?",
@@ -373,7 +388,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 4203
+      "volume": 4294
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on July 31?",
@@ -386,7 +401,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 3721
+      "volume": 3781
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on July 31?",
@@ -399,7 +414,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 4422
+      "volume": 4552
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C on July 31?",
@@ -412,7 +427,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 4491
+      "volume": 4551
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on July 31?",
@@ -425,7 +440,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 4868
+      "volume": 10037
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C on July 31?",
@@ -434,11 +449,11 @@
         24,
         24
       ],
-      "bid": 0.87,
-      "ask": 0.13,
-      "price": 0.87,
-      "spread": -0.74,
-      "volume": 6413
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 8724
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 25°C on July 31?",
@@ -447,11 +462,11 @@
         25,
         25
       ],
-      "bid": 0.1385,
-      "ask": 0.8615,
-      "price": 0.1385,
-      "spread": 0.723,
-      "volume": 1790
+      "bid": 0.994,
+      "ask": 0.006,
+      "price": 0.994,
+      "spread": -0.988,
+      "volume": 4852
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 26°C or higher on July 31?",
@@ -460,11 +475,11 @@
         26,
         999
       ],
-      "bid": 0.0045,
-      "ask": 0.9955,
-      "price": 0.0045,
-      "spread": 0.991,
-      "volume": 3060
+      "bid": 0.003,
+      "ask": 0.997,
+      "price": 0.003,
+      "spread": 0.994,
+      "volume": 5180
     }
   ],
   "created_at": "2026-07-31T03:49:41.989Z"

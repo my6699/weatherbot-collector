@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3215507",
     "question": "Will the highest temperature in New York City be between 86-87°F on July 31?",
@@ -30,7 +30,7 @@
     "close_reason": "stop_loss",
     "closed_at": "2026-07-31T18:47:33.971Z"
   },
-  "actual_temp": null,
+  "actual_temp": 84.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -223,6 +223,16 @@
       "metar": 84,
       "best": 87,
       "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-07-31T22:17:04.027Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 83,
+      "hrrr": 84,
+      "metar": 82,
+      "best": 84,
+      "best_source": "hrrr"
     }
   ],
   "market_snapshots": [
@@ -320,6 +330,11 @@
       "ts": "2026-07-31T20:37:45.304Z",
       "top_bucket": "84-85F",
       "top_price": 0.76
+    },
+    {
+      "ts": "2026-07-31T22:17:04.027Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.9985
     }
   ],
   "all_outcomes": [
@@ -373,7 +388,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 7623
+      "volume": 7633
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on July 31?",
@@ -386,7 +401,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 8268
+      "volume": 8348
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on July 31?",
@@ -395,11 +410,11 @@
         84,
         85
       ],
-      "bid": 0.76,
-      "ask": 0.24,
-      "price": 0.76,
-      "spread": -0.52,
-      "volume": 8927
+      "bid": 0.9985,
+      "ask": 0.0015,
+      "price": 0.9985,
+      "spread": -0.997,
+      "volume": 16023
     },
     {
       "question": "Will the highest temperature in New York City be between 86-87°F on July 31?",
@@ -408,11 +423,11 @@
         86,
         87
       ],
-      "bid": 0.21,
-      "ask": 0.79,
-      "price": 0.21,
-      "spread": 0.58,
-      "volume": 7365
+      "bid": 0.0035,
+      "ask": 0.9965,
+      "price": 0.0035,
+      "spread": 0.993,
+      "volume": 11624
     },
     {
       "question": "Will the highest temperature in New York City be between 88-89°F on July 31?",
@@ -421,11 +436,11 @@
         88,
         89
       ],
-      "bid": 0.035,
-      "ask": 0.965,
-      "price": 0.035,
-      "spread": 0.93,
-      "volume": 6405
+      "bid": 0.0015,
+      "ask": 0.9985,
+      "price": 0.0015,
+      "spread": 0.997,
+      "volume": 8816
     },
     {
       "question": "Will the highest temperature in New York City be between 90-91°F on July 31?",
@@ -434,11 +449,11 @@
         90,
         91
       ],
-      "bid": 0.0015,
-      "ask": 0.9985,
-      "price": 0.0015,
-      "spread": 0.997,
-      "volume": 2366
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 2586
     },
     {
       "question": "Will the highest temperature in New York City be between 92-93°F on July 31?",
@@ -451,7 +466,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 2783
+      "volume": 2801
     },
     {
       "question": "Will the highest temperature in New York City be 94°F or higher on July 31?",
