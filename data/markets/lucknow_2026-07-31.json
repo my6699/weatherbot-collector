@@ -24,11 +24,11 @@
     "forecast_src": "ecmwf",
     "sigma": 1.2,
     "opened_at": "2026-07-31T03:49:11.713Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null,
+    "status": "closed",
+    "pnl": 20.71,
+    "exit_price": 0.855,
+    "close_reason": "forecast_changed",
+    "closed_at": "2026-07-31T10:01:24.894Z",
     "stop_price": 0.42,
     "trailing_activated": true
   },
@@ -165,6 +165,16 @@
       "metar": 31,
       "best": 32,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T10:01:24.894Z",
+      "horizon": "D+0",
+      "hours_left": 2,
+      "ecmwf": 30.9,
+      "hrrr": null,
+      "metar": 32,
+      "best": 30.9,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -232,6 +242,11 @@
       "ts": "2026-07-31T06:47:28.870Z",
       "top_bucket": "32-32C",
       "top_price": 0.535
+    },
+    {
+      "ts": "2026-07-31T10:01:24.894Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.855
     }
   ],
   "all_outcomes": [
@@ -307,11 +322,11 @@
         31,
         31
       ],
-      "bid": 0.14,
-      "ask": 0.86,
-      "price": 0.14,
-      "spread": 0.72,
-      "volume": 907
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 2407
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C on July 31?",
@@ -320,11 +335,11 @@
         32,
         32
       ],
-      "bid": 0.535,
-      "ask": 0.465,
-      "price": 0.535,
-      "spread": -0.07,
-      "volume": 1640
+      "bid": 0.855,
+      "ask": 0.145,
+      "price": 0.855,
+      "spread": -0.71,
+      "volume": 3014
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on July 31?",
@@ -333,11 +348,11 @@
         33,
         33
       ],
-      "bid": 0.345,
-      "ask": 0.655,
-      "price": 0.345,
-      "spread": 0.31,
-      "volume": 3042
+      "bid": 0.145,
+      "ask": 0.855,
+      "price": 0.145,
+      "spread": 0.71,
+      "volume": 3937
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C on July 31?",
@@ -346,11 +361,11 @@
         34,
         34
       ],
-      "bid": 0.035,
-      "ask": 0.965,
-      "price": 0.035,
-      "spread": 0.93,
-      "volume": 1716
+      "bid": 0.0125,
+      "ask": 0.9875,
+      "price": 0.0125,
+      "spread": 0.975,
+      "volume": 2490
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on July 31?",
@@ -359,11 +374,11 @@
         35,
         35
       ],
-      "bid": 0.003,
-      "ask": 0.997,
-      "price": 0.003,
-      "spread": 0.994,
-      "volume": 815
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 1142
     },
     {
       "question": "Will the highest temperature in Lucknow be 36°C or higher on July 31?",
@@ -372,11 +387,11 @@
         36,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.998,
-      "price": 0.002,
-      "spread": 0.996,
-      "volume": 1202
+      "bid": 0.001,
+      "ask": 0.999,
+      "price": 0.001,
+      "spread": 0.998,
+      "volume": 1620
     }
   ],
   "created_at": "2026-07-31T03:49:12.802Z"
