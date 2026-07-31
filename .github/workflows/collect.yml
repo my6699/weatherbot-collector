@@ -1,18 +1,16 @@
-# 每小时定时搜集 Polymarket 天气市场数据，并把结果 commit 回仓库。
-# 也可以手动触发（Actions 页面 "Run workflow"）。
+# Hourly data collection for Polymarket weather markets.
+# Manual trigger available via the Actions page.
 
 name: collect-data
 
 on:
   schedule:
-    # 每小时的 :23 分（UTC）执行，错开整点避免与其它任务撞车
     - cron: "23 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
-# 同一时间只允许一个搜集任务，避免并发 commit 冲突
 concurrency:
   group: collect-data
   cancel-in-progress: false
