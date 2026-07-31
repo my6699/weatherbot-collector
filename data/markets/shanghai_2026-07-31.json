@@ -6,9 +6,9 @@
   "station": "ZSPD",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 37,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -151,6 +151,16 @@
       "metar": 33,
       "best": 35.4,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T12:22:28.735Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 35.4,
+      "hrrr": null,
+      "metar": 30,
+      "best": 35.4,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -223,6 +233,11 @@
       "ts": "2026-07-31T10:01:21.915Z",
       "top_bucket": "37-37C",
       "top_price": 0.9995
+    },
+    {
+      "ts": "2026-07-31T12:22:28.735Z",
+      "top_bucket": "37-37C",
+      "top_price": 0.9995
     }
   ],
   "all_outcomes": [
@@ -276,7 +291,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 19115
+      "volume": 23243
     },
     {
       "question": "Will the highest temperature in Shanghai be 35°C on July 31?",
@@ -289,7 +304,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 32883
+      "volume": 35009
     },
     {
       "question": "Will the highest temperature in Shanghai be 36°C on July 31?",
@@ -302,7 +317,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 49629
+      "volume": 51533
     },
     {
       "question": "Will the highest temperature in Shanghai be 37°C on July 31?",
@@ -315,7 +330,7 @@
       "ask": 0.0005,
       "price": 0.9995,
       "spread": -0.999,
-      "volume": 31760
+      "volume": 36659
     },
     {
       "question": "Will the highest temperature in Shanghai be 38°C on July 31?",
@@ -328,7 +343,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 34929
+      "volume": 37315
     },
     {
       "question": "Will the highest temperature in Shanghai be 39°C on July 31?",

@@ -6,9 +6,9 @@
   "station": "NZWN",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 15,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -151,6 +151,16 @@
       "metar": 11,
       "best": 12.9,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T12:22:34.479Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 11,
+      "best": null,
+      "best_source": null
     }
   ],
   "market_snapshots": [
@@ -221,6 +231,11 @@
     },
     {
       "ts": "2026-07-31T10:02:15.605Z",
+      "top_bucket": "15-15C",
+      "top_price": 0.9995
+    },
+    {
+      "ts": "2026-07-31T12:22:34.479Z",
       "top_bucket": "15-15C",
       "top_price": 0.9995
     }
@@ -302,7 +317,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 22713
+      "volume": 23155
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on July 31?",
@@ -328,7 +343,7 @@
       "ask": 0.0005,
       "price": 0.9995,
       "spread": -0.999,
-      "volume": 21943
+      "volume": 22148
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on July 31?",

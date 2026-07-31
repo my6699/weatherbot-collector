@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "3215528",
     "question": "Will the highest temperature in Atlanta be between 92-93°F on July 31?",
@@ -173,6 +173,16 @@
       "metar": 73,
       "best": 91,
       "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-07-31T12:22:21.457Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 90,
+      "hrrr": 92,
+      "metar": 73,
+      "best": 92,
+      "best_source": "hrrr"
     }
   ],
   "market_snapshots": [
@@ -245,6 +255,11 @@
       "ts": "2026-07-31T10:00:46.225Z",
       "top_bucket": "90-91F",
       "top_price": 0.54
+    },
+    {
+      "ts": "2026-07-31T12:22:21.457Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.545
     }
   ],
   "all_outcomes": [
@@ -255,11 +270,11 @@
         -999,
         83
       ],
-      "bid": 0.0005,
-      "ask": 0.9995,
-      "price": 0.0005,
-      "spread": 0.999,
-      "volume": 3213
+      "bid": 0.0045,
+      "ask": 0.9955,
+      "price": 0.0045,
+      "spread": 0.991,
+      "volume": 3303
     },
     {
       "question": "Will the highest temperature in Atlanta be between 84-85°F on July 31?",
@@ -268,11 +283,11 @@
         84,
         85
       ],
-      "bid": 0.0015,
-      "ask": 0.9985,
-      "price": 0.0015,
-      "spread": 0.997,
-      "volume": 645
+      "bid": 0.0025,
+      "ask": 0.9975,
+      "price": 0.0025,
+      "spread": 0.995,
+      "volume": 681
     },
     {
       "question": "Will the highest temperature in Atlanta be between 86-87°F on July 31?",
@@ -281,11 +296,11 @@
         86,
         87
       ],
-      "bid": 0.006,
-      "ask": 0.994,
-      "price": 0.006,
-      "spread": 0.988,
-      "volume": 1698
+      "bid": 0.0065,
+      "ask": 0.9935,
+      "price": 0.0065,
+      "spread": 0.987,
+      "volume": 1707
     },
     {
       "question": "Will the highest temperature in Atlanta be between 88-89°F on July 31?",
@@ -294,11 +309,11 @@
         88,
         89
       ],
-      "bid": 0.26,
-      "ask": 0.74,
-      "price": 0.26,
-      "spread": 0.48,
-      "volume": 2688
+      "bid": 0.215,
+      "ask": 0.785,
+      "price": 0.215,
+      "spread": 0.57,
+      "volume": 2815
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on July 31?",
@@ -307,11 +322,11 @@
         90,
         91
       ],
-      "bid": 0.54,
-      "ask": 0.46,
-      "price": 0.54,
-      "spread": -0.08,
-      "volume": 2726
+      "bid": 0.545,
+      "ask": 0.455,
+      "price": 0.545,
+      "spread": -0.09,
+      "volume": 2765
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on July 31?",
@@ -320,11 +335,11 @@
         92,
         93
       ],
-      "bid": 0.15,
-      "ask": 0.85,
-      "price": 0.15,
-      "spread": 0.7,
-      "volume": 3343
+      "bid": 0.225,
+      "ask": 0.775,
+      "price": 0.225,
+      "spread": 0.55,
+      "volume": 3380
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on July 31?",
@@ -337,7 +352,7 @@
       "ask": 0.98,
       "price": 0.02,
       "spread": 0.96,
-      "volume": 1658
+      "volume": 1691
     },
     {
       "question": "Will the highest temperature in Atlanta be between 96-97°F on July 31?",

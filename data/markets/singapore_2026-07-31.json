@@ -6,9 +6,9 @@
   "station": "WSSS",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -151,6 +151,16 @@
       "metar": 31,
       "best": 31.1,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T12:22:29.511Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 31.1,
+      "hrrr": null,
+      "metar": 29,
+      "best": 31.1,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -223,6 +233,11 @@
       "ts": "2026-07-31T10:01:23.012Z",
       "top_bucket": "32-32C",
       "top_price": 0.998
+    },
+    {
+      "ts": "2026-07-31T12:22:29.511Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.9995
     }
   ],
   "all_outcomes": [
@@ -289,7 +304,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 7696
+      "volume": 7697
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on July 31?",
@@ -302,7 +317,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 6873
+      "volume": 6876
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on July 31?",
@@ -311,11 +326,11 @@
         32,
         32
       ],
-      "bid": 0.998,
-      "ask": 0.002,
-      "price": 0.998,
-      "spread": -0.996,
-      "volume": 6893
+      "bid": 0.9995,
+      "ask": 0.0005,
+      "price": 0.9995,
+      "spread": -0.999,
+      "volume": 7485
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on July 31?",
@@ -324,11 +339,11 @@
         33,
         33
       ],
-      "bid": 0.0025,
-      "ask": 0.9975,
-      "price": 0.0025,
-      "spread": 0.995,
-      "volume": 9077
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 9822
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on July 31?",
@@ -337,11 +352,11 @@
         34,
         34
       ],
-      "bid": 0.001,
-      "ask": 0.999,
-      "price": 0.001,
-      "spread": 0.998,
-      "volume": 5045
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 5168
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on July 31?",
