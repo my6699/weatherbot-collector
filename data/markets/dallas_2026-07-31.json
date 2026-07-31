@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3215516",
     "question": "Will the highest temperature in Dallas be between 104-105°F on July 31?",
@@ -32,7 +32,7 @@
     "stop_price": 0.22,
     "trailing_activated": true
   },
-  "actual_temp": null,
+  "actual_temp": 102.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -235,6 +235,16 @@
       "metar": 101,
       "best": 104,
       "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-07-31T23:17:54.143Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 105,
+      "hrrr": 104,
+      "metar": 102,
+      "best": 104,
+      "best_source": "hrrr"
     }
   ],
   "market_snapshots": [
@@ -337,6 +347,11 @@
       "ts": "2026-07-31T22:17:07.179Z",
       "top_bucket": "100-101F",
       "top_price": 0.73
+    },
+    {
+      "ts": "2026-07-31T23:17:54.143Z",
+      "top_bucket": "102-103F",
+      "top_price": 0.994
     }
   ],
   "all_outcomes": [
@@ -364,7 +379,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 8710
+      "volume": 8711
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on July 31?",
@@ -373,11 +388,11 @@
         100,
         101
       ],
-      "bid": 0.73,
-      "ask": 0.27,
-      "price": 0.73,
-      "spread": -0.46,
-      "volume": 10087
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 12195
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on July 31?",
@@ -386,11 +401,11 @@
         102,
         103
       ],
-      "bid": 0.34,
-      "ask": 0.66,
-      "price": 0.34,
-      "spread": 0.32,
-      "volume": 4599
+      "bid": 0.994,
+      "ask": 0.006,
+      "price": 0.994,
+      "spread": -0.988,
+      "volume": 5333
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on July 31?",
@@ -403,7 +418,7 @@
       "ask": 0.9945,
       "price": 0.0055,
       "spread": 0.989,
-      "volume": 4886
+      "volume": 5591
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on July 31?",
@@ -416,7 +431,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 3607
+      "volume": 4832
     },
     {
       "question": "Will the highest temperature in Dallas be between 108-109°F on July 31?",
@@ -429,7 +444,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 3736
+      "volume": 4073
     },
     {
       "question": "Will the highest temperature in Dallas be between 110-111°F on July 31?",
