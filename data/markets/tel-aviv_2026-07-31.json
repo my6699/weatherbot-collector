@@ -6,9 +6,9 @@
   "station": "LLBG",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 34,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -161,6 +161,16 @@
       "metar": 33,
       "best": 35.9,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T14:42:08.395Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 35.9,
+      "hrrr": null,
+      "metar": 33,
+      "best": 35.9,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -238,6 +248,11 @@
       "ts": "2026-07-31T12:22:31.094Z",
       "top_bucket": "34-34C",
       "top_price": 0.53
+    },
+    {
+      "ts": "2026-07-31T14:42:08.395Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.995
     }
   ],
   "all_outcomes": [
@@ -252,7 +267,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 4559
+      "volume": 4561
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 30°C on July 31?",
@@ -265,7 +280,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 2838
+      "volume": 2849
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 31°C on July 31?",
@@ -278,7 +293,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 2946
+      "volume": 2947
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 32°C on July 31?",
@@ -291,7 +306,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 1498
+      "volume": 1499
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on July 31?",
@@ -300,11 +315,11 @@
         33,
         33
       ],
-      "bid": 0.48,
-      "ask": 0.52,
-      "price": 0.48,
-      "spread": 0.04,
-      "volume": 9369
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 11746
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on July 31?",
@@ -313,11 +328,11 @@
         34,
         34
       ],
-      "bid": 0.53,
-      "ask": 0.465,
-      "price": 0.53,
-      "spread": -0.065,
-      "volume": 6932
+      "bid": 0.995,
+      "ask": 0.005,
+      "price": 0.995,
+      "spread": -0.99,
+      "volume": 8967
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on July 31?",
@@ -326,11 +341,11 @@
         35,
         35
       ],
-      "bid": 0.02,
-      "ask": 0.98,
-      "price": 0.02,
-      "spread": 0.96,
-      "volume": 4796
+      "bid": 0.005,
+      "ask": 0.995,
+      "price": 0.005,
+      "spread": 0.99,
+      "volume": 6456
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 36°C on July 31?",
@@ -339,11 +354,11 @@
         36,
         36
       ],
-      "bid": 0.0035,
-      "ask": 0.9965,
-      "price": 0.0035,
-      "spread": 0.993,
-      "volume": 2340
+      "bid": 0.004,
+      "ask": 0.996,
+      "price": 0.004,
+      "spread": 0.992,
+      "volume": 3434
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 37°C on July 31?",
@@ -356,7 +371,7 @@
       "ask": 0.9985,
       "price": 0.0015,
       "spread": 0.997,
-      "volume": 1699
+      "volume": 1979
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 38°C on July 31?",
@@ -369,7 +384,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 533
+      "volume": 534
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 39°C or higher on July 31?",
@@ -382,7 +397,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 12911
+      "volume": 12912
     }
   ],
   "created_at": "2026-07-31T03:49:16.157Z"
