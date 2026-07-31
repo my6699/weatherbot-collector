@@ -24,11 +24,11 @@
     "forecast_src": "hrrr",
     "sigma": 2,
     "opened_at": "2026-07-31T14:41:55.144Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null
+    "status": "closed",
+    "pnl": -4.54,
+    "exit_price": 0.34,
+    "close_reason": "stop_loss",
+    "closed_at": "2026-07-31T18:48:44.623Z"
   },
   "actual_temp": null,
   "resolved_outcome": null,
@@ -203,6 +203,16 @@
       "metar": null,
       "best": 87,
       "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-07-31T18:47:33.971Z",
+      "horizon": "D+1",
+      "hours_left": 17.2,
+      "ecmwf": 81,
+      "hrrr": 87,
+      "metar": null,
+      "best": 87,
+      "best_source": "hrrr"
     }
   ],
   "market_snapshots": [
@@ -290,6 +300,11 @@
       "ts": "2026-07-31T16:59:07.675Z",
       "top_bucket": "86-87F",
       "top_price": 0.375
+    },
+    {
+      "ts": "2026-07-31T18:47:33.971Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.365
     }
   ],
   "all_outcomes": [
@@ -317,7 +332,7 @@
       "ask": 0.998,
       "price": 0.002,
       "spread": 0.996,
-      "volume": 285
+      "volume": 310
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on August 1?",
@@ -330,7 +345,7 @@
       "ask": 0.9965,
       "price": 0.0035,
       "spread": 0.993,
-      "volume": 216
+      "volume": 226
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on August 1?",
@@ -343,7 +358,7 @@
       "ask": 0.975,
       "price": 0.025,
       "spread": 0.95,
-      "volume": 372
+      "volume": 376
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on August 1?",
@@ -352,11 +367,11 @@
         82,
         83
       ],
-      "bid": 0.155,
-      "ask": 0.845,
-      "price": 0.155,
-      "spread": 0.69,
-      "volume": 673
+      "bid": 0.17,
+      "ask": 0.83,
+      "price": 0.17,
+      "spread": 0.66,
+      "volume": 837
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on August 1?",
@@ -365,11 +380,11 @@
         84,
         85
       ],
-      "bid": 0.355,
-      "ask": 0.645,
-      "price": 0.355,
-      "spread": 0.29,
-      "volume": 2421
+      "bid": 0.365,
+      "ask": 0.635,
+      "price": 0.365,
+      "spread": 0.27,
+      "volume": 2460
     },
     {
       "question": "Will the highest temperature in New York City be between 86-87°F on August 1?",
@@ -378,11 +393,11 @@
         86,
         87
       ],
-      "bid": 0.375,
-      "ask": 0.625,
-      "price": 0.375,
-      "spread": 0.25,
-      "volume": 1013
+      "bid": 0.355,
+      "ask": 0.645,
+      "price": 0.355,
+      "spread": 0.29,
+      "volume": 1059
     },
     {
       "question": "Will the highest temperature in New York City be between 88-89°F on August 1?",
@@ -391,11 +406,11 @@
         88,
         89
       ],
-      "bid": 0.1,
-      "ask": 0.9,
-      "price": 0.1,
-      "spread": 0.8,
-      "volume": 1081
+      "bid": 0.095,
+      "ask": 0.905,
+      "price": 0.095,
+      "spread": 0.81,
+      "volume": 1104
     },
     {
       "question": "Will the highest temperature in New York City be between 90-91°F on August 1?",
@@ -404,11 +419,11 @@
         90,
         91
       ],
-      "bid": 0.035,
-      "ask": 0.965,
-      "price": 0.035,
-      "spread": 0.93,
-      "volume": 322
+      "bid": 0.03,
+      "ask": 0.97,
+      "price": 0.03,
+      "spread": 0.94,
+      "volume": 348
     },
     {
       "question": "Will the highest temperature in New York City be between 92-93°F on August 1?",
@@ -421,7 +436,7 @@
       "ask": 0.9955,
       "price": 0.0045,
       "spread": 0.991,
-      "volume": 210
+      "volume": 229
     },
     {
       "question": "Will the highest temperature in New York City be 94°F or higher on August 1?",
@@ -434,7 +449,7 @@
       "ask": 0.998,
       "price": 0.002,
       "spread": 0.996,
-      "volume": 146
+      "volume": 179
     }
   ],
   "created_at": "2026-07-31T03:48:26.351Z"

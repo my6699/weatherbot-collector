@@ -6,9 +6,9 @@
   "station": "EGLC",
   "event_end_date": "2026-07-31T12:00:00Z",
   "hours_at_discovery": 8.2,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 25,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -181,6 +181,16 @@
       "metar": 25,
       "best": 24.8,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-07-31T18:48:25.497Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 24.8,
+      "hrrr": null,
+      "metar": 25,
+      "best": 24.8,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -268,6 +278,11 @@
       "ts": "2026-07-31T16:59:15.013Z",
       "top_bucket": "25-25C",
       "top_price": 0.53
+    },
+    {
+      "ts": "2026-07-31T18:48:25.497Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.994
     }
   ],
   "all_outcomes": [
@@ -295,7 +310,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 6051
+      "volume": 6076
     },
     {
       "question": "Will the highest temperature in London be 23°C on July 31?",
@@ -321,7 +336,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 26339
+      "volume": 26440
     },
     {
       "question": "Will the highest temperature in London be 25°C on July 31?",
@@ -330,11 +345,11 @@
         25,
         25
       ],
-      "bid": 0.53,
-      "ask": 0.47,
-      "price": 0.53,
-      "spread": -0.06,
-      "volume": 22062
+      "bid": 0.994,
+      "ask": 0.006,
+      "price": 0.994,
+      "spread": -0.988,
+      "volume": 30746
     },
     {
       "question": "Will the highest temperature in London be 26°C on July 31?",
@@ -343,11 +358,11 @@
         26,
         26
       ],
-      "bid": 0.49,
-      "ask": 0.51,
-      "price": 0.49,
-      "spread": 0.02,
-      "volume": 15840
+      "bid": 0.005,
+      "ask": 0.995,
+      "price": 0.005,
+      "spread": 0.99,
+      "volume": 21386
     },
     {
       "question": "Will the highest temperature in London be 27°C on July 31?",
@@ -356,11 +371,11 @@
         27,
         27
       ],
-      "bid": 0.005,
-      "ask": 0.995,
-      "price": 0.005,
-      "spread": 0.99,
-      "volume": 13820
+      "bid": 0.002,
+      "ask": 0.998,
+      "price": 0.002,
+      "spread": 0.996,
+      "volume": 14847
     },
     {
       "question": "Will the highest temperature in London be 28°C on July 31?",
@@ -369,11 +384,11 @@
         28,
         28
       ],
-      "bid": 0.001,
-      "ask": 0.999,
-      "price": 0.001,
-      "spread": 0.998,
-      "volume": 10157
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 10210
     },
     {
       "question": "Will the highest temperature in London be 29°C on July 31?",
