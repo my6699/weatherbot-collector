@@ -15,6 +15,12 @@ interface Snap {
   metar?: number | null;
   best?: number | null;
   best_source?: string | null;
+  ens?: {
+    models?: Record<string, number>;
+    mean?: number;
+    spread?: number;
+    gap?: number;
+  } | null;
 }
 
 interface Market {
@@ -42,6 +48,14 @@ function errorsFor(m: Market, src: "ecmwf" | "hrrr" | "metar"): { err: number; s
   const f = lastVal(m.forecast_snapshots, src);
   if (f == null) return null;
   return { err: Math.abs(f - m.actual_temp), signed: f - m.actual_temp };
+}
+
+function lastEnsMean(snaps: Snap[]): number | null {
+  for (let i = snaps.length - 1; i >= 0; i--) {
+    const mean = snaps[i]?.ens?.mean;
+    if (mean != null) return mean;
+  }
+  return null;
 }
 
 const srcs = ["ecmwf", "hrrr", "metar"] as const;
@@ -110,9 +124,40 @@ function analyze() {
     console.log(`best    | ${n} | ${mae.toFixed(2)} | ${rmse.toFixed(2)} | ${(bias >= 0 ? "+" : "")}${bias.toFixed(2)}          | ${Math.max(...bestEs.map((e) => e.err)).toFixed(1)}`);
   }
 
-  // Suggested sigma (RMSE) vs current defaults
+  // Ensemble mean stats (weighted ECMWF+GFS+ICON blend)
+  const ensEs = resolved
+    .map((m) => {
+      if (m.actual_temp == null) return null;
+      const mean = lastEnsMean(m.forecast_snapshots);
+      if (mean == null) return null;
+      return { err: Math.abs(mean - m.actual_temp), signed: mean - m.actual_temp };
+    })
+    .filter((e): e is { err: number; signed: number } => e != null);
+  if (ensEs.length) {
+    const n = ensEs.length;
+    const mae = ensEs.reduce((a, e) => a + e.err, 0) / n;
+    const rmse = Math.sqrt(ensEs.reduce((a, e) => a + e.err * e.err, 0) / n);
+    const bias = ensEs.reduce((a, e) => a + e.signed, 0) / n;
+    console.log(`ensmean | ${n} | ${mae.toFixed(2)} | ${rmse.toFixed(2)} | ${(bias >= 0 ? "+" : "")}${bias.toFixed(2)}          | ${Math.max(...ensEs.map((e) => e.err)).toFixed(1)}`);
+  }
+
+  // Ensemble disagreement summary (avg spread / gap of the last snapshot per market)
+  const dis = resolved
+    .map((m) => {
+      const last = m.forecast_snapshots[m.forecast_snapshots.length - 1]?.ens;
+      return last ? { spread: last.spread ?? 0, gap: last.gap ?? 0 } : null;
+    })
+    .filter((e): e is { spread: number; gap: number } => e != null);
+  if (dis.length) {
+    const avg = (k: "spread" | "gap") => dis.reduce((a, d) => a + d[k], 0) / dis.length;
+    console.log(`\n=== Ensemble disagreement (last snapshot) ===`);
+    console.log(`  n=${dis.length} | avg spread ${avg("spread").toFixed(2)}° | avg ECMWF-vs-GFS gap ${avg("gap").toFixed(2)}°`);
+    console.log(`  (when gap exceeds ~1C/2F, the bot skips the trade — consensus gate)`);
+  }
+
+  // Suggested sigma (RMSE as sigma) vs current defaults
   console.log("\n=== Suggested sigma (RMSE as sigma, else current defaults) ===");
-  console.log(`SIGMA_F default = 2.0 | SIGMA_C default = 1.2`);
+  console.log(`SIGMA_F default = 1.7 | SIGMA_C default = 2.3`);
 }
 
 analyze();

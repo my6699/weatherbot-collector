@@ -16,6 +16,7 @@ import {
   STATE_FILE,
 } from "./config.js";
 import type { GammaEvent } from "./polymarket.js";
+import type { EnsembleForecast } from "./forecasts.js";
 
 export interface OutcomeRow {
   question: string;
@@ -37,6 +38,8 @@ export interface ForecastSnap {
   metar?: number | null;
   best?: number | null;
   best_source?: string | null;
+  /** Multi-model ensemble data (when available). */
+  ens?: EnsembleForecast | null;
 }
 
 export interface MarketSnap {
@@ -83,6 +86,8 @@ export interface MarketRecord {
   hours_at_discovery: number;
   status: string;
   position: Position | null;
+  /** Multiple positions per market (bucket spread); `position` mirrors the first. */
+  positions?: Position[];
   actual_temp: number | null;
   resolved_outcome: string | null;
   pnl: number | null;
@@ -104,6 +109,8 @@ export interface SimState {
 export interface CalEntry {
   sigma: number;
   n: number;
+  /** Mean signed error (forecast - actual) used for rolling bias correction. */
+  bias?: number;
   updated_at: string;
 }
 
@@ -136,6 +143,14 @@ export function getSigma(citySlug: string, source = "ecmwf"): number {
   return loc?.unit === "F" ? SIGMA_F : SIGMA_C;
 }
 
+/** Rolling signed-error bias for a (city, source). Returns 0 if no calibration yet. */
+export function getBias(citySlug: string, source: string): number | null {
+  const cal = loadCal();
+  const key = `${citySlug}_${source}`;
+  const entry = cal[key];
+  return entry?.bias ?? null;
+}
+
 function lastTempForSource(snaps: ForecastSnap[], source: string): number | null {
   for (let i = snaps.length - 1; i >= 0; i--) {
     const s = snaps[i];
@@ -159,18 +174,24 @@ export function runCalibration(markets: MarketRecord[]): Record<string, CalEntry
       if (!loc) continue;
       const group = resolved.filter((m) => m.city === city);
       const errors: number[] = [];
+      const signed: number[] = [];
       for (const m of group) {
         const t = lastTempForSource(m.forecast_snapshots ?? [], source);
-        if (t != null && m.actual_temp != null) errors.push(Math.abs(t - m.actual_temp));
+        if (t != null && m.actual_temp != null) {
+          errors.push(Math.abs(t - m.actual_temp));
+          signed.push(t - m.actual_temp);
+        }
       }
       if (errors.length < CALIBRATION_MIN) continue;
       const mae = errors.reduce((a, b) => a + b, 0) / errors.length;
+      const bias = signed.reduce((a, b) => a + b, 0) / signed.length;
       const key = `${city}_${source}`;
       const old = cal[key]?.sigma ?? (loc.unit === "F" ? SIGMA_F : SIGMA_C);
       const newSigma = Math.round(mae * 1000) / 1000;
       cal[key] = {
         sigma: newSigma,
         n: errors.length,
+        bias: Math.round(bias * 1000) / 1000,
         updated_at: new Date().toISOString(),
       };
       if (Math.abs(newSigma - old) > 0.05) {
@@ -214,6 +235,24 @@ export function loadAllMarkets(): MarketRecord[] {
   return markets;
 }
 
+/** All positions of a market (legacy `position` treated as the single position). */
+export function allPositions(m: MarketRecord): Position[] {
+  if (m.positions && m.positions.length) return m.positions;
+  return m.position ? [m.position] : [];
+}
+
+/** Positions still open for a market. */
+export function openPositions(m: MarketRecord): Position[] {
+  return allPositions(m).filter((p) => p.status === "open");
+}
+
+/** Append a position and mirror it into the legacy single `position` field. */
+export function appendPosition(m: MarketRecord, pos: Position): void {
+  if (!m.positions) m.positions = [];
+  m.positions.push(pos);
+  m.position = m.positions[0] ?? null;
+}
+
 export function newMarket(citySlug: string, dateStr: string, event: GammaEvent, hours: number): MarketRecord {
   const loc = LOCATIONS[citySlug]!;
   return {
@@ -226,6 +265,7 @@ export function newMarket(citySlug: string, dateStr: string, event: GammaEvent, 
     hours_at_discovery: Math.round(hours * 10) / 10,
     status: "open",
     position: null,
+    positions: [],
     actual_temp: null,
     resolved_outcome: null,
     pnl: null,

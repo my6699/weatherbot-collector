@@ -8,27 +8,27 @@
   "hours_at_discovery": 32.2,
   "status": "open",
   "position": {
-    "market_id": "3234413",
-    "question": "Will the highest temperature in Buenos Aires be 19°C on August 1?",
-    "bucket_low": 19,
-    "bucket_high": 19,
-    "entry_price": 0.28,
-    "bid_at_entry": 0.27,
+    "market_id": "3234415",
+    "question": "Will the highest temperature in Buenos Aires be 21°C on August 1?",
+    "bucket_low": 21,
+    "bucket_high": 21,
+    "entry_price": 0.04,
+    "bid_at_entry": 0.03,
     "spread": 0.01,
-    "shares": 71.43,
+    "shares": 500,
     "cost": 20,
-    "p": 1,
-    "ev": 2.5714,
-    "kelly": 0.25,
-    "forecast_temp": 18.8,
-    "forecast_src": "ecmwf",
-    "sigma": 1.2,
-    "opened_at": "2026-07-31T14:42:11.894Z",
+    "p": 0.1308,
+    "ev": 2.27,
+    "kelly": 0.0248,
+    "forecast_temp": 19.3,
+    "forecast_src": "ensemble",
+    "sigma": 2.327,
+    "opened_at": "2026-08-01T05:26:00.990Z",
     "status": "closed",
-    "pnl": -5.71,
-    "exit_price": 0.2,
+    "pnl": -5,
+    "exit_price": 0.03,
     "close_reason": "stop_loss",
-    "closed_at": "2026-07-31T22:18:08.018Z"
+    "closed_at": "2026-08-01T05:26:26.400Z"
   },
   "actual_temp": null,
   "resolved_outcome": null,
@@ -273,6 +273,166 @@
       "metar": 18,
       "best": 19.6,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T05:19:33.361Z",
+      "horizon": "D+0",
+      "hours_left": 6.7,
+      "ecmwf": 19.5,
+      "hrrr": 19,
+      "metar": 18,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.5,
+          "gfs_seamless": 19,
+          "icon_seamless": 19
+        },
+        "mean": 19.3,
+        "spread": 0.3,
+        "gap": 0.5
+      }
+    },
+    {
+      "ts": "2026-08-01T05:21:30.846Z",
+      "horizon": "D+0",
+      "hours_left": 6.6,
+      "ecmwf": 19.5,
+      "hrrr": 19,
+      "metar": 18,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.5,
+          "gfs_seamless": 19,
+          "icon_seamless": 19
+        },
+        "mean": 19.3,
+        "spread": 0.3,
+        "gap": 0.5
+      }
+    },
+    {
+      "ts": "2026-08-01T05:23:13.946Z",
+      "horizon": "D+0",
+      "hours_left": 6.6,
+      "ecmwf": 19.5,
+      "hrrr": 19,
+      "metar": 18,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.5,
+          "gfs_seamless": 19,
+          "icon_seamless": 19
+        },
+        "mean": 19.3,
+        "spread": 0.3,
+        "gap": 0.5
+      }
+    },
+    {
+      "ts": "2026-08-01T05:26:00.990Z",
+      "horizon": "D+0",
+      "hours_left": 6.6,
+      "ecmwf": 19.5,
+      "hrrr": 19,
+      "metar": 18,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.5,
+          "gfs_seamless": 19,
+          "icon_seamless": 19
+        },
+        "mean": 19.3,
+        "spread": 0.3,
+        "gap": 0.5
+      }
+    },
+    {
+      "ts": "2026-08-01T05:30:45.791Z",
+      "horizon": "D+0",
+      "hours_left": 6.5,
+      "ecmwf": 19.5,
+      "hrrr": 19,
+      "metar": 18,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.5,
+          "gfs_seamless": 19,
+          "icon_seamless": 19
+        },
+        "mean": 19.3,
+        "spread": 0.3,
+        "gap": 0.5
+      }
+    },
+    {
+      "ts": "2026-08-01T05:32:59.647Z",
+      "horizon": "D+0",
+      "hours_left": 6.4,
+      "ecmwf": 19.5,
+      "hrrr": 19,
+      "metar": 18,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.5,
+          "gfs_seamless": 19,
+          "icon_seamless": 19
+        },
+        "mean": 19.3,
+        "spread": 0.3,
+        "gap": 0.5
+      }
+    },
+    {
+      "ts": "2026-08-01T05:35:46.032Z",
+      "horizon": "D+0",
+      "hours_left": 6.4,
+      "ecmwf": 19.5,
+      "hrrr": 19,
+      "metar": 18,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.5,
+          "gfs_seamless": 19,
+          "icon_seamless": 19
+        },
+        "mean": 19.3,
+        "spread": 0.3,
+        "gap": 0.5
+      }
+    },
+    {
+      "ts": "2026-08-01T05:38:05.813Z",
+      "horizon": "D+0",
+      "hours_left": 6.4,
+      "ecmwf": 19.5,
+      "hrrr": 19,
+      "metar": 18,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.5,
+          "gfs_seamless": 19,
+          "icon_seamless": 19
+        },
+        "mean": 19.3,
+        "spread": 0.3,
+        "gap": 0.5
+      }
     }
   ],
   "market_snapshots": [
@@ -395,6 +555,46 @@
       "ts": "2026-08-01T04:12:01.007Z",
       "top_bucket": "19-19C",
       "top_price": 0.695
+    },
+    {
+      "ts": "2026-08-01T05:19:33.361Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.805
+    },
+    {
+      "ts": "2026-08-01T05:21:30.846Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.805
+    },
+    {
+      "ts": "2026-08-01T05:23:13.946Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.805
+    },
+    {
+      "ts": "2026-08-01T05:26:00.990Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.805
+    },
+    {
+      "ts": "2026-08-01T05:30:45.791Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.805
+    },
+    {
+      "ts": "2026-08-01T05:32:59.647Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.805
+    },
+    {
+      "ts": "2026-08-01T05:35:46.032Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.805
+    },
+    {
+      "ts": "2026-08-01T05:38:05.813Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.805
     }
   ],
   "all_outcomes": [
@@ -406,10 +606,10 @@
         14
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
-      "volume": 283
+      "spread": 0,
+      "volume": 297
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 15°C on August 1?",
@@ -419,10 +619,10 @@
         15
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
-      "volume": 421
+      "spread": 0,
+      "volume": 435
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 16°C on August 1?",
@@ -432,9 +632,9 @@
         16
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 430
     },
     {
@@ -445,9 +645,9 @@
         17
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 1052
     },
     {
@@ -458,10 +658,10 @@
         18
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
-      "volume": 1972
+      "spread": 0,
+      "volume": 3972
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 19°C on August 1?",
@@ -470,11 +670,11 @@
         19,
         19
       ],
-      "bid": 0.695,
-      "ask": 0.305,
-      "price": 0.695,
-      "spread": -0.39,
-      "volume": 3395
+      "bid": 0.805,
+      "ask": 0.805,
+      "price": 0.805,
+      "spread": 0,
+      "volume": 3606
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on August 1?",
@@ -483,11 +683,11 @@
         20,
         20
       ],
-      "bid": 0.22,
-      "ask": 0.78,
-      "price": 0.22,
-      "spread": 0.56,
-      "volume": 7327
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
+      "spread": 0,
+      "volume": 7635
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on August 1?",
@@ -496,11 +696,11 @@
         21,
         21
       ],
-      "bid": 0.045,
-      "ask": 0.955,
-      "price": 0.045,
-      "spread": 0.91,
-      "volume": 4640
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
+      "spread": 0,
+      "volume": 4696
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C on August 1?",
@@ -509,11 +709,11 @@
         22,
         22
       ],
-      "bid": 0.0105,
-      "ask": 0.9895,
-      "price": 0.0105,
-      "spread": 0.979,
-      "volume": 5235
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
+      "spread": 0,
+      "volume": 5273
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on August 1?",
@@ -522,11 +722,11 @@
         23,
         23
       ],
-      "bid": 0.009,
-      "ask": 0.991,
-      "price": 0.009,
-      "spread": 0.982,
-      "volume": 2406
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
+      "spread": 0,
+      "volume": 2432
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C or higher on August 1?",
@@ -536,11 +736,36 @@
         999
       ],
       "bid": 0.002,
-      "ask": 0.998,
+      "ask": 0.002,
       "price": 0.002,
-      "spread": 0.996,
-      "volume": 2672
+      "spread": 0,
+      "volume": 2700
     }
   ],
-  "created_at": "2026-07-31T03:49:42.364Z"
+  "created_at": "2026-07-31T03:49:42.364Z",
+  "positions": [
+    {
+      "market_id": "3234415",
+      "question": "Will the highest temperature in Buenos Aires be 21°C on August 1?",
+      "bucket_low": 21,
+      "bucket_high": 21,
+      "entry_price": 0.04,
+      "bid_at_entry": 0.03,
+      "spread": 0.01,
+      "shares": 500,
+      "cost": 20,
+      "p": 0.1308,
+      "ev": 2.27,
+      "kelly": 0.0248,
+      "forecast_temp": 19.3,
+      "forecast_src": "ensemble",
+      "sigma": 2.327,
+      "opened_at": "2026-08-01T05:26:00.990Z",
+      "status": "closed",
+      "pnl": -5,
+      "exit_price": 0.03,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-01T05:26:26.400Z"
+    }
+  ]
 }

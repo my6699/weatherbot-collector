@@ -8,27 +8,27 @@
   "hours_at_discovery": 32.2,
   "status": "open",
   "position": {
-    "market_id": "3216555",
-    "question": "Will the highest temperature in Paris be 27°C on August 1?",
-    "bucket_low": 27,
-    "bucket_high": 27,
-    "entry_price": 0.21,
-    "bid_at_entry": 0.2,
+    "market_id": "3216558",
+    "question": "Will the highest temperature in Paris be 30°C on August 1?",
+    "bucket_low": 30,
+    "bucket_high": 30,
+    "entry_price": 0.02,
+    "bid_at_entry": 0.01,
     "spread": 0.01,
-    "shares": 95.24,
+    "shares": 1000,
     "cost": 20,
-    "p": 1,
-    "ev": 3.7619,
-    "kelly": 0.25,
-    "forecast_temp": 26.5,
-    "forecast_src": "ecmwf",
-    "sigma": 1.2,
-    "opened_at": "2026-07-31T10:00:50.988Z",
+    "p": 0.1267,
+    "ev": 5.335,
+    "kelly": 0.0283,
+    "forecast_temp": 28.2,
+    "forecast_src": "ensemble",
+    "sigma": 2.328,
+    "opened_at": "2026-08-01T05:25:14.623Z",
     "status": "closed",
-    "pnl": -4.76,
-    "exit_price": 0.16,
+    "pnl": -10,
+    "exit_price": 0.01,
     "close_reason": "stop_loss",
-    "closed_at": "2026-07-31T17:00:19.677Z"
+    "closed_at": "2026-08-01T05:26:31.392Z"
   },
   "actual_temp": null,
   "resolved_outcome": null,
@@ -273,6 +273,166 @@
       "metar": 16,
       "best": 27.8,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T05:19:00.072Z",
+      "horizon": "D+0",
+      "hours_left": 6.7,
+      "ecmwf": 27.7,
+      "hrrr": 29.4,
+      "metar": 17,
+      "best": 28.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.7,
+          "gfs_seamless": 29.4,
+          "icon_seamless": 27.5
+        },
+        "mean": 28.2,
+        "spread": 1.2,
+        "gap": 1.7
+      }
+    },
+    {
+      "ts": "2026-08-01T05:20:58.054Z",
+      "horizon": "D+0",
+      "hours_left": 6.7,
+      "ecmwf": 27.7,
+      "hrrr": 29.4,
+      "metar": 17,
+      "best": 28.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.7,
+          "gfs_seamless": 29.4,
+          "icon_seamless": 27.5
+        },
+        "mean": 28.2,
+        "spread": 1.2,
+        "gap": 1.7
+      }
+    },
+    {
+      "ts": "2026-08-01T05:22:36.225Z",
+      "horizon": "D+0",
+      "hours_left": 6.6,
+      "ecmwf": 27.7,
+      "hrrr": 29.4,
+      "metar": 17,
+      "best": 28.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.7,
+          "gfs_seamless": 29.4,
+          "icon_seamless": 27.5
+        },
+        "mean": 28.2,
+        "spread": 1.2,
+        "gap": 1.7
+      }
+    },
+    {
+      "ts": "2026-08-01T05:25:14.623Z",
+      "horizon": "D+0",
+      "hours_left": 6.6,
+      "ecmwf": 27.7,
+      "hrrr": 29.4,
+      "metar": 17,
+      "best": 28.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.7,
+          "gfs_seamless": 29.4,
+          "icon_seamless": 27.5
+        },
+        "mean": 28.2,
+        "spread": 1.2,
+        "gap": 1.7
+      }
+    },
+    {
+      "ts": "2026-08-01T05:29:53.708Z",
+      "horizon": "D+0",
+      "hours_left": 6.5,
+      "ecmwf": 27.7,
+      "hrrr": 29.4,
+      "metar": 17,
+      "best": 28.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.7,
+          "gfs_seamless": 29.4,
+          "icon_seamless": 27.5
+        },
+        "mean": 28.2,
+        "spread": 1.2,
+        "gap": 1.7
+      }
+    },
+    {
+      "ts": "2026-08-01T05:32:23.594Z",
+      "horizon": "D+0",
+      "hours_left": 6.5,
+      "ecmwf": 27.7,
+      "hrrr": 29.4,
+      "metar": 17,
+      "best": 28.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.7,
+          "gfs_seamless": 29.4,
+          "icon_seamless": 27.5
+        },
+        "mean": 28.2,
+        "spread": 1.2,
+        "gap": 1.7
+      }
+    },
+    {
+      "ts": "2026-08-01T05:34:54.051Z",
+      "horizon": "D+0",
+      "hours_left": 6.4,
+      "ecmwf": 27.7,
+      "hrrr": 29.4,
+      "metar": 17,
+      "best": 28.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.7,
+          "gfs_seamless": 29.4,
+          "icon_seamless": 27.5
+        },
+        "mean": 28.2,
+        "spread": 1.2,
+        "gap": 1.7
+      }
+    },
+    {
+      "ts": "2026-08-01T05:37:32.451Z",
+      "horizon": "D+0",
+      "hours_left": 6.4,
+      "ecmwf": 27.7,
+      "hrrr": 29.4,
+      "metar": 17,
+      "best": 28.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.7,
+          "gfs_seamless": 29.4,
+          "icon_seamless": 27.5
+        },
+        "mean": 28.2,
+        "spread": 1.2,
+        "gap": 1.7
+      }
     }
   ],
   "market_snapshots": [
@@ -395,6 +555,46 @@
       "ts": "2026-08-01T04:11:24.218Z",
       "top_bucket": "28-28C",
       "top_price": 0.655
+    },
+    {
+      "ts": "2026-08-01T05:19:00.072Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.655
+    },
+    {
+      "ts": "2026-08-01T05:20:58.054Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.655
+    },
+    {
+      "ts": "2026-08-01T05:22:36.225Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.67
+    },
+    {
+      "ts": "2026-08-01T05:25:14.623Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.67
+    },
+    {
+      "ts": "2026-08-01T05:29:53.708Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.675
+    },
+    {
+      "ts": "2026-08-01T05:32:23.594Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.675
+    },
+    {
+      "ts": "2026-08-01T05:34:54.051Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.675
+    },
+    {
+      "ts": "2026-08-01T05:37:32.451Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.675
     }
   ],
   "all_outcomes": [
@@ -406,10 +606,10 @@
         25
       ],
       "bid": 0.0025,
-      "ask": 0.9975,
+      "ask": 0.0025,
       "price": 0.0025,
-      "spread": 0.995,
-      "volume": 2015
+      "spread": 0,
+      "volume": 2119
     },
     {
       "question": "Will the highest temperature in Paris be 26°C on August 1?",
@@ -419,10 +619,10 @@
         26
       ],
       "bid": 0.0015,
-      "ask": 0.9985,
+      "ask": 0.0015,
       "price": 0.0015,
-      "spread": 0.997,
-      "volume": 3206
+      "spread": 0,
+      "volume": 3518
     },
     {
       "question": "Will the highest temperature in Paris be 27°C on August 1?",
@@ -431,11 +631,11 @@
         27,
         27
       ],
-      "bid": 0.155,
-      "ask": 0.845,
-      "price": 0.155,
-      "spread": 0.69,
-      "volume": 5223
+      "bid": 0.14,
+      "ask": 0.14,
+      "price": 0.14,
+      "spread": 0,
+      "volume": 5331
     },
     {
       "question": "Will the highest temperature in Paris be 28°C on August 1?",
@@ -444,11 +644,11 @@
         28,
         28
       ],
-      "bid": 0.655,
-      "ask": 0.345,
-      "price": 0.655,
-      "spread": -0.31,
-      "volume": 6964
+      "bid": 0.675,
+      "ask": 0.675,
+      "price": 0.675,
+      "spread": 0,
+      "volume": 7163
     },
     {
       "question": "Will the highest temperature in Paris be 29°C on August 1?",
@@ -457,11 +657,11 @@
         29,
         29
       ],
-      "bid": 0.185,
-      "ask": 0.815,
-      "price": 0.185,
-      "spread": 0.63,
-      "volume": 6653
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
+      "spread": 0,
+      "volume": 6815
     },
     {
       "question": "Will the highest temperature in Paris be 30°C on August 1?",
@@ -470,11 +670,11 @@
         30,
         30
       ],
-      "bid": 0.025,
-      "ask": 0.975,
-      "price": 0.025,
-      "spread": 0.95,
-      "volume": 2981
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
+      "spread": 0,
+      "volume": 3146
     },
     {
       "question": "Will the highest temperature in Paris be 31°C on August 1?",
@@ -483,11 +683,11 @@
         31,
         31
       ],
-      "bid": 0.0035,
-      "ask": 0.9965,
-      "price": 0.0035,
-      "spread": 0.993,
-      "volume": 3159
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
+      "spread": 0,
+      "volume": 3257
     },
     {
       "question": "Will the highest temperature in Paris be 32°C on August 1?",
@@ -497,9 +697,9 @@
         32
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 918
     },
     {
@@ -510,9 +710,9 @@
         33
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 956
     },
     {
@@ -523,9 +723,9 @@
         34
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 521
     },
     {
@@ -536,11 +736,36 @@
         999
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 421
     }
   ],
-  "created_at": "2026-07-31T03:48:54.442Z"
+  "created_at": "2026-07-31T03:48:54.442Z",
+  "positions": [
+    {
+      "market_id": "3216558",
+      "question": "Will the highest temperature in Paris be 30°C on August 1?",
+      "bucket_low": 30,
+      "bucket_high": 30,
+      "entry_price": 0.02,
+      "bid_at_entry": 0.01,
+      "spread": 0.01,
+      "shares": 1000,
+      "cost": 20,
+      "p": 0.1267,
+      "ev": 5.335,
+      "kelly": 0.0283,
+      "forecast_temp": 28.2,
+      "forecast_src": "ensemble",
+      "sigma": 2.328,
+      "opened_at": "2026-08-01T05:25:14.623Z",
+      "status": "closed",
+      "pnl": -10,
+      "exit_price": 0.01,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-01T05:26:31.392Z"
+    }
+  ]
 }

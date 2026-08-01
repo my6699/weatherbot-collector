@@ -1,72 +1,106 @@
-import { ECMWF_BIAS_C, ECMWF_BIAS_F, TIMEZONES, VC_KEY, type LocationInfo } from "./config.js";
+import {
+  ECMWF_BIAS_C,
+  ECMWF_BIAS_F,
+  ENSEMBLE_MODELS,
+  ENSEMBLE_WEIGHTS,
+  TIMEZONES,
+  type LocationInfo,
+} from "./config.js";
 import { fetchJson, sleep } from "./http.js";
+import { getBias } from "./storage.js";
 
 interface OpenMeteoDaily {
-  daily?: { time: string[]; temperature_2m_max: (number | null)[] };
+  daily?: Record<string, unknown> & { time?: string[] };
   error?: boolean | string;
 }
 
-export async function getEcmwf(citySlug: string, dates: Set<string>, loc: LocationInfo): Promise<Record<string, number>> {
+/** One day's ensemble forecast for a city. */
+export interface EnsembleForecast {
+  /** Per-model daily max temp in the location unit (ecmwf already bias-corrected). */
+  models: Record<string, number>;
+  /** Weighted ensemble mean (our best estimate). */
+  mean: number;
+  /** Max absolute deviation of any model from the mean (forecast uncertainty). */
+  spread: number;
+  /** |ecmwf - gfs| model disagreement in the location unit. */
+  gap: number;
+}
+
+export async function getEnsembleForecast(
+  citySlug: string,
+  dates: Set<string>,
+  loc: LocationInfo,
+): Promise<Record<string, EnsembleForecast>> {
   const unit = loc.unit;
   const tempUnit = unit === "F" ? "fahrenheit" : "celsius";
-  const result: Record<string, number> = {};
+  const result: Record<string, EnsembleForecast> = {};
   const url =
     `https://api.open-meteo.com/v1/forecast` +
     `?latitude=${loc.lat}&longitude=${loc.lon}` +
     `&daily=temperature_2m_max&temperature_unit=${tempUnit}` +
     `&forecast_days=7&timezone=${encodeURIComponent(TIMEZONES[citySlug] ?? "UTC")}` +
-    `&models=ecmwf_ifs025&bias_correction=true`;
+    `&models=${ENSEMBLE_MODELS.join(",")}`;
 
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
       const data = await fetchJson<OpenMeteoDaily>(url);
-      if (!data.error && data.daily?.time && data.daily.temperature_2m_max) {
-        const { time, temperature_2m_max } = data.daily;
-        // ECMWF under-forecasts daily max temp (calibrated bias), correct before use.
-        const bias = unit === "C" ? ECMWF_BIAS_C : ECMWF_BIAS_F;
-        for (let i = 0; i < time.length; i++) {
-          const date = time[i];
-          const temp = temperature_2m_max[i];
-          if (date && dates.has(date) && temp != null) {
-            const corrected = temp + bias;
-            result[date] = unit === "C" ? Math.round(corrected * 10) / 10 : Math.round(corrected);
+      const daily = data.daily;
+      if (!data.error && daily?.time) {
+        const times = daily.time;
+        // Pull each model's series, bias-correct ECMWF (rolling bias via getBias).
+        const series: Record<string, (number | null)[]> = {};
+        for (const model of ENSEMBLE_MODELS) {
+          const raw = daily[`temperature_2m_max_${model}`];
+          if (Array.isArray(raw)) series[model] = raw as (number | null)[];
+        }
+        const models = Object.keys(series);
+        if (models.length === 0) break;
+
+        const calBias = getBias(citySlug, "ecmwf"); // signed error (forecast - actual)
+        const ecmwfBias =
+          calBias != null ? -calBias : unit === "C" ? ECMWF_BIAS_C : ECMWF_BIAS_F;
+        for (let i = 0; i < times.length; i++) {
+          const date = times[i];
+          if (!date || !dates.has(date)) continue;
+          const modelTemps: Record<string, number> = {};
+          for (const model of models) {
+            const v = series[model]?.[i];
+            if (v == null) continue;
+            let t = Number(v);
+            if (model === "ecmwf_ifs025") t += ecmwfBias;
+            modelTemps[model] = unit === "C" ? Math.round(t * 10) / 10 : Math.round(t);
           }
+          if (Object.keys(modelTemps).length === 0) continue;
+          // Weighted mean.
+          let wsum = 0;
+          let msum = 0;
+          for (const [model, t] of Object.entries(modelTemps)) {
+            const w = ENSEMBLE_WEIGHTS[model] ?? 0;
+            if (w <= 0) continue;
+            wsum += w;
+            msum += w * t;
+          }
+          if (wsum <= 0) continue;
+          const mean = msum / wsum;
+          let spread = 0;
+          for (const t of Object.values(modelTemps)) {
+            spread = Math.max(spread, Math.abs(t - mean));
+          }
+          const ecmwf = modelTemps.ecmwf_ifs025;
+          const gfs = modelTemps.gfs_seamless;
+          const gap = ecmwf != null && gfs != null ? Math.abs(ecmwf - gfs) : 0;
+          result[date] = {
+            models: modelTemps,
+            mean: Math.round(mean * 10) / 10,
+            spread: Math.round(spread * 10) / 10,
+            gap: Math.round(gap * 10) / 10,
+          };
         }
       }
       break;
     } catch (e) {
       if (attempt < 2) await sleep(3000);
-      else console.error(`  [ECMWF] ${citySlug}:`, e);
-    }
-  }
-  return result;
-}
-
-export async function getHrrr(citySlug: string, dates: Set<string>, loc: LocationInfo): Promise<Record<string, number>> {
-  if (loc.region !== "us") return {};
-  const result: Record<string, number> = {};
-  const url =
-    `https://api.open-meteo.com/v1/forecast` +
-    `?latitude=${loc.lat}&longitude=${loc.lon}` +
-    `&daily=temperature_2m_max&temperature_unit=fahrenheit` +
-    `&forecast_days=3&timezone=${encodeURIComponent(TIMEZONES[citySlug] ?? "UTC")}` +
-    `&models=gfs_seamless`;
-
-  for (let attempt = 0; attempt < 3; attempt++) {
-    try {
-      const data = await fetchJson<OpenMeteoDaily>(url);
-      if (!data.error && data.daily?.time && data.daily.temperature_2m_max) {
-        const { time, temperature_2m_max } = data.daily;
-        for (let i = 0; i < time.length; i++) {
-          const date = time[i];
-          const temp = temperature_2m_max[i];
-          if (date && dates.has(date) && temp != null) result[date] = Math.round(temp);
-        }
-      }
-      break;
-    } catch (e) {
-      if (attempt < 2) await sleep(3000);
-      else console.error(`  [HRRR] ${citySlug}:`, e);
+      else console.error(`  [ENSEMBLE] ${citySlug}:`, e);
     }
   }
   return result;
@@ -95,29 +129,3 @@ export async function getMetar(citySlug: string, loc: LocationInfo): Promise<num
   return null;
 }
 
-interface VcDay {
-  tempmax?: number | null;
-}
-
-interface VcResponse {
-  days?: VcDay[];
-}
-
-export async function getActualTemp(citySlug: string, dateStr: string, loc: LocationInfo): Promise<number | null> {
-  const station = loc.station;
-  const unit = loc.unit;
-  const vcUnit = unit === "F" ? "us" : "metric";
-  const url =
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline` +
-    `/${station}/${dateStr}/${dateStr}` +
-    `?unitGroup=${vcUnit}&key=${encodeURIComponent(VC_KEY)}&include=days&elements=tempmax`;
-  try {
-    const data = await fetchJson<VcResponse>(url);
-    const days = data.days;
-    const mx = days?.[0]?.tempmax;
-    if (mx != null) return Math.round(Number(mx) * 10) / 10;
-  } catch (e) {
-    console.error(`  [VC] ${citySlug} ${dateStr}:`, e);
-  }
-  return null;
-}

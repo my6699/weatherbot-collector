@@ -55,6 +55,17 @@ export function calcKelly(p: number, price: number): number {
   return Math.round(Math.min(Math.max(0.0, f) * KELLY_FRACTION, 1.0) * 10000) / 10000;
 }
 
+/**
+ * Recalibrate a raw market probability using a logit slope.
+ * Weather markets are mildly overconfident (slope ~0.91): prices near 0/1 overstate the truth.
+ */
+export function marketCalibrated(p: number, slope = 0.91): number {
+  if (p <= 0) return 0.0;
+  if (p >= 1) return 1.0;
+  const logit = Math.log(p / (1 - p));
+  return Math.round((1 / (1 + Math.exp(-slope * logit))) * 10000) / 10000;
+}
+
 export function betSize(kelly: number, balance: number, maxBet: number): number {
   const raw = kelly * balance;
   return Math.round(Math.min(raw, maxBet) * 100) / 100;

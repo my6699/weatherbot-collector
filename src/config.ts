@@ -36,7 +36,14 @@ const P = "WEATHERBOT_" as const;
 
 export const BALANCE = envNum(`${P}BALANCE`, 10000.0);
 export const MAX_BET = envNum(`${P}MAX_BET`, 20.0);
+/** Max concurrent open positions per city/date market (bucket spread). */
+export const MAX_POSITIONS_PER_MARKET = envNum(`${P}MAX_POSITIONS_PER_MARKET`, 3);
 export const MIN_EV = envNum(`${P}MIN_EV`, 0.1);
+/** Skip buckets priced below this (ultra-cheap quotes are stale / phantom-edge lottery tickets). */
+export const MIN_ASK = envNum(`${P}MIN_ASK`, 0.02);
+/** Trade same-day (D+0) markets. Default off: by D+0 the market has live-obs
+ *  information our daily-max ensemble can't match, so tail "edges" are phantom. */
+export const TRADE_D0 = envTruthy(`${P}TRADE_D0`);
 export const MAX_PRICE = envNum(`${P}MAX_PRICE`, 0.45);
 export const MIN_VOLUME = envNum(`${P}MIN_VOLUME`, 500);
 export const MIN_HOURS = envNum(`${P}MIN_HOURS`, 2.0);
@@ -80,6 +87,31 @@ export const SIGMA_C = 2.3;
  */
 export const ECMWF_BIAS_C = 1.34;
 export const ECMWF_BIAS_F = 1.0;
+
+/** Ensemble models fetched from Open-Meteo (comma list in one request). */
+export const ENSEMBLE_MODELS = ["ecmwf_ifs025", "gfs_seamless", "icon_seamless"] as const;
+/** Weight of each model in the ensemble mean (ECMWF is the historic gold standard). */
+export const ENSEMBLE_WEIGHTS: Record<string, number> = {
+  ecmwf_ifs025: 0.5,
+  gfs_seamless: 0.3,
+  icon_seamless: 0.2,
+};
+/**
+ * Consensus gate: when the gap between ECMWF and GFS exceeds this,
+ * models disagree strongly -> skip the trade (research: 62% win rate
+ * when models agree within ~1C, 44% when they diverge).
+ * Daily-max-temp model-to-model spread is typically ~1-2C, so the gate
+ * is set at ~2C to only block the extreme disagreements.
+ */
+export const CONSENSUS_MAX_GAP_F = 3.5; // °F
+export const CONSENSUS_MAX_GAP_C = 2.0; // °C
+/**
+ * Min probability edge over the market's (calibrated) probability to open a trade.
+ * Weather markets are mildly overconfident (slope ~0.91): extreme prices overstate the truth.
+ */
+export const MIN_EDGE = envNum(`${P}MIN_EDGE`, 0.07);
+/** Logit calibration slope for market prices in the weather domain. */
+export const MARKET_CAL_SLOPE = 0.91;
 
 const root = process.cwd();
 export const DATA_DIR = path.join(root, "data");

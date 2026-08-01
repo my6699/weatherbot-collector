@@ -2,7 +2,7 @@ import { renameSync, unlinkSync, existsSync } from "fs";
 import path from "path";
 import * as XLSX from "xlsx";
 import { DATA_DIR, LOCATIONS } from "./config.js";
-import { loadAllMarkets, type MarketRecord } from "./storage.js";
+import { allPositions, loadAllMarkets, type MarketRecord } from "./storage.js";
 
 /**
  * Export all collected market data into a single Excel workbook (data/weatherbot_data.xlsx).
@@ -20,6 +20,7 @@ interface MarketSummary {
   "Forecast Snaps": number;
   "Price Snaps": number;
   Position: string;
+  "Open Positions": number;
   "Position PnL": number | string;
   "Best Forecast": number | string;
   "Best Source": string;
@@ -34,10 +35,14 @@ interface ForecastRow {
   Horizon: string;
   "Hours Left": number | string;
   ECMWF: number | string;
-  HRRR: number | string;
+  GFS: number | string;
+  ICON: number | string;
   METAR: number | string;
   Best: number | string;
   "Best Source": string;
+  "Ens Mean": number | string;
+  "Ens Spread": number | string;
+  "Ens Gap": number | string;
 }
 
 interface OutcomeRowExport {
@@ -67,6 +72,7 @@ interface PositionExport {
   P: number;
   EV: number;
   Kelly: number;
+  Sigma: number | string;
   "Forecast Temp": number;
   "Forecast Source": string;
   Status: string;
@@ -100,6 +106,7 @@ export function exportAllToExcel(): string {
       "Forecast Snaps": m.forecast_snapshots.length,
       "Price Snaps": m.market_snapshots.length,
       Position: m.position ? `${m.position.bucket_low}-${m.position.bucket_high}${unit}@${m.position.entry_price}` : "",
+      "Open Positions": allPositions(m).filter((p) => p.status === "open").length,
       "Position PnL": m.position?.pnl ?? "",
       "Best Forecast": latestSnap?.best ?? "",
       "Best Source": latestSnap?.best_source ?? "",
@@ -115,10 +122,14 @@ export function exportAllToExcel(): string {
         Horizon: f.horizon ?? "",
         "Hours Left": f.hours_left ?? "",
         ECMWF: f.ecmwf ?? "",
-        HRRR: f.hrrr ?? "",
+        GFS: f.hrrr ?? "",
+        ICON: f.ens?.models.icon_seamless ?? "",
         METAR: f.metar ?? "",
         Best: f.best ?? "",
         "Best Source": f.best_source ?? "",
+        "Ens Mean": f.ens?.mean ?? "",
+        "Ens Spread": f.ens?.spread ?? "",
+        "Ens Gap": f.ens?.gap ?? "",
       });
     }
 
@@ -139,8 +150,7 @@ export function exportAllToExcel(): string {
       });
     }
 
-    if (m.position) {
-      const pos = m.position;
+    for (const pos of allPositions(m)) {
       positions.push({
         City: m.city_name,
         Date: m.date,
@@ -155,6 +165,7 @@ export function exportAllToExcel(): string {
         P: pos.p,
         EV: pos.ev,
         Kelly: pos.kelly,
+        Sigma: pos.sigma ?? "",
         "Forecast Temp": pos.forecast_temp,
         "Forecast Source": pos.forecast_src ?? "",
         Status: pos.status,

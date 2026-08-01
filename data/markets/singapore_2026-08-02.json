@@ -8,27 +8,27 @@
   "hours_at_discovery": 55.7,
   "status": "open",
   "position": {
-    "market_id": "3236620",
-    "question": "Will the highest temperature in Singapore be 31°C on August 2?",
-    "bucket_low": 31,
-    "bucket_high": 31,
-    "entry_price": 0.16,
-    "bid_at_entry": 0.15,
+    "market_id": "3236619",
+    "question": "Will the highest temperature in Singapore be 30°C on August 2?",
+    "bucket_low": 30,
+    "bucket_high": 30,
+    "entry_price": 0.02,
+    "bid_at_entry": 0.01,
     "spread": 0.01,
-    "shares": 125,
+    "shares": 1000,
     "cost": 20,
-    "p": 1,
-    "ev": 5.25,
-    "kelly": 0.25,
-    "forecast_temp": 31.3,
-    "forecast_src": "ecmwf",
-    "sigma": 1.2,
-    "opened_at": "2026-07-31T18:48:36.728Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null
+    "p": 0.1055,
+    "ev": 4.275,
+    "kelly": 0.023,
+    "forecast_temp": 31.4,
+    "forecast_src": "ensemble",
+    "sigma": 3.477,
+    "opened_at": "2026-08-01T05:25:39.870Z",
+    "status": "closed",
+    "pnl": -10,
+    "exit_price": 0.01,
+    "close_reason": "stop_loss",
+    "closed_at": "2026-08-01T05:26:34.373Z"
   },
   "actual_temp": null,
   "resolved_outcome": null,
@@ -233,6 +233,166 @@
       "metar": null,
       "best": 31.9,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T05:19:18.203Z",
+      "horizon": "D+1",
+      "hours_left": 30.7,
+      "ecmwf": 31.8,
+      "hrrr": 31.4,
+      "metar": null,
+      "best": 31.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.8,
+          "gfs_seamless": 31.4,
+          "icon_seamless": 30.2
+        },
+        "mean": 31.4,
+        "spread": 1.2,
+        "gap": 0.4
+      }
+    },
+    {
+      "ts": "2026-08-01T05:21:16.853Z",
+      "horizon": "D+1",
+      "hours_left": 30.6,
+      "ecmwf": 31.8,
+      "hrrr": 31.4,
+      "metar": null,
+      "best": 31.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.8,
+          "gfs_seamless": 31.4,
+          "icon_seamless": 30.2
+        },
+        "mean": 31.4,
+        "spread": 1.2,
+        "gap": 0.4
+      }
+    },
+    {
+      "ts": "2026-08-01T05:22:59.573Z",
+      "horizon": "D+1",
+      "hours_left": 30.6,
+      "ecmwf": 31.8,
+      "hrrr": 31.4,
+      "metar": null,
+      "best": 31.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.8,
+          "gfs_seamless": 31.4,
+          "icon_seamless": 30.2
+        },
+        "mean": 31.4,
+        "spread": 1.2,
+        "gap": 0.4
+      }
+    },
+    {
+      "ts": "2026-08-01T05:25:39.870Z",
+      "horizon": "D+1",
+      "hours_left": 30.6,
+      "ecmwf": 31.8,
+      "hrrr": 31.4,
+      "metar": null,
+      "best": 31.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.8,
+          "gfs_seamless": 31.4,
+          "icon_seamless": 30.2
+        },
+        "mean": 31.4,
+        "spread": 1.2,
+        "gap": 0.4
+      }
+    },
+    {
+      "ts": "2026-08-01T05:30:13.274Z",
+      "horizon": "D+1",
+      "hours_left": 30.5,
+      "ecmwf": 31.8,
+      "hrrr": 31.4,
+      "metar": null,
+      "best": 31.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.8,
+          "gfs_seamless": 31.4,
+          "icon_seamless": 30.2
+        },
+        "mean": 31.4,
+        "spread": 1.2,
+        "gap": 0.4
+      }
+    },
+    {
+      "ts": "2026-08-01T05:32:44.891Z",
+      "horizon": "D+1",
+      "hours_left": 30.5,
+      "ecmwf": 31.8,
+      "hrrr": 31.4,
+      "metar": null,
+      "best": 31.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.8,
+          "gfs_seamless": 31.4,
+          "icon_seamless": 30.2
+        },
+        "mean": 31.4,
+        "spread": 1.2,
+        "gap": 0.4
+      }
+    },
+    {
+      "ts": "2026-08-01T05:35:13.525Z",
+      "horizon": "D+1",
+      "hours_left": 30.4,
+      "ecmwf": 31.8,
+      "hrrr": 31.4,
+      "metar": null,
+      "best": 31.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.8,
+          "gfs_seamless": 31.4,
+          "icon_seamless": 30.2
+        },
+        "mean": 31.4,
+        "spread": 1.2,
+        "gap": 0.4
+      }
+    },
+    {
+      "ts": "2026-08-01T05:37:50.371Z",
+      "horizon": "D+1",
+      "hours_left": 30.4,
+      "ecmwf": 31.8,
+      "hrrr": 31.4,
+      "metar": null,
+      "best": 31.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.8,
+          "gfs_seamless": 31.4,
+          "icon_seamless": 30.2
+        },
+        "mean": 31.4,
+        "spread": 1.2,
+        "gap": 0.4
+      }
     }
   ],
   "market_snapshots": [
@@ -335,6 +495,46 @@
       "ts": "2026-08-01T04:11:44.623Z",
       "top_bucket": "32-32C",
       "top_price": 0.485
+    },
+    {
+      "ts": "2026-08-01T05:19:18.203Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.495
+    },
+    {
+      "ts": "2026-08-01T05:21:16.853Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.495
+    },
+    {
+      "ts": "2026-08-01T05:22:59.573Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.495
+    },
+    {
+      "ts": "2026-08-01T05:25:39.870Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.495
+    },
+    {
+      "ts": "2026-08-01T05:30:13.274Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.495
+    },
+    {
+      "ts": "2026-08-01T05:32:44.891Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.495
+    },
+    {
+      "ts": "2026-08-01T05:35:13.525Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.495
+    },
+    {
+      "ts": "2026-08-01T05:37:50.371Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.495
     }
   ],
   "all_outcomes": [
@@ -346,9 +546,9 @@
         26
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 227
     },
     {
@@ -358,10 +558,10 @@
         27,
         27
       ],
-      "bid": 0.001,
-      "ask": 0.999,
-      "price": 0.001,
-      "spread": 0.998,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
+      "spread": 0,
       "volume": 378
     },
     {
@@ -371,11 +571,11 @@
         28,
         28
       ],
-      "bid": 0.0025,
-      "ask": 0.9975,
-      "price": 0.0025,
-      "spread": 0.995,
-      "volume": 459
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
+      "spread": 0,
+      "volume": 469
     },
     {
       "question": "Will the highest temperature in Singapore be 29°C on August 2?",
@@ -384,10 +584,10 @@
         29,
         29
       ],
-      "bid": 0.007,
-      "ask": 0.993,
-      "price": 0.007,
-      "spread": 0.986,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
+      "spread": 0,
       "volume": 1065
     },
     {
@@ -397,10 +597,10 @@
         30,
         30
       ],
-      "bid": 0.03,
-      "ask": 0.97,
-      "price": 0.03,
-      "spread": 0.94,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
+      "spread": 0,
       "volume": 629
     },
     {
@@ -410,11 +610,11 @@
         31,
         31
       ],
-      "bid": 0.175,
-      "ask": 0.825,
-      "price": 0.175,
-      "spread": 0.65,
-      "volume": 757
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
+      "spread": 0,
+      "volume": 784
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on August 2?",
@@ -423,11 +623,11 @@
         32,
         32
       ],
-      "bid": 0.485,
-      "ask": 0.515,
-      "price": 0.485,
-      "spread": 0.03,
-      "volume": 1164
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
+      "spread": 0,
+      "volume": 1216
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 2?",
@@ -437,9 +637,9 @@
         33
       ],
       "bid": 0.315,
-      "ask": 0.685,
+      "ask": 0.315,
       "price": 0.315,
-      "spread": 0.37,
+      "spread": 0,
       "volume": 4850
     },
     {
@@ -450,10 +650,10 @@
         34
       ],
       "bid": 0.025,
-      "ask": 0.975,
+      "ask": 0.025,
       "price": 0.025,
-      "spread": 0.95,
-      "volume": 798
+      "spread": 0,
+      "volume": 809
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 2?",
@@ -462,10 +662,10 @@
         35,
         35
       ],
-      "bid": 0.0055,
-      "ask": 0.9945,
-      "price": 0.0055,
-      "spread": 0.989,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
+      "spread": 0,
       "volume": 265
     },
     {
@@ -475,12 +675,83 @@
         36,
         999
       ],
-      "bid": 0.0035,
-      "ask": 0.9965,
-      "price": 0.0035,
-      "spread": 0.993,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
+      "spread": 0,
       "volume": 535
     }
   ],
-  "created_at": "2026-07-31T04:16:38.706Z"
+  "created_at": "2026-07-31T04:16:38.706Z",
+  "positions": [
+    {
+      "market_id": "3236619",
+      "question": "Will the highest temperature in Singapore be 30°C on August 2?",
+      "bucket_low": 30,
+      "bucket_high": 30,
+      "entry_price": 0.02,
+      "bid_at_entry": 0.01,
+      "spread": 0.01,
+      "shares": 1000,
+      "cost": 20,
+      "p": 0.1055,
+      "ev": 4.275,
+      "kelly": 0.023,
+      "forecast_temp": 31.4,
+      "forecast_src": "ensemble",
+      "sigma": 3.477,
+      "opened_at": "2026-08-01T05:25:39.870Z",
+      "status": "closed",
+      "pnl": -10,
+      "exit_price": 0.01,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-01T05:26:34.373Z"
+    },
+    {
+      "market_id": "3236620",
+      "question": "Will the highest temperature in Singapore be 31°C on August 2?",
+      "bucket_low": 31,
+      "bucket_high": 31,
+      "entry_price": 0.2,
+      "bid_at_entry": 0.19,
+      "spread": 0.01,
+      "shares": 100,
+      "cost": 20,
+      "p": 0.3066,
+      "ev": 0.533,
+      "kelly": 0.0347,
+      "forecast_temp": 31.4,
+      "forecast_src": "ensemble",
+      "sigma": 1.2,
+      "opened_at": "2026-08-01T05:32:44.891Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null
+    },
+    {
+      "market_id": "3236620",
+      "question": "Will the highest temperature in Singapore be 31°C on August 2?",
+      "bucket_low": 31,
+      "bucket_high": 31,
+      "entry_price": 0.2,
+      "bid_at_entry": 0.19,
+      "spread": 0.01,
+      "shares": 100,
+      "cost": 20,
+      "p": 0.3066,
+      "ev": 0.533,
+      "kelly": 0.0347,
+      "forecast_temp": 31.4,
+      "forecast_src": "ensemble",
+      "sigma": 1.2,
+      "opened_at": "2026-08-01T05:35:13.525Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null
+    }
+  ]
 }

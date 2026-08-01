@@ -6,11 +6,11 @@
   "station": "NZWN",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
-  "resolved_outcome": null,
-  "pnl": null,
+  "actual_temp": 11,
+  "resolved_outcome": "loss",
+  "pnl": -60,
   "forecast_snapshots": [
     {
       "ts": "2026-07-31T03:49:43.417Z",
@@ -251,6 +251,86 @@
       "metar": 9,
       "best": 10.6,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T05:19:36.058Z",
+      "horizon": "D+0",
+      "hours_left": 6.7,
+      "ecmwf": 10.5,
+      "hrrr": 9.2,
+      "metar": 8,
+      "best": 9.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.5,
+          "gfs_seamless": 9.2,
+          "icon_seamless": 9.2
+        },
+        "mean": 9.9,
+        "spread": 0.7,
+        "gap": 1.3
+      }
+    },
+    {
+      "ts": "2026-08-01T05:21:33.532Z",
+      "horizon": "D+0",
+      "hours_left": 6.6,
+      "ecmwf": 10.5,
+      "hrrr": 9.2,
+      "metar": 8,
+      "best": 9.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.5,
+          "gfs_seamless": 9.2,
+          "icon_seamless": 9.2
+        },
+        "mean": 9.9,
+        "spread": 0.7,
+        "gap": 1.3
+      }
+    },
+    {
+      "ts": "2026-08-01T05:23:16.925Z",
+      "horizon": "D+0",
+      "hours_left": 6.6,
+      "ecmwf": 10.5,
+      "hrrr": 9.2,
+      "metar": 8,
+      "best": 9.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.5,
+          "gfs_seamless": 9.2,
+          "icon_seamless": 9.2
+        },
+        "mean": 9.9,
+        "spread": 0.7,
+        "gap": 1.3
+      }
+    },
+    {
+      "ts": "2026-08-01T05:26:05.526Z",
+      "horizon": "D+0",
+      "hours_left": 6.6,
+      "ecmwf": 10.5,
+      "hrrr": 9.2,
+      "metar": 8,
+      "best": 9.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.5,
+          "gfs_seamless": 9.2,
+          "icon_seamless": 9.2
+        },
+        "mean": 9.9,
+        "spread": 0.7,
+        "gap": 1.3
+      }
     }
   ],
   "market_snapshots": [
@@ -373,6 +453,26 @@
       "ts": "2026-08-01T04:12:04.643Z",
       "top_bucket": "11-11C",
       "top_price": 0.9955
+    },
+    {
+      "ts": "2026-08-01T05:19:36.058Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.9945
+    },
+    {
+      "ts": "2026-08-01T05:21:33.532Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.9945
+    },
+    {
+      "ts": "2026-08-01T05:23:16.925Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.9945
+    },
+    {
+      "ts": "2026-08-01T05:26:05.526Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.9945
     }
   ],
   "all_outcomes": [
@@ -384,9 +484,9 @@
         5
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 366
     },
     {
@@ -397,9 +497,9 @@
         6
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 639
     },
     {
@@ -410,9 +510,9 @@
         7
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 3954
     },
     {
@@ -423,9 +523,9 @@
         8
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 12387
     },
     {
@@ -436,9 +536,9 @@
         9
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 21375
     },
     {
@@ -449,9 +549,9 @@
         10
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 45641
     },
     {
@@ -461,11 +561,11 @@
         11,
         11
       ],
-      "bid": 0.9955,
-      "ask": 0.0045,
-      "price": 0.9955,
-      "spread": -0.991,
-      "volume": 19333
+      "bid": 0.9945,
+      "ask": 0.9945,
+      "price": 0.9945,
+      "spread": 0,
+      "volume": 21214
     },
     {
       "question": "Will the highest temperature in Wellington be 12°C on August 1?",
@@ -475,10 +575,10 @@
         12
       ],
       "bid": 0.0015,
-      "ask": 0.9985,
+      "ask": 0.0015,
       "price": 0.0015,
-      "spread": 0.997,
-      "volume": 11207
+      "spread": 0,
+      "volume": 11322
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on August 1?",
@@ -487,10 +587,10 @@
         13,
         13
       ],
-      "bid": 0.003,
-      "ask": 0.997,
-      "price": 0.003,
-      "spread": 0.994,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
+      "spread": 0,
       "volume": 6492
     },
     {
@@ -501,9 +601,9 @@
         14
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 8416
     },
     {
@@ -514,11 +614,12 @@
         999
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 2399
     }
   ],
-  "created_at": "2026-07-31T03:49:46.929Z"
+  "created_at": "2026-07-31T03:49:46.929Z",
+  "positions": []
 }
