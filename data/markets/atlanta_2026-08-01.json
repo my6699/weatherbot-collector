@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3234468",
     "question": "Will the highest temperature in Atlanta be between 88-89°F on August 1?",
@@ -30,7 +30,7 @@
     "close_reason": "stop_loss",
     "closed_at": "2026-07-31T14:41:59.742Z"
   },
-  "actual_temp": null,
+  "actual_temp": 86.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -363,6 +363,16 @@
       "metar": 86,
       "best": 87,
       "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T22:13:38.754Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 86,
+      "hrrr": 87,
+      "metar": 85,
+      "best": 87,
+      "best_source": "hrrr"
     }
   ],
   "market_snapshots": [
@@ -530,6 +540,11 @@
       "ts": "2026-08-01T21:12:01.251Z",
       "top_bucket": "86-87F",
       "top_price": 0.935
+    },
+    {
+      "ts": "2026-08-01T22:13:38.754Z",
+      "top_bucket": "86-87F",
+      "top_price": 0.98
     }
   ],
   "all_outcomes": [
@@ -557,7 +572,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 9684
+      "volume": 9689
     },
     {
       "question": "Will the highest temperature in Atlanta be between 82-83°F on August 1?",
@@ -570,7 +585,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 11041
+      "volume": 11046
     },
     {
       "question": "Will the highest temperature in Atlanta be between 84-85°F on August 1?",
@@ -583,7 +598,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 4493
+      "volume": 5643
     },
     {
       "question": "Will the highest temperature in Atlanta be between 86-87°F on August 1?",
@@ -592,11 +607,11 @@
         86,
         87
       ],
-      "bid": 0.935,
-      "ask": 0.065,
-      "price": 0.935,
-      "spread": -0.87,
-      "volume": 6752
+      "bid": 0.98,
+      "ask": 0.02,
+      "price": 0.98,
+      "spread": -0.96,
+      "volume": 7585
     },
     {
       "question": "Will the highest temperature in Atlanta be between 88-89°F on August 1?",
@@ -605,11 +620,11 @@
         88,
         89
       ],
-      "bid": 0.075,
-      "ask": 0.925,
-      "price": 0.075,
-      "spread": 0.85,
-      "volume": 5107
+      "bid": 0.025,
+      "ask": 0.975,
+      "price": 0.025,
+      "spread": 0.95,
+      "volume": 5875
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on August 1?",
@@ -618,11 +633,11 @@
         90,
         91
       ],
-      "bid": 0.007,
-      "ask": 0.993,
-      "price": 0.007,
-      "spread": 0.986,
-      "volume": 5663
+      "bid": 0.0055,
+      "ask": 0.9945,
+      "price": 0.0055,
+      "spread": 0.989,
+      "volume": 5800
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on August 1?",
@@ -631,11 +646,11 @@
         92,
         93
       ],
-      "bid": 0.002,
-      "ask": 0.998,
-      "price": 0.002,
-      "spread": 0.996,
-      "volume": 7960
+      "bid": 0.0015,
+      "ask": 0.9985,
+      "price": 0.0015,
+      "spread": 0.997,
+      "volume": 8112
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on August 1?",
