@@ -105,13 +105,37 @@ export const ENSEMBLE_WEIGHTS: Record<string, number> = {
  */
 export const CONSENSUS_MAX_GAP_F = 3.5; // °F
 export const CONSENSUS_MAX_GAP_C = 2.0; // °C
-/**
- * Min probability edge over the market's (calibrated) probability to open a trade.
+/** Min probability edge over the market's (calibrated) probability to open a trade.
  * Weather markets are mildly overconfident (slope ~0.91): extreme prices overstate the truth.
  */
 export const MIN_EDGE = envNum(`${P}MIN_EDGE`, 0.07);
 /** Logit calibration slope for market prices in the weather domain. */
 export const MARKET_CAL_SLOPE = 0.91;
+
+/**
+ * Endgame / near-resolution trading (highest-certainty window).
+ * Live METAR obs often lock the daily max a few hours before settlement while the
+ * market still prices with lag — sweep the near-certain bucket and hold to settle.
+ */
+/** Enter endgame mode within this many hours of resolution. */
+export const ENDGAME_HOURS = envNum(`${P}ENDGAME_HOURS`, 6.0);
+/** Enable endgame sweep on D+0 markets (buy near-certain buckets from live obs). Default on. */
+export const ENDGAME_SWEEP =
+  process.env[`${P}ENDGAME_SWEEP`] == null ? true : envTruthy(`${P}ENDGAME_SWEEP`);
+/** Ask range for endgame buys (high-certainty buckets only). */
+export const ENDGAME_MIN_ASK = envNum(`${P}ENDGAME_MIN_ASK`, 0.75);
+export const ENDGAME_MAX_ASK = envNum(`${P}ENDGAME_MAX_ASK`, 0.95);
+/** Obs "locks" the daily max when METAR >= ensemble mean - this buffer. */
+export const ENDGAME_LOCK_F = envNum(`${P}ENDGAME_LOCK_F`, 2.0);
+export const ENDGAME_LOCK_C = envNum(`${P}ENDGAME_LOCK_C`, 1.0);
+/**
+ * Probability assigned to the bucket the locked METAR observation falls into.
+ * Near resolution a locked obs is essentially the outcome (small residual risk
+ * that the max still creeps up / obs-reads the wrong microclimate).
+ */
+export const ENDGAME_LOCKED_P = envNum(`${P}ENDGAME_LOCKED_P`, 0.93);
+/** Take-profit price in endgame when the result is NOT yet locked (lock in profit). */
+export const ENDGAME_TAKE_PROFIT = envNum(`${P}ENDGAME_TAKE_PROFIT`, 0.90);
 
 const root = process.cwd();
 export const DATA_DIR = path.join(root, "data");

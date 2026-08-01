@@ -73,6 +73,7 @@ interface PositionExport {
   EV: number;
   Kelly: number;
   Sigma: number | string;
+  Strategy: string;
   "Forecast Temp": number;
   "Forecast Source": string;
   Status: string;
@@ -166,6 +167,7 @@ export function exportAllToExcel(): string {
         EV: pos.ev,
         Kelly: pos.kelly,
         Sigma: pos.sigma ?? "",
+        Strategy: pos.strategy ?? "ensemble",
         "Forecast Temp": pos.forecast_temp,
         "Forecast Source": pos.forecast_src ?? "",
         Status: pos.status,

@@ -4,6 +4,14 @@ import {
   CALIBRATION_MIN,
   CONSENSUS_MAX_GAP_C,
   CONSENSUS_MAX_GAP_F,
+  ENDGAME_HOURS,
+  ENDGAME_LOCK_C,
+  ENDGAME_LOCK_F,
+  ENDGAME_LOCKED_P,
+  ENDGAME_MAX_ASK,
+  ENDGAME_MIN_ASK,
+  ENDGAME_TAKE_PROFIT,
+  ENDGAME_SWEEP,
   LOCATIONS,
   MAX_BET,
   MAX_HOURS,
@@ -41,7 +49,7 @@ import {
 } from "./polymarket.js";
 import { clobBuyYesUsd, clobSellYesShares, isLiveClobEnabled, resolveYesTokenId } from "./clob.js";
 import { exportAllToExcel } from "./export-excel.js";
-import type { ForecastSnap, OutcomeRow, Position } from "./storage.js";
+import type { ForecastSnap, MarketRecord, OutcomeRow, Position } from "./storage.js";
 import {
   allPositions,
   appendPosition,
@@ -59,6 +67,15 @@ import {
 
 function utcTodayIso(): string {
   return new Date().toISOString().slice(0, 10);
+}
+
+/** Most recent METAR observation recorded for a market (live obs for D+0). */
+function lastMetarObs(mkt: MarketRecord): number | null {
+  const snaps = mkt.forecast_snapshots ?? [];
+  for (let i = snaps.length - 1; i >= 0; i--) {
+    if (snaps[i]?.metar != null) return snaps[i]!.metar!;
+  }
+  return null;
 }
 
 function datesNext4Utc(): string[] {
@@ -148,6 +165,99 @@ async function liveSellExitOrKeepOpen(pos: Position, label: string): Promise<boo
     console.error(`  [CLOB] sell failed (${label}) — leaving position open in app + on-chain`, e);
     return false;
   }
+}
+
+interface BuyExecCtx {
+  locName: string;
+  date: string;
+  horizon: string;
+  unitSym: string;
+  /** Max entry price allowed (regular: MAX_PRICE, endgame: ENDGAME_MAX_ASK). */
+  maxPrice: number;
+}
+
+/**
+ * Execute a buy signal: verify the real ask, re-check the edge after the
+ * execution price refresh, place a CLOB order when live, and append the
+ * position. Returns true if the position was opened.
+ */
+async function executeBuy(
+  mkt: MarketRecord,
+  signal: Position,
+  ctx: BuyExecCtx,
+): Promise<boolean> {
+  let skipPosition = false;
+  try {
+    const prices = await fetchMarketBestPrices(signal.market_id);
+    if (prices) {
+      const realAsk = prices.bestAsk;
+      const realBid = prices.bestBid;
+      const realSpread = Math.round((realAsk - realBid) * 10000) / 10000;
+      // Skip if spread is too wide in absolute OR relative terms —
+      // a wide-relative-spread bucket is structurally unprofitable to round-trip.
+      if (
+        realSpread > MAX_SLIPPAGE ||
+        realSpread > realAsk * 0.5 ||
+        realAsk >= ctx.maxPrice
+      ) {
+        console.log(
+          `  [SKIP] ${ctx.locName} ${ctx.date} — real ask $${realAsk.toFixed(3)} spread $${realSpread.toFixed(3)}`,
+        );
+        skipPosition = true;
+      } else {
+        signal.entry_price = realAsk;
+        signal.bid_at_entry = realBid;
+        signal.spread = realSpread;
+        signal.shares = Math.round((signal.cost / realAsk) * 100) / 100;
+        signal.ev = Math.round(calcEv(signal.p, realAsk) * 10000) / 10000;
+        // Execution price changed — re-verify the edge before buying.
+        if (
+          realAsk < MIN_ASK ||
+          signal.ev < MIN_EV ||
+          signal.p - marketCalibrated(realAsk) < MIN_EDGE
+        ) {
+          console.log(
+            `  [EDGE GONE] ${ctx.locName} ${ctx.date} — real ask $${realAsk.toFixed(3)} no longer profitable`,
+          );
+          skipPosition = true;
+        }
+      }
+    }
+  } catch (e) {
+    console.error(`  [WARN] Could not fetch real ask for ${signal.market_id}:`, e);
+  }
+
+  if (skipPosition || signal.entry_price >= ctx.maxPrice) return false;
+
+  let proceed = true;
+  if (isLiveClobEnabled()) {
+    const yesToken = await resolveYesTokenId(signal.market_id);
+    if (!yesToken) {
+      console.log(
+        `  [CLOB SKIP] ${ctx.locName} ${ctx.date} — no YES token id (check Gamma / clobTokenIds)`,
+      );
+      proceed = false;
+    } else {
+      try {
+        await clobBuyYesUsd(yesToken, signal.cost);
+        signal.clob_yes_token_id = yesToken;
+      } catch (e) {
+        console.error(`  [CLOB BUY FAIL] ${ctx.locName} ${ctx.date}:`, e);
+        proceed = false;
+      }
+    }
+  }
+  if (!proceed) return false;
+
+  appendPosition(mkt, signal);
+  const bucketLabel = `${signal.bucket_low}-${signal.bucket_high}${ctx.unitSym}`;
+  console.log(
+    `  [BUY]  ${ctx.locName} ${ctx.horizon} ${ctx.date} | ${bucketLabel} | ` +
+      `$${signal.entry_price.toFixed(3)} | EV ${signal.ev >= 0 ? "+" : ""}${signal.ev.toFixed(2)} | ` +
+      `edge ${(signal.p - marketCalibrated(signal.entry_price)).toFixed(3)} | ` +
+      `$${signal.cost.toFixed(2)} (${(signal.forecast_src ?? "").toUpperCase()})`,
+  );
+  return true;
 }
 
 async function liveSellSettlementAttempt(pos: Position, label: string): Promise<void> {
@@ -408,78 +518,102 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               closed_at: null,
             };
 
-            let skipPosition = false;
-            try {
-              const prices = await fetchMarketBestPrices(signal.market_id);
-              if (prices) {
-                const realAsk = prices.bestAsk;
-                const realBid = prices.bestBid;
-                const realSpread = Math.round((realAsk - realBid) * 10000) / 10000;
-                // Skip if spread is too wide in absolute OR relative terms —
-                // a wide-relative-spread bucket is structurally unprofitable to round-trip.
-                if (
-                  realSpread > MAX_SLIPPAGE ||
-                  realSpread > realAsk * 0.5 ||
-                  realAsk >= MAX_PRICE
-                ) {
-                  console.log(
-                    `  [SKIP] ${loc.name} ${date} — real ask $${realAsk.toFixed(3)} spread $${realSpread.toFixed(3)}`,
-                  );
-                  skipPosition = true;
-                } else {
-                  signal.entry_price = realAsk;
-                  signal.bid_at_entry = realBid;
-                  signal.spread = realSpread;
-                  signal.shares = Math.round((signal.cost / realAsk) * 100) / 100;
-                  signal.ev = Math.round(calcEv(signal.p, realAsk) * 10000) / 10000;
-                  // Execution price changed — re-verify the edge before buying.
-                  if (
-                    realAsk < MIN_ASK ||
-                    signal.ev < MIN_EV ||
-                    signal.p - marketCalibrated(realAsk) < MIN_EDGE
-                  ) {
-                    console.log(
-                      `  [EDGE GONE] ${loc.name} ${date} — real ask $${realAsk.toFixed(3)} no longer profitable`,
-                    );
-                    skipPosition = true;
-                  }
-                }
-              }
-            } catch (e) {
-              console.error(`  [WARN] Could not fetch real ask for ${signal.market_id}:`, e);
-            }
-
-            if (!skipPosition && signal.entry_price < MAX_PRICE) {
-              let proceed = true;
-              if (isLiveClobEnabled()) {
-                const yesToken = await resolveYesTokenId(signal.market_id);
-                if (!yesToken) {
-                  console.log(
-                    `  [CLOB SKIP] ${loc.name} ${date} — no YES token id (check Gamma / clobTokenIds)`,
-                  );
-                  proceed = false;
-                } else {
-                  try {
-                    await clobBuyYesUsd(yesToken, signal.cost);
-                    signal.clob_yes_token_id = yesToken;
-                  } catch (e) {
-                    console.error(`  [CLOB BUY FAIL] ${loc.name} ${date}:`, e);
-                    proceed = false;
-                  }
-                }
-              }
-              if (!proceed) continue;
+            const filled = await executeBuy(mkt, signal, {
+              locName: loc.name,
+              date,
+              horizon,
+              unitSym,
+              maxPrice: MAX_PRICE,
+            });
+            if (filled) {
               balance -= signal.cost;
-              appendPosition(mkt, signal);
               state.total_trades += 1;
               newPos += 1;
-              const bucketLabel = `${signal.bucket_low}-${signal.bucket_high}${unitSym}`;
-              console.log(
-                `  [BUY]  ${loc.name} ${horizon} ${date} | ${bucketLabel} | ` +
-                  `$${signal.entry_price.toFixed(3)} | EV ${signal.ev >= 0 ? "+" : ""}${signal.ev.toFixed(2)} | ` +
-                  `edge ${(signal.p - marketCalibrated(signal.entry_price)).toFixed(3)} | ` +
-                  `$${signal.cost.toFixed(2)} (${(signal.forecast_src ?? "").toUpperCase()})`,
-              );
+            }
+          }
+        }
+      }
+
+      // Endgame sweep: within ENDGAME_HOURS of resolution, a live METAR obs at or
+      // beyond the forecast peak locks the daily max. The market often still prices
+      // these near-certain buckets with lag (0.75-0.95) — buy and hold to settlement.
+      if (ENDGAME_SWEEP && i === 0 && hours < ENDGAME_HOURS) {
+        const metar = snap.metar;
+        const ensMean = snap.ens?.mean ?? null;
+        if (metar != null && ensMean != null) {
+          const lockBuf = unit === "F" ? ENDGAME_LOCK_F : ENDGAME_LOCK_C;
+          const locked = metar >= ensMean - lockBuf;
+          if (locked && openPositions(mkt).length < MAX_POSITIONS_PER_MARKET) {
+            const heldIds = new Set(openPositions(mkt).map((p) => p.market_id));
+            const egCandidates: {
+              o: OutcomeRow;
+              p: number;
+              ev: number;
+              edge: number;
+              kelly: number;
+              size: number;
+            }[] = [];
+            for (const o of outcomes) {
+              if (heldIds.has(o.market_id)) continue;
+              const ask = o.ask;
+              if (ask < ENDGAME_MIN_ASK || ask > ENDGAME_MAX_ASK) continue;
+              // Observation-based certainty: a locked obs that falls in the bucket
+              // is essentially the outcome (continuous-Gaussian tail probs under-
+              // state near-resolution certainty, so use a fixed locked probability).
+              const p = inBucket(metar, o.range[0], o.range[1])
+                ? ENDGAME_LOCKED_P
+                : 0;
+              if (p <= 0) continue;
+              const edge = p - marketCalibrated(ask);
+              if (edge < MIN_EDGE) continue;
+              const kelly = calcKelly(p, ask);
+              const size = betSize(kelly, balance, MAX_BET);
+              if (size < 0.5) continue;
+              egCandidates.push({ o, p, ev: calcEv(p, ask), edge, kelly, size });
+            }
+            egCandidates.sort((a, b) => b.edge - a.edge);
+            console.log(
+              `  [ENDGAME] ${loc.name} ${date} — METAR ${metar}${unitSym} locks daily max, ${egCandidates.length} certain-bucket candidates`,
+            );
+            const pick = egCandidates[0];
+            if (pick) {
+              const o = pick.o;
+              const signal: Position = {
+                market_id: o.market_id,
+                question: o.question,
+                bucket_low: o.range[0],
+                bucket_high: o.range[1],
+                entry_price: o.ask,
+                bid_at_entry: o.bid,
+                spread: o.spread,
+                shares: Math.round((pick.size / o.ask) * 100) / 100,
+                cost: pick.size,
+                p: Math.round(pick.p * 10000) / 10000,
+                ev: Math.round(pick.ev * 10000) / 10000,
+                kelly: Math.round(pick.kelly * 10000) / 10000,
+                forecast_temp: metar,
+                forecast_src: "endgame",
+                strategy: "endgame",
+                sigma: lockBuf,
+                opened_at: snap.ts,
+                status: "open",
+                pnl: null,
+                exit_price: null,
+                close_reason: null,
+                closed_at: null,
+              };
+              const filled = await executeBuy(mkt, signal, {
+                locName: loc.name,
+                date,
+                horizon,
+                unitSym,
+                maxPrice: ENDGAME_MAX_ASK,
+              });
+              if (filled) {
+                balance -= signal.cost;
+                state.total_trades += 1;
+                newPos += 1;
+              }
             }
           }
         }
@@ -637,8 +771,15 @@ export async function monitorPositions(): Promise<number> {
       const hoursLeft = hoursToResolution(endDate);
 
       let takeProfit: number | null;
-      if (hoursLeft < 24) takeProfit = null;
-      else if (hoursLeft < 48) takeProfit = 0.85;
+      if (hoursLeft < ENDGAME_HOURS && ENDGAME_SWEEP) {
+        // Endgame: if live METAR obs has locked the result INTO our bucket, hold to
+        // settlement and collect the full $1.00. If not yet locked, take profit at a
+        // high price (e.g. 0.90) instead of gambling on an unsettled outcome.
+        const lastMetar = lastMetarObs(mkt);
+        const locked =
+          lastMetar != null && inBucket(lastMetar, pos.bucket_low, pos.bucket_high);
+        takeProfit = locked ? null : ENDGAME_TAKE_PROFIT;
+      } else if (hoursLeft < 48) takeProfit = 0.85;
       else takeProfit = 0.75;
 
       if (currentPrice >= entry * 1.2 && stop < entry) {

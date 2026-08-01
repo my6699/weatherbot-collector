@@ -7,7 +7,29 @@
   "event_end_date": "2026-08-02T12:00:00Z",
   "hours_at_discovery": 55.7,
   "status": "open",
-  "position": null,
+  "position": {
+    "market_id": "3236583",
+    "question": "Will the highest temperature in Tokyo be 31°C on August 2?",
+    "bucket_low": 31,
+    "bucket_high": 31,
+    "entry_price": 0.03,
+    "bid_at_entry": 0.02,
+    "spread": 0.01,
+    "shares": 666.67,
+    "cost": 20,
+    "p": 0.2449,
+    "ev": 7.1633,
+    "kelly": 0.0564,
+    "forecast_temp": 30.9,
+    "forecast_src": "ensemble",
+    "sigma": 1.6,
+    "opened_at": "2026-08-01T05:57:52.409Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null
+  },
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -371,6 +393,26 @@
         "spread": 1.4,
         "gap": 2.2
       }
+    },
+    {
+      "ts": "2026-08-01T05:57:52.409Z",
+      "horizon": "D+1",
+      "hours_left": 30,
+      "ecmwf": 31.9,
+      "hrrr": 30.4,
+      "metar": null,
+      "best": 30.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.9,
+          "gfs_seamless": 30.4,
+          "icon_seamless": 29.3
+        },
+        "mean": 30.9,
+        "spread": 1.6,
+        "gap": 1.5
+      }
     }
   ],
   "market_snapshots": [
@@ -513,6 +555,11 @@
       "ts": "2026-08-01T05:37:44.592Z",
       "top_bucket": "34-34C",
       "top_price": 0.395
+    },
+    {
+      "ts": "2026-08-01T05:57:52.409Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.395
     }
   ],
   "all_outcomes": [
@@ -540,7 +587,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 2262
+      "volume": 2328
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C on August 2?",
@@ -553,7 +600,7 @@
       "ask": 0.045,
       "price": 0.045,
       "spread": 0,
-      "volume": 402
+      "volume": 411
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on August 2?",
@@ -566,7 +613,7 @@
       "ask": 0.245,
       "price": 0.245,
       "spread": 0,
-      "volume": 1781
+      "volume": 1798
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on August 2?",
@@ -579,7 +626,7 @@
       "ask": 0.395,
       "price": 0.395,
       "spread": 0,
-      "volume": 1015
+      "volume": 1049
     },
     {
       "question": "Will the highest temperature in Tokyo be 35°C on August 2?",
@@ -592,7 +639,7 @@
       "ask": 0.245,
       "price": 0.245,
       "spread": 0,
-      "volume": 920
+      "volume": 1013
     },
     {
       "question": "Will the highest temperature in Tokyo be 36°C on August 2?",
@@ -605,7 +652,7 @@
       "ask": 0.075,
       "price": 0.075,
       "spread": 0,
-      "volume": 731
+      "volume": 733
     },
     {
       "question": "Will the highest temperature in Tokyo be 37°C on August 2?",
@@ -618,7 +665,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 1115
+      "volume": 1121
     },
     {
       "question": "Will the highest temperature in Tokyo be 38°C on August 2?",
@@ -631,7 +678,7 @@
       "ask": 0.008,
       "price": 0.008,
       "spread": 0,
-      "volume": 1549
+      "volume": 1570
     },
     {
       "question": "Will the highest temperature in Tokyo be 39°C on August 2?",
@@ -644,7 +691,7 @@
       "ask": 0.003,
       "price": 0.003,
       "spread": 0,
-      "volume": 522
+      "volume": 555
     },
     {
       "question": "Will the highest temperature in Tokyo be 40°C or higher on August 2?",
@@ -657,8 +704,33 @@
       "ask": 0.003,
       "price": 0.003,
       "spread": 0,
-      "volume": 862
+      "volume": 928
     }
   ],
-  "created_at": "2026-07-31T04:16:27.591Z"
+  "created_at": "2026-07-31T04:16:27.591Z",
+  "positions": [
+    {
+      "market_id": "3236583",
+      "question": "Will the highest temperature in Tokyo be 31°C on August 2?",
+      "bucket_low": 31,
+      "bucket_high": 31,
+      "entry_price": 0.03,
+      "bid_at_entry": 0.02,
+      "spread": 0.01,
+      "shares": 666.67,
+      "cost": 20,
+      "p": 0.2449,
+      "ev": 7.1633,
+      "kelly": 0.0564,
+      "forecast_temp": 30.9,
+      "forecast_src": "ensemble",
+      "sigma": 1.6,
+      "opened_at": "2026-08-01T05:57:52.409Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null
+    }
+  ]
 }
