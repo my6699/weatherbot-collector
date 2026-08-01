@@ -7,7 +7,29 @@
   "event_end_date": "2026-08-02T12:00:00Z",
   "hours_at_discovery": 54.7,
   "status": "open",
-  "position": null,
+  "position": {
+    "market_id": "3237403",
+    "question": "Will the highest temperature in Lucknow be 32°C on August 2?",
+    "bucket_low": 32,
+    "bucket_high": 32,
+    "entry_price": 0.17,
+    "bid_at_entry": 0.16,
+    "spread": 0.01,
+    "shares": 117.65,
+    "cost": 20,
+    "p": 1,
+    "ev": 4.8824,
+    "kelly": 0.25,
+    "forecast_temp": 32,
+    "forecast_src": "ecmwf",
+    "sigma": 1.2,
+    "opened_at": "2026-08-01T03:54:26.226Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null
+  },
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -161,6 +183,16 @@
       "metar": null,
       "best": 31.2,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T03:54:26.226Z",
+      "horizon": "D+1",
+      "hours_left": 32.1,
+      "ecmwf": 32,
+      "hrrr": null,
+      "metar": null,
+      "best": 32,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -238,6 +270,11 @@
       "ts": "2026-08-01T00:14:00.126Z",
       "top_bucket": "34-999C",
       "top_price": 0.49
+    },
+    {
+      "ts": "2026-08-01T03:54:26.226Z",
+      "top_bucket": "34-999C",
+      "top_price": 0.5
     }
   ],
   "all_outcomes": [
@@ -248,11 +285,11 @@
         -999,
         24
       ],
-      "bid": 0.0005,
-      "ask": 0.9995,
-      "price": 0.0005,
-      "spread": 0.999,
-      "volume": 338
+      "bid": 0.0015,
+      "ask": 0.9985,
+      "price": 0.0015,
+      "spread": 0.997,
+      "volume": 339
     },
     {
       "question": "Will the highest temperature in Lucknow be 25°C on August 2?",
@@ -326,10 +363,10 @@
         30,
         30
       ],
-      "bid": 0.0185,
-      "ask": 0.9815,
-      "price": 0.0185,
-      "spread": 0.963,
+      "bid": 0.0175,
+      "ask": 0.9825,
+      "price": 0.0175,
+      "spread": 0.965,
       "volume": 785
     },
     {
@@ -343,7 +380,7 @@
       "ask": 0.935,
       "price": 0.065,
       "spread": 0.87,
-      "volume": 692
+      "volume": 702
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C on August 2?",
@@ -356,7 +393,7 @@
       "ask": 0.835,
       "price": 0.165,
       "spread": 0.67,
-      "volume": 743
+      "volume": 891
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on August 2?",
@@ -369,7 +406,7 @@
       "ask": 0.745,
       "price": 0.255,
       "spread": 0.49,
-      "volume": 1172
+      "volume": 1192
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C or higher on August 2?",
@@ -378,11 +415,11 @@
         34,
         999
       ],
-      "bid": 0.49,
-      "ask": 0.51,
-      "price": 0.49,
-      "spread": 0.02,
-      "volume": 6709
+      "bid": 0.5,
+      "ask": 0.5,
+      "price": 0.5,
+      "spread": 0,
+      "volume": 7024
     }
   ],
   "created_at": "2026-07-31T05:18:15.293Z"
