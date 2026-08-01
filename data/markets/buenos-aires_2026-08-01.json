@@ -6,7 +6,7 @@
   "station": "SAEZ",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "3234413",
     "question": "Will the highest temperature in Buenos Aires be 19°C on August 1?",
@@ -293,6 +293,16 @@
       "metar": 17,
       "best": 19.9,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T11:36:52.648Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 19.9,
+      "hrrr": null,
+      "metar": 16,
+      "best": 19.9,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -425,6 +435,11 @@
       "ts": "2026-08-01T09:24:25.329Z",
       "top_bucket": "19-19C",
       "top_price": 0.63
+    },
+    {
+      "ts": "2026-08-01T11:36:52.648Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.785
     }
   ],
   "all_outcomes": [
@@ -491,7 +506,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 5972
+      "volume": 9009
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 19°C on August 1?",
@@ -500,11 +515,11 @@
         19,
         19
       ],
-      "bid": 0.63,
-      "ask": 0.37,
-      "price": 0.63,
-      "spread": -0.26,
-      "volume": 4069
+      "bid": 0.785,
+      "ask": 0.215,
+      "price": 0.785,
+      "spread": -0.57,
+      "volume": 4600
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on August 1?",
@@ -513,11 +528,11 @@
         20,
         20
       ],
-      "bid": 0.245,
-      "ask": 0.755,
-      "price": 0.245,
-      "spread": 0.51,
-      "volume": 8412
+      "bid": 0.155,
+      "ask": 0.845,
+      "price": 0.155,
+      "spread": 0.69,
+      "volume": 8867
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on August 1?",
@@ -526,11 +541,11 @@
         21,
         21
       ],
-      "bid": 0.07,
-      "ask": 0.93,
-      "price": 0.07,
-      "spread": 0.86,
-      "volume": 5044
+      "bid": 0.045,
+      "ask": 0.955,
+      "price": 0.045,
+      "spread": 0.91,
+      "volume": 5205
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C on August 1?",
@@ -539,11 +554,11 @@
         22,
         22
       ],
-      "bid": 0.004,
-      "ask": 0.996,
-      "price": 0.004,
-      "spread": 0.992,
-      "volume": 5573
+      "bid": 0.0045,
+      "ask": 0.9955,
+      "price": 0.0045,
+      "spread": 0.991,
+      "volume": 5665
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on August 1?",
@@ -552,11 +567,11 @@
         23,
         23
       ],
-      "bid": 0.0055,
-      "ask": 0.9945,
-      "price": 0.0055,
-      "spread": 0.989,
-      "volume": 2686
+      "bid": 0.0025,
+      "ask": 0.9975,
+      "price": 0.0025,
+      "spread": 0.995,
+      "volume": 3210
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C or higher on August 1?",
@@ -565,11 +580,11 @@
         24,
         999
       ],
-      "bid": 0.0025,
-      "ask": 0.9975,
-      "price": 0.0025,
-      "spread": 0.995,
-      "volume": 3053
+      "bid": 0.002,
+      "ask": 0.998,
+      "price": 0.002,
+      "spread": 0.996,
+      "volume": 3408
     }
   ],
   "created_at": "2026-07-31T03:49:42.364Z"

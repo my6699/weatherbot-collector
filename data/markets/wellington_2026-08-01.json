@@ -6,9 +6,9 @@
   "station": "NZWN",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 11,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -271,6 +271,16 @@
       "metar": 8,
       "best": 10.6,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T11:36:54.586Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 10.6,
+      "hrrr": null,
+      "metar": 5,
+      "best": 10.6,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -403,6 +413,11 @@
       "ts": "2026-08-01T09:24:26.058Z",
       "top_bucket": "11-11C",
       "top_price": 0.9995
+    },
+    {
+      "ts": "2026-08-01T11:36:54.586Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.9995
     }
   ],
   "all_outcomes": [
@@ -495,7 +510,7 @@
       "ask": 0.0005,
       "price": 0.9995,
       "spread": -0.999,
-      "volume": 25032
+      "volume": 25098
     },
     {
       "question": "Will the highest temperature in Wellington be 12°C on August 1?",
@@ -508,7 +523,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 11481
+      "volume": 11491
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on August 1?",
