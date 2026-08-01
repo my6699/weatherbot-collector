@@ -4,16 +4,22 @@ import {
   CALIBRATION_MIN,
   CONSENSUS_MAX_GAP_C,
   CONSENSUS_MAX_GAP_F,
+  ENDGAME_COOLING_HOUR,
   ENDGAME_HOURS,
   ENDGAME_LOCK_C,
   ENDGAME_LOCK_F,
   ENDGAME_LOCKED_P,
+  ENDGAME_LOCAL_HOUR_MIN,
   ENDGAME_MAX_ASK,
+  ENDGAME_MAX_ASK_EARLY,
   ENDGAME_MIN_ASK,
+  ENDGAME_RISING_C,
+  ENDGAME_RISING_F,
   ENDGAME_TAKE_PROFIT,
   ENDGAME_SWEEP,
   LOCATIONS,
   MAX_BET,
+  MAX_DEPTH_FRACTION,
   MAX_HOURS,
   MAX_POSITIONS_PER_MARKET,
   MAX_PRICE,
@@ -27,6 +33,7 @@ import {
   MONITOR_INTERVAL,
   SCAN_INTERVAL,
   SELL_SLIPPAGE_TOL,
+  STOP_HARD_MULT,
   TRADE_D0,
 } from "./config.js";
 import { getEnsembleForecast, getMetar } from "./forecasts.js";
@@ -48,7 +55,13 @@ import {
   getResolvedEventInfo,
   type GammaEvent,
 } from "./polymarket.js";
-import { clobBuyYesUsd, clobSellYesShares, isLiveClobEnabled, resolveYesTokenId } from "./clob.js";
+import {
+  clobBuyYesUsd,
+  clobSellYesShares,
+  getYesBidDepth,
+  isLiveClobEnabled,
+  resolveYesTokenId,
+} from "./clob.js";
 import { exportAllToExcel } from "./export-excel.js";
 import type { ForecastSnap, MarketRecord, OutcomeRow, Position } from "./storage.js";
 import {
@@ -87,6 +100,31 @@ function datesNext4Utc(): string[] {
     out.push(d.toISOString().slice(0, 10));
   }
   return out;
+}
+
+/** Approximate local wall-clock hour from longitude (noon-to-noon weather event
+ *  day). Good enough to gate the endgame peak window across the 20 locations. */
+function localHourFor(loc: { lon: number }): number {
+  const now = new Date();
+  const utcHour = now.getUTCHours() + now.getUTCMinutes() / 60;
+  return (utcHour + Math.round(loc.lon / 15) + 24) % 24;
+}
+
+/** Latest two non-null METAR observations from snapshot history. */
+function metarTrend(mkt: MarketRecord): { latest: number; prev: number | null } {
+  const snaps = mkt.forecast_snapshots ?? [];
+  let latest: number | null = null;
+  let prev: number | null = null;
+  for (let i = snaps.length - 1; i >= 0; i--) {
+    const m = snaps[i]?.metar;
+    if (m == null) continue;
+    if (latest == null) latest = m;
+    else {
+      prev = m;
+      break;
+    }
+  }
+  return { latest: latest ?? NaN, prev };
 }
 
 export async function takeForecastSnapshot(
@@ -283,12 +321,36 @@ async function executeBuy(
       );
       proceed = false;
     } else {
-      try {
-        await clobBuyYesUsd(yesToken, signal.cost);
-        signal.clob_yes_token_id = yesToken;
-      } catch (e) {
-        console.error(`  [CLOB BUY FAIL] ${ctx.locName} ${ctx.date}:`, e);
-        proceed = false;
+      // Depth guard: never open a position whose notional exceeds MAX_DEPTH_FRACTION
+      // of the top-2 levels of resting YES bid depth. A book this thin could never
+      // absorb our eventual exit without severe slippage.
+      const depth = await getYesBidDepth(yesToken, 2);
+      if (depth != null && depth > 0) {
+        const maxNotional = depth * MAX_DEPTH_FRACTION;
+        if (signal.cost > maxNotional) {
+          if (maxNotional < 0.5) {
+            console.log(
+              `  [DEPTH SKIP] ${ctx.locName} ${ctx.date} — depth $${depth.toFixed(2)} too thin for $${signal.cost.toFixed(2)}`,
+            );
+            proceed = false;
+          } else {
+            const oldCost = signal.cost;
+            signal.cost = Math.floor(maxNotional * 100) / 100;
+            signal.shares = Math.round((signal.cost / signal.entry_price) * 100) / 100;
+            console.log(
+              `  [DEPTH CAP] ${ctx.locName} ${ctx.date} — size $${oldCost.toFixed(2)} -> $${signal.cost.toFixed(2)} (depth $${depth.toFixed(2)})`,
+            );
+          }
+        }
+      }
+      if (proceed) {
+        try {
+          await clobBuyYesUsd(yesToken, signal.cost);
+          signal.clob_yes_token_id = yesToken;
+        } catch (e) {
+          console.error(`  [CLOB BUY FAIL] ${ctx.locName} ${ctx.date}:`, e);
+          proceed = false;
+        }
       }
     }
   }
@@ -417,6 +479,17 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           }
 
           if (currentPrice <= stop) {
+            // Stop-loss confirm (same as monitorPositions): a transient dip in a
+            // thin book is marked pending first; only a persisting dip or a hard
+            // crash (< STOP_HARD_MULT × entry) exits immediately.
+            const hardCrash = currentPrice < entry * STOP_HARD_MULT;
+            if (!hardCrash && !pos.stop_pending) {
+              pos.stop_pending = true;
+              console.log(
+                `  [STOP PENDING] ${loc.name} ${date} — bid $${currentPrice.toFixed(3)} below stop $${stop.toFixed(3)}, confirm next scan`,
+              );
+              continue;
+            }
             const exitLabel = `${loc.name} ${date}`;
             const soldOk = await liveSellExitOrKeepOpen(pos, exitLabel, {
               force: true,
@@ -590,13 +663,31 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
       // Endgame sweep: within ENDGAME_HOURS of resolution, a live METAR obs at or
       // beyond the forecast peak locks the daily max. The market often still prices
       // these near-certain buckets with lag (0.75-0.95) — buy and hold to settlement.
+      //
+      // Time-trap guards (the daily max usually peaks at local 14:00-16:00):
+      //   1. before local ENDGAME_LOCAL_HOUR_MIN an obs near the peak is NOT a
+      //      locked max — a cloud gap can spike it or the sun keeps heating.
+      //   2. if the obs is still rising vs the previous observation, don't lock.
+      //   3. unless cooling is confirmed (local hour + falling obs), buy under a
+      //      stricter cap (ENDGAME_MAX_ASK_EARLY) to avoid overpaying a "locked"
+      //      peak that might still break higher.
       if (ENDGAME_SWEEP && i === 0 && hours < ENDGAME_HOURS) {
         const metar = snap.metar;
         const ensMean = snap.ens?.mean ?? null;
         if (metar != null && ensMean != null) {
+          const localHour = localHourFor(loc);
+          const { latest: curMetar, prev: prevMetar } = metarTrend(mkt);
+          const risingBuf = unit === "F" ? ENDGAME_RISING_F : ENDGAME_RISING_C;
+          const rising = prevMetar != null && curMetar >= prevMetar + risingBuf;
+          const afterPeakWindow = localHour >= ENDGAME_LOCAL_HOUR_MIN;
           const lockBuf = unit === "F" ? ENDGAME_LOCK_F : ENDGAME_LOCK_C;
-          const locked = metar >= ensMean - lockBuf;
+          const locked = afterPeakWindow && !rising && metar >= ensMean - lockBuf;
           if (locked && openPositions(mkt).length < MAX_POSITIONS_PER_MARKET) {
+            const cooling =
+              localHour >= ENDGAME_COOLING_HOUR &&
+              prevMetar != null &&
+              curMetar <= prevMetar;
+            const egMaxAsk = cooling ? ENDGAME_MAX_ASK : ENDGAME_MAX_ASK_EARLY;
             const heldIds = new Set(openPositions(mkt).map((p) => p.market_id));
             const egCandidates: {
               o: OutcomeRow;
@@ -609,7 +700,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             for (const o of outcomes) {
               if (heldIds.has(o.market_id)) continue;
               const ask = o.ask;
-              if (ask < ENDGAME_MIN_ASK || ask > ENDGAME_MAX_ASK) continue;
+              if (ask < ENDGAME_MIN_ASK || ask > egMaxAsk) continue;
               // Observation-based certainty: a locked obs that falls in the bucket
               // is essentially the outcome (continuous-Gaussian tail probs under-
               // state near-resolution certainty, so use a fixed locked probability).
@@ -626,7 +717,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             }
             egCandidates.sort((a, b) => b.edge - a.edge);
             console.log(
-              `  [ENDGAME] ${loc.name} ${date} — METAR ${metar}${unitSym} locks daily max, ${egCandidates.length} certain-bucket candidates`,
+              `  [ENDGAME] ${loc.name} ${date} — METAR ${metar}${unitSym} local ${localHour.toFixed(1)}h ${rising ? "RISING" : "steady/falling"}, ${egCandidates.length} certain-bucket candidates (ask cap ${egMaxAsk})`,
             );
             const pick = egCandidates[0];
             if (pick) {
@@ -660,7 +751,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
                 date,
                 horizon,
                 unitSym,
-                maxPrice: ENDGAME_MAX_ASK,
+                maxPrice: egMaxAsk,
               });
               if (filled) {
                 balance -= signal.cost;
@@ -843,6 +934,20 @@ export async function monitorPositions(): Promise<number> {
 
       const takeTriggered = takeProfit != null && currentPrice >= takeProfit;
       const stopTriggered = currentPrice <= stop;
+
+      // Stop-loss confirm: a transient dip in a thin book shouldn't shake us out.
+      // The first dip marks the position pending — it only executes if still below
+      // the stop on a later scan. A hard crash (< STOP_HARD_MULT × entry) forces
+      // the exit immediately, that's a black swan not a blip.
+      const hardCrash = currentPrice < entry * STOP_HARD_MULT;
+      if (stopTriggered && !takeTriggered && !hardCrash && !pos.stop_pending) {
+        pos.stop_pending = true;
+        console.log(
+          `  [STOP PENDING] ${cityName} ${mkt.date} ${pos.bucket_low}-${pos.bucket_high} — bid $${currentPrice.toFixed(3)} below stop $${stop.toFixed(3)}, confirm next scan`,
+        );
+        saveMarket(mkt);
+        continue;
+      }
 
       if (takeTriggered || stopTriggered) {
         const soldOk = await liveSellExitOrKeepOpen(pos, `${cityName} ${mkt.date}`, {

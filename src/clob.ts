@@ -130,3 +130,49 @@ export async function resolveYesTokenId(marketId: string): Promise<string | null
   if (!detail) return null;
   return parseYesTokenId(detail);
 }
+
+interface OrderLevel {
+  price: number;
+  size: number;
+}
+
+function toLevels(rows: unknown): OrderLevel[] {
+  // clob-client returns {price, size} objects or [price, size] pairs depending on
+  // the version — parse both defensively.
+  if (!Array.isArray(rows)) return [];
+  const out: OrderLevel[] = [];
+  for (const row of rows) {
+    if (Array.isArray(row)) {
+      const p = Number(row[0]);
+      const s = Number(row[1]);
+      if (Number.isFinite(p) && Number.isFinite(s)) out.push({ price: p, size: s });
+    } else if (row && typeof row === "object") {
+      const p = Number((row as { price?: unknown }).price);
+      const s = Number((row as { size?: unknown }).size);
+      if (Number.isFinite(p) && Number.isFinite(s)) out.push({ price: p, size: s });
+    }
+  }
+  return out;
+}
+
+/**
+ * Total notional ($) resting on the top `levels` levels of the YES bid side.
+ * Returns null when the book is unavailable (e.g. API failure / not live).
+ */
+export async function getYesBidDepth(yesTokenId: string, levels = 2): Promise<number | null> {
+  try {
+    const client = await getClobClient();
+    const book = (await client.getOrderBook(yesTokenId)) as { bids?: unknown };
+    const bids = toLevels(book?.bids);
+    let total = 0;
+    let i = 0;
+    for (const b of bids) {
+      if (i >= levels) break;
+      total += b.price * b.size;
+      i += 1;
+    }
+    return total;
+  } catch {
+    return null;
+  }
+}

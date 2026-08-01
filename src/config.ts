@@ -136,6 +136,24 @@ export const ENDGAME_LOCK_C = envNum(`${P}ENDGAME_LOCK_C`, 1.0);
 export const ENDGAME_LOCKED_P = envNum(`${P}ENDGAME_LOCKED_P`, 0.93);
 /** Take-profit price in endgame when the result is NOT yet locked (lock in profit). */
 export const ENDGAME_TAKE_PROFIT = envNum(`${P}ENDGAME_TAKE_PROFIT`, 0.90);
+/**
+ * Endgame time-trap guards: the daily max usually peaks at local 14:00-16:00.
+ * Before that, a METAR value at/near the forecast peak is NOT a locked max —
+ * a short cloud gap can spike it, or the sun keeps heating. Only treat an obs
+ * as "locked" after this local hour.
+ */
+export const ENDGAME_LOCAL_HOUR_MIN = envNum(`${P}ENDGAME_LOCAL_HOUR_MIN`, 14);
+/** If the latest METAR rose by >= this (vs the previous obs) it is still heating
+ *  up — do NOT lock the current bucket. */
+export const ENDGAME_RISING_C = envNum(`${P}ENDGAME_RISING_C`, 0.5);
+export const ENDGAME_RISING_F = envNum(`${P}ENDGAME_RISING_F`, 1.0);
+/** Buy-cap while the cooling trend is not yet confirmed (local >= 16:00 AND obs
+ *  falling). Stricter than ENDGAME_MAX_ASK so we don't pay up for a "locked" peak
+ *  that might still break higher. */
+export const ENDGAME_MAX_ASK_EARLY = envNum(`${P}ENDGAME_MAX_ASK_EARLY`, 0.88);
+/** Local hour after which, combined with a falling obs, cooling is confirmed and
+ *  the full ENDGAME_MAX_ASK cap applies. */
+export const ENDGAME_COOLING_HOUR = envNum(`${P}ENDGAME_COOLING_HOUR`, 16);
 
 /**
  * Sell slippage guard: before market-selling, we check the live best bid.
@@ -144,6 +162,21 @@ export const ENDGAME_TAKE_PROFIT = envNum(`${P}ENDGAME_TAKE_PROFIT`, 0.90);
  * round. Stop-losses force through regardless — protecting capital wins.
  */
 export const SELL_SLIPPAGE_TOL = envNum(`${P}SELL_SLIPPAGE_TOL`, 0.05);
+
+/**
+ * Orderbook depth guard: never open a position whose notional exceeds this
+ * fraction of the top-2 levels of YES bid depth. Thin weather books would
+ * otherwise be impossible to exit without severe slippage.
+ */
+export const MAX_DEPTH_FRACTION = envNum(`${P}MAX_DEPTH_FRACTION`, 0.3);
+
+/**
+ * Stop-loss confirm logic: a price dip below the stop is first marked pending
+ * and only executed if it persists on the next scan (avoids getting shaken out
+ * by a transient quote in a thin book). If the price craters below this fraction
+ * of the entry price, the stop is forced immediately regardless.
+ */
+export const STOP_HARD_MULT = envNum(`${P}STOP_HARD_MULT`, 0.5);
 
 const root = process.cwd();
 export const DATA_DIR = path.join(root, "data");
