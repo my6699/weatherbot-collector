@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3234489",
     "question": "Will the highest temperature in Chicago be between 70-71°F on August 1?",
@@ -30,7 +30,7 @@
     "close_reason": "forecast_changed",
     "closed_at": "2026-08-01T03:54:09.378Z"
   },
-  "actual_temp": null,
+  "actual_temp": 72.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -353,6 +353,16 @@
       "metar": 71,
       "best": 71,
       "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T21:11:58.124Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 73,
+      "hrrr": 71,
+      "metar": 71,
+      "best": 71,
+      "best_source": "hrrr"
     }
   ],
   "market_snapshots": [
@@ -515,6 +525,11 @@
       "ts": "2026-08-01T19:37:20.834Z",
       "top_bucket": "72-73F",
       "top_price": 0.595
+    },
+    {
+      "ts": "2026-08-01T21:11:58.124Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.965
     }
   ],
   "all_outcomes": [
@@ -568,7 +583,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 9993
+      "volume": 9998
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on August 1?",
@@ -581,7 +596,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 12896
+      "volume": 21627
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on August 1?",
@@ -590,11 +605,11 @@
         72,
         73
       ],
-      "bid": 0.595,
-      "ask": 0.405,
-      "price": 0.595,
-      "spread": -0.19,
-      "volume": 8308
+      "bid": 0.965,
+      "ask": 0.035,
+      "price": 0.965,
+      "spread": -0.93,
+      "volume": 8707
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on August 1?",
@@ -603,11 +618,11 @@
         74,
         75
       ],
-      "bid": 0.36,
-      "ask": 0.64,
-      "price": 0.36,
-      "spread": 0.28,
-      "volume": 7008
+      "bid": 0.035,
+      "ask": 0.965,
+      "price": 0.035,
+      "spread": 0.93,
+      "volume": 7093
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on August 1?",
@@ -616,11 +631,11 @@
         76,
         77
       ],
-      "bid": 0.013,
-      "ask": 0.987,
-      "price": 0.013,
-      "spread": 0.974,
-      "volume": 4852
+      "bid": 0.003,
+      "ask": 0.997,
+      "price": 0.003,
+      "spread": 0.994,
+      "volume": 5197
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on August 1?",
@@ -629,11 +644,11 @@
         78,
         79
       ],
-      "bid": 0.0045,
-      "ask": 0.9955,
-      "price": 0.0045,
-      "spread": 0.991,
-      "volume": 982
+      "bid": 0.004,
+      "ask": 0.996,
+      "price": 0.004,
+      "spread": 0.992,
+      "volume": 2371
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on August 1?",
@@ -646,7 +661,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 815
+      "volume": 978
     },
     {
       "question": "Will the highest temperature in Chicago be 82°F or higher on August 1?",
