@@ -6,9 +6,9 @@
   "station": "KDAL",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 96.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -351,6 +351,16 @@
       "metar": 97,
       "best": 98,
       "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T23:14:04.873Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 100,
+      "hrrr": 97,
+      "metar": 96,
+      "best": 97,
+      "best_source": "hrrr"
     }
   ],
   "market_snapshots": [
@@ -523,6 +533,11 @@
       "ts": "2026-08-01T22:13:37.072Z",
       "top_bucket": "96-97F",
       "top_price": 0.68
+    },
+    {
+      "ts": "2026-08-01T23:14:04.873Z",
+      "top_bucket": "96-97F",
+      "top_price": 0.99
     }
   ],
   "all_outcomes": [
@@ -563,7 +578,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 8779
+      "volume": 9032
     },
     {
       "question": "Will the highest temperature in Dallas be between 96-97°F on August 1?",
@@ -572,11 +587,11 @@
         96,
         97
       ],
-      "bid": 0.68,
-      "ask": 0.32,
-      "price": 0.68,
-      "spread": -0.36,
-      "volume": 5195
+      "bid": 0.99,
+      "ask": 0.01,
+      "price": 0.99,
+      "spread": -0.98,
+      "volume": 5958
     },
     {
       "question": "Will the highest temperature in Dallas be between 98-99°F on August 1?",
@@ -585,11 +600,11 @@
         98,
         99
       ],
-      "bid": 0.285,
-      "ask": 0.715,
-      "price": 0.285,
-      "spread": 0.43,
-      "volume": 4614
+      "bid": 0.01,
+      "ask": 0.99,
+      "price": 0.01,
+      "spread": 0.98,
+      "volume": 5155
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on August 1?",
@@ -598,11 +613,11 @@
         100,
         101
       ],
-      "bid": 0.025,
-      "ask": 0.975,
-      "price": 0.025,
-      "spread": 0.95,
-      "volume": 2580
+      "bid": 0.0015,
+      "ask": 0.9985,
+      "price": 0.0015,
+      "spread": 0.997,
+      "volume": 2738
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on August 1?",
@@ -611,11 +626,11 @@
         102,
         103
       ],
-      "bid": 0.005,
-      "ask": 0.995,
-      "price": 0.005,
-      "spread": 0.99,
-      "volume": 3227
+      "bid": 0.0015,
+      "ask": 0.9985,
+      "price": 0.0015,
+      "spread": 0.997,
+      "volume": 4422
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on August 1?",
@@ -624,11 +639,11 @@
         104,
         105
       ],
-      "bid": 0.001,
-      "ask": 0.999,
-      "price": 0.001,
-      "spread": 0.998,
-      "volume": 2486
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 2534
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on August 1?",
