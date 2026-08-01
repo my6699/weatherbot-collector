@@ -35,7 +35,12 @@ export function bucketProb(forecast: number, tLow: number, tHigh: number, sigma?
   if (tHigh === 999) {
     return 1.0 - normCdf((tLow - Number(forecast)) / s);
   }
-  return inBucket(forecast, tLow, tHigh) ? 1.0 : 0.0;
+  if (tLow === tHigh) {
+    // Single-degree bucket (e.g. "be 24°C"): treat as ±0.5 range around the value.
+    return normCdf((tHigh + 0.5 - Number(forecast)) / s) - normCdf((tHigh - 0.5 - Number(forecast)) / s);
+  }
+  // Range bucket (e.g. "between 86-87°F"): probability mass within [low, high].
+  return normCdf((tHigh - Number(forecast)) / s) - normCdf((tLow - Number(forecast)) / s);
 }
 
 export function calcEv(p: number, price: number): number {

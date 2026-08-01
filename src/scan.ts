@@ -314,7 +314,10 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
       }
 
       if (!mkt.position && forecastTemp != null && hours >= MIN_HOURS) {
-        const sigma = getSigma(citySlug, bestSource ?? "ecmwf");
+        const baseSigma = getSigma(citySlug, bestSource ?? "ecmwf");
+        // Forecasts are less reliable the further out they are: scale sigma with horizon.
+        const horizonScale = 1 + Math.max(0, hours - 6) / 48;
+        const sigma = Math.round(baseSigma * horizonScale * 1000) / 1000;
         let bestSignal: Position | null = null;
 
         let matchedBucket: OutcomeRow | undefined;

@@ -1,4 +1,4 @@
-import { TIMEZONES, VC_KEY, type LocationInfo } from "./config.js";
+import { ECMWF_BIAS_C, ECMWF_BIAS_F, TIMEZONES, VC_KEY, type LocationInfo } from "./config.js";
 import { fetchJson, sleep } from "./http.js";
 
 interface OpenMeteoDaily {
@@ -22,11 +22,14 @@ export async function getEcmwf(citySlug: string, dates: Set<string>, loc: Locati
       const data = await fetchJson<OpenMeteoDaily>(url);
       if (!data.error && data.daily?.time && data.daily.temperature_2m_max) {
         const { time, temperature_2m_max } = data.daily;
+        // ECMWF under-forecasts daily max temp (calibrated bias), correct before use.
+        const bias = unit === "C" ? ECMWF_BIAS_C : ECMWF_BIAS_F;
         for (let i = 0; i < time.length; i++) {
           const date = time[i];
           const temp = temperature_2m_max[i];
           if (date && dates.has(date) && temp != null) {
-            result[date] = unit === "C" ? Math.round(temp * 10) / 10 : Math.round(temp);
+            const corrected = temp + bias;
+            result[date] = unit === "C" ? Math.round(corrected * 10) / 10 : Math.round(corrected);
           }
         }
       }

@@ -24,11 +24,11 @@
     "forecast_src": "ecmwf",
     "sigma": 1.2,
     "opened_at": "2026-08-01T03:54:29.401Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null
+    "status": "closed",
+    "pnl": -0.81,
+    "exit_price": 0.355,
+    "close_reason": "forecast_changed",
+    "closed_at": "2026-08-01T04:11:57.890Z"
   },
   "actual_temp": null,
   "resolved_outcome": null,
@@ -43,11 +43,26 @@
       "metar": null,
       "best": 28,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T04:11:57.890Z",
+      "horizon": "D+1",
+      "hours_left": 31.8,
+      "ecmwf": 29.3,
+      "hrrr": null,
+      "metar": null,
+      "best": 29.3,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
     {
       "ts": "2026-08-01T03:54:29.401Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.355
+    },
+    {
+      "ts": "2026-08-01T04:11:57.890Z",
       "top_bucket": "28-28C",
       "top_price": 0.355
     }
@@ -99,10 +114,10 @@
         25,
         25
       ],
-      "bid": 0.035,
-      "ask": 0.965,
-      "price": 0.035,
-      "spread": 0.93,
+      "bid": 0.015,
+      "ask": 0.985,
+      "price": 0.015,
+      "spread": 0.97,
       "volume": 23
     },
     {
@@ -112,10 +127,10 @@
         26,
         26
       ],
-      "bid": 0.07,
-      "ask": 0.93,
-      "price": 0.07,
-      "spread": 0.86,
+      "bid": 0.065,
+      "ask": 0.935,
+      "price": 0.065,
+      "spread": 0.87,
       "volume": 60
     },
     {
@@ -125,10 +140,10 @@
         27,
         27
       ],
-      "bid": 0.215,
-      "ask": 0.785,
-      "price": 0.215,
-      "spread": 0.57,
+      "bid": 0.205,
+      "ask": 0.795,
+      "price": 0.205,
+      "spread": 0.59,
       "volume": 82
     },
     {
@@ -177,10 +192,10 @@
         31,
         31
       ],
-      "bid": 0.02,
-      "ask": 0.98,
-      "price": 0.02,
-      "spread": 0.96,
+      "bid": 0.025,
+      "ask": 0.975,
+      "price": 0.025,
+      "spread": 0.95,
       "volume": 46
     },
     {
@@ -190,10 +205,10 @@
         32,
         999
       ],
-      "bid": 0.0095,
-      "ask": 0.9905,
-      "price": 0.0095,
-      "spread": 0.981,
+      "bid": 0.005,
+      "ask": 0.995,
+      "price": 0.005,
+      "spread": 0.99,
       "volume": 15
     }
   ],

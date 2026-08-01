@@ -64,8 +64,22 @@ export const POLY_CLOB_API_KEY = envStr(`${P}POLY_CLOB_API_KEY`, "");
 export const POLY_CLOB_API_SECRET = envStr(`${P}POLY_CLOB_API_SECRET`, "");
 export const POLY_CLOB_API_PASSPHRASE = envStr(`${P}POLY_CLOB_API_PASSPHRASE`, "");
 
-export const SIGMA_F = 2.0;
-export const SIGMA_C = 1.2;
+/**
+ * Calibrated from 20 settled markets (2026-07-31):
+ * - US/GFS (hrrr source): RMSE 1.71 -> SIGMA_F 1.7
+ * - ECMWF:               RMSE 2.31 -> SIGMA_C 2.3
+ * Auto-recalibrated via data/calibration.json once enough samples accumulate.
+ */
+export const SIGMA_F = 1.7;
+export const SIGMA_C = 2.3;
+
+/**
+ * ECMWF systematically under-forecasts daily max temp:
+ * C cities bias -1.34C, F cities bias -1.0F (20 settled samples).
+ * Added inside getEcmwf() before best-bucket selection.
+ */
+export const ECMWF_BIAS_C = 1.34;
+export const ECMWF_BIAS_F = 1.0;
 
 const root = process.cwd();
 export const DATA_DIR = path.join(root, "data");

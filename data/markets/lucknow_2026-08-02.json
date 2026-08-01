@@ -24,11 +24,11 @@
     "forecast_src": "ecmwf",
     "sigma": 1.2,
     "opened_at": "2026-08-01T03:54:26.226Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null
+    "status": "closed",
+    "pnl": -0.59,
+    "exit_price": 0.165,
+    "close_reason": "forecast_changed",
+    "closed_at": "2026-08-01T04:11:47.826Z"
   },
   "actual_temp": null,
   "resolved_outcome": null,
@@ -193,6 +193,16 @@
       "metar": null,
       "best": 32,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T04:11:47.826Z",
+      "horizon": "D+1",
+      "hours_left": 31.8,
+      "ecmwf": 33.3,
+      "hrrr": null,
+      "metar": null,
+      "best": 33.3,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -273,6 +283,11 @@
     },
     {
       "ts": "2026-08-01T03:54:26.226Z",
+      "top_bucket": "34-999C",
+      "top_price": 0.5
+    },
+    {
+      "ts": "2026-08-01T04:11:47.826Z",
       "top_bucket": "34-999C",
       "top_price": 0.5
     }
@@ -363,10 +378,10 @@
         30,
         30
       ],
-      "bid": 0.0175,
-      "ask": 0.9825,
-      "price": 0.0175,
-      "spread": 0.965,
+      "bid": 0.019,
+      "ask": 0.981,
+      "price": 0.019,
+      "spread": 0.962,
       "volume": 785
     },
     {
@@ -376,10 +391,10 @@
         31,
         31
       ],
-      "bid": 0.065,
-      "ask": 0.935,
-      "price": 0.065,
-      "spread": 0.87,
+      "bid": 0.06,
+      "ask": 0.94,
+      "price": 0.06,
+      "spread": 0.88,
       "volume": 702
     },
     {
