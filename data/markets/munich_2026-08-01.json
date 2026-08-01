@@ -6,7 +6,7 @@
   "station": "EDDM",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3216599",
     "question": "Will the highest temperature in Munich be 28°C on August 1?",
@@ -30,7 +30,7 @@
     "close_reason": "stop_loss",
     "closed_at": "2026-07-31T10:02:18.826Z"
   },
-  "actual_temp": null,
+  "actual_temp": 30,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -313,6 +313,16 @@
       "metar": 30,
       "best": 29.4,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T15:30:24.247Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 29.4,
+      "hrrr": null,
+      "metar": 29,
+      "best": 29.4,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -455,6 +465,11 @@
       "ts": "2026-08-01T13:59:15.525Z",
       "top_bucket": "30-30C",
       "top_price": 0.91
+    },
+    {
+      "ts": "2026-08-01T15:30:24.247Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.9955
     }
   ],
   "all_outcomes": [
@@ -469,7 +484,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 10372
+      "volume": 10547
     },
     {
       "question": "Will the highest temperature in Munich be 27°C on August 1?",
@@ -482,7 +497,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 12110
+      "volume": 12267
     },
     {
       "question": "Will the highest temperature in Munich be 28°C on August 1?",
@@ -495,7 +510,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 18631
+      "volume": 19041
     },
     {
       "question": "Will the highest temperature in Munich be 29°C on August 1?",
@@ -508,7 +523,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 13718
+      "volume": 16661
     },
     {
       "question": "Will the highest temperature in Munich be 30°C on August 1?",
@@ -517,11 +532,11 @@
         30,
         30
       ],
-      "bid": 0.91,
-      "ask": 0.09,
-      "price": 0.91,
-      "spread": -0.82,
-      "volume": 14753
+      "bid": 0.9955,
+      "ask": 0.0045,
+      "price": 0.9955,
+      "spread": -0.991,
+      "volume": 18141
     },
     {
       "question": "Will the highest temperature in Munich be 31°C on August 1?",
@@ -530,11 +545,11 @@
         31,
         31
       ],
-      "bid": 0.08,
-      "ask": 0.92,
-      "price": 0.08,
-      "spread": 0.84,
-      "volume": 15170
+      "bid": 0.007,
+      "ask": 0.993,
+      "price": 0.007,
+      "spread": 0.986,
+      "volume": 16468
     },
     {
       "question": "Will the highest temperature in Munich be 32°C on August 1?",
@@ -543,11 +558,11 @@
         32,
         32
       ],
-      "bid": 0.0145,
-      "ask": 0.9855,
-      "price": 0.0145,
-      "spread": 0.971,
-      "volume": 6625
+      "bid": 0.004,
+      "ask": 0.996,
+      "price": 0.004,
+      "spread": 0.992,
+      "volume": 8081
     },
     {
       "question": "Will the highest temperature in Munich be 33°C on August 1?",
