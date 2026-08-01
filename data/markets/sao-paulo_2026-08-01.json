@@ -6,7 +6,7 @@
   "station": "SBGR",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3234401",
     "question": "Will the highest temperature in Sao Paulo be 27°C on August 1?",
@@ -32,7 +32,7 @@
     "stop_price": 0.31,
     "trailing_activated": true
   },
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -345,6 +345,16 @@
       "metar": 26,
       "best": 28.1,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T19:37:46.442Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 28.1,
+      "hrrr": null,
+      "metar": 27,
+      "best": 28.1,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -502,6 +512,11 @@
       "ts": "2026-08-01T18:13:57.076Z",
       "top_bucket": "26-26C",
       "top_price": 0.64
+    },
+    {
+      "ts": "2026-08-01T19:37:46.442Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.995
     }
   ],
   "all_outcomes": [
@@ -577,11 +592,11 @@
         26,
         26
       ],
-      "bid": 0.64,
-      "ask": 0.36,
-      "price": 0.64,
-      "spread": -0.28,
-      "volume": 2633
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 3791
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 27°C on August 1?",
@@ -590,11 +605,11 @@
         27,
         27
       ],
-      "bid": 0.36,
-      "ask": 0.64,
-      "price": 0.36,
-      "spread": 0.28,
-      "volume": 9683
+      "bid": 0.995,
+      "ask": 0.005,
+      "price": 0.995,
+      "spread": -0.99,
+      "volume": 10432
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 28°C on August 1?",
@@ -603,11 +618,11 @@
         28,
         28
       ],
-      "bid": 0.015,
-      "ask": 0.985,
-      "price": 0.015,
-      "spread": 0.97,
-      "volume": 3870
+      "bid": 0.0055,
+      "ask": 0.9945,
+      "price": 0.0055,
+      "spread": 0.989,
+      "volume": 4317
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on August 1?",
@@ -616,11 +631,11 @@
         29,
         29
       ],
-      "bid": 0.005,
-      "ask": 0.995,
-      "price": 0.005,
-      "spread": 0.99,
-      "volume": 1372
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 1606
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C on August 1?",
