@@ -26,6 +26,7 @@ import {
   MONTHS,
   MONITOR_INTERVAL,
   SCAN_INTERVAL,
+  SELL_SLIPPAGE_TOL,
   TRADE_D0,
 } from "./config.js";
 import { getEnsembleForecast, getMetar } from "./forecasts.js";
@@ -155,11 +156,55 @@ function parseEventOutcomes(event: GammaEvent): OutcomeRow[] {
   return outcomes;
 }
 
-async function liveSellExitOrKeepOpen(pos: Position, label: string): Promise<boolean> {
+interface SellGuard {
+  /** Force the sell (stop-loss / emergency) even when the bid is thin. */
+  force?: boolean;
+  /** Expected exit price; if the live bid is far below it (slippage guard) and
+   *  not forced, the sell is skipped and retried on a later scan. */
+  expectedPrice?: number;
+}
+
+async function liveSellExitOrKeepOpen(
+  pos: Position,
+  label: string,
+  guard: SellGuard = {},
+): Promise<boolean> {
   if (!isLiveClobEnabled() || !pos.clob_yes_token_id) return true;
+
+  // Slippage guard: never market-sell into a thin book far below the expected
+  // exit. Take-profit exits wait for liquidity; stop-losses force through.
+  let realBid: number | null = null;
+  try {
+    const prices = await fetchMarketBestPrices(pos.market_id);
+    realBid = prices?.bestBid ?? null;
+  } catch {
+    /* keep selling below */
+  }
+  if (realBid == null) {
+    // No live quote — the market may be closed or momentarily illiquid.
+    if (!guard.force) {
+      console.log(`  [SELL SKIP] ${label} — no live bid (illiquid/closed), holding`);
+      return false;
+    }
+  } else {
+    if (
+      !guard.force &&
+      guard.expectedPrice != null &&
+      realBid < guard.expectedPrice * (1 - SELL_SLIPPAGE_TOL)
+    ) {
+      console.log(
+        `  [SELL SKIP] ${label} — bid $${realBid.toFixed(3)} too far below expected $${guard.expectedPrice.toFixed(3)} (slippage guard, holding)`,
+      );
+      return false;
+    }
+    pos.exit_price = realBid; // use the real tradable bid as the fill price
+  }
+
   try {
     await clobSellYesShares(pos.clob_yes_token_id, pos.shares);
-    console.log(`  [CLOB] sold YES (${label})`);
+    console.log(
+      `  [CLOB] sold YES (${label})${realBid != null ? ` @ $${realBid.toFixed(3)}` : ""}`,
+    );
     return true;
   } catch (e) {
     console.error(`  [CLOB] sell failed (${label}) — leaving position open in app + on-chain`, e);
@@ -373,19 +418,23 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
 
           if (currentPrice <= stop) {
             const exitLabel = `${loc.name} ${date}`;
-            const soldOk = await liveSellExitOrKeepOpen(pos, exitLabel);
+            const soldOk = await liveSellExitOrKeepOpen(pos, exitLabel, {
+              force: true,
+              expectedPrice: currentPrice,
+            });
             if (!soldOk) continue;
-            const pnl = Math.round((currentPrice - entry) * pos.shares * 100) / 100;
+            const exitPrice = pos.exit_price ?? currentPrice;
+            const pnl = Math.round((exitPrice - entry) * pos.shares * 100) / 100;
             balance += pos.cost + pnl;
             pos.closed_at = snap.ts ?? null;
-            pos.close_reason = currentPrice < entry ? "stop_loss" : "trailing_stop";
-            pos.exit_price = currentPrice;
+            pos.close_reason = exitPrice < entry ? "stop_loss" : "trailing_stop";
+            pos.exit_price = exitPrice;
             pos.pnl = pnl;
             pos.status = "closed";
             closed += 1;
-            const reason = currentPrice < entry ? "STOP" : "TRAILING BE";
+            const reason = exitPrice < entry ? "STOP" : "TRAILING BE";
             console.log(
-              `  [${reason}] ${loc.name} ${date} | entry $${entry.toFixed(3)} exit $${currentPrice.toFixed(3)} | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
+              `  [${reason}] ${loc.name} ${date} | entry $${entry.toFixed(3)} exit $${exitPrice.toFixed(3)} | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
             );
           }
         }
@@ -411,13 +460,17 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             }
             if (currentPrice != null) {
               const exitLabel = `${loc.name} ${date}`;
-              const soldOk = await liveSellExitOrKeepOpen(pos, `${exitLabel} forecast_changed`);
+              const soldOk = await liveSellExitOrKeepOpen(pos, `${exitLabel} forecast_changed`, {
+                force: false,
+                expectedPrice: currentPrice,
+              });
               if (!soldOk) continue;
-              const pnl = Math.round((currentPrice - pos.entry_price) * pos.shares * 100) / 100;
+              const exitPrice = pos.exit_price ?? currentPrice;
+              const pnl = Math.round((exitPrice - pos.entry_price) * pos.shares * 100) / 100;
               balance += pos.cost + pnl;
               pos.closed_at = snap.ts ?? null;
               pos.close_reason = "forecast_changed";
-              pos.exit_price = currentPrice;
+              pos.exit_price = exitPrice;
               pos.pnl = pnl;
               pos.status = "closed";
               closed += 1;
@@ -792,28 +845,32 @@ export async function monitorPositions(): Promise<number> {
       const stopTriggered = currentPrice <= stop;
 
       if (takeTriggered || stopTriggered) {
-        const soldOk = await liveSellExitOrKeepOpen(pos, `${cityName} ${mkt.date}`);
+        const soldOk = await liveSellExitOrKeepOpen(pos, `${cityName} ${mkt.date}`, {
+          force: stopTriggered,
+          expectedPrice: currentPrice,
+        });
         if (!soldOk) continue;
-        const pnl = Math.round((currentPrice - entry) * pos.shares * 100) / 100;
+        const exitPrice = pos.exit_price ?? currentPrice;
+        const pnl = Math.round((exitPrice - entry) * pos.shares * 100) / 100;
         balance += pos.cost + pnl;
         pos.closed_at = new Date().toISOString();
         let reason: string;
         if (takeTriggered) {
           pos.close_reason = "take_profit";
           reason = "TAKE";
-        } else if (currentPrice < entry) {
+        } else if (exitPrice < entry) {
           pos.close_reason = "stop_loss";
           reason = "STOP";
         } else {
           pos.close_reason = "trailing_stop";
           reason = "TRAILING BE";
         }
-        pos.exit_price = currentPrice;
+        pos.exit_price = exitPrice;
         pos.pnl = pnl;
         pos.status = "closed";
         closed += 1;
         console.log(
-          `  [${reason}] ${cityName} ${mkt.date} ${pos.bucket_low}-${pos.bucket_high} | entry $${entry.toFixed(3)} exit $${currentPrice.toFixed(3)} | ${hoursLeft.toFixed(0)}h left | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
+          `  [${reason}] ${cityName} ${mkt.date} ${pos.bucket_low}-${pos.bucket_high} | entry $${entry.toFixed(3)} exit $${exitPrice.toFixed(3)} | ${hoursLeft.toFixed(0)}h left | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
         );
         saveMarket(mkt);
       }

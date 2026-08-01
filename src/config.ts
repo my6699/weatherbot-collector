@@ -137,6 +137,14 @@ export const ENDGAME_LOCKED_P = envNum(`${P}ENDGAME_LOCKED_P`, 0.93);
 /** Take-profit price in endgame when the result is NOT yet locked (lock in profit). */
 export const ENDGAME_TAKE_PROFIT = envNum(`${P}ENDGAME_TAKE_PROFIT`, 0.90);
 
+/**
+ * Sell slippage guard: before market-selling, we check the live best bid.
+ * Take-profit / trailing exits skip the sell when the bid is more than this
+ * fraction below the expected exit price (thin weather markets) and retry next
+ * round. Stop-losses force through regardless — protecting capital wins.
+ */
+export const SELL_SLIPPAGE_TOL = envNum(`${P}SELL_SLIPPAGE_TOL`, 0.05);
+
 const root = process.cwd();
 export const DATA_DIR = path.join(root, "data");
 mkdirSync(DATA_DIR, { recursive: true });
