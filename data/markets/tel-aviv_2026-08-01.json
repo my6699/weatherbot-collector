@@ -6,9 +6,9 @@
   "station": "LLBG",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 34,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -281,6 +281,16 @@
       "metar": 34,
       "best": 38.6,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T13:59:22.430Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 39.2,
+      "hrrr": null,
+      "metar": 34,
+      "best": 39.2,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -418,6 +428,11 @@
       "ts": "2026-08-01T11:36:49.510Z",
       "top_bucket": "34-34C",
       "top_price": 0.63
+    },
+    {
+      "ts": "2026-08-01T13:59:22.430Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.975
     }
   ],
   "all_outcomes": [
@@ -432,7 +447,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 509
+      "volume": 514
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 32°C on August 1?",
@@ -445,7 +460,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 1072
+      "volume": 1077
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on August 1?",
@@ -458,7 +473,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 4146
+      "volume": 4178
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on August 1?",
@@ -467,11 +482,11 @@
         34,
         34
       ],
-      "bid": 0.63,
-      "ask": 0.37,
-      "price": 0.63,
-      "spread": -0.26,
-      "volume": 8746
+      "bid": 0.975,
+      "ask": 0.025,
+      "price": 0.975,
+      "spread": -0.95,
+      "volume": 10782
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on August 1?",
@@ -480,11 +495,11 @@
         35,
         35
       ],
-      "bid": 0.315,
-      "ask": 0.685,
-      "price": 0.315,
-      "spread": 0.37,
-      "volume": 4705
+      "bid": 0.015,
+      "ask": 0.985,
+      "price": 0.015,
+      "spread": 0.97,
+      "volume": 6923
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 36°C on August 1?",
@@ -493,11 +508,11 @@
         36,
         36
       ],
-      "bid": 0.02,
-      "ask": 0.98,
-      "price": 0.02,
-      "spread": 0.96,
-      "volume": 4033
+      "bid": 0.0045,
+      "ask": 0.9955,
+      "price": 0.0045,
+      "spread": 0.991,
+      "volume": 5291
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 37°C on August 1?",
@@ -506,11 +521,11 @@
         37,
         37
       ],
-      "bid": 0.002,
-      "ask": 0.998,
-      "price": 0.002,
-      "spread": 0.996,
-      "volume": 1787
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 1792
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 38°C on August 1?",
@@ -523,7 +538,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 632
+      "volume": 637
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 39°C on August 1?",
@@ -536,7 +551,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 354
+      "volume": 359
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 40°C on August 1?",
@@ -549,7 +564,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 358
+      "volume": 363
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 41°C or higher on August 1?",
@@ -562,7 +577,7 @@
       "ask": 0.9995,
       "price": 0.0005,
       "spread": 0.999,
-      "volume": 3918
+      "volume": 3923
     }
   ],
   "created_at": "2026-07-31T03:49:16.538Z"
