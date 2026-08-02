@@ -18,6 +18,7 @@ import {
   ENDGAME_TAKE_PROFIT,
   ENDGAME_SWEEP,
   LOCATIONS,
+  LLM_GATE,
   MAX_BET,
   MAX_DEPTH_FRACTION,
   MAX_HOURS,
@@ -63,6 +64,8 @@ import {
   resolveYesTokenId,
 } from "./clob.js";
 import { exportAllToExcel } from "./export-excel.js";
+import { askTradeAdvisor, resetLlmCallBudget } from "./llm.js";
+import { writeInvestmentAdvice } from "./advice.js";
 import type { ForecastSnap, MarketRecord, OutcomeRow, Position } from "./storage.js";
 import {
   allPositions,
@@ -364,6 +367,13 @@ async function executeBuy(
       `edge ${(signal.p - marketCalibrated(signal.entry_price)).toFixed(3)} | ` +
       `$${signal.cost.toFixed(2)} (${(signal.forecast_src ?? "").toUpperCase()})`,
   );
+  // Beginner-friendly investment-advice report (fail-open, never affects trading).
+  try {
+    const rep = await writeInvestmentAdvice(mkt, signal, ctx);
+    if (rep) console.log(`  [ADVICE] report: ${path.basename(rep)}`);
+  } catch (e) {
+    console.warn(`  [ADVICE] report generation failed: ${String(e)}`);
+  }
   return true;
 }
 
@@ -380,6 +390,7 @@ async function liveSellSettlementAttempt(pos: Position, label: string): Promise<
 export async function scanAndUpdate(): Promise<{ newPos: number; closed: number; resolved: number }> {
   const now = new Date();
   const state = loadState();
+  resetLlmCallBudget();
   let balance = state.balance;
   let newPos = 0;
   let closed = 0;
@@ -617,7 +628,54 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           );
           const picks = candidates.slice(0, MAX_POSITIONS_PER_MARKET - openPositions(mkt).length);
 
+          // LLM risk advisor: review the candidates before execution. Advisory by
+          // default (logs [LLM] lines for the weekly review); hard veto only when
+          // WEATHERBOT_LLM_GATE=true. Fail-open: any LLM error leaves the trade untouched.
+          let llmBlocked = new Set<string>();
+          if (picks.length > 0) {
+            const res = await askTradeAdvisor({
+              city_name: loc.name,
+              date,
+              unit: unitSym,
+              forecast: forecastTemp,
+              forecast_source: bestSource ?? "ensemble",
+              ensemble_gap: ens?.gap ?? null,
+              ensemble_spread: ens?.spread ?? null,
+              sigma,
+              metar: snap.metar ?? null,
+              strategy: "regular",
+              open_positions: openPositions(mkt).length,
+              candidates: picks.map((pk) => ({
+                bucket: `${pk.o.range[0]}-${pk.o.range[1]}${unitSym}`,
+                ask: pk.o.ask,
+                bid: pk.o.bid,
+                our_prob: pk.p,
+                edge: pk.edge,
+                ev: pk.ev,
+                volume: pk.o.volume,
+                spread: pk.o.spread,
+                hours_left: hours,
+              })),
+            });
+            if (res) {
+              for (let i = 0; i < picks.length; i++) {
+                const v = res.verdicts[i];
+                if (!v) continue;
+                console.log(
+                  `  [LLM] ${loc.name} ${date} ${picks[i]!.o.range[0]}-${picks[i]!.o.range[1]}${unitSym} — ${v.action} (risk ${v.risk}) ${v.reason}`,
+                );
+                if (LLM_GATE && v.action === "skip") llmBlocked.add(picks[i]!.o.market_id);
+              }
+            }
+          }
+
           for (const pick of picks) {
+            if (LLM_GATE && llmBlocked.has(pick.o.market_id)) {
+              console.log(
+                `  [LLM GATE] ${loc.name} ${date} ${pick.o.range[0]}-${pick.o.range[1]}${unitSym} — blocked by LLM`,
+              );
+              continue;
+            }
             const o = pick.o;
             const [tLow, tHigh] = o.range;
             const signal: Position = {
@@ -720,7 +778,46 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               `  [ENDGAME] ${loc.name} ${date} — METAR ${metar}${unitSym} local ${localHour.toFixed(1)}h ${rising ? "RISING" : "steady/falling"}, ${egCandidates.length} certain-bucket candidates (ask cap ${egMaxAsk})`,
             );
             const pick = egCandidates[0];
+            // LLM risk advisor for the endgame candidate (fail-open).
+            let llmSkip = false;
             if (pick) {
+              const res = await askTradeAdvisor({
+                city_name: loc.name,
+                date,
+                unit: unitSym,
+                forecast: metar,
+                forecast_source: "endgame (METAR)",
+                ensemble_gap: null,
+                ensemble_spread: null,
+                sigma: lockBuf,
+                metar,
+                strategy: "endgame",
+                open_positions: openPositions(mkt).length,
+                candidates: [
+                  {
+                    bucket: `${pick.o.range[0]}-${pick.o.range[1]}${unitSym}`,
+                    ask: pick.o.ask,
+                    bid: pick.o.bid,
+                    our_prob: pick.p,
+                    edge: pick.edge,
+                    ev: pick.ev,
+                    volume: pick.o.volume,
+                    spread: pick.o.spread,
+                    hours_left: hours,
+                  },
+                ],
+              });
+              if (res) {
+                const v = res.verdicts[0];
+                if (v) {
+                  console.log(
+                    `  [LLM] ${loc.name} ${date} endgame ${pick.o.range[0]}-${pick.o.range[1]}${unitSym} — ${v.action} (risk ${v.risk}) ${v.reason}`,
+                  );
+                  if (LLM_GATE && v.action === "skip") llmSkip = true;
+                }
+              }
+            }
+            if (pick && !llmSkip) {
               const o = pick.o;
               const signal: Position = {
                 market_id: o.market_id,

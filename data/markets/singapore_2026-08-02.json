@@ -433,6 +433,26 @@
         "spread": 1.2,
         "gap": 0.3
       }
+    },
+    {
+      "ts": "2026-08-02T03:19:46.169Z",
+      "horizon": "D+0",
+      "hours_left": 8.7,
+      "ecmwf": 32.6,
+      "hrrr": 31.9,
+      "metar": 31,
+      "best": 32,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.6,
+          "gfs_seamless": 31.9,
+          "icon_seamless": 30.6
+        },
+        "mean": 32,
+        "spread": 1.4,
+        "gap": 0.7
+      }
     }
   ],
   "market_snapshots": [
@@ -585,6 +605,11 @@
       "ts": "2026-08-01T07:01:30.909Z",
       "top_bucket": "32-32C",
       "top_price": 0.535
+    },
+    {
+      "ts": "2026-08-02T03:19:46.169Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.665
     }
   ],
   "all_outcomes": [
@@ -621,9 +646,9 @@
         28,
         28
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 576
     },
@@ -634,11 +659,11 @@
         29,
         29
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1198
+      "volume": 1902
     },
     {
       "question": "Will the highest temperature in Singapore be 30°C on August 2?",
@@ -647,11 +672,11 @@
         30,
         30
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 778
+      "volume": 4656
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on August 2?",
@@ -660,11 +685,11 @@
         31,
         31
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 1659
+      "volume": 4150
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on August 2?",
@@ -673,11 +698,11 @@
         32,
         32
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
+      "bid": 0.665,
+      "ask": 0.665,
+      "price": 0.665,
       "spread": 0,
-      "volume": 1420
+      "volume": 3712
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 2?",
@@ -686,11 +711,11 @@
         33,
         33
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.305,
+      "ask": 0.305,
+      "price": 0.305,
       "spread": 0,
-      "volume": 5034
+      "volume": 9303
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on August 2?",
@@ -699,11 +724,11 @@
         34,
         34
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.013,
+      "ask": 0.013,
+      "price": 0.013,
       "spread": 0,
-      "volume": 922
+      "volume": 3705
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 2?",
@@ -712,11 +737,11 @@
         35,
         35
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 392
+      "volume": 1214
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C or higher on August 2?",
@@ -729,7 +754,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 554
+      "volume": 1226
     }
   ],
   "created_at": "2026-07-31T04:16:38.706Z",
@@ -774,11 +799,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.2,
       "opened_at": "2026-08-01T05:32:44.891Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null
+      "status": "closed",
+      "pnl": -16.5,
+      "exit_price": 0.035,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-02T03:19:46.169Z"
     },
     {
       "market_id": "3236620",
@@ -797,11 +822,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.2,
       "opened_at": "2026-08-01T05:35:13.525Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null
+      "status": "closed",
+      "pnl": -16.5,
+      "exit_price": 0.035,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-02T03:19:46.169Z"
     }
   ]
 }

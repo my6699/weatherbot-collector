@@ -69,6 +69,39 @@ export async function fetchJson<T>(url: string): Promise<T> {
   }
 }
 
+/** JSON POST (e.g. LLM chat-completions). Follows the same proxy/abort logic
+ *  as fetchJson; `timeoutMs` overrides the default 15s budget for slower AI calls. */
+export async function postJson<T>(
+  url: string,
+  body: unknown,
+  headers: Record<string, string> = {},
+  timeoutMs?: number,
+): Promise<T> {
+  const ac = new AbortController();
+  const timeout = timeoutMs ?? CONNECT_MS + BODY_MS;
+  const connectTimer = setTimeout(() => ac.abort(), timeout);
+  try {
+    const opts: Record<string, unknown> = {
+      method: "POST",
+      signal: ac.signal,
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        ...headers,
+      },
+      body: JSON.stringify(body),
+    };
+    const agent = getProxyAgent();
+    if (agent) opts.dispatcher = agent;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const res = await (undiciFetch as any)(url, opts);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return (await res.json()) as T;
+  } finally {
+    clearTimeout(connectTimer);
+  }
+}
+
 export function sleep(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }

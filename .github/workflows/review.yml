@@ -1,0 +1,45 @@
+# Weekly LLM performance review: the free LLM diagnoses resolved trades and
+# writes data/llm_review_*.md with concrete recommendations (city exclusions,
+# parameter tweaks, risk warnings). Run manually via the Actions page anytime.
+
+name: llm-review
+
+on:
+  schedule:
+    # Every Monday 02:30 UTC
+    - cron: "30 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run LLM review
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: npm run review
+
+      - name: Commit and push review
+        run: |
+          git config user.name "weatherbot-collector"
+          git config user.email "weatherbot-collector@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No review changes to commit"
+          else
+            git commit -m "review: weekly LLM report $(date -u +%Y-%m-%d)"
+            git push
+          fi

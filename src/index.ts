@@ -2,6 +2,7 @@ import { exportAllToExcel } from "./export-excel.js";
 import { loadCal } from "./storage.js";
 import { printReport, printStatus } from "./report.js";
 import { monitorPositions, runLoop, scanAndUpdate } from "./scan.js";
+import { runLlmReview } from "./llm.js";
 
 const cmd = process.argv[2] ?? "run";
 
@@ -30,9 +31,16 @@ if (cmd === "run") {
 } else if (cmd === "report") {
   loadCal();
   printReport();
+} else if (cmd === "review") {
+  // LLM 周度复盘：用免费大模型诊断已结算交易，输出改进建议到 data/llm_review_*.md。
+  loadCal();
+  const p = await runLlmReview();
+  if (p) console.log(`  Review written: ${p}`);
+  else console.log("  LLM review skipped (provider key missing or disabled).");
+  process.exit(0);
 } else {
-  console.log("Usage: node dist/index.js [run|once|status|report]");
-  console.log("   or: npm start -- [run|once|status|report]");
-  console.log("   or: npm run dev -- [run|once|status|report]");
+  console.log("Usage: node dist/index.js [run|once|status|report|review]");
+  console.log("   or: npm start -- [run|once|status|report|review]");
+  console.log("   or: npm run dev -- [run|once|status|report|review]");
   process.exit(1);
 }

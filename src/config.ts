@@ -178,12 +178,43 @@ export const MAX_DEPTH_FRACTION = envNum(`${P}MAX_DEPTH_FRACTION`, 0.3);
  */
 export const STOP_HARD_MULT = envNum(`${P}STOP_HARD_MULT`, 0.5);
 
+/**
+ * Free-LLM risk advisor (default provider: Google Gemini free tier).
+ * The LLM reviews candidate buys before execution (advisory log by default,
+ * optional hard gate) and produces a weekly performance review.
+ * IMPORTANT: the LLM is a QUALITATIVE safety net only — it never blocks a
+ * trade on an API failure (fail-open). It cannot guarantee profitability.
+ */
+export const LLM_ENABLED =
+  process.env[`${P}LLM_ENABLED`] == null ? true : envTruthy(`${P}LLM_ENABLED`);
+/** Provider: "gemini" | "groq" | "openrouter" | "custom". */
+export const LLM_PROVIDER = envStr(`${P}LLM_PROVIDER`, "gemini");
+/** Override the provider's default (free) model, e.g. "gemini-2.5-flash". */
+export const LLM_MODEL = envStr(`${P}LLM_MODEL`, "");
+/** When true, an LLM "skip" verdict vetoes the buy. Default false = log only. */
+export const LLM_GATE = envTruthy(`${P}LLM_GATE`);
+/** Max LLM calls per scan (free tiers are rate-limited). */
+export const LLM_MAX_CALLS_PER_SCAN = envNum(`${P}LLM_MAX_CALLS_PER_SCAN`, 8);
+/** LLM request timeout (ms) — AI responses can be slow. */
+export const LLM_TIMEOUT_MS = envNum(`${P}LLM_TIMEOUT_MS`, 30000);
+
+/**
+ * Generate a beginner-friendly investment-advice report (data/reports/) every
+ * time a buy is executed. The report is deterministic (offline-safe) plus an
+ * optional AI plain-language section when the LLM provider is available.
+ */
+export const ADVICE_ENABLED =
+  process.env[`${P}ADVICE`] == null ? true : envTruthy(`${P}ADVICE`);
+
 const root = process.cwd();
 export const DATA_DIR = path.join(root, "data");
 mkdirSync(DATA_DIR, { recursive: true });
 export const STATE_FILE = path.join(DATA_DIR, "state.json");
 export const MARKETS_DIR = path.join(DATA_DIR, "markets");
 mkdirSync(MARKETS_DIR, { recursive: true });
+/** Beginner-friendly investment-advice reports (one file per executed buy). */
+export const ADVICE_DIR = path.join(DATA_DIR, "reports");
+mkdirSync(ADVICE_DIR, { recursive: true });
 export const CALIBRATION_FILE = path.join(DATA_DIR, "calibration.json");
 
 export const LOCATIONS: Record<string, LocationInfo> = {
