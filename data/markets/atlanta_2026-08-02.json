@@ -6,9 +6,9 @@
   "station": "KATL",
   "event_end_date": "2026-08-02T12:00:00Z",
   "hours_at_discovery": 32.1,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 90.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -351,6 +351,26 @@
         "spread": 2.8,
         "gap": 4
       }
+    },
+    {
+      "ts": "2026-08-02T21:12:46.335Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 88,
+      "hrrr": 90,
+      "metar": 90,
+      "best": 88.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 88,
+          "gfs_seamless": 90,
+          "icon_seamless": 86
+        },
+        "mean": 88.2,
+        "spread": 2.2,
+        "gap": 2
+      }
     }
   ],
   "market_snapshots": [
@@ -473,6 +493,11 @@
       "ts": "2026-08-02T19:37:46.882Z",
       "top_bucket": "90-91F",
       "top_price": 0.845
+    },
+    {
+      "ts": "2026-08-02T21:12:46.335Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.993
     }
   ],
   "all_outcomes": [
@@ -565,7 +590,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4458
+      "volume": 5466
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on August 2?",
@@ -574,11 +599,11 @@
         90,
         91
       ],
-      "bid": 0.845,
-      "ask": 0.845,
-      "price": 0.845,
+      "bid": 0.993,
+      "ask": 0.993,
+      "price": 0.993,
       "spread": 0,
-      "volume": 4279
+      "volume": 5341
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on August 2?",
@@ -587,11 +612,11 @@
         92,
         93
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 3375
+      "volume": 4409
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on August 2?",
@@ -600,11 +625,11 @@
         94,
         95
       ],
-      "bid": 0.0335,
-      "ask": 0.0335,
-      "price": 0.0335,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 976
+      "volume": 1420
     },
     {
       "question": "Will the highest temperature in Atlanta be 96°F or higher on August 2?",
@@ -617,7 +642,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 2440
+      "volume": 3408
     }
   ],
   "created_at": "2026-08-01T03:54:16.208Z"

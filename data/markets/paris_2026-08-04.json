@@ -7,8 +7,54 @@
   "event_end_date": "2026-08-04T12:00:00Z",
   "hours_at_discovery": 55.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3280172",
+    "question": "Will the highest temperature in Paris be 34°C on August 4?",
+    "bucket_low": 34,
+    "bucket_high": 34,
+    "entry_price": 0.06,
+    "bid_at_entry": 0.05,
+    "spread": 0.01,
+    "shares": 333.33,
+    "cost": 20,
+    "p": 0.2351,
+    "ev": 2.9183,
+    "kelly": 0.0476,
+    "forecast_temp": 33.3,
+    "forecast_src": "ensemble",
+    "sigma": 1.5,
+    "opened_at": "2026-08-02T21:12:47.945Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null
+  },
+  "positions": [
+    {
+      "market_id": "3280172",
+      "question": "Will the highest temperature in Paris be 34°C on August 4?",
+      "bucket_low": 34,
+      "bucket_high": 34,
+      "entry_price": 0.06,
+      "bid_at_entry": 0.05,
+      "spread": 0.01,
+      "shares": 333.33,
+      "cost": 20,
+      "p": 0.2351,
+      "ev": 2.9183,
+      "kelly": 0.0476,
+      "forecast_temp": 33.3,
+      "forecast_src": "ensemble",
+      "sigma": 1.5,
+      "opened_at": "2026-08-02T21:12:47.945Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -252,6 +298,26 @@
         "spread": 1.8,
         "gap": 2.8
       }
+    },
+    {
+      "ts": "2026-08-02T21:12:47.945Z",
+      "horizon": "D+2",
+      "hours_left": 38.8,
+      "ecmwf": 33.5,
+      "hrrr": 34,
+      "metar": null,
+      "best": 33.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.5,
+          "gfs_seamless": 34,
+          "icon_seamless": 31.8
+        },
+        "mean": 33.3,
+        "spread": 1.5,
+        "gap": 0.5
+      }
     }
   ],
   "market_snapshots": [
@@ -314,6 +380,11 @@
       "ts": "2026-08-02T19:37:49.468Z",
       "top_bucket": "32-32C",
       "top_price": 0.34
+    },
+    {
+      "ts": "2026-08-02T21:12:47.945Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.385
     }
   ],
   "all_outcomes": [
@@ -324,11 +395,11 @@
         -999,
         29
       ],
-      "bid": 0.03,
-      "ask": 0.03,
-      "price": 0.03,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 281
+      "volume": 286
     },
     {
       "question": "Will the highest temperature in Paris be 30°C on August 4?",
@@ -337,11 +408,11 @@
         30,
         30
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 1118
+      "volume": 1197
     },
     {
       "question": "Will the highest temperature in Paris be 31°C on August 4?",
@@ -354,7 +425,7 @@
       "ask": 0.265,
       "price": 0.265,
       "spread": 0,
-      "volume": 635
+      "volume": 706
     },
     {
       "question": "Will the highest temperature in Paris be 32°C on August 4?",
@@ -363,11 +434,11 @@
         32,
         32
       ],
-      "bid": 0.34,
-      "ask": 0.34,
-      "price": 0.34,
+      "bid": 0.385,
+      "ask": 0.385,
+      "price": 0.385,
       "spread": 0,
-      "volume": 381
+      "volume": 601
     },
     {
       "question": "Will the highest temperature in Paris be 33°C on August 4?",
@@ -376,11 +447,11 @@
         33,
         33
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.18,
+      "ask": 0.18,
+      "price": 0.18,
       "spread": 0,
-      "volume": 483
+      "volume": 928
     },
     {
       "question": "Will the highest temperature in Paris be 34°C on August 4?",
@@ -393,7 +464,7 @@
       "ask": 0.055,
       "price": 0.055,
       "spread": 0,
-      "volume": 469
+      "volume": 523
     },
     {
       "question": "Will the highest temperature in Paris be 35°C on August 4?",
@@ -406,7 +477,7 @@
       "ask": 0.006,
       "price": 0.006,
       "spread": 0,
-      "volume": 325
+      "volume": 335
     },
     {
       "question": "Will the highest temperature in Paris be 36°C on August 4?",
@@ -415,11 +486,11 @@
         36,
         36
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 142
+      "volume": 152
     },
     {
       "question": "Will the highest temperature in Paris be 37°C on August 4?",
@@ -432,7 +503,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 116
+      "volume": 126
     },
     {
       "question": "Will the highest temperature in Paris be 38°C on August 4?",
@@ -445,7 +516,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 150
+      "volume": 160
     },
     {
       "question": "Will the highest temperature in Paris be 39°C or higher on August 4?",

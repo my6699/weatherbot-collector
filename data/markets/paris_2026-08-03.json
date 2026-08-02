@@ -365,6 +365,26 @@
         "spread": 1.4,
         "gap": 1.8
       }
+    },
+    {
+      "ts": "2026-08-02T21:12:47.945Z",
+      "horizon": "D+1",
+      "hours_left": 14.8,
+      "ecmwf": 35.9,
+      "hrrr": 33.6,
+      "metar": null,
+      "best": 35.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 35.9,
+          "gfs_seamless": 33.6,
+          "icon_seamless": 35.9
+        },
+        "mean": 35.2,
+        "spread": 1.6,
+        "gap": 2.3
+      }
     }
   ],
   "market_snapshots": [
@@ -482,6 +502,11 @@
       "ts": "2026-08-02T19:37:49.468Z",
       "top_bucket": "37-37C",
       "top_price": 0.435
+    },
+    {
+      "ts": "2026-08-02T21:12:47.945Z",
+      "top_bucket": "37-37C",
+      "top_price": 0.44
     }
   ],
   "all_outcomes": [
@@ -496,7 +521,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 4122
+      "volume": 5267
     },
     {
       "question": "Will the highest temperature in Paris be 33°C on August 3?",
@@ -505,11 +530,11 @@
         33,
         33
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 4109
+      "volume": 5216
     },
     {
       "question": "Will the highest temperature in Paris be 34°C on August 3?",
@@ -518,11 +543,11 @@
         34,
         34
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 9594
+      "volume": 11851
     },
     {
       "question": "Will the highest temperature in Paris be 35°C on August 3?",
@@ -531,11 +556,11 @@
         35,
         35
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 8568
+      "volume": 11254
     },
     {
       "question": "Will the highest temperature in Paris be 36°C on August 3?",
@@ -544,11 +569,11 @@
         36,
         36
       ],
-      "bid": 0.265,
-      "ask": 0.265,
-      "price": 0.265,
+      "bid": 0.26,
+      "ask": 0.26,
+      "price": 0.26,
       "spread": 0,
-      "volume": 9053
+      "volume": 12278
     },
     {
       "question": "Will the highest temperature in Paris be 37°C on August 3?",
@@ -557,11 +582,11 @@
         37,
         37
       ],
-      "bid": 0.435,
-      "ask": 0.435,
-      "price": 0.435,
+      "bid": 0.44,
+      "ask": 0.44,
+      "price": 0.44,
       "spread": 0,
-      "volume": 12990
+      "volume": 15681
     },
     {
       "question": "Will the highest temperature in Paris be 38°C on August 3?",
@@ -570,11 +595,11 @@
         38,
         38
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.085,
+      "ask": 0.085,
+      "price": 0.085,
       "spread": 0,
-      "volume": 11220
+      "volume": 18118
     },
     {
       "question": "Will the highest temperature in Paris be 39°C on August 3?",
@@ -583,11 +608,11 @@
         39,
         39
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
-      "volume": 3767
+      "volume": 5852
     },
     {
       "question": "Will the highest temperature in Paris be 40°C on August 3?",
@@ -600,7 +625,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 916
+      "volume": 1731
     },
     {
       "question": "Will the highest temperature in Paris be 41°C on August 3?",
@@ -720,11 +745,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-08-02T17:20:28.421Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 23.33,
+      "exit_price": 0.065,
+      "close_reason": "forecast_changed",
+      "closed_at": "2026-08-02T21:12:47.945Z",
       "stop_price": 0.03,
       "trailing_activated": true
     },
