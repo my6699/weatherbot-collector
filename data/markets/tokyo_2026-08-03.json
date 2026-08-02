@@ -303,6 +303,26 @@
         "spread": 1.2,
         "gap": 0.4
       }
+    },
+    {
+      "ts": "2026-08-02T17:20:58.215Z",
+      "horizon": "D+1",
+      "hours_left": 18.7,
+      "ecmwf": 27.2,
+      "hrrr": 26.8,
+      "metar": null,
+      "best": 26.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.2,
+          "gfs_seamless": 26.8,
+          "icon_seamless": 25.6
+        },
+        "mean": 26.8,
+        "spread": 1.2,
+        "gap": 0.4
+      }
     }
   ],
   "market_snapshots": [
@@ -405,6 +425,11 @@
       "ts": "2026-08-02T15:32:18.485Z",
       "top_bucket": "27-27C",
       "top_price": 0.375
+    },
+    {
+      "ts": "2026-08-02T17:20:58.215Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.425
     }
   ],
   "all_outcomes": [
@@ -445,7 +470,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1464
+      "volume": 1773
     },
     {
       "question": "Will the highest temperature in Tokyo be 25°C on August 3?",
@@ -454,11 +479,11 @@
         25,
         25
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 1462
+      "volume": 1479
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on August 3?",
@@ -471,7 +496,7 @@
       "ask": 0.095,
       "price": 0.095,
       "spread": 0,
-      "volume": 1054
+      "volume": 1132
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on August 3?",
@@ -480,11 +505,11 @@
         27,
         27
       ],
-      "bid": 0.375,
-      "ask": 0.375,
-      "price": 0.375,
+      "bid": 0.365,
+      "ask": 0.365,
+      "price": 0.365,
       "spread": 0,
-      "volume": 1595
+      "volume": 1631
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on August 3?",
@@ -493,11 +518,11 @@
         28,
         28
       ],
-      "bid": 0.375,
-      "ask": 0.375,
-      "price": 0.375,
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
       "spread": 0,
-      "volume": 1250
+      "volume": 1385
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on August 3?",
@@ -506,11 +531,11 @@
         29,
         29
       ],
-      "bid": 0.14,
-      "ask": 0.14,
-      "price": 0.14,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 2381
+      "volume": 2496
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on August 3?",
@@ -523,7 +548,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 5369
+      "volume": 5713
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on August 3?",
@@ -532,11 +557,11 @@
         31,
         31
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.013,
+      "ask": 0.013,
+      "price": 0.013,
       "spread": 0,
-      "volume": 1983
+      "volume": 2343
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C or higher on August 3?",
@@ -549,7 +574,7 @@
       "ask": 0.007,
       "price": 0.007,
       "spread": 0,
-      "volume": 1870
+      "volume": 2200
     }
   ],
   "created_at": "2026-08-01T04:11:40.398Z",
@@ -600,6 +625,29 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-08-02T15:33:12.372Z",
       "stop_pending": true
+    },
+    {
+      "market_id": "3254192",
+      "question": "Will the highest temperature in Tokyo be 26°C on August 3?",
+      "bucket_low": 26,
+      "bucket_high": 26,
+      "entry_price": 0.11,
+      "bid_at_entry": 0.08,
+      "spread": 0.03,
+      "shares": 181.82,
+      "cost": 20,
+      "p": 0.262,
+      "ev": 1.3818,
+      "kelly": 0.0461,
+      "forecast_temp": 26.8,
+      "forecast_src": "ensemble",
+      "sigma": 1.2,
+      "opened_at": "2026-08-02T17:20:58.215Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null
     }
   ]
 }
