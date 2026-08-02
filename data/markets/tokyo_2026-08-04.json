@@ -192,6 +192,26 @@
         "spread": 0.9,
         "gap": 0.8
       }
+    },
+    {
+      "ts": "2026-08-02T18:14:36.075Z",
+      "horizon": "D+2",
+      "hours_left": 41.8,
+      "ecmwf": 26.6,
+      "hrrr": 26.3,
+      "metar": null,
+      "best": 26.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.6,
+          "gfs_seamless": 26.3,
+          "icon_seamless": 25.2
+        },
+        "mean": 26.2,
+        "spread": 1,
+        "gap": 0.3
+      }
     }
   ],
   "market_snapshots": [
@@ -237,6 +257,11 @@
     },
     {
       "ts": "2026-08-02T17:20:58.215Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.345
+    },
+    {
+      "ts": "2026-08-02T18:14:36.075Z",
       "top_bucket": "28-28C",
       "top_price": 0.345
     }
@@ -301,9 +326,9 @@
         26,
         26
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
       "volume": 90
     },
@@ -331,7 +356,7 @@
       "ask": 0.345,
       "price": 0.345,
       "spread": 0,
-      "volume": 394
+      "volume": 604
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on August 4?",
@@ -344,7 +369,7 @@
       "ask": 0.295,
       "price": 0.295,
       "spread": 0,
-      "volume": 54
+      "volume": 84
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on August 4?",
@@ -353,9 +378,9 @@
         30,
         30
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
       "volume": 490
     },
@@ -366,11 +391,11 @@
         31,
         31
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 584
+      "volume": 599
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C or higher on August 4?",
@@ -383,7 +408,7 @@
       "ask": 0.035,
       "price": 0.035,
       "spread": 0,
-      "volume": 213
+      "volume": 214
     }
   ],
   "created_at": "2026-08-02T04:20:42.734Z"
