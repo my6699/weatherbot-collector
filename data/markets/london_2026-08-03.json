@@ -243,6 +243,26 @@
         "spread": 2.3,
         "gap": 1
       }
+    },
+    {
+      "ts": "2026-08-02T11:36:30.420Z",
+      "horizon": "D+1",
+      "hours_left": 24.4,
+      "ecmwf": 33.4,
+      "hrrr": 31.9,
+      "metar": null,
+      "best": 32.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.4,
+          "gfs_seamless": 31.9,
+          "icon_seamless": 29.8
+        },
+        "mean": 32.2,
+        "spread": 2.4,
+        "gap": 1.5
+      }
     }
   ],
   "market_snapshots": [
@@ -330,6 +350,11 @@
       "ts": "2026-08-02T09:25:08.858Z",
       "top_bucket": "30-30C",
       "top_price": 0.355
+    },
+    {
+      "ts": "2026-08-02T11:36:30.420Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.345
     }
   ],
   "all_outcomes": [
@@ -357,7 +382,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1387
+      "volume": 1393
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 3?",
@@ -366,11 +391,11 @@
         27,
         27
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 1793
+      "volume": 2107
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 3?",
@@ -383,7 +408,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 1769
+      "volume": 2531
     },
     {
       "question": "Will the highest temperature in London be 29°C on August 3?",
@@ -392,11 +417,11 @@
         29,
         29
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 3428
+      "volume": 3846
     },
     {
       "question": "Will the highest temperature in London be 30°C on August 3?",
@@ -405,11 +430,11 @@
         30,
         30
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
-      "volume": 5954
+      "volume": 7171
     },
     {
       "question": "Will the highest temperature in London be 31°C on August 3?",
@@ -418,11 +443,11 @@
         31,
         31
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 2986
+      "volume": 3039
     },
     {
       "question": "Will the highest temperature in London be 32°C on August 3?",
@@ -431,11 +456,11 @@
         32,
         32
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
       "spread": 0,
-      "volume": 2089
+      "volume": 2468
     },
     {
       "question": "Will the highest temperature in London be 33°C on August 3?",
@@ -444,11 +469,11 @@
         33,
         33
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 3506
+      "volume": 7143
     },
     {
       "question": "Will the highest temperature in London be 34°C on August 3?",
@@ -461,7 +486,7 @@
       "ask": 0.003,
       "price": 0.003,
       "spread": 0,
-      "volume": 1267
+      "volume": 1376
     },
     {
       "question": "Will the highest temperature in London be 35°C or higher on August 3?",
@@ -470,11 +495,11 @@
         35,
         999
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 2639
+      "volume": 2743
     }
   ],
   "created_at": "2026-08-01T04:11:23.129Z",
@@ -565,11 +590,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.6,
       "opened_at": "2026-08-02T06:47:53.127Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -10,
+      "exit_price": 0.015,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-02T11:36:30.420Z",
       "stop_price": 0.03,
       "trailing_activated": true,
       "stop_pending": true

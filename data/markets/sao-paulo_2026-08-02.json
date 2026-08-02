@@ -6,7 +6,7 @@
   "station": "SBGR",
   "event_end_date": "2026-08-02T12:00:00Z",
   "hours_at_discovery": 32.1,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "3252348",
     "question": "Will the highest temperature in Sao Paulo be 28°C on August 2?",
@@ -253,6 +253,26 @@
         "spread": 1.8,
         "gap": 0.8
       }
+    },
+    {
+      "ts": "2026-08-02T11:38:11.557Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 29.1,
+      "hrrr": 28.4,
+      "metar": 14,
+      "best": 28.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.1,
+          "gfs_seamless": 28.4,
+          "icon_seamless": 26.2
+        },
+        "mean": 28.3,
+        "spread": 2.1,
+        "gap": 0.7
+      }
     }
   ],
   "market_snapshots": [
@@ -345,6 +365,11 @@
       "ts": "2026-08-02T09:27:42.693Z",
       "top_bucket": "28-28C",
       "top_price": 0.485
+    },
+    {
+      "ts": "2026-08-02T11:38:11.557Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.435
     }
   ],
   "all_outcomes": [
@@ -398,7 +423,7 @@
       "ask": 0.006,
       "price": 0.006,
       "spread": 0,
-      "volume": 414
+      "volume": 424
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 26°C on August 2?",
@@ -411,7 +436,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 3673
+      "volume": 3683
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 27°C on August 2?",
@@ -424,7 +449,7 @@
       "ask": 0.185,
       "price": 0.185,
       "spread": 0,
-      "volume": 1117
+      "volume": 1649
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 28°C on August 2?",
@@ -433,11 +458,11 @@
         28,
         28
       ],
-      "bid": 0.485,
-      "ask": 0.485,
-      "price": 0.485,
+      "bid": 0.435,
+      "ask": 0.435,
+      "price": 0.435,
       "spread": 0,
-      "volume": 7805
+      "volume": 7857
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on August 2?",
@@ -446,11 +471,11 @@
         29,
         29
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.335,
+      "ask": 0.335,
+      "price": 0.335,
       "spread": 0,
-      "volume": 1936
+      "volume": 2136
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C on August 2?",
@@ -459,11 +484,11 @@
         30,
         30
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 2777
+      "volume": 2787
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 31°C on August 2?",
@@ -476,7 +501,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 480
+      "volume": 490
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 32°C or higher on August 2?",

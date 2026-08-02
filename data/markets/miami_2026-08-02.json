@@ -6,7 +6,7 @@
   "station": "KMIA",
   "event_end_date": "2026-08-02T12:00:00Z",
   "hours_at_discovery": 32.1,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "actual_temp": null,
   "resolved_outcome": null,
@@ -231,6 +231,26 @@
         "spread": 2.3,
         "gap": 3
       }
+    },
+    {
+      "ts": "2026-08-02T11:36:24.704Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 89,
+      "hrrr": 85,
+      "metar": 81,
+      "best": 87.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 89,
+          "gfs_seamless": 85,
+          "icon_seamless": 88
+        },
+        "mean": 87.6,
+        "spread": 2.6,
+        "gap": 4
+      }
     }
   ],
   "market_snapshots": [
@@ -323,6 +343,11 @@
       "ts": "2026-08-02T09:25:05.319Z",
       "top_bucket": "90-91F",
       "top_price": 0.46
+    },
+    {
+      "ts": "2026-08-02T11:36:24.704Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.495
     }
   ],
   "all_outcomes": [
@@ -346,11 +371,11 @@
         84,
         85
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 656
+      "volume": 960
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on August 2?",
@@ -359,11 +384,11 @@
         86,
         87
       ],
-      "bid": 0.0195,
-      "ask": 0.0195,
-      "price": 0.0195,
+      "bid": 0.0375,
+      "ask": 0.0375,
+      "price": 0.0375,
       "spread": 0,
-      "volume": 2064
+      "volume": 3165
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on August 2?",
@@ -372,11 +397,11 @@
         88,
         89
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
+      "bid": 0.19,
+      "ask": 0.19,
+      "price": 0.19,
       "spread": 0,
-      "volume": 2197
+      "volume": 3066
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on August 2?",
@@ -385,11 +410,11 @@
         90,
         91
       ],
-      "bid": 0.46,
-      "ask": 0.46,
-      "price": 0.46,
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
       "spread": 0,
-      "volume": 3436
+      "volume": 4244
     },
     {
       "question": "Will the highest temperature in Miami be between 92-93°F on August 2?",
@@ -398,11 +423,11 @@
         92,
         93
       ],
-      "bid": 0.3,
-      "ask": 0.3,
-      "price": 0.3,
+      "bid": 0.26,
+      "ask": 0.26,
+      "price": 0.26,
       "spread": 0,
-      "volume": 3570
+      "volume": 5727
     },
     {
       "question": "Will the highest temperature in Miami be between 94-95°F on August 2?",
@@ -411,11 +436,11 @@
         94,
         95
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 4758
+      "volume": 5287
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on August 2?",
@@ -424,11 +449,11 @@
         96,
         97
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1144
+      "volume": 1512
     },
     {
       "question": "Will the highest temperature in Miami be between 98-99°F on August 2?",

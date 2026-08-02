@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-08-02T12:00:00Z",
   "hours_at_discovery": 55.9,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3236576",
     "question": "Will the highest temperature in Wellington be 11°C on August 2?",
@@ -30,7 +30,7 @@
     "close_reason": "stop_loss",
     "closed_at": "2026-08-01T05:26:36.270Z"
   },
-  "actual_temp": null,
+  "actual_temp": 12,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -443,6 +443,26 @@
         "spread": 1.7,
         "gap": 2.7
       }
+    },
+    {
+      "ts": "2026-08-02T11:38:18.196Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 12.6,
+      "hrrr": 10,
+      "metar": 9,
+      "best": 11.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 12.6,
+          "gfs_seamless": 10,
+          "icon_seamless": 11.4
+        },
+        "mean": 11.6,
+        "spread": 1.6,
+        "gap": 2.6
+      }
     }
   ],
   "market_snapshots": [
@@ -630,6 +650,11 @@
       "ts": "2026-08-02T09:27:46.408Z",
       "top_bucket": "12-12C",
       "top_price": 0.996
+    },
+    {
+      "ts": "2026-08-02T11:38:18.196Z",
+      "top_bucket": "12-12C",
+      "top_price": 0.9995
     }
   ],
   "all_outcomes": [
@@ -718,11 +743,11 @@
         12,
         12
       ],
-      "bid": 0.996,
-      "ask": 0.996,
-      "price": 0.996,
-      "spread": 0,
-      "volume": 17068
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 19539
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on August 2?",
@@ -748,7 +773,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 10390
+      "volume": 10393
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on August 2?",
@@ -848,5 +873,6 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-08-02T03:20:03.398Z"
     }
-  ]
+  ],
+  "metar_max": 12
 }
