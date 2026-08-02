@@ -345,6 +345,26 @@
         "spread": 1.4,
         "gap": 1.8
       }
+    },
+    {
+      "ts": "2026-08-02T19:37:49.468Z",
+      "horizon": "D+1",
+      "hours_left": 16.4,
+      "ecmwf": 35.4,
+      "hrrr": 33.6,
+      "metar": null,
+      "best": 35,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 35.4,
+          "gfs_seamless": 33.6,
+          "icon_seamless": 35.9
+        },
+        "mean": 35,
+        "spread": 1.4,
+        "gap": 1.8
+      }
     }
   ],
   "market_snapshots": [
@@ -457,6 +477,11 @@
       "ts": "2026-08-02T18:14:33.103Z",
       "top_bucket": "37-37C",
       "top_price": 0.4
+    },
+    {
+      "ts": "2026-08-02T19:37:49.468Z",
+      "top_bucket": "37-37C",
+      "top_price": 0.435
     }
   ],
   "all_outcomes": [
@@ -471,7 +496,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 3587
+      "volume": 4122
     },
     {
       "question": "Will the highest temperature in Paris be 33°C on August 3?",
@@ -480,11 +505,11 @@
         33,
         33
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 4076
+      "volume": 4109
     },
     {
       "question": "Will the highest temperature in Paris be 34°C on August 3?",
@@ -493,11 +518,11 @@
         34,
         34
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 8295
+      "volume": 9594
     },
     {
       "question": "Will the highest temperature in Paris be 35°C on August 3?",
@@ -506,11 +531,11 @@
         35,
         35
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.16,
+      "ask": 0.16,
+      "price": 0.16,
       "spread": 0,
-      "volume": 7658
+      "volume": 8568
     },
     {
       "question": "Will the highest temperature in Paris be 36°C on August 3?",
@@ -519,11 +544,11 @@
         36,
         36
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 8180
+      "volume": 9053
     },
     {
       "question": "Will the highest temperature in Paris be 37°C on August 3?",
@@ -532,11 +557,11 @@
         37,
         37
       ],
-      "bid": 0.4,
-      "ask": 0.4,
-      "price": 0.4,
+      "bid": 0.435,
+      "ask": 0.435,
+      "price": 0.435,
       "spread": 0,
-      "volume": 9790
+      "volume": 12990
     },
     {
       "question": "Will the highest temperature in Paris be 38°C on August 3?",
@@ -545,11 +570,11 @@
         38,
         38
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 10583
+      "volume": 11220
     },
     {
       "question": "Will the highest temperature in Paris be 39°C on August 3?",
@@ -558,11 +583,11 @@
         39,
         39
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 3337
+      "volume": 3767
     },
     {
       "question": "Will the highest temperature in Paris be 40°C on August 3?",
@@ -699,7 +724,9 @@
       "pnl": null,
       "exit_price": null,
       "close_reason": null,
-      "closed_at": null
+      "closed_at": null,
+      "stop_price": 0.03,
+      "trailing_activated": true
     },
     {
       "market_id": "3254125",
@@ -724,6 +751,29 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-08-02T18:14:47.749Z",
       "stop_pending": true
+    },
+    {
+      "market_id": "3254125",
+      "question": "Will the highest temperature in Paris be 35°C on August 3?",
+      "bucket_low": 35,
+      "bucket_high": 35,
+      "entry_price": 0.16,
+      "bid_at_entry": 0.15,
+      "spread": 0.01,
+      "shares": 125,
+      "cost": 20,
+      "p": 0.279,
+      "ev": 0.7438,
+      "kelly": 0.0354,
+      "forecast_temp": 35,
+      "forecast_src": "ensemble",
+      "sigma": 1.4,
+      "opened_at": "2026-08-02T19:37:49.468Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null
     }
   ]
 }
