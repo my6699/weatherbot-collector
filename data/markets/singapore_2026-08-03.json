@@ -141,6 +141,26 @@
       "metar": null,
       "best": 32.1,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-02T03:57:58.149Z",
+      "horizon": "D+1",
+      "hours_left": 32,
+      "ecmwf": 32.4,
+      "hrrr": 32.1,
+      "metar": null,
+      "best": 32.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.4,
+          "gfs_seamless": 32.1,
+          "icon_seamless": 32.5
+        },
+        "mean": 32.3,
+        "spread": 0.2,
+        "gap": 0.3
+      }
     }
   ],
   "market_snapshots": [
@@ -208,6 +228,11 @@
       "ts": "2026-08-02T00:15:15.259Z",
       "top_bucket": "32-32C",
       "top_price": 0.455
+    },
+    {
+      "ts": "2026-08-02T03:57:58.149Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.475
     }
   ],
   "all_outcomes": [
@@ -218,11 +243,11 @@
         -999,
         24
       ],
-      "bid": 0.0005,
-      "ask": 0.9995,
-      "price": 0.0005,
-      "spread": 0.999,
-      "volume": 453
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
+      "spread": 0,
+      "volume": 463
     },
     {
       "question": "Will the highest temperature in Singapore be 25°C on August 3?",
@@ -231,11 +256,11 @@
         25,
         25
       ],
-      "bid": 0.0015,
-      "ask": 0.9985,
-      "price": 0.0015,
-      "spread": 0.997,
-      "volume": 448
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
+      "spread": 0,
+      "volume": 501
     },
     {
       "question": "Will the highest temperature in Singapore be 26°C on August 3?",
@@ -245,10 +270,10 @@
         26
       ],
       "bid": 0.0025,
-      "ask": 0.9975,
+      "ask": 0.0025,
       "price": 0.0025,
-      "spread": 0.995,
-      "volume": 624
+      "spread": 0,
+      "volume": 886
     },
     {
       "question": "Will the highest temperature in Singapore be 27°C on August 3?",
@@ -258,10 +283,10 @@
         27
       ],
       "bid": 0.0025,
-      "ask": 0.9975,
+      "ask": 0.0025,
       "price": 0.0025,
-      "spread": 0.995,
-      "volume": 657
+      "spread": 0,
+      "volume": 669
     },
     {
       "question": "Will the highest temperature in Singapore be 28°C on August 3?",
@@ -270,11 +295,11 @@
         28,
         28
       ],
-      "bid": 0.0045,
-      "ask": 0.9955,
-      "price": 0.0045,
-      "spread": 0.991,
-      "volume": 260
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
+      "spread": 0,
+      "volume": 272
     },
     {
       "question": "Will the highest temperature in Singapore be 29°C on August 3?",
@@ -283,11 +308,11 @@
         29,
         29
       ],
-      "bid": 0.02,
-      "ask": 0.98,
-      "price": 0.02,
-      "spread": 0.96,
-      "volume": 451
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
+      "spread": 0,
+      "volume": 610
     },
     {
       "question": "Will the highest temperature in Singapore be 30°C on August 3?",
@@ -296,11 +321,11 @@
         30,
         30
       ],
-      "bid": 0.03,
-      "ask": 0.97,
-      "price": 0.03,
-      "spread": 0.94,
-      "volume": 324
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
+      "spread": 0,
+      "volume": 418
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on August 3?",
@@ -309,11 +334,11 @@
         31,
         31
       ],
-      "bid": 0.155,
-      "ask": 0.845,
-      "price": 0.155,
-      "spread": 0.69,
-      "volume": 978
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
+      "spread": 0,
+      "volume": 1672
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on August 3?",
@@ -322,11 +347,11 @@
         32,
         32
       ],
-      "bid": 0.455,
-      "ask": 0.545,
-      "price": 0.455,
-      "spread": 0.09,
-      "volume": 744
+      "bid": 0.475,
+      "ask": 0.475,
+      "price": 0.475,
+      "spread": 0,
+      "volume": 1094
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 3?",
@@ -335,11 +360,11 @@
         33,
         33
       ],
-      "bid": 0.315,
-      "ask": 0.685,
-      "price": 0.315,
-      "spread": 0.37,
-      "volume": 1135
+      "bid": 0.365,
+      "ask": 0.365,
+      "price": 0.365,
+      "spread": 0,
+      "volume": 1247
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C or higher on August 3?",
@@ -348,11 +373,11 @@
         34,
         999
       ],
-      "bid": 0.055,
-      "ask": 0.945,
-      "price": 0.055,
-      "spread": 0.89,
-      "volume": 728
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
+      "spread": 0,
+      "volume": 1026
     }
   ],
   "created_at": "2026-08-01T04:11:46.871Z"

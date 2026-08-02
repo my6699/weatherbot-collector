@@ -151,6 +151,26 @@
       "metar": 70,
       "best": 74,
       "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-02T03:56:53.050Z",
+      "horizon": "D+0",
+      "hours_left": 8.1,
+      "ecmwf": 75,
+      "hrrr": 74,
+      "metar": 70,
+      "best": 75.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 75,
+          "gfs_seamless": 74,
+          "icon_seamless": 77
+        },
+        "mean": 75.1,
+        "spread": 1.9,
+        "gap": 1
+      }
     }
   ],
   "market_snapshots": [
@@ -223,6 +243,11 @@
       "ts": "2026-08-02T00:15:03.175Z",
       "top_bucket": "76-77F",
       "top_price": 0.44
+    },
+    {
+      "ts": "2026-08-02T03:56:53.050Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.44
     }
   ],
   "all_outcomes": [
@@ -234,9 +259,9 @@
         65
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 490
     },
     {
@@ -247,9 +272,9 @@
         67
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 476
     },
     {
@@ -259,11 +284,11 @@
         68,
         69
       ],
-      "bid": 0.0015,
-      "ask": 0.9985,
-      "price": 0.0015,
-      "spread": 0.997,
-      "volume": 981
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
+      "spread": 0,
+      "volume": 983
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on August 2?",
@@ -272,11 +297,11 @@
         70,
         71
       ],
-      "bid": 0.0035,
-      "ask": 0.9965,
-      "price": 0.0035,
-      "spread": 0.993,
-      "volume": 1460
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
+      "spread": 0,
+      "volume": 1661
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on August 2?",
@@ -285,11 +310,11 @@
         72,
         73
       ],
-      "bid": 0.065,
-      "ask": 0.935,
-      "price": 0.065,
-      "spread": 0.87,
-      "volume": 452
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
+      "spread": 0,
+      "volume": 508
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on August 2?",
@@ -299,10 +324,10 @@
         75
       ],
       "bid": 0.335,
-      "ask": 0.665,
+      "ask": 0.335,
       "price": 0.335,
-      "spread": 0.33,
-      "volume": 2129
+      "spread": 0,
+      "volume": 3055
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on August 2?",
@@ -314,8 +339,8 @@
       "bid": 0.44,
       "ask": 0.44,
       "price": 0.44,
-      "spread": 0.12,
-      "volume": 3774
+      "spread": 0,
+      "volume": 3813
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on August 2?",
@@ -324,11 +349,11 @@
         78,
         79
       ],
-      "bid": 0.175,
-      "ask": 0.825,
-      "price": 0.175,
-      "spread": 0.65,
-      "volume": 884
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
+      "spread": 0,
+      "volume": 907
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on August 2?",
@@ -338,10 +363,10 @@
         81
       ],
       "bid": 0.0015,
-      "ask": 0.9985,
+      "ask": 0.0015,
       "price": 0.0015,
-      "spread": 0.997,
-      "volume": 2389
+      "spread": 0,
+      "volume": 2459
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on August 2?",
@@ -351,9 +376,9 @@
         83
       ],
       "bid": 0.0025,
-      "ask": 0.9975,
+      "ask": 0.0025,
       "price": 0.0025,
-      "spread": 0.995,
+      "spread": 0,
       "volume": 156
     },
     {
@@ -364,10 +389,10 @@
         999
       ],
       "bid": 0.0015,
-      "ask": 0.9985,
+      "ask": 0.0015,
       "price": 0.0015,
-      "spread": 0.997,
-      "volume": 471
+      "spread": 0,
+      "volume": 551
     }
   ],
   "created_at": "2026-08-01T03:54:12.717Z"

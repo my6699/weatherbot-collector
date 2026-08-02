@@ -24,11 +24,11 @@
     "forecast_src": "ensemble",
     "sigma": 2.1,
     "opened_at": "2026-08-02T03:19:09.288Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null
+    "status": "closed",
+    "pnl": -2,
+    "exit_price": 0.045,
+    "close_reason": "forecast_changed",
+    "closed_at": "2026-08-02T03:56:56.879Z"
   },
   "actual_temp": null,
   "resolved_outcome": null,
@@ -163,6 +163,26 @@
       "metar": null,
       "best": 32.1,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-02T03:56:56.879Z",
+      "horizon": "D+1",
+      "hours_left": 32.1,
+      "ecmwf": 31.8,
+      "hrrr": 33,
+      "metar": null,
+      "best": 31.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.8,
+          "gfs_seamless": 33,
+          "icon_seamless": 29.6
+        },
+        "mean": 31.7,
+        "spread": 2.1,
+        "gap": 1.2
+      }
     }
   ],
   "market_snapshots": [
@@ -230,6 +250,11 @@
       "ts": "2026-08-02T00:15:07.534Z",
       "top_bucket": "31-31C",
       "top_price": 0.355
+    },
+    {
+      "ts": "2026-08-02T03:56:56.879Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.385
     }
   ],
   "all_outcomes": [
@@ -240,11 +265,11 @@
         -999,
         25
       ],
-      "bid": 0.002,
-      "ask": 0.998,
-      "price": 0.002,
-      "spread": 0.996,
-      "volume": 563
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
+      "spread": 0,
+      "volume": 762
     },
     {
       "question": "Will the highest temperature in London be 26°C on August 3?",
@@ -253,11 +278,11 @@
         26,
         26
       ],
-      "bid": 0.0035,
-      "ask": 0.9965,
-      "price": 0.0035,
-      "spread": 0.993,
-      "volume": 597
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
+      "spread": 0,
+      "volume": 871
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 3?",
@@ -266,11 +291,11 @@
         27,
         27
       ],
-      "bid": 0.003,
-      "ask": 0.997,
-      "price": 0.003,
-      "spread": 0.994,
-      "volume": 723
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
+      "spread": 0,
+      "volume": 996
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 3?",
@@ -279,11 +304,11 @@
         28,
         28
       ],
-      "bid": 0.035,
-      "ask": 0.965,
-      "price": 0.035,
-      "spread": 0.93,
-      "volume": 977
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
+      "spread": 0,
+      "volume": 1441
     },
     {
       "question": "Will the highest temperature in London be 29°C on August 3?",
@@ -292,11 +317,11 @@
         29,
         29
       ],
-      "bid": 0.075,
-      "ask": 0.925,
-      "price": 0.075,
-      "spread": 0.85,
-      "volume": 1019
+      "bid": 0.125,
+      "ask": 0.125,
+      "price": 0.125,
+      "spread": 0,
+      "volume": 1745
     },
     {
       "question": "Will the highest temperature in London be 30°C on August 3?",
@@ -305,11 +330,11 @@
         30,
         30
       ],
-      "bid": 0.285,
-      "ask": 0.715,
-      "price": 0.285,
-      "spread": 0.43,
-      "volume": 1665
+      "bid": 0.385,
+      "ask": 0.385,
+      "price": 0.385,
+      "spread": 0,
+      "volume": 4001
     },
     {
       "question": "Will the highest temperature in London be 31°C on August 3?",
@@ -318,11 +343,11 @@
         31,
         31
       ],
-      "bid": 0.355,
-      "ask": 0.645,
-      "price": 0.355,
-      "spread": 0.29,
-      "volume": 1299
+      "bid": 0.305,
+      "ask": 0.305,
+      "price": 0.305,
+      "spread": 0,
+      "volume": 2132
     },
     {
       "question": "Will the highest temperature in London be 32°C on August 3?",
@@ -331,11 +356,11 @@
         32,
         32
       ],
-      "bid": 0.175,
-      "ask": 0.825,
-      "price": 0.175,
-      "spread": 0.65,
-      "volume": 648
+      "bid": 0.155,
+      "ask": 0.155,
+      "price": 0.155,
+      "spread": 0,
+      "volume": 1227
     },
     {
       "question": "Will the highest temperature in London be 33°C on August 3?",
@@ -344,11 +369,11 @@
         33,
         33
       ],
-      "bid": 0.04,
-      "ask": 0.96,
-      "price": 0.04,
-      "spread": 0.92,
-      "volume": 2529
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
+      "spread": 0,
+      "volume": 2747
     },
     {
       "question": "Will the highest temperature in London be 34°C on August 3?",
@@ -357,11 +382,11 @@
         34,
         34
       ],
-      "bid": 0.0195,
-      "ask": 0.9805,
-      "price": 0.0195,
-      "spread": 0.961,
-      "volume": 545
+      "bid": 0.0115,
+      "ask": 0.0115,
+      "price": 0.0115,
+      "spread": 0,
+      "volume": 934
     },
     {
       "question": "Will the highest temperature in London be 35°C or higher on August 3?",
@@ -370,11 +395,11 @@
         35,
         999
       ],
-      "bid": 0.0065,
-      "ask": 0.9935,
-      "price": 0.0065,
-      "spread": 0.987,
-      "volume": 1814
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
+      "spread": 0,
+      "volume": 2147
     }
   ],
   "created_at": "2026-08-01T04:11:23.129Z",
@@ -396,6 +421,29 @@
       "forecast_src": "ensemble",
       "sigma": 2.1,
       "opened_at": "2026-08-02T03:19:09.288Z",
+      "status": "closed",
+      "pnl": -2,
+      "exit_price": 0.045,
+      "close_reason": "forecast_changed",
+      "closed_at": "2026-08-02T03:56:56.879Z"
+    },
+    {
+      "market_id": "3254119",
+      "question": "Will the highest temperature in London be 33°C on August 3?",
+      "bucket_low": 33,
+      "bucket_high": 33,
+      "entry_price": 0.05,
+      "bid_at_entry": 0.04,
+      "spread": 0.01,
+      "shares": 400,
+      "cost": 20,
+      "p": 0.1559,
+      "ev": 2.118,
+      "kelly": 0.029,
+      "forecast_temp": 31.7,
+      "forecast_src": "ensemble",
+      "sigma": 2.1,
+      "opened_at": "2026-08-02T03:56:56.879Z",
       "status": "open",
       "pnl": null,
       "exit_price": null,

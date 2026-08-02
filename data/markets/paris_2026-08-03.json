@@ -163,6 +163,26 @@
       "metar": null,
       "best": 35.7,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-02T03:57:23.961Z",
+      "horizon": "D+1",
+      "hours_left": 32,
+      "ecmwf": 36.5,
+      "hrrr": 36.5,
+      "metar": null,
+      "best": 36.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 36.5,
+          "gfs_seamless": 36.5,
+          "icon_seamless": 36.2
+        },
+        "mean": 36.4,
+        "spread": 0.2,
+        "gap": 0
+      }
     }
   ],
   "market_snapshots": [
@@ -230,6 +250,11 @@
       "ts": "2026-08-02T00:15:08.743Z",
       "top_bucket": "36-36C",
       "top_price": 0.335
+    },
+    {
+      "ts": "2026-08-02T03:57:23.961Z",
+      "top_bucket": "36-36C",
+      "top_price": 0.435
     }
   ],
   "all_outcomes": [
@@ -240,11 +265,11 @@
         -999,
         32
       ],
-      "bid": 0.004,
-      "ask": 0.996,
-      "price": 0.004,
-      "spread": 0.992,
-      "volume": 1020
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
+      "spread": 0,
+      "volume": 1274
     },
     {
       "question": "Will the highest temperature in Paris be 33°C on August 3?",
@@ -254,10 +279,10 @@
         33
       ],
       "bid": 0.015,
-      "ask": 0.985,
+      "ask": 0.015,
       "price": 0.015,
-      "spread": 0.97,
-      "volume": 992
+      "spread": 0,
+      "volume": 1907
     },
     {
       "question": "Will the highest temperature in Paris be 34°C on August 3?",
@@ -266,11 +291,11 @@
         34,
         34
       ],
-      "bid": 0.095,
-      "ask": 0.905,
-      "price": 0.095,
-      "spread": 0.81,
-      "volume": 2620
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
+      "spread": 0,
+      "volume": 3509
     },
     {
       "question": "Will the highest temperature in Paris be 35°C on August 3?",
@@ -279,11 +304,11 @@
         35,
         35
       ],
-      "bid": 0.275,
-      "ask": 0.725,
-      "price": 0.275,
-      "spread": 0.45,
-      "volume": 1277
+      "bid": 0.255,
+      "ask": 0.255,
+      "price": 0.255,
+      "spread": 0,
+      "volume": 2355
     },
     {
       "question": "Will the highest temperature in Paris be 36°C on August 3?",
@@ -292,11 +317,11 @@
         36,
         36
       ],
-      "bid": 0.335,
-      "ask": 0.665,
-      "price": 0.335,
-      "spread": 0.33,
-      "volume": 902
+      "bid": 0.435,
+      "ask": 0.435,
+      "price": 0.435,
+      "spread": 0,
+      "volume": 4314
     },
     {
       "question": "Will the highest temperature in Paris be 37°C on August 3?",
@@ -305,11 +330,11 @@
         37,
         37
       ],
-      "bid": 0.195,
-      "ask": 0.805,
-      "price": 0.195,
-      "spread": 0.61,
-      "volume": 2264
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
+      "spread": 0,
+      "volume": 3087
     },
     {
       "question": "Will the highest temperature in Paris be 38°C on August 3?",
@@ -318,11 +343,11 @@
         38,
         38
       ],
-      "bid": 0.065,
-      "ask": 0.935,
-      "price": 0.065,
-      "spread": 0.87,
-      "volume": 1741
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
+      "spread": 0,
+      "volume": 2173
     },
     {
       "question": "Will the highest temperature in Paris be 39°C on August 3?",
@@ -331,11 +356,11 @@
         39,
         39
       ],
-      "bid": 0.0035,
-      "ask": 0.9965,
-      "price": 0.0035,
-      "spread": 0.993,
-      "volume": 889
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
+      "spread": 0,
+      "volume": 1129
     },
     {
       "question": "Will the highest temperature in Paris be 40°C on August 3?",
@@ -345,9 +370,9 @@
         40
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 363
     },
     {
@@ -358,9 +383,9 @@
         41
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 343
     },
     {
@@ -371,9 +396,9 @@
         999
       ],
       "bid": 0.0005,
-      "ask": 0.9995,
+      "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 499
     }
   ],

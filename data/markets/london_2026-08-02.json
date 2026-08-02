@@ -323,6 +323,26 @@
       "metar": 20,
       "best": 27.6,
       "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-02T03:56:56.879Z",
+      "horizon": "D+0",
+      "hours_left": 8.1,
+      "ecmwf": 27.8,
+      "hrrr": 26.6,
+      "metar": 16,
+      "best": 27.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.8,
+          "gfs_seamless": 26.6,
+          "icon_seamless": 25.9
+        },
+        "mean": 27.1,
+        "spread": 1.2,
+        "gap": 1.2
+      }
     }
   ],
   "market_snapshots": [
@@ -470,6 +490,11 @@
       "ts": "2026-08-02T00:15:07.534Z",
       "top_bucket": "27-27C",
       "top_price": 0.445
+    },
+    {
+      "ts": "2026-08-02T03:56:56.879Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.425
     }
   ],
   "all_outcomes": [
@@ -483,7 +508,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 849
     },
     {
@@ -496,8 +521,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
-      "volume": 2198
+      "spread": 0,
+      "volume": 2605
     },
     {
       "question": "Will the highest temperature in London be 24°C on August 2?",
@@ -506,11 +531,11 @@
         24,
         24
       ],
-      "bid": 0.005,
-      "ask": 0.995,
-      "price": 0.005,
-      "spread": 0.99,
-      "volume": 8904
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
+      "spread": 0,
+      "volume": 9089
     },
     {
       "question": "Will the highest temperature in London be 25°C on August 2?",
@@ -519,11 +544,11 @@
         25,
         25
       ],
-      "bid": 0.055,
-      "ask": 0.945,
-      "price": 0.055,
-      "spread": 0.89,
-      "volume": 17003
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
+      "spread": 0,
+      "volume": 19128
     },
     {
       "question": "Will the highest temperature in London be 26°C on August 2?",
@@ -532,11 +557,11 @@
         26,
         26
       ],
-      "bid": 0.36,
-      "ask": 0.64,
-      "price": 0.36,
-      "spread": 0.28,
-      "volume": 13421
+      "bid": 0.42,
+      "ask": 0.42,
+      "price": 0.42,
+      "spread": 0,
+      "volume": 14135
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 2?",
@@ -545,11 +570,11 @@
         27,
         27
       ],
-      "bid": 0.445,
-      "ask": 0.555,
-      "price": 0.445,
-      "spread": 0.11,
-      "volume": 10667
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
+      "spread": 0,
+      "volume": 11185
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 2?",
@@ -558,11 +583,11 @@
         28,
         28
       ],
-      "bid": 0.145,
-      "ask": 0.855,
-      "price": 0.145,
-      "spread": 0.71,
-      "volume": 3646
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
+      "spread": 0,
+      "volume": 4026
     },
     {
       "question": "Will the highest temperature in London be 29°C on August 2?",
@@ -572,10 +597,10 @@
         29
       ],
       "bid": 0.0055,
-      "ask": 0.9945,
+      "ask": 0.0055,
       "price": 0.0055,
-      "spread": 0.989,
-      "volume": 7847
+      "spread": 0,
+      "volume": 8633
     },
     {
       "question": "Will the highest temperature in London be 30°C on August 2?",
@@ -584,11 +609,11 @@
         30,
         30
       ],
-      "bid": 0.0005,
-      "ask": 0.9995,
-      "price": 0.0005,
-      "spread": 0.999,
-      "volume": 3666
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
+      "spread": 0,
+      "volume": 3670
     },
     {
       "question": "Will the highest temperature in London be 31°C on August 2?",
@@ -600,8 +625,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
-      "volume": 1540
+      "spread": 0,
+      "volume": 1683
     },
     {
       "question": "Will the highest temperature in London be 32°C or higher on August 2?",
@@ -613,7 +638,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0.999,
+      "spread": 0,
       "volume": 2060
     }
   ],

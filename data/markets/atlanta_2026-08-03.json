@@ -32,6 +32,26 @@
         "spread": 1.2,
         "gap": 2
       }
+    },
+    {
+      "ts": "2026-08-02T03:56:56.154Z",
+      "horizon": "D+1",
+      "hours_left": 32.1,
+      "ecmwf": 85,
+      "hrrr": 83,
+      "metar": null,
+      "best": 84.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 85,
+          "gfs_seamless": 83,
+          "icon_seamless": 84
+        },
+        "mean": 84.2,
+        "spread": 1.2,
+        "gap": 2
+      }
     }
   ],
   "market_snapshots": [
@@ -39,6 +59,11 @@
       "ts": "2026-08-02T03:19:07.123Z",
       "top_bucket": "84-85F",
       "top_price": 0.34
+    },
+    {
+      "ts": "2026-08-02T03:56:56.154Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.355
     }
   ],
   "all_outcomes": [
@@ -92,7 +117,7 @@
       "ask": 0.04,
       "price": 0.04,
       "spread": 0,
-      "volume": 5
+      "volume": 21
     },
     {
       "question": "Will the highest temperature in Atlanta be between 82-83°F on August 3?",
@@ -101,11 +126,11 @@
         82,
         83
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.185,
+      "ask": 0.185,
+      "price": 0.185,
       "spread": 0,
-      "volume": 0
+      "volume": 32
     },
     {
       "question": "Will the highest temperature in Atlanta be between 84-85°F on August 3?",
@@ -114,11 +139,11 @@
         84,
         85
       ],
-      "bid": 0.34,
-      "ask": 0.34,
-      "price": 0.34,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 0
+      "volume": 15
     },
     {
       "question": "Will the highest temperature in Atlanta be between 86-87°F on August 3?",
@@ -131,7 +156,7 @@
       "ask": 0.285,
       "price": 0.285,
       "spread": 0,
-      "volume": 0
+      "volume": 45
     },
     {
       "question": "Will the highest temperature in Atlanta be between 88-89°F on August 3?",
