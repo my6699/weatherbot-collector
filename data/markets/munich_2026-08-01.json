@@ -6,9 +6,31 @@
   "station": "EDDM",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "open",
-  "position": null,
-  "actual_temp": null,
+  "status": "resolved",
+  "position": {
+    "market_id": "3216599",
+    "question": "Will the highest temperature in Munich be 28°C on August 1?",
+    "bucket_low": 28,
+    "bucket_high": 28,
+    "entry_price": 0.15,
+    "bid_at_entry": 0.14,
+    "spread": 0.01,
+    "shares": 133.33,
+    "cost": 20,
+    "p": 1,
+    "ev": 5.6667,
+    "kelly": 0.25,
+    "forecast_temp": 28.4,
+    "forecast_src": "ecmwf",
+    "sigma": 1.2,
+    "opened_at": "2026-07-31T06:02:11.084Z",
+    "status": "closed",
+    "pnl": -4,
+    "exit_price": 0.12,
+    "close_reason": "stop_loss",
+    "closed_at": "2026-07-31T10:02:18.826Z"
+  },
+  "actual_temp": 30,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -253,204 +275,54 @@
       "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:19:03.040Z",
+      "ts": "2026-08-01T06:42:48.510Z",
       "horizon": "D+0",
-      "hours_left": 6.7,
-      "ecmwf": 28.5,
-      "hrrr": 28.6,
-      "metar": 18,
-      "best": 28.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 28.6,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.5,
-        "spread": 0.2,
-        "gap": 0.1
-      }
-    },
-    {
-      "ts": "2026-08-01T05:21:01.293Z",
-      "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 28.5,
-      "hrrr": 28.6,
-      "metar": 18,
-      "best": 28.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 28.6,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.5,
-        "spread": 0.2,
-        "gap": 0.1
-      }
-    },
-    {
-      "ts": "2026-08-01T05:22:39.267Z",
-      "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 28.5,
-      "hrrr": 28.6,
-      "metar": 18,
-      "best": 28.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 28.6,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.5,
-        "spread": 0.2,
-        "gap": 0.1
-      }
-    },
-    {
-      "ts": "2026-08-01T05:25:19.952Z",
-      "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 28.5,
-      "hrrr": 28.6,
-      "metar": 19,
-      "best": 28.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 28.6,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.5,
-        "spread": 0.2,
-        "gap": 0.1
-      }
-    },
-    {
-      "ts": "2026-08-01T05:29:56.804Z",
-      "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 28.5,
-      "hrrr": 28.6,
-      "metar": 19,
-      "best": 28.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 28.6,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.5,
-        "spread": 0.2,
-        "gap": 0.1
-      }
-    },
-    {
-      "ts": "2026-08-01T05:32:26.329Z",
-      "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 28.5,
-      "hrrr": 28.6,
-      "metar": 19,
-      "best": 28.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 28.6,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.5,
-        "spread": 0.2,
-        "gap": 0.1
-      }
-    },
-    {
-      "ts": "2026-08-01T05:34:57.127Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 28.5,
-      "hrrr": 28.6,
-      "metar": 19,
-      "best": 28.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 28.6,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.5,
-        "spread": 0.2,
-        "gap": 0.1
-      }
-    },
-    {
-      "ts": "2026-08-01T05:37:35.303Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 28.5,
-      "hrrr": 28.6,
-      "metar": 19,
-      "best": 28.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 28.6,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.5,
-        "spread": 0.2,
-        "gap": 0.1
-      }
-    },
-    {
-      "ts": "2026-08-01T05:57:44.509Z",
-      "horizon": "D+0",
-      "hours_left": 6,
-      "ecmwf": 28.5,
-      "hrrr": 29,
-      "metar": 19,
-      "best": 28.6,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 29,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.6,
-        "spread": 0.4,
-        "gap": 0.5
-      }
-    },
-    {
-      "ts": "2026-08-01T07:01:18.855Z",
-      "horizon": "D+0",
-      "hours_left": 5,
-      "ecmwf": 28.5,
-      "hrrr": 29,
+      "hours_left": 5.3,
+      "ecmwf": 28.6,
+      "hrrr": null,
       "metar": 20,
       "best": 28.6,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 28.5,
-          "gfs_seamless": 29,
-          "icon_seamless": 28.3
-        },
-        "mean": 28.6,
-        "spread": 0.4,
-        "gap": 0.5
-      }
+      "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T09:24:15.512Z",
+      "horizon": "D+0",
+      "hours_left": 2.6,
+      "ecmwf": 29.2,
+      "hrrr": null,
+      "metar": 26,
+      "best": 29.2,
+      "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T11:36:40.631Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 29.2,
+      "hrrr": null,
+      "metar": 27,
+      "best": 29.2,
+      "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T13:59:15.525Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 29.4,
+      "hrrr": null,
+      "metar": 30,
+      "best": 29.4,
+      "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T15:30:24.247Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 29.4,
+      "hrrr": null,
+      "metar": 29,
+      "best": 29.4,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -575,54 +447,29 @@
       "top_price": 0.455
     },
     {
-      "ts": "2026-08-01T05:19:03.040Z",
+      "ts": "2026-08-01T06:42:48.510Z",
       "top_bucket": "29-29C",
-      "top_price": 0.45
+      "top_price": 0.48
     },
     {
-      "ts": "2026-08-01T05:21:01.293Z",
+      "ts": "2026-08-01T09:24:15.512Z",
       "top_bucket": "29-29C",
-      "top_price": 0.45
+      "top_price": 0.47
     },
     {
-      "ts": "2026-08-01T05:22:39.267Z",
+      "ts": "2026-08-01T11:36:40.631Z",
       "top_bucket": "29-29C",
-      "top_price": 0.45
+      "top_price": 0.555
     },
     {
-      "ts": "2026-08-01T05:25:19.952Z",
-      "top_bucket": "29-29C",
-      "top_price": 0.45
+      "ts": "2026-08-01T13:59:15.525Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.91
     },
     {
-      "ts": "2026-08-01T05:29:56.804Z",
-      "top_bucket": "29-29C",
-      "top_price": 0.46
-    },
-    {
-      "ts": "2026-08-01T05:32:26.329Z",
-      "top_bucket": "29-29C",
-      "top_price": 0.46
-    },
-    {
-      "ts": "2026-08-01T05:34:57.127Z",
-      "top_bucket": "29-29C",
-      "top_price": 0.46
-    },
-    {
-      "ts": "2026-08-01T05:37:35.303Z",
-      "top_bucket": "29-29C",
-      "top_price": 0.465
-    },
-    {
-      "ts": "2026-08-01T05:57:44.509Z",
-      "top_bucket": "29-29C",
-      "top_price": 0.465
-    },
-    {
-      "ts": "2026-08-01T07:01:18.855Z",
-      "top_bucket": "29-29C",
-      "top_price": 0.455
+      "ts": "2026-08-01T15:30:24.247Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.9955
     }
   ],
   "all_outcomes": [
@@ -633,11 +480,11 @@
         -999,
         26
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
-      "spread": 0,
-      "volume": 7641
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 10547
     },
     {
       "question": "Will the highest temperature in Munich be 27°C on August 1?",
@@ -646,11 +493,11 @@
         27,
         27
       ],
-      "bid": 0.0815,
-      "ask": 0.0815,
-      "price": 0.0815,
-      "spread": 0,
-      "volume": 7645
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 12267
     },
     {
       "question": "Will the highest temperature in Munich be 28°C on August 1?",
@@ -659,11 +506,11 @@
         28,
         28
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
-      "spread": 0,
-      "volume": 11873
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 19041
     },
     {
       "question": "Will the highest temperature in Munich be 29°C on August 1?",
@@ -672,11 +519,11 @@
         29,
         29
       ],
-      "bid": 0.455,
-      "ask": 0.455,
-      "price": 0.455,
-      "spread": 0,
-      "volume": 9903
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 16661
     },
     {
       "question": "Will the highest temperature in Munich be 30°C on August 1?",
@@ -685,11 +532,11 @@
         30,
         30
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
-      "spread": 0,
-      "volume": 10172
+      "bid": 0.9955,
+      "ask": 0.0045,
+      "price": 0.9955,
+      "spread": -0.991,
+      "volume": 18141
     },
     {
       "question": "Will the highest temperature in Munich be 31°C on August 1?",
@@ -698,11 +545,11 @@
         31,
         31
       ],
-      "bid": 0.0145,
-      "ask": 0.0145,
-      "price": 0.0145,
-      "spread": 0,
-      "volume": 9353
+      "bid": 0.007,
+      "ask": 0.993,
+      "price": 0.007,
+      "spread": 0.986,
+      "volume": 16468
     },
     {
       "question": "Will the highest temperature in Munich be 32°C on August 1?",
@@ -711,11 +558,11 @@
         32,
         32
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
-      "spread": 0,
-      "volume": 3946
+      "bid": 0.004,
+      "ask": 0.996,
+      "price": 0.004,
+      "spread": 0.992,
+      "volume": 8081
     },
     {
       "question": "Will the highest temperature in Munich be 33°C on August 1?",
@@ -727,8 +574,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 1448
+      "spread": 0.999,
+      "volume": 2017
     },
     {
       "question": "Will the highest temperature in Munich be 34°C on August 1?",
@@ -740,8 +587,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 834
+      "spread": 0.999,
+      "volume": 1863
     },
     {
       "question": "Will the highest temperature in Munich be 35°C on August 1?",
@@ -753,8 +600,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 1632
+      "spread": 0.999,
+      "volume": 1642
     },
     {
       "question": "Will the highest temperature in Munich be 36°C or higher on August 1?",
@@ -766,8 +613,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 1923
+      "spread": 0.999,
+      "volume": 1944
     }
   ],
   "created_at": "2026-07-31T03:48:56.706Z",

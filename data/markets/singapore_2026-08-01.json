@@ -6,9 +6,31 @@
   "station": "WSSS",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "open",
-  "position": null,
-  "actual_temp": null,
+  "status": "resolved",
+  "position": {
+    "market_id": "3216657",
+    "question": "Will the highest temperature in Singapore be 31°C on August 1?",
+    "bucket_low": 31,
+    "bucket_high": 31,
+    "entry_price": 0.34,
+    "bid_at_entry": 0.32,
+    "spread": 0.02,
+    "shares": 58.82,
+    "cost": 20,
+    "p": 1,
+    "ev": 1.9412,
+    "kelly": 0.25,
+    "forecast_temp": 30.6,
+    "forecast_src": "ecmwf",
+    "sigma": 1.2,
+    "opened_at": "2026-07-31T14:42:06.348Z",
+    "status": "closed",
+    "pnl": 0.88,
+    "exit_price": 0.355,
+    "close_reason": "forecast_changed",
+    "closed_at": "2026-07-31T22:17:59.564Z"
+  },
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -253,204 +275,34 @@
       "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:19:18.203Z",
+      "ts": "2026-08-01T06:42:52.425Z",
       "horizon": "D+0",
-      "hours_left": 6.7,
-      "ecmwf": 31,
-      "hrrr": 30.8,
+      "hours_left": 5.3,
+      "ecmwf": 31.1,
+      "hrrr": null,
       "metar": 32,
-      "best": 30.8,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 30.8,
-          "icon_seamless": 30.4
-        },
-        "mean": 30.8,
-        "spread": 0.4,
-        "gap": 0.2
-      }
+      "best": 31.1,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:21:16.853Z",
+      "ts": "2026-08-01T09:24:20.976Z",
       "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 31,
-      "hrrr": 30.8,
+      "hours_left": 2.6,
+      "ecmwf": 32,
+      "hrrr": null,
       "metar": 32,
-      "best": 30.8,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 30.8,
-          "icon_seamless": 30.4
-        },
-        "mean": 30.8,
-        "spread": 0.4,
-        "gap": 0.2
-      }
+      "best": 32,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:22:59.573Z",
+      "ts": "2026-08-01T11:36:45.946Z",
       "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 31,
-      "hrrr": 30.8,
-      "metar": 32,
-      "best": 30.8,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 30.8,
-          "icon_seamless": 30.4
-        },
-        "mean": 30.8,
-        "spread": 0.4,
-        "gap": 0.2
-      }
-    },
-    {
-      "ts": "2026-08-01T05:25:39.870Z",
-      "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 31,
-      "hrrr": 30.8,
-      "metar": 32,
-      "best": 30.8,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 30.8,
-          "icon_seamless": 30.4
-        },
-        "mean": 30.8,
-        "spread": 0.4,
-        "gap": 0.2
-      }
-    },
-    {
-      "ts": "2026-08-01T05:30:13.274Z",
-      "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 31,
-      "hrrr": 30.8,
-      "metar": 32,
-      "best": 30.8,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 30.8,
-          "icon_seamless": 30.4
-        },
-        "mean": 30.8,
-        "spread": 0.4,
-        "gap": 0.2
-      }
-    },
-    {
-      "ts": "2026-08-01T05:32:44.891Z",
-      "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 31,
-      "hrrr": 30.8,
-      "metar": 32,
-      "best": 30.8,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 30.8,
-          "icon_seamless": 30.4
-        },
-        "mean": 30.8,
-        "spread": 0.4,
-        "gap": 0.2
-      }
-    },
-    {
-      "ts": "2026-08-01T05:35:13.525Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 31,
-      "hrrr": 30.8,
-      "metar": 32,
-      "best": 30.8,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 30.8,
-          "icon_seamless": 30.4
-        },
-        "mean": 30.8,
-        "spread": 0.4,
-        "gap": 0.2
-      }
-    },
-    {
-      "ts": "2026-08-01T05:37:50.371Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 31,
-      "hrrr": 30.8,
-      "metar": 32,
-      "best": 30.8,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 30.8,
-          "icon_seamless": 30.4
-        },
-        "mean": 30.8,
-        "spread": 0.4,
-        "gap": 0.2
-      }
-    },
-    {
-      "ts": "2026-08-01T05:57:57.191Z",
-      "horizon": "D+0",
-      "hours_left": 6,
-      "ecmwf": 31,
-      "hrrr": 31.4,
-      "metar": 32,
-      "best": 31,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 31.4,
-          "icon_seamless": 30.4
-        },
-        "mean": 31,
-        "spread": 0.6,
-        "gap": 0.4
-      }
-    },
-    {
-      "ts": "2026-08-01T07:01:30.909Z",
-      "horizon": "D+0",
-      "hours_left": 5,
-      "ecmwf": 31,
-      "hrrr": 31.4,
-      "metar": 32,
-      "best": 31,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31,
-          "gfs_seamless": 31.4,
-          "icon_seamless": 30.4
-        },
-        "mean": 31,
-        "spread": 0.6,
-        "gap": 0.4
-      }
+      "hours_left": 0.4,
+      "ecmwf": 32,
+      "hrrr": null,
+      "metar": 30,
+      "best": 32,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -575,54 +427,19 @@
       "top_price": 0.655
     },
     {
-      "ts": "2026-08-01T05:19:18.203Z",
-      "top_bucket": "32-32C",
-      "top_price": 0.72
-    },
-    {
-      "ts": "2026-08-01T05:21:16.853Z",
-      "top_bucket": "32-32C",
-      "top_price": 0.72
-    },
-    {
-      "ts": "2026-08-01T05:22:59.573Z",
-      "top_bucket": "32-32C",
-      "top_price": 0.72
-    },
-    {
-      "ts": "2026-08-01T05:25:39.870Z",
-      "top_bucket": "32-32C",
-      "top_price": 0.66
-    },
-    {
-      "ts": "2026-08-01T05:30:13.274Z",
-      "top_bucket": "32-32C",
-      "top_price": 0.745
-    },
-    {
-      "ts": "2026-08-01T05:32:44.891Z",
-      "top_bucket": "32-32C",
-      "top_price": 0.745
-    },
-    {
-      "ts": "2026-08-01T05:35:13.525Z",
-      "top_bucket": "32-32C",
-      "top_price": 0.81
-    },
-    {
-      "ts": "2026-08-01T05:37:50.371Z",
-      "top_bucket": "32-32C",
-      "top_price": 0.81
-    },
-    {
-      "ts": "2026-08-01T05:57:57.191Z",
-      "top_bucket": "32-32C",
-      "top_price": 0.62
-    },
-    {
-      "ts": "2026-08-01T07:01:30.909Z",
+      "ts": "2026-08-01T06:42:52.425Z",
       "top_bucket": "33-33C",
-      "top_price": 0.988
+      "top_price": 0.993
+    },
+    {
+      "ts": "2026-08-01T09:24:20.976Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9975
+    },
+    {
+      "ts": "2026-08-01T11:36:45.946Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995
     }
   ],
   "all_outcomes": [
@@ -636,7 +453,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 337
     },
     {
@@ -649,7 +466,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 379
     },
     {
@@ -662,7 +479,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 618
     },
     {
@@ -675,7 +492,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 4305
     },
     {
@@ -688,8 +505,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 5498
+      "spread": 0.999,
+      "volume": 7503
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on August 1?",
@@ -701,7 +518,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 12520
     },
     {
@@ -712,10 +529,10 @@
         32
       ],
       "bid": 0.0005,
-      "ask": 0.0005,
+      "ask": 0.9995,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 7791
+      "spread": 0.999,
+      "volume": 7812
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 1?",
@@ -724,11 +541,11 @@
         33,
         33
       ],
-      "bid": 0.988,
-      "ask": 0.988,
-      "price": 0.988,
-      "spread": 0,
-      "volume": 7124
+      "bid": 0.9995,
+      "ask": 0.0005,
+      "price": 0.9995,
+      "spread": -0.999,
+      "volume": 9511
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on August 1?",
@@ -737,11 +554,11 @@
         34,
         34
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
-      "spread": 0,
-      "volume": 5457
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 5690
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 1?",
@@ -751,10 +568,10 @@
         35
       ],
       "bid": 0.0005,
-      "ask": 0.0005,
+      "ask": 0.9995,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 2210
+      "spread": 0.999,
+      "volume": 3241
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C or higher on August 1?",
@@ -766,7 +583,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 988
     }
   ],

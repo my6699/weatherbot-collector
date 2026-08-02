@@ -6,9 +6,33 @@
   "station": "EGLC",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "open",
-  "position": null,
-  "actual_temp": null,
+  "status": "resolved",
+  "position": {
+    "market_id": "3216538",
+    "question": "Will the highest temperature in London be 26°C on August 1?",
+    "bucket_low": 26,
+    "bucket_high": 26,
+    "entry_price": 0.43,
+    "bid_at_entry": 0.42,
+    "spread": 0.01,
+    "shares": 46.51,
+    "cost": 20,
+    "p": 1,
+    "ev": 1.3256,
+    "kelly": 0.25,
+    "forecast_temp": 25.6,
+    "forecast_src": "ecmwf",
+    "sigma": 1.2,
+    "opened_at": "2026-07-31T03:48:49.962Z",
+    "status": "closed",
+    "pnl": 9.07,
+    "exit_price": 0.625,
+    "close_reason": "forecast_changed",
+    "closed_at": "2026-08-01T04:11:20.716Z",
+    "stop_price": 0.43,
+    "trailing_activated": true
+  },
+  "actual_temp": 26,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -253,204 +277,64 @@
       "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:18:57.130Z",
+      "ts": "2026-08-01T06:42:46.953Z",
       "horizon": "D+0",
-      "hours_left": 6.7,
-      "ecmwf": 27.5,
-      "hrrr": 26.9,
+      "hours_left": 5.3,
+      "ecmwf": 27.6,
+      "hrrr": null,
       "metar": 16,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.9,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.6
-      }
+      "best": 27.6,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:20:54.892Z",
+      "ts": "2026-08-01T09:24:13.847Z",
       "horizon": "D+0",
-      "hours_left": 6.7,
-      "ecmwf": 27.5,
-      "hrrr": 26.9,
-      "metar": 16,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.9,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.6
-      }
+      "hours_left": 2.6,
+      "ecmwf": 27.4,
+      "hrrr": null,
+      "metar": 20,
+      "best": 27.4,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:22:33.488Z",
+      "ts": "2026-08-01T11:36:39.004Z",
       "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 27.5,
-      "hrrr": 26.9,
-      "metar": 16,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.9,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.6
-      }
+      "hours_left": 0.4,
+      "ecmwf": 27.4,
+      "hrrr": null,
+      "metar": 23,
+      "best": 27.4,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:25:08.206Z",
+      "ts": "2026-08-01T13:59:12.794Z",
       "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 27.5,
-      "hrrr": 26.9,
-      "metar": 16,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.9,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.6
-      }
+      "hours_left": 0,
+      "ecmwf": 27.1,
+      "hrrr": null,
+      "metar": 25,
+      "best": 27.1,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:29:50.735Z",
+      "ts": "2026-08-01T15:30:22.245Z",
       "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 27.5,
-      "hrrr": 26.9,
-      "metar": 16,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.9,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.6
-      }
+      "hours_left": 0,
+      "ecmwf": 27.1,
+      "hrrr": null,
+      "metar": 26,
+      "best": 27.1,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:32:19.847Z",
+      "ts": "2026-08-01T17:18:51.537Z",
       "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 27.5,
-      "hrrr": 26.9,
-      "metar": 16,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.9,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.6
-      }
-    },
-    {
-      "ts": "2026-08-01T05:34:49.834Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 27.5,
-      "hrrr": 26.9,
-      "metar": 16,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.9,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.6
-      }
-    },
-    {
-      "ts": "2026-08-01T05:37:27.998Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 27.5,
-      "hrrr": 26.9,
-      "metar": 16,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.9,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.6
-      }
-    },
-    {
-      "ts": "2026-08-01T05:57:39.948Z",
-      "horizon": "D+0",
-      "hours_left": 6,
-      "ecmwf": 27.5,
-      "hrrr": 26.8,
-      "metar": 16,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.8,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.7
-      }
-    },
-    {
-      "ts": "2026-08-01T07:01:12.870Z",
-      "horizon": "D+0",
-      "hours_left": 5,
-      "ecmwf": 27.5,
-      "hrrr": 26.8,
-      "metar": 17,
-      "best": 26.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 27.5,
-          "gfs_seamless": 26.8,
-          "icon_seamless": 25.5
-        },
-        "mean": 26.9,
-        "spread": 1.4,
-        "gap": 0.7
-      }
+      "hours_left": 0,
+      "ecmwf": 27.1,
+      "hrrr": null,
+      "metar": 26,
+      "best": 27.1,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -575,54 +459,34 @@
       "top_price": 0.625
     },
     {
-      "ts": "2026-08-01T05:18:57.130Z",
+      "ts": "2026-08-01T06:42:46.953Z",
       "top_bucket": "26-26C",
-      "top_price": 0.625
+      "top_price": 0.545
     },
     {
-      "ts": "2026-08-01T05:20:54.892Z",
+      "ts": "2026-08-01T09:24:13.847Z",
       "top_bucket": "26-26C",
-      "top_price": 0.625
+      "top_price": 0.56
     },
     {
-      "ts": "2026-08-01T05:22:33.488Z",
+      "ts": "2026-08-01T11:36:39.004Z",
       "top_bucket": "26-26C",
-      "top_price": 0.625
+      "top_price": 0.66
     },
     {
-      "ts": "2026-08-01T05:25:08.206Z",
+      "ts": "2026-08-01T13:59:12.794Z",
       "top_bucket": "26-26C",
-      "top_price": 0.625
+      "top_price": 0.705
     },
     {
-      "ts": "2026-08-01T05:29:50.735Z",
+      "ts": "2026-08-01T15:30:22.245Z",
       "top_bucket": "26-26C",
-      "top_price": 0.625
+      "top_price": 0.905
     },
     {
-      "ts": "2026-08-01T05:32:19.847Z",
+      "ts": "2026-08-01T17:18:51.537Z",
       "top_bucket": "26-26C",
-      "top_price": 0.625
-    },
-    {
-      "ts": "2026-08-01T05:34:49.834Z",
-      "top_bucket": "26-26C",
-      "top_price": 0.625
-    },
-    {
-      "ts": "2026-08-01T05:37:27.998Z",
-      "top_bucket": "26-26C",
-      "top_price": 0.625
-    },
-    {
-      "ts": "2026-08-01T05:57:39.948Z",
-      "top_bucket": "26-26C",
-      "top_price": 0.585
-    },
-    {
-      "ts": "2026-08-01T07:01:12.870Z",
-      "top_bucket": "26-26C",
-      "top_price": 0.555
+      "top_price": 0.96
     }
   ],
   "all_outcomes": [
@@ -636,7 +500,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 803
     },
     {
@@ -649,7 +513,7 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 2037
     },
     {
@@ -659,11 +523,11 @@
         23,
         23
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
-      "spread": 0,
-      "volume": 7228
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 7638
     },
     {
       "question": "Will the highest temperature in London be 24°C on August 1?",
@@ -672,11 +536,11 @@
         24,
         24
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
-      "spread": 0,
-      "volume": 9838
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 14956
     },
     {
       "question": "Will the highest temperature in London be 25°C on August 1?",
@@ -685,11 +549,11 @@
         25,
         25
       ],
-      "bid": 0.3,
-      "ask": 0.3,
-      "price": 0.3,
-      "spread": 0,
-      "volume": 11435
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 22807
     },
     {
       "question": "Will the highest temperature in London be 26°C on August 1?",
@@ -698,11 +562,11 @@
         26,
         26
       ],
-      "bid": 0.555,
-      "ask": 0.555,
-      "price": 0.555,
-      "spread": 0,
-      "volume": 9638
+      "bid": 0.96,
+      "ask": 0.04,
+      "price": 0.96,
+      "spread": -0.92,
+      "volume": 21454
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 1?",
@@ -711,11 +575,11 @@
         27,
         27
       ],
-      "bid": 0.14,
-      "ask": 0.14,
-      "price": 0.14,
-      "spread": 0,
-      "volume": 6583
+      "bid": 0.045,
+      "ask": 0.955,
+      "price": 0.045,
+      "spread": 0.91,
+      "volume": 19390
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 1?",
@@ -724,11 +588,11 @@
         28,
         28
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
-      "spread": 0,
-      "volume": 8742
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 14320
     },
     {
       "question": "Will the highest temperature in London be 29°C on August 1?",
@@ -737,11 +601,11 @@
         29,
         29
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
-      "spread": 0,
-      "volume": 2028
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 2339
     },
     {
       "question": "Will the highest temperature in London be 30°C on August 1?",

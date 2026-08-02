@@ -6,31 +6,9 @@
   "station": "CYYZ",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "open",
-  "position": {
-    "market_id": "3234426",
-    "question": "Will the highest temperature in Toronto be 31°C on August 1?",
-    "bucket_low": 31,
-    "bucket_high": 31,
-    "entry_price": 0.03,
-    "bid_at_entry": 0.029,
-    "spread": 0.001,
-    "shares": 666.67,
-    "cost": 20,
-    "p": 0.1306,
-    "ev": 3.3533,
-    "kelly": 0.026,
-    "forecast_temp": 30.5,
-    "forecast_src": "ensemble",
-    "sigma": 3,
-    "opened_at": "2026-08-01T05:25:54.080Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null
-  },
-  "actual_temp": null,
+  "status": "resolved",
+  "position": null,
+  "actual_temp": 28,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -275,204 +253,94 @@
       "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:19:27.813Z",
+      "ts": "2026-08-01T06:42:54.909Z",
       "horizon": "D+0",
-      "hours_left": 6.7,
-      "ecmwf": 31.9,
-      "hrrr": 30.1,
+      "hours_left": 5.3,
+      "ecmwf": 32,
+      "hrrr": null,
       "metar": 24,
-      "best": 30.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 30.1,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.5,
-        "spread": 3,
-        "gap": 1.8
-      }
+      "best": 32,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:21:25.358Z",
+      "ts": "2026-08-01T09:24:23.800Z",
       "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 31.9,
-      "hrrr": 30.1,
-      "metar": 24,
-      "best": 30.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 30.1,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.5,
-        "spread": 3,
-        "gap": 1.8
-      }
+      "hours_left": 2.6,
+      "ecmwf": 31.5,
+      "hrrr": null,
+      "metar": 23,
+      "best": 31.5,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:23:08.171Z",
+      "ts": "2026-08-01T11:36:51.078Z",
       "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 31.9,
-      "hrrr": 30.1,
-      "metar": 24,
-      "best": 30.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 30.1,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.5,
-        "spread": 3,
-        "gap": 1.8
-      }
+      "hours_left": 0.4,
+      "ecmwf": 31.5,
+      "hrrr": null,
+      "metar": 23,
+      "best": 31.5,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:25:54.080Z",
+      "ts": "2026-08-01T13:59:23.464Z",
       "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 31.9,
-      "hrrr": 30.1,
-      "metar": 24,
-      "best": 30.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 30.1,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.5,
-        "spread": 3,
-        "gap": 1.8
-      }
-    },
-    {
-      "ts": "2026-08-01T05:30:40.085Z",
-      "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 31.9,
-      "hrrr": 30.1,
-      "metar": 24,
-      "best": 30.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 30.1,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.5,
-        "spread": 3,
-        "gap": 1.8
-      }
-    },
-    {
-      "ts": "2026-08-01T05:32:54.088Z",
-      "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 31.9,
-      "hrrr": 30.1,
-      "metar": 24,
-      "best": 30.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 30.1,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.5,
-        "spread": 3,
-        "gap": 1.8
-      }
-    },
-    {
-      "ts": "2026-08-01T05:35:40.145Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 31.9,
-      "hrrr": 30.1,
-      "metar": 24,
-      "best": 30.5,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 30.1,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.5,
-        "spread": 3,
-        "gap": 1.8
-      }
-    },
-    {
-      "ts": "2026-08-01T05:37:59.371Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 31.9,
-      "hrrr": 29.9,
-      "metar": 24,
+      "hours_left": 0,
+      "ecmwf": 30.4,
+      "hrrr": null,
+      "metar": 25,
       "best": 30.4,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 29.9,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.4,
-        "spread": 2.9,
-        "gap": 2
-      }
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:58:04.105Z",
+      "ts": "2026-08-01T15:31:38.815Z",
       "horizon": "D+0",
-      "hours_left": 6,
-      "ecmwf": 31.9,
-      "hrrr": 29.9,
-      "metar": 24,
+      "hours_left": 0,
+      "ecmwf": 30.4,
+      "hrrr": null,
+      "metar": 26,
       "best": 30.4,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 29.9,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.4,
-        "spread": 2.9,
-        "gap": 2
-      }
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T07:01:38.051Z",
+      "ts": "2026-08-01T17:19:00.690Z",
       "horizon": "D+0",
-      "hours_left": 5,
-      "ecmwf": 31.9,
-      "hrrr": 29.6,
-      "metar": 24,
-      "best": 30.3,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 31.9,
-          "gfs_seamless": 29.6,
-          "icon_seamless": 27.5
-        },
-        "mean": 30.3,
-        "spread": 2.8,
-        "gap": 2.3
-      }
+      "hours_left": 0,
+      "ecmwf": 30.4,
+      "hrrr": null,
+      "metar": 27,
+      "best": 30.4,
+      "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T18:13:56.256Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 30.4,
+      "hrrr": null,
+      "metar": 28,
+      "best": 30.4,
+      "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T19:37:45.577Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 30.4,
+      "hrrr": null,
+      "metar": 28,
+      "best": 30.4,
+      "best_source": "ecmwf"
+    },
+    {
+      "ts": "2026-08-01T21:12:14.773Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 31,
+      "hrrr": null,
+      "metar": 27,
+      "best": 31,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -597,54 +465,49 @@
       "top_price": 0.365
     },
     {
-      "ts": "2026-08-01T05:19:27.813Z",
-      "top_bucket": "28-28C",
-      "top_price": 0.365
-    },
-    {
-      "ts": "2026-08-01T05:21:25.358Z",
-      "top_bucket": "28-28C",
-      "top_price": 0.365
-    },
-    {
-      "ts": "2026-08-01T05:23:08.171Z",
-      "top_bucket": "28-28C",
-      "top_price": 0.365
-    },
-    {
-      "ts": "2026-08-01T05:25:54.080Z",
-      "top_bucket": "28-28C",
-      "top_price": 0.365
-    },
-    {
-      "ts": "2026-08-01T05:30:40.085Z",
-      "top_bucket": "28-28C",
-      "top_price": 0.365
-    },
-    {
-      "ts": "2026-08-01T05:32:54.088Z",
-      "top_bucket": "28-28C",
-      "top_price": 0.365
-    },
-    {
-      "ts": "2026-08-01T05:35:40.145Z",
-      "top_bucket": "28-28C",
-      "top_price": 0.365
-    },
-    {
-      "ts": "2026-08-01T05:37:59.371Z",
-      "top_bucket": "28-28C",
-      "top_price": 0.365
-    },
-    {
-      "ts": "2026-08-01T05:58:04.105Z",
+      "ts": "2026-08-01T06:42:54.909Z",
       "top_bucket": "28-28C",
       "top_price": 0.355
     },
     {
-      "ts": "2026-08-01T07:01:38.051Z",
+      "ts": "2026-08-01T09:24:23.800Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.37
+    },
+    {
+      "ts": "2026-08-01T11:36:51.078Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.405
+    },
+    {
+      "ts": "2026-08-01T13:59:23.464Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.41
+    },
+    {
+      "ts": "2026-08-01T15:31:38.815Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.395
+    },
+    {
+      "ts": "2026-08-01T17:19:00.690Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.47
+    },
+    {
+      "ts": "2026-08-01T18:13:56.256Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.435
+    },
+    {
+      "ts": "2026-08-01T19:37:45.577Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.45
+    },
+    {
+      "ts": "2026-08-01T21:12:14.773Z",
       "top_bucket": "28-28C",
-      "top_price": 0.355
+      "top_price": 0.985
     }
   ],
   "all_outcomes": [
@@ -671,8 +534,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 484
+      "spread": 0.999,
+      "volume": 535
     },
     {
       "question": "Will the highest temperature in Toronto be 26°C on August 1?",
@@ -681,11 +544,11 @@
         26,
         26
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
-      "spread": 0,
-      "volume": 1629
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 2907
     },
     {
       "question": "Will the highest temperature in Toronto be 27°C on August 1?",
@@ -694,11 +557,11 @@
         27,
         27
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
-      "spread": 0,
-      "volume": 4221
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 6142
     },
     {
       "question": "Will the highest temperature in Toronto be 28°C on August 1?",
@@ -707,11 +570,11 @@
         28,
         28
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
-      "spread": 0,
-      "volume": 5461
+      "bid": 0.985,
+      "ask": 0.015,
+      "price": 0.985,
+      "spread": -0.97,
+      "volume": 15208
     },
     {
       "question": "Will the highest temperature in Toronto be 29°C on August 1?",
@@ -720,11 +583,11 @@
         29,
         29
       ],
-      "bid": 0.305,
-      "ask": 0.305,
-      "price": 0.305,
-      "spread": 0,
-      "volume": 2393
+      "bid": 0.01,
+      "ask": 0.99,
+      "price": 0.01,
+      "spread": 0.98,
+      "volume": 6586
     },
     {
       "question": "Will the highest temperature in Toronto be 30°C on August 1?",
@@ -733,11 +596,11 @@
         30,
         30
       ],
-      "bid": 0.23,
-      "ask": 0.23,
-      "price": 0.23,
-      "spread": 0,
-      "volume": 2934
+      "bid": 0.0055,
+      "ask": 0.9945,
+      "price": 0.0055,
+      "spread": 0.989,
+      "volume": 6468
     },
     {
       "question": "Will the highest temperature in Toronto be 31°C on August 1?",
@@ -746,11 +609,11 @@
         31,
         31
       ],
-      "bid": 0.0215,
-      "ask": 0.0215,
-      "price": 0.0215,
-      "spread": 0,
-      "volume": 3841
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 8650
     },
     {
       "question": "Will the highest temperature in Toronto be 32°C on August 1?",
@@ -759,11 +622,11 @@
         32,
         32
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
-      "spread": 0,
-      "volume": 1227
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 2483
     },
     {
       "question": "Will the highest temperature in Toronto be 33°C on August 1?",

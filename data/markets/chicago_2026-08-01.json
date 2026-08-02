@@ -6,9 +6,31 @@
   "station": "KORD",
   "event_end_date": "2026-08-01T12:00:00Z",
   "hours_at_discovery": 32.2,
-  "status": "open",
-  "position": null,
-  "actual_temp": null,
+  "status": "resolved",
+  "position": {
+    "market_id": "3234489",
+    "question": "Will the highest temperature in Chicago be between 70-71°F on August 1?",
+    "bucket_low": 70,
+    "bucket_high": 71,
+    "entry_price": 0.36,
+    "bid_at_entry": 0.34,
+    "spread": 0.02,
+    "shares": 55.56,
+    "cost": 20,
+    "p": 1,
+    "ev": 1.7778,
+    "kelly": 0.25,
+    "forecast_temp": 70,
+    "forecast_src": "hrrr",
+    "sigma": 2,
+    "opened_at": "2026-07-31T06:01:43.815Z",
+    "status": "closed",
+    "pnl": 1.67,
+    "exit_price": 0.39,
+    "close_reason": "forecast_changed",
+    "closed_at": "2026-08-01T03:54:09.378Z"
+  },
+  "actual_temp": 72.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -253,204 +275,94 @@
       "best_source": "hrrr"
     },
     {
-      "ts": "2026-08-01T05:18:42.145Z",
+      "ts": "2026-08-01T06:42:43.567Z",
       "horizon": "D+0",
-      "hours_left": 6.7,
-      "ecmwf": 76,
-      "hrrr": 76,
-      "metar": 71,
-      "best": 75,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 76,
-          "icon_seamless": 71
-        },
-        "mean": 75,
-        "spread": 4,
-        "gap": 0
-      }
-    },
-    {
-      "ts": "2026-08-01T05:20:40.577Z",
-      "horizon": "D+0",
-      "hours_left": 6.7,
-      "ecmwf": 76,
-      "hrrr": 76,
-      "metar": 71,
-      "best": 75,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 76,
-          "icon_seamless": 71
-        },
-        "mean": 75,
-        "spread": 4,
-        "gap": 0
-      }
-    },
-    {
-      "ts": "2026-08-01T05:22:18.747Z",
-      "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 76,
-      "hrrr": 76,
-      "metar": 71,
-      "best": 75,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 76,
-          "icon_seamless": 71
-        },
-        "mean": 75,
-        "spread": 4,
-        "gap": 0
-      }
-    },
-    {
-      "ts": "2026-08-01T05:24:50.410Z",
-      "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 76,
-      "hrrr": 76,
-      "metar": 71,
-      "best": 75,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 76,
-          "icon_seamless": 71
-        },
-        "mean": 75,
-        "spread": 4,
-        "gap": 0
-      }
-    },
-    {
-      "ts": "2026-08-01T05:29:32.965Z",
-      "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 76,
-      "hrrr": 76,
-      "metar": 71,
-      "best": 75,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 76,
-          "icon_seamless": 71
-        },
-        "mean": 75,
-        "spread": 4,
-        "gap": 0
-      }
-    },
-    {
-      "ts": "2026-08-01T05:32:05.497Z",
-      "horizon": "D+0",
-      "hours_left": 6.5,
-      "ecmwf": 76,
-      "hrrr": 76,
-      "metar": 71,
-      "best": 75,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 76,
-          "icon_seamless": 71
-        },
-        "mean": 75,
-        "spread": 4,
-        "gap": 0
-      }
-    },
-    {
-      "ts": "2026-08-01T05:34:35.958Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 76,
-      "hrrr": 76,
-      "metar": 71,
-      "best": 75,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 76,
-          "icon_seamless": 71
-        },
-        "mean": 75,
-        "spread": 4,
-        "gap": 0
-      }
-    },
-    {
-      "ts": "2026-08-01T05:37:11.701Z",
-      "horizon": "D+0",
-      "hours_left": 6.4,
-      "ecmwf": 76,
-      "hrrr": 76,
-      "metar": 71,
-      "best": 75,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 76,
-          "icon_seamless": 71
-        },
-        "mean": 75,
-        "spread": 4,
-        "gap": 0
-      }
-    },
-    {
-      "ts": "2026-08-01T05:57:29.792Z",
-      "horizon": "D+0",
-      "hours_left": 6,
-      "ecmwf": 76,
-      "hrrr": 74,
-      "metar": 72,
-      "best": 74.4,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 74,
-          "icon_seamless": 71
-        },
-        "mean": 74.4,
-        "spread": 3.4,
-        "gap": 2
-      }
-    },
-    {
-      "ts": "2026-08-01T07:00:54.465Z",
-      "horizon": "D+0",
-      "hours_left": 5,
+      "hours_left": 5.3,
       "ecmwf": 76,
       "hrrr": 73,
       "metar": 72,
-      "best": 74.1,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 76,
-          "gfs_seamless": 73,
-          "icon_seamless": 71
-        },
-        "mean": 74.1,
-        "spread": 3.1,
-        "gap": 3
-      }
+      "best": 73,
+      "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T09:24:10.246Z",
+      "horizon": "D+0",
+      "hours_left": 2.6,
+      "ecmwf": 77,
+      "hrrr": 72,
+      "metar": 69,
+      "best": 72,
+      "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T11:36:34.834Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 77,
+      "hrrr": 74,
+      "metar": 69,
+      "best": 74,
+      "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T13:59:07.418Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 75,
+      "hrrr": 73,
+      "metar": 66,
+      "best": 73,
+      "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T15:30:14.304Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 75,
+      "hrrr": 70,
+      "metar": 68,
+      "best": 70,
+      "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T17:18:18.982Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 75,
+      "hrrr": 71,
+      "metar": 71,
+      "best": 71,
+      "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T18:13:39.868Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 75,
+      "hrrr": 71,
+      "metar": 71,
+      "best": 71,
+      "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T19:37:20.834Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 75,
+      "hrrr": 71,
+      "metar": 71,
+      "best": 71,
+      "best_source": "hrrr"
+    },
+    {
+      "ts": "2026-08-01T21:11:58.124Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 73,
+      "hrrr": 71,
+      "metar": 71,
+      "best": 71,
+      "best_source": "hrrr"
     }
   ],
   "market_snapshots": [
@@ -575,54 +487,49 @@
       "top_price": 0.395
     },
     {
-      "ts": "2026-08-01T05:18:42.145Z",
-      "top_bucket": "70-71F",
-      "top_price": 0.385
-    },
-    {
-      "ts": "2026-08-01T05:20:40.577Z",
-      "top_bucket": "70-71F",
-      "top_price": 0.385
-    },
-    {
-      "ts": "2026-08-01T05:22:18.747Z",
-      "top_bucket": "70-71F",
-      "top_price": 0.385
-    },
-    {
-      "ts": "2026-08-01T05:24:50.410Z",
-      "top_bucket": "70-71F",
-      "top_price": 0.385
-    },
-    {
-      "ts": "2026-08-01T05:29:32.965Z",
-      "top_bucket": "70-71F",
-      "top_price": 0.385
-    },
-    {
-      "ts": "2026-08-01T05:32:05.497Z",
-      "top_bucket": "70-71F",
-      "top_price": 0.385
-    },
-    {
-      "ts": "2026-08-01T05:34:35.958Z",
-      "top_bucket": "70-71F",
-      "top_price": 0.39
-    },
-    {
-      "ts": "2026-08-01T05:37:11.701Z",
-      "top_bucket": "70-71F",
-      "top_price": 0.39
-    },
-    {
-      "ts": "2026-08-01T05:57:29.792Z",
-      "top_bucket": "70-71F",
-      "top_price": 0.39
-    },
-    {
-      "ts": "2026-08-01T07:00:54.465Z",
+      "ts": "2026-08-01T06:42:43.567Z",
       "top_bucket": "72-73F",
-      "top_price": 0.65
+      "top_price": 0.665
+    },
+    {
+      "ts": "2026-08-01T09:24:10.246Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.725
+    },
+    {
+      "ts": "2026-08-01T11:36:34.834Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.795
+    },
+    {
+      "ts": "2026-08-01T13:59:07.418Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.86
+    },
+    {
+      "ts": "2026-08-01T15:30:14.304Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.815
+    },
+    {
+      "ts": "2026-08-01T17:18:18.982Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.81
+    },
+    {
+      "ts": "2026-08-01T18:13:39.868Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.825
+    },
+    {
+      "ts": "2026-08-01T19:37:20.834Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.595
+    },
+    {
+      "ts": "2026-08-01T21:11:58.124Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.965
     }
   ],
   "all_outcomes": [
@@ -634,9 +541,9 @@
         63
       ],
       "bid": 0.0005,
-      "ask": 0.0005,
+      "ask": 0.9995,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 3015
     },
     {
@@ -647,9 +554,9 @@
         65
       ],
       "bid": 0.0005,
-      "ask": 0.0005,
+      "ask": 0.9995,
       "price": 0.0005,
-      "spread": 0,
+      "spread": 0.999,
       "volume": 3688
     },
     {
@@ -660,10 +567,10 @@
         67
       ],
       "bid": 0.0005,
-      "ask": 0.0005,
+      "ask": 0.9995,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 4527
+      "spread": 0.999,
+      "volume": 4795
     },
     {
       "question": "Will the highest temperature in Chicago be between 68-69°F on August 1?",
@@ -673,10 +580,10 @@
         69
       ],
       "bid": 0.0005,
-      "ask": 0.0005,
+      "ask": 0.9995,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 6506
+      "spread": 0.999,
+      "volume": 9998
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on August 1?",
@@ -686,10 +593,10 @@
         71
       ],
       "bid": 0.0005,
-      "ask": 0.0005,
+      "ask": 0.9995,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 7662
+      "spread": 0.999,
+      "volume": 21627
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on August 1?",
@@ -698,11 +605,11 @@
         72,
         73
       ],
-      "bid": 0.65,
-      "ask": 0.65,
-      "price": 0.65,
-      "spread": 0,
-      "volume": 6124
+      "bid": 0.965,
+      "ask": 0.035,
+      "price": 0.965,
+      "spread": -0.93,
+      "volume": 8707
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on August 1?",
@@ -711,11 +618,11 @@
         74,
         75
       ],
-      "bid": 0.335,
-      "ask": 0.335,
-      "price": 0.335,
-      "spread": 0,
-      "volume": 5705
+      "bid": 0.035,
+      "ask": 0.965,
+      "price": 0.035,
+      "spread": 0.93,
+      "volume": 7093
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on August 1?",
@@ -724,11 +631,11 @@
         76,
         77
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
-      "spread": 0,
-      "volume": 3237
+      "bid": 0.003,
+      "ask": 0.997,
+      "price": 0.003,
+      "spread": 0.994,
+      "volume": 5197
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on August 1?",
@@ -737,11 +644,11 @@
         78,
         79
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
-      "spread": 0,
-      "volume": 498
+      "bid": 0.004,
+      "ask": 0.996,
+      "price": 0.004,
+      "spread": 0.992,
+      "volume": 2371
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on August 1?",
@@ -753,8 +660,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 458
+      "spread": 0.999,
+      "volume": 978
     },
     {
       "question": "Will the highest temperature in Chicago be 82°F or higher on August 1?",

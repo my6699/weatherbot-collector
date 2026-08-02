@@ -9,8 +9,8 @@
   "status": "resolved",
   "position": null,
   "actual_temp": 11,
-  "resolved_outcome": "loss",
-  "pnl": -60,
+  "resolved_outcome": null,
+  "pnl": null,
   "forecast_snapshots": [
     {
       "ts": "2026-07-31T03:49:43.417Z",
@@ -253,84 +253,34 @@
       "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:19:36.058Z",
+      "ts": "2026-08-01T06:42:57.015Z",
       "horizon": "D+0",
-      "hours_left": 6.7,
-      "ecmwf": 10.5,
-      "hrrr": 9.2,
-      "metar": 8,
-      "best": 9.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 10.5,
-          "gfs_seamless": 9.2,
-          "icon_seamless": 9.2
-        },
-        "mean": 9.9,
-        "spread": 0.7,
-        "gap": 1.3
-      }
+      "hours_left": 5.3,
+      "ecmwf": 10.6,
+      "hrrr": null,
+      "metar": 9,
+      "best": 10.6,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:21:33.532Z",
+      "ts": "2026-08-01T09:24:26.058Z",
       "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 10.5,
-      "hrrr": 9.2,
+      "hours_left": 2.6,
+      "ecmwf": 10.6,
+      "hrrr": null,
       "metar": 8,
-      "best": 9.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 10.5,
-          "gfs_seamless": 9.2,
-          "icon_seamless": 9.2
-        },
-        "mean": 9.9,
-        "spread": 0.7,
-        "gap": 1.3
-      }
+      "best": 10.6,
+      "best_source": "ecmwf"
     },
     {
-      "ts": "2026-08-01T05:23:16.925Z",
+      "ts": "2026-08-01T11:36:54.586Z",
       "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 10.5,
-      "hrrr": 9.2,
-      "metar": 8,
-      "best": 9.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 10.5,
-          "gfs_seamless": 9.2,
-          "icon_seamless": 9.2
-        },
-        "mean": 9.9,
-        "spread": 0.7,
-        "gap": 1.3
-      }
-    },
-    {
-      "ts": "2026-08-01T05:26:05.526Z",
-      "horizon": "D+0",
-      "hours_left": 6.6,
-      "ecmwf": 10.5,
-      "hrrr": 9.2,
-      "metar": 8,
-      "best": 9.9,
-      "best_source": "ensemble",
-      "ens": {
-        "models": {
-          "ecmwf_ifs025": 10.5,
-          "gfs_seamless": 9.2,
-          "icon_seamless": 9.2
-        },
-        "mean": 9.9,
-        "spread": 0.7,
-        "gap": 1.3
-      }
+      "hours_left": 0.4,
+      "ecmwf": 10.6,
+      "hrrr": null,
+      "metar": 5,
+      "best": 10.6,
+      "best_source": "ecmwf"
     }
   ],
   "market_snapshots": [
@@ -455,24 +405,19 @@
       "top_price": 0.9955
     },
     {
-      "ts": "2026-08-01T05:19:36.058Z",
+      "ts": "2026-08-01T06:42:57.015Z",
       "top_bucket": "11-11C",
-      "top_price": 0.9945
+      "top_price": 0.9995
     },
     {
-      "ts": "2026-08-01T05:21:33.532Z",
+      "ts": "2026-08-01T09:24:26.058Z",
       "top_bucket": "11-11C",
-      "top_price": 0.9945
+      "top_price": 0.9995
     },
     {
-      "ts": "2026-08-01T05:23:16.925Z",
+      "ts": "2026-08-01T11:36:54.586Z",
       "top_bucket": "11-11C",
-      "top_price": 0.9945
-    },
-    {
-      "ts": "2026-08-01T05:26:05.526Z",
-      "top_bucket": "11-11C",
-      "top_price": 0.9945
+      "top_price": 0.9995
     }
   ],
   "all_outcomes": [
@@ -525,8 +470,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 12387
+      "spread": 0.999,
+      "volume": 18307
     },
     {
       "question": "Will the highest temperature in Wellington be 9°C on August 1?",
@@ -538,8 +483,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 21375
+      "spread": 0.999,
+      "volume": 32535
     },
     {
       "question": "Will the highest temperature in Wellington be 10°C on August 1?",
@@ -561,11 +506,11 @@
         11,
         11
       ],
-      "bid": 0.9945,
-      "ask": 0.9945,
-      "price": 0.9945,
-      "spread": 0,
-      "volume": 21214
+      "bid": 0.9995,
+      "ask": 0.0005,
+      "price": 0.9995,
+      "spread": -0.999,
+      "volume": 25098
     },
     {
       "question": "Will the highest temperature in Wellington be 12°C on August 1?",
@@ -574,11 +519,11 @@
         12,
         12
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
-      "spread": 0,
-      "volume": 11322
+      "bid": 0.0005,
+      "ask": 0.9995,
+      "price": 0.0005,
+      "spread": 0.999,
+      "volume": 11491
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on August 1?",
@@ -588,10 +533,10 @@
         13
       ],
       "bid": 0.0005,
-      "ask": 0.0005,
+      "ask": 0.9995,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 6492
+      "spread": 0.999,
+      "volume": 6508
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on August 1?",
@@ -603,8 +548,8 @@
       "bid": 0.0005,
       "ask": 0.0005,
       "price": 0.0005,
-      "spread": 0,
-      "volume": 8416
+      "spread": 0.999,
+      "volume": 8463
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C or higher on August 1?",
