@@ -25,6 +25,11 @@ import {
   MAX_POSITIONS_PER_MARKET,
   MAX_PRICE,
   MAX_SLIPPAGE,
+  METAR_CONFIRM_ENABLED,
+  METAR_CONFIRM_HOURS,
+  METAR_CONFIRM_LOCAL_HOUR_MIN,
+  METAR_CONFIRM_MARGIN_C,
+  METAR_CONFIRM_MARGIN_F,
   MIN_ASK,
   MIN_EDGE,
   MIN_EV,
@@ -36,8 +41,11 @@ import {
   SELL_SLIPPAGE_TOL,
   STOP_HARD_MULT,
   TRADE_D0,
+  BIAS_ENABLED,
 } from "./config.js";
 import { getEnsembleForecast, getMetar } from "./forecasts.js";
+import { applyBias, refreshBias } from "./bias.js";
+import { metarMaxInUnit, refreshMetarMaxes } from "./metar-archive.js";
 import { fetchJson, sleep } from "./http.js";
 import {
   betSize,
@@ -391,6 +399,12 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
   const now = new Date();
   const state = loadState();
   resetLlmCallBudget();
+  // Horizon-aware rolling bias table, recomputed once per run from resolved markets.
+  const bias = refreshBias(loadAllMarkets());
+  const biasKeys = Object.keys(bias).length;
+  if (biasKeys > 0) console.log(`  [BIAS] ${biasKeys} corrections in table (auto-apply ${BIAS_ENABLED ? "ON" : "OFF"})`);
+  // Settlement-source truth: per-station daily max from the METAR hourly archive.
+  await refreshMetarMaxes();
   let balance = state.balance;
   let newPos = 0;
   let closed = 0;
@@ -566,7 +580,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
         }
       }
 
-      if (openPositions(mkt).length < MAX_POSITIONS_PER_MARKET && forecastTemp != null && hours >= MIN_HOURS && (TRADE_D0 || i > 0)) {
+      if (openPositions(mkt).length < MAX_POSITIONS_PER_MARKET && forecastTemp != null && hours >= MIN_HOURS && (TRADE_D0 || i > 0 || METAR_CONFIRM_ENABLED)) {
         const ens = snap.ens;
         // P0: model consensus gate — skip when major models disagree strongly.
         const maxGap = unit === "C" ? CONSENSUS_MAX_GAP_C : CONSENSUS_MAX_GAP_F;
@@ -587,6 +601,12 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           }
           sigma = Math.round(sigma * 1000) / 1000;
 
+          // Horizon-aware rolling bias correction on the chosen forecast (the
+          // mean is already ECMWF-corrected in-model; "best" holds the residual).
+          const biasSource = bestSource === "ensemble" ? "best" : bestSource ?? "best";
+          const adjForecast = applyBias(forecastTemp, citySlug, horizon, biasSource);
+          const biasDelta = adjForecast - forecastTemp;
+
           // P2: scan every bucket, spread capital across the forecast distribution.
           const heldIds = new Set(openPositions(mkt).map((p) => p.market_id));
           const candidates: {
@@ -603,7 +623,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             if (o.volume < MIN_VOLUME) continue;
             const ask = o.ask;
             if (ask < MIN_ASK || ask >= MAX_PRICE) continue;
-            const p = bucketProb(forecastTemp, tLow, tHigh, sigma);
+            const p = bucketProb(adjForecast, tLow, tHigh, sigma);
             const ev = calcEv(p, ask);
             // P2: compare against the market's calibrated probability (weather markets overconfident).
             const calProb = marketCalibrated(ask);
@@ -620,13 +640,56 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           for (const o of outcomes) {
             const ask = o.ask;
             if (ask < MIN_ASK || ask >= MAX_PRICE) continue;
-            const p = bucketProb(forecastTemp, o.range[0], o.range[1], sigma);
+            const p = bucketProb(adjForecast, o.range[0], o.range[1], sigma);
             maxEdgeAll = Math.max(maxEdgeAll, p - marketCalibrated(ask));
           }
           console.log(
-            `  [SCAN] ${loc.name} ${date} — ${outcomes.length} buckets | gap ${ens?.gap != null ? ens.gap.toFixed(1) : "n/a"}° | ${candidates.length} candidates | maxEdge ${maxEdgeAll.toFixed(3)}`,
+            `  [SCAN] ${loc.name} ${date} — ${outcomes.length} buckets | gap ${ens?.gap != null ? ens.gap.toFixed(1) : "n/a"}° | ${candidates.length} candidates | maxEdge ${maxEdgeAll.toFixed(3)}${biasDelta !== 0 ? ` | bias ${biasDelta >= 0 ? "+" : ""}${biasDelta.toFixed(1)}°` : ""}`,
           );
-          const picks = candidates.slice(0, MAX_POSITIONS_PER_MARKET - openPositions(mkt).length);
+
+          // D+0 METAR confirmation ("safe same-day"): only trade event-day markets
+          // whose target bucket is confirmed by live observations — the obs must
+          // already be at/near the bucket's low edge and not collapsing, and the
+          // local hour must have developed past the morning (daily max in play).
+          let pool = candidates;
+          if (i === 0 && METAR_CONFIRM_ENABLED) {
+            if (hours > METAR_CONFIRM_HOURS) {
+              console.log(
+                `  [METAR CONFIRM] ${loc.name} ${date} — ${hours.toFixed(0)}h to resolution > ${METAR_CONFIRM_HOURS}h, skip D+0`,
+              );
+              pool = [];
+            } else {
+              const localHour = localHourFor(loc);
+              const { latest: curMetar, prev: prevMetar } = metarTrend(mkt);
+              const margin = unit === "F" ? METAR_CONFIRM_MARGIN_F : METAR_CONFIRM_MARGIN_C;
+              if (localHour < METAR_CONFIRM_LOCAL_HOUR_MIN) {
+                console.log(
+                  `  [METAR CONFIRM] ${loc.name} ${date} — local ${localHour.toFixed(1)}h before ${METAR_CONFIRM_LOCAL_HOUR_MIN}h, skip ${pool.length} D+0 candidate(s)`,
+                );
+                pool = [];
+              } else if (curMetar == null || !Number.isFinite(curMetar)) {
+                console.log(
+                  `  [METAR CONFIRM] ${loc.name} ${date} — no METAR obs, skip ${pool.length} D+0 candidate(s)`,
+                );
+                pool = [];
+              } else {
+                const kept = pool.filter((c) => {
+                  const [tLow] = c.o.range;
+                  if (tLow === -999) return true;
+                  const near = curMetar >= tLow - margin;
+                  const notCollapsing = prevMetar == null || curMetar >= prevMetar - margin;
+                  return near && notCollapsing;
+                });
+                if (kept.length < pool.length) {
+                  console.log(
+                    `  [METAR CONFIRM] ${loc.name} ${date} — obs ${curMetar}°${unitSym}: kept ${kept.length}/${pool.length} D+0 candidate(s)`,
+                  );
+                }
+                pool = kept;
+              }
+            }
+          }
+          const picks = pool.slice(0, MAX_POSITIONS_PER_MARKET - openPositions(mkt).length);
 
           // LLM risk advisor: review the candidates before execution. Advisory by
           // default (logs [LLM] lines for the weekly review); hard veto only when
@@ -637,7 +700,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               city_name: loc.name,
               date,
               unit: unitSym,
-              forecast: forecastTemp,
+              forecast: adjForecast,
               forecast_source: bestSource ?? "ensemble",
               ensemble_gap: ens?.gap ?? null,
               ensemble_spread: ens?.spread ?? null,
@@ -691,7 +754,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               p: Math.round(pick.p * 10000) / 10000,
               ev: Math.round(pick.ev * 10000) / 10000,
               kelly: Math.round(pick.kelly * 10000) / 10000,
-              forecast_temp: forecastTemp,
+              forecast_temp: adjForecast,
               forecast_src: bestSource,
               sigma,
               opened_at: snap.ts,
@@ -891,6 +954,17 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
 
     if (info && info.resolved) {
       mkt.actual_temp = info.actualTemp;
+      // Settlement-source alignment: compare Polymarket's resolved value (bucket
+      // midpoint) with the station's true METAR daily max (the settlement source).
+      const stationMax = metarMaxInUnit(mkt.station, mkt.date, mkt.unit);
+      if (stationMax != null) {
+        mkt.metar_max = stationMax;
+        if (mkt.actual_temp != null && Math.abs(mkt.actual_temp - stationMax) > 1) {
+          console.log(
+            `  [SETTLEMENT CHECK] ${mkt.city_name} ${mkt.date}: Polymarket ${mkt.actual_temp}° vs METAR max ${stationMax}° (Δ>1, verify manually)`,
+          );
+        }
+      }
       wonByMarket = new Map(
         opens.map((p) => [p.market_id, p.market_id === info.winningMarketId] as [string, boolean]),
       );

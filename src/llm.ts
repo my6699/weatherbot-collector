@@ -10,6 +10,7 @@ import {
   LOCATIONS,
 } from "./config.js";
 import { postJson } from "./http.js";
+import { loadBiasTable } from "./bias.js";
 import { loadAllMarkets, loadState, openPositions } from "./storage.js";
 
 /* ------------------------------------------------------------------ */
@@ -297,6 +298,18 @@ export async function runLlmReview(): Promise<string | null> {
       )
       .join("\n") || "无";
 
+  // Horizon-aware rolling bias table (city × horizon × source).
+  const biasLines = Object.entries(loadBiasTable())
+    .sort((a, b) => Math.abs(b[1].bias) - Math.abs(a[1].bias))
+    .slice(0, 12)
+    .map(([k, e]) => {
+      const [city = "", horizon = "", src = ""] = k.split("|");
+      const name = LOCATIONS[city]?.name ?? city;
+      const unit = LOCATIONS[city]?.unit ?? "C";
+      return `${name} ${horizon} ${src}: ${e.bias >= 0 ? "+" : ""}${e.bias.toFixed(2)}°${unit} (n=${e.n})`;
+    })
+    .join("\n") || "无";
+
   const total = state.wins + state.losses;
   const system =
     "你是量化交易复盘顾问。基于实际交易记录，诊断问题并给出可执行改进建议。必须用简体中文。输出 markdown。";
@@ -309,11 +322,15 @@ ${openLines}
 最近已结算明细（最多 40 条）：
 ${resolvedLines}
 
+滚动偏差表（预报-实际，正值=预报偏低需上调，单位见条目；已应用在开仓前的预报修正）：
+${biasLines}
+
 请输出：
 1. 主要问题诊断（分城市 / 分策略，引用具体数字）
 2. 具体改进建议：哪些城市应剔除或减仓、sigma / edge / 终局参数怎么调、要盯哪些风险点
-3. 下阶段行动清单（按优先级）
-控制在 300 字以内。`;
+3. 偏差表评估：哪些修正可信（趋势性，n≥4）哪些是噪音（n小）；是否需要针对特定城市×时距额外过滤（如 D+1 预报偏低）
+4. 下阶段行动清单（按优先级）
+控制在 350 字以内。`;
 
   const raw = await llmChat(system, user, 0.3);
   if (!raw) return null;

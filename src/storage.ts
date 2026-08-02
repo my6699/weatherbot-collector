@@ -94,6 +94,8 @@ export interface MarketRecord {
   /** Multiple positions per market (bucket spread); `position` mirrors the first. */
   positions?: Position[];
   actual_temp: number | null;
+  /** True station daily max (from METAR archive, in the market's unit). */
+  metar_max?: number | null;
   resolved_outcome: string | null;
   pnl: number | null;
   forecast_snapshots: ForecastSnap[];

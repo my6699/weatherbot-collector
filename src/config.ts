@@ -179,6 +179,56 @@ export const MAX_DEPTH_FRACTION = envNum(`${P}MAX_DEPTH_FRACTION`, 0.3);
 export const STOP_HARD_MULT = envNum(`${P}STOP_HARD_MULT`, 0.5);
 
 /**
+ * Horizon-aware rolling forecast-bias correction (city × horizon × source).
+ * Computed from resolved markets (mean signed error, forecast - actual) and
+ * stored in data/bias.json; the weekly LLM review validates it.
+ *
+ * DEFAULT OFF (2026-08-02): with ~2 days of data the per-city signal is
+ * dominated by a handful of correlated snapshots and splits direction across
+ * cities (Dallas/Tel Aviv/Toronto forecast high, Tokyo/Munich/Singapore low),
+ * so auto-applying it degraded accuracy (avg error 1.76° -> 3.01° in backtest).
+ * The table + LLM review stay active; flip WEATHERBOT_BIAS_ENABLED=true once
+ * each city has >=5 independent resolved days and the sampler is tightened.
+ */
+export const BIAS_ENABLED = envTruthy(`${P}BIAS_ENABLED`);
+/** Min resolved samples per (city,horizon,source) before the bias is applied. */
+export const BIAS_MIN_N = envNum(`${P}BIAS_MIN_N`, 2);
+/** Magnitude cap of a single correction in °C (F locations use ×1.8). */
+export const BIAS_MAX_C = envNum(`${P}BIAS_MAX_C`, 2.0);
+/** Bias is shrunk toward 0 below this sample count (guard against tiny samples). */
+export const BIAS_SHRINK_N = envNum(`${P}BIAS_SHRINK_N`, 4);
+/** Rolling window: keep only the latest N samples per key. */
+export const BIAS_FORGET_N = envNum(`${P}BIAS_FORGET_N`, 12);
+
+/**
+ * D+0 METAR confirmation ("safe same-day trading"): regular buys on the event
+ * day are only allowed when live METAR observations confirm the target bucket.
+ * The obs must be within METAR_CONFIRM_MARGIN of the bucket's low edge and not
+ * collapsing; the local hour must be >= METAR_CONFIRM_LOCAL_HOUR_MIN so the
+ * daytime max has developed. This replaces the all-or-nothing TRADE_D0 gate.
+ */
+export const METAR_CONFIRM_ENABLED =
+  process.env[`${P}METAR_CONFIRM`] == null ? true : envTruthy(`${P}METAR_CONFIRM`);
+/** Only confirm D+0 within this many hours of resolution (obs relevance window). */
+export const METAR_CONFIRM_HOURS = envNum(`${P}METAR_CONFIRM_HOURS`, 24);
+/** Local hour before which the obs is not trusted (morning obs don't predict the max). */
+export const METAR_CONFIRM_LOCAL_HOUR_MIN = envNum(`${P}METAR_CONFIRM_LOCAL_HOUR_MIN`, 11);
+/** Obs must be >= bucket low - margin, and not falling by more than margin. */
+export const METAR_CONFIRM_MARGIN_C = envNum(`${P}METAR_CONFIRM_MARGIN_C`, 1.0);
+export const METAR_CONFIRM_MARGIN_F = envNum(`${P}METAR_CONFIRM_MARGIN_F`, 1.8);
+
+/**
+ * METAR hourly archive (aviationweather.gov, free): per-station per-LOCAL
+ * calendar-day true daily max temperature (°C) stored in data/metar_max.json.
+ * It is the settlement source itself — same feed AND same day definition as
+ * Polymarket (verified: Seattle 08-01 = 70.5°F local-day, not 82°F UTC-day).
+ * Used to (a) verify Polymarket's resolved value, (b) compute forecast error
+ * against the real station max instead of the bucket midpoint, and (c) feed
+ * sigma/bias calibration with true values. Each station fetches at most once/day.
+ */
+export const METAR_ARCHIVE_HOURS = envNum(`${P}METAR_ARCHIVE_HOURS`, 192); // 8 days
+
+/**
  * Free-LLM risk advisor (default provider: Google Gemini free tier).
  * The LLM reviews candidate buys before execution (advisory log by default,
  * optional hard gate) and produces a weekly performance review.

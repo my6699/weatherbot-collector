@@ -15,6 +15,7 @@ interface MarketSummary {
   Status: string;
   "End (UTC)": string;
   "Actual Temp": number | string;
+  "METAR Max": number | string;
   Result: string;
   PnL: number | string;
   "Forecast Snaps": number;
@@ -102,6 +103,7 @@ export function exportAllToExcel(): string {
       Status: m.status,
       "End (UTC)": m.event_end_date,
       "Actual Temp": m.actual_temp ?? "",
+      "METAR Max": m.metar_max ?? "",
       Result: m.resolved_outcome ?? "",
       PnL: m.pnl ?? "",
       "Forecast Snaps": m.forecast_snapshots.length,

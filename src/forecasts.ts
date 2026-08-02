@@ -7,7 +7,7 @@ import {
   type LocationInfo,
 } from "./config.js";
 import { fetchJson, sleep } from "./http.js";
-import { getBias } from "./storage.js";
+import { getBias } from "./bias.js";
 
 interface OpenMeteoDaily {
   daily?: Record<string, unknown> & { time?: string[] };
@@ -47,7 +47,8 @@ export async function getEnsembleForecast(
       const daily = data.daily;
       if (!data.error && daily?.time) {
         const times = daily.time;
-        // Pull each model's series, bias-correct ECMWF (rolling bias via getBias).
+        // Pull each model's series, bias-correct ECMWF (horizon-aware rolling
+        // bias via getBias — D+1 daily-max errors run far larger than D+0).
         const series: Record<string, (number | null)[]> = {};
         for (const model of ENSEMBLE_MODELS) {
           const raw = daily[`temperature_2m_max_${model}`];
@@ -56,12 +57,17 @@ export async function getEnsembleForecast(
         const models = Object.keys(series);
         if (models.length === 0) break;
 
-        const calBias = getBias(citySlug, "ecmwf"); // signed error (forecast - actual)
-        const ecmwfBias =
-          calBias != null ? -calBias : unit === "C" ? ECMWF_BIAS_C : ECMWF_BIAS_F;
+        const datesArr = Array.from(dates);
+        const horizonFor = (d: string): string => {
+          const idx = datesArr.indexOf(d);
+          return idx >= 0 ? `D+${idx}` : "D+0";
+        };
         for (let i = 0; i < times.length; i++) {
           const date = times[i];
           if (!date || !dates.has(date)) continue;
+          const calBias = getBias(citySlug, horizonFor(date), "ecmwf"); // signed error (forecast - actual)
+          const ecmwfBias =
+            calBias !== 0 ? -calBias : unit === "C" ? ECMWF_BIAS_C : ECMWF_BIAS_F;
           const modelTemps: Record<string, number> = {};
           for (const model of models) {
             const v = series[model]?.[i];
