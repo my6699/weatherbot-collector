@@ -28,7 +28,8 @@
     "pnl": null,
     "exit_price": null,
     "close_reason": null,
-    "closed_at": null
+    "closed_at": null,
+    "stop_pending": true
   },
   "actual_temp": null,
   "resolved_outcome": null,
@@ -223,6 +224,26 @@
         "spread": 1.6,
         "gap": 0.7
       }
+    },
+    {
+      "ts": "2026-08-02T09:25:35.765Z",
+      "horizon": "D+1",
+      "hours_left": 26.6,
+      "ecmwf": 34,
+      "hrrr": 33.3,
+      "metar": null,
+      "best": 34.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 34,
+          "gfs_seamless": 33.3,
+          "icon_seamless": 35.7
+        },
+        "mean": 34.1,
+        "spread": 1.6,
+        "gap": 0.7
+      }
     }
   ],
   "market_snapshots": [
@@ -305,6 +326,11 @@
       "ts": "2026-08-02T06:48:00.524Z",
       "top_bucket": "36-36C",
       "top_price": 0.395
+    },
+    {
+      "ts": "2026-08-02T09:25:35.765Z",
+      "top_bucket": "35-35C",
+      "top_price": 0.44
     }
   ],
   "all_outcomes": [
@@ -371,7 +397,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 830
+      "volume": 882
     },
     {
       "question": "Will the highest temperature in Munich be 32°C on August 3?",
@@ -380,11 +406,11 @@
         32,
         32
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 480
+      "volume": 522
     },
     {
       "question": "Will the highest temperature in Munich be 33°C on August 3?",
@@ -397,7 +423,7 @@
       "ask": 0.035,
       "price": 0.035,
       "spread": 0,
-      "volume": 1006
+      "volume": 1070
     },
     {
       "question": "Will the highest temperature in Munich be 34°C on August 3?",
@@ -406,11 +432,11 @@
         34,
         34
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 3287
+      "volume": 3465
     },
     {
       "question": "Will the highest temperature in Munich be 35°C on August 3?",
@@ -419,11 +445,11 @@
         35,
         35
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.44,
+      "ask": 0.44,
+      "price": 0.44,
       "spread": 0,
-      "volume": 1411
+      "volume": 1668
     },
     {
       "question": "Will the highest temperature in Munich be 36°C on August 3?",
@@ -432,11 +458,11 @@
         36,
         36
       ],
-      "bid": 0.395,
-      "ask": 0.395,
-      "price": 0.395,
+      "bid": 0.385,
+      "ask": 0.385,
+      "price": 0.385,
       "spread": 0,
-      "volume": 2812
+      "volume": 3015
     },
     {
       "question": "Will the highest temperature in Munich be 37°C or higher on August 3?",
@@ -449,7 +475,7 @@
       "ask": 0.045,
       "price": 0.045,
       "spread": 0,
-      "volume": 1032
+      "volume": 1104
     }
   ],
   "created_at": "2026-08-01T04:11:29.988Z",
@@ -471,11 +497,12 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-08-02T03:19:16.593Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null
+      "status": "closed",
+      "pnl": -5.56,
+      "exit_price": 0.13,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-02T09:27:52.591Z",
+      "stop_pending": true
     },
     {
       "market_id": "3254172",
@@ -540,6 +567,29 @@
       "forecast_src": "ensemble",
       "sigma": 1.6,
       "opened_at": "2026-08-02T06:48:00.524Z",
+      "status": "closed",
+      "pnl": -2.5,
+      "exit_price": 0.035,
+      "close_reason": "forecast_changed",
+      "closed_at": "2026-08-02T09:25:35.765Z"
+    },
+    {
+      "market_id": "3254172",
+      "question": "Will the highest temperature in Munich be 33°C on August 3?",
+      "bucket_low": 33,
+      "bucket_high": 33,
+      "entry_price": 0.04,
+      "bid_at_entry": 0.03,
+      "spread": 0.01,
+      "shares": 500,
+      "cost": 20,
+      "p": 0.1952,
+      "ev": 3.88,
+      "kelly": 0.0415,
+      "forecast_temp": 34.1,
+      "forecast_src": "ensemble",
+      "sigma": 1.6,
+      "opened_at": "2026-08-02T09:25:35.765Z",
       "status": "open",
       "pnl": null,
       "exit_price": null,
