@@ -111,6 +111,8 @@ export interface SimState {
   wins: number;
   losses: number;
   peak_balance: number;
+  /** Epoch ms until which new buys are halted (extreme-weather circuit breaker). */
+  circuit_until?: number;
 }
 
 export interface CalEntry {

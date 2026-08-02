@@ -4,6 +4,11 @@ import {
   CALIBRATION_MIN,
   CONSENSUS_MAX_GAP_C,
   CONSENSUS_MAX_GAP_F,
+  BREAKER_SPREAD_C,
+  BREAKER_SPREAD_F,
+  BREAKER_TRIPS,
+  BREAKER_COOLDOWN_H,
+  EXIT_SPREAD_FRAC,
   ENDGAME_COOLING_HOUR,
   ENDGAME_HOURS,
   ENDGAME_LOCK_C,
@@ -280,6 +285,16 @@ async function executeBuy(
   signal: Position,
   ctx: BuyExecCtx,
 ): Promise<boolean> {
+  // Extreme-weather circuit: global halt on NEW buys while active. Monitoring
+  // and selling stay live (we never trap open positions). Applies to regular
+  // AND endgame buys since both route through this function.
+  const circuitUntil = loadState().circuit_until ?? 0;
+  if (Date.now() < circuitUntil) {
+    console.log(
+      `  [CIRCUIT] buys halted until ${new Date(circuitUntil).toISOString()} (extreme weather) — skip ${ctx.locName} ${ctx.date}`,
+    );
+    return false;
+  }
   let skipPosition = false;
   try {
     const prices = await fetchMarketBestPrices(signal.market_id);
@@ -304,14 +319,17 @@ async function executeBuy(
         signal.spread = realSpread;
         signal.shares = Math.round((signal.cost / realAsk) * 100) / 100;
         signal.ev = Math.round(calcEv(signal.p, realAsk) * 10000) / 10000;
-        // Execution price changed — re-verify the edge before buying.
+        // Execution price changed — re-verify the NET edge before buying.
+        // An early exit (take-profit / forecast-change / stop) crosses the spread
+        // again, so deduct a conservative fraction of the live spread.
+        const estExitCost = realSpread * EXIT_SPREAD_FRAC;
         if (
           realAsk < MIN_ASK ||
           signal.ev < MIN_EV ||
-          signal.p - marketCalibrated(realAsk) < MIN_EDGE
+          signal.p - marketCalibrated(realAsk) - estExitCost < MIN_EDGE
         ) {
           console.log(
-            `  [EDGE GONE] ${ctx.locName} ${ctx.date} — real ask $${realAsk.toFixed(3)} no longer profitable`,
+            `  [EDGE GONE] ${ctx.locName} ${ctx.date} — real ask $${realAsk.toFixed(3)} spread $${realSpread.toFixed(3)} net edge (exit cost $${estExitCost.toFixed(3)}) no longer profitable`,
           );
           skipPosition = true;
         }
@@ -409,6 +427,8 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
   let newPos = 0;
   let closed = 0;
   let resolved = 0;
+  // Extreme-weather circuit breaker: markets whose ensemble spread explodes.
+  let breakerTrips = 0;
 
   for (const citySlug of Object.keys(LOCATIONS)) {
     const loc = LOCATIONS[citySlug]!;
@@ -582,6 +602,17 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
 
       if (openPositions(mkt).length < MAX_POSITIONS_PER_MARKET && forecastTemp != null && hours >= MIN_HOURS && (TRADE_D0 || i > 0 || METAR_CONFIRM_ENABLED)) {
         const ens = snap.ens;
+        // Extreme-weather breaker: if the models blow apart (spread above the
+        // threshold), this market's forecast is untrustworthy — skip it. Counts
+        // toward the global circuit below when widespread.
+        const breakerSpread = unit === "C" ? BREAKER_SPREAD_C : BREAKER_SPREAD_F;
+        if (ens && ens.spread > breakerSpread) {
+          console.log(
+            `  [BREAKER] ${loc.name} ${date} — ensemble spread ${ens.spread.toFixed(1)}°${unitSym} > ${breakerSpread.toFixed(1)}° (unstable weather, skip)`,
+          );
+          breakerTrips += 1;
+          continue;
+        }
         // P0: model consensus gate — skip when major models disagree strongly.
         const maxGap = unit === "C" ? CONSENSUS_MAX_GAP_C : CONSENSUS_MAX_GAP_F;
         if (ens && ens.gap > maxGap) {
@@ -1026,6 +1057,13 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
 
     saveMarket(mkt);
     await sleep(200);
+  }
+
+  if (breakerTrips >= BREAKER_TRIPS) {
+    state.circuit_until = Date.now() + BREAKER_COOLDOWN_H * 3600e3;
+    console.log(
+      `  [CIRCUIT] ${breakerTrips} market(s) tripped — global buy halt until ${new Date(state.circuit_until).toISOString()}`,
+    );
   }
 
   state.balance = Math.round(balance * 100) / 100;

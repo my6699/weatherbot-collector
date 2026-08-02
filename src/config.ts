@@ -229,6 +229,27 @@ export const METAR_CONFIRM_MARGIN_F = envNum(`${P}METAR_CONFIRM_MARGIN_F`, 1.8);
 export const METAR_ARCHIVE_HOURS = envNum(`${P}METAR_ARCHIVE_HOURS`, 192); // 8 days
 
 /**
+ * Extreme-weather circuit breaker (black-swan guard): when the ensemble models
+ * blow apart (spread above the threshold), that market's forecasts are
+ * untrustworthy — skip buying it. If >= BREAKER_TRIPS markets trip in one run,
+ * trading is halted globally for BREAKER_COOLDOWN_H hours (new buys only;
+ * monitoring/selling always stay live) to avoid consecutive stop-losses during
+ * storms / fronts / strong convection. Spread is in the market's own unit.
+ */
+export const BREAKER_SPREAD_C = envNum(`${P}BREAKER_SPREAD_C`, 3.5);
+export const BREAKER_SPREAD_F = envNum(`${P}BREAKER_SPREAD_F`, 6.3);
+export const BREAKER_TRIPS = envNum(`${P}BREAKER_TRIPS`, 3);
+export const BREAKER_COOLDOWN_H = envNum(`${P}BREAKER_COOLDOWN_H`, 24);
+
+/**
+ * Net-edge guard: before buying, the expected round-trip cost is deducted from
+ * the edge. We buy at the ask; an early exit (take-profit / forecast-change /
+ * stop-loss) crosses the spread again on the way out. This fraction of the live
+ * spread is subtracted so MIN_EDGE means NET edge, not gross edge.
+ */
+export const EXIT_SPREAD_FRAC = envNum(`${P}EXIT_SPREAD_FRAC`, 0.5);
+
+/**
  * Free-LLM risk advisor (default provider: Google Gemini free tier).
  * The LLM reviews candidate buys before execution (advisory log by default,
  * optional hard gate) and produces a weekly performance review.

@@ -183,6 +183,26 @@
         "spread": 1.8,
         "gap": 1.6
       }
+    },
+    {
+      "ts": "2026-08-02T05:04:25.597Z",
+      "horizon": "D+1",
+      "hours_left": 30.9,
+      "ecmwf": 34,
+      "hrrr": 32.4,
+      "metar": null,
+      "best": 32.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 34,
+          "gfs_seamless": 32.4,
+          "icon_seamless": 31.1
+        },
+        "mean": 32.9,
+        "spread": 1.8,
+        "gap": 1.6
+      }
     }
   ],
   "market_snapshots": [
@@ -255,6 +275,11 @@
       "ts": "2026-08-02T03:57:57.423Z",
       "top_bucket": "35-35C",
       "top_price": 0.455
+    },
+    {
+      "ts": "2026-08-02T05:04:25.597Z",
+      "top_bucket": "35-35C",
+      "top_price": 0.465
     }
   ],
   "all_outcomes": [
@@ -269,7 +294,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 853
+      "volume": 963
     },
     {
       "question": "Will the highest temperature in Shanghai be 30°C on August 3?",
@@ -295,7 +320,7 @@
       "ask": 0.003,
       "price": 0.003,
       "spread": 0,
-      "volume": 1063
+      "volume": 1103
     },
     {
       "question": "Will the highest temperature in Shanghai be 32°C on August 3?",
@@ -308,7 +333,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 635
+      "volume": 1965
     },
     {
       "question": "Will the highest temperature in Shanghai be 33°C on August 3?",
@@ -317,11 +342,11 @@
         33,
         33
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 3088
+      "volume": 3119
     },
     {
       "question": "Will the highest temperature in Shanghai be 34°C on August 3?",
@@ -334,7 +359,7 @@
       "ask": 0.255,
       "price": 0.255,
       "spread": 0,
-      "volume": 2413
+      "volume": 2550
     },
     {
       "question": "Will the highest temperature in Shanghai be 35°C on August 3?",
@@ -343,11 +368,11 @@
         35,
         35
       ],
-      "bid": 0.455,
-      "ask": 0.455,
-      "price": 0.455,
+      "bid": 0.465,
+      "ask": 0.465,
+      "price": 0.465,
       "spread": 0,
-      "volume": 1919
+      "volume": 2005
     },
     {
       "question": "Will the highest temperature in Shanghai be 36°C on August 3?",
@@ -356,11 +381,11 @@
         36,
         36
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 1966
+      "volume": 1994
     },
     {
       "question": "Will the highest temperature in Shanghai be 37°C on August 3?",
@@ -369,11 +394,11 @@
         37,
         37
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
-      "volume": 3656
+      "volume": 3676
     },
     {
       "question": "Will the highest temperature in Shanghai be 38°C on August 3?",
@@ -386,7 +411,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 461
+      "volume": 471
     },
     {
       "question": "Will the highest temperature in Shanghai be 39°C or higher on August 3?",
@@ -425,7 +450,8 @@
       "pnl": null,
       "exit_price": null,
       "close_reason": null,
-      "closed_at": null
+      "closed_at": null,
+      "stop_pending": true
     }
   ]
 }
