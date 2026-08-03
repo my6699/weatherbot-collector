@@ -292,6 +292,26 @@
         "spread": 1,
         "gap": 0
       }
+    },
+    {
+      "ts": "2026-08-03T00:15:55.112Z",
+      "horizon": "D+1",
+      "hours_left": 35.7,
+      "ecmwf": 26.3,
+      "hrrr": 26,
+      "metar": null,
+      "best": 26,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.3,
+          "gfs_seamless": 26,
+          "icon_seamless": 25
+        },
+        "mean": 26,
+        "spread": 0.9,
+        "gap": 0.3
+      }
     }
   ],
   "market_snapshots": [
@@ -364,6 +384,11 @@
       "ts": "2026-08-02T23:16:03.560Z",
       "top_bucket": "28-28C",
       "top_price": 0.365
+    },
+    {
+      "ts": "2026-08-03T00:15:55.112Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.345
     }
   ],
   "all_outcomes": [
@@ -426,9 +451,9 @@
         26,
         26
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
       "volume": 288
     },
@@ -452,11 +477,11 @@
         28,
         28
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
-      "volume": 618
+      "volume": 633
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on August 4?",
@@ -478,11 +503,11 @@
         30,
         30
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 710
+      "volume": 782
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on August 4?",
@@ -491,11 +516,11 @@
         31,
         31
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 686
+      "volume": 720
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C or higher on August 4?",

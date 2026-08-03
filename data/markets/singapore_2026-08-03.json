@@ -424,6 +424,26 @@
         "spread": 0.6,
         "gap": 0.8
       }
+    },
+    {
+      "ts": "2026-08-03T00:15:56.497Z",
+      "horizon": "D+0",
+      "hours_left": 11.7,
+      "ecmwf": 32.4,
+      "hrrr": 32,
+      "metar": 29,
+      "best": 32.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.4,
+          "gfs_seamless": 32,
+          "icon_seamless": 32.6
+        },
+        "mean": 32.3,
+        "spread": 0.3,
+        "gap": 0.4
+      }
     }
   ],
   "market_snapshots": [
@@ -556,6 +576,11 @@
       "ts": "2026-08-02T23:16:07.386Z",
       "top_bucket": "32-32C",
       "top_price": 0.47
+    },
+    {
+      "ts": "2026-08-03T00:15:56.497Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.465
     }
   ],
   "all_outcomes": [
@@ -670,11 +695,11 @@
         32,
         32
       ],
-      "bid": 0.47,
-      "ask": 0.47,
-      "price": 0.47,
+      "bid": 0.465,
+      "ask": 0.465,
+      "price": 0.465,
       "spread": 0,
-      "volume": 5642
+      "volume": 5675
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 3?",
@@ -687,7 +712,7 @@
       "ask": 0.465,
       "price": 0.465,
       "spread": 0,
-      "volume": 4421
+      "volume": 4453
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C or higher on August 3?",
@@ -696,11 +721,11 @@
         34,
         999
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 3068
+      "volume": 3237
     }
   ],
   "created_at": "2026-08-01T04:11:46.871Z",
