@@ -23,12 +23,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: "Run LLM gate backtest (dual AI: Gemini + DeepSeek)"
+      - name: "Run LLM gate backtest (dual AI: DeepSeek primary + Gemini secondary)"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          # 启用 DeepSeek 第二意见 (双AI门控, 任一skip即否决)
-          WEATHERBOT_LLM_PROVIDER2: "deepseek"
+          # DeepSeek 作主模型 (避开 Gemini 免费档 15 RPM 限流导致的 primary null)
+          WEATHERBOT_LLM_PROVIDER: "deepseek"
+          # Gemini 作第二意见 (双AI门控, 任一skip即否决; 仅在 DeepSeek 主调成功后才调用)
+          WEATHERBOT_LLM_PROVIDER2: "gemini"
           # bias 修正开启 (与实盘一致, 让 forecast_temp 上下文准确)
           WEATHERBOT_BIAS_ENABLED: "true"
         run: npx tsx scripts/backtest-llm-gate.ts
