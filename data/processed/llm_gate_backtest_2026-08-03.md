@@ -1,40 +1,40 @@
 # LLM 门控回测报告
 
-生成时间: 2026-08-03T16:40:48.284Z
+生成时间: 2026-08-03T16:55:21.462Z
 模式: 双AI (Gemini primary + DeepSeek secondary, 任一skip即否决)
-样本: 89 个已结算 position (跳过 0 个缺数据, advisor null 84 个)
+样本: 89 个已结算 position (跳过 0 个缺数据, advisor null 86 个)
 
 ## 核心对比: 无门控 vs AI门控
 
 | 指标 | 无门控(全买) | AI门控(proceed才买, null放行) | 严格门控(连null也砍) |
 |------|-------------|------------------------------|---------------------|
-| 交易数 | 89 | 84 | 0 |
+| 交易数 | 89 | 86 | 0 |
 | 命中数 | 3 | 2 | 0 |
-| 胜率 | 3.4% | 2.4% | 0.0% |
-| 总 PnL | $-522.0 | $-494.6 | $0.0 |
-| 均 PnL/笔 | $-5.86 | $-5.89 | $0.00 |
+| 胜率 | 3.4% | 2.3% | 0.0% |
+| 总 PnL | $-522.0 | $-511.5 | $0.0 |
+| 均 PnL/笔 | $-5.86 | $-5.95 | $0.00 |
 
-门控收益: AI门控 PnL $-494.6 vs 无门控 $-522.0 = +$27.3
+门控收益: AI门控 PnL $-511.5 vs 无门控 $-522.0 = +$10.5
 
-## AI 砍掉的 5 笔实际表现 (判断误杀)
+## AI 砍掉的 3 笔实际表现 (判断误杀)
 
 | 指标 | skip组 (AI砍掉) | proceed组 (AI放行) |
 |------|----------------|-------------------|
-| 交易数 | 5 | 84 |
+| 交易数 | 3 | 86 |
 | 命中数 | 1 | 2 |
-| 胜率 | 20.0% | 2.4% |
-| 总 PnL | $-27.3 | $-494.6 |
-| 均 PnL | $-5.47 | $-5.89 |
+| 胜率 | 33.3% | 2.3% |
+| 总 PnL | $-10.5 | $-511.5 |
+| 均 PnL | $-3.50 | $-5.95 |
 
-**解读**: skip组均PnL = $-5.47
+**解读**: skip组均PnL = $-3.50
 - 若为负 → AI 砍掉了亏损交易, 门控有价值
 - 若为正 → AI 误杀了盈利交易, 门控有害
-- 砍掉 5/89 笔 (5.6%), 其中命中 1 笔 (误杀的赢家)
+- 砍掉 3/89 笔 (3.4%), 其中命中 1 笔 (误杀的赢家)
 
 ## 双AI拆分
 
-- DeepSeek secondary 单独 skip: 5 笔
-- 合并 skip (任一skip): 5 笔
+- DeepSeek secondary 单独 skip: 3 笔
+- 合并 skip (任一skip): 3 笔
 - 门控规则 (llm.ts:305): 任一模型 skip 即否决
 
 ## 局限 (解读时务必考虑)
@@ -42,20 +42,20 @@
 1. LLM 非确定, 本报告是一次性快照, 重跑可能略变
 2. 未来信息偏差: LLM 训练数据或含个别事件结果 (具体日期最高温被记住概率极低)
 3. 单候选回放: 只回放开仓桶, AI 看不到当时其他候选
-4. 84 个 advisor null (限流/错误) 按放行计, 可能让门控偏弱
+4. 86 个 advisor null (限流/错误) 按放行计, 可能让门控偏弱
 
 ## 逐笔 verdict
 
 | city | date | bucket | entry | p | ev | action | risk | hit | pnl | close | reason |
 |------|------|--------|-------|---|----|--------|------|-----|-----|-------|--------|
-| Ankara | 2026-07-31 | 26-26C | 0.360 | 100.0% | 1.78 | skip | high | ✓ | $-4.4 | stop_loss | gemini: 模型估算概率出现100%的严重异常（sigma为1.2下无法达到绝对确定），存在概率计算偏差风险。 / deepseek:  |
-| Ankara | 2026-08-01 | 30-30C | 0.030 | 11.4% | 2.80 | skip | high | ✗ | $-6.7 | stop_loss | gemini: 数据正常且无明显异常风控风险。 / deepseek: 实时观测METAR仅14C，与预报27.9C及目标桶30C极端背离， |
-| Ankara | 2026-08-01 | 26-26C | 0.039 | 12.3% | 2.14 | skip | high | ✗ | $-5.6 | stop_loss | gemini: 各项指标与概率计算正常，流动性良好且无明确数据异常。 / deepseek: 实时观测METAR仅14C，与预报27.9C及 |
-| Atlanta | 2026-07-31 | 92-93F | 0.350 | 100.0% | 1.86 | skip | high | ✗ | $-5.1 | stop_loss | gemini: 模型估计概率（100%）存在异常，在sigma=2的情况下单桶概率不可能为100% / deepseek: 实时观测78F与 |
-| Buenos Aires | 2026-07-31 | 24-24C | 0.110 | 100.0% | 8.09 | skip | high | ✗ | $-5.5 | stop_loss | gemini: 模型预测概率(100%)在sigma=1.2的窄区间桶中存在明显数据异常。 / deepseek: 预报23.5C与实时观测 |
+| Ankara | 2026-07-31 | 26-26C | 0.360 | 100.0% | 1.78 | skip | high | ✓ | $-4.4 | stop_loss | gemini: 模型概率(100%)存在严重计算异常，且METAR实时观测(13°C)与预报(26.3°C)极端背离。 / deepseek |
+| Ankara | 2026-08-01 | 30-30C | 0.030 | 11.4% | 2.80 | null | low | ✗ | $-6.7 | stop_loss | (advisor unavailable) |
+| Ankara | 2026-08-01 | 26-26C | 0.039 | 12.3% | 2.14 | null | low | ✗ | $-5.6 | stop_loss | (advisor unavailable) |
+| Atlanta | 2026-07-31 | 92-93F | 0.350 | 100.0% | 1.86 | skip | high | ✗ | $-5.1 | stop_loss | gemini: 预报与桶区间高度吻合，价差合理且成交量充足，无明显数据风险。 / deepseek: 实时观测78F与预报92F极端背离，且 |
+| Buenos Aires | 2026-07-31 | 24-24C | 0.110 | 100.0% | 8.09 | null | low | ✗ | $-5.5 | stop_loss | (advisor unavailable) |
 | Buenos Aires | 2026-08-01 | 21-21C | 0.040 | 13.1% | 2.27 | null | low | ✗ | $-5.0 | stop_loss | (advisor unavailable) |
 | Chicago | 2026-07-31 | 84-85F | 0.160 | 100.0% | 5.25 | null | low | ✗ | $-5.0 | stop_loss | (advisor unavailable) |
-| Dallas | 2026-07-31 | 104-105F | 0.220 | 100.0% | 3.55 | null | low | ✗ | $-0.9 | stop_loss | (advisor unavailable) |
+| Dallas | 2026-07-31 | 104-105F | 0.220 | 100.0% | 3.55 | skip | high | ✗ | $-0.9 | stop_loss | gemini: 剩余8.2小时下模型给出100%胜率且EV高达3.546，存在严重的模型概率计算失真异常。 / deepseek: 预报10 |
 | Dallas | 2026-08-01 | 102-103F | 0.020 | 11.7% | 4.86 | null | low | ✗ | $-10.0 | stop_loss | (advisor unavailable) |
 | London | 2026-08-02 | 29-29C | 0.040 | 18.5% | 3.62 | null | low | ✗ | $-10.0 | stop_loss | (advisor unavailable) |
 | London | 2026-08-02 | 28-28C | 0.170 | 32.6% | 0.92 | null | low | ✗ | $-9.4 | stop_loss | (advisor unavailable) |
