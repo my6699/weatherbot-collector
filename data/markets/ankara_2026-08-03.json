@@ -6,9 +6,9 @@
   "station": "LTAC",
   "event_end_date": "2026-08-03T12:00:00Z",
   "hours_at_discovery": 55.8,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -541,6 +541,26 @@
         "spread": 0.6,
         "gap": 1.2
       }
+    },
+    {
+      "ts": "2026-08-03T15:20:40.320Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 33.4,
+      "hrrr": 32.1,
+      "metar": 33,
+      "best": 32.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.4,
+          "gfs_seamless": 32.1,
+          "icon_seamless": 32.1
+        },
+        "mean": 32.8,
+        "spread": 0.6,
+        "gap": 1.3
+      }
     }
   ],
   "market_snapshots": [
@@ -708,6 +728,11 @@
       "ts": "2026-08-03T11:48:12.427Z",
       "top_bucket": "33-33C",
       "top_price": 0.89
+    },
+    {
+      "ts": "2026-08-03T15:20:40.320Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.98
     }
   ],
   "all_outcomes": [
@@ -774,7 +799,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6674
+      "volume": 6754
     },
     {
       "question": "Will the highest temperature in Ankara be 33°C on August 3?",
@@ -783,11 +808,11 @@
         33,
         33
       ],
-      "bid": 0.89,
-      "ask": 0.89,
-      "price": 0.89,
+      "bid": 0.98,
+      "ask": 0.98,
+      "price": 0.98,
       "spread": 0,
-      "volume": 7670
+      "volume": 9389
     },
     {
       "question": "Will the highest temperature in Ankara be 34°C on August 3?",
@@ -796,11 +821,11 @@
         34,
         34
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
-      "volume": 4321
+      "volume": 5464
     },
     {
       "question": "Will the highest temperature in Ankara be 35°C on August 3?",
@@ -809,11 +834,11 @@
         35,
         35
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 3853
+      "volume": 5138
     },
     {
       "question": "Will the highest temperature in Ankara be 36°C on August 3?",
@@ -855,5 +880,6 @@
       "volume": 303
     }
   ],
-  "created_at": "2026-08-01T04:11:33.581Z"
+  "created_at": "2026-08-01T04:11:33.581Z",
+  "metar_max": 21
 }
