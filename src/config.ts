@@ -36,15 +36,27 @@ const P = "WEATHERBOT_" as const;
 
 export const BALANCE = envNum(`${P}BALANCE`, 10000.0);
 export const MAX_BET = envNum(`${P}MAX_BET`, 20.0);
-/** Max concurrent open positions per city/date market (bucket spread). */
-export const MAX_POSITIONS_PER_MARKET = envNum(`${P}MAX_POSITIONS_PER_MARKET`, 3);
+/** Max concurrent open positions per city/date market. Lowered 3->1 (2026-08-03):
+ *  backtest (scripts/backtest-optimize.ts) shows buying top3 buckets hits 85%
+ *  in-sample but costs 3x (miss loses $60 vs $20) for only +$400 PnL over top1.
+ *  Under LOO hit rate (28%) the 3x cost dwarfs the diversification gain —
+ *  single top1 bucket is strictly better risk-adjusted. */
+export const MAX_POSITIONS_PER_MARKET = envNum(`${P}MAX_POSITIONS_PER_MARKET`, 1);
 export const MIN_EV = envNum(`${P}MIN_EV`, 0.1);
-/** Skip buckets priced below this (ultra-cheap quotes are stale / phantom-edge lottery tickets). */
-export const MIN_ASK = envNum(`${P}MIN_ASK`, 0.02);
+/** Skip buckets priced below this. Raised 0.02->0.10 (2026-08-03): single-point
+ *  buckets under $0.10 are lottery tickets — with model RMSE 1.7-2.3°C their true
+ *  hit rate is <10%, far below the ~10% break-even these prices imply. The old
+ *  0.02 floor let the bot accumulate cheap phantom-edge positions that rarely hit. */
+export const MIN_ASK = envNum(`${P}MIN_ASK`, 0.10);
 /** Trade same-day (D+0) markets. Default off: by D+0 the market has live-obs
  *  information our daily-max ensemble can't match, so tail "edges" are phantom. */
 export const TRADE_D0 = envTruthy(`${P}TRADE_D0`);
-export const MAX_PRICE = envNum(`${P}MAX_PRICE`, 0.45);
+/** Max entry price. Lowered 0.45->0.25 (2026-08-03): LOO hit rate is 28%, so
+ *  break-even entry is $0.28. At $0.45 the bot needs >45% hit rate to profit
+ *  (only in-sample 50% barely clears it). $0.25 gives a 3-point safety margin
+ *  under the 28% LOO rate; $0.20 would give 8 points but cuts entry count too
+ *  hard. $0.25 is the sweet spot. */
+export const MAX_PRICE = envNum(`${P}MAX_PRICE`, 0.25);
 export const MIN_VOLUME = envNum(`${P}MIN_VOLUME`, 500);
 export const MIN_HOURS = envNum(`${P}MIN_HOURS`, 2.0);
 /** Lowered 72→24 (2026-08-03 audit): only trade D+0/D+1. Beyond 24h the model error
@@ -140,12 +152,21 @@ export const ENDGAME_LOCKED_P = envNum(`${P}ENDGAME_LOCKED_P`, 0.93);
 /** Take-profit price in endgame when the result is NOT yet locked (lock in profit). */
 export const ENDGAME_TAKE_PROFIT = envNum(`${P}ENDGAME_TAKE_PROFIT`, 0.90);
 /**
- * Endgame time-trap guards: the daily max usually peaks at local 14:00-16:00.
- * Before that, a METAR value at/near the forecast peak is NOT a locked max —
- * a short cloud gap can spike it, or the sun keeps heating. Only treat an obs
- * as "locked" after this local hour.
+ * Local hour after which the daily max is considered "formed" (peaks at
+ * 15:00-16:00 in most cities). Gate for THREE exits that must NOT fire before
+ * the max is set (else we kill winning tickets on morning noise):
+ *  - price-based stop-loss (scan.ts priceStopAllowed)
+ *  - metarDiverged lower break (a low morning METAR proves nothing)
+ *  - forecast_changed exit (a transient forecast wobble is not a real shift)
+ * Raised 14->15 (2026-08-03): Miami 7-31 was killed at local 12:00 by a single
+ * forecast_changed trigger; the max formed later and the bucket hit 96.5.
  */
-export const ENDGAME_LOCAL_HOUR_MIN = envNum(`${P}ENDGAME_LOCAL_HOUR_MIN`, 14);
+export const ENDGAME_LOCAL_HOUR_MIN = envNum(`${P}ENDGAME_LOCAL_HOUR_MIN`, 15);
+/** Min consecutive scans the forecast must stay outside a position's bucket
+ *  before the forecast_changed exit fires (after the ENDGAME_LOCAL_HOUR_MIN
+ *  gate opens). Filters single-scan wobbles: Miami 7-31 hrrr dipped 96->93 for
+ *  one scan then returned to 96 — streak>=2 would have held it. */
+export const FORECAST_CHANGE_MIN_STREAK = envNum(`${P}FORECAST_CHANGE_MIN_STREAK`, 2);
 /** If the latest METAR rose by >= this (vs the previous obs) it is still heating
  *  up — do NOT lock the current bucket. */
 export const ENDGAME_RISING_C = envNum(`${P}ENDGAME_RISING_C`, 0.5);

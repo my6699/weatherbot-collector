@@ -23,6 +23,7 @@ import {
   ENDGAME_RISING_F,
   ENDGAME_TAKE_PROFIT,
   ENDGAME_SWEEP,
+  FORECAST_CHANGE_MIN_STREAK,
   LOCATIONS,
   LLM_GATE,
   MAX_BET,
@@ -661,11 +662,12 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           // entry BID (what we could actually exit at) so the spread doesn't
           // instantly trigger a stop right after opening.
           // Price-stop gate (2026-08-03 audit): only fire the price-based stop on
-          // D+0 (hoursLeft<24) once the daily max has formed (local >=14h). Before
-          // then the orderbook is information-noise ("current temp low" != "daily
-          // max low") and price-stops kill winning tickets (Ankara 7-31: stopped
-          // at local 09:08 on an 18°C obs, actual max was 26°C — a hit). D+1/D+2
-          // rely on forecast_changed + metarDiverged instead. hardCrash always fires.
+          // D+0 (hoursLeft<24) once the daily max has formed (local >=
+          // ENDGAME_LOCAL_HOUR_MIN, now 15h). Before then the orderbook is
+          // information-noise ("current temp low" != "daily max low") and price-
+          // stops kill winning tickets (Ankara 7-31: stopped at local 09:08 on an
+          // 18°C obs, actual max was 26°C — a hit). D+1/D+2 rely on
+          // forecast_changed + metarDiverged instead. hardCrash always fires.
           const hoursLeft = hoursToResolution(mkt.event_end_date);
           const localHour = localHourFor(loc);
           const priceStopAllowed = hoursLeft < 24 && localHour >= ENDGAME_LOCAL_HOUR_MIN;
@@ -720,6 +722,8 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
       if (forecastTemp != null) {
         const open = openPositions(mkt);
         const buffer = unit === "F" ? 2.0 : 1.0;
+        const fcLocalHour = localHourFor(loc);
+        const fcGateOpen = fcLocalHour >= ENDGAME_LOCAL_HOUR_MIN;
         for (const pos of open) {
           const oldLow = pos.bucket_low;
           const oldHigh = pos.bucket_high;
@@ -727,34 +731,57 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             oldLow !== -999 && oldHigh !== 999 ? (oldLow + oldHigh) / 2 : forecastTemp;
           const forecastFar =
             Math.abs(forecastTemp - midBucket) > Math.abs(midBucket - oldLow) + buffer;
-          if (!inBucket(forecastTemp, oldLow, oldHigh) && forecastFar) {
-            let currentPrice: number | null = null;
-            for (const o of outcomes) {
-              if (o.market_id === pos.market_id) {
-                currentPrice = o.price;
-                break;
-              }
+          const diverged = !inBucket(forecastTemp, oldLow, oldHigh) && forecastFar;
+          // forecast_changed gate (2026-08-03): close only when the forecast has
+          // been outside the bucket for >= FORECAST_CHANGE_MIN_STREAK CONSECUTIVE
+          // scans AND the local hour is past ENDGAME_LOCAL_HOUR_MIN (daily max
+          // formed). Before the max forms a one-scan wobble is noise; Miami 7-31
+          // was killed at local 12:00 by a single hrrr 96->93 dip, the max later
+          // hit 96.5 in the bucket. Reset the streak on any in-bucket scan.
+          if (!diverged) {
+            pos.forecast_change_streak = 0;
+            continue;
+          }
+          const streak = (pos.forecast_change_streak ?? 0) + 1;
+          pos.forecast_change_streak = streak;
+          if (!fcGateOpen) {
+            console.log(
+              `  [FC HOLD] ${loc.name} ${date} — forecast ${forecastTemp}${unitSym} outside b${oldLow}-${oldHigh}${unitSym} (streak ${streak}) but daily max not formed (local ${fcLocalHour.toFixed(1)}h < ${ENDGAME_LOCAL_HOUR_MIN}), hold`,
+            );
+            continue;
+          }
+          if (streak < FORECAST_CHANGE_MIN_STREAK) {
+            console.log(
+              `  [FC PENDING] ${loc.name} ${date} — forecast ${forecastTemp}${unitSym} outside b${oldLow}-${oldHigh}${unitSym} (streak ${streak}/${FORECAST_CHANGE_MIN_STREAK}), confirm next scan`,
+            );
+            continue;
+          }
+          let currentPrice: number | null = null;
+          for (const o of outcomes) {
+            if (o.market_id === pos.market_id) {
+              currentPrice = o.price;
+              break;
             }
-            if (currentPrice != null) {
-              const exitLabel = `${loc.name} ${date}`;
-              const soldOk = await liveSellExitOrKeepOpen(pos, `${exitLabel} forecast_changed`, {
-                force: false,
-                expectedPrice: currentPrice,
-              });
-              if (!soldOk) continue;
-              const exitPrice = pos.exit_price ?? currentPrice;
-              const pnl = Math.round((exitPrice - pos.entry_price) * pos.shares * 100) / 100;
-              balance += pos.cost + pnl;
-              pos.closed_at = snap.ts ?? null;
-              pos.close_reason = "forecast_changed";
-              pos.exit_price = exitPrice;
-              pos.pnl = pnl;
-              pos.status = "closed";
-              closed += 1;
-              console.log(
-                `  [CLOSE] ${loc.name} ${date} — forecast changed | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
-              );
-            }
+          }
+          if (currentPrice != null) {
+            const exitLabel = `${loc.name} ${date}`;
+            const soldOk = await liveSellExitOrKeepOpen(pos, `${exitLabel} forecast_changed`, {
+              force: false,
+              expectedPrice: currentPrice,
+            });
+            if (!soldOk) continue;
+            const exitPrice = pos.exit_price ?? currentPrice;
+            const pnl = Math.round((exitPrice - pos.entry_price) * pos.shares * 100) / 100;
+            balance += pos.cost + pnl;
+            pos.closed_at = snap.ts ?? null;
+            pos.close_reason = "forecast_changed";
+            pos.exit_price = exitPrice;
+            pos.pnl = pnl;
+            pos.status = "closed";
+            closed += 1;
+            console.log(
+              `  [CLOSE] ${loc.name} ${date} — forecast changed (streak ${streak}) | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
+            );
           }
         }
       }

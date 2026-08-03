@@ -75,6 +75,11 @@ export interface Position {
   /** True once the stop-loss fired once; exit only on a confirming scan (avoids
    *  being shaken out by a transient dip in a thin book). */
   stop_pending?: boolean;
+  /** Consecutive-scan counter for the forecast_changed exit. Incremented each
+   *  scan the forecast stays outside the bucket (past the buffer); reset to 0
+   *  on any in-bucket scan. The exit fires only at streak >=
+   *  FORECAST_CHANGE_MIN_STREAK AND local hour >= ENDGAME_LOCAL_HOUR_MIN. */
+  forecast_change_streak?: number;
   /** True once this position's hit/miss has been counted into state.wins/losses
    *  at market resolution (idempotent — protects against double counting on repeat
    *  resolution scans; pnl/balance are NOT touched here). */
