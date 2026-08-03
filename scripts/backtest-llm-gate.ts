@@ -75,6 +75,12 @@ interface Mkt {
   all_outcomes?: Outcome[];
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+// 笔间延迟: 避开 Gemini 免费档 ~15 RPM 限流. 双AI每笔发 Gemini+DeepSeek 各一次,
+// 5s/笔 ≈ 12 RPM/模型, 留余量防 429. 首次回测无延迟导致 84/89 null (前5笔后被全堵).
+// 89 笔 × 5s ≈ 8min, 加调用耗时约 10-12min, 在 CI 可接受范围内.
+const BACKTEST_LLM_DELAY_MS = 5000;
+
 const DIR = path.join(process.cwd(), "data", "markets");
 const markets: Mkt[] = readdirSync(DIR)
   .filter((f) => f.endsWith(".json"))
@@ -110,6 +116,14 @@ interface Row {
 const rows: Row[] = [];
 let skippedNoData = 0;
 let nullCount = 0;
+
+// 预估待回放 position 总数, 仅用于进度条 [i/N] 显示 (不严格要求精确).
+const nEstimate = markets
+  .filter((m) => m.status === "resolved" && m.actual_temp != null)
+  .reduce(
+    (acc, m) => acc + (m.positions ?? (m.position ? [m.position] : [])).filter((p) => p.pnl != null).length,
+    0,
+  );
 
 for (const m of markets) {
   if (m.status !== "resolved" || m.actual_temp == null) continue;
@@ -223,8 +237,10 @@ for (const m of markets) {
       secondary_reason: secReason,
     });
     console.log(
-      `[${rows.length}] ${m.city_name} ${m.date} ${cand.bucket} entry=$${ask.toFixed(3)} → ${action}(${risk}) hit=${hit ? "✓" : "✗"} pnl=$${pos.pnl} | ${reason.slice(0, 70)}`,
+      `[${rows.length}/${nEstimate}] ${m.city_name} ${m.date} ${cand.bucket} entry=$${ask.toFixed(3)} → ${action}(${risk}) hit=${hit ? "✓" : "✗"} pnl=$${pos.pnl} | ${reason.slice(0, 70)}`,
     );
+    // 笔间限流延迟 (见 BACKTEST_LLM_DELAY_MS 注释), 防 Gemini 429.
+    if (BACKTEST_LLM_DELAY_MS > 0) await sleep(BACKTEST_LLM_DELAY_MS);
   }
 }
 
