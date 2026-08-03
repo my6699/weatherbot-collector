@@ -52,11 +52,18 @@ import {
   STOP_MULT,
   STOP_MULT_WIDE,
   MAX_CITY_COST_PER_DATE,
+  HORIZON_D0_MULT,
+  P_TIER_HIGH,
+  P_TIER_HIGH_MULT,
+  P_TIER_LOW,
+  P_TIER_LOW_MULT,
+  BIAS_HIGH_N,
+  BIAS_LOW_N_MULT,
   TRADE_D0,
   BIAS_ENABLED,
 } from "./config.js";
 import { getEnsembleForecast, getMetar } from "./forecasts.js";
-import { applyBias, refreshBias } from "./bias.js";
+import { applyBias, getBiasN, refreshBias } from "./bias.js";
 import { metarMaxInUnit, refreshMetarMaxes } from "./metar-archive.js";
 import { fetchJson, sleep } from "./http.js";
 import {
@@ -828,6 +835,12 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           // position on it was closed (stop/forecast-change), we never re-enter
           // the same bucket. Tracked via ALL historical positions' market ids.
           const heldIds = new Set((mkt.positions ?? []).map((p) => p.market_id));
+          // Confidence-weighted sizing factors (config.ts, backtest-optimize.ts):
+          // D+0 hits 60% vs D+1 52% -> size up; high-p hits 67% vs low-p 43%;
+          // bias n>=8 hits 55% vs n<8 27% -> size down low-confidence.
+          const biasN = getBiasN(citySlug, horizon, biasSource);
+          const horizonFactor = horizon === "D+0" ? HORIZON_D0_MULT : 1.0;
+          const biasFactor = biasN >= BIAS_HIGH_N ? 1.0 : BIAS_LOW_N_MULT;
           const candidates: {
             o: OutcomeRow;
             p: number;
@@ -849,7 +862,9 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             const edge = p - calProb;
             if (ev < MIN_EV || edge < MIN_EDGE) continue;
             const kelly = calcKelly(p, ask);
-            const size = betSize(kelly, balance, MAX_BET);
+            const pFactor = p >= P_TIER_HIGH ? P_TIER_HIGH_MULT : p >= P_TIER_LOW ? 1.0 : P_TIER_LOW_MULT;
+            const adjMaxBet = MAX_BET * horizonFactor * pFactor * biasFactor;
+            const size = betSize(kelly, balance, adjMaxBet);
             if (size < 0.5) continue;
             candidates.push({ o, p, ev, edge, kelly, size });
           }

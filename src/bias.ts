@@ -126,6 +126,16 @@ export function getBias(city: string, horizon: string, source: string): number {
   return Math.round(capped * shrink * 1000) / 1000;
 }
 
+/** Sample count backing the bias for (city, horizon, source). Returns 0 when
+ *  disabled or no entry. Used to scale position confidence: low-n bias is less
+ *  trustworthy (hit rate 27% vs 55% for n>=8, backtest-optimize.ts), so the
+ *  position size is halved below BIAS_HIGH_N samples. */
+export function getBiasN(city: string, horizon: string, source: string): number {
+  if (!BIAS_ENABLED) return 0;
+  const entry = loadBiasTable()[biasKey(city, horizon, source)];
+  return entry?.n ?? 0;
+}
+
 /** Apply the correction: forecast - bias (0 when no correction applies).
  *  bias = mean(forecast - actual), so subtracting it pulls the forecast toward
  *  the actual. (Previously `forecast + bias` here pushed the forecast in the

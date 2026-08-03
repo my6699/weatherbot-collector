@@ -234,8 +234,29 @@ export const STOP_MULT_WIDE = envNum(`${P}STOP_MULT_WIDE`, 0.8);
  * Per-city, per-date exposure cap: the total COST of open positions for the
  * same (city, date) must stay below this amount. Prevents one city's weather
  * black-swan from dragging the whole account into a deep drawdown.
+ * Raised 40->60 (2026-08-03): with MAX_POSITIONS_PER_MARKET=1 + horizon/p
+ * weighting a high-conviction D+0 bucket can size up to $60 (MAX_BET 20 ×
+ * horizon 1.5 × p-tier 2.0); the old 40 cap would have clipped it.
  */
-export const MAX_CITY_COST_PER_DATE = envNum(`${P}MAX_CITY_COST_PER_DATE`, 40);
+export const MAX_CITY_COST_PER_DATE = envNum(`${P}MAX_CITY_COST_PER_DATE`, 60);
+
+/**
+ * Confidence-weighted position sizing (2026-08-03). Replaces the flat MAX_BET
+ * cap with a multiplier on MAX_BET based on three signals validated in
+ * scripts/backtest-optimize.ts (+$1273 combined vs flat $20):
+ *  - horizon: D+0 hits 60% vs D+1 52% (backtest-horizon.ts) -> D+0 sized up
+ *  - p-tier:  p>=0.30 hits 67% vs p<0.20 43% -> high-p sized up, low-p down
+ *  - bias-n:  n>=8 hits 55% vs n<8 27% -> low-confidence bias sized down
+ * Final bet = betSize(kelly, balance, MAX_BET × horizonMult × pMult × biasMult),
+ * still gated by MAX_CITY_COST_PER_DATE and the depth guard.
+ */
+export const HORIZON_D0_MULT = envNum(`${P}HORIZON_D0_MULT`, 1.5);
+export const P_TIER_HIGH = envNum(`${P}P_TIER_HIGH`, 0.3);
+export const P_TIER_HIGH_MULT = envNum(`${P}P_TIER_HIGH_MULT`, 2.0);
+export const P_TIER_LOW = envNum(`${P}P_TIER_LOW`, 0.2);
+export const P_TIER_LOW_MULT = envNum(`${P}P_TIER_LOW_MULT`, 0.5);
+export const BIAS_HIGH_N = envNum(`${P}BIAS_HIGH_N`, 8);
+export const BIAS_LOW_N_MULT = envNum(`${P}BIAS_LOW_N_MULT`, 0.5);
 
 /**
  * METAR divergence exit: when the live observation clearly misses an open
