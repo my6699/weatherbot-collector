@@ -71,11 +71,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-08-03T04:00:14.363Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null
+      "status": "closed",
+      "pnl": -1.11,
+      "exit_price": 0.085,
+      "close_reason": "forecast_changed",
+      "closed_at": "2026-08-03T04:46:27.199Z"
     }
   ],
   "actual_temp": null,
@@ -421,6 +421,66 @@
         "spread": 0.5,
         "gap": 0.8
       }
+    },
+    {
+      "ts": "2026-08-03T04:46:27.199Z",
+      "horizon": "D+1",
+      "hours_left": 31.2,
+      "ecmwf": 32.5,
+      "hrrr": 31.7,
+      "metar": null,
+      "best": 32.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.5,
+          "gfs_seamless": 31.7,
+          "icon_seamless": 32.4
+        },
+        "mean": 32.2,
+        "spread": 0.5,
+        "gap": 0.8
+      }
+    },
+    {
+      "ts": "2026-08-03T04:53:48.877Z",
+      "horizon": "D+1",
+      "hours_left": 31.1,
+      "ecmwf": 32.5,
+      "hrrr": 31.7,
+      "metar": null,
+      "best": 32.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.5,
+          "gfs_seamless": 31.7,
+          "icon_seamless": 32.4
+        },
+        "mean": 32.2,
+        "spread": 0.5,
+        "gap": 0.8
+      }
+    },
+    {
+      "ts": "2026-08-03T05:03:31.672Z",
+      "horizon": "D+1",
+      "hours_left": 30.9,
+      "ecmwf": 32.5,
+      "hrrr": 31.7,
+      "metar": null,
+      "best": 32.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.5,
+          "gfs_seamless": 31.7,
+          "icon_seamless": 32.4
+        },
+        "mean": 32.2,
+        "spread": 0.5,
+        "gap": 0.8
+      }
     }
   ],
   "market_snapshots": [
@@ -508,6 +568,21 @@
       "ts": "2026-08-03T04:00:14.363Z",
       "top_bucket": "32-32C",
       "top_price": 0.525
+    },
+    {
+      "ts": "2026-08-03T04:46:27.199Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.525
+    },
+    {
+      "ts": "2026-08-03T04:53:48.877Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.525
+    },
+    {
+      "ts": "2026-08-03T05:03:31.672Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.525
     }
   ],
   "all_outcomes": [
@@ -518,9 +593,9 @@
         -999,
         27
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
       "volume": 949
     },
@@ -544,11 +619,11 @@
         29,
         29
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 246
+      "volume": 275
     },
     {
       "question": "Will the highest temperature in Singapore be 30°C on August 4?",
@@ -557,11 +632,11 @@
         30,
         30
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 447
+      "volume": 461
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on August 4?",
@@ -574,7 +649,7 @@
       "ask": 0.085,
       "price": 0.085,
       "spread": 0,
-      "volume": 642
+      "volume": 653
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on August 4?",
@@ -587,7 +662,7 @@
       "ask": 0.525,
       "price": 0.525,
       "spread": 0,
-      "volume": 692
+      "volume": 716
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 4?",
@@ -613,7 +688,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 865
+      "volume": 871
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 4?",
@@ -648,9 +723,9 @@
         37,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 334
     }

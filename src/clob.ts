@@ -10,6 +10,9 @@ import { polygon, polygonAmoy } from "viem/chains";
 import { privateKeyToAccount } from "viem/accounts";
 import {
   CLOB_LIVE_ENABLED,
+  CLOB_MAKER_MODE,
+  CLOB_MAKER_POLL_MS,
+  CLOB_MAKER_WAIT_MS,
   POLY_CHAIN_ID,
   POLY_CLOB_API_KEY,
   POLY_CLOB_API_PASSPHRASE,
@@ -18,6 +21,7 @@ import {
   POLY_PROXY_WALLET,
 } from "./config.js";
 import { getGammaMarketDetail, parseYesTokenId } from "./polymarket.js";
+import { sleep } from "./http.js";
 
 const CLOB_HOST = "https://clob.polymarket.com";
 
@@ -123,6 +127,86 @@ export async function clobSellYesShares(yesTokenId: string, shareAmount: number)
   );
   assertOrderOk(resp);
   return resp;
+}
+
+interface MakerFill {
+  filled: boolean;
+  fillPrice: number | null;
+  orderId: string | null;
+}
+
+/**
+ * Maker-first fill attempt: rest a post-only GTC limit order at `limitPrice`
+ * (the touch — buy @ best bid / sell @ best ask), poll up to CLOB_MAKER_WAIT_MS
+ * for a fill, then cancel if unfilled. Returns the fill state so the caller can
+ * fall back to a taker market order. When CLOB_MAKER_MODE is off this returns
+ * unfilled immediately and the caller uses the plain taker path.
+ */
+async function clobTryMakerFill(
+  yesTokenId: string,
+  size: number,
+  limitPrice: number,
+  side: Side,
+): Promise<MakerFill> {
+  if (!CLOB_MAKER_MODE) return { filled: false, fillPrice: null, orderId: null };
+  const client = await getClobClient();
+  const safeSize = Math.max(0.01, Math.round(size * 100) / 100);
+  const safePrice = Math.max(0.001, Math.min(0.999, Math.round(limitPrice * 1000) / 1000));
+  const resp = await client.createAndPostOrder(
+    { tokenID: yesTokenId, price: safePrice, size: safeSize, side },
+    {},
+    OrderType.GTC,
+    false,
+    true, // postOnly
+  );
+  assertOrderOk(resp);
+  const orderId =
+    (resp as { orderID?: string } | null)?.orderID ??
+    (resp as { id?: string } | null)?.id ??
+    null;
+  if (!orderId) return { filled: false, fillPrice: null, orderId: null };
+
+  const deadline = Date.now() + CLOB_MAKER_WAIT_MS;
+  while (Date.now() < deadline) {
+    await sleep(CLOB_MAKER_POLL_MS);
+    try {
+      const o = await client.getOrder(orderId);
+      const matched = Number((o as { size_matched?: string | number } | null)?.size_matched ?? 0);
+      const orig = Number((o as { original_size?: string | number } | null)?.original_size ?? size);
+      const status = (o as { status?: string } | null)?.status;
+      if (status === "MATCHED" || (orig > 0 && matched >= orig * 0.999)) {
+        return { filled: true, fillPrice: safePrice, orderId };
+      }
+    } catch {
+      /* keep polling until the deadline */
+    }
+  }
+  // Not filled in time — cancel and let the caller fall back to taker.
+  try {
+    await client.cancelOrder({ orderID: orderId });
+  } catch {
+    /* already filled / already gone */
+  }
+  return { filled: false, fillPrice: null, orderId };
+}
+
+/** Maker-first buy of YES; returns the fill state (caller falls back to taker). */
+export async function clobTryMakerBuy(
+  yesTokenId: string,
+  usdAmount: number,
+  limitPrice: number,
+): Promise<MakerFill> {
+  const size = usdAmount / Math.max(0.001, limitPrice);
+  return clobTryMakerFill(yesTokenId, size, limitPrice, Side.BUY);
+}
+
+/** Maker-first sell of YES shares; returns the fill state (caller falls back to taker). */
+export async function clobTryMakerSell(
+  yesTokenId: string,
+  shareAmount: number,
+  limitPrice: number,
+): Promise<MakerFill> {
+  return clobTryMakerFill(yesTokenId, shareAmount, limitPrice, Side.SELL);
 }
 
 export async function resolveYesTokenId(marketId: string): Promise<string | null> {

@@ -8,6 +8,7 @@ import {
   BREAKER_SPREAD_F,
   BREAKER_TRIPS,
   BREAKER_COOLDOWN_H,
+  CLOB_MAKER_MODE,
   EXIT_SPREAD_FRAC,
   ENDGAME_COOLING_HOUR,
   ENDGAME_HOURS,
@@ -35,6 +36,8 @@ import {
   METAR_CONFIRM_LOCAL_HOUR_MIN,
   METAR_CONFIRM_MARGIN_C,
   METAR_CONFIRM_MARGIN_F,
+  METAR_DIVERGE_MARGIN_C,
+  METAR_DIVERGE_MARGIN_F,
   MIN_ASK,
   MIN_EDGE,
   MIN_EV,
@@ -75,6 +78,8 @@ import {
 import {
   clobBuyYesUsd,
   clobSellYesShares,
+  clobTryMakerBuy,
+  clobTryMakerSell,
   getYesBidDepth,
   isLiveClobEnabled,
   resolveYesTokenId,
@@ -144,6 +149,23 @@ function metarTrend(mkt: MarketRecord): { latest: number; prev: number | null } 
     }
   }
   return { latest: latest ?? NaN, prev };
+}
+
+/** Whether the live observation clearly misses an open position's bucket, i.e.
+ *  that bucket can no longer be the outcome. Upper break applies at any hour;
+ *  lower break only once the daily max window has developed (morning obs are
+ *  still heating up, so a low METAR then proves nothing). */
+function metarDiverged(
+  pos: Position,
+  metar: number | null,
+  unit: "F" | "C",
+  localHour: number,
+): boolean {
+  if (metar == null || !Number.isFinite(metar)) return false;
+  const margin = unit === "F" ? METAR_DIVERGE_MARGIN_F : METAR_DIVERGE_MARGIN_C;
+  if (metar > pos.bucket_high + margin) return true;
+  if (localHour >= ENDGAME_LOCAL_HOUR_MIN && metar < pos.bucket_low - margin) return true;
+  return false;
 }
 
 export async function takeForecastSnapshot(
@@ -231,9 +253,11 @@ async function liveSellExitOrKeepOpen(
   // Slippage guard: never market-sell into a thin book far below the expected
   // exit. Take-profit exits wait for liquidity; stop-losses force through.
   let realBid: number | null = null;
+  let realAsk: number | null = null;
   try {
     const prices = await fetchMarketBestPrices(pos.market_id);
     realBid = prices?.bestBid ?? null;
+    realAsk = prices?.bestAsk ?? null;
   } catch {
     /* keep selling below */
   }
@@ -255,6 +279,23 @@ async function liveSellExitOrKeepOpen(
       return false;
     }
     pos.exit_price = realBid; // use the real tradable bid as the fill price
+  }
+
+  // Maker-first exit (unless forced — stop-losses must fill immediately): rest
+  // a post-only GTC sell at the best ask, never crossing the spread / paying a
+  // taker fee. If it does not fill within the wait window, fall back to taker.
+  if (CLOB_MAKER_MODE && !guard.force && realAsk != null && realAsk < 0.999) {
+    const maker = await clobTryMakerSell(pos.clob_yes_token_id, pos.shares, realAsk);
+    if (maker.filled && maker.fillPrice != null) {
+      pos.exit_price = maker.fillPrice;
+      console.log(
+        `  [CLOB] maker sold YES (${label}) @ $${maker.fillPrice.toFixed(3)}`,
+      );
+      return true;
+    }
+    console.log(
+      `  [CLOB] maker sell (${label}) unfilled @ $${realAsk.toFixed(3)} — falling back to taker`,
+    );
   }
 
   try {
@@ -300,12 +341,37 @@ async function executeBuy(
     );
     return false;
   }
+  // Strict forecast-validity confirmation before ANY buy (regular + endgame):
+  // for same-day (D+0) markets the live observation must not already falsify
+  // the target bucket — if the METAR is above the bucket's high edge, that
+  // bucket can no longer be the daily max, so the prediction behind this trade
+  // is invalid and we must not enter. (Only D+0 snapshots carry a METAR, so
+  // future-day trades are unaffected.)
+  const snaps = mkt.forecast_snapshots ?? [];
+  let liveMetar: number | null = null;
+  for (let i = snaps.length - 1; i >= 0; i--) {
+    if (snaps[i]?.metar != null) {
+      liveMetar = snaps[i]!.metar!;
+      break;
+    }
+  }
+  if (liveMetar != null) {
+    const divMargin = ctx.unitSym === "F" ? METAR_DIVERGE_MARGIN_F : METAR_DIVERGE_MARGIN_C;
+    if (liveMetar > signal.bucket_high + divMargin) {
+      console.log(
+        `  [FORECAST INVALID] ${ctx.locName} ${ctx.date} — METAR ${liveMetar}${ctx.unitSym} already above bucket ${signal.bucket_low}-${signal.bucket_high}${ctx.unitSym}, prediction falsified — skip`,
+      );
+      return false;
+    }
+  }
   let skipPosition = false;
+  let liveBid: number | null = null;
   try {
     const prices = await fetchMarketBestPrices(signal.market_id);
     if (prices) {
       const realAsk = prices.bestAsk;
       const realBid = prices.bestBid;
+      liveBid = realBid;
       const realSpread = Math.round((realAsk - realBid) * 10000) / 10000;
       // Skip if spread is too wide in absolute OR relative terms —
       // a wide-relative-spread bucket is structurally unprofitable to round-trip.
@@ -379,7 +445,28 @@ async function executeBuy(
       }
       if (proceed) {
         try {
-          await clobBuyYesUsd(yesToken, signal.cost);
+          if (CLOB_MAKER_MODE && liveBid != null) {
+            // Maker-first: rest a post-only GTC buy at the best bid; a fill
+            // never crosses the spread (and pays no maker fee). If it does not
+            // fill within the wait window, fall back to the taker market order.
+            const maker = await clobTryMakerBuy(yesToken, signal.cost, liveBid);
+            if (maker.filled && maker.fillPrice != null) {
+              signal.entry_price = maker.fillPrice;
+              signal.bid_at_entry = maker.fillPrice;
+              signal.shares = Math.round((signal.cost / maker.fillPrice) * 100) / 100;
+              signal.ev = Math.round(calcEv(signal.p, maker.fillPrice) * 10000) / 10000;
+              console.log(
+                `  [CLOB] maker buy filled ${ctx.locName} ${ctx.date} @ $${maker.fillPrice.toFixed(3)}`,
+              );
+            } else {
+              await clobBuyYesUsd(yesToken, signal.cost);
+              console.log(
+                `  [CLOB] taker buy ${ctx.locName} ${ctx.date} @ $${signal.entry_price.toFixed(3)} (maker unfilled, fallback)`,
+              );
+            }
+          } else {
+            await clobBuyYesUsd(yesToken, signal.cost);
+          }
           signal.clob_yes_token_id = yesToken;
         } catch (e) {
           console.error(`  [CLOB BUY FAIL] ${ctx.locName} ${ctx.date}:`, e);
@@ -544,6 +631,32 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
         if (currentPrice != null && oMatch) {
           currentPrice = oMatch.bid;
           const entry = pos.entry_price;
+          // Live-observation divergence: if the actual temp clearly misses the
+          // bucket (upper break any hour / lower break after the peak window),
+          // the bucket is no longer the outcome — close it NOW instead of
+          // waiting for a stop-loss. (Only D+0 carries a METAR, so future-day
+          // positions are naturally unaffected.)
+          if (metarDiverged(pos, metarTrend(mkt).latest, unit, localHourFor(loc))) {
+            const exitLabel = `${loc.name} ${date}`;
+            const soldOk = await liveSellExitOrKeepOpen(pos, `${exitLabel} metar_diverged`, {
+              force: false,
+              expectedPrice: currentPrice,
+            });
+            if (!soldOk) continue;
+            const exitPrice = pos.exit_price ?? currentPrice;
+            const pnl = Math.round((exitPrice - entry) * pos.shares * 100) / 100;
+            balance += pos.cost + pnl;
+            pos.closed_at = snap.ts ?? null;
+            pos.close_reason = "metar_diverged";
+            pos.exit_price = exitPrice;
+            pos.pnl = pnl;
+            pos.status = "closed";
+            closed += 1;
+            console.log(
+              `  [DIVERGE] ${loc.name} ${date} — METAR ${metarTrend(mkt).latest}${unitSym} misses b${pos.bucket_low}-${pos.bucket_high} | exit $${exitPrice.toFixed(3)} | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
+            );
+            continue;
+          }
           // Thin bucket markets have wide bid/ask spreads; anchor the stop to the
           // entry BID (what we could actually exit at) so the spread doesn't
           // instantly trigger a stop right after opening.
@@ -669,7 +782,10 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           const biasDelta = adjForecast - forecastTemp;
 
           // P2: scan every bucket, spread capital across the forecast distribution.
-          const heldIds = new Set(openPositions(mkt).map((p) => p.market_id));
+          // A bucket is bought at most ONCE per market — even if a previous
+          // position on it was closed (stop/forecast-change), we never re-enter
+          // the same bucket. Tracked via ALL historical positions' market ids.
+          const heldIds = new Set((mkt.positions ?? []).map((p) => p.market_id));
           const candidates: {
             o: OutcomeRow;
             p: number;
@@ -871,7 +987,8 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               prevMetar != null &&
               curMetar <= prevMetar;
             const egMaxAsk = cooling ? ENDGAME_MAX_ASK : ENDGAME_MAX_ASK_EARLY;
-            const heldIds = new Set(openPositions(mkt).map((p) => p.market_id));
+            // Same one-buy-per-bucket rule applies in endgame (all history).
+            const heldIds = new Set((mkt.positions ?? []).map((p) => p.market_id));
             const egCandidates: {
               o: OutcomeRow;
               p: number;
@@ -1154,6 +1271,31 @@ export async function monitorPositions(): Promise<number> {
 
       const endDate = mkt.event_end_date ?? "";
       const hoursLeft = hoursToResolution(endDate);
+
+      // Live-observation divergence: actual temp clearly misses the bucket ->
+      // close now (upper break any hour / lower break after the peak window).
+      const locInfo = LOCATIONS[mkt.city];
+      if (locInfo && metarDiverged(pos, metarTrend(mkt).latest, mkt.unit, localHourFor(locInfo))) {
+        const soldOk = await liveSellExitOrKeepOpen(pos, `${cityName} ${mkt.date} metar_diverged`, {
+          force: false,
+          expectedPrice: currentPrice,
+        });
+        if (!soldOk) continue;
+        const exitPrice = pos.exit_price ?? currentPrice;
+        const pnl = Math.round((exitPrice - entry) * pos.shares * 100) / 100;
+        balance += pos.cost + pnl;
+        pos.closed_at = new Date().toISOString();
+        pos.close_reason = "metar_diverged";
+        pos.exit_price = exitPrice;
+        pos.pnl = pnl;
+        pos.status = "closed";
+        closed += 1;
+        console.log(
+          `  [DIVERGE] ${cityName} ${mkt.date} — METAR ${metarTrend(mkt).latest} misses b${pos.bucket_low}-${pos.bucket_high} | exit $${exitPrice.toFixed(3)} | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
+        );
+        saveMarket(mkt);
+        continue;
+      }
 
       let takeProfit: number | null;
       if (hoursLeft < ENDGAME_HOURS && ENDGAME_SWEEP) {

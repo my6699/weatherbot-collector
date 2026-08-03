@@ -171,6 +171,18 @@ export const SELL_SLIPPAGE_TOL = envNum(`${P}SELL_SLIPPAGE_TOL`, 0.05);
 export const MAX_DEPTH_FRACTION = envNum(`${P}MAX_DEPTH_FRACTION`, 0.3);
 
 /**
+ * Maker-first execution ("尽可能用 Maker"): every buy/sell first rests a
+ * post-only GTC limit order at the touch (buy @ best bid, sell @ best ask) and
+ * polls up to CLOB_MAKER_WAIT_MS for a fill — no crossing the spread, and
+ * Polymarket pays no maker fee. If the order does not fill in time it is
+ * canceled and we fall back to the market order (taker), so a missed fill
+ * never blocks a decision. Stop-loss sells (force) skip straight to taker.
+ */
+export const CLOB_MAKER_MODE = process.env[`${P}CLOB_MAKER`] == null ? true : envTruthy(`${P}CLOB_MAKER`);
+export const CLOB_MAKER_WAIT_MS = envNum(`${P}CLOB_MAKER_WAIT_MS`, 8000);
+export const CLOB_MAKER_POLL_MS = envNum(`${P}CLOB_MAKER_POLL_MS`, 1500);
+
+/**
  * Stop-loss confirm logic: a price dip below the stop is first marked pending
  * and only executed if it persists on the next scan (avoids getting shaken out
  * by a transient quote in a thin book). If the price craters below this fraction
@@ -184,9 +196,15 @@ export const STOP_HARD_MULT = envNum(`${P}STOP_HARD_MULT`, 0.5);
  * sigma ABOVE the base, the weather is genuinely uncertain, so the stop is
  * widened to avoid shaking out positions on normal volatility. Anchored to the
  * bid at entry so low-price buckets are never stopped out instantly.
+ *
+ * REVERTED 2026-08-03 (backtest): settled stop-losses show 0% wrong-kill (20/20
+ * lost; holding to settlement lost $162 more), so the wide stop only let 9
+ * positions ride to a full loss (+$111 worse). Both multipliers are back to
+ * 0.8 (fixed stop). Re-enable by lowering STOP_MULT_WIDE once non-extreme
+ * window data shows positions being shaken out that would have won.
  */
 export const STOP_MULT = envNum(`${P}STOP_MULT`, 0.8);
-export const STOP_MULT_WIDE = envNum(`${P}STOP_MULT_WIDE`, 0.5);
+export const STOP_MULT_WIDE = envNum(`${P}STOP_MULT_WIDE`, 0.8);
 
 /**
  * Per-city, per-date exposure cap: the total COST of open positions for the
@@ -194,6 +212,16 @@ export const STOP_MULT_WIDE = envNum(`${P}STOP_MULT_WIDE`, 0.5);
  * black-swan from dragging the whole account into a deep drawdown.
  */
 export const MAX_CITY_COST_PER_DATE = envNum(`${P}MAX_CITY_COST_PER_DATE`, 40);
+
+/**
+ * METAR divergence exit: when the live observation clearly misses an open
+ * position's bucket, the bucket will not be the outcome — exit immediately
+ * instead of waiting for a stop-loss. Upper break (`metar > bucket_high +
+ * margin`) holds at any local hour; lower break only after the local peak
+ * window (ENDGAME_LOCAL_HOUR_MIN) since the daily max is still forming before.
+ */
+export const METAR_DIVERGE_MARGIN_C = envNum(`${P}METAR_DIVERGE_MARGIN_C`, 1.5);
+export const METAR_DIVERGE_MARGIN_F = envNum(`${P}METAR_DIVERGE_MARGIN_F`, 2.7);
 
 /**
  * Horizon-aware rolling forecast-bias correction (city × horizon × source).

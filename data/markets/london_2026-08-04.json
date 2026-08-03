@@ -48,11 +48,11 @@
       "forecast_src": "ensemble",
       "sigma": 2.4,
       "opened_at": "2026-08-03T03:58:38.957Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null
+      "status": "closed",
+      "pnl": -0.27,
+      "exit_price": 0.0365,
+      "close_reason": "forecast_changed",
+      "closed_at": "2026-08-03T04:46:09.308Z"
     }
   ],
   "actual_temp": null,
@@ -398,6 +398,66 @@
         "spread": 2.4,
         "gap": 1
       }
+    },
+    {
+      "ts": "2026-08-03T04:46:09.308Z",
+      "horizon": "D+1",
+      "hours_left": 31.2,
+      "ecmwf": 30.3,
+      "hrrr": 29.3,
+      "metar": null,
+      "best": 29.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.3,
+          "gfs_seamless": 29.3,
+          "icon_seamless": 27.4
+        },
+        "mean": 29.4,
+        "spread": 2,
+        "gap": 1
+      }
+    },
+    {
+      "ts": "2026-08-03T04:53:29.101Z",
+      "horizon": "D+1",
+      "hours_left": 31.1,
+      "ecmwf": 30.3,
+      "hrrr": 29.3,
+      "metar": null,
+      "best": 29.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.3,
+          "gfs_seamless": 29.3,
+          "icon_seamless": 27.4
+        },
+        "mean": 29.4,
+        "spread": 2,
+        "gap": 1
+      }
+    },
+    {
+      "ts": "2026-08-03T05:02:56.624Z",
+      "horizon": "D+1",
+      "hours_left": 31,
+      "ecmwf": 30.3,
+      "hrrr": 29.3,
+      "metar": null,
+      "best": 29.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.3,
+          "gfs_seamless": 29.3,
+          "icon_seamless": 27.4
+        },
+        "mean": 29.4,
+        "spread": 2,
+        "gap": 1
+      }
     }
   ],
   "market_snapshots": [
@@ -485,6 +545,21 @@
       "ts": "2026-08-03T03:58:38.957Z",
       "top_bucket": "29-29C",
       "top_price": 0.375
+    },
+    {
+      "ts": "2026-08-03T04:46:09.308Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.38
+    },
+    {
+      "ts": "2026-08-03T04:53:29.101Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.375
+    },
+    {
+      "ts": "2026-08-03T05:02:56.624Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.375
     }
   ],
   "all_outcomes": [
@@ -508,11 +583,11 @@
         26,
         26
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 1514
+      "volume": 2152
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 4?",
@@ -521,11 +596,11 @@
         27,
         27
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
-      "volume": 3139
+      "volume": 3368
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 4?",
@@ -534,11 +609,11 @@
         28,
         28
       ],
-      "bid": 0.265,
-      "ask": 0.265,
-      "price": 0.265,
+      "bid": 0.255,
+      "ask": 0.255,
+      "price": 0.255,
       "spread": 0,
-      "volume": 1517
+      "volume": 1564
     },
     {
       "question": "Will the highest temperature in London be 29°C on August 4?",
@@ -551,7 +626,7 @@
       "ask": 0.375,
       "price": 0.375,
       "spread": 0,
-      "volume": 3710
+      "volume": 3750
     },
     {
       "question": "Will the highest temperature in London be 30°C on August 4?",
@@ -560,11 +635,11 @@
         30,
         30
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.275,
+      "ask": 0.275,
+      "price": 0.275,
       "spread": 0,
-      "volume": 3269
+      "volume": 3379
     },
     {
       "question": "Will the highest temperature in London be 31°C on August 4?",
@@ -573,11 +648,11 @@
         31,
         31
       ],
-      "bid": 0.0355,
-      "ask": 0.0355,
-      "price": 0.0355,
+      "bid": 0.038,
+      "ask": 0.038,
+      "price": 0.038,
       "spread": 0,
-      "volume": 1394
+      "volume": 1789
     },
     {
       "question": "Will the highest temperature in London be 32°C on August 4?",
