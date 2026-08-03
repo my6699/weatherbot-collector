@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-08-03T12:00:00Z",
   "hours_at_discovery": 32.7,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "3278391",
     "question": "Will the highest temperature in Seattle be between 74-75°F on August 3?",
@@ -458,6 +458,26 @@
         "spread": 2.2,
         "gap": 2
       }
+    },
+    {
+      "ts": "2026-08-03T11:48:08.165Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 75,
+      "hrrr": 76,
+      "metar": 53,
+      "best": 74.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 75,
+          "gfs_seamless": 76,
+          "icon_seamless": 73
+        },
+        "mean": 74.9,
+        "spread": 1.9,
+        "gap": 1
+      }
     }
   ],
   "market_snapshots": [
@@ -560,6 +580,11 @@
       "ts": "2026-08-03T07:50:54.411Z",
       "top_bucket": "76-77F",
       "top_price": 0.525
+    },
+    {
+      "ts": "2026-08-03T11:48:08.165Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.605
     }
   ],
   "all_outcomes": [
@@ -570,11 +595,11 @@
         -999,
         67
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 801
+      "volume": 1504
     },
     {
       "question": "Will the highest temperature in Seattle be between 68-69°F on August 3?",
@@ -583,11 +608,11 @@
         68,
         69
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 2220
+      "volume": 2426
     },
     {
       "question": "Will the highest temperature in Seattle be between 70-71°F on August 3?",
@@ -596,11 +621,11 @@
         70,
         71
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 484
+      "volume": 490
     },
     {
       "question": "Will the highest temperature in Seattle be between 72-73°F on August 3?",
@@ -609,11 +634,11 @@
         72,
         73
       ],
-      "bid": 0.0435,
-      "ask": 0.0435,
-      "price": 0.0435,
+      "bid": 0.037,
+      "ask": 0.037,
+      "price": 0.037,
       "spread": 0,
-      "volume": 716
+      "volume": 738
     },
     {
       "question": "Will the highest temperature in Seattle be between 74-75°F on August 3?",
@@ -622,11 +647,11 @@
         74,
         75
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 1117
+      "volume": 1196
     },
     {
       "question": "Will the highest temperature in Seattle be between 76-77°F on August 3?",
@@ -635,11 +660,11 @@
         76,
         77
       ],
-      "bid": 0.525,
-      "ask": 0.525,
-      "price": 0.525,
+      "bid": 0.605,
+      "ask": 0.605,
+      "price": 0.605,
       "spread": 0,
-      "volume": 10867
+      "volume": 11247
     },
     {
       "question": "Will the highest temperature in Seattle be between 78-79°F on August 3?",
@@ -648,11 +673,11 @@
         78,
         79
       ],
-      "bid": 0.3,
-      "ask": 0.3,
-      "price": 0.3,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 1533
+      "volume": 2109
     },
     {
       "question": "Will the highest temperature in Seattle be between 80-81°F on August 3?",
@@ -661,11 +686,11 @@
         80,
         81
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 2032
+      "volume": 2190
     },
     {
       "question": "Will the highest temperature in Seattle be between 82-83°F on August 3?",
@@ -674,11 +699,11 @@
         82,
         83
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 381
+      "volume": 462
     },
     {
       "question": "Will the highest temperature in Seattle be between 84-85°F on August 3?",
@@ -687,11 +712,11 @@
         84,
         85
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 338
+      "volume": 461
     },
     {
       "question": "Will the highest temperature in Seattle be 86°F or higher on August 3?",
