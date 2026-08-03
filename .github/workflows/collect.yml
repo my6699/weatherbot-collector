@@ -40,6 +40,9 @@ jobs:
           # Free LLM risk advisor (Google Gemini). Optional: without the secret
           # the bot runs unchanged (LLM advisories are skipped, fail-open).
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Second-opinion LLM (DeepSeek). Optional: without it the bot falls
+          # back to a single-model advisory.
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: npm run scan:once
 
       - name: Commit and push collected data
