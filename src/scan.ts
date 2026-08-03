@@ -45,6 +45,9 @@ import {
   SCAN_INTERVAL,
   SELL_SLIPPAGE_TOL,
   STOP_HARD_MULT,
+  STOP_MULT,
+  STOP_MULT_WIDE,
+  MAX_CITY_COST_PER_DATE,
   TRADE_D0,
   BIAS_ENABLED,
 } from "./config.js";
@@ -273,6 +276,8 @@ interface BuyExecCtx {
   unitSym: string;
   /** Max entry price allowed (regular: MAX_PRICE, endgame: ENDGAME_MAX_ASK). */
   maxPrice: number;
+  /** Sigma inflated above the city's base -> widen the stop-loss. */
+  wideStop: boolean;
 }
 
 /**
@@ -384,6 +389,29 @@ async function executeBuy(
     }
   }
   if (!proceed) return false;
+
+  // Per-city, per-date exposure cap: total COST of open positions for the same
+  // (city, date) must stay under MAX_CITY_COST_PER_DATE. Prevents one city's
+  // weather black-swan (or a streak of bad buckets) from sinking the account.
+  const cityDateCost =
+    (mkt.positions ?? [])
+      .filter((p) => p.status === "open")
+      .reduce((s, p) => s + (p.cost || 0), 0) + signal.cost;
+  if (cityDateCost > MAX_CITY_COST_PER_DATE) {
+    console.log(
+      `  [CITY CAP] ${ctx.locName} ${ctx.date} — ${cityDateCost.toFixed(2)} > $${MAX_CITY_COST_PER_DATE} cap, skip`,
+    );
+    return false;
+  }
+
+  // Dynamic (sigma-aware) stop-loss, anchored to the bid at entry so low-price
+  // buckets are never stopped out instantly. Sigma inflated above the city's
+  // base (model disagreement) widens the stop to survive normal volatility.
+  if (signal.stop_price == null) {
+    const mult = ctx.wideStop ? STOP_MULT_WIDE : STOP_MULT;
+    signal.stop_price =
+      Math.round(Math.min(signal.entry_price * mult, signal.bid_at_entry * mult) * 1000) / 1000;
+  }
 
   appendPosition(mkt, signal);
   const bucketLabel = `${signal.bucket_low}-${signal.bucket_high}${ctx.unitSym}`;
@@ -498,6 +526,9 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
 
       const forecastTemp = snap.best ?? null;
       const bestSource = snap.best_source ?? null;
+      // City's calibrated (base) sigma — used for the horizon scale, the
+      // wide-stop decision, and the endgame stop too.
+      const baseSigma = getSigma(citySlug, bestSource ?? "ecmwf");
 
       for (const pos of openPositions(mkt)) {
         let currentPrice: number | null = null;
@@ -516,7 +547,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           // Thin bucket markets have wide bid/ask spreads; anchor the stop to the
           // entry BID (what we could actually exit at) so the spread doesn't
           // instantly trigger a stop right after opening.
-          const stop = pos.stop_price ?? Math.min(entry * 0.8, pos.bid_at_entry * 0.8);
+          const stop = pos.stop_price ?? Math.min(entry * STOP_MULT, pos.bid_at_entry * STOP_MULT);
 
           if (currentPrice >= entry * 1.2 && stop < entry) {
             pos.stop_price = entry;
@@ -620,7 +651,6 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             `  [CONSENSUS SKIP] ${loc.name} ${date} — ECMWF vs GFS gap ${ens.gap.toFixed(1)}°${unitSym} > ${maxGap.toFixed(1)}°`,
           );
         } else {
-          const baseSigma = getSigma(citySlug, bestSource ?? "ecmwf");
           // The historical sigma (calibrated over all horizons) is too fat near
           // resolution. The live ensemble spread is the truest uncertainty signal:
           // use it as the sigma, floored at half the historical value so edges
@@ -802,6 +832,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               horizon,
               unitSym,
               maxPrice: MAX_PRICE,
+              wideStop: sigma > baseSigma,
             });
             if (filled) {
               balance -= signal.cost;
@@ -943,6 +974,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
                 horizon,
                 unitSym,
                 maxPrice: egMaxAsk,
+                wideStop: lockBuf > baseSigma,
               });
               if (filled) {
                 balance -= signal.cost;
@@ -1117,7 +1149,7 @@ export async function monitorPositions(): Promise<number> {
       const entry = pos.entry_price;
       // Anchor stop to entry BID (see note in scanAndUpdate) to avoid the
       // bid/ask spread instantly triggering a stop on thin bucket markets.
-      let stop = pos.stop_price ?? Math.min(entry * 0.8, pos.bid_at_entry * 0.8);
+      let stop = pos.stop_price ?? Math.min(entry * STOP_MULT, pos.bid_at_entry * STOP_MULT);
       const cityName = LOCATIONS[mkt.city]?.name ?? mkt.city;
 
       const endDate = mkt.event_end_date ?? "";

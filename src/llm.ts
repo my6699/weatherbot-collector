@@ -5,7 +5,9 @@ import {
   LLM_ENABLED,
   LLM_MAX_CALLS_PER_SCAN,
   LLM_MODEL,
+  LLM_MODEL2,
   LLM_PROVIDER,
+  LLM_PROVIDER2,
   LLM_TIMEOUT_MS,
   LOCATIONS,
 } from "./config.js";
@@ -24,10 +26,10 @@ interface ProviderCfg {
   model: string;
 }
 
-function providerConfig(): ProviderCfg | null {
+function providerCfg(providerName: string, modelOverride: string): ProviderCfg | null {
   if (!LLM_ENABLED) return null;
-  const provider = LLM_PROVIDER.toLowerCase();
-  const model = LLM_MODEL.trim();
+  const provider = providerName.toLowerCase();
+  const model = modelOverride.trim();
   const keyOf = (env: string): string => process.env[env]?.trim() ?? "";
   switch (provider) {
     case "gemini":
@@ -45,6 +47,14 @@ function providerConfig(): ProviderCfg | null {
         base: "https://api.groq.com/openai/v1",
         key: keyOf("GROQ_API_KEY"),
         model: model || "llama-3.3-70b-versatile",
+      };
+    case "deepseek":
+      if (!process.env.DEEPSEEK_API_KEY) return null;
+      return {
+        provider,
+        base: "https://api.deepseek.com/v1",
+        key: keyOf("DEEPSEEK_API_KEY"),
+        model: model || "deepseek-chat",
       };
     case "openrouter":
       if (!process.env.OPENROUTER_API_KEY) return null;
@@ -67,8 +77,18 @@ function providerConfig(): ProviderCfg | null {
   }
 }
 
+/** Primary provider (LLM_PROVIDER / LLM_MODEL). */
+function primaryCfg(): ProviderCfg | null {
+  return providerCfg(LLM_PROVIDER, LLM_MODEL);
+}
+
+/** Optional 2nd-opinion provider (LLM_PROVIDER2 / LLM_MODEL2), null when off. */
+function secondaryCfg(): ProviderCfg | null {
+  return LLM_PROVIDER2.trim() !== "" ? providerCfg(LLM_PROVIDER2, LLM_MODEL2) : null;
+}
+
 export function llmAvailable(): boolean {
-  return providerConfig() != null;
+  return primaryCfg() != null;
 }
 
 let warned = false;
@@ -93,8 +113,9 @@ export async function llmChat(
   system: string,
   user: string,
   temperature = 0.2,
+  cfgOverride?: ProviderCfg,
 ): Promise<string | null> {
-  const cfg = providerConfig();
+  const cfg = cfgOverride ?? primaryCfg();
   if (!cfg) {
     warnUnavailable();
     return null;
@@ -143,15 +164,17 @@ function parseJsonReply(raw: string): unknown | null {
 /* Per-scan call budget (protect free-tier rate limits)                */
 /* ------------------------------------------------------------------ */
 
-let callBudget = 0;
+/** Budget is tracked per provider so the 2nd opinion never starves the primary. */
+const callBudget: Record<string, number> = {};
 
 export function resetLlmCallBudget(): void {
-  callBudget = 0;
+  for (const k of Object.keys(callBudget)) delete callBudget[k];
 }
 
-function llmCallAllowed(): boolean {
-  if (callBudget >= LLM_MAX_CALLS_PER_SCAN) return false;
-  callBudget += 1;
+function llmCallAllowed(provider: string): boolean {
+  const used = callBudget[provider] ?? 0;
+  if (used >= LLM_MAX_CALLS_PER_SCAN) return false;
+  callBudget[provider] = used + 1;
   return true;
 }
 
@@ -199,15 +222,13 @@ const TRADE_SYSTEM = `你是 Polymarket 天气市场的量化交易风控顾问�
 3. 仅在发现明确异常时 skip：例如预报与市场极端背离、成交量极低、买价/卖价差异常、终局观测与桶不匹配、同一市场多个桶同时出现异常价、问题文本与城市/站点不符。
 4. 不要因为正常波动或保守情绪而 skip。不要输出 JSON 以外的任何文字。`;
 
-export async function askTradeAdvisor(
-  ctx: MarketTradeContext,
-): Promise<{ verdicts: TradeVerdict[] } | null> {
-  if (!llmAvailable()) {
-    warnUnavailable();
-    return null;
-  }
-  if (!llmCallAllowed()) return null;
+export interface TradeAdvisorResult {
+  verdicts: TradeVerdict[];
+  /** 2nd-opinion model's raw verdicts (when configured AND available). */
+  secondary?: { provider: string; verdicts: TradeVerdict[] } | null;
+}
 
+function buildTradePrompt(ctx: MarketTradeContext): string {
   const rows = ctx.candidates
     .map(
       (c, i) =>
@@ -215,7 +236,7 @@ export async function askTradeAdvisor(
     )
     .join("\n");
 
-  const user = `市场：${ctx.city_name} ${ctx.date}（单位 ${ctx.unit}）
+  return `市场：${ctx.city_name} ${ctx.date}（单位 ${ctx.unit}）
 策略：${ctx.strategy}
 预报：${ctx.forecast ?? "n/a"}${ctx.unit}（来源 ${ctx.forecast_source}）
 模型分歧 gap：${ctx.ensemble_gap ?? "n/a"}${ctx.unit}｜模型离散 spread：${ctx.ensemble_spread ?? "n/a"}${ctx.unit}｜sigma：${ctx.sigma}
@@ -224,16 +245,24 @@ export async function askTradeAdvisor(
 候选（索引与输出数组一一对应）：
 ${rows}
 请逐条审查，输出 JSON 数组。`;
+}
 
-  const raw = await llmChat(TRADE_SYSTEM, user, 0.1);
+/** Ask ONE model for per-candidate verdicts. Null on unavailable / budget /
+ *  parse failure (fail-open, caller decides what null means). */
+async function askOneModel(
+  cfg: ProviderCfg,
+  ctx: MarketTradeContext,
+): Promise<TradeVerdict[] | null> {
+  if (!llmCallAllowed(cfg.provider)) return null;
+  const raw = await llmChat(TRADE_SYSTEM, buildTradePrompt(ctx), 0.1, cfg);
   if (!raw) return null;
   const parsed = parseJsonReply(raw);
   if (!Array.isArray(parsed)) {
-    console.warn(`  [LLM] advisor reply is not a JSON array: ${raw.slice(0, 120)}`);
+    console.warn(`  [LLM] ${cfg.provider} advisor reply is not a JSON array: ${raw.slice(0, 120)}`);
     return null;
   }
   // Fail-open: missing/malformed entries default to proceed.
-  const verdicts: TradeVerdict[] = ctx.candidates.map((_, i) => {
+  return ctx.candidates.map((_, i) => {
     const row = parsed[i];
     if (!row || typeof row !== "object") {
       return { action: "proceed" as const, risk: "low" as const, reason: "解析缺失，默认放行" };
@@ -245,7 +274,47 @@ ${rows}
       reason: typeof r.reason === "string" ? (r.reason as string) : "",
     };
   });
-  return { verdicts };
+}
+
+const RISK_RANK: Record<TradeVerdict["risk"], number> = { low: 0, medium: 1, high: 2 };
+
+export async function askTradeAdvisor(
+  ctx: MarketTradeContext,
+): Promise<TradeAdvisorResult | null> {
+  const priCfg = primaryCfg();
+  if (!priCfg) {
+    warnUnavailable();
+    return null;
+  }
+
+  const priVerdicts = await askOneModel(priCfg, ctx);
+  if (!priVerdicts) return null;
+
+  // 2nd opinion (independent model, e.g. Groq Llama). Optional: if unset or
+  // failed, the primary verdict alone decides (behavior unchanged).
+  let secondary: TradeAdvisorResult["secondary"] = null;
+  const secCfg = secondaryCfg();
+  if (secCfg) {
+    const secVerdicts = await askOneModel(secCfg, ctx);
+    if (secVerdicts) {
+      secondary = { provider: secCfg.provider, verdicts: secVerdicts };
+      console.log(`  [LLM 2ND] ${secCfg.provider} reviewed ${ctx.city_name} ${ctx.date} (${ctx.strategy})`);
+    }
+  }
+
+  // Merge: buy only when BOTH models agree. Any skip vetoes; risk takes the
+  // higher of the two; reasons are joined so the log shows both viewpoints.
+  const fallback: TradeVerdict = { action: "proceed", risk: "low", reason: "解析缺失，默认放行" };
+  const verdicts: TradeVerdict[] = ctx.candidates.map((_, i) => {
+    const p = priVerdicts[i] ?? fallback;
+    if (!secondary) return p;
+    const s = secondary.verdicts[i] ?? p;
+    const action = p.action === "skip" || s.action === "skip" ? ("skip" as const) : ("proceed" as const);
+    const risk = RISK_RANK[p.risk] >= RISK_RANK[s.risk] ? p.risk : s.risk;
+    const reason = `${priCfg.provider}: ${p.reason}${s.reason ? ` | ${secondary.provider}: ${s.reason}` : ""}`;
+    return { action, risk, reason };
+  });
+  return { verdicts, secondary };
 }
 
 /* ------------------------------------------------------------------ */
@@ -373,11 +442,12 @@ const ADVICE_SYSTEM =
 export async function askAdviceNarration(
   info: AdviceNarrationInfo,
 ): Promise<string | null> {
-  if (!llmAvailable()) {
+  const priCfg = primaryCfg();
+  if (!priCfg) {
     warnUnavailable();
     return null;
   }
-  if (!llmCallAllowed()) return null;
+  if (!llmCallAllowed(priCfg.provider)) return null;
 
   const user = `市场上有一个预测：「${info.city} ${info.date} 的最高气温」。
 我们下注：最高温落在 ${info.bucket}。气象模型预报 ${info.forecast ?? "未知"}${info.unit}。
@@ -386,5 +456,5 @@ export async function askAdviceNarration(
 
 请用 2-3 句话、完全大白话给完全不懂金融的人解释：1) 这是什么机会；2) 为什么买；3) 最大的风险是什么；4) 什么时候见分晓。100 字以内。`;
 
-  return await llmChat(ADVICE_SYSTEM, user, 0.3);
+  return await llmChat(ADVICE_SYSTEM, user, 0.3, priCfg);
 }

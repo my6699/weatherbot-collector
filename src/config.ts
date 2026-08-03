@@ -179,6 +179,23 @@ export const MAX_DEPTH_FRACTION = envNum(`${P}MAX_DEPTH_FRACTION`, 0.3);
 export const STOP_HARD_MULT = envNum(`${P}STOP_HARD_MULT`, 0.5);
 
 /**
+ * Dynamic (sigma-aware) stop-loss: the tight multiplier applies when the trade's
+ * sigma is <= the city's base (calibrated) sigma; when model disagreement pushes
+ * sigma ABOVE the base, the weather is genuinely uncertain, so the stop is
+ * widened to avoid shaking out positions on normal volatility. Anchored to the
+ * bid at entry so low-price buckets are never stopped out instantly.
+ */
+export const STOP_MULT = envNum(`${P}STOP_MULT`, 0.8);
+export const STOP_MULT_WIDE = envNum(`${P}STOP_MULT_WIDE`, 0.5);
+
+/**
+ * Per-city, per-date exposure cap: the total COST of open positions for the
+ * same (city, date) must stay below this amount. Prevents one city's weather
+ * black-swan from dragging the whole account into a deep drawdown.
+ */
+export const MAX_CITY_COST_PER_DATE = envNum(`${P}MAX_CITY_COST_PER_DATE`, 40);
+
+/**
  * Horizon-aware rolling forecast-bias correction (city × horizon × source).
  * Computed from resolved markets (mean signed error, forecast - actual) and
  * stored in data/bias.json; the weekly LLM review validates it.
@@ -258,13 +275,22 @@ export const EXIT_SPREAD_FRAC = envNum(`${P}EXIT_SPREAD_FRAC`, 0.5);
  */
 export const LLM_ENABLED =
   process.env[`${P}LLM_ENABLED`] == null ? true : envTruthy(`${P}LLM_ENABLED`);
-/** Provider: "gemini" | "groq" | "openrouter" | "custom". */
+/** Provider: "gemini" | "groq" | "deepseek" | "openrouter" | "custom". */
 export const LLM_PROVIDER = envStr(`${P}LLM_PROVIDER`, "gemini");
 /** Override the provider's default (free) model, e.g. "gemini-2.5-flash". */
 export const LLM_MODEL = envStr(`${P}LLM_MODEL`, "");
+/**
+ * Optional 2nd-opinion provider (same values as LLM_PROVIDER, e.g. "deepseek").
+ * When set AND its API key is present, every buy-time risk review is sent to
+ * BOTH models independently and merged with "buy only when both agree" logic
+ * (either model's skip vetoes under LLM_GATE; otherwise logged). Empty = off.
+ */
+export const LLM_PROVIDER2 = envStr(`${P}LLM_PROVIDER2`, "");
+/** Override the 2nd provider's default (free) model. */
+export const LLM_MODEL2 = envStr(`${P}LLM_MODEL2`, "");
 /** When true, an LLM "skip" verdict vetoes the buy. Default false = log only. */
 export const LLM_GATE = envTruthy(`${P}LLM_GATE`);
-/** Max LLM calls per scan (free tiers are rate-limited). */
+/** Max LLM calls per scan per provider (free tiers are rate-limited). */
 export const LLM_MAX_CALLS_PER_SCAN = envNum(`${P}LLM_MAX_CALLS_PER_SCAN`, 8);
 /** LLM request timeout (ms) — AI responses can be slow. */
 export const LLM_TIMEOUT_MS = envNum(`${P}LLM_TIMEOUT_MS`, 30000);
