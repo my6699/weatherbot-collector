@@ -6,10 +6,10 @@
   "station": "CYYZ",
   "event_end_date": "2026-08-03T12:00:00Z",
   "hours_at_discovery": 32.7,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -503,6 +503,26 @@
         "spread": 1.8,
         "gap": 3.6
       }
+    },
+    {
+      "ts": "2026-08-03T20:40:33.011Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 22.6,
+      "hrrr": 26.4,
+      "metar": 27,
+      "best": 24.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 22.6,
+          "gfs_seamless": 26.4,
+          "icon_seamless": 26.3
+        },
+        "mean": 24.5,
+        "spread": 1.9,
+        "gap": 3.8
+      }
     }
   ],
   "market_snapshots": [
@@ -630,6 +650,11 @@
       "ts": "2026-08-03T19:00:16.920Z",
       "top_bucket": "26-26C",
       "top_price": 0.565
+    },
+    {
+      "ts": "2026-08-03T20:40:33.011Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.965
     }
   ],
   "all_outcomes": [
@@ -696,7 +721,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3882
+      "volume": 4023
     },
     {
       "question": "Will the highest temperature in Toronto be 26°C on August 3?",
@@ -705,11 +730,11 @@
         26,
         26
       ],
-      "bid": 0.565,
-      "ask": 0.565,
-      "price": 0.565,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 8795
+      "volume": 9195
     },
     {
       "question": "Will the highest temperature in Toronto be 27°C on August 3?",
@@ -718,11 +743,11 @@
         27,
         27
       ],
-      "bid": 0.28,
-      "ask": 0.28,
-      "price": 0.28,
+      "bid": 0.965,
+      "ask": 0.965,
+      "price": 0.965,
       "spread": 0,
-      "volume": 4008
+      "volume": 4243
     },
     {
       "question": "Will the highest temperature in Toronto be 28°C on August 3?",
@@ -731,11 +756,11 @@
         28,
         28
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 2424
+      "volume": 3002
     },
     {
       "question": "Will the highest temperature in Toronto be 29°C on August 3?",
