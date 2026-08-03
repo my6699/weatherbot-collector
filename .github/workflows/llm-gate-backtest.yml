@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run LLM gate backtest (dual AI: Gemini + DeepSeek)
+      - name: "Run LLM gate backtest (dual AI: Gemini + DeepSeek)"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
