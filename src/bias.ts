@@ -126,7 +126,11 @@ export function getBias(city: string, horizon: string, source: string): number {
   return Math.round(capped * shrink * 1000) / 1000;
 }
 
-/** Apply the correction: forecast + bias (0 when no correction applies). */
+/** Apply the correction: forecast - bias (0 when no correction applies).
+ *  bias = mean(forecast - actual), so subtracting it pulls the forecast toward
+ *  the actual. (Previously `forecast + bias` here pushed the forecast in the
+ *  WRONG direction — config.ts recorded avg error 1.76° -> 3.01° when enabled,
+ *  which is the signature of this sign error.) */
 export function applyBias(
   forecast: number,
   city: string,
@@ -134,5 +138,5 @@ export function applyBias(
   source: string,
 ): number {
   const b = getBias(city, horizon, source);
-  return b === 0 ? forecast : Math.round((forecast + b) * 100) / 100;
+  return b === 0 ? forecast : Math.round((forecast - b) * 100) / 100;
 }

@@ -43,6 +43,12 @@ jobs:
           # Second-opinion LLM (DeepSeek). Optional: without it the bot falls
           # back to a single-model advisory.
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          # Enable per-city rolling forecast bias correction (src/bias.ts).
+          # Fixed 2026-08-03: applyBias had an inverted sign (forecast + bias
+          # instead of forecast - bias), which pushed predictions AWAY from
+          # actual — that's why it degraded accuracy when enabled before.
+          # Backtest: per-city correction raises hit rate 18.3% -> 28.3% (LOO).
+          WEATHERBOT_BIAS_ENABLED: "true"
         run: npm run scan:once
 
       - name: Commit and push collected data

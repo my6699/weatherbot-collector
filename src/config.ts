@@ -47,7 +47,10 @@ export const TRADE_D0 = envTruthy(`${P}TRADE_D0`);
 export const MAX_PRICE = envNum(`${P}MAX_PRICE`, 0.45);
 export const MIN_VOLUME = envNum(`${P}MIN_VOLUME`, 500);
 export const MIN_HOURS = envNum(`${P}MIN_HOURS`, 2.0);
-export const MAX_HOURS = envNum(`${P}MAX_HOURS`, 72.0);
+/** Lowered 72→24 (2026-08-03 audit): only trade D+0/D+1. Beyond 24h the model error
+ *  dominates and the orderbook is too thin/noisy to price-stop — settled misses
+ *  clustered at horizon ~31h / entry ~$0.19. */
+export const MAX_HOURS = envNum(`${P}MAX_HOURS`, 24.0);
 export const KELLY_FRACTION = envNum(`${P}KELLY_FRACTION`, 0.25);
 export const MAX_SLIPPAGE = envNum(`${P}MAX_SLIPPAGE`, 0.03);
 export const SCAN_INTERVAL = envNum(`${P}SCAN_INTERVAL`, 3600);
@@ -228,17 +231,26 @@ export const METAR_DIVERGE_MARGIN_F = envNum(`${P}METAR_DIVERGE_MARGIN_F`, 2.7);
  * Computed from resolved markets (mean signed error, forecast - actual) and
  * stored in data/bias.json; the weekly LLM review validates it.
  *
- * DEFAULT OFF (2026-08-02): with ~2 days of data the per-city signal is
- * dominated by a handful of correlated snapshots and splits direction across
- * cities (Dallas/Tel Aviv/Toronto forecast high, Tokyo/Munich/Singapore low),
- * so auto-applying it degraded accuracy (avg error 1.76° -> 3.01° in backtest).
- * The table + LLM review stay active; flip WEATHERBOT_BIAS_ENABLED=true once
- * each city has >=5 independent resolved days and the sampler is tightened.
+ * ENABLED in CI (2026-08-03): collect.yml sets WEATHERBOT_BIAS_ENABLED=true.
+ * The per-city signal splits BOTH directions (Dallas/Tel Aviv/Toronto forecast
+ * high, Tokyo/Munich/Singapore low), which is why a GLOBAL correction fails
+ * but per-city correction works (backtest: 18.3% -> 28.3% LOO hit rate).
+ *
+ * History: was DEFAULT OFF because applying it DEGRADED accuracy (1.76° ->
+ * 3.01° avg error) — but that was an inverted-sign bug in applyBias (forecast
+ * + bias instead of forecast - bias), fixed 2026-08-03 in src/bias.ts. With
+ * the fix, per-city bias correction pulls predictions toward actual.
  */
 export const BIAS_ENABLED = envTruthy(`${P}BIAS_ENABLED`);
 /** Min resolved samples per (city,horizon,source) before the bias is applied. */
 export const BIAS_MIN_N = envNum(`${P}BIAS_MIN_N`, 2);
-/** Magnitude cap of a single correction in °C (F locations use ×1.8). */
+/** Magnitude cap of a single correction in °C (F locations use ×1.8).
+ *  Kept at 2.0 (2026-08-03): tested 2.5 in verify-bias-fix.ts — no net gain.
+ *  Tel Aviv (+3.42 bias) still missed at cap 2.5 (needs 3.5+ to reach its
+ *  actual bucket, too risky), while Miami (-5.0 anomalous bias) got
+ *  over-corrected (error +0.1°→+1.0°, survived only by tied p). cap 2.0
+ *  protects Miami's outlier bias while still rescuing it; extreme outliers
+ *  (Tokyo/Tel Aviv) are accepted as un-rescuable random variance. */
 export const BIAS_MAX_C = envNum(`${P}BIAS_MAX_C`, 2.0);
 /** Bias is shrunk toward 0 below this sample count (guard against tiny samples). */
 export const BIAS_SHRINK_N = envNum(`${P}BIAS_SHRINK_N`, 4);

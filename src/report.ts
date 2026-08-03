@@ -1,5 +1,6 @@
 import { LOCATIONS } from "./config.js";
 import { loadAllMarkets, loadState } from "./storage.js";
+import { inBucket } from "./math.js";
 
 export function printStatus(): void {
   const state = loadState();
@@ -60,7 +61,11 @@ export function printStatus(): void {
 
 export function printReport(): void {
   const markets = loadAllMarkets();
-  const resolved = markets.filter((m) => m.status === "resolved" && m.pnl != null);
+  // A market counts as "settled" for reporting once we have the true actual_temp —
+  // this includes markets closed early (stop / forecast_change / metarDiverged)
+  // whose market-level pnl is null but whose positions still resolved against
+  // the actual. (2026-08-03 audit)
+  const resolved = markets.filter((m) => m.actual_temp != null);
 
   console.log(`\n${"=".repeat(55)}`);
   console.log("  WEATHERBET — FULL REPORT");
@@ -71,24 +76,61 @@ export function printReport(): void {
     return;
   }
 
-  const totalPnl = resolved.reduce((s, m) => s + (m.pnl ?? 0), 0);
-  const winList = resolved.filter((m) => m.resolved_outcome === "win");
-  const lossList = resolved.filter((m) => m.resolved_outcome === "loss");
+  // PnL lives on positions (early-closed markets have null market-level pnl), so
+  // sum across all positions on settled markets for the true realized PnL.
+  let totalPnl = 0;
+  for (const m of resolved) {
+    const positions = m.positions ?? (m.position ? [m.position] : []);
+    for (const p of positions) totalPnl += p.pnl ?? 0;
+  }
 
-  console.log(`\n  Total resolved: ${resolved.length}`);
-  console.log(`  Wins:           ${winList.length} | Losses: ${lossList.length}`);
-  console.log(`  Win rate:       ${((winList.length / resolved.length) * 100).toFixed(0)}%`);
+  // Position-level hit rate (true prediction accuracy, 2026-08-03 audit): a market
+  // may hold several buckets; judge each position by actual_temp. This replaces
+  // resolved_outcome (market-level, null for markets closed early via stop/forecast-
+  // change) which under-counted wins and overstated losses.
+  let posWins = 0;
+  let posLosses = 0;
+  for (const m of resolved) {
+    if (m.actual_temp == null) continue;
+    const positions = m.positions ?? (m.position ? [m.position] : []);
+    for (const p of positions) {
+      if (p.bucket_low == null || p.bucket_high == null) continue;
+      if (inBucket(m.actual_temp, p.bucket_low, p.bucket_high)) posWins += 1;
+      else posLosses += 1;
+    }
+  }
+  const posTotal = posWins + posLosses;
+
+  console.log(`\n  Total resolved markets: ${resolved.length}`);
+  if (posTotal) {
+    console.log(
+      `  Position hits:  ${posWins} / ${posTotal}  (hit rate ${((posWins / posTotal) * 100).toFixed(1)}%)`,
+    );
+  } else {
+    console.log("  No settled positions with actual_temp yet.");
+  }
   console.log(`  Total PnL:      ${totalPnl >= 0 ? "+" : ""}${totalPnl.toFixed(2)}`);
 
   console.log("\n  By city:");
   const citySet = [...new Set(resolved.map((m) => m.city))].sort();
   for (const city of citySet) {
     const group = resolved.filter((m) => m.city === city);
-    const w = group.filter((m) => m.resolved_outcome === "win").length;
-    const pnl = group.reduce((s, m) => s + (m.pnl ?? 0), 0);
+    let w = 0;
+    let n = 0;
+    let pnl = 0;
+    for (const m of group) {
+      const positions = m.positions ?? (m.position ? [m.position] : []);
+      for (const p of positions) {
+        if (m.actual_temp != null && p.bucket_low != null && p.bucket_high != null) {
+          if (inBucket(m.actual_temp, p.bucket_low, p.bucket_high)) w += 1;
+          n += 1;
+        }
+        pnl += p.pnl ?? 0;
+      }
+    }
     const name = LOCATIONS[city]?.name ?? city;
     console.log(
-      `    ${name.padEnd(16, " ")} ${w}/${group.length} (${((w / group.length) * 100).toFixed(0)}%)  PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
+      `    ${name.padEnd(16, " ")} ${w}/${n} (${n ? ((w / n) * 100).toFixed(0) : 0}%)  PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
     );
   }
 

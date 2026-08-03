@@ -660,6 +660,15 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           // Thin bucket markets have wide bid/ask spreads; anchor the stop to the
           // entry BID (what we could actually exit at) so the spread doesn't
           // instantly trigger a stop right after opening.
+          // Price-stop gate (2026-08-03 audit): only fire the price-based stop on
+          // D+0 (hoursLeft<24) once the daily max has formed (local >=14h). Before
+          // then the orderbook is information-noise ("current temp low" != "daily
+          // max low") and price-stops kill winning tickets (Ankara 7-31: stopped
+          // at local 09:08 on an 18°C obs, actual max was 26°C — a hit). D+1/D+2
+          // rely on forecast_changed + metarDiverged instead. hardCrash always fires.
+          const hoursLeft = hoursToResolution(mkt.event_end_date);
+          const localHour = localHourFor(loc);
+          const priceStopAllowed = hoursLeft < 24 && localHour >= ENDGAME_LOCAL_HOUR_MIN;
           const stop = pos.stop_price ?? Math.min(entry * STOP_MULT, pos.bid_at_entry * STOP_MULT);
 
           if (currentPrice >= entry * 1.2 && stop < entry) {
@@ -668,10 +677,16 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           }
 
           if (currentPrice <= stop) {
+            const hardCrash = currentPrice < entry * STOP_HARD_MULT;
+            if (!priceStopAllowed && !hardCrash) {
+              console.log(
+                `  [STOP HOLD] ${loc.name} ${date} — bid $${currentPrice.toFixed(3)} below stop $${stop.toFixed(3)} but daily max not formed (local ${localHour.toFixed(1)}h, ${hoursLeft.toFixed(0)}h left), hold for info-stop`,
+              );
+              continue;
+            }
             // Stop-loss confirm (same as monitorPositions): a transient dip in a
             // thin book is marked pending first; only a persisting dip or a hard
             // crash (< STOP_HARD_MULT × entry) exits immediately.
-            const hardCrash = currentPrice < entry * STOP_HARD_MULT;
             if (!hardCrash && !pos.stop_pending) {
               pos.stop_pending = true;
               console.log(
@@ -811,7 +826,15 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             if (size < 0.5) continue;
             candidates.push({ o, p, ev, edge, kelly, size });
           }
-          candidates.sort((a, b) => b.edge - a.edge);
+          // Sort survivors by model probability p, NOT edge. Backtest 2026-08-03
+          // (scripts/backtest-strategy.ts): selecting the highest-p bucket hits
+          // 46.7% (in-sample) / 28.3% (leave-one-out) vs 7.0% for edge ordering.
+          // edge stays as the admission filter (MIN_EDGE above) so we never buy a
+          // bucket the market has already priced correctly — but among survivors
+          // we want the bucket closest to the (bias-corrected) forecast mode, not
+          // the bucket where the model disagrees most with the market (edge
+          // ordering selected market-skeptic buckets that hit only 7%).
+          candidates.sort((a, b) => b.p - a.p);
           // Diagnostic: best achievable edge across tradeable buckets (unfiltered by EV/edge).
           let maxEdgeAll = -1;
           for (const o of outcomes) {
@@ -1182,12 +1205,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
         p.closed_at = now.toISOString();
         p.status = "closed";
         mktPnl += pnl;
-        if (won) {
-          wins += 1;
-          state.wins += 1;
-        } else {
-          state.losses += 1;
-        }
+        if (won) wins += 1;
 
         const result = won ? "WIN" : "LOSS";
         console.log(
@@ -1199,6 +1217,21 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
     } else {
       const unitSym = mkt.unit === "F" ? "F" : "C";
       console.log(`  [SETTLED] ${mkt.city_name} ${mkt.date} | actual ${mkt.actual_temp}${unitSym}`);
+    }
+
+    // Count win/loss for ALL historical positions on this market (including ones
+    // closed early via stop_loss / forecast_changed / metarDiverged), judged by
+    // the true actual_temp. Idempotent via resolved_hit — pnl/balance are NOT
+    // touched (early-closed positions keep their exit-time bookkeeping; this only
+    // fixes the win/loss tally that previously missed them). (2026-08-03 audit)
+    if (mkt.actual_temp != null) {
+      for (const p of mkt.positions ?? []) {
+        if (p.resolved_hit === true || p.resolved_hit === false) continue;
+        const hit = inBucket(mkt.actual_temp, p.bucket_low, p.bucket_high);
+        p.resolved_hit = hit;
+        if (hit) state.wins += 1;
+        else state.losses += 1;
+      }
     }
 
     mkt.status = "resolved";
@@ -1315,14 +1348,27 @@ export async function monitorPositions(): Promise<number> {
         console.log(`  [TRAILING] ${cityName} ${mkt.date} — stop moved to breakeven $${entry.toFixed(3)}`);
       }
 
+      // Price-stop gate (2026-08-03 audit, see scanAndUpdate): only fire the
+      // price-based stop on D+0 once the daily max has formed (local >=14h).
+      // Before then the orderbook is information-noise and price-stops kill winning
+      // tickets. D+1/D+2 rely on forecast_changed + metarDiverged. hardCrash always fires.
+      const localHour = locInfo ? localHourFor(locInfo) : 24;
+      const priceStopAllowed = hoursLeft < 24 && localHour >= ENDGAME_LOCAL_HOUR_MIN;
       const takeTriggered = takeProfit != null && currentPrice >= takeProfit;
-      const stopTriggered = currentPrice <= stop;
+      const hardCrash = currentPrice < entry * STOP_HARD_MULT;
+      const stopTriggered = currentPrice <= stop && (priceStopAllowed || hardCrash);
+      const stopHold = currentPrice <= stop && !stopTriggered;
 
       // Stop-loss confirm: a transient dip in a thin book shouldn't shake us out.
       // The first dip marks the position pending — it only executes if still below
       // the stop on a later scan. A hard crash (< STOP_HARD_MULT × entry) forces
       // the exit immediately, that's a black swan not a blip.
-      const hardCrash = currentPrice < entry * STOP_HARD_MULT;
+      if (stopHold && !takeTriggered) {
+        console.log(
+          `  [STOP HOLD] ${cityName} ${mkt.date} ${pos.bucket_low}-${pos.bucket_high} — bid $${currentPrice.toFixed(3)} below stop $${stop.toFixed(3)} but daily max not formed (local ${localHour.toFixed(1)}h, ${hoursLeft.toFixed(0)}h left), hold for info-stop`,
+        );
+        continue;
+      }
       if (stopTriggered && !takeTriggered && !hardCrash && !pos.stop_pending) {
         pos.stop_pending = true;
         console.log(

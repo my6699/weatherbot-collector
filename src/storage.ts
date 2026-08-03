@@ -75,6 +75,10 @@ export interface Position {
   /** True once the stop-loss fired once; exit only on a confirming scan (avoids
    *  being shaken out by a transient dip in a thin book). */
   stop_pending?: boolean;
+  /** True once this position's hit/miss has been counted into state.wins/losses
+   *  at market resolution (idempotent — protects against double counting on repeat
+   *  resolution scans; pnl/balance are NOT touched here). */
+  resolved_hit?: boolean;
   /** Strategy tag, e.g. "endgame" for near-resolution certainty buys. */
   strategy?: string;
   /** Polymarket CLOB YES token id (only set for live fills). */
