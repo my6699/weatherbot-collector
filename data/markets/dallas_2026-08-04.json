@@ -152,6 +152,26 @@
         "spread": 2.6,
         "gap": 2
       }
+    },
+    {
+      "ts": "2026-08-03T16:05:04.007Z",
+      "horizon": "D+1",
+      "hours_left": 19.9,
+      "ecmwf": 100,
+      "hrrr": 102,
+      "metar": null,
+      "best": 100.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 100,
+          "gfs_seamless": 102,
+          "icon_seamless": 100
+        },
+        "mean": 100.6,
+        "spread": 1.4,
+        "gap": 2
+      }
     }
   ],
   "market_snapshots": [
@@ -189,6 +209,11 @@
       "ts": "2026-08-03T15:20:34.159Z",
       "top_bucket": "100-101F",
       "top_price": 0.535
+    },
+    {
+      "ts": "2026-08-03T16:05:04.007Z",
+      "top_bucket": "100-101F",
+      "top_price": 0.535
     }
   ],
   "all_outcomes": [
@@ -216,7 +241,7 @@
       "ask": 0.145,
       "price": 0.145,
       "spread": 0,
-      "volume": 897
+      "volume": 903
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on August 4?",
@@ -229,7 +254,7 @@
       "ask": 0.535,
       "price": 0.535,
       "spread": 0,
-      "volume": 2266
+      "volume": 2274
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on August 4?",
@@ -303,9 +328,9 @@
         112,
         113
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
       "volume": 375
     },

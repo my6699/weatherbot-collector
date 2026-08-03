@@ -6,7 +6,7 @@
   "station": "EGLC",
   "event_end_date": "2026-08-03T12:00:00Z",
   "hours_at_discovery": 55.8,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3254119",
     "question": "Will the highest temperature in London be 33°C on August 3?",
@@ -30,7 +30,7 @@
     "close_reason": "forecast_changed",
     "closed_at": "2026-08-02T03:56:56.879Z"
   },
-  "actual_temp": null,
+  "actual_temp": 29,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -583,6 +583,26 @@
         "spread": 1.2,
         "gap": 0.8
       }
+    },
+    {
+      "ts": "2026-08-03T16:05:11.220Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 29.2,
+      "hrrr": 30.6,
+      "metar": 28,
+      "best": 29.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.2,
+          "gfs_seamless": 30.6,
+          "icon_seamless": 29.6
+        },
+        "mean": 29.7,
+        "spread": 0.9,
+        "gap": 1.4
+      }
     }
   ],
   "market_snapshots": [
@@ -755,6 +775,11 @@
       "ts": "2026-08-03T15:20:36.621Z",
       "top_bucket": "29-29C",
       "top_price": 0.945
+    },
+    {
+      "ts": "2026-08-03T16:05:11.220Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.9895
     }
   ],
   "all_outcomes": [
@@ -817,11 +842,11 @@
         29,
         29
       ],
-      "bid": 0.945,
-      "ask": 0.945,
-      "price": 0.945,
+      "bid": 0.9895,
+      "ask": 0.9895,
+      "price": 0.9895,
       "spread": 0,
-      "volume": 25427
+      "volume": 30585
     },
     {
       "question": "Will the highest temperature in London be 30°C on August 3?",
@@ -830,11 +855,11 @@
         30,
         30
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 21521
+      "volume": 24805
     },
     {
       "question": "Will the highest temperature in London be 31°C on August 3?",
@@ -843,11 +868,11 @@
         31,
         31
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 14972
+      "volume": 16859
     },
     {
       "question": "Will the highest temperature in London be 32°C on August 3?",
@@ -860,7 +885,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 13458
+      "volume": 14179
     },
     {
       "question": "Will the highest temperature in London be 33°C on August 3?",
@@ -869,11 +894,11 @@
         33,
         33
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 21036
+      "volume": 22843
     },
     {
       "question": "Will the highest temperature in London be 34°C on August 3?",
@@ -925,7 +950,8 @@
       "pnl": -2,
       "exit_price": 0.045,
       "close_reason": "forecast_changed",
-      "closed_at": "2026-08-02T03:56:56.879Z"
+      "closed_at": "2026-08-02T03:56:56.879Z",
+      "resolved_hit": false
     },
     {
       "market_id": "3254119",
@@ -948,7 +974,8 @@
       "pnl": -6,
       "exit_price": 0.035,
       "close_reason": "forecast_changed",
-      "closed_at": "2026-08-02T05:03:46.905Z"
+      "closed_at": "2026-08-02T05:03:46.905Z",
+      "resolved_hit": false
     },
     {
       "market_id": "3254119",
@@ -971,7 +998,8 @@
       "pnl": -7.5,
       "exit_price": 0.025,
       "close_reason": "forecast_changed",
-      "closed_at": "2026-08-02T06:47:53.127Z"
+      "closed_at": "2026-08-02T06:47:53.127Z",
+      "resolved_hit": false
     },
     {
       "market_id": "3254119",
@@ -997,7 +1025,8 @@
       "closed_at": "2026-08-02T11:36:30.420Z",
       "stop_price": 0.03,
       "trailing_activated": true,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     },
     {
       "market_id": "3254118",
@@ -1023,7 +1052,8 @@
       "closed_at": "2026-08-02T21:13:56.053Z",
       "stop_price": 0.13,
       "trailing_activated": true,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     },
     {
       "market_id": "3254119",
@@ -1046,7 +1076,8 @@
       "pnl": -16.5,
       "exit_price": 0.007,
       "close_reason": "stop_loss",
-      "closed_at": "2026-08-02T15:32:08.899Z"
+      "closed_at": "2026-08-02T15:32:08.899Z",
+      "resolved_hit": false
     },
     {
       "market_id": "3254118",
@@ -1070,7 +1101,9 @@
       "exit_price": 0.06,
       "close_reason": "stop_loss",
       "closed_at": "2026-08-02T23:16:14.765Z",
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
-  ]
+  ],
+  "metar_max": 20
 }
