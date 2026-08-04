@@ -212,6 +212,28 @@
         "spread": 1.5,
         "gap": 0.5
       }
+    },
+    {
+      "ts": "2026-08-04T04:57:47.805Z",
+      "horizon": "D+1",
+      "hours_left": 31,
+      "ecmwf": 23.3,
+      "hrrr": 26.1,
+      "metar": null,
+      "best": 24.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 23.3,
+          "gfs_seamless": 26.1,
+          "icon_seamless": 25
+        },
+        "mean": 24.5,
+        "spread": 1.6,
+        "gap": 2.8,
+        "llmEnhanced": true,
+        "llmConfidence": 0.75
+      }
     }
   ],
   "market_snapshots": [
@@ -264,6 +286,11 @@
       "ts": "2026-08-04T03:00:38.957Z",
       "top_bucket": "25-25C",
       "top_price": 0.4
+    },
+    {
+      "ts": "2026-08-04T04:57:47.805Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.42
     }
   ],
   "all_outcomes": [
@@ -313,9 +340,9 @@
         23,
         23
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
       "volume": 486
     },
@@ -330,7 +357,7 @@
       "ask": 0.215,
       "price": 0.215,
       "spread": 0,
-      "volume": 458
+      "volume": 475
     },
     {
       "question": "Will the highest temperature in London be 25°C on August 5?",
@@ -339,11 +366,11 @@
         25,
         25
       ],
-      "bid": 0.4,
-      "ask": 0.4,
-      "price": 0.4,
+      "bid": 0.42,
+      "ask": 0.42,
+      "price": 0.42,
       "spread": 0,
-      "volume": 857
+      "volume": 899
     },
     {
       "question": "Will the highest temperature in London be 26°C on August 5?",
@@ -356,7 +383,7 @@
       "ask": 0.315,
       "price": 0.315,
       "spread": 0,
-      "volume": 1312
+      "volume": 1328
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 5?",
@@ -369,7 +396,7 @@
       "ask": 0.05,
       "price": 0.05,
       "spread": 0,
-      "volume": 492
+      "volume": 511
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 5?",

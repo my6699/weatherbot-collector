@@ -512,6 +512,28 @@
         "spread": 0.4,
         "gap": 0.4
       }
+    },
+    {
+      "ts": "2026-08-04T04:58:36.387Z",
+      "horizon": "D+0",
+      "hours_left": 7,
+      "ecmwf": 26.4,
+      "hrrr": 26.9,
+      "metar": 28,
+      "best": 26.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.4,
+          "gfs_seamless": 26.9,
+          "icon_seamless": 26.4
+        },
+        "mean": 26.5,
+        "spread": 0.4,
+        "gap": 0.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.85
+      }
     }
   ],
   "market_snapshots": [
@@ -639,6 +661,11 @@
       "ts": "2026-08-04T03:00:50.079Z",
       "top_bucket": "29-29C",
       "top_price": 0.53
+    },
+    {
+      "ts": "2026-08-04T04:58:36.387Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.485
     }
   ],
   "all_outcomes": [
@@ -705,7 +732,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4363
+      "volume": 4633
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on August 4?",
@@ -718,7 +745,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 10719
+      "volume": 11358
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on August 4?",
@@ -727,11 +754,11 @@
         28,
         28
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.485,
+      "ask": 0.485,
+      "price": 0.485,
       "spread": 0,
-      "volume": 4637
+      "volume": 10152
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on August 4?",
@@ -740,11 +767,11 @@
         29,
         29
       ],
-      "bid": 0.53,
-      "ask": 0.53,
-      "price": 0.53,
+      "bid": 0.48,
+      "ask": 0.48,
+      "price": 0.48,
       "spread": 0,
-      "volume": 6083
+      "volume": 6918
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on August 4?",
@@ -753,11 +780,11 @@
         30,
         30
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 5873
+      "volume": 7471
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on August 4?",
@@ -766,11 +793,11 @@
         31,
         31
       ],
-      "bid": 0.0485,
-      "ask": 0.0485,
-      "price": 0.0485,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 6485
+      "volume": 7440
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C or higher on August 4?",
@@ -779,11 +806,11 @@
         32,
         999
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 4039
+      "volume": 4535
     }
   ],
   "created_at": "2026-08-02T04:20:42.734Z"
