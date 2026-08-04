@@ -6,10 +6,10 @@
   "station": "RKSI",
   "event_end_date": "2026-08-04T12:00:00Z",
   "hours_at_discovery": 55.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 34,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -147,6 +147,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-04T12:23:54.814Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 34.8,
+      "hrrr": 28.4,
+      "metar": 28,
+      "best": 33,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 34.8,
+          "gfs_seamless": 28.4,
+          "icon_seamless": 35.3
+        },
+        "mean": 33,
+        "spread": 4.6,
+        "gap": 6.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.6,
+        "membersMax": [
+          34.8,
+          34.8,
+          33.4,
+          34.5,
+          34,
+          35.3,
+          34.7,
+          34.4,
+          33.9,
+          34.6,
+          34.5,
+          35.1,
+          33.9,
+          33.9,
+          34.8,
+          34.8,
+          35,
+          33.6,
+          34.5,
+          35.3,
+          34.9,
+          34.8,
+          34.2,
+          34.6,
+          34.2,
+          34.2,
+          34.2,
+          34,
+          34.2,
+          33.8,
+          33.9,
+          34.6,
+          34.7,
+          34.1,
+          34.4,
+          34.6,
+          33.9,
+          34.2,
+          34.5,
+          34.1,
+          33.5,
+          34.1,
+          33.8,
+          34.4,
+          34.3,
+          34.4,
+          34.5,
+          34.6,
+          34,
+          34.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -167,6 +242,11 @@
     },
     {
       "ts": "2026-08-04T10:03:09.268Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.9995
+    },
+    {
+      "ts": "2026-08-04T12:23:54.814Z",
       "top_bucket": "34-34C",
       "top_price": 0.9995
     }
@@ -248,7 +328,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 23837
+      "volume": 23848
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 34°C on August 4?",
@@ -261,7 +341,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 20431
+      "volume": 20979
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 35°C on August 4?",
@@ -274,7 +354,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 18004
+      "volume": 18757
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 36°C on August 4?",
@@ -287,7 +367,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 25901
+      "volume": 26214
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 37°C on August 4?",
@@ -300,7 +380,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 15855
+      "volume": 16960
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 38°C or higher on August 4?",
@@ -316,5 +396,6 @@
       "volume": 13867
     }
   ],
-  "created_at": "2026-08-02T04:07:06.229Z"
+  "created_at": "2026-08-02T04:07:06.229Z",
+  "metar_max": 33
 }
