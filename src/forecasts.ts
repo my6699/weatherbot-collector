@@ -32,6 +32,11 @@ export interface EnsembleForecast {
   llmEnhanced?: boolean;
   /** LLM fusion confidence (0-1), only when llmEnhanced=true. */
   llmConfidence?: number;
+  /** ECMWF ENS 51-member daily-max temps (bias-corrected), for physical probability.
+   *  When present, bucketProbEnsemble replaces the normal-CDF bucketProb. */
+  membersMax?: number[];
+  /** Source tag for membersMax (e.g. "ecmwf_ens"). */
+  membersSource?: string;
 }
 
 /**
@@ -253,6 +258,94 @@ export async function getEnsembleForecast(
     } catch (e) {
       if (attempt < 2) await sleep(3000);
       else console.error(`  [ENSEMBLE] ${citySlug}:`, e);
+    }
+  }
+  return result;
+}
+
+/** Open-Meteo ensemble hourly response: temperature_2m_member0..member50 arrays. */
+interface OpenMeteoEnsembleHourly {
+  hourly?: Record<string, unknown> & {
+    time?: string[];
+    temperature_2m_member0?: number[];
+  };
+  error?: boolean | string;
+}
+
+/**
+ * 拉取 ECMWF ENS 51 成员的每日最高温 (集合预报物理概率)。
+ *
+ * 正态 CDF 用固定 sigma 估计桶概率, 在双峰/冷锋场景下严重失真。改用 51 个
+ * 物理扰动成员直接统计落在桶里的比例: 50 个成员里 40 个认为在 30°C → 真实
+ * 概率 80%。这种由物理扰动生成的概率分布远比数学正态分布准确。
+ *
+ * 流程: ensemble-api → hourly temperature_2m_member0..50 → 按日期聚合每日
+ * 最高温 (每个成员独立取 max) → 减去 ECMWF 滚动偏差 → 返回每日成员数组。
+ *
+ * @returns Record<date, number[]> 每个日期对应 51 个成员的日最高温 (已纠偏)
+ */
+export async function getEnsembleMembersForecast(
+  citySlug: string,
+  dates: Set<string>,
+  loc: LocationInfo,
+): Promise<Record<string, number[]>> {
+  const unit = loc.unit;
+  const tempUnit = unit === "F" ? "fahrenheit" : "celsius";
+  const result: Record<string, number[]> = {};
+  const url =
+    `https://ensemble-api.open-meteo.com/v1/ensemble` +
+    `?latitude=${loc.lat}&longitude=${loc.lon}` +
+    `&hourly=temperature_2m` +
+    `&temperature_unit=${tempUnit}` +
+    `&forecast_days=4&timezone=${encodeURIComponent(TIMEZONES[citySlug] ?? "UTC")}` +
+    `&models=ecmwf_ifs025_ensemble`;
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const data = await fetchJson<OpenMeteoEnsembleHourly>(url);
+      const hourly = data.hourly;
+      if (!data.error && hourly?.time) {
+        const times = hourly.time;
+        // Member keys: temperature_2m_member0 .. temperature_2m_member50
+        const memberKeys = Object.keys(hourly)
+          .filter((k) => /^temperature_2m_member\d+$/.test(k))
+          .sort();
+        if (memberKeys.length === 0) break;
+
+        const datesArr = Array.from(dates);
+        const horizonFor = (d: string): string => {
+          const idx = datesArr.indexOf(d);
+          return idx >= 0 ? `D+${idx}` : "D+0";
+        };
+
+        // Aggregate each member's daily max, bias-corrected (ECMWF signed error).
+        const memberMaxByDate: Record<string, Record<string, number>> = {};
+        for (let i = 0; i < times.length; i++) {
+          const date = times[i]!.slice(0, 10);
+          if (!dates.has(date)) continue;
+          const calBias = getBias(citySlug, horizonFor(date), "ecmwf");
+          for (const mk of memberKeys) {
+            const arr = hourly[mk] as number[] | undefined;
+            const v = arr?.[i];
+            if (v == null) continue;
+            // forecast - bias (bias = forecast - actual, so subtract to correct)
+            const t = calBias !== 0 ? v - calBias : v;
+            const cur = memberMaxByDate[date]?.[mk];
+            if (cur == null || t > cur) {
+              (memberMaxByDate[date] ??= {})[mk] = t;
+            }
+          }
+        }
+        for (const [date, m] of Object.entries(memberMaxByDate)) {
+          result[date] = Object.values(m).map((t) =>
+            unit === "C" ? Math.round(t * 10) / 10 : Math.round(t),
+          );
+        }
+      }
+      break;
+    } catch (e) {
+      if (attempt < 2) await sleep(3000);
+      else console.error(`  [ENS MEMBERS] ${citySlug}:`, e);
     }
   }
   return result;

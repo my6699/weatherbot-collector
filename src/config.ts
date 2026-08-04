@@ -141,6 +141,25 @@ export const MARKET_CAL_SLOPE = 0.85;
  * 原默认 1.0 (100%), 现设为 0.90 (90%), 即过滤掉 90% 以上置信度的交易。
  */
 export const MAX_OURP = envNum(`${P}MAX_OURP`, 0.90);
+/**
+ * 集成成员频次概率的放宽阈值。当有 ECMWF ENS 51 成员数据支撑时, 概率是由
+ * 物理扰动直接生成的 (50 个成员里 40 个落在该桶 = 80%), 远比正态 CDF 可靠,
+ * 所以允许更高的 ourP 上限。默认 0.95: 仅过滤近乎确定的 95%+ 桶 (这些桶
+ * 市场价通常已 $0.90+, 无 edge 可言)。
+ */
+export const MAX_OURP_ENSEMBLE = envNum(`${P}MAX_OURP_ENSEMBLE`, 0.95);
+
+/**
+ * 动态市场校准斜率 (Logistic 回归拟合) 参数。
+ * 用已结算市场的 entry_price (隐含概率) vs resolved_hit (真实发生) 拟合 logit 斜率,
+ * 替代写死的 MARKET_CAL_SLOPE=0.85。当样本不足时回退到固定斜率。
+ */
+/** 拟合所需最少样本数 (太少会过拟合, 40 笔约 3 周数据)。 */
+export const MARKET_SLOPE_MIN_N = envNum(`${P}MARKET_SLOPE_MIN_N`, 40);
+/** 斜率钳位下限 (市场再狂热也不低于 0.5, 否则校准后概率过度压缩)。 */
+export const MARKET_SLOPE_MIN = envNum(`${P}MARKET_SLOPE_MIN`, 0.5);
+/** 斜率钳位上限 (市场再理性也不超过 1.2, 否则等于不校准)。 */
+export const MARKET_SLOPE_MAX = envNum(`${P}MARKET_SLOPE_MAX`, 1.2);
 
 /**
  * Endgame / near-resolution trading (highest-certainty window).

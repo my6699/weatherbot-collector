@@ -31,6 +31,7 @@ import {
   MAX_DEPTH_FRACTION,
   MAX_HOURS,
   MAX_OURP,
+  MAX_OURP_ENSEMBLE,
   MAX_POSITIONS_PER_MARKET,
   MAX_PRICE,
   MAX_SLIPPAGE,
@@ -64,13 +65,14 @@ import {
   TRADE_D0,
   BIAS_ENABLED,
 } from "./config.js";
-import { getEnsembleForecast, getMetar } from "./forecasts.js";
+import { getEnsembleForecast, getEnsembleMembersForecast, getMetar } from "./forecasts.js";
 import { applyBias, getBiasN, refreshBias } from "./bias.js";
 import { metarMaxInUnit, refreshMetarMaxes } from "./metar-archive.js";
 import { fetchJson, sleep } from "./http.js";
 import {
   betSize,
   bucketProb,
+  bucketProbEnsemble,
   calcEv,
   calcKelly,
   hoursToResolution,
@@ -201,8 +203,11 @@ export async function takeForecastSnapshot(
 ): Promise<Record<string, ForecastSnap>> {
   const loc = LOCATIONS[citySlug]!;
   const dateSet = new Set(dates);
-  const [ens, metarToday] = await Promise.all([
+  // P0 优化: 并行拉取三个数据源 (集成预报 + 集成成员 + METAR), 避免串行延迟。
+  // 集成成员 (ECMWF ENS 51 成员) 用于物理概率计算, 替代正态 CDF 的固定 sigma。
+  const [ens, membersByDate, metarToday] = await Promise.all([
     getEnsembleForecast(citySlug, dateSet, loc),
+    getEnsembleMembersForecast(citySlug, dateSet, loc),
     (() => {
       const today = utcTodayIso();
       return dates.includes(today) ? getMetar(citySlug, loc) : Promise.resolve(null);
@@ -214,6 +219,15 @@ export async function takeForecastSnapshot(
   const snapshots: Record<string, ForecastSnap> = {};
   for (const date of dates) {
     const e = ens[date];
+    const membersMax = membersByDate[date];
+    // 注入集成成员数据到 ens: 有成员时 scan 主路径用 bucketProbEnsemble 物理概率
+    const ensWithMembers = e
+      ? {
+          ...e,
+          membersMax: membersMax && membersMax.length > 0 ? membersMax : undefined,
+          membersSource: membersMax && membersMax.length > 0 ? "ecmwf_ens" : undefined,
+        }
+      : null;
     const row: ForecastSnap = {
       ts: nowStr,
       ecmwf: e?.models.ecmwf_ifs025 ?? null,
@@ -221,7 +235,7 @@ export async function takeForecastSnapshot(
       metar: date === today ? metarToday : null,
       best: e?.mean ?? null,
       best_source: e ? "ensemble" : null,
-      ens: e ?? null,
+      ens: ensWithMembers,
     };
     snapshots[date] = row;
   }
@@ -888,6 +902,14 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           const biasN = getBiasN(citySlug, horizon, biasSource);
           const horizonFactor = horizon === "D+0" ? HORIZON_D0_MULT : 1.0;
           const biasFactor = biasN >= BIAS_HIGH_N ? 1.0 : BIAS_LOW_N_MULT;
+          // 集成成员频次概率: 有 ECMWF ENS 51 成员时用物理概率替代正态 CDF。
+          // 51 个物理扰动成员直接统计落在桶里的比例, 远比固定 sigma 的正态分布
+          // 准确 (尤其双峰/冷锋场景)。无成员数据时回退到 bucketProb。
+          const membersMax = ens?.membersMax;
+          const hasMembers = !!membersMax && membersMax.length > 0;
+          // 有成员数据时放宽 MAX_OURP 阈值: 物理概率比正态 CDF 可靠, 95%+ 的桶
+          // 如果市场价仍有 edge 就值得交易 (正态 CDF 的 95% 是数学假象, 要过滤)。
+          const maxOurp = hasMembers ? MAX_OURP_ENSEMBLE : MAX_OURP;
           const candidates: {
             o: OutcomeRow;
             p: number;
@@ -902,10 +924,11 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             if (o.volume < MIN_VOLUME) continue;
             const ask = o.ask;
             if (ask < MIN_ASK || ask >= MAX_PRICE) continue;
-            const p = bucketProb(adjForecast, tLow, tHigh, sigma);
-            if (p > MAX_OURP) {
+            const pEns = hasMembers ? bucketProbEnsemble(membersMax!, tLow, tHigh) : -1;
+            const p = pEns >= 0 ? pEns : bucketProb(adjForecast, tLow, tHigh, sigma);
+            if (p > maxOurp) {
               console.log(
-                `  [MAX_OURP] ${loc.name} ${date} ${tLow}-${tHigh}${unitSym} — p ${p.toFixed(3)} > ${MAX_OURP.toFixed(2)}, skip`,
+                `  [MAX_OURP] ${loc.name} ${date} ${tLow}-${tHigh}${unitSym} — p ${p.toFixed(3)} > ${maxOurp.toFixed(2)}${hasMembers ? " (ensemble)" : ""}, skip`,
               );
               continue;
             }
@@ -935,11 +958,12 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           for (const o of outcomes) {
             const ask = o.ask;
             if (ask < MIN_ASK || ask >= MAX_PRICE) continue;
-            const p = bucketProb(adjForecast, o.range[0], o.range[1], sigma);
-            maxEdgeAll = Math.max(maxEdgeAll, p - marketCalibrated(ask));
+            const pEnsD = hasMembers ? bucketProbEnsemble(membersMax!, o.range[0], o.range[1]) : -1;
+            const pD = pEnsD >= 0 ? pEnsD : bucketProb(adjForecast, o.range[0], o.range[1], sigma);
+            maxEdgeAll = Math.max(maxEdgeAll, pD - marketCalibrated(ask));
           }
           console.log(
-            `  [SCAN] ${loc.name} ${date} — ${outcomes.length} buckets | gap ${ens?.gap != null ? ens.gap.toFixed(1) : "n/a"}° | ${candidates.length} candidates | maxEdge ${maxEdgeAll.toFixed(3)}${biasDelta !== 0 ? ` | bias ${biasDelta >= 0 ? "+" : ""}${biasDelta.toFixed(1)}°` : ""}`,
+            `  [SCAN] ${loc.name} ${date} — ${outcomes.length} buckets | gap ${ens?.gap != null ? ens.gap.toFixed(1) : "n/a"}° | ${candidates.length} candidates | maxEdge ${maxEdgeAll.toFixed(3)}${hasMembers ? ` | ens ${membersMax!.length}members` : ""}${biasDelta !== 0 ? ` | bias ${biasDelta >= 0 ? "+" : ""}${biasDelta.toFixed(1)}°` : ""}`,
           );
 
           // D+0 METAR confirmation ("safe same-day"): only trade event-day markets

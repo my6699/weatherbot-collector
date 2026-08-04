@@ -1,4 +1,5 @@
-import { KELLY_FRACTION, MARKET_CAL_SLOPE } from "./config.js";
+import { KELLY_FRACTION } from "./config.js";
+import { getMarketSlope } from "./storage.js";
 
 /** Abramowitz & Stegun approximation */
 function erf(x: number): number {
@@ -43,6 +44,40 @@ export function bucketProb(forecast: number, tLow: number, tHigh: number, sigma?
   return normCdf((tHigh - Number(forecast)) / s) - normCdf((tLow - Number(forecast)) / s);
 }
 
+/**
+ * 集合成员频次概率: 统计 ECMWF ENS 51 个成员的日最高温有多少落在目标桶内。
+ *
+ * 与 bucketProb (正态 CDF) 的区别: 正态分布假设单峰对称, 在冷锋过境/双峰场景
+ * 下严重低估尾部风险。集合成员由物理扰动直接生成, 50 个成员里 40 个落在 30°C
+ * 桶 = 真实概率 80%, 远比凭空想象的数学分布准确。
+ *
+ * @param membersMax 各成员的日最高温数组 (已纠偏)
+ * @param tLow 桶下界 (-999 = or below)
+ * @param tHigh 桶上界 (999 = or higher)
+ * @returns 落在桶内的成员比例 [0,1]; 无成员时返回 -1 (调用方回退到 bucketProb)
+ */
+export function bucketProbEnsemble(
+  membersMax: number[],
+  tLow: number,
+  tHigh: number,
+): number {
+  if (membersMax.length === 0) return -1;
+  let hits = 0;
+  for (const t of membersMax) {
+    if (tLow === -999) {
+      if (t <= tHigh) hits++;
+    } else if (tHigh === 999) {
+      if (t >= tLow) hits++;
+    } else if (tLow === tHigh) {
+      // Single-degree bucket: ±0.5 tolerance (matches bucketProb semantics).
+      if (t >= tLow - 0.5 && t <= tHigh + 0.5) hits++;
+    } else {
+      if (t >= tLow && t <= tHigh) hits++;
+    }
+  }
+  return hits / membersMax.length;
+}
+
 export function calcEv(p: number, price: number): number {
   if (price <= 0 || price >= 1) return 0.0;
   return Math.round((p * (1.0 / price - 1.0) - (1.0 - p)) * 10000) / 10000;
@@ -58,13 +93,16 @@ export function calcKelly(p: number, price: number): number {
 /**
  * Recalibrate a raw market probability using a logit slope.
  * Weather markets are mildly overconfident: prices near 0/1 overstate the truth.
- * Slope is controlled by MARKET_CAL_SLOPE config (default 0.85).
+ * Slope defaults to the dynamically-fitted value (getMarketSlope, Logistic
+ * regression over settled markets); falls back to MARKET_CAL_SLOPE=0.85 when
+ * too few samples. Pass an explicit slope to override.
  */
-export function marketCalibrated(p: number, slope = MARKET_CAL_SLOPE): number {
+export function marketCalibrated(p: number, slope?: number): number {
+  const s = slope ?? getMarketSlope();
   if (p <= 0) return 0.0;
   if (p >= 1) return 1.0;
   const logit = Math.log(p / (1 - p));
-  return Math.round((1 / (1 + Math.exp(-slope * logit))) * 10000) / 10000;
+  return Math.round((1 / (1 + Math.exp(-s * logit))) * 10000) / 10000;
 }
 
 export function betSize(kelly: number, balance: number, maxBet: number): number {

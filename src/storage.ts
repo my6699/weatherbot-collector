@@ -10,6 +10,10 @@ import {
   CALIBRATION_FILE,
   CALIBRATION_MIN,
   LOCATIONS,
+  MARKET_CAL_SLOPE,
+  MARKET_SLOPE_MAX,
+  MARKET_SLOPE_MIN,
+  MARKET_SLOPE_MIN_N,
   MARKETS_DIR,
   SIGMA_C,
   SIGMA_F,
@@ -130,6 +134,10 @@ export interface CalEntry {
   /** Mean signed error (forecast - actual) used for rolling bias correction. */
   bias?: number;
   updated_at: string;
+  /** 动态市场校准斜率 (Logistic 回归拟合), 存在 __market__ 键下。
+   *  用已结算市场的 entry_price vs resolved_hit 拟合, 替代写死的 MARKET_CAL_SLOPE。 */
+  marketSlope?: number;
+  marketSlopeN?: number;
 }
 
 let calCache: Record<string, CalEntry> | null = null;
@@ -167,6 +175,58 @@ export function getBias(citySlug: string, source: string): number | null {
   const key = `${citySlug}_${source}`;
   const entry = cal[key];
   return entry?.bias ?? null;
+}
+
+/**
+ * 读取动态市场校准斜率。优先用 __market__ 键下 Logistic 回归拟合的斜率
+ * (样本充足时), 否则回退到 config 的固定 MARKET_CAL_SLOPE=0.85。
+ * 被 math.ts marketCalibrated() 调用。
+ */
+export function getMarketSlope(): number {
+  const cal = loadCal();
+  const entry = cal["__market__"];
+  if (entry?.marketSlope != null && entry.marketSlopeN != null && entry.marketSlopeN >= MARKET_SLOPE_MIN_N) {
+    return entry.marketSlope;
+  }
+  return MARKET_CAL_SLOPE;
+}
+
+/**
+ * Logistic 回归拟合市场校准斜率: 用已结算市场的 entry_price (市场隐含概率)
+ * vs resolved_hit (真实是否发生) 拟合 logit 斜率。
+ *
+ * 市场校准: p_calibrated = sigmoid(slope × logit(p_market))。
+ * slope<1 → 市场过度自信 (极端价格高估真相), 需"打折";
+ * slope>1 → 市场保守, 需"加码"; slope=1 → 市场完美校准。
+ *
+ * 牛顿法迭代 (Logistic 损失的凸性保证收敛), 钳位到 [MIN, MAX] 防过拟合。
+ */
+export function fitMarketSlope(
+  samples: { p: number; y: 0 | 1 }[],
+): { slope: number; n: number } | null {
+  if (samples.length < MARKET_SLOPE_MIN_N) return null;
+  // 过滤极端价格 (0.01/0.99 的 logit 无穷大, 扰动拟合)
+  const valid = samples.filter((s) => s.p > 0.01 && s.p < 0.99);
+  if (valid.length < MARKET_SLOPE_MIN_N) return null;
+
+  let slope = MARKET_CAL_SLOPE; // 从固定值起步, 加快收敛
+  for (let iter = 0; iter < 50; iter++) {
+    let grad = 0;
+    let hess = 0;
+    for (const s of valid) {
+      const x = Math.log(s.p / (1 - s.p)); // logit(p_market)
+      const z = slope * x;
+      const sig = 1 / (1 + Math.exp(-z));
+      grad += (s.y - sig) * x;
+      hess -= sig * (1 - sig) * x * x;
+    }
+    if (Math.abs(hess) < 1e-10) break;
+    const step = grad / hess;
+    slope += step;
+    if (Math.abs(step) < 1e-6) break;
+  }
+  slope = Math.max(MARKET_SLOPE_MIN, Math.min(MARKET_SLOPE_MAX, slope));
+  return { slope: Math.round(slope * 1000) / 1000, n: valid.length };
 }
 
 function lastTempForSource(snaps: ForecastSnap[], source: string): number | null {
@@ -215,6 +275,33 @@ export function runCalibration(markets: MarketRecord[]): Record<string, CalEntry
       if (Math.abs(newSigma - old) > 0.05) {
         updated.push(`${loc.name} ${source}: ${old.toFixed(2)}->${newSigma.toFixed(2)}`);
       }
+    }
+  }
+
+  // 动态市场校准斜率: 用已结算市场的 entry_price (隐含概率) vs resolved_hit
+  // (真实发生) 拟合 Logistic logit 斜率, 替代写死的 MARKET_CAL_SLOPE。
+  // 市场过度自信时 slope<1 (打折), 市场保守时 slope>1 (加码)。
+  const slopeSamples: { p: number; y: 0 | 1 }[] = [];
+  for (const m of resolved) {
+    for (const p of m.positions ?? []) {
+      if (p.entry_price == null || p.resolved_hit === undefined) continue;
+      // 过滤极端价格 (fitMarketSlope 内部也会过滤, 这里提前跳过省计算)
+      if (p.entry_price <= 0.01 || p.entry_price >= 0.99) continue;
+      slopeSamples.push({ p: p.entry_price, y: p.resolved_hit ? 1 : 0 });
+    }
+  }
+  const fit = fitMarketSlope(slopeSamples);
+  if (fit) {
+    const old = cal["__market__"]?.marketSlope ?? MARKET_CAL_SLOPE;
+    cal["__market__"] = {
+      sigma: 0,
+      n: 0,
+      marketSlope: fit.slope,
+      marketSlopeN: fit.n,
+      updated_at: new Date().toISOString(),
+    };
+    if (Math.abs(fit.slope - old) > 0.02) {
+      updated.push(`market slope: ${old.toFixed(2)}->${fit.slope.toFixed(2)} (n=${fit.n})`);
     }
   }
 
