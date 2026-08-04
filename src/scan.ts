@@ -1076,16 +1076,13 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               // Observation-based certainty: a locked obs that falls in the bucket
               // is essentially the outcome (continuous-Gaussian tail probs under-
               // state near-resolution certainty, so use a fixed locked probability).
+              // NOTE: endgame is an INDEPENDENT strategy — MAX_OURP does NOT apply
+              // here. The 0.93 probability reflects a locked METAR observation (near
+              // certain), not model overconfidence. AI risk advisor is the sole gate.
               const p = inBucket(metar, o.range[0], o.range[1])
                 ? ENDGAME_LOCKED_P
                 : 0;
               if (p <= 0) continue;
-              if (p > MAX_OURP) {
-                console.log(
-                  `  [MAX_OURP] ${loc.name} ${date} endgame ${o.range[0]}-${o.range[1]}${unitSym} — p ${p.toFixed(3)} > ${MAX_OURP.toFixed(2)}, skip`,
-                );
-                continue;
-              }
               const edge = p - marketCalibrated(ask);
               if (edge < MIN_EDGE) continue;
               const kelly = calcKelly(p, ask);
@@ -1098,8 +1095,15 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               `  [ENDGAME] ${loc.name} ${date} — METAR ${metar}${unitSym} local ${localHour.toFixed(1)}h ${rising ? "RISING" : "steady/falling"}, ${egCandidates.length} certain-bucket candidates (ask cap ${egMaxAsk})`,
             );
             const pick = egCandidates[0];
-            // LLM risk advisor for the endgame candidate (fail-open).
+            // Endgame strategy: AI is the SOLE decision gate (independent of
+            // LLM_GATE). The endgame buys high-probability ($0.75-0.95) buckets
+            // based on a locked METAR obs — exactly the kind of "near-certain"
+            // trade where AI judgment adds the most value (detecting obs errors,
+            // microclimate mismatches, or a still-rising temp that could break
+            // higher). LLM skip is ALWAYS binding here; proceed is the default
+            // only when the AI is unavailable (fail-open to preserve liquidity).
             let llmSkip = false;
+            let llmVerdict: { action: string; risk: string; reason: string } | null = null;
             if (pick) {
               const res = await askTradeAdvisor({
                 city_name: loc.name,
@@ -1107,8 +1111,8 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
                 unit: unitSym,
                 forecast: metar,
                 forecast_source: "endgame (METAR)",
-                ensemble_gap: null,
-                ensemble_spread: null,
+                ensemble_gap: snap.ens?.gap ?? null,
+                ensemble_spread: snap.ens?.spread ?? null,
                 sigma: lockBuf,
                 metar,
                 strategy: "endgame",
@@ -1130,11 +1134,17 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               if (res) {
                 const v = res.verdicts[0];
                 if (v) {
+                  llmVerdict = { action: v.action, risk: v.risk, reason: v.reason };
                   console.log(
-                    `  [LLM] ${loc.name} ${date} endgame ${pick.o.range[0]}-${pick.o.range[1]}${unitSym} — ${v.action} (risk ${v.risk}) ${v.reason}`,
+                    `  [LLM ENDGAME] ${loc.name} ${date} ${pick.o.range[0]}-${pick.o.range[1]}${unitSym} — ${v.action} (risk ${v.risk}) ${v.reason}`,
                   );
-                  if (LLM_GATE && v.action === "skip") llmSkip = true;
+                  // Endgame: AI skip is ALWAYS binding (independent of LLM_GATE).
+                  if (v.action === "skip") llmSkip = true;
                 }
+              } else {
+                console.log(
+                  `  [LLM ENDGAME] ${loc.name} ${date} — AI unavailable, fail-open proceed`,
+                );
               }
             }
             if (pick && !llmSkip) {
