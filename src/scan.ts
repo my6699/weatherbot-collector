@@ -64,6 +64,10 @@ import {
   BIAS_LOW_N_MULT,
   TRADE_D0,
   BIAS_ENABLED,
+  TOP2_SUM_TRIGGER,
+  INTERVAL_HOLD_MIN,
+  INTERVAL_REDUCE_MIN,
+  INTERVAL_SINGLE_EXIT,
 } from "./config.js";
 import { getEnsembleForecast, getEnsembleMembersForecast, getMetar } from "./forecasts.js";
 import { applyBias, getBiasN, refreshBias } from "./bias.js";
@@ -274,6 +278,30 @@ function parseEventOutcomes(event: GammaEvent): OutcomeRow[] {
   }
   outcomes.sort((a, b) => a.range[0] - b.range[0]);
   return outcomes;
+}
+
+/**
+ * 双桶区间套利: 找出价格最高的两个相邻桶。
+ * 两个相邻桶的 YES 价格之和接近 1.0 时, 市场已"确认"温度区间,
+ * 提前卖出两个桶锁定利润。返回 null 表示找不到有效相邻桶对。
+ */
+function top2AdjacentBuckets(
+  outcomes: OutcomeRow[],
+): { first: OutcomeRow; second: OutcomeRow; sum: number } | null {
+  if (outcomes.length < 2) return null;
+  let best: { first: OutcomeRow; second: OutcomeRow; sum: number } | null = null;
+  for (let i = 0; i < outcomes.length - 1; i++) {
+    const a = outcomes[i]!;
+    const b = outcomes[i + 1]!;
+    // Polymarket 桶有 1° 间隔 (如 74-75, 76-77), 相邻 = high+1 === next.low
+    const adjacent = a.range[1] + 1 === b.range[0];
+    if (!adjacent) continue;
+    // 只统计"正常"桶 (排除 -999 / +999 的开闭区间)
+    if (a.range[0] === -999 || b.range[1] === 999) continue;
+    const sum = a.price + b.price;
+    if (!best || sum > best.sum) best = { first: a, second: b, sum };
+  }
+  return best;
 }
 
 interface SellGuard {
@@ -606,6 +634,8 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
   let resolved = 0;
   // Extreme-weather circuit breaker: markets whose ensemble spread explodes.
   let breakerTrips = 0;
+  // 双桶区间策略: 记录本扫描已处理(卖出)的 interval_group, 避免同组重复卖出。
+  const soldIntervalGroups = new Set<string>();
 
   for (const citySlug of Object.keys(LOCATIONS)) {
     const loc = LOCATIONS[citySlug]!;
@@ -667,11 +697,21 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
       mkt.forecast_snapshots.push(forecastSnap);
 
       const top = outcomes.length ? outcomes.reduce((a, b) => (a.price >= b.price ? a : b)) : null;
+      const top2Pair = top2AdjacentBuckets(outcomes);
       mkt.market_snapshots.push({
         ts: snap.ts,
         top_bucket: top ? `${top.range[0]}-${top.range[1]}${unitSym}` : null,
         top_price: top ? top.price : null,
+        top2_bucket: top2Pair ? `${top2Pair.first.range[0]}-${top2Pair.second.range[1]}${unitSym}` : null,
+        top2_price: top2Pair ? Math.round(top2Pair.second.price * 10000) / 10000 : null,
+        top2_sum: top2Pair ? Math.round(top2Pair.sum * 10000) / 10000 : null,
       });
+      if (top2Pair && top2Pair.sum >= TOP2_SUM_TRIGGER) {
+        console.log(
+          `    [TOP2] ${loc.name} ${date} | ${top2Pair.first.range[0]}-${top2Pair.second.range[1]}${unitSym} ` +
+            `| sum $${top2Pair.sum.toFixed(2)} >= $${TOP2_SUM_TRIGGER.toFixed(2)} (双桶确认, D-0 可锁利)`,
+        );
+      }
 
       const forecastTemp = snap.best ?? null;
       const bestSource = snap.best_source ?? null;
@@ -693,6 +733,143 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
         if (currentPrice != null && oMatch) {
           currentPrice = oMatch.bid;
           const entry = pos.entry_price;
+
+          // ===== 双桶区间策略 (strategy="interval") =====
+          // 1) D-0 (hoursLeft<24): 两桶当前 bid 合计 >= TOP2_SUM_TRIGGER → 一起卖出锁利
+          // 2) D-1/D-2 验证: ENS 成员落在区间比例
+          //    <  INTERVAL_REDUCE_MIN → 平仓全部 (预报已跑出区间)
+          //    [INTERVAL_REDUCE_MIN, INTERVAL_HOLD_MIN) → 减仓 (卖 p 较弱桶)
+          //    >= INTERVAL_HOLD_MIN → 持有
+          if (pos.strategy === "interval" && pos.interval_group) {
+            if (!soldIntervalGroups.has(pos.interval_group)) {
+              const groupAll = allPositions(mkt).filter((p) => p.interval_group === pos.interval_group);
+              const groupOpen = groupAll.filter((p) => p.status === "open");
+              if (groupOpen.length >= 2) {
+                const hlNow = hoursToResolution(mkt.event_end_date);
+                const grpPrices: Record<string, number> = {};
+                let sum = 0;
+                for (const gp of groupOpen) {
+                  const go = outcomes.find((o) => o.market_id === gp.market_id);
+                  grpPrices[gp.market_id] = go?.bid ?? gp.bid_at_entry;
+                  sum += grpPrices[gp.market_id]!;
+                }
+                // D-0 两桶合计达标 → 卖出锁利 (不等待结算, 甩掉温度偏离风险)
+                if (hlNow < 24 && sum >= TOP2_SUM_TRIGGER) {
+                  let groupPnL = 0;
+                  for (const gp of groupOpen) {
+                    const gpPrice = grpPrices[gp.market_id]!;
+                    const soldOk = await liveSellExitOrKeepOpen(gp, `${loc.name} ${date} interval_top2`, {
+                      force: false,
+                      expectedPrice: gpPrice,
+                    });
+                    if (!soldOk) continue;
+                    const pnl = Math.round((gpPrice - gp.entry_price) * gp.shares * 100) / 100;
+                    balance += gp.cost + pnl;
+                    gp.closed_at = snap.ts ?? null;
+                    gp.close_reason = "interval_top2";
+                    gp.exit_price = gpPrice;
+                    gp.pnl = pnl;
+                    gp.status = "closed";
+                    groupPnL += pnl;
+                    closed += 1;
+                  }
+                  soldIntervalGroups.add(pos.interval_group);
+                  console.log(
+                    `  [INTERVAL SELL] ${loc.name} ${date} — 两桶合计 $${sum.toFixed(2)} >= $${TOP2_SUM_TRIGGER.toFixed(2)}, 卖出锁利 | PnL: ${groupPnL >= 0 ? "+" : ""}${groupPnL.toFixed(2)}`,
+                  );
+                  continue;
+                }
+                // D-1/D-2 验证: ENS 成员落区间比例 (D-0 由上方合计卖出 + 原有退出逻辑兜底)
+                if (hlNow >= 24) {
+                  const low = Math.min(...groupAll.map((p) => p.bucket_low));
+                  const high = Math.max(...groupAll.map((p) => p.bucket_high));
+                  const members = snap.ens?.membersMax;
+                  const ratio = members && members.length > 0 ? bucketProbEnsemble(members, low, high) : -1;
+                  if (ratio >= 0) {
+                    if (ratio < INTERVAL_REDUCE_MIN) {
+                      let groupPnL = 0;
+                      for (const gp of groupOpen) {
+                        const gpPrice = grpPrices[gp.market_id]!;
+                        const soldOk = await liveSellExitOrKeepOpen(gp, `${loc.name} ${date} interval_d2`, {
+                          force: false,
+                          expectedPrice: gpPrice,
+                        });
+                        if (!soldOk) continue;
+                        const pnl = Math.round((gpPrice - gp.entry_price) * gp.shares * 100) / 100;
+                        balance += gp.cost + pnl;
+                        gp.closed_at = snap.ts ?? null;
+                        gp.close_reason = "interval_d2_exit";
+                        gp.exit_price = gpPrice;
+                        gp.pnl = pnl;
+                        gp.status = "closed";
+                        groupPnL += pnl;
+                        closed += 1;
+                      }
+                      soldIntervalGroups.add(pos.interval_group);
+                      console.log(
+                        `  [INTERVAL D2] ${loc.name} ${date} — ENS成员区间占比 ${(ratio * 100).toFixed(0)}% < ${(INTERVAL_REDUCE_MIN * 100).toFixed(0)}%, 平仓 | PnL: ${groupPnL >= 0 ? "+" : ""}${groupPnL.toFixed(2)}`,
+                      );
+                      continue;
+                    }
+                    if (ratio < INTERVAL_HOLD_MIN) {
+                      // 减仓: 卖 p 较弱桶, 保留较强的等 D-0
+                      const weaker = [...groupOpen].sort((a, b) => a.p - b.p)[0]!;
+                      const wp = grpPrices[weaker.market_id]!;
+                      const soldOk = await liveSellExitOrKeepOpen(weaker, `${loc.name} ${date} interval_d2_reduce`, {
+                        force: false,
+                        expectedPrice: wp,
+                      });
+                      if (soldOk) {
+                        const pnl = Math.round((wp - weaker.entry_price) * weaker.shares * 100) / 100;
+                        balance += weaker.cost + pnl;
+                        weaker.closed_at = snap.ts ?? null;
+                        weaker.close_reason = "interval_d2_reduce";
+                        weaker.exit_price = wp;
+                        weaker.pnl = pnl;
+                        weaker.status = "closed";
+                        closed += 1;
+                        console.log(
+                          `  [INTERVAL D2] ${loc.name} ${date} — ENS成员区间占比 ${(ratio * 100).toFixed(0)}% < ${(INTERVAL_HOLD_MIN * 100).toFixed(0)}%, 减仓卖出 ${weaker.bucket_low}-${weaker.bucket_high} | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
+                        );
+                      }
+                      // 减仓后保留另一桶, 不标记 sold (剩余桶继续走原有退出逻辑)
+                    }
+                  }
+                }
+              } else if (groupOpen.length === 1) {
+                // 剩余单桶: D-2 减仓/另一桶止损后组内只剩这一个。不持有到结算,
+                // bid 超过 INTERVAL_SINGLE_EXIT 即平仓锁利 (2026-08-04 定稿)。
+                const solo = groupOpen[0]!;
+                if (currentPrice >= INTERVAL_SINGLE_EXIT) {
+                  const pnl = Math.round((currentPrice - solo.entry_price) * solo.shares * 100) / 100;
+                  const soldOk = await liveSellExitOrKeepOpen(solo, `${loc.name} ${date} interval_single`, {
+                    force: false,
+                    expectedPrice: currentPrice,
+                  });
+                  if (soldOk) {
+                    balance += solo.cost + pnl;
+                    solo.closed_at = snap.ts ?? null;
+                    solo.close_reason = "interval_single_exit";
+                    solo.exit_price = currentPrice;
+                    solo.pnl = pnl;
+                    solo.status = "closed";
+                    closed += 1;
+                    soldIntervalGroups.add(pos.interval_group);
+                    console.log(
+                      `  [INTERVAL SINGLE] ${loc.name} ${date} — 剩余单桶 bid $${currentPrice.toFixed(2)} >= $${INTERVAL_SINGLE_EXIT.toFixed(2)}, 平仓锁利 | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
+                    );
+                    continue;
+                  }
+                }
+                // 未达阈值 → 走下方原有单桶逻辑 (metarDiverged / forecast_changed / stop)
+              }
+            } else {
+              // 该组已在本次扫描处理过 (卖出/平仓), 跳过本持仓的后续单桶逻辑
+              continue;
+            }
+          }
+          // ===== 双桶区间策略 end =====
+
           // Live-observation divergence: if the actual temp clearly misses the
           // bucket (upper break any hour / lower break after the peak window),
           // the bucket is no longer the outcome — close it NOW instead of
@@ -1008,7 +1185,50 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               }
             }
           }
-          const picks = pool.slice(0, MAX_POSITIONS_PER_MARKET - openPositions(mkt).length);
+          // 双桶区间套利选桶: 不选"单个最高 p 桶", 而是选 ENS 成员区间概率
+          // 最高的相邻桶对 (温度区间)。原单桶策略反复买不确定的桶导致持续
+          // 亏损; 双桶把 1°C 的单桶赌注放宽到 ~2°C 的温度区间, 命中率更高
+          // (回测: 42.5% vs 25%), 且 D-0 两桶合计 >= TOP2_SUM_TRIGGER 时可
+          // 提前锁利。没有相邻候选对时回退到单桶 (绝不买两个不相邻的桶 —
+          // 那正是历史 76 笔 0 胜的教训)。
+          const want = MAX_POSITIONS_PER_MARKET - openPositions(mkt).length;
+          let picks: typeof pool = [];
+          // 双桶区间 group id: 相邻两桶共享, 用于 D-0 两桶合计达标时一起卖出。
+          let intervalGroup: string | null = null;
+          if (want >= 2 && pool.length >= 2) {
+            // 找区间概率最高的相邻桶对: 区间 = [min(low1,low2), max(high1,high2)]
+            let bestPair: { a: (typeof pool)[number]; b: (typeof pool)[number]; p: number } | null = null;
+            for (let ai = 0; ai < pool.length; ai++) {
+              for (let bi = ai + 1; bi < pool.length; bi++) {
+                const a = pool[ai]!;
+                const b = pool[bi]!;
+                const adjacent = a.o.range[1] + 1 === b.o.range[0] || b.o.range[1] + 1 === a.o.range[0];
+                if (!adjacent) continue;
+                // 区间概率: 有成员时用物理频次, 否则用正态 CDF
+                const low = Math.min(a.o.range[0], b.o.range[0]);
+                const high = Math.max(a.o.range[1], b.o.range[1]);
+                const pPair = hasMembers
+                  ? bucketProbEnsemble(membersMax!, low, high)
+                  : bucketProb(adjForecast, low, high, sigma);
+                if (!bestPair || pPair > bestPair.p) {
+                  bestPair = { a, b, p: pPair };
+                }
+              }
+            }
+            if (bestPair) {
+              picks = [bestPair.a, bestPair.b];
+              intervalGroup = `${citySlug}_${date}_${bestPair.a.o.range[0]}-${bestPair.b.o.range[1]}`;
+              console.log(
+                `  [INTERVAL] ${loc.name} ${date} — 双桶区间 ${bestPair.a.o.range[0]}-${bestPair.b.o.range[1]}${unitSym} ` +
+                  `区间概率 ${(bestPair.p * 100).toFixed(1)}% (${hasMembers ? "ENS成员频次" : "正态CDF"})`,
+              );
+            } else {
+              // 无相邻候选对 → 只买区间概率最高的单桶 (避免不相邻双桶)
+              picks = pool.slice(0, 1);
+            }
+          } else {
+            picks = pool.slice(0, want);
+          }
 
           // LLM risk advisor: review the candidates before execution. Advisory by
           // default (logs [LLM] lines for the weekly review); hard veto only when
@@ -1082,6 +1302,8 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               exit_price: null,
               close_reason: null,
               closed_at: null,
+              strategy: intervalGroup ? "interval" : undefined,
+              interval_group: intervalGroup ?? undefined,
             };
 
             const filled = await executeBuy(mkt, signal, {
@@ -1404,6 +1626,8 @@ export async function monitorPositions(): Promise<number> {
   const state = loadState();
   let balance = state.balance;
   let closed = 0;
+  // 双桶区间策略: 记录本监控已处理(卖出)的 interval_group, 避免同组重复卖出。
+  const soldIntervalGroups = new Set<string>();
 
   for (const mkt of withOpen) {
     for (const pos of openPositions(mkt)) {
@@ -1439,6 +1663,101 @@ export async function monitorPositions(): Promise<number> {
 
       const endDate = mkt.event_end_date ?? "";
       const hoursLeft = hoursToResolution(endDate);
+
+      // ===== 双桶区间策略 (strategy="interval") D-0 卖出 =====
+      // 两桶当前 bid 合计 >= TOP2_SUM_TRIGGER → 一起卖出锁利。
+      if (pos.strategy === "interval" && pos.interval_group) {
+        if (!soldIntervalGroups.has(pos.interval_group)) {
+          const groupAll = allPositions(mkt).filter((p) => p.interval_group === pos.interval_group);
+          const groupOpen = groupAll.filter((p) => p.status === "open");
+          if (groupOpen.length >= 2 && hoursLeft < 24 && currentPrice != null) {
+            let sum = currentPrice;
+            for (const gp of groupOpen) {
+              if (gp.market_id === mid) continue;
+              const go = mkt.all_outcomes?.find((o) => o.market_id === gp.market_id);
+              sum += go?.bid ?? go?.price ?? gp.bid_at_entry;
+            }
+            if (sum >= TOP2_SUM_TRIGGER) {
+              let groupPnL = 0;
+              for (const gp of groupOpen) {
+                let gpPrice: number | null = null;
+                try {
+                  const gdata = await fetchJson<{ bestBid?: number | string | null }>(
+                    `https://gamma-api.polymarket.com/markets/${gp.market_id}`,
+                  );
+                  if (gdata.bestBid != null) gpPrice = Number(gdata.bestBid);
+                } catch {
+                  /* fallback below */
+                }
+                if (gpPrice == null) {
+                  const go = mkt.all_outcomes?.find((o) => o.market_id === gp.market_id);
+                  gpPrice = go?.bid ?? go?.price ?? gp.bid_at_entry;
+                }
+                const soldOk = await liveSellExitOrKeepOpen(gp, `${cityName} ${mkt.date} interval_top2`, {
+                  force: false,
+                  expectedPrice: gpPrice,
+                });
+                if (!soldOk) continue;
+                const pnl = Math.round((gpPrice - gp.entry_price) * gp.shares * 100) / 100;
+                balance += gp.cost + pnl;
+                gp.closed_at = new Date().toISOString();
+                gp.close_reason = "interval_top2";
+                gp.exit_price = gpPrice;
+                gp.pnl = pnl;
+                gp.status = "closed";
+                groupPnL += pnl;
+                closed += 1;
+              }
+              soldIntervalGroups.add(pos.interval_group);
+              saveMarket(mkt);
+              console.log(
+                `  [INTERVAL SELL] ${cityName} ${mkt.date} — 两桶合计 $${sum.toFixed(2)} >= $${TOP2_SUM_TRIGGER.toFixed(2)}, 卖出锁利 | PnL: ${groupPnL >= 0 ? "+" : ""}${groupPnL.toFixed(2)}`,
+              );
+              continue;
+            }
+          } else if (groupOpen.length === 1 && currentPrice != null) {
+            // 剩余单桶: 组内只剩 1 个 open 时不持有到结算, bid 超过
+            // INTERVAL_SINGLE_EXIT 即平仓锁利 (2026-08-04 定稿)。
+            const solo = groupOpen[0]!;
+            if (currentPrice >= INTERVAL_SINGLE_EXIT) {
+              let gpPrice: number | null = null;
+              try {
+                const gdata = await fetchJson<{ bestBid?: number | string | null }>(
+                  `https://gamma-api.polymarket.com/markets/${solo.market_id}`,
+                );
+                if (gdata.bestBid != null) gpPrice = Number(gdata.bestBid);
+              } catch {
+                /* fallback below */
+              }
+              if (gpPrice == null) {
+                const go = mkt.all_outcomes?.find((o) => o.market_id === solo.market_id);
+                gpPrice = go?.bid ?? go?.price ?? solo.bid_at_entry;
+              }
+              const pnl = Math.round((gpPrice - solo.entry_price) * solo.shares * 100) / 100;
+              const soldOk = await liveSellExitOrKeepOpen(solo, `${cityName} ${mkt.date} interval_single`, {
+                force: false,
+                expectedPrice: gpPrice,
+              });
+              if (soldOk) {
+                balance += solo.cost + pnl;
+                solo.closed_at = new Date().toISOString();
+                solo.close_reason = "interval_single_exit";
+                solo.exit_price = gpPrice;
+                solo.pnl = pnl;
+                solo.status = "closed";
+                closed += 1;
+                soldIntervalGroups.add(pos.interval_group);
+                saveMarket(mkt);
+                console.log(
+                  `  [INTERVAL SINGLE] ${cityName} ${mkt.date} — 剩余单桶 bid $${gpPrice.toFixed(2)} >= $${INTERVAL_SINGLE_EXIT.toFixed(2)}, 平仓锁利 | PnL: ${pnl >= 0 ? "+" : ""}${pnl.toFixed(2)}`,
+                );
+                continue;
+              }
+            }
+          }
+        }
+      }
+      // ===== 双桶区间策略 end =====
 
       // Live-observation divergence: actual temp clearly misses the bucket ->
       // close now (upper break any hour / lower break after the peak window).

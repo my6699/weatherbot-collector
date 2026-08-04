@@ -50,6 +50,11 @@ export interface MarketSnap {
   ts?: string;
   top_bucket: string | null;
   top_price: number | null;
+  /** Second-highest-priced bucket (used for the two-bucket D-0 exit strategy). */
+  top2_bucket?: string | null;
+  top2_price?: number | null;
+  /** Sum of the two highest-adjacent-bucket YES prices (D-0 exit trigger). */
+  top2_sum?: number | null;
 }
 
 export interface Position {
@@ -90,6 +95,8 @@ export interface Position {
   resolved_hit?: boolean;
   /** Strategy tag, e.g. "endgame" for near-resolution certainty buys. */
   strategy?: string;
+  /** 双桶区间套利: 同一区间策略的桶共享 group id (D-0 两桶合计达标时一起卖出). */
+  interval_group?: string;
   /** Polymarket CLOB YES token id (only set for live fills). */
   clob_yes_token_id?: string;
 }

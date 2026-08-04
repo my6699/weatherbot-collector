@@ -36,12 +36,12 @@ const P = "WEATHERBOT_" as const;
 
 export const BALANCE = envNum(`${P}BALANCE`, 10000.0);
 export const MAX_BET = envNum(`${P}MAX_BET`, 20.0);
-/** Max concurrent open positions per city/date market. Lowered 3->1 (2026-08-03):
- *  backtest (scripts/backtest-optimize.ts) shows buying top3 buckets hits 85%
- *  in-sample but costs 3x (miss loses $60 vs $20) for only +$400 PnL over top1.
- *  Under LOO hit rate (28%) the 3x cost dwarfs the diversification gain —
- *  single top1 bucket is strictly better risk-adjusted. */
-export const MAX_POSITIONS_PER_MARKET = envNum(`${P}MAX_POSITIONS_PER_MARKET`, 1);
+/** Max concurrent open positions per city/date market. 双桶区间套利策略:
+ *  原单桶反复买不确定桶导致持续亏损 (76 trades, 0 wins)。改为双桶策略:
+ *  在 D-3 选相邻两个最优桶 (温度区间), D-2 用 ENS 成员频次验证, D-0 两桶
+ *  合计 >= TOP2_SUM_TRIGGER 时卖出锁利。允许同一市场最多 2 个持仓 (相邻桶)。
+ *  仍通过 heldIds 禁止同一桶重复买入。 */
+export const MAX_POSITIONS_PER_MARKET = envNum(`${P}MAX_POSITIONS_PER_MARKET`, 2);
 export const MIN_EV = envNum(`${P}MIN_EV`, 0.1);
 /** Skip buckets priced below this. Raised 0.02->0.10 (2026-08-03): single-point
  *  buckets under $0.10 are lottery tickets — with model RMSE 1.7-2.3°C their true
@@ -59,10 +59,10 @@ export const TRADE_D0 = envTruthy(`${P}TRADE_D0`);
 export const MAX_PRICE = envNum(`${P}MAX_PRICE`, 0.25);
 export const MIN_VOLUME = envNum(`${P}MIN_VOLUME`, 500);
 export const MIN_HOURS = envNum(`${P}MIN_HOURS`, 2.0);
-/** Lowered 72→24 (2026-08-03 audit): only trade D+0/D+1. Beyond 24h the model error
- *  dominates and the orderbook is too thin/noisy to price-stop — settled misses
- *  clustered at horizon ~31h / entry ~$0.19. */
-export const MAX_HOURS = envNum(`${P}MAX_HOURS`, 24.0);
+/** 2026-08-04: 双桶区间套利策略要求 D-3 入场 (拿最低价), 由 24h 放宽到 80h
+ *  让程序在 D-3 就能看到并买入。风险: 远 horizon 模型误差大 + 订单簿薄,
+ *  由双桶 D-2 验证 + D-0 合计卖出控制 (见 INTERVAL_* 配置)。 */
+export const MAX_HOURS = envNum(`${P}MAX_HOURS`, 80.0);
 export const KELLY_FRACTION = envNum(`${P}KELLY_FRACTION`, 0.25);
 export const MAX_SLIPPAGE = envNum(`${P}MAX_SLIPPAGE`, 0.03);
 export const SCAN_INTERVAL = envNum(`${P}SCAN_INTERVAL`, 3600);
@@ -212,6 +212,33 @@ export const ENDGAME_MAX_ASK_EARLY = envNum(`${P}ENDGAME_MAX_ASK_EARLY`, 0.88);
 /** Local hour after which, combined with a falling obs, cooling is confirmed and
  *  the full ENDGAME_MAX_ASK cap applies. */
 export const ENDGAME_COOLING_HOUR = envNum(`${P}ENDGAME_COOLING_HOUR`, 16);
+
+/**
+ * Two-bucket D-0 exit trigger (策略: 双桶区间套利).
+ * When the sum of the two highest-adjacent-bucket YES prices crosses this
+ * threshold on D-0, the market has effectively confirmed the temperature
+ * interval — sell both buckets to lock in ~$1.00 before resolution risk.
+ * 2026-08-04: 策略定稿为 85%。
+ */
+export const TOP2_SUM_TRIGGER = envNum(`${P}TOP2_SUM_TRIGGER`, 0.85);
+
+/**
+ * D-2 双桶验证: ENS 集成成员落在"双桶区间"的比例阈值。
+ * 区间概率 = 落在 [low_first, high_second] 的成员数 / 成员总数。
+ * - >= INTERVAL_HOLD_MIN: 持有 (D-0 等两桶合计达标卖出)
+ * - [INTERVAL_REDUCE_MIN, INTERVAL_HOLD_MIN): 减仓 (卖 edge 较弱的桶)
+ * - <  INTERVAL_REDUCE_MIN: 平仓 (预报已跑出区间, 认亏离场)
+ */
+export const INTERVAL_HOLD_MIN = envNum(`${P}INTERVAL_HOLD_MIN`, 0.30);
+export const INTERVAL_REDUCE_MIN = envNum(`${P}INTERVAL_REDUCE_MIN`, 0.15);
+
+/**
+ * 双桶区间策略: 剩余单桶的平仓阈值。
+ * D-2 减仓/另一桶止损后, 组内只剩 1 个 open 桶时不再等双桶合计达标,
+ * 也不持有到结算 — 当该单桶 bid 超过此阈值即平仓锁利 (2026-08-04 定稿:
+ * 不持有到结算, 单桶价格超 50% 就离场)。
+ */
+export const INTERVAL_SINGLE_EXIT = envNum(`${P}INTERVAL_SINGLE_EXIT`, 0.50);
 
 /**
  * Sell slippage guard: before market-selling, we check the live best bid.
