@@ -37,18 +37,27 @@ jobs:
 
       - name: Collect data (one scan)
         env:
-          # Free LLM risk advisor (Google Gemini). Optional: without the secret
-          # the bot runs unchanged (LLM advisories are skipped, fail-open).
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Second-opinion LLM (DeepSeek). Optional: without it the bot falls
-          # back to a single-model advisory.
+          # DeepSeek API key (primary LLM for risk advisor + ensemble fusion).
+          # DeepSeek's free tier has a much higher rate limit than Gemini
+          # (backtest: 89/89 calls succeed vs Gemini's 6/89 at 5s intervals).
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          # Use DeepSeek as the primary (and only) LLM provider.
+          # Single-AI gating: DeepSeek reviews trades and its skip verdicts
+          # are binding (LLM_GATE=true). No second opinion (LLM_PROVIDER2 unset).
+          WEATHERBOT_LLM_PROVIDER: "deepseek"
+          WEATHERBOT_LLM_GATE: "true"
           # Enable per-city rolling forecast bias correction (src/bias.ts).
           # Fixed 2026-08-03: applyBias had an inverted sign (forecast + bias
           # instead of forecast - bias), which pushed predictions AWAY from
           # actual — that's why it degraded accuracy when enabled before.
           # Backtest: per-city correction raises hit rate 18.3% -> 28.3% (LOO).
           WEATHERBOT_BIAS_ENABLED: "true"
+          # LLM ensemble fusion: use DeepSeek to fuse ECMWF/GFS/ICON forecasts
+          # instead of simple weighted average. Verified 2026-08-04: handles
+          # model-disagreement scenarios well (Toronto test: picked ECMWF 18°C
+          # over weighted-avg 19.2°C when GFS=24°C was an outlier).
+          # Graceful fallback to weighted average when LLM is unavailable.
+          WEATHERBOT_LLM_ENSEMBLE: "true"
         run: npm run scan:once
 
       - name: Commit and push collected data
