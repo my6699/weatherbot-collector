@@ -124,8 +124,16 @@ export const CONSENSUS_MAX_GAP_C = 2.0; // °C
  * Weather markets are mildly overconfident (slope ~0.91): extreme prices overstate the truth.
  */
 export const MIN_EDGE = envNum(`${P}MIN_EDGE`, 0.07);
-/** Logit calibration slope for market prices in the weather domain. */
-export const MARKET_CAL_SLOPE = 0.91;
+/** Logit calibration slope for market prices in the weather domain.
+ * 原 0.91 过于乐观，现调整为 0.85，对模型预测的高置信度进行"打折"。 */
+export const MARKET_CAL_SLOPE = 0.85;
+
+/**
+ * 过滤高概率交易阈值: 当模型预测概率 ourP 超过此值时，直接跳过交易。
+ * 这类交易看似胜率极高，但在实践中胜率极低（假阳性）。
+ * 原默认 1.0 (100%), 现设为 0.90 (90%), 即过滤掉 90% 以上置信度的交易。
+ */
+export const MAX_OURP = envNum(`${P}MAX_OURP`, 0.90);
 
 /**
  * Endgame / near-resolution trading (highest-certainty window).

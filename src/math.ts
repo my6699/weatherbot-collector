@@ -1,4 +1,4 @@
-import { KELLY_FRACTION } from "./config.js";
+import { KELLY_FRACTION, MARKET_CAL_SLOPE } from "./config.js";
 
 /** Abramowitz & Stegun approximation */
 function erf(x: number): number {
@@ -57,9 +57,10 @@ export function calcKelly(p: number, price: number): number {
 
 /**
  * Recalibrate a raw market probability using a logit slope.
- * Weather markets are mildly overconfident (slope ~0.91): prices near 0/1 overstate the truth.
+ * Weather markets are mildly overconfident: prices near 0/1 overstate the truth.
+ * Slope is controlled by MARKET_CAL_SLOPE config (default 0.85).
  */
-export function marketCalibrated(p: number, slope = 0.91): number {
+export function marketCalibrated(p: number, slope = MARKET_CAL_SLOPE): number {
   if (p <= 0) return 0.0;
   if (p >= 1) return 1.0;
   const logit = Math.log(p / (1 - p));

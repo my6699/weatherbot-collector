@@ -29,6 +29,7 @@ import {
   MAX_BET,
   MAX_DEPTH_FRACTION,
   MAX_HOURS,
+  MAX_OURP,
   MAX_POSITIONS_PER_MARKET,
   MAX_PRICE,
   MAX_SLIPPAGE,
@@ -856,6 +857,12 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             const ask = o.ask;
             if (ask < MIN_ASK || ask >= MAX_PRICE) continue;
             const p = bucketProb(adjForecast, tLow, tHigh, sigma);
+            if (p > MAX_OURP) {
+              console.log(
+                `  [MAX_OURP] ${loc.name} ${date} ${tLow}-${tHigh}${unitSym} — p ${p.toFixed(3)} > ${MAX_OURP.toFixed(2)}, skip`,
+              );
+              continue;
+            }
             const ev = calcEv(p, ask);
             // P2: compare against the market's calibrated probability (weather markets overconfident).
             const calProb = marketCalibrated(ask);
@@ -1073,6 +1080,12 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
                 ? ENDGAME_LOCKED_P
                 : 0;
               if (p <= 0) continue;
+              if (p > MAX_OURP) {
+                console.log(
+                  `  [MAX_OURP] ${loc.name} ${date} endgame ${o.range[0]}-${o.range[1]}${unitSym} — p ${p.toFixed(3)} > ${MAX_OURP.toFixed(2)}, skip`,
+                );
+                continue;
+              }
               const edge = p - marketCalibrated(ask);
               if (edge < MIN_EDGE) continue;
               const kelly = calcKelly(p, ask);
