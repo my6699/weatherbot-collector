@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-08-03T12:00:00Z",
   "hours_at_discovery": 32.7,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3278391",
     "question": "Will the highest temperature in Seattle be between 74-75°F on August 3?",
@@ -52,10 +52,11 @@
       "pnl": -2,
       "exit_price": 0.135,
       "close_reason": "metar_diverged",
-      "closed_at": "2026-08-03T04:46:05.471Z"
+      "closed_at": "2026-08-03T04:46:05.471Z",
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 74.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -882,5 +883,6 @@
       "volume": 4853
     }
   ],
-  "created_at": "2026-08-02T03:19:05.789Z"
+  "created_at": "2026-08-02T03:19:05.789Z",
+  "metar_max": 75
 }
