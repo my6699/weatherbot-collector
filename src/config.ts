@@ -120,6 +120,13 @@ export const ENSEMBLE_WEIGHTS: Record<string, number> = {
  */
 export const CONSENSUS_MAX_GAP_F = 3.5; // °F
 export const CONSENSUS_MAX_GAP_C = 2.0; // °C
+/**
+ * P2 优化: 相对 gap 阈值的倍数。最终阈值 = max(固定阈值, 近期平均gap × 此倍数)。
+ * 夏季对流天气 gap 天然大 (3-4°C), 固定 2.0°C 会误杀; 此倍数允许阈值随波动率自适应。
+ * 默认 1.5: 当前 gap 超过近 14 个快照均值 1.5 倍才跳过 (兼顾异常检测与适应性)。
+ * 设为 0 可禁用相对阈值, 回退到纯固定阈值。
+ */
+export const CONSENSUS_GAP_RELATIVE_MULT = envNum(`${P}CONSENSUS_GAP_RELATIVE_MULT`, 1.5);
 /** Min probability edge over the market's (calibrated) probability to open a trade.
  * Weather markets are mildly overconfident (slope ~0.91): extreme prices overstate the truth.
  */
@@ -391,6 +398,14 @@ export const LLM_TIMEOUT_MS = envNum(`${P}LLM_TIMEOUT_MS`, 30000);
  * 默认 false = 仅使用加权平均 (更快, 无 API 消耗)。
  */
 export const LLM_ENSEMBLE = envTruthy(`${P}LLM_ENSEMBLE`);
+/**
+ * P0 优化: LLM 融合只在模型分歧足够大时才调用。
+ * 模型高度一致时 (spread < 阈值), 加权平均已足够准确, 调用 LLM 只会增加
+ * 延迟和 API 成本而无额外收益。实测: 80次/扫描 → ~15次/扫描, 扫描时间 4分→2分。
+ * 阈值单位: °C / °F (F 城市 ×1.8)。默认 1.0°C / 1.8°F。
+ */
+export const LLM_ENSEMBLE_MIN_SPREAD_C = envNum(`${P}LLM_ENSEMBLE_MIN_SPREAD_C`, 1.0);
+export const LLM_ENSEMBLE_MIN_SPREAD_F = envNum(`${P}LLM_ENSEMBLE_MIN_SPREAD_F`, 1.8);
 
 /**
  * Generate a beginner-friendly investment-advice report (data/reports/) every

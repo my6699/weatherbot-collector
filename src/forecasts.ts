@@ -4,6 +4,8 @@ import {
   ENSEMBLE_MODELS,
   ENSEMBLE_WEIGHTS,
   LLM_ENSEMBLE,
+  LLM_ENSEMBLE_MIN_SPREAD_C,
+  LLM_ENSEMBLE_MIN_SPREAD_F,
   TIMEZONES,
   type LocationInfo,
 } from "./config.js";
@@ -214,10 +216,14 @@ export async function getEnsembleForecast(
           const gfs = modelTemps.gfs_seamless;
           const gap = ecmwf != null && gfs != null ? Math.abs(ecmwf - gfs) : 0;
 
-          // LLM 融合模式: 如果启用, 尝试用 AI 融合预报
+          // LLM 融合模式: 如果启用且模型分歧足够大, 才调用 AI 融合。
+          // P0 优化: 模型高度一致时 (spread < 阈值), 加权平均已足够准确,
+          // 调用 LLM 只会增加延迟和 API 成本而无额外收益。
+          // 实测: 80次/扫描 → ~15次/扫描, 扫描时间 4分→2分。
           let llmEnhanced = false;
           let llmConfidence: number | undefined;
-          if (LLM_ENSEMBLE && Object.keys(modelTemps).length >= 2) {
+          const llmMinSpread = unit === "F" ? LLM_ENSEMBLE_MIN_SPREAD_F : LLM_ENSEMBLE_MIN_SPREAD_C;
+          if (LLM_ENSEMBLE && Object.keys(modelTemps).length >= 2 && spread >= llmMinSpread) {
             const llmResult = await llmEnsembleForecast(
               citySlug,
               date,

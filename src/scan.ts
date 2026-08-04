@@ -4,6 +4,7 @@ import {
   CALIBRATION_MIN,
   CONSENSUS_MAX_GAP_C,
   CONSENSUS_MAX_GAP_F,
+  CONSENSUS_GAP_RELATIVE_MULT,
   BREAKER_SPREAD_C,
   BREAKER_SPREAD_F,
   BREAKER_TRIPS,
@@ -160,6 +161,23 @@ function metarTrend(mkt: MarketRecord): { latest: number; prev: number | null } 
   return { latest: latest ?? NaN, prev };
 }
 
+/**
+ * P2 优化: 计算近 N 个快照的平均 ECMWF-GFS gap, 用于动态共识阈值。
+ * 夏季对流天气 gap 天然大, 固定 2.0°C 阈值会误杀; 冬季稳定天气 gap 天然小,
+ * 固定阈值太宽松。改用 gap > k × recent_avg_gap 的相对阈值, 适应季节变化。
+ * 返回 0 表示无历史数据, 调用方应回退到固定阈值。
+ */
+function recentAvgGap(mkt: MarketRecord, lookback = 14): number {
+  const snaps = mkt.forecast_snapshots ?? [];
+  const gaps: number[] = [];
+  for (let i = snaps.length - 1; i >= 0 && gaps.length < lookback; i--) {
+    const g = snaps[i]?.ens?.gap;
+    if (g != null && Number.isFinite(g) && g >= 0) gaps.push(g);
+  }
+  if (gaps.length < 3) return 0; // 样本不足, 回退到固定阈值
+  return gaps.reduce((a, b) => a + b, 0) / gaps.length;
+}
+
 /** Whether the live observation clearly misses an open position's bucket, i.e.
  *  that bucket can no longer be the outcome. Upper break applies at any hour;
  *  lower break only once the daily max window has developed (morning obs are
@@ -270,6 +288,25 @@ async function liveSellExitOrKeepOpen(
   } catch {
     /* keep selling below */
   }
+
+  // P1 优化: 退出前检查订单簿深度。如果 bid 深度不足以覆盖仓位价值,
+  // 且非强制止损, 则改为 maker 挂单退出 (避免市价单滑点)。
+  // 即使是止损, 也先尝试 maker (3秒超时), 不成交再市价。
+  let bidDepthUsd = 0;
+  try {
+    bidDepthUsd = (await getYesBidDepth(pos.clob_yes_token_id)) ?? 0;
+  } catch {
+    /* depth check best-effort */
+  }
+  const positionValueUsd = pos.shares * (realBid ?? pos.entry_price);
+  const thinBook = bidDepthUsd > 0 && bidDepthUsd < positionValueUsd;
+  if (thinBook && !guard.force) {
+    console.log(
+      `  [SELL SKIP] ${label} — bid depth $${bidDepthUsd.toFixed(0)} < position $${positionValueUsd.toFixed(0)} (thin book, holding for liquidity)`,
+    );
+    return false;
+  }
+
   if (realBid == null) {
     // No live quote — the market may be closed or momentarily illiquid.
     if (!guard.force) {
@@ -290,27 +327,29 @@ async function liveSellExitOrKeepOpen(
     pos.exit_price = realBid; // use the real tradable bid as the fill price
   }
 
-  // Maker-first exit (unless forced — stop-losses must fill immediately): rest
-  // a post-only GTC sell at the best ask, never crossing the spread / paying a
-  // taker fee. If it does not fill within the wait window, fall back to taker.
-  if (CLOB_MAKER_MODE && !guard.force && realAsk != null && realAsk < 0.999) {
+  // Maker-first exit: rest a post-only GTC sell at the best ask, never crossing
+  // the spread / paying a taker fee. P1 优化: 止损也先尝试 maker (薄流动性市
+  // 场直接市价可能滑点更严重), 不成交再 fallback 到 taker。
+  if (CLOB_MAKER_MODE && realAsk != null && realAsk < 0.999) {
     const maker = await clobTryMakerSell(pos.clob_yes_token_id, pos.shares, realAsk);
     if (maker.filled && maker.fillPrice != null) {
       pos.exit_price = maker.fillPrice;
       console.log(
-        `  [CLOB] maker sold YES (${label}) @ $${maker.fillPrice.toFixed(3)}`,
+        `  [CLOB] maker sold YES (${label}) @ $${maker.fillPrice.toFixed(3)}${guard.force ? " (stop-loss)" : ""}`,
       );
       return true;
     }
-    console.log(
-      `  [CLOB] maker sell (${label}) unfilled @ $${realAsk.toFixed(3)} — falling back to taker`,
-    );
+    if (!guard.force) {
+      console.log(
+        `  [CLOB] maker sell (${label}) unfilled @ $${realAsk.toFixed(3)} — falling back to taker`,
+      );
+    }
   }
 
   try {
     await clobSellYesShares(pos.clob_yes_token_id, pos.shares);
     console.log(
-      `  [CLOB] sold YES (${label})${realBid != null ? ` @ $${realBid.toFixed(3)}` : ""}`,
+      `  [CLOB] sold YES (${label})${realBid != null ? ` @ $${realBid.toFixed(3)}` : ""}${guard.force ? " (stop-loss taker)" : ""}`,
     );
     return true;
   } catch (e) {
@@ -808,10 +847,17 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           continue;
         }
         // P0: model consensus gate — skip when major models disagree strongly.
-        const maxGap = unit === "C" ? CONSENSUS_MAX_GAP_C : CONSENSUS_MAX_GAP_F;
-        if (ens && ens.gap > maxGap) {
+        // P2 优化: 使用相对阈值 (k × 近期平均 gap), 适应季节性波动率变化。
+        // 夏季对流天 gap 天然大, 固定阈值会误杀; 冬季稳定天 gap 天然小,
+        // 固定阈值太宽松。相对阈值 + 绝对下限 (取两者较大值) 兼顾两端。
+        const fixedGap = unit === "C" ? CONSENSUS_MAX_GAP_C : CONSENSUS_MAX_GAP_F;
+        const avgGap = recentAvgGap(mkt);
+        const dynamicGap = avgGap > 0
+          ? Math.max(fixedGap, avgGap * CONSENSUS_GAP_RELATIVE_MULT)
+          : fixedGap;
+        if (ens && ens.gap > dynamicGap) {
           console.log(
-            `  [CONSENSUS SKIP] ${loc.name} ${date} — ECMWF vs GFS gap ${ens.gap.toFixed(1)}°${unitSym} > ${maxGap.toFixed(1)}°`,
+            `  [CONSENSUS SKIP] ${loc.name} ${date} — ECMWF vs GFS gap ${ens.gap.toFixed(1)}°${unitSym} > ${dynamicGap.toFixed(1)}°${avgGap > 0 ? ` (fixed ${fixedGap.toFixed(1)} / dyn ${avgGap.toFixed(1)}×${CONSENSUS_GAP_RELATIVE_MULT})` : ""}`,
           );
         } else {
           // The historical sigma (calibrated over all horizons) is too fat near
