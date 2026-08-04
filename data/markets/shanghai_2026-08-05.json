@@ -49,13 +49,14 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-08-04T10:03:49.270Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -13.33,
+      "exit_price": 0.08,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-04T14:47:23.754Z",
       "stop_price": 0.088,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "stop_pending": true
     }
   ],
   "actual_temp": null,
@@ -621,6 +622,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-04T14:46:36.398Z",
+      "horizon": "D+1",
+      "hours_left": 21.2,
+      "ecmwf": 31,
+      "hrrr": 31.9,
+      "metar": null,
+      "best": 31.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31,
+          "gfs_seamless": 31.9,
+          "icon_seamless": 31.2
+        },
+        "mean": 31.3,
+        "spread": 0.6,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          30.9,
+          31,
+          30,
+          31.4,
+          30.7,
+          31,
+          31.4,
+          31,
+          31.2,
+          30.2,
+          31.3,
+          31,
+          31,
+          30.4,
+          30.2,
+          31.1,
+          31.2,
+          31.2,
+          31.2,
+          31.5,
+          30.7,
+          30.5,
+          31,
+          31.4,
+          31.5,
+          30.5,
+          31.2,
+          30.3,
+          30.6,
+          30.3,
+          31.4,
+          31.6,
+          31,
+          30.9,
+          31.2,
+          30.3,
+          31.3,
+          31.3,
+          31.5,
+          30.8,
+          30,
+          31.3,
+          30.9,
+          29.8,
+          30.2,
+          30.3,
+          29.4,
+          30.5,
+          30.3,
+          30.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -708,6 +783,11 @@
       "ts": "2026-08-04T12:24:16.149Z",
       "top_bucket": "34-34C",
       "top_price": 0.365
+    },
+    {
+      "ts": "2026-08-04T14:46:36.398Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.415
     }
   ],
   "all_outcomes": [
@@ -744,11 +824,11 @@
         30,
         30
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2583
+      "volume": 4245
     },
     {
       "question": "Will the highest temperature in Shanghai be 31°C on August 5?",
@@ -757,11 +837,11 @@
         31,
         31
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 2691
+      "volume": 3454
     },
     {
       "question": "Will the highest temperature in Shanghai be 32°C on August 5?",
@@ -770,11 +850,11 @@
         32,
         32
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.085,
+      "ask": 0.085,
+      "price": 0.085,
       "spread": 0,
-      "volume": 4880
+      "volume": 5407
     },
     {
       "question": "Will the highest temperature in Shanghai be 33°C on August 5?",
@@ -783,11 +863,11 @@
         33,
         33
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.415,
+      "ask": 0.415,
+      "price": 0.415,
       "spread": 0,
-      "volume": 9669
+      "volume": 10379
     },
     {
       "question": "Will the highest temperature in Shanghai be 34°C on August 5?",
@@ -796,11 +876,11 @@
         34,
         34
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.385,
+      "ask": 0.385,
+      "price": 0.385,
       "spread": 0,
-      "volume": 3744
+      "volume": 4072
     },
     {
       "question": "Will the highest temperature in Shanghai be 35°C on August 5?",
@@ -809,11 +889,11 @@
         35,
         35
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.115,
+      "ask": 0.115,
+      "price": 0.115,
       "spread": 0,
-      "volume": 5212
+      "volume": 5886
     },
     {
       "question": "Will the highest temperature in Shanghai be 36°C on August 5?",
@@ -822,11 +902,11 @@
         36,
         36
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 2654
+      "volume": 3230
     },
     {
       "question": "Will the highest temperature in Shanghai be 37°C on August 5?",
@@ -835,11 +915,11 @@
         37,
         37
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 943
+      "volume": 1151
     },
     {
       "question": "Will the highest temperature in Shanghai be 38°C or higher on August 5?",
@@ -848,11 +928,11 @@
         38,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 835
+      "volume": 931
     }
   ],
   "created_at": "2026-08-03T04:14:36.552Z"
