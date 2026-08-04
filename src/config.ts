@@ -384,6 +384,13 @@ export const LLM_GATE = envTruthy(`${P}LLM_GATE`);
 export const LLM_MAX_CALLS_PER_SCAN = envNum(`${P}LLM_MAX_CALLS_PER_SCAN`, 8);
 /** LLM request timeout (ms) — AI responses can be slow. */
 export const LLM_TIMEOUT_MS = envNum(`${P}LLM_TIMEOUT_MS`, 30000);
+/**
+ * LLM 集合模式: 使用 LLM (如 DeepSeek) 作为后处理器融合多模型预报。
+ * 当启用时, getEnsembleForecast 会调用 LLM 将 ECMWF/GFS/ICON 的预报值
+ * 融合为更准确的单一预测, 替代简单的加权平均。
+ * 默认 false = 仅使用加权平均 (更快, 无 API 消耗)。
+ */
+export const LLM_ENSEMBLE = envTruthy(`${P}LLM_ENSEMBLE`);
 
 /**
  * Generate a beginner-friendly investment-advice report (data/reports/) every
