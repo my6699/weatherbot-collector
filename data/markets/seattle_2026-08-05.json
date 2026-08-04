@@ -7,8 +7,56 @@
   "event_end_date": "2026-08-05T12:00:00Z",
   "hours_at_discovery": 33.8,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3323931",
+    "question": "Will the highest temperature in Seattle be between 84-85°F on August 5?",
+    "bucket_low": 84,
+    "bucket_high": 85,
+    "entry_price": 0.11,
+    "bid_at_entry": 0.1,
+    "spread": 0.01,
+    "shares": 363.64,
+    "cost": 40,
+    "p": 0.9,
+    "ev": 7.1818,
+    "kelly": 0.2221,
+    "forecast_temp": 84.13,
+    "forecast_src": "ensemble",
+    "sigma": 1.6,
+    "opened_at": "2026-08-04T17:05:48.316Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.08
+  },
+  "positions": [
+    {
+      "market_id": "3323931",
+      "question": "Will the highest temperature in Seattle be between 84-85°F on August 5?",
+      "bucket_low": 84,
+      "bucket_high": 85,
+      "entry_price": 0.11,
+      "bid_at_entry": 0.1,
+      "spread": 0.01,
+      "shares": 363.64,
+      "cost": 40,
+      "p": 0.9,
+      "ev": 7.1818,
+      "kelly": 0.2221,
+      "forecast_temp": 84.13,
+      "forecast_src": "ensemble",
+      "sigma": 1.6,
+      "opened_at": "2026-08-04T17:05:48.316Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.08
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -566,6 +614,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-04T17:05:48.316Z",
+      "horizon": "D+1",
+      "hours_left": 18.9,
+      "ecmwf": 84,
+      "hrrr": 86,
+      "metar": null,
+      "best": 84.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 84,
+          "gfs_seamless": 86,
+          "icon_seamless": 83
+        },
+        "mean": 84.4,
+        "spread": 1.6,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          84,
+          84,
+          84,
+          85,
+          85,
+          85,
+          84,
+          85,
+          85,
+          85,
+          85,
+          83,
+          85,
+          84,
+          85,
+          85,
+          84,
+          84,
+          84,
+          84,
+          84,
+          85,
+          84,
+          83,
+          85,
+          84,
+          84,
+          84,
+          84,
+          84,
+          84,
+          84,
+          84,
+          85,
+          85,
+          84,
+          84,
+          85,
+          84,
+          84,
+          83,
+          86,
+          84,
+          85,
+          85,
+          84,
+          84,
+          84,
+          83,
+          85
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -626,6 +748,14 @@
       "top2_bucket": "86-89F",
       "top2_price": 0.355,
       "top2_sum": 0.705
+    },
+    {
+      "ts": "2026-08-04T17:05:48.316Z",
+      "top_bucket": "88-89F",
+      "top_price": 0.355,
+      "top2_bucket": "86-89F",
+      "top2_price": 0.355,
+      "top2_sum": 0.7
     }
   ],
   "all_outcomes": [
@@ -636,11 +766,11 @@
         -999,
         79
       ],
-      "bid": 0.0165,
-      "ask": 0.0165,
-      "price": 0.0165,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
-      "volume": 3426
+      "volume": 3512
     },
     {
       "question": "Will the highest temperature in Seattle be between 80-81°F on August 5?",
@@ -649,11 +779,11 @@
         80,
         81
       ],
-      "bid": 0.026,
-      "ask": 0.026,
-      "price": 0.026,
+      "bid": 0.0255,
+      "ask": 0.0255,
+      "price": 0.0255,
       "spread": 0,
-      "volume": 2505
+      "volume": 2567
     },
     {
       "question": "Will the highest temperature in Seattle be between 82-83°F on August 5?",
@@ -662,11 +792,11 @@
         82,
         83
       ],
-      "bid": 0.036,
-      "ask": 0.036,
-      "price": 0.036,
+      "bid": 0.037,
+      "ask": 0.037,
+      "price": 0.037,
       "spread": 0,
-      "volume": 2491
+      "volume": 2552
     },
     {
       "question": "Will the highest temperature in Seattle be between 84-85°F on August 5?",
@@ -675,11 +805,11 @@
         84,
         85
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 522
+      "volume": 634
     },
     {
       "question": "Will the highest temperature in Seattle be between 86-87°F on August 5?",
@@ -688,11 +818,11 @@
         86,
         87
       ],
-      "bid": 0.35,
-      "ask": 0.35,
-      "price": 0.35,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
-      "volume": 1157
+      "volume": 1248
     },
     {
       "question": "Will the highest temperature in Seattle be between 88-89°F on August 5?",
@@ -705,7 +835,7 @@
       "ask": 0.355,
       "price": 0.355,
       "spread": 0,
-      "volume": 2424
+      "volume": 2439
     },
     {
       "question": "Will the highest temperature in Seattle be between 90-91°F on August 5?",
@@ -714,11 +844,11 @@
         90,
         91
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.125,
+      "ask": 0.125,
+      "price": 0.125,
       "spread": 0,
-      "volume": 1191
+      "volume": 1507
     },
     {
       "question": "Will the highest temperature in Seattle be between 92-93°F on August 5?",
@@ -753,9 +883,9 @@
         96,
         97
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
       "volume": 548
     },
@@ -766,9 +896,9 @@
         98,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 339
     }
