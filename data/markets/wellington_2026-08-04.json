@@ -598,6 +598,81 @@
         "llmEnhanced": true,
         "llmConfidence": 0.85
       }
+    },
+    {
+      "ts": "2026-08-04T06:37:27.797Z",
+      "horizon": "D+0",
+      "hours_left": 5.4,
+      "ecmwf": 8.4,
+      "hrrr": 9,
+      "metar": 7,
+      "best": 8.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 8.4,
+          "gfs_seamless": 9,
+          "icon_seamless": 10.2
+        },
+        "mean": 8.9,
+        "spread": 1.3,
+        "gap": 0.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.85,
+        "membersMax": [
+          8.1,
+          8.5,
+          8.6,
+          8.8,
+          8.2,
+          8.4,
+          8.4,
+          8.8,
+          9.9,
+          8.7,
+          8.5,
+          9.2,
+          8.4,
+          8.5,
+          7.9,
+          8.8,
+          8.8,
+          8.7,
+          9,
+          8.4,
+          8.2,
+          9.2,
+          8.6,
+          8.9,
+          8.8,
+          9.1,
+          9.6,
+          8.6,
+          8.3,
+          9,
+          7.7,
+          9.1,
+          8.8,
+          8.8,
+          8.4,
+          9,
+          9,
+          8.9,
+          8.3,
+          9.3,
+          8.4,
+          8.9,
+          9.5,
+          9,
+          8.3,
+          9.3,
+          8.5,
+          8.9,
+          9,
+          9.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -745,6 +820,11 @@
       "ts": "2026-08-04T05:44:36.551Z",
       "top_bucket": "10-10C",
       "top_price": 0.9985
+    },
+    {
+      "ts": "2026-08-04T06:37:27.797Z",
+      "top_bucket": "10-10C",
+      "top_price": 0.9995
     }
   ],
   "all_outcomes": [
@@ -833,10 +913,10 @@
         10,
         10
       ],
-      "bid": 0.9985,
-      "ask": 0.9985,
-      "price": 0.9985,
-      "spread": 0,
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
       "volume": 23028
     },
     {

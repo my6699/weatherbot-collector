@@ -118,6 +118,81 @@
         "llmEnhanced": true,
         "llmConfidence": 0.7
       }
+    },
+    {
+      "ts": "2026-08-04T06:32:10.242Z",
+      "horizon": "D+1",
+      "hours_left": 29.5,
+      "ecmwf": 84,
+      "hrrr": 76,
+      "metar": null,
+      "best": 80,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 84,
+          "gfs_seamless": 76,
+          "icon_seamless": 76
+        },
+        "mean": 80,
+        "spread": 4,
+        "gap": 8,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          83,
+          82,
+          81,
+          83,
+          80,
+          82,
+          86,
+          87,
+          88,
+          79,
+          79,
+          81,
+          87,
+          82,
+          78,
+          87,
+          80,
+          84,
+          86,
+          82,
+          85,
+          86,
+          84,
+          83,
+          79,
+          81,
+          83,
+          81,
+          80,
+          85,
+          82,
+          79,
+          81,
+          80,
+          81,
+          83,
+          85,
+          80,
+          79,
+          80,
+          79,
+          84,
+          81,
+          81,
+          83,
+          81,
+          78,
+          79,
+          79,
+          82
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -145,6 +220,11 @@
       "ts": "2026-08-04T05:42:02.665Z",
       "top_bucket": "76-77F",
       "top_price": 0.335
+    },
+    {
+      "ts": "2026-08-04T06:32:10.242Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.325
     }
   ],
   "all_outcomes": [
@@ -155,11 +235,11 @@
         -999,
         75
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 836
+      "volume": 1216
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on August 5?",
@@ -168,11 +248,11 @@
         76,
         77
       ],
-      "bid": 0.335,
-      "ask": 0.335,
-      "price": 0.335,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 112
+      "volume": 150
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on August 5?",
@@ -181,11 +261,11 @@
         78,
         79
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.285,
+      "ask": 0.285,
+      "price": 0.285,
       "spread": 0,
-      "volume": 122
+      "volume": 216
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on August 5?",
@@ -194,11 +274,11 @@
         80,
         81
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.19,
+      "ask": 0.19,
+      "price": 0.19,
       "spread": 0,
-      "volume": 144
+      "volume": 187
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on August 5?",
@@ -207,11 +287,11 @@
         82,
         83
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 81
+      "volume": 112
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on August 5?",
@@ -224,7 +304,7 @@
       "ask": 0.0055,
       "price": 0.0055,
       "spread": 0,
-      "volume": 605
+      "volume": 636
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on August 5?",
@@ -233,9 +313,9 @@
         86,
         87
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
       "volume": 89
     },
@@ -276,7 +356,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 124
+      "volume": 505
     },
     {
       "question": "Will the highest temperature in Chicago be 94°F or higher on August 5?",
@@ -289,7 +369,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 80
+      "volume": 483
     }
   ],
   "created_at": "2026-08-04T02:10:04.710Z"
