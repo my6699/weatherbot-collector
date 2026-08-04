@@ -54,7 +54,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.12
+      "stop_price": 0.12,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -360,6 +361,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-04T22:34:11.816Z",
+      "horizon": "D+2",
+      "hours_left": 37.4,
+      "ecmwf": 31.2,
+      "hrrr": 33.4,
+      "metar": null,
+      "best": 31.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.2,
+          "gfs_seamless": 33.4,
+          "icon_seamless": 31.6
+        },
+        "mean": 31.9,
+        "spread": 1.5,
+        "gap": 2.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.75,
+        "membersMax": [
+          30.3,
+          31.2,
+          31.7,
+          31.9,
+          30.9,
+          31.9,
+          30.9,
+          31.3,
+          31.7,
+          31.3,
+          30.8,
+          30.2,
+          31.1,
+          31.9,
+          31.7,
+          31.7,
+          30.2,
+          31.8,
+          31,
+          32.4,
+          32.2,
+          32.2,
+          31.1,
+          30.5,
+          30.8,
+          32.2,
+          31,
+          33.2,
+          30.9,
+          31.4,
+          32,
+          30.6,
+          31.5,
+          30.6,
+          30.2,
+          31,
+          31.2,
+          31.5,
+          32.1,
+          31.6,
+          31,
+          31.4,
+          32.1,
+          31,
+          30.7,
+          31.2,
+          31.4,
+          30.5,
+          30.7,
+          31.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -393,6 +469,14 @@
       "top_price": 0.4,
       "top2_bucket": "32-33C",
       "top2_price": 0.305,
+      "top2_sum": 0.705
+    },
+    {
+      "ts": "2026-08-04T22:34:11.816Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.39,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.315,
       "top2_sum": 0.705
     }
   ],
@@ -434,7 +518,7 @@
       "ask": 0.004,
       "price": 0.004,
       "spread": 0,
-      "volume": 242
+      "volume": 292
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on August 6?",
@@ -447,7 +531,7 @@
       "ask": 0.02,
       "price": 0.02,
       "spread": 0,
-      "volume": 227
+      "volume": 243
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on August 6?",
@@ -460,7 +544,7 @@
       "ask": 0.03,
       "price": 0.03,
       "spread": 0,
-      "volume": 263
+      "volume": 268
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on August 6?",
@@ -469,11 +553,11 @@
         31,
         31
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 577
+      "volume": 590
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C on August 6?",
@@ -482,11 +566,11 @@
         32,
         32
       ],
-      "bid": 0.4,
-      "ask": 0.4,
-      "price": 0.4,
+      "bid": 0.39,
+      "ask": 0.39,
+      "price": 0.39,
       "spread": 0,
-      "volume": 775
+      "volume": 791
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on August 6?",
@@ -495,11 +579,11 @@
         33,
         33
       ],
-      "bid": 0.305,
-      "ask": 0.305,
-      "price": 0.305,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 473
+      "volume": 658
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on August 6?",
@@ -508,9 +592,9 @@
         34,
         34
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.09,
+      "ask": 0.09,
+      "price": 0.09,
       "spread": 0,
       "volume": 904
     },
@@ -521,9 +605,9 @@
         35,
         35
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
       "volume": 223
     },
@@ -534,11 +618,11 @@
         36,
         999
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 296
+      "volume": 399
     }
   ],
   "created_at": "2026-08-04T16:28:19.069Z"
