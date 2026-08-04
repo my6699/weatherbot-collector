@@ -256,6 +256,28 @@
         "llmEnhanced": true,
         "llmConfidence": 0.7
       }
+    },
+    {
+      "ts": "2026-08-04T05:42:02.665Z",
+      "horizon": "D+0",
+      "hours_left": 6.3,
+      "ecmwf": 83,
+      "hrrr": 87,
+      "metar": 71,
+      "best": 84.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 83,
+          "gfs_seamless": 87,
+          "icon_seamless": 85
+        },
+        "mean": 84.6,
+        "spread": 2.4,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7
+      }
     }
   ],
   "market_snapshots": [
@@ -316,6 +338,11 @@
     },
     {
       "ts": "2026-08-04T05:35:41.064Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.475
+    },
+    {
+      "ts": "2026-08-04T05:42:02.665Z",
       "top_bucket": "84-85F",
       "top_price": 0.475
     }
@@ -432,9 +459,9 @@
         90,
         91
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
       "volume": 1670
     },
