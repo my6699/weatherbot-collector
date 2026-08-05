@@ -70,6 +70,8 @@ export interface Position {
   p: number;
   ev: number;
   kelly: number;
+  /** 入场时捕获的 edge (单桶 edge 或双桶区间 edge)。用于 BUY 日志与结算后分析。 */
+  edge?: number;
   forecast_temp: number;
   forecast_src: string | null;
   sigma: number;

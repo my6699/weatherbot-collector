@@ -595,7 +595,7 @@ async function executeBuy(
   console.log(
     `  [BUY]  ${ctx.locName} ${ctx.horizon} ${ctx.date} | ${bucketLabel} | ` +
       `$${signal.entry_price.toFixed(3)} | EV ${signal.ev >= 0 ? "+" : ""}${signal.ev.toFixed(2)} | ` +
-      `edge ${(signal.p - marketCalibrated(signal.entry_price)).toFixed(3)} | ` +
+      `edge ${signal.edge != null ? signal.edge.toFixed(3) : (signal.p - marketCalibrated(signal.entry_price)).toFixed(3)} | ` +
       `$${signal.cost.toFixed(2)} (${(signal.forecast_src ?? "").toUpperCase()})`,
   );
   // Beginner-friendly investment-advice report (fail-open, never affects trading).
@@ -1094,6 +1094,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             edge: number;
             kelly: number;
             size: number;
+            calProb: number;
           }[] = [];
           for (const o of outcomes) {
             const [tLow, tHigh] = o.range;
@@ -1112,14 +1113,17 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             const ev = calcEv(p, ask);
             // P2: compare against the market's calibrated probability (weather markets overconfident).
             const calProb = marketCalibrated(ask);
+            // NOTE: 单桶 edge/EV 过滤下移到双桶区间选桶段统一处理。
+            // 双桶策略按"相邻桶对"算区间 edge, 单桶过滤会误杀区间赢面大的桶对
+            // (例: A/B 各 0.13/0.18 单桶 edge 都 < 0.07, 但区间 edge = pPair-0.31 可 > 0.07)。
+            // 候选池仅保留价格/概率合格的桶, 过滤交给下面的区间选桶逻辑。
             const edge = p - calProb;
-            if (ev < MIN_EV || edge < MIN_EDGE) continue;
             const kelly = calcKelly(p, ask);
             const pFactor = p >= P_TIER_HIGH ? P_TIER_HIGH_MULT : p >= P_TIER_LOW ? 1.0 : P_TIER_LOW_MULT;
             const adjMaxBet = MAX_BET * horizonFactor * pFactor * biasFactor;
             const size = betSize(kelly, balance, adjMaxBet);
             if (size < 0.5) continue;
-            candidates.push({ o, p, ev, edge, kelly, size });
+            candidates.push({ o, p, ev, edge, kelly, size, calProb });
           }
           // Sort survivors by model probability p, NOT edge. Backtest 2026-08-03
           // (scripts/backtest-strategy.ts): selecting the highest-p bucket hits
@@ -1130,17 +1134,31 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           // the bucket where the model disagrees most with the market (edge
           // ordering selected market-skeptic buckets that hit only 7%).
           candidates.sort((a, b) => b.p - a.p);
-          // Diagnostic: best achievable edge across tradeable buckets (unfiltered by EV/edge).
+          // Diagnostic: 整个市场最大可实现区间 edge (双桶)。双桶策略看的是
+          // "相邻桶对"的区间赢面, 单桶 maxEdge 会低估可交易空间。
           let maxEdgeAll = -1;
-          for (const o of outcomes) {
-            const ask = o.ask;
-            if (ask < MIN_ASK || ask >= MAX_PRICE) continue;
-            const pEnsD = hasMembers ? bucketProbEnsemble(membersMax!, o.range[0], o.range[1]) : -1;
-            const pD = pEnsD >= 0 ? pEnsD : bucketProb(adjForecast, o.range[0], o.range[1], sigma);
-            maxEdgeAll = Math.max(maxEdgeAll, pD - marketCalibrated(ask));
+          let maxEdgeInfo = "";
+          for (let ai = 0; ai < outcomes.length; ai++) {
+            for (let bi = ai + 1; bi < outcomes.length; bi++) {
+              const a = outcomes[ai]!;
+              const b = outcomes[bi]!;
+              if (a.range[1] + 1 !== b.range[0]) continue;
+              if (a.range[0] === -999 || b.range[1] === 999) continue;
+              if (a.ask < MIN_ASK || b.ask < MIN_ASK || a.ask >= MAX_PRICE || b.ask >= MAX_PRICE) continue;
+              const low = Math.min(a.range[0], b.range[0]);
+              const high = Math.max(a.range[1], b.range[1]);
+              const pEnsD = hasMembers ? bucketProbEnsemble(membersMax!, low, high) : -1;
+              const pD = pEnsD >= 0 ? pEnsD : bucketProb(adjForecast, low, high, sigma);
+              const calCost = marketCalibrated(a.ask) + marketCalibrated(b.ask);
+              const pairEdge = pD - calCost;
+              if (pairEdge > maxEdgeAll) {
+                maxEdgeAll = pairEdge;
+                maxEdgeInfo = `${a.range[0]}-${b.range[1]}${unitSym}`;
+              }
+            }
           }
           console.log(
-            `  [SCAN] ${loc.name} ${date} — ${outcomes.length} buckets | gap ${ens?.gap != null ? ens.gap.toFixed(1) : "n/a"}° | ${candidates.length} candidates | maxEdge ${maxEdgeAll.toFixed(3)}${hasMembers ? ` | ens ${membersMax!.length}members` : ""}${biasDelta !== 0 ? ` | bias ${biasDelta >= 0 ? "+" : ""}${biasDelta.toFixed(1)}°` : ""}`,
+            `  [SCAN] ${loc.name} ${date} — ${outcomes.length} buckets | gap ${ens?.gap != null ? ens.gap.toFixed(1) : "n/a"}° | ${candidates.length} candidates | maxPairEdge ${maxEdgeAll.toFixed(3)}${maxEdgeInfo ? ` [${maxEdgeInfo}]` : ""}${hasMembers ? ` | ens ${membersMax!.length}members` : ""}${biasDelta !== 0 ? ` | bias ${biasDelta >= 0 ? "+" : ""}${biasDelta.toFixed(1)}°` : ""}`,
           );
 
           // D+0 METAR confirmation ("safe same-day"): only trade event-day markets
@@ -1196,8 +1214,16 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
           // 双桶区间 group id: 相邻两桶共享, 用于 D-0 两桶合计达标时一起卖出。
           let intervalGroup: string | null = null;
           if (want >= 2 && pool.length >= 2) {
-            // 找区间概率最高的相邻桶对: 区间 = [min(low1,low2), max(high1,high2)]
-            let bestPair: { a: (typeof pool)[number]; b: (typeof pool)[number]; p: number } | null = null;
+            // 区间 edge 过滤: 双桶策略的赢面 = 温度落区间任一桶的物理概率 pPair
+            // 减去两桶市场成本 (校准后) 之和。单桶 edge 会误杀区间赢面大的桶对,
+            // 所以这里用"区间 edge"统一过滤 + 排序。
+            let bestPair: {
+              a: (typeof pool)[number];
+              b: (typeof pool)[number];
+              p: number;
+              edge: number;
+              ev: number;
+            } | null = null;
             for (let ai = 0; ai < pool.length; ai++) {
               for (let bi = ai + 1; bi < pool.length; bi++) {
                 const a = pool[ai]!;
@@ -1210,24 +1236,49 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
                 const pPair = hasMembers
                   ? bucketProbEnsemble(membersMax!, low, high)
                   : bucketProb(adjForecast, low, high, sigma);
-                if (!bestPair || pPair > bestPair.p) {
-                  bestPair = { a, b, p: pPair };
+                if (pPair > maxOurp) continue; // 区间概率过高 → 市场已定价, 无赢面
+                // 区间 edge = 区间概率 − 两桶市场成本(校准后)之和。两桶互斥,
+                // calProb₁+calProb₂ 就是"温度落 A 或 B"的市场校准概率, 直接相加。
+                const calCost = a.calProb + b.calProb;
+                const pairEdge = pPair - calCost;
+                // 区间 EV = (区间概率 × 1.0 − 两桶成本) / 两桶成本
+                const pairCost = a.o.ask + b.o.ask;
+                const pairEv = pairCost > 0 ? pPair / pairCost - 1 : 0;
+                if (pairEv < MIN_EV || pairEdge < MIN_EDGE) continue;
+                if (!bestPair || pairEdge > bestPair.edge) {
+                  bestPair = { a, b, p: pPair, edge: pairEdge, ev: pairEv };
                 }
               }
             }
             if (bestPair) {
               picks = [bestPair.a, bestPair.b];
+              // 把区间 edge/EV 回填到两个桶, 供 LLM / BUY 日志使用
+              bestPair.a.edge = bestPair.edge;
+              bestPair.b.edge = bestPair.edge;
+              bestPair.a.ev = bestPair.ev;
+              bestPair.b.ev = bestPair.ev;
               intervalGroup = `${citySlug}_${date}_${bestPair.a.o.range[0]}-${bestPair.b.o.range[1]}`;
               console.log(
                 `  [INTERVAL] ${loc.name} ${date} — 双桶区间 ${bestPair.a.o.range[0]}-${bestPair.b.o.range[1]}${unitSym} ` +
-                  `区间概率 ${(bestPair.p * 100).toFixed(1)}% (${hasMembers ? "ENS成员频次" : "正态CDF"})`,
+                  `区间概率 ${(bestPair.p * 100).toFixed(1)}% 区间edge ${bestPair.edge.toFixed(3)} 区间EV ${bestPair.ev >= 0 ? "+" : ""}${bestPair.ev.toFixed(2)} ` +
+                  `(${hasMembers ? "ENS成员频次" : "正态CDF"})`,
               );
             } else {
-              // 无相邻候选对 → 只买区间概率最高的单桶 (避免不相邻双桶)
-              picks = pool.slice(0, 1);
+              // 无合格相邻对 → 回退单桶: 用单桶 edge 过滤 (此前该过滤被移除)
+              const singles = pool.filter((c) => c.ev >= MIN_EV && c.edge >= MIN_EDGE);
+              if (singles.length > 0) {
+                singles.sort((a, b) => b.p - a.p);
+                picks = singles.slice(0, 1);
+                console.log(
+                  `  [INTERVAL] ${loc.name} ${date} — 无合格双桶区间对, 回退单桶 ${picks[0]!.o.range[0]}-${picks[0]!.o.range[1]}${unitSym} (edge ${picks[0]!.edge.toFixed(3)})`,
+                );
+              }
             }
           } else {
-            picks = pool.slice(0, want);
+            // 仓位不足两个 / 候选不足两个 → 直接单桶, 用单桶 edge 过滤
+            const singles = pool.filter((c) => c.ev >= MIN_EV && c.edge >= MIN_EDGE);
+            singles.sort((a, b) => b.p - a.p);
+            picks = singles.slice(0, want);
           }
 
           // LLM risk advisor: review the candidates before execution. Advisory by
@@ -1292,6 +1343,7 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
               cost: pick.size,
               p: Math.round(pick.p * 10000) / 10000,
               ev: Math.round(pick.ev * 10000) / 10000,
+              edge: pick.edge != null ? Math.round(pick.edge * 10000) / 10000 : undefined,
               kelly: Math.round(pick.kelly * 10000) / 10000,
               forecast_temp: adjForecast,
               forecast_src: bestSource,
