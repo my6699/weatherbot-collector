@@ -49,11 +49,11 @@
       "forecast_src": "ensemble",
       "sigma": 3.3,
       "opened_at": "2026-08-04T20:47:40.381Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -25,
+      "exit_price": 0.045,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-05T00:19:04.628Z",
       "stop_price": 0.08,
       "forecast_change_streak": 1
     }
@@ -308,6 +308,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-05T00:19:04.628Z",
+      "horizon": "D+1",
+      "hours_left": 35.7,
+      "ecmwf": 24.5,
+      "hrrr": 26.7,
+      "metar": null,
+      "best": 25.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.5,
+          "gfs_seamless": 26.7,
+          "icon_seamless": 26.1
+        },
+        "mean": 25.5,
+        "spread": 1.2,
+        "gap": 2.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.75,
+        "membersMax": [
+          25.8,
+          24.5,
+          26.2,
+          24.5,
+          25,
+          24.8,
+          24.8,
+          23.8,
+          22.6,
+          23.8,
+          26.2,
+          26.4,
+          24.2,
+          23.6,
+          25.8,
+          23.9,
+          25.9,
+          24.1,
+          26.1,
+          21.4,
+          24.3,
+          24.4,
+          20.8,
+          24.9,
+          25.4,
+          24.1,
+          24.1,
+          25.7,
+          25.6,
+          23.2,
+          24.2,
+          25.6,
+          25.2,
+          24.5,
+          24.1,
+          24.2,
+          25,
+          24.4,
+          22.3,
+          25.3,
+          24.7,
+          23.6,
+          23.6,
+          24.7,
+          24.9,
+          24.1,
+          25.7,
+          24,
+          23,
+          23.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -342,6 +417,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.295,
       "top2_sum": 0.5
+    },
+    {
+      "ts": "2026-08-05T00:19:04.628Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.295,
+      "top2_bucket": "27-28C",
+      "top2_price": 0.295,
+      "top2_sum": 0.525
     }
   ],
   "all_outcomes": [
@@ -352,11 +435,11 @@
         -999,
         19
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 407
+      "volume": 433
     },
     {
       "question": "Will the highest temperature in Munich be 20°C on August 6?",
@@ -365,11 +448,11 @@
         20,
         20
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 412
+      "volume": 428
     },
     {
       "question": "Will the highest temperature in Munich be 21°C on August 6?",
@@ -378,11 +461,11 @@
         21,
         21
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 432
+      "volume": 438
     },
     {
       "question": "Will the highest temperature in Munich be 22°C on August 6?",
@@ -395,7 +478,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 169
+      "volume": 235
     },
     {
       "question": "Will the highest temperature in Munich be 23°C on August 6?",
@@ -408,7 +491,7 @@
       "ask": 0.003,
       "price": 0.003,
       "spread": 0,
-      "volume": 365
+      "volume": 431
     },
     {
       "question": "Will the highest temperature in Munich be 24°C on August 6?",
@@ -417,11 +500,11 @@
         24,
         24
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0315,
+      "ask": 0.0315,
+      "price": 0.0315,
       "spread": 0,
-      "volume": 250
+      "volume": 536
     },
     {
       "question": "Will the highest temperature in Munich be 25°C on August 6?",
@@ -430,11 +513,11 @@
         25,
         25
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 1121
+      "volume": 2416
     },
     {
       "question": "Will the highest temperature in Munich be 26°C on August 6?",
@@ -443,11 +526,11 @@
         26,
         26
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
-      "volume": 306
+      "volume": 1346
     },
     {
       "question": "Will the highest temperature in Munich be 27°C on August 6?",
@@ -456,11 +539,11 @@
         27,
         27
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.23,
+      "ask": 0.23,
+      "price": 0.23,
       "spread": 0,
-      "volume": 538
+      "volume": 858
     },
     {
       "question": "Will the highest temperature in Munich be 28°C on August 6?",
@@ -473,7 +556,7 @@
       "ask": 0.295,
       "price": 0.295,
       "spread": 0,
-      "volume": 455
+      "volume": 656
     },
     {
       "question": "Will the highest temperature in Munich be 29°C or higher on August 6?",
@@ -482,11 +565,11 @@
         29,
         999
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.235,
+      "ask": 0.235,
+      "price": 0.235,
       "spread": 0,
-      "volume": 913
+      "volume": 2493
     }
   ],
   "created_at": "2026-08-04T16:27:31.810Z"
