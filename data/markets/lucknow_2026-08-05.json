@@ -6,7 +6,7 @@
   "station": "VILK",
   "event_end_date": "2026-08-05T12:00:00Z",
   "hours_at_discovery": 52.1,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3299621",
     "question": "Will the highest temperature in Lucknow be 30°C on August 5?",
@@ -55,10 +55,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-08-05T06:46:56.119Z",
       "stop_price": 0.176,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 31,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1372,6 +1373,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-05T12:22:11.470Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 29.9,
+      "hrrr": 31.8,
+      "metar": 30,
+      "best": 30.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.9,
+          "gfs_seamless": 31.8,
+          "icon_seamless": 30.6
+        },
+        "mean": 30.6,
+        "spread": 1.2,
+        "gap": 1.9,
+        "llmEnhanced": true,
+        "llmConfidence": 0.75,
+        "membersMax": [
+          28.5,
+          29.7,
+          29.6,
+          30.2,
+          28.9,
+          28.4,
+          29.6,
+          28.8,
+          29.6,
+          30,
+          29.8,
+          27.8,
+          28.5,
+          26.7,
+          27.5,
+          26.7,
+          28.6,
+          30,
+          29.3,
+          28.5,
+          27.5,
+          29.5,
+          27.1,
+          27.8,
+          28.4,
+          30.4,
+          30.8,
+          28.3,
+          27.3,
+          27.9,
+          28.8,
+          28,
+          28.4,
+          29.8,
+          27.3,
+          28.8,
+          27.8,
+          29.8,
+          29.3,
+          27.5,
+          30.4,
+          29.5,
+          29.4,
+          28.7,
+          29.4,
+          28.1,
+          28.3,
+          28.3,
+          30.3,
+          29.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1524,6 +1600,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.0055,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-05T12:22:11.470Z",
+      "top_bucket": "31-31C",
+      "top_price": 0.9965,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.0035,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1616,7 +1700,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2213
+      "volume": 2217
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on August 5?",
@@ -1625,11 +1709,11 @@
         31,
         31
       ],
-      "bid": 0.9945,
-      "ask": 0.9945,
-      "price": 0.9945,
+      "bid": 0.9965,
+      "ask": 0.9965,
+      "price": 0.9965,
       "spread": 0,
-      "volume": 4254
+      "volume": 4298
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C on August 5?",
@@ -1638,11 +1722,11 @@
         32,
         32
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 3263
+      "volume": 3309
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on August 5?",
@@ -1655,7 +1739,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3348
+      "volume": 3378
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C or higher on August 5?",
@@ -1668,8 +1752,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2631
+      "volume": 2661
     }
   ],
-  "created_at": "2026-08-03T07:51:28.521Z"
+  "created_at": "2026-08-03T07:51:28.521Z",
+  "metar_max": 27
 }

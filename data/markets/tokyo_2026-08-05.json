@@ -6,7 +6,7 @@
   "station": "RJTT",
   "event_end_date": "2026-08-05T12:00:00Z",
   "hours_at_discovery": 55.8,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3298691",
     "question": "Will the highest temperature in Tokyo be 29°C on August 5?",
@@ -55,10 +55,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-08-05T03:41:28.251Z",
       "stop_price": 0.104,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 30,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1379,6 +1380,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-05T12:21:46.282Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 29,
+      "hrrr": 29.3,
+      "metar": 27,
+      "best": 28.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29,
+          "gfs_seamless": 29.3,
+          "icon_seamless": 28.2
+        },
+        "mean": 28.9,
+        "spread": 0.7,
+        "gap": 0.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          28.8,
+          29.3,
+          28.8,
+          28.8,
+          28.9,
+          29.5,
+          29.2,
+          29.1,
+          29.4,
+          29.1,
+          28.1,
+          29.9,
+          29.6,
+          28.9,
+          28.1,
+          29.8,
+          28.8,
+          29.4,
+          28.1,
+          28.9,
+          28.9,
+          29.2,
+          29.3,
+          28.7,
+          29.5,
+          28.9,
+          29.4,
+          28.9,
+          30.2,
+          29.4,
+          29.2,
+          29.5,
+          28.8,
+          29.4,
+          28,
+          29.6,
+          28.7,
+          28.7,
+          29.5,
+          29,
+          28.8,
+          29.2,
+          29.2,
+          28.5,
+          29.3,
+          29.6,
+          28.9,
+          29.2,
+          29,
+          29.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1551,6 +1626,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-05T12:21:46.282Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.9995,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1591,7 +1674,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4407
+      "volume": 5407
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on August 5?",
@@ -1617,7 +1700,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 22282
+      "volume": 22292
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on August 5?",
@@ -1630,7 +1713,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 16705
+      "volume": 18132
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on August 5?",
@@ -1656,7 +1739,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6796
+      "volume": 6815
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on August 5?",
@@ -1682,7 +1765,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5118
+      "volume": 5143
     },
     {
       "question": "Will the highest temperature in Tokyo be 35°C or higher on August 5?",
@@ -1698,5 +1781,6 @@
       "volume": 5542
     }
   ],
-  "created_at": "2026-08-03T04:14:33.629Z"
+  "created_at": "2026-08-03T04:14:33.629Z",
+  "metar_max": 26
 }

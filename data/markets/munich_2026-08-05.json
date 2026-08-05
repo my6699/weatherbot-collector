@@ -6,7 +6,7 @@
   "station": "EDDM",
   "event_end_date": "2026-08-05T12:00:00Z",
   "hours_at_discovery": 55.8,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -1346,6 +1346,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-05T12:21:03.197Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 32.9,
+      "hrrr": 32.1,
+      "metar": 32,
+      "best": 32.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.9,
+          "gfs_seamless": 32.1,
+          "icon_seamless": 33.9
+        },
+        "mean": 32.9,
+        "spread": 1,
+        "gap": 0.8,
+        "llmEnhanced": true,
+        "llmConfidence": 0.85,
+        "membersMax": [
+          33,
+          32.9,
+          32.8,
+          33,
+          32.6,
+          33,
+          33.1,
+          32.8,
+          31.8,
+          32.6,
+          32.6,
+          32.4,
+          33,
+          33,
+          33.3,
+          32.3,
+          32.4,
+          32.9,
+          32.8,
+          32.3,
+          32.1,
+          32.4,
+          33.3,
+          33,
+          32.6,
+          32,
+          33.1,
+          31.7,
+          32.7,
+          32.9,
+          32.5,
+          33.2,
+          32.6,
+          33,
+          32,
+          32.7,
+          33.3,
+          33,
+          33,
+          32.7,
+          32.6,
+          33.1,
+          33.3,
+          32.9,
+          32.6,
+          33,
+          32.5,
+          32.9,
+          32.6,
+          32.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1518,6 +1593,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.69,
       "top2_sum": 0.925
+    },
+    {
+      "ts": "2026-08-05T12:21:03.197Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.76,
+      "top2_bucket": "33-34C",
+      "top2_price": 0.76,
+      "top2_sum": 0.94
     }
   ],
   "all_outcomes": [
@@ -1541,11 +1624,11 @@
         31,
         31
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4553
+      "volume": 5078
     },
     {
       "question": "Will the highest temperature in Munich be 32°C on August 5?",
@@ -1554,11 +1637,11 @@
         32,
         32
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 9708
+      "volume": 9911
     },
     {
       "question": "Will the highest temperature in Munich be 33°C on August 5?",
@@ -1567,11 +1650,11 @@
         33,
         33
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.18,
+      "ask": 0.18,
+      "price": 0.18,
       "spread": 0,
-      "volume": 11714
+      "volume": 12004
     },
     {
       "question": "Will the highest temperature in Munich be 34°C on August 5?",
@@ -1580,11 +1663,11 @@
         34,
         34
       ],
-      "bid": 0.69,
-      "ask": 0.69,
-      "price": 0.69,
+      "bid": 0.76,
+      "ask": 0.76,
+      "price": 0.76,
       "spread": 0,
-      "volume": 9758
+      "volume": 9892
     },
     {
       "question": "Will the highest temperature in Munich be 35°C on August 5?",
@@ -1593,11 +1676,11 @@
         35,
         35
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 11740
+      "volume": 11915
     },
     {
       "question": "Will the highest temperature in Munich be 36°C on August 5?",
@@ -1606,11 +1689,11 @@
         36,
         36
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 9080
+      "volume": 9238
     },
     {
       "question": "Will the highest temperature in Munich be 37°C on August 5?",
