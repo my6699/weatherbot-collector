@@ -49,11 +49,11 @@
       "forecast_src": "ensemble",
       "sigma": 2.8,
       "opened_at": "2026-08-04T12:24:21.869Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.92,
+      "exit_price": 0.0005,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-05T06:46:56.119Z",
       "stop_price": 0.176,
       "forecast_change_streak": 0
     }
@@ -1147,6 +1147,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-05T06:46:56.119Z",
+      "horizon": "D+0",
+      "hours_left": 5.2,
+      "ecmwf": 29.2,
+      "hrrr": 31.6,
+      "metar": 31,
+      "best": 30.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.2,
+          "gfs_seamless": 31.6,
+          "icon_seamless": 30.1
+        },
+        "mean": 30.1,
+        "spread": 1.5,
+        "gap": 2.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.75,
+        "membersMax": [
+          30.4,
+          28.7,
+          29.1,
+          31.4,
+          27.6,
+          30.6,
+          29.7,
+          30.2,
+          29.8,
+          28.9,
+          29.3,
+          29.9,
+          29.8,
+          30.3,
+          28.2,
+          29.3,
+          28.4,
+          30.4,
+          30.4,
+          28.2,
+          30,
+          30.2,
+          28.9,
+          29.9,
+          29.1,
+          29.7,
+          31.3,
+          29.7,
+          28.4,
+          29.8,
+          30.1,
+          28.8,
+          30.6,
+          30.9,
+          29.7,
+          30.9,
+          30.6,
+          29.3,
+          29.9,
+          28.3,
+          29.8,
+          29.9,
+          30,
+          28.2,
+          29.4,
+          29.8,
+          31.1,
+          28.5,
+          29.7,
+          30.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1275,6 +1350,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.385,
       "top2_sum": 0.625
+    },
+    {
+      "ts": "2026-08-05T06:46:56.119Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.475,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.475,
+      "top2_sum": 0.87
     }
   ],
   "all_outcomes": [
@@ -1337,11 +1420,11 @@
         28,
         28
       ],
-      "bid": 0.018,
-      "ask": 0.018,
-      "price": 0.018,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 516
+      "volume": 1206
     },
     {
       "question": "Will the highest temperature in Lucknow be 29°C on August 5?",
@@ -1350,11 +1433,11 @@
         29,
         29
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1279
+      "volume": 1832
     },
     {
       "question": "Will the highest temperature in Lucknow be 30°C on August 5?",
@@ -1363,11 +1446,11 @@
         30,
         30
       ],
-      "bid": 0.24,
-      "ask": 0.24,
-      "price": 0.24,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1236
+      "volume": 2032
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on August 5?",
@@ -1376,11 +1459,11 @@
         31,
         31
       ],
-      "bid": 0.385,
-      "ask": 0.385,
-      "price": 0.385,
+      "bid": 0.395,
+      "ask": 0.395,
+      "price": 0.395,
       "spread": 0,
-      "volume": 1599
+      "volume": 1787
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C on August 5?",
@@ -1389,11 +1472,11 @@
         32,
         32
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.475,
+      "ask": 0.475,
+      "price": 0.475,
       "spread": 0,
-      "volume": 1531
+      "volume": 1781
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on August 5?",
@@ -1402,11 +1485,11 @@
         33,
         33
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
-      "volume": 1614
+      "volume": 2088
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C or higher on August 5?",
@@ -1415,11 +1498,11 @@
         34,
         999
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.012,
+      "ask": 0.012,
+      "price": 0.012,
       "spread": 0,
-      "volume": 982
+      "volume": 1517
     }
   ],
   "created_at": "2026-08-03T07:51:28.521Z"
