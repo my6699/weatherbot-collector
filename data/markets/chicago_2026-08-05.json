@@ -49,11 +49,11 @@
       "forecast_src": "ensemble",
       "sigma": 2.5,
       "opened_at": "2026-08-04T12:21:08.812Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 5.45,
+      "exit_price": 0.14,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-08-05T03:37:46.635Z",
       "stop_price": 0.11,
       "trailing_activated": true,
       "forecast_change_streak": 0
@@ -993,6 +993,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-05T03:37:46.635Z",
+      "horizon": "D+0",
+      "hours_left": 8.4,
+      "ecmwf": 88,
+      "hrrr": 86,
+      "metar": 79,
+      "best": 85.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 88,
+          "gfs_seamless": 86,
+          "icon_seamless": 80
+        },
+        "mean": 85.8,
+        "spread": 5.8,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          85,
+          88,
+          86,
+          85,
+          86,
+          86,
+          87,
+          85,
+          89,
+          84,
+          86,
+          88,
+          88,
+          86,
+          85,
+          91,
+          86,
+          84,
+          83,
+          86,
+          86,
+          87,
+          85,
+          87,
+          88,
+          85,
+          86,
+          89,
+          86,
+          83,
+          84,
+          88,
+          85,
+          86,
+          85,
+          84,
+          86,
+          91,
+          83,
+          86,
+          81,
+          86,
+          86,
+          85,
+          82,
+          87,
+          86,
+          88,
+          87,
+          84
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1093,6 +1168,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.325,
       "top2_sum": 0.6
+    },
+    {
+      "ts": "2026-08-05T03:37:46.635Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.305,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.3,
+      "top2_sum": 0.605
     }
   ],
   "all_outcomes": [
@@ -1103,11 +1186,11 @@
         -999,
         75
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 6225
+      "volume": 6482
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on August 5?",
@@ -1116,11 +1199,11 @@
         76,
         77
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 1985
+      "volume": 2297
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on August 5?",
@@ -1129,11 +1212,11 @@
         78,
         79
       ],
-      "bid": 0.275,
-      "ask": 0.275,
-      "price": 0.275,
+      "bid": 0.305,
+      "ask": 0.305,
+      "price": 0.305,
       "spread": 0,
-      "volume": 1036
+      "volume": 1641
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on August 5?",
@@ -1142,11 +1225,11 @@
         80,
         81
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.3,
+      "ask": 0.3,
+      "price": 0.3,
       "spread": 0,
-      "volume": 2101
+      "volume": 2235
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on August 5?",
@@ -1155,11 +1238,11 @@
         82,
         83
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.14,
+      "ask": 0.14,
+      "price": 0.14,
       "spread": 0,
-      "volume": 1132
+      "volume": 1362
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on August 5?",
@@ -1168,11 +1251,11 @@
         84,
         85
       ],
-      "bid": 0.0535,
-      "ask": 0.0535,
-      "price": 0.0535,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
-      "volume": 3234
+      "volume": 3398
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on August 5?",
@@ -1181,11 +1264,11 @@
         86,
         87
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.012,
+      "ask": 0.012,
+      "price": 0.012,
       "spread": 0,
-      "volume": 1336
+      "volume": 1473
     },
     {
       "question": "Will the highest temperature in Chicago be between 88-89°F on August 5?",
@@ -1194,11 +1277,11 @@
         88,
         89
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 424
+      "volume": 707
     },
     {
       "question": "Will the highest temperature in Chicago be between 90-91°F on August 5?",

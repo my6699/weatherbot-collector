@@ -55,7 +55,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.12,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -511,6 +511,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-05T03:40:02.669Z",
+      "horizon": "D+1",
+      "hours_left": 32.3,
+      "ecmwf": 32,
+      "hrrr": 33.5,
+      "metar": null,
+      "best": 32.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32,
+          "gfs_seamless": 33.5,
+          "icon_seamless": 31.6
+        },
+        "mean": 32.3,
+        "spread": 1.1,
+        "gap": 1.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.82,
+        "membersMax": [
+          32.1,
+          31.4,
+          33.1,
+          31.6,
+          31.8,
+          31.7,
+          32.1,
+          32.1,
+          31.9,
+          32.8,
+          31.8,
+          32.4,
+          31.4,
+          30.7,
+          31.4,
+          30.9,
+          31.8,
+          31.6,
+          31.7,
+          31.1,
+          31.4,
+          31.8,
+          31.6,
+          31.7,
+          31.6,
+          32.2,
+          31.4,
+          30.9,
+          32.7,
+          32,
+          32.1,
+          32.1,
+          31.8,
+          32.2,
+          31,
+          31.9,
+          31.7,
+          31.2,
+          31.7,
+          32.5,
+          31.7,
+          30.9,
+          32.1,
+          32.1,
+          32.4,
+          32.1,
+          30.9,
+          31.4,
+          30.9,
+          31.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -561,6 +636,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.315,
       "top2_sum": 0.705
+    },
+    {
+      "ts": "2026-08-05T03:40:02.669Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.385,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.305,
+      "top2_sum": 0.69
     }
   ],
   "all_outcomes": [
@@ -588,7 +671,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 195
+      "volume": 196
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on August 6?",
@@ -597,11 +680,11 @@
         28,
         28
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 492
+      "volume": 542
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on August 6?",
@@ -610,11 +693,11 @@
         29,
         29
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 243
+      "volume": 374
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on August 6?",
@@ -627,7 +710,7 @@
       "ask": 0.03,
       "price": 0.03,
       "spread": 0,
-      "volume": 268
+      "volume": 273
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on August 6?",
@@ -636,11 +719,11 @@
         31,
         31
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
       "spread": 0,
-      "volume": 853
+      "volume": 994
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C on August 6?",
@@ -649,9 +732,9 @@
         32,
         32
       ],
-      "bid": 0.39,
-      "ask": 0.39,
-      "price": 0.39,
+      "bid": 0.385,
+      "ask": 0.385,
+      "price": 0.385,
       "spread": 0,
       "volume": 801
     },
@@ -662,11 +745,11 @@
         33,
         33
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.305,
+      "ask": 0.305,
+      "price": 0.305,
       "spread": 0,
-      "volume": 669
+      "volume": 716
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on August 6?",
@@ -679,7 +762,7 @@
       "ask": 0.085,
       "price": 0.085,
       "spread": 0,
-      "volume": 913
+      "volume": 922
     },
     {
       "question": "Will the highest temperature in Tokyo be 35°C on August 6?",
@@ -692,7 +775,7 @@
       "ask": 0.03,
       "price": 0.03,
       "spread": 0,
-      "volume": 223
+      "volume": 239
     },
     {
       "question": "Will the highest temperature in Tokyo be 36°C or higher on August 6?",
