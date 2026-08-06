@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.16,
-      "forecast_change_streak": 0
+      "stop_price": 0.21,
+      "forecast_change_streak": 0,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -877,6 +878,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-06T06:53:23.094Z",
+      "horizon": "D+1",
+      "hours_left": 29.1,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": null,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -967,6 +979,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.56,
       "top2_sum": 0.805
+    },
+    {
+      "ts": "2026-08-06T06:53:23.094Z",
+      "top_bucket": "13-13C",
+      "top_price": 0.57,
+      "top2_bucket": "12-13C",
+      "top2_price": 0.57,
+      "top2_sum": 0.85
     }
   ],
   "all_outcomes": [
@@ -1007,7 +1027,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 506
+      "volume": 582
     },
     {
       "question": "Will the highest temperature in Wellington be 10°C on August 7?",
@@ -1020,7 +1040,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 533
+      "volume": 560
     },
     {
       "question": "Will the highest temperature in Wellington be 11°C on August 7?",
@@ -1033,7 +1053,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 2524
+      "volume": 2535
     },
     {
       "question": "Will the highest temperature in Wellington be 12°C on August 7?",
@@ -1042,11 +1062,11 @@
         12,
         12
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.28,
+      "ask": 0.28,
+      "price": 0.28,
       "spread": 0,
-      "volume": 1315
+      "volume": 1462
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on August 7?",
@@ -1055,11 +1075,11 @@
         13,
         13
       ],
-      "bid": 0.56,
-      "ask": 0.56,
-      "price": 0.56,
+      "bid": 0.57,
+      "ask": 0.57,
+      "price": 0.57,
       "spread": 0,
-      "volume": 4115
+      "volume": 4368
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on August 7?",
@@ -1072,7 +1092,7 @@
       "ask": 0.135,
       "price": 0.135,
       "spread": 0,
-      "volume": 1480
+      "volume": 1653
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on August 7?",
@@ -1085,7 +1105,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 729
+      "volume": 738
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on August 7?",
@@ -1098,7 +1118,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 405
+      "volume": 433
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C or higher on August 7?",
