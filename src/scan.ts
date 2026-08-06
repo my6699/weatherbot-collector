@@ -1101,7 +1101,16 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             if (heldIds.has(o.market_id)) continue;
             if (o.volume < MIN_VOLUME) continue;
             const ask = o.ask;
-            if (ask < MIN_ASK || ask >= MAX_PRICE) continue;
+            if (ask < MIN_ASK || ask >= MAX_PRICE) {
+              // 双桶区间策略关心市场热门桶 (区间中心附近), 这些桶往往单桶价格
+              // 超过 MAX_PRICE 而进不了候选池 — 打印排除原因便于排查。
+              if (ask >= MAX_PRICE && !heldIds.has(o.market_id) && o.volume >= MIN_VOLUME) {
+                console.log(
+                  `  [INTERVAL DBG] ${loc.name} ${date} — 候选排除 ${tLow}-${tHigh}${unitSym}: ask $${ask.toFixed(3)} >= MAX_PRICE $${MAX_PRICE.toFixed(2)} (热门桶单桶超价, 双桶区间无法覆盖)`,
+                );
+              }
+              continue;
+            }
             const pEns = hasMembers ? bucketProbEnsemble(membersMax!, tLow, tHigh) : -1;
             const p = pEns >= 0 ? pEns : bucketProb(adjForecast, tLow, tHigh, sigma);
             if (p > maxOurp) {
@@ -1217,6 +1226,9 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
             // 区间 edge 过滤: 双桶策略的赢面 = 温度落区间任一桶的物理概率 pPair
             // 减去两桶市场成本 (校准后) 之和。单桶 edge 会误杀区间赢面大的桶对,
             // 所以这里用"区间 edge"统一过滤 + 排序。
+            console.log(
+              `  [INTERVAL DBG] ${loc.name} ${date} — 双桶区间选桶: 候选 ${pool.length} 桶 | ${hasMembers ? `ENS ${membersMax!.length} 成员` : "正态 CDF"} | forecast ${adjForecast.toFixed(1)}°${unitSym} | sigma ${sigma.toFixed(2)} | MIN_EDGE ${MIN_EDGE.toFixed(2)} MIN_EV ${MIN_EV.toFixed(1)}`,
+            );
             let bestPair: {
               a: (typeof pool)[number];
               b: (typeof pool)[number];
@@ -1236,7 +1248,6 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
                 const pPair = hasMembers
                   ? bucketProbEnsemble(membersMax!, low, high)
                   : bucketProb(adjForecast, low, high, sigma);
-                if (pPair > maxOurp) continue; // 区间概率过高 → 市场已定价, 无赢面
                 // 区间 edge = 区间概率 − 两桶市场成本(校准后)之和。两桶互斥,
                 // calProb₁+calProb₂ 就是"温度落 A 或 B"的市场校准概率, 直接相加。
                 const calCost = a.calProb + b.calProb;
@@ -1244,7 +1255,21 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
                 // 区间 EV = (区间概率 × 1.0 − 两桶成本) / 两桶成本
                 const pairCost = a.o.ask + b.o.ask;
                 const pairEv = pairCost > 0 ? pPair / pairCost - 1 : 0;
-                if (pairEv < MIN_EV || pairEdge < MIN_EDGE) continue;
+                // 逐对诊断日志: 完整打印区间 edge/EV 计算过程的每个中间量,
+                // 便于排查"为什么这个区间对没被选中 / 被选中的依据是什么"。
+                const dbgReasons: string[] = [];
+                if (pPair > maxOurp) dbgReasons.push(`pPair ${pPair.toFixed(3)} > MAX_OURP ${maxOurp.toFixed(2)}`);
+                if (pairEv < MIN_EV) dbgReasons.push(`EV ${pairEv.toFixed(2)} < ${MIN_EV.toFixed(1)}`);
+                if (pairEdge < MIN_EDGE) dbgReasons.push(`edge ${pairEdge.toFixed(3)} < ${MIN_EDGE.toFixed(2)}`);
+                console.log(
+                  `  [INTERVAL DBG]   对 ${a.o.range[0]}-${b.o.range[1]}${unitSym}: ` +
+                    `ask $${a.o.ask.toFixed(3)}+$${b.o.ask.toFixed(3)}=$${pairCost.toFixed(3)} | ` +
+                    `单桶p ${a.p.toFixed(3)}/${b.p.toFixed(3)} calProb ${a.calProb.toFixed(3)}/${b.calProb.toFixed(3)} | ` +
+                    `pPair ${pPair.toFixed(3)}${hasMembers ? "(ENS)" : "(CDF)"} calCost ${calCost.toFixed(3)} | ` +
+                    `edge ${pairEdge >= 0 ? "+" : ""}${pairEdge.toFixed(3)} EV ${pairEv >= 0 ? "+" : ""}${pairEv.toFixed(2)} | ` +
+                    `${dbgReasons.length === 0 ? "✓ 达标" : "✗ " + dbgReasons.join("; ")}`,
+                );
+                if (pPair > maxOurp || pairEv < MIN_EV || pairEdge < MIN_EDGE) continue;
                 if (!bestPair || pairEdge > bestPair.edge) {
                   bestPair = { a, b, p: pPair, edge: pairEdge, ev: pairEv };
                 }
@@ -1270,12 +1295,21 @@ export async function scanAndUpdate(): Promise<{ newPos: number; closed: number;
                 singles.sort((a, b) => b.p - a.p);
                 picks = singles.slice(0, 1);
                 console.log(
-                  `  [INTERVAL] ${loc.name} ${date} — 无合格双桶区间对, 回退单桶 ${picks[0]!.o.range[0]}-${picks[0]!.o.range[1]}${unitSym} (edge ${picks[0]!.edge.toFixed(3)})`,
+                  `  [INTERVAL] ${loc.name} ${date} — 无合格双桶区间对, 回退单桶 ${picks[0]!.o.range[0]}-${picks[0]!.o.range[1]}${unitSym} (edge ${picks[0]!.edge.toFixed(3)}, EV ${picks[0]!.ev.toFixed(2)})`,
+                );
+              } else {
+                console.log(
+                  `  [INTERVAL DBG] ${loc.name} ${date} — 无合格双桶区间对且无合格单桶, 放弃 (所有候选对/单桶 edge、EV 均不达标)`,
                 );
               }
             }
           } else {
             // 仓位不足两个 / 候选不足两个 → 直接单桶, 用单桶 edge 过滤
+            if (want < 2) {
+              console.log(
+                `  [INTERVAL DBG] ${loc.name} ${date} — 双桶仓位不足 (want ${want}), 走单桶路径`,
+              );
+            }
             const singles = pool.filter((c) => c.ev >= MIN_EV && c.edge >= MIN_EDGE);
             singles.sort((a, b) => b.p - a.p);
             picks = singles.slice(0, want);
