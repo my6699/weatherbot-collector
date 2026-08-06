@@ -49,11 +49,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-08-05T00:20:43.962Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.83,
+      "exit_price": 0.0005,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-06T10:05:51.206Z",
       "stop_price": 0.088,
       "forecast_change_streak": 0
     }
@@ -1474,6 +1474,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-06T10:05:51.206Z",
+      "horizon": "D+0",
+      "hours_left": 1.9,
+      "ecmwf": 26.3,
+      "hrrr": 29.3,
+      "metar": 29,
+      "best": 27.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.3,
+          "gfs_seamless": 29.3,
+          "icon_seamless": 28.2
+        },
+        "mean": 27.6,
+        "spread": 1.7,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.75,
+        "membersMax": [
+          26.7,
+          27.2,
+          25.6,
+          27,
+          27.7,
+          28.3,
+          26.9,
+          26.8,
+          26.4,
+          27.3,
+          28.3,
+          25.8,
+          25.6,
+          28.5,
+          25.7,
+          27,
+          26.4,
+          26.3,
+          26.8,
+          26.5,
+          25.2,
+          25.5,
+          27.3,
+          27.7,
+          26,
+          26.1,
+          28.8,
+          27.4,
+          28.7,
+          25.8,
+          28.4,
+          25.3,
+          28,
+          25.8,
+          26.7,
+          26.6,
+          27.4,
+          26.4,
+          27.6,
+          28.9,
+          24.9,
+          28,
+          27.6,
+          26.8,
+          27.8,
+          27.7,
+          25.5,
+          26,
+          25.9,
+          26.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1628,6 +1703,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.425,
       "top2_sum": 0.78
+    },
+    {
+      "ts": "2026-08-06T10:05:51.206Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.625,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.275,
+      "top2_sum": 0.9
     }
   ],
   "all_outcomes": [
@@ -1707,7 +1790,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6038
+      "volume": 6187
     },
     {
       "question": "Will the highest temperature in Lucknow be 28°C on August 6?",
@@ -1716,11 +1799,11 @@
         28,
         28
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2265
+      "volume": 4058
     },
     {
       "question": "Will the highest temperature in Lucknow be 29°C on August 6?",
@@ -1729,11 +1812,11 @@
         29,
         29
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.625,
+      "ask": 0.625,
+      "price": 0.625,
       "spread": 0,
-      "volume": 868
+      "volume": 1701
     },
     {
       "question": "Will the highest temperature in Lucknow be 30°C on August 6?",
@@ -1742,11 +1825,11 @@
         30,
         30
       ],
-      "bid": 0.425,
-      "ask": 0.425,
-      "price": 0.425,
+      "bid": 0.275,
+      "ask": 0.275,
+      "price": 0.275,
       "spread": 0,
-      "volume": 5963
+      "volume": 6716
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on August 6?",
@@ -1755,11 +1838,11 @@
         31,
         31
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 863
+      "volume": 1517
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C or higher on August 6?",
@@ -1768,11 +1851,11 @@
         32,
         999
       ],
-      "bid": 0.0155,
-      "ask": 0.0155,
-      "price": 0.0155,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 2105
+      "volume": 3157
     }
   ],
   "created_at": "2026-08-04T16:29:05.122Z"
