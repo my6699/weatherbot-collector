@@ -6,10 +6,10 @@
   "station": "EGLC",
   "event_end_date": "2026-08-07T12:00:00Z",
   "hours_at_discovery": 53.2,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 26,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1957,6 +1957,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-07T18:06:49.557Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 24.8,
+      "hrrr": 26.5,
+      "metar": 26,
+      "best": 25.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.8,
+          "gfs_seamless": 26.5,
+          "icon_seamless": 25.2
+        },
+        "mean": 25.3,
+        "spread": 1.1,
+        "gap": 1.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.82,
+        "membersMax": [
+          24.7,
+          24.7,
+          24.7,
+          24.4,
+          24.6,
+          24.8,
+          25.2,
+          25.1,
+          24.9,
+          24.8,
+          24.4,
+          24.8,
+          24.7,
+          25.2,
+          25,
+          24.8,
+          24.4,
+          24.5,
+          24.7,
+          24.2,
+          24.9,
+          25.2,
+          24.6,
+          24.9,
+          23.8,
+          24.8,
+          24.7,
+          24.8,
+          24.1,
+          25,
+          25,
+          24.7,
+          24.7,
+          24.7,
+          24.5,
+          24.8,
+          24.4,
+          25.3,
+          24.4,
+          24.9,
+          24.7,
+          24.8,
+          24.6,
+          24.9,
+          24.9,
+          25.2,
+          24.7,
+          24.7,
+          24.9,
+          24.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2167,6 +2242,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.08,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-08-07T18:06:49.557Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.9795,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.02,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -2181,7 +2264,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3492
+      "volume": 3493
     },
     {
       "question": "Will the highest temperature in London be 23°C on August 7?",
@@ -2229,11 +2312,11 @@
         26,
         26
       ],
-      "bid": 0.915,
-      "ask": 0.915,
-      "price": 0.915,
+      "bid": 0.9795,
+      "ask": 0.9795,
+      "price": 0.9795,
       "spread": 0,
-      "volume": 29143
+      "volume": 39968
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 7?",
@@ -2242,11 +2325,11 @@
         27,
         27
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 23969
+      "volume": 27014
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 7?",
@@ -2255,11 +2338,11 @@
         28,
         28
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 16261
+      "volume": 17324
     },
     {
       "question": "Will the highest temperature in London be 29°C on August 7?",
@@ -2314,5 +2397,6 @@
       "volume": 940
     }
   ],
-  "created_at": "2026-08-05T06:45:33.492Z"
+  "created_at": "2026-08-05T06:45:33.492Z",
+  "metar_max": 18
 }
