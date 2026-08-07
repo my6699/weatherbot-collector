@@ -6,10 +6,10 @@
   "station": "LFPG",
   "event_end_date": "2026-08-07T12:00:00Z",
   "hours_at_discovery": 53.2,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1810,6 +1810,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-07T16:12:53.712Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 25.3,
+      "hrrr": 27.4,
+      "metar": 27,
+      "best": 26.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.3,
+          "gfs_seamless": 27.4,
+          "icon_seamless": 26.4
+        },
+        "mean": 26.1,
+        "spread": 1.3,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.75,
+        "membersMax": [
+          25.8,
+          25.2,
+          25.7,
+          25.9,
+          25.2,
+          25.7,
+          26,
+          26,
+          26,
+          25.5,
+          25.5,
+          26.1,
+          25.4,
+          25.8,
+          25.8,
+          25.6,
+          25.2,
+          25.4,
+          25.8,
+          25.5,
+          25.6,
+          25.7,
+          25.5,
+          25.5,
+          25.6,
+          25.9,
+          25.6,
+          24.9,
+          24.6,
+          25.9,
+          25.6,
+          25.8,
+          25.9,
+          25.2,
+          25.6,
+          25.5,
+          24.9,
+          25.8,
+          25.6,
+          25.6,
+          25.8,
+          25.4,
+          25.5,
+          25.4,
+          25.6,
+          25.5,
+          25.5,
+          25.5,
+          25.8,
+          24.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2004,6 +2079,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.06,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-08-07T16:12:53.712Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.9935,
+      "top2_bucket": "27-28C",
+      "top2_price": 0.0075,
+      "top2_sum": 1.001
     }
   ],
   "all_outcomes": [
@@ -2057,7 +2140,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 14612
+      "volume": 15869
     },
     {
       "question": "Will the highest temperature in Paris be 27°C on August 7?",
@@ -2066,11 +2149,11 @@
         27,
         27
       ],
-      "bid": 0.935,
-      "ask": 0.935,
-      "price": 0.935,
+      "bid": 0.9935,
+      "ask": 0.9935,
+      "price": 0.9935,
       "spread": 0,
-      "volume": 10807
+      "volume": 11904
     },
     {
       "question": "Will the highest temperature in Paris be 28°C on August 7?",
@@ -2079,11 +2162,11 @@
         28,
         28
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 8238
+      "volume": 9371
     },
     {
       "question": "Will the highest temperature in Paris be 29°C on August 7?",
@@ -2092,11 +2175,11 @@
         29,
         29
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6538
+      "volume": 6851
     },
     {
       "question": "Will the highest temperature in Paris be 30°C on August 7?",
@@ -2105,11 +2188,11 @@
         30,
         30
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 5218
+      "volume": 6264
     },
     {
       "question": "Will the highest temperature in Paris be 31°C on August 7?",
@@ -2151,5 +2234,6 @@
       "volume": 1001
     }
   ],
-  "created_at": "2026-08-05T06:45:37.089Z"
+  "created_at": "2026-08-05T06:45:37.089Z",
+  "metar_max": 15
 }
