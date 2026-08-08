@@ -6,10 +6,10 @@
   "station": "VILK",
   "event_end_date": "2026-08-08T12:00:00Z",
   "hours_at_discovery": 53.1,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2259,6 +2259,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-08T11:50:34.552Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 32.5,
+      "hrrr": 34,
+      "metar": 32,
+      "best": 33.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.5,
+          "gfs_seamless": 34,
+          "icon_seamless": 33.6
+        },
+        "mean": 33.2,
+        "spread": 0.8,
+        "gap": 1.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          31.7,
+          33.7,
+          32.7,
+          32.9,
+          32.9,
+          32.5,
+          32.6,
+          31.8,
+          33.8,
+          32.4,
+          32.5,
+          33.2,
+          32.1,
+          32.2,
+          32.9,
+          32.5,
+          33,
+          31.7,
+          32.4,
+          32.9,
+          33.1,
+          33.3,
+          32.7,
+          32.7,
+          33.4,
+          32.6,
+          32.5,
+          32.6,
+          33.3,
+          32.7,
+          32.7,
+          30.9,
+          32.8,
+          32.8,
+          31.9,
+          33.1,
+          32.7,
+          33,
+          32.6,
+          32.5,
+          33.1,
+          31.4,
+          33.1,
+          32.8,
+          33.4,
+          32.8,
+          32.5,
+          33.3,
+          33.2,
+          32.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2501,6 +2575,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.17,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-08-08T11:50:34.552Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.98,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.015,
+      "top2_sum": 0.995
     }
   ],
   "all_outcomes": [
@@ -2589,11 +2671,11 @@
         32,
         32
       ],
-      "bid": 0.82,
-      "ask": 0.82,
-      "price": 0.82,
+      "bid": 0.98,
+      "ask": 0.98,
+      "price": 0.98,
       "spread": 0,
-      "volume": 2385
+      "volume": 3606
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on August 8?",
@@ -2602,11 +2684,11 @@
         33,
         33
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 4450
+      "volume": 5853
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C on August 8?",
@@ -2615,11 +2697,11 @@
         34,
         34
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 5707
+      "volume": 6685
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on August 8?",
@@ -2648,5 +2730,6 @@
       "volume": 4254
     }
   ],
-  "created_at": "2026-08-06T06:51:37.434Z"
+  "created_at": "2026-08-06T06:51:37.434Z",
+  "metar_max": 29
 }
