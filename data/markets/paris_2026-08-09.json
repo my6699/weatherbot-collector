@@ -1282,6 +1282,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-08T04:31:55.638Z",
+      "horizon": "D+1",
+      "hours_left": 31.5,
+      "ecmwf": 35.6,
+      "hrrr": 33,
+      "metar": null,
+      "best": 34.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 35.6,
+          "gfs_seamless": 33,
+          "icon_seamless": 33.4
+        },
+        "mean": 34.4,
+        "spread": 1.4,
+        "gap": 2.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.75,
+        "membersMax": [
+          33.6,
+          31.1,
+          33.9,
+          34,
+          34,
+          34,
+          35.8,
+          35.5,
+          33.9,
+          30.6,
+          35.1,
+          35,
+          32.7,
+          34.6,
+          35.2,
+          34.2,
+          35.3,
+          35.9,
+          34.2,
+          31.7,
+          33.1,
+          31.6,
+          34.7,
+          34.1,
+          34.3,
+          34.5,
+          34.3,
+          35,
+          34.4,
+          35.2,
+          35.4,
+          35,
+          35,
+          34.5,
+          33.4,
+          33.5,
+          34.1,
+          34.4,
+          32.7,
+          36,
+          32.9,
+          35.3,
+          34.2,
+          33,
+          35,
+          33.4,
+          33.2,
+          31.3,
+          32.9,
+          32.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1420,6 +1495,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.295,
       "top2_sum": 0.635
+    },
+    {
+      "ts": "2026-08-08T04:31:55.638Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.325,
+      "top2_bucket": "33-34C",
+      "top2_price": 0.325,
+      "top2_sum": 0.615
     }
   ],
   "all_outcomes": [
@@ -1469,11 +1552,11 @@
         31,
         31
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 606
+      "volume": 705
     },
     {
       "question": "Will the highest temperature in Paris be 32°C on August 9?",
@@ -1486,7 +1569,7 @@
       "ask": 0.155,
       "price": 0.155,
       "spread": 0,
-      "volume": 2247
+      "volume": 2303
     },
     {
       "question": "Will the highest temperature in Paris be 33°C on August 9?",
@@ -1495,11 +1578,11 @@
         33,
         33
       ],
-      "bid": 0.34,
-      "ask": 0.34,
-      "price": 0.34,
+      "bid": 0.29,
+      "ask": 0.29,
+      "price": 0.29,
       "spread": 0,
-      "volume": 1159
+      "volume": 1465
     },
     {
       "question": "Will the highest temperature in Paris be 34°C on August 9?",
@@ -1508,11 +1591,11 @@
         34,
         34
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 2160
+      "volume": 2343
     },
     {
       "question": "Will the highest temperature in Paris be 35°C on August 9?",
@@ -1525,7 +1608,7 @@
       "ask": 0.155,
       "price": 0.155,
       "spread": 0,
-      "volume": 1042
+      "volume": 1067
     },
     {
       "question": "Will the highest temperature in Paris be 36°C on August 9?",
@@ -1534,9 +1617,9 @@
         36,
         36
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
       "volume": 168
     },
@@ -1547,11 +1630,11 @@
         37,
         37
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 239
+      "volume": 249
     },
     {
       "question": "Will the highest temperature in Paris be 38°C or higher on August 9?",
@@ -1560,9 +1643,9 @@
         38,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
       "volume": 351
     }
