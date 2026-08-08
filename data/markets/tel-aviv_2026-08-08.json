@@ -1880,6 +1880,80 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-08-08T08:06:54.950Z",
+      "horizon": "D+0",
+      "hours_left": 3.9,
+      "ecmwf": 33.3,
+      "hrrr": 32.4,
+      "metar": 31,
+      "best": 32.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.3,
+          "gfs_seamless": 32.4,
+          "icon_seamless": 32.6
+        },
+        "mean": 32.9,
+        "spread": 0.5,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          33.2,
+          33.2,
+          33.3,
+          33.3,
+          33.3,
+          33.2,
+          33.2,
+          33.3,
+          33.1,
+          33.2,
+          33,
+          33.3,
+          33.2,
+          33.2,
+          33,
+          33,
+          33.4,
+          33.1,
+          33.1,
+          33.3,
+          32.9,
+          33.2,
+          32.7,
+          33.4,
+          33.2,
+          32.9,
+          33.3,
+          33.3,
+          33,
+          33.5,
+          32.8,
+          33.4,
+          33.1,
+          33.4,
+          33.2,
+          32.8,
+          33.4,
+          33.5,
+          33.3,
+          33.2,
+          33,
+          33.2,
+          33.1,
+          33.5,
+          32.8,
+          33.2,
+          33.2,
+          33.2,
+          33.4,
+          33.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2090,6 +2164,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.285,
       "top2_sum": 0.98
+    },
+    {
+      "ts": "2026-08-08T08:06:54.950Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.715,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.275,
+      "top2_sum": 0.99
     }
   ],
   "all_outcomes": [
@@ -2113,9 +2195,9 @@
         29,
         29
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 906
     },
@@ -2126,11 +2208,11 @@
         30,
         30
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 494
+      "volume": 536
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 31°C on August 8?",
@@ -2139,11 +2221,11 @@
         31,
         31
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.017,
+      "ask": 0.017,
+      "price": 0.017,
       "spread": 0,
-      "volume": 1171
+      "volume": 1475
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 32°C on August 8?",
@@ -2152,11 +2234,11 @@
         32,
         32
       ],
-      "bid": 0.695,
-      "ask": 0.695,
-      "price": 0.695,
+      "bid": 0.715,
+      "ask": 0.715,
+      "price": 0.715,
       "spread": 0,
-      "volume": 4090
+      "volume": 4342
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on August 8?",
@@ -2165,11 +2247,11 @@
         33,
         33
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.275,
+      "ask": 0.275,
+      "price": 0.275,
       "spread": 0,
-      "volume": 1169
+      "volume": 1302
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on August 8?",
@@ -2182,7 +2264,7 @@
       "ask": 0.02,
       "price": 0.02,
       "spread": 0,
-      "volume": 683
+      "volume": 795
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on August 8?",
@@ -2195,7 +2277,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 753
+      "volume": 846
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 36°C on August 8?",
@@ -2234,7 +2316,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 380
+      "volume": 381
     }
   ],
   "created_at": "2026-08-06T06:51:53.370Z"
