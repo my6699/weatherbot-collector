@@ -6,10 +6,10 @@
   "station": "SBGR",
   "event_end_date": "2026-08-09T12:00:00Z",
   "hours_at_discovery": 33.5,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 26,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2349,6 +2349,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-09T16:59:42.229Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 26.9,
+      "hrrr": 25.9,
+      "metar": null,
+      "best": 26.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.9,
+          "gfs_seamless": 25.9,
+          "icon_seamless": 24.4
+        },
+        "mean": 26.1,
+        "spread": 1.7,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.75,
+        "membersMax": [
+          27.4,
+          28.9,
+          25.4,
+          26.4,
+          28.8,
+          26.5,
+          26.3,
+          28.1,
+          29.4,
+          26.4,
+          25.8,
+          27.4,
+          25.7,
+          27.1,
+          26.6,
+          29.6,
+          24.4,
+          26.1,
+          26.9,
+          26.9,
+          25.5,
+          29.3,
+          26.2,
+          28,
+          24.9,
+          28.6,
+          26.4,
+          27.9,
+          25.4,
+          28.2,
+          26.3,
+          26.3,
+          24.4,
+          26.3,
+          24.1,
+          25.9,
+          27.4,
+          26.6,
+          25.3,
+          28,
+          30.7,
+          27.7,
+          25.3,
+          27,
+          27,
+          25.2,
+          24.7,
+          27.3,
+          28.1,
+          26.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2607,6 +2682,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.44,
       "top2_sum": 0.81
+    },
+    {
+      "ts": "2026-08-09T16:59:42.229Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.915,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.075,
+      "top2_sum": 0.99
     }
   ],
   "all_outcomes": [
@@ -2643,11 +2726,11 @@
         26,
         26
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.915,
+      "ask": 0.915,
+      "price": 0.915,
       "spread": 0,
-      "volume": 4139
+      "volume": 4431
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 27°C on August 9?",
@@ -2656,11 +2739,11 @@
         27,
         27
       ],
-      "bid": 0.37,
-      "ask": 0.37,
-      "price": 0.37,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 2852
+      "volume": 3462
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 28°C on August 9?",
@@ -2669,11 +2752,11 @@
         28,
         28
       ],
-      "bid": 0.44,
-      "ask": 0.44,
-      "price": 0.44,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 3077
+      "volume": 3450
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on August 9?",
@@ -2682,11 +2765,11 @@
         29,
         29
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 4775
+      "volume": 4816
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C on August 9?",
@@ -2695,11 +2778,11 @@
         30,
         30
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3138
+      "volume": 3310
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 31°C on August 9?",
@@ -2708,11 +2791,11 @@
         31,
         31
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5722
+      "volume": 5862
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 32°C on August 9?",
