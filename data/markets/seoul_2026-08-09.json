@@ -1212,6 +1212,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-09T10:55:58.848Z",
+      "horizon": "D+0",
+      "hours_left": 1.1,
+      "ecmwf": 33.8,
+      "hrrr": 28.4,
+      "metar": 30,
+      "best": 32,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.8,
+          "gfs_seamless": 28.4,
+          "icon_seamless": 32.8
+        },
+        "mean": 32,
+        "spread": 3.6,
+        "gap": 5.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.6,
+        "membersMax": [
+          35.4,
+          34.6,
+          33.5,
+          34.4,
+          34.2,
+          34.8,
+          34.2,
+          35,
+          35.2,
+          35.7,
+          35.2,
+          33.9,
+          33.7,
+          35.1,
+          34.3,
+          35.1,
+          35,
+          35.5,
+          35.6,
+          33.9,
+          34.8,
+          34.9,
+          36.3,
+          34.1,
+          35.3,
+          35,
+          34.7,
+          34.6,
+          35.3,
+          34.7,
+          34.1,
+          34.4,
+          35.7,
+          33.9,
+          35,
+          35,
+          34.7,
+          33.3,
+          35.3,
+          33.1,
+          34.2,
+          35.7,
+          34.1,
+          33.4,
+          35.6,
+          34.8,
+          34.6,
+          34.5,
+          33.4,
+          35.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1342,6 +1417,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.999,
       "top2_sum": 0.9995
+    },
+    {
+      "ts": "2026-08-09T10:55:58.848Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1404,11 +1487,11 @@
         33,
         33
       ],
-      "bid": 0.999,
+      "bid": 0.9995,
       "ask": 0.999,
-      "price": 0.999,
-      "spread": 0,
-      "volume": 15344
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 15488
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 34°C on August 9?",
@@ -1421,7 +1504,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 11615
+      "volume": 11626
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 35°C on August 9?",
@@ -1434,7 +1517,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 10879
+      "volume": 10884
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 36°C on August 9?",
