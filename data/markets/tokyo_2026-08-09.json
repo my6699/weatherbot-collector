@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-08-09T12:00:00Z",
   "hours_at_discovery": 55.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3361,6 +3361,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-09T11:50:59.186Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 32.4,
+      "hrrr": 32.8,
+      "metar": 27,
+      "best": 32.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.4,
+          "gfs_seamless": 32.8,
+          "icon_seamless": 31.5
+        },
+        "mean": 32.3,
+        "spread": 0.8,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          30.7,
+          32.1,
+          31.6,
+          32.1,
+          31.8,
+          31,
+          32.3,
+          31.8,
+          32.8,
+          32.5,
+          31.3,
+          32.3,
+          32.8,
+          31.5,
+          31.7,
+          31.4,
+          32.9,
+          32.8,
+          33.4,
+          31.8,
+          32.8,
+          32.1,
+          32.6,
+          32,
+          32.8,
+          32.8,
+          32.3,
+          32.3,
+          32.1,
+          32.4,
+          32.6,
+          31.6,
+          31.4,
+          31.7,
+          31.4,
+          31.7,
+          31.6,
+          32.4,
+          32.1,
+          32.3,
+          32,
+          32.5,
+          32.7,
+          32.5,
+          31.9,
+          32.2,
+          32,
+          32.1,
+          31.9,
+          31.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3723,6 +3797,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-09T11:50:59.186Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -3802,7 +3884,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7507
+      "volume": 7646
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on August 9?",
@@ -3815,7 +3897,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 8442
+      "volume": 8494
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on August 9?",
@@ -3828,7 +3910,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6075
+      "volume": 6086
     },
     {
       "question": "Will the highest temperature in Tokyo be 35°C on August 9?",
@@ -3870,5 +3952,6 @@
       "volume": 680
     }
   ],
-  "created_at": "2026-08-07T04:06:41.761Z"
+  "created_at": "2026-08-07T04:06:41.761Z",
+  "metar_max": 30
 }
