@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-08-10T12:00:00Z",
   "hours_at_discovery": 33.5,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -1887,6 +1887,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-10T12:02:19.085Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 73,
+      "hrrr": 77,
+      "metar": 56,
+      "best": 74.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 73,
+          "gfs_seamless": 77,
+          "icon_seamless": 76
+        },
+        "mean": 74.8,
+        "spread": 2.2,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          74,
+          72,
+          73,
+          73,
+          71,
+          72,
+          74,
+          73,
+          72,
+          74,
+          73,
+          72,
+          75,
+          73,
+          72,
+          72,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          74,
+          73,
+          72,
+          75,
+          74,
+          74,
+          74,
+          73,
+          73,
+          74,
+          74,
+          74,
+          72,
+          72,
+          73,
+          73,
+          71,
+          72,
+          75,
+          75,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2089,6 +2164,14 @@
       "top2_bucket": "76-79F",
       "top2_price": 0.24,
       "top2_sum": 0.775
+    },
+    {
+      "ts": "2026-08-10T12:02:19.085Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.495,
+      "top2_bucket": "74-77F",
+      "top2_price": 0.495,
+      "top2_sum": 0.795
     }
   ],
   "all_outcomes": [
@@ -2125,9 +2208,9 @@
         72,
         73
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
       "volume": 428
     },
@@ -2138,11 +2221,11 @@
         74,
         75
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.3,
+      "ask": 0.3,
+      "price": 0.3,
       "spread": 0,
-      "volume": 2736
+      "volume": 2791
     },
     {
       "question": "Will the highest temperature in Seattle be between 76-77°F on August 10?",
@@ -2151,11 +2234,11 @@
         76,
         77
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
       "spread": 0,
-      "volume": 3127
+      "volume": 3174
     },
     {
       "question": "Will the highest temperature in Seattle be between 78-79°F on August 10?",
@@ -2164,11 +2247,11 @@
         78,
         79
       ],
-      "bid": 0.24,
-      "ask": 0.24,
-      "price": 0.24,
+      "bid": 0.155,
+      "ask": 0.155,
+      "price": 0.155,
       "spread": 0,
-      "volume": 2055
+      "volume": 2295
     },
     {
       "question": "Will the highest temperature in Seattle be between 80-81°F on August 10?",
@@ -2177,11 +2260,11 @@
         80,
         81
       ],
-      "bid": 0.03,
-      "ask": 0.03,
-      "price": 0.03,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 704
+      "volume": 754
     },
     {
       "question": "Will the highest temperature in Seattle be between 82-83°F on August 10?",
@@ -2190,9 +2273,9 @@
         82,
         83
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
       "volume": 734
     },
@@ -2203,9 +2286,9 @@
         84,
         85
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
       "volume": 449
     },

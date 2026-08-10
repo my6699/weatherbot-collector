@@ -6,10 +6,10 @@
   "station": "NZWN",
   "event_end_date": "2026-08-10T12:00:00Z",
   "hours_at_discovery": 55.4,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 15,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3255,6 +3255,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-10T12:03:36.616Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 11,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -3617,6 +3628,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.998,
       "top2_sum": 0.9985
+    },
+    {
+      "ts": "2026-08-10T12:03:36.616Z",
+      "top_bucket": "15-15C",
+      "top_price": 0.9995,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -3731,11 +3750,11 @@
         15,
         15
       ],
-      "bid": 0.998,
-      "ask": 0.998,
-      "price": 0.998,
-      "spread": 0,
-      "volume": 33968
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 34303
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on August 10?",
@@ -3764,5 +3783,6 @@
       "volume": 21021
     }
   ],
-  "created_at": "2026-08-08T04:35:33.996Z"
+  "created_at": "2026-08-08T04:35:33.996Z",
+  "metar_max": 15
 }

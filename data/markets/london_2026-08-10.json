@@ -6,7 +6,7 @@
   "station": "EGLC",
   "event_end_date": "2026-08-10T12:00:00Z",
   "hours_at_discovery": 54,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -3297,6 +3297,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-10T12:02:23.145Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 26,
+      "hrrr": 27.5,
+      "metar": 23,
+      "best": 26.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26,
+          "gfs_seamless": 27.5,
+          "icon_seamless": 25.8
+        },
+        "mean": 26.4,
+        "spread": 1.1,
+        "gap": 1.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          25.9,
+          25.3,
+          26,
+          26.3,
+          25.3,
+          25.9,
+          26.1,
+          26.5,
+          26.3,
+          26.6,
+          26.1,
+          26.1,
+          25.8,
+          26.2,
+          24.3,
+          25.5,
+          26.2,
+          26.2,
+          25.8,
+          25.9,
+          26.2,
+          26.8,
+          26.1,
+          25.8,
+          26.3,
+          26.3,
+          25.7,
+          25.5,
+          26,
+          26.2,
+          26,
+          25.2,
+          26,
+          26.2,
+          26,
+          26,
+          25.5,
+          26.4,
+          26,
+          25.5,
+          25.7,
+          26.5,
+          26.1,
+          26.7,
+          26.5,
+          26.4,
+          25.3,
+          26.4,
+          26.6,
+          25.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3651,6 +3726,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.355,
       "top2_sum": 0.91
+    },
+    {
+      "ts": "2026-08-10T12:02:23.145Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.625,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.235,
+      "top2_sum": 0.86
     }
   ],
   "all_outcomes": [
@@ -3687,11 +3770,11 @@
         24,
         24
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
-      "volume": 8869
+      "volume": 10693
     },
     {
       "question": "Will the highest temperature in London be 25°C on August 10?",
@@ -3700,11 +3783,11 @@
         25,
         25
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.185,
+      "ask": 0.185,
+      "price": 0.185,
       "spread": 0,
-      "volume": 14757
+      "volume": 15805
     },
     {
       "question": "Will the highest temperature in London be 26°C on August 10?",
@@ -3713,11 +3796,11 @@
         26,
         26
       ],
-      "bid": 0.555,
-      "ask": 0.555,
-      "price": 0.555,
+      "bid": 0.625,
+      "ask": 0.625,
+      "price": 0.625,
       "spread": 0,
-      "volume": 17592
+      "volume": 18273
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 10?",
@@ -3726,11 +3809,11 @@
         27,
         27
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.235,
+      "ask": 0.235,
+      "price": 0.235,
       "spread": 0,
-      "volume": 9685
+      "volume": 10312
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 10?",
@@ -3739,11 +3822,11 @@
         28,
         28
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0145,
+      "ask": 0.0145,
+      "price": 0.0145,
       "spread": 0,
-      "volume": 6980
+      "volume": 8071
     },
     {
       "question": "Will the highest temperature in London be 29°C on August 10?",
@@ -3752,11 +3835,11 @@
         29,
         29
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 6710
+      "volume": 7348
     },
     {
       "question": "Will the highest temperature in London be 30°C on August 10?",
