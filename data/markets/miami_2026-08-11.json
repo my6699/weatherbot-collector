@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.112
+      "stop_price": 0.112,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -950,6 +951,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-10T20:04:47.395Z",
+      "horizon": "D+1",
+      "hours_left": 15.9,
+      "ecmwf": 90,
+      "hrrr": 92,
+      "metar": null,
+      "best": 90.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 90,
+          "gfs_seamless": 92,
+          "icon_seamless": 91
+        },
+        "mean": 90.8,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          89,
+          88,
+          91,
+          88,
+          92,
+          90,
+          88,
+          88,
+          88,
+          90,
+          90,
+          89,
+          89,
+          91,
+          90,
+          90,
+          90,
+          89,
+          89,
+          90,
+          90,
+          91,
+          90,
+          88,
+          91,
+          90,
+          89,
+          91,
+          90,
+          94,
+          89,
+          90,
+          90,
+          89,
+          92,
+          88,
+          90,
+          88,
+          88,
+          90,
+          89,
+          91,
+          91,
+          89,
+          90,
+          89,
+          89,
+          90,
+          89,
+          90
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1048,6 +1123,14 @@
       "top2_bucket": "92-95F",
       "top2_price": 0.155,
       "top2_sum": 0.845
+    },
+    {
+      "ts": "2026-08-10T20:04:47.395Z",
+      "top_bucket": "92-93F",
+      "top_price": 0.685,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.685,
+      "top2_sum": 0.85
     }
   ],
   "all_outcomes": [
@@ -1110,11 +1193,11 @@
         88,
         89
       ],
-      "bid": 0.0155,
-      "ask": 0.0155,
-      "price": 0.0155,
+      "bid": 0.012,
+      "ask": 0.012,
+      "price": 0.012,
       "spread": 0,
-      "volume": 664
+      "volume": 688
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on August 11?",
@@ -1123,11 +1206,11 @@
         90,
         91
       ],
-      "bid": 0.15,
-      "ask": 0.15,
-      "price": 0.15,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 3511
+      "volume": 3549
     },
     {
       "question": "Will the highest temperature in Miami be between 92-93°F on August 11?",
@@ -1136,9 +1219,9 @@
         92,
         93
       ],
-      "bid": 0.69,
-      "ask": 0.69,
-      "price": 0.69,
+      "bid": 0.685,
+      "ask": 0.685,
+      "price": 0.685,
       "spread": 0,
       "volume": 5993
     },
@@ -1149,11 +1232,11 @@
         94,
         95
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 879
+      "volume": 1111
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on August 11?",
@@ -1162,11 +1245,11 @@
         96,
         97
       ],
-      "bid": 0.0155,
-      "ask": 0.0155,
-      "price": 0.0155,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
-      "volume": 471
+      "volume": 576
     },
     {
       "question": "Will the highest temperature in Miami be between 98-99°F on August 11?",

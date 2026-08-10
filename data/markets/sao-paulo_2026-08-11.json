@@ -85,7 +85,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.12
+      "stop_price": 0.12,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -991,6 +992,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-10T20:05:52.048Z",
+      "horizon": "D+1",
+      "hours_left": 15.9,
+      "ecmwf": 18,
+      "hrrr": 16.3,
+      "metar": null,
+      "best": 17,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 18,
+          "gfs_seamless": 16.3,
+          "icon_seamless": 15.5
+        },
+        "mean": 17,
+        "spread": 1.5,
+        "gap": 1.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          16.8,
+          17.8,
+          16.3,
+          18.8,
+          17.2,
+          17.5,
+          17.3,
+          19,
+          19.6,
+          17,
+          18.8,
+          18.7,
+          18,
+          17.4,
+          17.1,
+          18.1,
+          17.4,
+          18.7,
+          17.9,
+          16.9,
+          18,
+          17.3,
+          17.9,
+          18.9,
+          19.2,
+          19.1,
+          19.1,
+          17.5,
+          16.7,
+          18,
+          17.6,
+          17.6,
+          18.4,
+          18.8,
+          17.1,
+          18.4,
+          19.7,
+          17.1,
+          17.6,
+          17.5,
+          18,
+          19.2,
+          17.1,
+          18,
+          19.1,
+          18.6,
+          18.3,
+          17,
+          18.2,
+          18
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1089,6 +1165,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.445,
       "top2_sum": 0.795
+    },
+    {
+      "ts": "2026-08-10T20:05:52.048Z",
+      "top_bucket": "17-17C",
+      "top_price": 0.445,
+      "top2_bucket": "16-17C",
+      "top2_price": 0.445,
+      "top2_sum": 0.79
     }
   ],
   "all_outcomes": [
@@ -1151,11 +1235,11 @@
         15,
         15
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 1907
+      "volume": 1946
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 16°C on August 11?",
@@ -1164,11 +1248,11 @@
         16,
         16
       ],
-      "bid": 0.35,
-      "ask": 0.35,
-      "price": 0.35,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
-      "volume": 1102
+      "volume": 1108
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 17°C on August 11?",
@@ -1190,11 +1274,11 @@
         18,
         18
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 876
+      "volume": 881
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 19°C on August 11?",
@@ -1203,11 +1287,11 @@
         19,
         19
       ],
-      "bid": 0.0185,
-      "ask": 0.0185,
-      "price": 0.0185,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 951
+      "volume": 972
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 20°C on August 11?",
@@ -1216,9 +1300,9 @@
         20,
         20
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.019,
+      "ask": 0.019,
+      "price": 0.019,
       "spread": 0,
       "volume": 261
     },
