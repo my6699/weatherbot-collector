@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.112
+      "stop_price": 0.112,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -1025,6 +1026,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-10T21:07:15.505Z",
+      "horizon": "D+1",
+      "hours_left": 14.9,
+      "ecmwf": 13,
+      "hrrr": 12,
+      "metar": null,
+      "best": 12.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 13,
+          "gfs_seamless": 12,
+          "icon_seamless": 10.9
+        },
+        "mean": 12.3,
+        "spread": 1.4,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          13.2,
+          13.1,
+          12.5,
+          13,
+          13.4,
+          13.9,
+          13.1,
+          13.3,
+          13.5,
+          13.5,
+          13.4,
+          13.5,
+          13.2,
+          13.8,
+          12.7,
+          13.2,
+          12,
+          13.9,
+          13.4,
+          13.6,
+          13.3,
+          13.6,
+          13.1,
+          13.2,
+          13.8,
+          13.7,
+          13,
+          12.8,
+          13.5,
+          13.8,
+          13.2,
+          13.9,
+          13.2,
+          12.8,
+          13,
+          13.5,
+          12.6,
+          12.6,
+          13.4,
+          13.5,
+          12.7,
+          12.7,
+          13.2,
+          14.5,
+          12.6,
+          13.3,
+          13.6,
+          13.5,
+          13.1,
+          13
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1131,6 +1207,14 @@
       "top2_bucket": "11-12C",
       "top2_price": 0.51,
       "top2_sum": 0.82
+    },
+    {
+      "ts": "2026-08-10T21:07:15.505Z",
+      "top_bucket": "12-12C",
+      "top_price": 0.51,
+      "top2_bucket": "11-12C",
+      "top2_price": 0.51,
+      "top2_sum": 0.82
     }
   ],
   "all_outcomes": [
@@ -1193,9 +1277,9 @@
         10,
         10
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
       "volume": 665
     },
@@ -1210,7 +1294,7 @@
       "ask": 0.31,
       "price": 0.31,
       "spread": 0,
-      "volume": 8332
+      "volume": 8382
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 12°C on August 11?",
@@ -1223,7 +1307,7 @@
       "ask": 0.51,
       "price": 0.51,
       "spread": 0,
-      "volume": 1576
+      "volume": 2342
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 13°C on August 11?",
@@ -1232,11 +1316,11 @@
         13,
         13
       ],
-      "bid": 0.15,
-      "ask": 0.15,
-      "price": 0.15,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 895
+      "volume": 948
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 14°C on August 11?",
@@ -1245,9 +1329,9 @@
         14,
         14
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
       "volume": 1240
     },
