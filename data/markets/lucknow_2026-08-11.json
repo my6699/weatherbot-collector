@@ -6,7 +6,7 @@
   "station": "VILK",
   "event_end_date": "2026-08-11T12:00:00Z",
   "hours_at_discovery": 53.9,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3437965",
     "question": "Will the highest temperature in Lucknow be 33°C on August 11?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-08-10T17:12:14.509Z",
       "stop_price": 0.12,
       "forecast_change_streak": 2,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 34,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3201,6 +3202,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-11T12:00:33.610Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 34.2,
+      "hrrr": 35.9,
+      "metar": 33,
+      "best": 34.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 34.2,
+          "gfs_seamless": 35.9,
+          "icon_seamless": 34.2
+        },
+        "mean": 34.7,
+        "spread": 1.2,
+        "gap": 1.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          34.1,
+          34.7,
+          34.9,
+          34.3,
+          33.9,
+          35.3,
+          34.4,
+          33.8,
+          31.9,
+          33.9,
+          34.2,
+          34.1,
+          34.5,
+          33.3,
+          34.6,
+          34.5,
+          34.4,
+          34.1,
+          34.3,
+          33.3,
+          33,
+          34.2,
+          33.8,
+          34.4,
+          34.8,
+          34.2,
+          33.5,
+          33.3,
+          34,
+          34.5,
+          32.6,
+          33.7,
+          34.6,
+          33.9,
+          34.1,
+          34.3,
+          34.6,
+          34.6,
+          34.4,
+          34.8,
+          33.9,
+          34.2,
+          34.2,
+          33.7,
+          33.8,
+          33.1,
+          34.6,
+          33,
+          34.5,
+          34.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3539,6 +3615,14 @@
       "top2_bucket": "34-35C",
       "top2_price": 0.015,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-08-11T12:00:33.610Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.996,
+      "top2_bucket": "34-35C",
+      "top2_price": 0.003,
+      "top2_sum": 0.999
     }
   ],
   "all_outcomes": [
@@ -3627,11 +3711,11 @@
         34,
         34
       ],
-      "bid": 0.98,
-      "ask": 0.98,
-      "price": 0.98,
+      "bid": 0.996,
+      "ask": 0.996,
+      "price": 0.996,
       "spread": 0,
-      "volume": 4093
+      "volume": 4338
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on August 11?",
@@ -3640,11 +3724,11 @@
         35,
         35
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 7917
+      "volume": 8018
     },
     {
       "question": "Will the highest temperature in Lucknow be 36°C on August 11?",
@@ -3653,11 +3737,11 @@
         36,
         36
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 2995
+      "volume": 3059
     },
     {
       "question": "Will the highest temperature in Lucknow be 37°C on August 11?",
@@ -3666,11 +3750,11 @@
         37,
         37
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2198
+      "volume": 2206
     },
     {
       "question": "Will the highest temperature in Lucknow be 38°C or higher on August 11?",
@@ -3686,5 +3770,6 @@
       "volume": 511
     }
   ],
-  "created_at": "2026-08-09T06:04:58.441Z"
+  "created_at": "2026-08-09T06:04:58.441Z",
+  "metar_max": 30
 }

@@ -6,7 +6,7 @@
   "station": "LLBG",
   "event_end_date": "2026-08-11T12:00:00Z",
   "hours_at_discovery": 55.3,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -3206,6 +3206,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-11T12:00:35.453Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 35.7,
+      "hrrr": 35.2,
+      "metar": 35,
+      "best": 35.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 35.7,
+          "gfs_seamless": 35.2,
+          "icon_seamless": 36.1
+        },
+        "mean": 35.6,
+        "spread": 0.5,
+        "gap": 0.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          35.7,
+          36.1,
+          36.1,
+          35.7,
+          35.7,
+          36.3,
+          36.1,
+          35.7,
+          35.3,
+          35.9,
+          36.1,
+          35.9,
+          35.4,
+          35.2,
+          35.8,
+          35.3,
+          35.8,
+          35.7,
+          35.8,
+          35.6,
+          35.8,
+          35.9,
+          35.3,
+          35.7,
+          35.7,
+          35.8,
+          35.9,
+          35.6,
+          35.3,
+          36.1,
+          35.9,
+          35.6,
+          35.8,
+          35.8,
+          35.4,
+          35.8,
+          35.7,
+          35.8,
+          35.6,
+          35.8,
+          35.8,
+          35.7,
+          35.7,
+          35.7,
+          35.7,
+          35.7,
+          35.7,
+          35.8,
+          35.4,
+          35.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3552,6 +3626,14 @@
       "top2_bucket": "35-36C",
       "top2_price": 0.06,
       "top2_sum": 1.005
+    },
+    {
+      "ts": "2026-08-11T12:00:35.453Z",
+      "top_bucket": "35-35C",
+      "top_price": 0.92,
+      "top2_bucket": "35-36C",
+      "top2_price": 0.07,
+      "top2_sum": 0.99
     }
   ],
   "all_outcomes": [
@@ -3592,7 +3674,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6252
+      "volume": 6262
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on August 11?",
@@ -3605,7 +3687,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 8288
+      "volume": 8301
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on August 11?",
@@ -3614,11 +3696,11 @@
         35,
         35
       ],
-      "bid": 0.945,
-      "ask": 0.945,
-      "price": 0.945,
+      "bid": 0.92,
+      "ask": 0.92,
+      "price": 0.92,
       "spread": 0,
-      "volume": 9317
+      "volume": 9763
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 36°C on August 11?",
@@ -3627,11 +3709,11 @@
         36,
         36
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
       "spread": 0,
-      "volume": 7394
+      "volume": 7685
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 37°C on August 11?",
@@ -3640,11 +3722,11 @@
         37,
         37
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 3072
+      "volume": 3147
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 38°C on August 11?",

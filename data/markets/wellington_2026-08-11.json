@@ -6,10 +6,10 @@
   "station": "NZWN",
   "event_end_date": "2026-08-11T12:00:00Z",
   "hours_at_discovery": 55.3,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 12,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3145,6 +3145,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-11T12:00:42.431Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 7,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -3491,6 +3502,14 @@
       "top2_bucket": "11-12C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-11T12:00:42.431Z",
+      "top_bucket": "12-12C",
+      "top_price": 0.9995,
+      "top2_bucket": "11-12C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -3638,5 +3657,6 @@
       "volume": 15519
     }
   ],
-  "created_at": "2026-08-09T04:44:14.392Z"
+  "created_at": "2026-08-09T04:44:14.392Z",
+  "metar_max": 12
 }
