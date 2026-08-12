@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-08-12T12:00:00Z",
   "hours_at_discovery": 33.5,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -1724,6 +1724,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-12T12:01:37.528Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 100,
+      "hrrr": 102,
+      "metar": 82,
+      "best": 101,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 100,
+          "gfs_seamless": 102,
+          "icon_seamless": 102
+        },
+        "mean": 101,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          100,
+          98,
+          96,
+          99,
+          99,
+          99,
+          99,
+          100,
+          101,
+          98,
+          99,
+          100,
+          99,
+          100,
+          100,
+          99,
+          100,
+          101,
+          100,
+          99,
+          98,
+          99,
+          101,
+          98,
+          100,
+          100,
+          100,
+          99,
+          100,
+          99,
+          100,
+          100,
+          100,
+          100,
+          99,
+          100,
+          95,
+          99,
+          98,
+          101,
+          101,
+          100,
+          100,
+          98,
+          101,
+          101,
+          100,
+          99,
+          100,
+          103
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1910,6 +1984,14 @@
       "top2_bucket": "100-103F",
       "top2_price": 0.275,
       "top2_sum": 0.92
+    },
+    {
+      "ts": "2026-08-12T12:01:37.528Z",
+      "top_bucket": "100-101F",
+      "top_price": 0.625,
+      "top2_bucket": "100-103F",
+      "top2_price": 0.325,
+      "top2_sum": 0.95
     }
   ],
   "all_outcomes": [
@@ -1937,7 +2019,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 2119
+      "volume": 2213
     },
     {
       "question": "Will the highest temperature in Dallas be between 98-99°F on August 12?",
@@ -1946,11 +2028,11 @@
         98,
         99
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
-      "volume": 2397
+      "volume": 2607
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on August 12?",
@@ -1959,11 +2041,11 @@
         100,
         101
       ],
-      "bid": 0.645,
-      "ask": 0.645,
-      "price": 0.645,
+      "bid": 0.625,
+      "ask": 0.625,
+      "price": 0.625,
       "spread": 0,
-      "volume": 5790
+      "volume": 6426
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on August 12?",
@@ -1972,11 +2054,11 @@
         102,
         103
       ],
-      "bid": 0.275,
-      "ask": 0.275,
-      "price": 0.275,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 2127
+      "volume": 2621
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on August 12?",
@@ -1989,7 +2071,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 915
+      "volume": 1061
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on August 12?",
@@ -2002,7 +2084,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 1320
+      "volume": 1386
     },
     {
       "question": "Will the highest temperature in Dallas be between 108-109°F on August 12?",
@@ -2011,11 +2093,11 @@
         108,
         109
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 1344
+      "volume": 2429
     },
     {
       "question": "Will the highest temperature in Dallas be between 110-111°F on August 12?",

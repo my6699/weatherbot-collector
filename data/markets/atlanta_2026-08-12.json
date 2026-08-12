@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-08-12T12:00:00Z",
   "hours_at_discovery": 33.5,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -1727,6 +1727,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-12T12:01:42.118Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 89,
+      "hrrr": 93,
+      "metar": 72,
+      "best": 90.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 89,
+          "gfs_seamless": 93,
+          "icon_seamless": 91
+        },
+        "mean": 90.6,
+        "spread": 2.4,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          88,
+          85,
+          88,
+          89,
+          85,
+          89,
+          88,
+          88,
+          88,
+          88,
+          85,
+          87,
+          87,
+          86,
+          90,
+          89,
+          89,
+          89,
+          89,
+          88,
+          86,
+          91,
+          91,
+          89,
+          85,
+          90,
+          88,
+          89,
+          87,
+          89,
+          89,
+          88,
+          84,
+          89,
+          87,
+          84,
+          86,
+          84,
+          90,
+          88,
+          88,
+          84,
+          90,
+          87,
+          88,
+          81,
+          87,
+          89,
+          88,
+          89
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1913,6 +1988,14 @@
       "top2_bucket": "90-93F",
       "top2_price": 0.575,
       "top2_sum": 0.785
+    },
+    {
+      "ts": "2026-08-12T12:01:42.118Z",
+      "top_bucket": "92-93F",
+      "top_price": 0.565,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.565,
+      "top2_sum": 0.845
     }
   ],
   "all_outcomes": [
@@ -1923,9 +2006,9 @@
         -999,
         83
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
       "volume": 606
     },
@@ -1936,11 +2019,11 @@
         84,
         85
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 1215
+      "volume": 1367
     },
     {
       "question": "Will the highest temperature in Atlanta be between 86-87°F on August 12?",
@@ -1949,11 +2032,11 @@
         86,
         87
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 1156
+      "volume": 1393
     },
     {
       "question": "Will the highest temperature in Atlanta be between 88-89°F on August 12?",
@@ -1962,11 +2045,11 @@
         88,
         89
       ],
-      "bid": 0.0155,
-      "ask": 0.0155,
-      "price": 0.0155,
+      "bid": 0.031,
+      "ask": 0.031,
+      "price": 0.031,
       "spread": 0,
-      "volume": 3194
+      "volume": 3425
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on August 12?",
@@ -1975,11 +2058,11 @@
         90,
         91
       ],
-      "bid": 0.21,
-      "ask": 0.21,
-      "price": 0.21,
+      "bid": 0.28,
+      "ask": 0.28,
+      "price": 0.28,
       "spread": 0,
-      "volume": 3885
+      "volume": 4121
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on August 12?",
@@ -1988,11 +2071,11 @@
         92,
         93
       ],
-      "bid": 0.575,
-      "ask": 0.575,
-      "price": 0.575,
+      "bid": 0.565,
+      "ask": 0.565,
+      "price": 0.565,
       "spread": 0,
-      "volume": 2667
+      "volume": 2820
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on August 12?",
@@ -2001,11 +2084,11 @@
         94,
         95
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 857
+      "volume": 1146
     },
     {
       "question": "Will the highest temperature in Atlanta be between 96-97°F on August 12?",
@@ -2014,11 +2097,11 @@
         96,
         97
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 712
+      "volume": 869
     },
     {
       "question": "Will the highest temperature in Atlanta be between 98-99°F on August 12?",
@@ -2031,7 +2114,7 @@
       "ask": 0.006,
       "price": 0.006,
       "spread": 0,
-      "volume": 968
+      "volume": 1113
     },
     {
       "question": "Will the highest temperature in Atlanta be between 100-101°F on August 12?",
@@ -2040,9 +2123,9 @@
         100,
         101
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 772
     },

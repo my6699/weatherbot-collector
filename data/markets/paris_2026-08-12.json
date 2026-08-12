@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-08-12T12:00:00Z",
   "hours_at_discovery": 55,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2934,6 +2934,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-12T12:01:45.940Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 32.9,
+      "hrrr": 36.5,
+      "metar": 32,
+      "best": 34.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.9,
+          "gfs_seamless": 36.5,
+          "icon_seamless": 34.8
+        },
+        "mean": 34.4,
+        "spread": 2.1,
+        "gap": 3.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          32.9,
+          32.8,
+          32.9,
+          33,
+          32.6,
+          33.1,
+          32.6,
+          33.1,
+          32.9,
+          33,
+          32.7,
+          32.9,
+          33,
+          33,
+          33,
+          33,
+          32.8,
+          33.1,
+          32.9,
+          33,
+          32.9,
+          33,
+          32.8,
+          33.1,
+          33,
+          33,
+          32.6,
+          33.2,
+          32.9,
+          33,
+          32.9,
+          32.9,
+          33,
+          33.1,
+          32.9,
+          33,
+          32.8,
+          33.1,
+          33.1,
+          32.8,
+          33.1,
+          33.3,
+          33.1,
+          32.9,
+          32.9,
+          33.4,
+          32.9,
+          32.8,
+          32.6,
+          32.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3248,6 +3323,14 @@
       "top2_bucket": "35-36C",
       "top2_price": 0.325,
       "top2_sum": 0.965
+    },
+    {
+      "ts": "2026-08-12T12:01:45.940Z",
+      "top_bucket": "35-35C",
+      "top_price": 0.615,
+      "top2_bucket": "35-36C",
+      "top2_price": 0.35,
+      "top2_sum": 0.965
     }
   ],
   "all_outcomes": [
@@ -3310,11 +3393,11 @@
         33,
         33
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 4169
+      "volume": 4771
     },
     {
       "question": "Will the highest temperature in Paris be 34°C on August 12?",
@@ -3323,11 +3406,11 @@
         34,
         34
       ],
-      "bid": 0.03,
-      "ask": 0.03,
-      "price": 0.03,
+      "bid": 0.017,
+      "ask": 0.017,
+      "price": 0.017,
       "spread": 0,
-      "volume": 7533
+      "volume": 9139
     },
     {
       "question": "Will the highest temperature in Paris be 35°C on August 12?",
@@ -3336,11 +3419,11 @@
         35,
         35
       ],
-      "bid": 0.64,
-      "ask": 0.64,
-      "price": 0.64,
+      "bid": 0.615,
+      "ask": 0.615,
+      "price": 0.615,
       "spread": 0,
-      "volume": 10790
+      "volume": 11602
     },
     {
       "question": "Will the highest temperature in Paris be 36°C on August 12?",
@@ -3349,11 +3432,11 @@
         36,
         36
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.35,
+      "ask": 0.35,
+      "price": 0.35,
       "spread": 0,
-      "volume": 8716
+      "volume": 9384
     },
     {
       "question": "Will the highest temperature in Paris be 37°C on August 12?",
@@ -3366,7 +3449,7 @@
       "ask": 0.011,
       "price": 0.011,
       "spread": 0,
-      "volume": 5996
+      "volume": 7557
     },
     {
       "question": "Will the highest temperature in Paris be 38°C on August 12?",
@@ -3375,11 +3458,11 @@
         38,
         38
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3364
+      "volume": 3566
     },
     {
       "question": "Will the highest temperature in Paris be 39°C or higher on August 12?",
@@ -3392,7 +3475,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2796
+      "volume": 2802
     }
   ],
   "created_at": "2026-08-10T04:57:48.630Z"
