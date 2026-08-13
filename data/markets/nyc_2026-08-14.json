@@ -87,6 +87,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-13T05:10:47.031Z",
+      "horizon": "D+1",
+      "hours_left": 30.8,
+      "ecmwf": 90,
+      "hrrr": 87,
+      "metar": null,
+      "best": 88.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 90,
+          "gfs_seamless": 87,
+          "icon_seamless": 86
+        },
+        "mean": 88.3,
+        "spread": 2.3,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          84,
+          83,
+          86,
+          82,
+          82,
+          83,
+          81,
+          89,
+          85,
+          89,
+          83,
+          87,
+          84,
+          88,
+          84,
+          85,
+          79,
+          85,
+          87,
+          79,
+          83,
+          84,
+          86,
+          78,
+          89,
+          81,
+          87,
+          82,
+          86,
+          88,
+          81,
+          85,
+          86,
+          88,
+          87,
+          84,
+          84,
+          79,
+          86,
+          88,
+          85,
+          89,
+          88,
+          89,
+          82,
+          87,
+          83,
+          81,
+          82,
+          86
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -97,6 +172,14 @@
       "top2_bucket": "86-89F",
       "top2_price": 0.285,
       "top2_sum": 0.64
+    },
+    {
+      "ts": "2026-08-13T05:10:47.031Z",
+      "top_bucket": "86-87F",
+      "top_price": 0.39,
+      "top2_bucket": "86-89F",
+      "top2_price": 0.285,
+      "top2_sum": 0.675
     }
   ],
   "all_outcomes": [
@@ -111,7 +194,7 @@
       "ask": 0.02,
       "price": 0.02,
       "spread": 0,
-      "volume": 15
+      "volume": 20
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on August 14?",
@@ -120,11 +203,11 @@
         82,
         83
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 0
+      "volume": 5
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on August 14?",
@@ -133,11 +216,11 @@
         84,
         85
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
-      "volume": 338
+      "volume": 388
     },
     {
       "question": "Will the highest temperature in New York City be between 86-87°F on August 14?",
@@ -146,11 +229,11 @@
         86,
         87
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.39,
+      "ask": 0.39,
+      "price": 0.39,
       "spread": 0,
-      "volume": 78
+      "volume": 96
     },
     {
       "question": "Will the highest temperature in New York City be between 88-89°F on August 14?",
@@ -172,11 +255,11 @@
         90,
         91
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 94
+      "volume": 115
     },
     {
       "question": "Will the highest temperature in New York City be between 92-93°F on August 14?",
@@ -185,11 +268,11 @@
         92,
         93
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 79
+      "volume": 313
     },
     {
       "question": "Will the highest temperature in New York City be between 94-95°F on August 14?",
@@ -198,11 +281,11 @@
         94,
         95
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 32
+      "volume": 303
     },
     {
       "question": "Will the highest temperature in New York City be between 96-97°F on August 14?",
@@ -211,11 +294,11 @@
         96,
         97
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 5
+      "volume": 170
     },
     {
       "question": "Will the highest temperature in New York City be between 98-99°F on August 14?",
@@ -224,11 +307,11 @@
         98,
         99
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 5
+      "volume": 165
     },
     {
       "question": "Will the highest temperature in New York City be 100°F or higher on August 14?",
@@ -237,11 +320,11 @@
         100,
         999
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 5
+      "volume": 170
     }
   ],
   "created_at": "2026-08-13T03:02:00.776Z"
