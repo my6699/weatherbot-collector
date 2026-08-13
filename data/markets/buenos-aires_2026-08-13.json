@@ -6,7 +6,7 @@
   "station": "SAEZ",
   "event_end_date": "2026-08-13T12:00:00Z",
   "hours_at_discovery": 33.2,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -1585,6 +1585,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-13T12:02:46.770Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 7.9,
+      "hrrr": 11.3,
+      "metar": 6,
+      "best": 9.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 7.9,
+          "gfs_seamless": 11.3,
+          "icon_seamless": 8.8
+        },
+        "mean": 9.1,
+        "spread": 2.2,
+        "gap": 3.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          9.3,
+          8.2,
+          8.2,
+          7.5,
+          7.8,
+          8.7,
+          8.6,
+          7.7,
+          8,
+          8.3,
+          8.7,
+          8.7,
+          7.6,
+          8.2,
+          7.9,
+          9,
+          8,
+          7.4,
+          7.1,
+          7.4,
+          9.5,
+          8.6,
+          7.2,
+          7.8,
+          8,
+          10.2,
+          7.3,
+          8.5,
+          7.8,
+          8.8,
+          7.9,
+          9.6,
+          7.6,
+          8.7,
+          7.5,
+          8.7,
+          7.5,
+          8.5,
+          8.4,
+          8.1,
+          9.8,
+          8.2,
+          8.3,
+          8.7,
+          8.2,
+          7.4,
+          8.1,
+          7.6,
+          7.6,
+          9.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1755,6 +1830,14 @@
       "top2_bucket": "10-11C",
       "top2_price": 0.6,
       "top2_sum": 0.845
+    },
+    {
+      "ts": "2026-08-13T12:02:46.770Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.615,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.615,
+      "top2_sum": 0.955
     }
   ],
   "all_outcomes": [
@@ -1765,9 +1848,9 @@
         -999,
         7
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1690
     },
@@ -1791,9 +1874,9 @@
         9,
         9
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
       "volume": 1143
     },
@@ -1804,11 +1887,11 @@
         10,
         10
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.34,
+      "ask": 0.34,
+      "price": 0.34,
       "spread": 0,
-      "volume": 2094
+      "volume": 2183
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 11°C on August 13?",
@@ -1817,11 +1900,11 @@
         11,
         11
       ],
-      "bid": 0.6,
-      "ask": 0.6,
-      "price": 0.6,
+      "bid": 0.615,
+      "ask": 0.615,
+      "price": 0.615,
       "spread": 0,
-      "volume": 5224
+      "volume": 5273
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 12°C on August 13?",
@@ -1830,11 +1913,11 @@
         12,
         12
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 4096
+      "volume": 5057
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 13°C on August 13?",
@@ -1843,11 +1926,11 @@
         13,
         13
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 1419
+      "volume": 1446
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 14°C on August 13?",
@@ -1882,9 +1965,9 @@
         16,
         16
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1129
     },
