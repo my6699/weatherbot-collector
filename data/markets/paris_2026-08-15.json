@@ -87,6 +87,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-13T06:50:03.804Z",
+      "horizon": "D+2",
+      "hours_left": 53.2,
+      "ecmwf": 34.1,
+      "hrrr": 35.6,
+      "metar": null,
+      "best": 34.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 34.1,
+          "gfs_seamless": 35.6,
+          "icon_seamless": 33.1
+        },
+        "mean": 34.4,
+        "spread": 1.3,
+        "gap": 1.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          33.1,
+          36,
+          30.8,
+          34.5,
+          36.5,
+          31.3,
+          31.4,
+          35.6,
+          30.9,
+          32.6,
+          33.6,
+          30.3,
+          33.3,
+          33.8,
+          31.3,
+          36.1,
+          32.7,
+          29.7,
+          33.4,
+          36.3,
+          32.7,
+          33.5,
+          34.8,
+          30,
+          33.3,
+          30.9,
+          32.3,
+          34.1,
+          34,
+          29.9,
+          37.2,
+          32.3,
+          35.9,
+          32.6,
+          33.3,
+          32.6,
+          34.6,
+          39.3,
+          31,
+          28.2,
+          37.8,
+          38,
+          31.6,
+          37.1,
+          29.7,
+          33.3,
+          33.3,
+          31.6,
+          33.6,
+          33.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -97,6 +172,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.19,
       "top2_sum": 0.385
+    },
+    {
+      "ts": "2026-08-13T06:50:03.804Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.41,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.41,
+      "top2_sum": 0.795
     }
   ],
   "all_outcomes": [
@@ -107,11 +190,11 @@
         -999,
         30
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 0
+      "volume": 11
     },
     {
       "question": "Will the highest temperature in Paris be 31°C on August 15?",
@@ -120,9 +203,9 @@
         31,
         31
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
       "volume": 0
     },
@@ -133,11 +216,11 @@
         32,
         32
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.385,
+      "ask": 0.385,
+      "price": 0.385,
       "spread": 0,
-      "volume": 0
+      "volume": 79
     },
     {
       "question": "Will the highest temperature in Paris be 33°C on August 15?",
@@ -146,11 +229,11 @@
         33,
         33
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.41,
+      "ask": 0.41,
+      "price": 0.41,
       "spread": 0,
-      "volume": 0
+      "volume": 10
     },
     {
       "question": "Will the highest temperature in Paris be 34°C on August 15?",
@@ -159,9 +242,9 @@
         34,
         34
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.2,
+      "ask": 0.2,
+      "price": 0.2,
       "spread": 0,
       "volume": 0
     },
@@ -185,11 +268,11 @@
         36,
         36
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 0
+      "volume": 15
     },
     {
       "question": "Will the highest temperature in Paris be 37°C on August 15?",
@@ -198,11 +281,11 @@
         37,
         37
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 0
+      "volume": 22
     },
     {
       "question": "Will the highest temperature in Paris be 38°C on August 15?",
@@ -215,7 +298,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 0
+      "volume": 22
     },
     {
       "question": "Will the highest temperature in Paris be 39°C on August 15?",
@@ -224,11 +307,11 @@
         39,
         39
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 12
+      "volume": 10
     },
     {
       "question": "Will the highest temperature in Paris be 40°C or higher on August 15?",
@@ -237,11 +320,11 @@
         40,
         999
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 12
+      "volume": 10
     }
   ],
   "created_at": "2026-08-13T05:10:57.921Z"
