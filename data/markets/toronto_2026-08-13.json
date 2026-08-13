@@ -1200,6 +1200,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-13T03:02:31.421Z",
+      "horizon": "D+0",
+      "hours_left": 9,
+      "ecmwf": 28.2,
+      "hrrr": 28.3,
+      "metar": 20,
+      "best": 28,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 28.2,
+          "gfs_seamless": 28.3,
+          "icon_seamless": 27.2
+        },
+        "mean": 28,
+        "spread": 0.8,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          28.4,
+          30.1,
+          28,
+          27.8,
+          28,
+          28.4,
+          28.3,
+          28.2,
+          28.2,
+          28.2,
+          28.9,
+          28.3,
+          27.8,
+          29,
+          27.8,
+          28,
+          27.5,
+          30.6,
+          28.6,
+          29,
+          28.8,
+          28.8,
+          29.6,
+          28.1,
+          28.6,
+          29.2,
+          28.5,
+          28.5,
+          28.2,
+          27,
+          29.3,
+          28.5,
+          27.1,
+          27.7,
+          27,
+          27.4,
+          28.2,
+          28.5,
+          28.3,
+          28.7,
+          29.9,
+          28.6,
+          29.4,
+          28.3,
+          28.4,
+          27.7,
+          28.8,
+          28.9,
+          28.6,
+          28.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1330,6 +1404,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.475,
       "top2_sum": 0.81
+    },
+    {
+      "ts": "2026-08-13T03:02:31.421Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.365,
+      "top2_bucket": "27-28C",
+      "top2_price": 0.365,
+      "top2_sum": 0.72
     }
   ],
   "all_outcomes": [
@@ -1340,9 +1422,9 @@
         -999,
         21
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1049
     },
@@ -1357,7 +1439,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 111
+      "volume": 130
     },
     {
       "question": "Will the highest temperature in Toronto be 23°C on August 13?",
@@ -1370,7 +1452,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 103
+      "volume": 121
     },
     {
       "question": "Will the highest temperature in Toronto be 24°C on August 13?",
@@ -1383,7 +1465,7 @@
       "ask": 0.005,
       "price": 0.005,
       "spread": 0,
-      "volume": 127
+      "volume": 155
     },
     {
       "question": "Will the highest temperature in Toronto be 25°C on August 13?",
@@ -1392,11 +1474,11 @@
         25,
         25
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
-      "volume": 271
+      "volume": 299
     },
     {
       "question": "Will the highest temperature in Toronto be 26°C on August 13?",
@@ -1405,11 +1487,11 @@
         26,
         26
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 348
+      "volume": 436
     },
     {
       "question": "Will the highest temperature in Toronto be 27°C on August 13?",
@@ -1418,11 +1500,11 @@
         27,
         27
       ],
-      "bid": 0.335,
-      "ask": 0.335,
-      "price": 0.335,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 731
+      "volume": 779
     },
     {
       "question": "Will the highest temperature in Toronto be 28°C on August 13?",
@@ -1431,11 +1513,11 @@
         28,
         28
       ],
-      "bid": 0.475,
-      "ask": 0.475,
-      "price": 0.475,
+      "bid": 0.365,
+      "ask": 0.365,
+      "price": 0.365,
       "spread": 0,
-      "volume": 1260
+      "volume": 2760
     },
     {
       "question": "Will the highest temperature in Toronto be 29°C on August 13?",
@@ -1444,11 +1526,11 @@
         29,
         29
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.185,
+      "ask": 0.185,
+      "price": 0.185,
       "spread": 0,
-      "volume": 922
+      "volume": 1002
     },
     {
       "question": "Will the highest temperature in Toronto be 30°C on August 13?",
@@ -1461,7 +1543,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 110
+      "volume": 154
     },
     {
       "question": "Will the highest temperature in Toronto be 31°C or higher on August 13?",
@@ -1474,7 +1556,7 @@
       "ask": 0.0115,
       "price": 0.0115,
       "spread": 0,
-      "volume": 440
+      "volume": 554
     }
   ],
   "created_at": "2026-08-12T02:49:02.729Z"

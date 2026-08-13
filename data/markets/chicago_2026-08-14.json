@@ -1,0 +1,248 @@
+{
+  "city": "chicago",
+  "city_name": "Chicago",
+  "date": "2026-08-14",
+  "unit": "F",
+  "station": "KORD",
+  "event_end_date": "2026-08-14T12:00:00Z",
+  "hours_at_discovery": 33,
+  "status": "open",
+  "position": null,
+  "positions": [],
+  "actual_temp": null,
+  "resolved_outcome": null,
+  "pnl": null,
+  "forecast_snapshots": [
+    {
+      "ts": "2026-08-13T03:02:02.145Z",
+      "horizon": "D+1",
+      "hours_left": 33,
+      "ecmwf": 80,
+      "hrrr": 83,
+      "metar": null,
+      "best": 80.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 80,
+          "gfs_seamless": 83,
+          "icon_seamless": 77
+        },
+        "mean": 80.3,
+        "spread": 3.3,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          73,
+          76,
+          77,
+          74,
+          78,
+          71,
+          74,
+          76,
+          77,
+          79,
+          78,
+          79,
+          76,
+          78,
+          77,
+          78,
+          75,
+          76,
+          75,
+          73,
+          77,
+          73,
+          78,
+          78,
+          77,
+          77,
+          74,
+          78,
+          75,
+          78,
+          72,
+          76,
+          73,
+          79,
+          75,
+          77,
+          77,
+          77,
+          77,
+          77,
+          74,
+          78,
+          78,
+          80,
+          79,
+          76,
+          74,
+          76,
+          77,
+          72
+        ],
+        "membersSource": "ecmwf_ens"
+      }
+    }
+  ],
+  "market_snapshots": [
+    {
+      "ts": "2026-08-13T03:02:02.145Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.29,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.25,
+      "top2_sum": 0.54
+    }
+  ],
+  "all_outcomes": [
+    {
+      "question": "Will the highest temperature in Chicago be 73°F or below on August 14?",
+      "market_id": "3555654",
+      "range": [
+        -999,
+        73
+      ],
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
+      "spread": 0,
+      "volume": 14
+    },
+    {
+      "question": "Will the highest temperature in Chicago be between 74-75°F on August 14?",
+      "market_id": "3555655",
+      "range": [
+        74,
+        75
+      ],
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
+      "spread": 0,
+      "volume": 1
+    },
+    {
+      "question": "Will the highest temperature in Chicago be between 76-77°F on August 14?",
+      "market_id": "3555656",
+      "range": [
+        76,
+        77
+      ],
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
+      "spread": 0,
+      "volume": 8
+    },
+    {
+      "question": "Will the highest temperature in Chicago be between 78-79°F on August 14?",
+      "market_id": "3555657",
+      "range": [
+        78,
+        79
+      ],
+      "bid": 0.29,
+      "ask": 0.29,
+      "price": 0.29,
+      "spread": 0,
+      "volume": 7
+    },
+    {
+      "question": "Will the highest temperature in Chicago be between 80-81°F on August 14?",
+      "market_id": "3555658",
+      "range": [
+        80,
+        81
+      ],
+      "bid": 0.25,
+      "ask": 0.25,
+      "price": 0.25,
+      "spread": 0,
+      "volume": 20
+    },
+    {
+      "question": "Will the highest temperature in Chicago be between 82-83°F on August 14?",
+      "market_id": "3555659",
+      "range": [
+        82,
+        83
+      ],
+      "bid": 0.19,
+      "ask": 0.19,
+      "price": 0.19,
+      "spread": 0,
+      "volume": 3
+    },
+    {
+      "question": "Will the highest temperature in Chicago be between 84-85°F on August 14?",
+      "market_id": "3555660",
+      "range": [
+        84,
+        85
+      ],
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
+      "spread": 0,
+      "volume": 5
+    },
+    {
+      "question": "Will the highest temperature in Chicago be between 86-87°F on August 14?",
+      "market_id": "3555661",
+      "range": [
+        86,
+        87
+      ],
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
+      "spread": 0,
+      "volume": 55
+    },
+    {
+      "question": "Will the highest temperature in Chicago be between 88-89°F on August 14?",
+      "market_id": "3555662",
+      "range": [
+        88,
+        89
+      ],
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
+      "spread": 0,
+      "volume": 12
+    },
+    {
+      "question": "Will the highest temperature in Chicago be between 90-91°F on August 14?",
+      "market_id": "3555663",
+      "range": [
+        90,
+        91
+      ],
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
+      "spread": 0,
+      "volume": 12
+    },
+    {
+      "question": "Will the highest temperature in Chicago be 92°F or higher on August 14?",
+      "market_id": "3555664",
+      "range": [
+        92,
+        999
+      ],
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
+      "spread": 0,
+      "volume": 12
+    }
+  ],
+  "created_at": "2026-08-13T03:02:02.596Z"
+}
