@@ -51,12 +51,13 @@
       "forecast_src": "ensemble",
       "sigma": 1.2,
       "opened_at": "2026-08-13T21:06:18.114Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
-      "stop_price": 0.08
+      "status": "closed",
+      "pnl": -21.82,
+      "exit_price": 0.05,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-13T22:06:56.793Z",
+      "stop_price": 0.08,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -962,6 +963,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-13T22:06:01.965Z",
+      "horizon": "D+2",
+      "hours_left": 37.9,
+      "ecmwf": 30.3,
+      "hrrr": 31.5,
+      "metar": null,
+      "best": 30.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.3,
+          "gfs_seamless": 31.5,
+          "icon_seamless": 31.7
+        },
+        "mean": 30.9,
+        "spread": 0.8,
+        "gap": 1.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          30.4,
+          28.3,
+          29.9,
+          29.2,
+          29.9,
+          29.1,
+          28.6,
+          27.1,
+          27.5,
+          29.4,
+          29.8,
+          27.7,
+          29.1,
+          28.9,
+          28,
+          28.9,
+          30.3,
+          29,
+          28.6,
+          28.7,
+          29.8,
+          28,
+          29.6,
+          29.8,
+          29.8,
+          29.4,
+          29.7,
+          30.1,
+          29.9,
+          28.5,
+          29.5,
+          30,
+          28.8,
+          30,
+          29.5,
+          29.9,
+          30,
+          30.5,
+          28.8,
+          29.1,
+          30.2,
+          29.2,
+          30.1,
+          28,
+          29.6,
+          29.9,
+          29.3,
+          29.5,
+          29.2,
+          29.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1060,6 +1135,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.295,
       "top2_sum": 0.755
+    },
+    {
+      "ts": "2026-08-13T22:06:01.965Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.47,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.29,
+      "top2_sum": 0.76
     }
   ],
   "all_outcomes": [
@@ -1096,11 +1179,11 @@
         30,
         30
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 2841
+      "volume": 3365
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on August 15?",
@@ -1113,7 +1196,7 @@
       "ask": 0.17,
       "price": 0.17,
       "spread": 0,
-      "volume": 2411
+      "volume": 2440
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on August 15?",
@@ -1122,11 +1205,11 @@
         32,
         32
       ],
-      "bid": 0.46,
-      "ask": 0.46,
-      "price": 0.46,
+      "bid": 0.47,
+      "ask": 0.47,
+      "price": 0.47,
       "spread": 0,
-      "volume": 3201
+      "volume": 3218
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 15?",
@@ -1135,9 +1218,9 @@
         33,
         33
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.29,
+      "ask": 0.29,
+      "price": 0.29,
       "spread": 0,
       "volume": 2786
     },
@@ -1152,7 +1235,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 1527
+      "volume": 1533
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 15?",
@@ -1161,11 +1244,11 @@
         35,
         35
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 545
+      "volume": 862
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C on August 15?",
