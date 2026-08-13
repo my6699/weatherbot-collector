@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-15T12:00:00Z",
   "hours_at_discovery": 54.8,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3558139",
+    "question": "Will the highest temperature in Singapore be 30°C on August 15?",
+    "bucket_low": 30,
+    "bucket_high": 30,
+    "entry_price": 0.11,
+    "bid_at_entry": 0.1,
+    "spread": 0.01,
+    "shares": 363.64,
+    "cost": 40,
+    "p": 0.48,
+    "ev": 3.3636,
+    "edge": 0.23,
+    "kelly": 0.1056,
+    "forecast_temp": 29,
+    "forecast_src": "ensemble",
+    "sigma": 1.2,
+    "opened_at": "2026-08-13T21:06:18.114Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.08
+  },
+  "positions": [
+    {
+      "market_id": "3558139",
+      "question": "Will the highest temperature in Singapore be 30°C on August 15?",
+      "bucket_low": 30,
+      "bucket_high": 30,
+      "entry_price": 0.11,
+      "bid_at_entry": 0.1,
+      "spread": 0.01,
+      "shares": 363.64,
+      "cost": 40,
+      "p": 0.48,
+      "ev": 3.3636,
+      "edge": 0.23,
+      "kelly": 0.1056,
+      "forecast_temp": 29,
+      "forecast_src": "ensemble",
+      "sigma": 1.2,
+      "opened_at": "2026-08-13T21:06:18.114Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.08
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -837,6 +887,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-13T21:06:18.114Z",
+      "horizon": "D+2",
+      "hours_left": 38.9,
+      "ecmwf": 30.3,
+      "hrrr": 31.5,
+      "metar": null,
+      "best": 31,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.3,
+          "gfs_seamless": 31.5,
+          "icon_seamless": 32.2
+        },
+        "mean": 31,
+        "spread": 1.2,
+        "gap": 1.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          30.4,
+          28.3,
+          29.9,
+          29.2,
+          29.9,
+          29.1,
+          28.6,
+          27.1,
+          27.5,
+          29.4,
+          29.8,
+          27.7,
+          29.1,
+          28.9,
+          28,
+          28.9,
+          30.3,
+          29,
+          28.6,
+          28.7,
+          29.8,
+          28,
+          29.6,
+          29.8,
+          29.8,
+          29.4,
+          29.7,
+          30.1,
+          29.9,
+          28.5,
+          29.5,
+          30,
+          28.8,
+          30,
+          29.5,
+          29.9,
+          30,
+          30.5,
+          28.8,
+          29.1,
+          30.2,
+          29.2,
+          30.1,
+          28,
+          29.6,
+          29.9,
+          29.3,
+          29.5,
+          29.2,
+          29.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -927,6 +1052,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.305,
       "top2_sum": 0.855
+    },
+    {
+      "ts": "2026-08-13T21:06:18.114Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.46,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.295,
+      "top2_sum": 0.755
     }
   ],
   "all_outcomes": [
@@ -950,11 +1083,11 @@
         29,
         29
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 1251
+      "volume": 1420
     },
     {
       "question": "Will the highest temperature in Singapore be 30°C on August 15?",
@@ -963,11 +1096,11 @@
         30,
         30
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
-      "volume": 1773
+      "volume": 2841
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on August 15?",
@@ -976,11 +1109,11 @@
         31,
         31
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
       "spread": 0,
-      "volume": 1998
+      "volume": 2411
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on August 15?",
@@ -989,11 +1122,11 @@
         32,
         32
       ],
-      "bid": 0.55,
-      "ask": 0.55,
-      "price": 0.55,
+      "bid": 0.46,
+      "ask": 0.46,
+      "price": 0.46,
       "spread": 0,
-      "volume": 2859
+      "volume": 3201
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 15?",
@@ -1002,11 +1135,11 @@
         33,
         33
       ],
-      "bid": 0.305,
-      "ask": 0.305,
-      "price": 0.305,
+      "bid": 0.295,
+      "ask": 0.295,
+      "price": 0.295,
       "spread": 0,
-      "volume": 2523
+      "volume": 2786
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on August 15?",
@@ -1015,11 +1148,11 @@
         34,
         34
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 1338
+      "volume": 1527
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 15?",
