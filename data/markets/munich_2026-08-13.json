@@ -6,10 +6,10 @@
   "station": "EDDM",
   "event_end_date": "2026-08-13T12:00:00Z",
   "hours_at_discovery": 53.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 31,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2923,6 +2923,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-13T15:18:19.954Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 29.3,
+      "hrrr": 29.2,
+      "metar": 30,
+      "best": 29.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.3,
+          "gfs_seamless": 29.2,
+          "icon_seamless": 30.6
+        },
+        "mean": 29.5,
+        "spread": 1.1,
+        "gap": 0.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          28.9,
+          29.4,
+          29.3,
+          29.4,
+          29.3,
+          29.5,
+          29.3,
+          29.6,
+          29.3,
+          29.1,
+          29.6,
+          29,
+          29.3,
+          29.2,
+          29.4,
+          29.2,
+          29.4,
+          29.3,
+          29.2,
+          29.1,
+          29.3,
+          29.2,
+          29.3,
+          29.5,
+          29.5,
+          29.2,
+          29.4,
+          29.5,
+          29.5,
+          29.4,
+          29.5,
+          29.5,
+          29.5,
+          29.5,
+          29.1,
+          29.6,
+          29.2,
+          29.3,
+          29.5,
+          29.7,
+          29.3,
+          29,
+          29.1,
+          29.6,
+          29.5,
+          29.4,
+          29.3,
+          29.8,
+          29.2,
+          29.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3237,6 +3312,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.055,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-08-13T15:18:19.954Z",
+      "top_bucket": "31-31C",
+      "top_price": 0.975,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.03,
+      "top2_sum": 1.005
     }
   ],
   "all_outcomes": [
@@ -3329,7 +3412,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 17559
+      "volume": 17568
     },
     {
       "question": "Will the highest temperature in Munich be 31°C on August 13?",
@@ -3338,11 +3421,11 @@
         31,
         31
       ],
-      "bid": 0.935,
-      "ask": 0.935,
-      "price": 0.935,
+      "bid": 0.975,
+      "ask": 0.975,
+      "price": 0.975,
       "spread": 0,
-      "volume": 10444
+      "volume": 12490
     },
     {
       "question": "Will the highest temperature in Munich be 32°C on August 13?",
@@ -3351,11 +3434,11 @@
         32,
         32
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 9432
+      "volume": 9999
     },
     {
       "question": "Will the highest temperature in Munich be 33°C on August 13?",
@@ -3364,11 +3447,11 @@
         33,
         33
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 4827
+      "volume": 5249
     },
     {
       "question": "Will the highest temperature in Munich be 34°C or higher on August 13?",
@@ -3384,5 +3467,6 @@
       "volume": 1246
     }
   ],
-  "created_at": "2026-08-11T06:07:48.396Z"
+  "created_at": "2026-08-11T06:07:48.396Z",
+  "metar_max": 16
 }
