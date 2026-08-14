@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-08-14T12:00:00Z",
   "hours_at_discovery": 54.9,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3535285",
     "question": "Will the highest temperature in Paris be 37°C on August 14?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-08-13T22:05:53.563Z",
       "stop_price": 0.104,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 39,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3035,6 +3036,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-14T16:07:58.045Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 38.6,
+      "hrrr": 38.9,
+      "metar": 38,
+      "best": 38.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 38.6,
+          "gfs_seamless": 38.9,
+          "icon_seamless": 38.3
+        },
+        "mean": 38.6,
+        "spread": 0.3,
+        "gap": 0.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          39,
+          38.5,
+          38.5,
+          38.4,
+          38.7,
+          38.5,
+          38.8,
+          38.5,
+          38.5,
+          38.8,
+          38.7,
+          38.6,
+          38.6,
+          38,
+          38.2,
+          38.7,
+          38.5,
+          38.6,
+          37.7,
+          39.3,
+          38.8,
+          38.1,
+          38.6,
+          38.3,
+          38.5,
+          38.7,
+          38.6,
+          38.7,
+          38.7,
+          38.5,
+          38.3,
+          38.4,
+          39,
+          38.4,
+          38.7,
+          39,
+          38.6,
+          38.3,
+          38.6,
+          39,
+          38.6,
+          38.3,
+          38.5,
+          38.2,
+          38.3,
+          39.1,
+          38.6,
+          38.6,
+          38.4,
+          39.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3357,6 +3432,14 @@
       "top2_bucket": "39-40C",
       "top2_price": 0.19,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-14T16:07:58.045Z",
+      "top_bucket": "39-39C",
+      "top_price": 0.995,
+      "top2_bucket": "39-40C",
+      "top2_price": 0.0025,
+      "top2_sum": 0.9975
     }
   ],
   "all_outcomes": [
@@ -3397,7 +3480,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 14143
+      "volume": 14148
     },
     {
       "question": "Will the highest temperature in Paris be 38°C on August 14?",
@@ -3410,7 +3493,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 24175
+      "volume": 24741
     },
     {
       "question": "Will the highest temperature in Paris be 39°C on August 14?",
@@ -3419,11 +3502,11 @@
         39,
         39
       ],
-      "bid": 0.81,
-      "ask": 0.81,
-      "price": 0.81,
+      "bid": 0.995,
+      "ask": 0.995,
+      "price": 0.995,
       "spread": 0,
-      "volume": 13987
+      "volume": 15814
     },
     {
       "question": "Will the highest temperature in Paris be 40°C on August 14?",
@@ -3432,11 +3515,11 @@
         40,
         40
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 11166
+      "volume": 12875
     },
     {
       "question": "Will the highest temperature in Paris be 41°C on August 14?",
@@ -3445,11 +3528,11 @@
         41,
         41
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7068
+      "volume": 7390
     },
     {
       "question": "Will the highest temperature in Paris be 42°C on August 14?",
@@ -3475,7 +3558,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3055
+      "volume": 3060
     },
     {
       "question": "Will the highest temperature in Paris be 44°C on August 14?",
