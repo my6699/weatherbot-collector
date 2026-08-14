@@ -6,10 +6,10 @@
   "station": "NZWN",
   "event_end_date": "2026-08-14T12:00:00Z",
   "hours_at_discovery": 54.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 13,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2780,6 +2780,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-14T12:02:07.777Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 12,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -3078,6 +3089,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-14T12:02:07.777Z",
+      "top_bucket": "13-13C",
+      "top_price": 0.996,
+      "top2_bucket": "13-14C",
+      "top2_price": 0.002,
+      "top2_sum": 0.998
     }
   ],
   "all_outcomes": [
@@ -3153,11 +3172,11 @@
         13,
         13
       ],
-      "bid": 0.9995,
-      "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 13588
+      "bid": 0.996,
+      "ask": 0.996,
+      "price": 0.996,
+      "spread": 0,
+      "volume": 13594
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on August 14?",
@@ -3166,11 +3185,11 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 11915
+      "volume": 12015
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on August 14?",
@@ -3192,9 +3211,9 @@
         16,
         16
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
       "volume": 17266
     },
@@ -3225,5 +3244,6 @@
       "volume": 461
     }
   ],
-  "created_at": "2026-08-12T05:08:14.127Z"
+  "created_at": "2026-08-12T05:08:14.127Z",
+  "metar_max": 13
 }
