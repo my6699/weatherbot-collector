@@ -234,6 +234,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-14T10:20:55.284Z",
+      "horizon": "D+2",
+      "hours_left": 49.7,
+      "ecmwf": 9.5,
+      "hrrr": 8.7,
+      "metar": null,
+      "best": 9.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 9.5,
+          "gfs_seamless": 8.7,
+          "icon_seamless": 8.8
+        },
+        "mean": 9.1,
+        "spread": 0.4,
+        "gap": 0.8,
+        "llmEnhanced": false,
+        "membersMax": [
+          9.5,
+          8.5,
+          9.8,
+          9.9,
+          9.7,
+          8.7,
+          9.5,
+          9.8,
+          10.3,
+          9.5,
+          10,
+          9.5,
+          9.7,
+          9.5,
+          9,
+          9.3,
+          9.5,
+          9.8,
+          10.8,
+          10.4,
+          10.4,
+          10.5,
+          9.9,
+          10.3,
+          10.4,
+          9.7,
+          10,
+          9.3,
+          9,
+          9.4,
+          9,
+          9.7,
+          9.8,
+          10.4,
+          8.8,
+          10,
+          9.7,
+          9.8,
+          9.4,
+          10.3,
+          10,
+          9.5,
+          9.9,
+          9.2,
+          9.9,
+          9.7,
+          10.5,
+          9.9,
+          10.4,
+          9.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -260,6 +334,14 @@
       "top2_bucket": "10-11C",
       "top2_price": 0.155,
       "top2_sum": 0.785
+    },
+    {
+      "ts": "2026-08-14T10:20:55.284Z",
+      "top_bucket": "10-10C",
+      "top_price": 0.64,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.175,
+      "top2_sum": 0.815
     }
   ],
   "all_outcomes": [
@@ -296,9 +378,9 @@
         6,
         6
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
       "volume": 164
     },
@@ -313,7 +395,7 @@
       "ask": 0.0055,
       "price": 0.0055,
       "spread": 0,
-      "volume": 30
+      "volume": 35
     },
     {
       "question": "Will the highest temperature in Wellington be 8°C on August 16?",
@@ -322,11 +404,11 @@
         8,
         8
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 188
+      "volume": 193
     },
     {
       "question": "Will the highest temperature in Wellington be 9°C on August 16?",
@@ -335,11 +417,11 @@
         9,
         9
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.14,
+      "ask": 0.14,
+      "price": 0.14,
       "spread": 0,
-      "volume": 307
+      "volume": 315
     },
     {
       "question": "Will the highest temperature in Wellington be 10°C on August 16?",
@@ -348,11 +430,11 @@
         10,
         10
       ],
-      "bid": 0.63,
-      "ask": 0.63,
-      "price": 0.63,
+      "bid": 0.64,
+      "ask": 0.64,
+      "price": 0.64,
       "spread": 0,
-      "volume": 1240
+      "volume": 1249
     },
     {
       "question": "Will the highest temperature in Wellington be 11°C on August 16?",
@@ -361,11 +443,11 @@
         11,
         11
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 254
+      "volume": 330
     },
     {
       "question": "Will the highest temperature in Wellington be 12°C on August 16?",
@@ -378,7 +460,7 @@
       "ask": 0.035,
       "price": 0.035,
       "spread": 0,
-      "volume": 178
+      "volume": 203
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on August 16?",
@@ -400,9 +482,9 @@
         14,
         999
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
       "volume": 5
     }
