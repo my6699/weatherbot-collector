@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.08
+      "stop_price": 0.08,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -2153,6 +2154,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-14T19:59:00.253Z",
+      "horizon": "D+1",
+      "hours_left": 16,
+      "ecmwf": 26.9,
+      "hrrr": 26.5,
+      "metar": null,
+      "best": 26.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.9,
+          "gfs_seamless": 26.5,
+          "icon_seamless": 27.1
+        },
+        "mean": 26.8,
+        "spread": 0.3,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          27.1,
+          26.9,
+          26.4,
+          28.4,
+          25.7,
+          25.5,
+          26.5,
+          27.1,
+          25.7,
+          27,
+          26.5,
+          27,
+          26.5,
+          26.1,
+          26,
+          26.7,
+          26.9,
+          25.9,
+          25.2,
+          26,
+          27.5,
+          25.2,
+          25.1,
+          25.3,
+          26.9,
+          25.7,
+          26,
+          26.4,
+          25.9,
+          27.3,
+          26.2,
+          26.6,
+          25.9,
+          27.3,
+          26.4,
+          26.1,
+          28.3,
+          26.3,
+          25.8,
+          25.5,
+          25.5,
+          26.5,
+          26.2,
+          26.4,
+          25.2,
+          26.2,
+          26.6,
+          25.6,
+          24.5,
+          26.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2379,6 +2454,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.285,
       "top2_sum": 0.59
+    },
+    {
+      "ts": "2026-08-14T19:59:00.253Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.315,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.285,
+      "top2_sum": 0.6
     }
   ],
   "all_outcomes": [
@@ -2419,7 +2502,7 @@
       "ask": 0.008,
       "price": 0.008,
       "spread": 0,
-      "volume": 3375
+      "volume": 3415
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 27°C on August 15?",
@@ -2428,11 +2511,11 @@
         27,
         27
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.115,
+      "ask": 0.115,
+      "price": 0.115,
       "spread": 0,
-      "volume": 6230
+      "volume": 6346
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 28°C on August 15?",
@@ -2441,11 +2524,11 @@
         28,
         28
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.25,
+      "ask": 0.25,
+      "price": 0.25,
       "spread": 0,
-      "volume": 8071
+      "volume": 8184
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 29°C on August 15?",
@@ -2454,11 +2537,11 @@
         29,
         29
       ],
-      "bid": 0.305,
-      "ask": 0.305,
-      "price": 0.305,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 4311
+      "volume": 4345
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 30°C on August 15?",
@@ -2471,7 +2554,7 @@
       "ask": 0.285,
       "price": 0.285,
       "spread": 0,
-      "volume": 3573
+      "volume": 3630
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 31°C on August 15?",
@@ -2484,7 +2567,7 @@
       "ask": 0.065,
       "price": 0.065,
       "spread": 0,
-      "volume": 2227
+      "volume": 2229
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 32°C on August 15?",
@@ -2493,11 +2576,11 @@
         32,
         32
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 2471
+      "volume": 2514
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 33°C on August 15?",
@@ -2506,11 +2589,11 @@
         33,
         33
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 1213
+      "volume": 1217
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 34°C or higher on August 15?",
@@ -2519,11 +2602,11 @@
         34,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1450
+      "volume": 1463
     }
   ],
   "created_at": "2026-08-13T05:11:02.993Z"
