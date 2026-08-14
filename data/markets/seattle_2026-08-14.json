@@ -25,11 +25,11 @@
     "forecast_src": "ensemble",
     "sigma": 3.4,
     "opened_at": "2026-08-13T23:05:26.870Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null,
+    "status": "closed",
+    "pnl": 0,
+    "exit_price": 0.18,
+    "close_reason": "metar_diverged",
+    "closed_at": "2026-08-14T00:02:16.298Z",
     "stop_price": 0.128
   },
   "positions": [
@@ -57,6 +57,31 @@
       "close_reason": "metar_diverged",
       "closed_at": "2026-08-14T00:02:16.298Z",
       "stop_price": 0.128
+    },
+    {
+      "market_id": "3555600",
+      "question": "Will the highest temperature in Seattle be between 76-77°F on August 14?",
+      "bucket_low": 76,
+      "bucket_high": 77,
+      "entry_price": 0.11,
+      "bid_at_entry": 0.1,
+      "spread": 0.01,
+      "shares": 545.45,
+      "cost": 60,
+      "p": 0.64,
+      "ev": 4.8182,
+      "edge": 0.3849,
+      "kelly": 0.1494,
+      "forecast_temp": 76.84,
+      "forecast_src": "ensemble",
+      "sigma": 1.9,
+      "opened_at": "2026-08-14T02:49:45.782Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.08
     }
   ],
   "actual_temp": null,
@@ -1262,6 +1287,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-14T02:49:45.782Z",
+      "horizon": "D+0",
+      "hours_left": 9.2,
+      "ecmwf": 77,
+      "hrrr": 80,
+      "metar": 78,
+      "best": 78.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 80,
+          "icon_seamless": 78
+        },
+        "mean": 78.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          77,
+          75,
+          79,
+          77,
+          78,
+          76,
+          74,
+          77,
+          78,
+          77,
+          77,
+          74,
+          77,
+          78,
+          76,
+          78,
+          74,
+          76,
+          76,
+          77,
+          77,
+          78,
+          76,
+          77,
+          76,
+          77,
+          79,
+          77,
+          77,
+          79,
+          77,
+          77,
+          73,
+          77,
+          78,
+          77,
+          78,
+          77,
+          77,
+          78,
+          76,
+          78,
+          77,
+          77,
+          77,
+          77,
+          76,
+          76,
+          77,
+          78
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1392,6 +1492,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.29,
       "top2_sum": 0.59
+    },
+    {
+      "ts": "2026-08-14T02:49:45.782Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.32,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.32,
+      "top2_sum": 0.6
     }
   ],
   "all_outcomes": [
@@ -1415,11 +1523,11 @@
         74,
         75
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.0205,
+      "ask": 0.0205,
+      "price": 0.0205,
       "spread": 0,
-      "volume": 1593
+      "volume": 1983
     },
     {
       "question": "Will the highest temperature in Seattle be between 76-77°F on August 14?",
@@ -1432,7 +1540,7 @@
       "ask": 0.105,
       "price": 0.105,
       "spread": 0,
-      "volume": 1044
+      "volume": 1072
     },
     {
       "question": "Will the highest temperature in Seattle be between 78-79°F on August 14?",
@@ -1441,11 +1549,11 @@
         78,
         79
       ],
-      "bid": 0.3,
-      "ask": 0.3,
-      "price": 0.3,
+      "bid": 0.28,
+      "ask": 0.28,
+      "price": 0.28,
       "spread": 0,
-      "volume": 1569
+      "volume": 1824
     },
     {
       "question": "Will the highest temperature in Seattle be between 80-81°F on August 14?",
@@ -1454,11 +1562,11 @@
         80,
         81
       ],
-      "bid": 0.29,
-      "ask": 0.29,
-      "price": 0.29,
+      "bid": 0.32,
+      "ask": 0.32,
+      "price": 0.32,
       "spread": 0,
-      "volume": 1350
+      "volume": 1716
     },
     {
       "question": "Will the highest temperature in Seattle be between 82-83°F on August 14?",
@@ -1471,7 +1579,7 @@
       "ask": 0.18,
       "price": 0.18,
       "spread": 0,
-      "volume": 1415
+      "volume": 1677
     },
     {
       "question": "Will the highest temperature in Seattle be between 84-85°F on August 14?",
@@ -1480,11 +1588,11 @@
         84,
         85
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 1143
+      "volume": 1198
     },
     {
       "question": "Will the highest temperature in Seattle be between 86-87°F on August 14?",
