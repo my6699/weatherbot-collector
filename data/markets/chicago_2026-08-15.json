@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.08,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -1112,6 +1112,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-14T20:48:53.774Z",
+      "horizon": "D+1",
+      "hours_left": 15.2,
+      "ecmwf": 85,
+      "hrrr": 79,
+      "metar": null,
+      "best": 81.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 85,
+          "gfs_seamless": 79,
+          "icon_seamless": 78
+        },
+        "mean": 81.8,
+        "spread": 3.8,
+        "gap": 6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          91,
+          83,
+          84,
+          86,
+          86,
+          86,
+          82,
+          86,
+          89,
+          90,
+          88,
+          85,
+          84,
+          92,
+          86,
+          87,
+          88,
+          84,
+          84,
+          91,
+          86,
+          80,
+          87,
+          86,
+          80,
+          89,
+          86,
+          85,
+          80,
+          88,
+          87,
+          89,
+          85,
+          90,
+          84,
+          86,
+          86,
+          88,
+          86,
+          82,
+          87,
+          84,
+          83,
+          88,
+          92,
+          88,
+          87,
+          89,
+          87,
+          83
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1226,6 +1301,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.285,
       "top2_sum": 0.67
+    },
+    {
+      "ts": "2026-08-14T20:48:53.774Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.385,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.285,
+      "top2_sum": 0.67
     }
   ],
   "all_outcomes": [
@@ -1253,7 +1336,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 633
+      "volume": 639
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on August 15?",
@@ -1262,11 +1345,11 @@
         78,
         79
       ],
-      "bid": 0.14,
-      "ask": 0.14,
-      "price": 0.14,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 804
+      "volume": 946
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on August 15?",
@@ -1279,7 +1362,7 @@
       "ask": 0.385,
       "price": 0.385,
       "spread": 0,
-      "volume": 987
+      "volume": 1002
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on August 15?",
@@ -1340,9 +1423,9 @@
         90,
         91
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 167
     },
@@ -1366,9 +1449,9 @@
         94,
         999
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 168
     }

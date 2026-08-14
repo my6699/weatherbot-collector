@@ -6,10 +6,10 @@
   "station": "SAEZ",
   "event_end_date": "2026-08-14T12:00:00Z",
   "hours_at_discovery": 33,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 14,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2254,6 +2254,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-14T20:49:20.085Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 14.8,
+      "hrrr": 12.2,
+      "metar": 14,
+      "best": 13.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14.8,
+          "gfs_seamless": 12.2,
+          "icon_seamless": 12.2
+        },
+        "mean": 13.5,
+        "spread": 1.3,
+        "gap": 2.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          14.6,
+          15.5,
+          15.4,
+          15.2,
+          14,
+          14.9,
+          15.6,
+          14.1,
+          14.4,
+          15.6,
+          13.8,
+          14.2,
+          14.2,
+          14.3,
+          14.9,
+          14.4,
+          14.6,
+          14.3,
+          15.1,
+          14.9,
+          14.9,
+          15.3,
+          14.6,
+          14.8,
+          15.5,
+          14.5,
+          14.4,
+          14.8,
+          14.1,
+          14.6,
+          14.1,
+          13.8,
+          14.5,
+          14.8,
+          14.3,
+          14.4,
+          13.7,
+          15.9,
+          14.4,
+          14.1,
+          14.2,
+          14.1,
+          14.2,
+          14.1,
+          14.3,
+          15,
+          15.2,
+          14.7,
+          14,
+          14.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2496,6 +2571,14 @@
       "top2_bucket": "13-14C",
       "top2_price": 0.22,
       "top2_sum": 0.98
+    },
+    {
+      "ts": "2026-08-14T20:49:20.085Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.9945,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.01,
+      "top2_sum": 1.0045
     }
   ],
   "all_outcomes": [
@@ -2549,7 +2632,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3127
+      "volume": 3177
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 13°C on August 14?",
@@ -2558,11 +2641,11 @@
         13,
         13
       ],
-      "bid": 0.76,
-      "ask": 0.76,
-      "price": 0.76,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6477
+      "volume": 9094
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 14°C on August 14?",
@@ -2571,11 +2654,11 @@
         14,
         14
       ],
-      "bid": 0.22,
-      "ask": 0.22,
-      "price": 0.22,
+      "bid": 0.9945,
+      "ask": 0.9945,
+      "price": 0.9945,
       "spread": 0,
-      "volume": 5274
+      "volume": 6097
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 15°C on August 14?",
@@ -2584,11 +2667,11 @@
         15,
         15
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 3318
+      "volume": 3781
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 16°C on August 14?",
@@ -2597,11 +2680,11 @@
         16,
         16
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 1773
+      "volume": 1904
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on August 14?",
@@ -2614,7 +2697,7 @@
       "ask": 0.001,
       "price": 0.001,
       "spread": 0,
-      "volume": 990
+      "volume": 997
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 18°C on August 14?",
