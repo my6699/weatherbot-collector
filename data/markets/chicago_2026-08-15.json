@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-15T12:00:00Z",
   "hours_at_discovery": 33.2,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3575133",
+    "question": "Will the highest temperature in Chicago be between 84-85°F on August 15?",
+    "bucket_low": 84,
+    "bucket_high": 85,
+    "entry_price": 0.11,
+    "bid_at_entry": 0.1,
+    "spread": 0.01,
+    "shares": 363.64,
+    "cost": 40,
+    "p": 0.34,
+    "ev": 2.0909,
+    "edge": 0.0849,
+    "kelly": 0.0656,
+    "forecast_temp": 81.06,
+    "forecast_src": "ensemble",
+    "sigma": 3.2,
+    "opened_at": "2026-08-14T19:17:08.052Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.08
+  },
+  "positions": [
+    {
+      "market_id": "3575133",
+      "question": "Will the highest temperature in Chicago be between 84-85°F on August 15?",
+      "bucket_low": 84,
+      "bucket_high": 85,
+      "entry_price": 0.11,
+      "bid_at_entry": 0.1,
+      "spread": 0.01,
+      "shares": 363.64,
+      "cost": 40,
+      "p": 0.34,
+      "ev": 2.0909,
+      "edge": 0.0849,
+      "kelly": 0.0656,
+      "forecast_temp": 81.06,
+      "forecast_src": "ensemble",
+      "sigma": 3.2,
+      "opened_at": "2026-08-14T19:17:08.052Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.08
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -911,6 +961,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-14T19:17:08.052Z",
+      "horizon": "D+1",
+      "hours_left": 16.7,
+      "ecmwf": 82,
+      "hrrr": 82,
+      "metar": null,
+      "best": 81.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 82,
+          "gfs_seamless": 82,
+          "icon_seamless": 78
+        },
+        "mean": 81.2,
+        "spread": 3.2,
+        "gap": 0,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          89,
+          81,
+          82,
+          84,
+          84,
+          84,
+          81,
+          84,
+          87,
+          89,
+          87,
+          83,
+          82,
+          90,
+          84,
+          85,
+          86,
+          83,
+          82,
+          89,
+          84,
+          78,
+          85,
+          84,
+          78,
+          87,
+          84,
+          83,
+          78,
+          86,
+          85,
+          87,
+          83,
+          88,
+          82,
+          84,
+          84,
+          86,
+          84,
+          80,
+          85,
+          83,
+          81,
+          86,
+          90,
+          86,
+          85,
+          87,
+          85,
+          81
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1009,6 +1134,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.325,
       "top2_sum": 0.71
+    },
+    {
+      "ts": "2026-08-14T19:17:08.052Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.385,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.325,
+      "top2_sum": 0.71
     }
   ],
   "all_outcomes": [
@@ -1019,11 +1152,11 @@
         -999,
         75
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 641
+      "volume": 761
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on August 15?",
@@ -1045,9 +1178,9 @@
         78,
         79
       ],
-      "bid": 0.14,
-      "ask": 0.14,
-      "price": 0.14,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
       "volume": 804
     },
@@ -1062,7 +1195,7 @@
       "ask": 0.385,
       "price": 0.385,
       "spread": 0,
-      "volume": 954
+      "volume": 984
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on August 15?",
@@ -1084,11 +1217,11 @@
         84,
         85
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 719
+      "volume": 849
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on August 15?",
@@ -1123,9 +1256,9 @@
         90,
         91
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
       "volume": 167
     },
@@ -1149,9 +1282,9 @@
         94,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 168
     }

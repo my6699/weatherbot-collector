@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.168,
-      "forecast_change_streak": 2
+      "forecast_change_streak": 3
     }
   ],
   "actual_temp": null,
@@ -882,6 +882,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-14T19:18:24.610Z",
+      "horizon": "D+2",
+      "hours_left": 40.7,
+      "ecmwf": 10.8,
+      "hrrr": 8.6,
+      "metar": null,
+      "best": 9.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.8,
+          "gfs_seamless": 8.6,
+          "icon_seamless": 8.7
+        },
+        "mean": 9.7,
+        "spread": 1.1,
+        "gap": 2.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          10.4,
+          9.9,
+          11.1,
+          10.9,
+          10.6,
+          10.4,
+          10.5,
+          11,
+          11.4,
+          10.5,
+          10.9,
+          10.5,
+          10.9,
+          10.5,
+          10.5,
+          11.3,
+          10.3,
+          10.9,
+          11.5,
+          11,
+          10.8,
+          10.5,
+          10.8,
+          11.5,
+          11.1,
+          11.3,
+          10.6,
+          9.6,
+          11.9,
+          10.6,
+          10,
+          10.1,
+          10.9,
+          11.5,
+          10.6,
+          10.9,
+          11.5,
+          10.8,
+          10.9,
+          10.5,
+          10.8,
+          10.9,
+          10.5,
+          10.4,
+          11,
+          10.5,
+          10.8,
+          10,
+          11,
+          10.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -967,6 +1042,14 @@
     },
     {
       "ts": "2026-08-14T18:09:00.105Z",
+      "top_bucket": "10-10C",
+      "top_price": 0.635,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.215,
+      "top2_sum": 0.85
+    },
+    {
+      "ts": "2026-08-14T19:18:24.610Z",
       "top_bucket": "10-10C",
       "top_price": 0.635,
       "top2_bucket": "10-11C",
@@ -1064,7 +1147,7 @@
       "ask": 0.635,
       "price": 0.635,
       "spread": 0,
-      "volume": 2052
+      "volume": 2077
     },
     {
       "question": "Will the highest temperature in Wellington be 11°C on August 16?",
@@ -1077,7 +1160,7 @@
       "ask": 0.215,
       "price": 0.215,
       "spread": 0,
-      "volume": 744
+      "volume": 748
     },
     {
       "question": "Will the highest temperature in Wellington be 12°C on August 16?",
