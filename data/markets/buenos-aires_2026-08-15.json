@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-08-14T12:01:52.273Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 0.83,
+      "exit_price": 0.245,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-08-15T01:53:22.919Z",
       "stop_price": 0.24,
       "forecast_change_streak": 0,
       "trailing_activated": true
@@ -1411,6 +1411,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-15T01:53:22.919Z",
+      "horizon": "D+0",
+      "hours_left": 10.1,
+      "ecmwf": 14.4,
+      "hrrr": 13.3,
+      "metar": 12,
+      "best": 14.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14.4,
+          "gfs_seamless": 13.3,
+          "icon_seamless": 15.2
+        },
+        "mean": 14.2,
+        "spread": 1,
+        "gap": 1.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          14.4,
+          16,
+          15,
+          14.9,
+          16.3,
+          14.3,
+          13.7,
+          14.9,
+          16.5,
+          14.1,
+          14.8,
+          13.4,
+          15.2,
+          14.4,
+          15.1,
+          14.7,
+          14.3,
+          14.5,
+          14.3,
+          14.4,
+          15.3,
+          15.3,
+          13.7,
+          14.7,
+          14.1,
+          14.1,
+          14.9,
+          15,
+          16.2,
+          13.7,
+          15,
+          13.7,
+          15,
+          15.2,
+          15.3,
+          15,
+          16.1,
+          15.9,
+          14.6,
+          15.4,
+          15.3,
+          14.5,
+          14.1,
+          15.4,
+          15,
+          13.6,
+          14,
+          15.9,
+          15.8,
+          13.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1557,6 +1631,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.345,
       "top2_sum": 0.66
+    },
+    {
+      "ts": "2026-08-15T01:53:22.919Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.515,
+      "top2_bucket": "15-16C",
+      "top2_price": 0.515,
+      "top2_sum": 0.76
     }
   ],
   "all_outcomes": [
@@ -1567,11 +1649,11 @@
         -999,
         12
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 170
+      "volume": 176
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 13°C on August 15?",
@@ -1580,11 +1662,11 @@
         13,
         13
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 693
+      "volume": 838
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 14°C on August 15?",
@@ -1593,11 +1675,11 @@
         14,
         14
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 301
+      "volume": 550
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 15°C on August 15?",
@@ -1606,11 +1688,11 @@
         15,
         15
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.245,
+      "ask": 0.245,
+      "price": 0.245,
       "spread": 0,
-      "volume": 1727
+      "volume": 1902
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 16°C on August 15?",
@@ -1619,11 +1701,11 @@
         16,
         16
       ],
-      "bid": 0.345,
-      "ask": 0.345,
-      "price": 0.345,
+      "bid": 0.515,
+      "ask": 0.515,
+      "price": 0.515,
       "spread": 0,
-      "volume": 5810
+      "volume": 7000
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on August 15?",
@@ -1632,11 +1714,11 @@
         17,
         17
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 432
+      "volume": 580
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 18°C on August 15?",
@@ -1649,7 +1731,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 1337
+      "volume": 1378
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 19°C on August 15?",
@@ -1662,7 +1744,7 @@
       "ask": 0.005,
       "price": 0.005,
       "spread": 0,
-      "volume": 176
+      "volume": 212
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on August 15?",
@@ -1675,7 +1757,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 153
+      "volume": 189
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on August 15?",
@@ -1684,11 +1766,11 @@
         21,
         21
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 71
+      "volume": 177
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C or higher on August 15?",

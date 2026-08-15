@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-08-14T12:00:00Z",
   "hours_at_discovery": 33,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3555603",
     "question": "Will the highest temperature in Seattle be between 82-83°F on August 14?",
@@ -56,7 +56,8 @@
       "exit_price": 0.18,
       "close_reason": "metar_diverged",
       "closed_at": "2026-08-14T00:02:16.298Z",
-      "stop_price": 0.128
+      "stop_price": 0.128,
+      "resolved_hit": false
     },
     {
       "market_id": "3555600",
@@ -81,10 +82,11 @@
       "exit_price": 0.125,
       "close_reason": "metar_diverged",
       "closed_at": "2026-08-14T05:08:05.634Z",
-      "stop_price": 0.08
+      "stop_price": 0.08,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 76.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3049,5 +3051,6 @@
       "volume": 467
     }
   ],
-  "created_at": "2026-08-13T03:02:08.044Z"
+  "created_at": "2026-08-13T03:02:08.044Z",
+  "metar_max": 77
 }
