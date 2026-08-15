@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.4,
       "opened_at": "2026-08-15T10:42:32.202Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -14.55,
+      "exit_price": 0.07,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-15T13:46:06.304Z",
       "stop_price": 0.072,
       "forecast_change_streak": 0,
       "stop_pending": true
@@ -2219,6 +2219,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-15T13:45:49.459Z",
+      "horizon": "D+1",
+      "hours_left": 22.2,
+      "ecmwf": 27.4,
+      "hrrr": 28.9,
+      "metar": null,
+      "best": 28,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.4,
+          "gfs_seamless": 28.9,
+          "icon_seamless": 28.2
+        },
+        "mean": 28,
+        "spread": 0.9,
+        "gap": 1.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          26.2,
+          27.2,
+          28,
+          27.9,
+          28.6,
+          27.8,
+          26.9,
+          28.4,
+          28,
+          27.8,
+          28,
+          27.7,
+          27.8,
+          28,
+          28.6,
+          27.4,
+          27.5,
+          26.4,
+          27.1,
+          27.3,
+          27.3,
+          27.6,
+          28.6,
+          27.8,
+          27.7,
+          27.2,
+          28.7,
+          27.7,
+          27.7,
+          28,
+          27.2,
+          27.1,
+          26.9,
+          27.3,
+          27.5,
+          28.3,
+          27.6,
+          28.1,
+          27.4,
+          28,
+          27.3,
+          27,
+          27.7,
+          26.6,
+          27.2,
+          27.7,
+          28.1,
+          27.2,
+          27.4,
+          28.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2453,6 +2527,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.365,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-08-15T13:45:49.459Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.495,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.315,
+      "top2_sum": 0.81
     }
   ],
   "all_outcomes": [
@@ -2506,7 +2588,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 1974
+      "volume": 1982
     },
     {
       "question": "Will the highest temperature in Shanghai be 29°C on August 16?",
@@ -2519,7 +2601,7 @@
       "ask": 0.08,
       "price": 0.08,
       "spread": 0,
-      "volume": 4095
+      "volume": 4557
     },
     {
       "question": "Will the highest temperature in Shanghai be 30°C on August 16?",
@@ -2532,7 +2614,7 @@
       "ask": 0.495,
       "price": 0.495,
       "spread": 0,
-      "volume": 3919
+      "volume": 3948
     },
     {
       "question": "Will the highest temperature in Shanghai be 31°C on August 16?",
@@ -2541,11 +2623,11 @@
         31,
         31
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 6356
+      "volume": 7083
     },
     {
       "question": "Will the highest temperature in Shanghai be 32°C on August 16?",
@@ -2558,7 +2640,7 @@
       "ask": 0.045,
       "price": 0.045,
       "spread": 0,
-      "volume": 2935
+      "volume": 2990
     },
     {
       "question": "Will the highest temperature in Shanghai be 33°C on August 16?",
@@ -2571,7 +2653,7 @@
       "ask": 0.0085,
       "price": 0.0085,
       "spread": 0,
-      "volume": 1506
+      "volume": 1568
     },
     {
       "question": "Will the highest temperature in Shanghai be 34°C on August 16?",
@@ -2584,7 +2666,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1168
+      "volume": 1178
     },
     {
       "question": "Will the highest temperature in Shanghai be 35°C or higher on August 16?",
