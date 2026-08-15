@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-16T12:00:00Z",
   "hours_at_discovery": 54.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3577387",
+    "question": "Will the highest temperature in Shanghai be 29°C on August 16?",
+    "bucket_low": 29,
+    "bucket_high": 29,
+    "entry_price": 0.11,
+    "bid_at_entry": 0.09,
+    "spread": 0.02,
+    "shares": 363.64,
+    "cost": 40,
+    "p": 0.4,
+    "ev": 2.6364,
+    "edge": 0.15,
+    "kelly": 0.0833,
+    "forecast_temp": 29.85,
+    "forecast_src": "ensemble",
+    "sigma": 1.4,
+    "opened_at": "2026-08-15T10:42:32.202Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.072
+  },
+  "positions": [
+    {
+      "market_id": "3577387",
+      "question": "Will the highest temperature in Shanghai be 29°C on August 16?",
+      "bucket_low": 29,
+      "bucket_high": 29,
+      "entry_price": 0.11,
+      "bid_at_entry": 0.09,
+      "spread": 0.02,
+      "shares": 363.64,
+      "cost": 40,
+      "p": 0.4,
+      "ev": 2.6364,
+      "edge": 0.15,
+      "kelly": 0.0833,
+      "forecast_temp": 29.85,
+      "forecast_src": "ensemble",
+      "sigma": 1.4,
+      "opened_at": "2026-08-15T10:42:32.202Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.072
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -1943,6 +1993,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-15T10:42:32.202Z",
+      "horizon": "D+1",
+      "hours_left": 25.3,
+      "ecmwf": 29.8,
+      "hrrr": 30.2,
+      "metar": null,
+      "best": 29.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.8,
+          "gfs_seamless": 30.2,
+          "icon_seamless": 28.2
+        },
+        "mean": 29.6,
+        "spread": 1.4,
+        "gap": 0.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          28.2,
+          29.2,
+          30,
+          29.9,
+          30.6,
+          29.8,
+          28.9,
+          30.4,
+          30,
+          29.8,
+          30,
+          29.7,
+          29.8,
+          30,
+          30.6,
+          29.4,
+          29.5,
+          28.4,
+          29.1,
+          29.3,
+          29.3,
+          29.6,
+          30.6,
+          29.8,
+          29.7,
+          29.2,
+          30.7,
+          29.7,
+          29.7,
+          30,
+          29.2,
+          29.1,
+          28.9,
+          29.3,
+          29.5,
+          30.3,
+          29.6,
+          30.1,
+          29.4,
+          30,
+          29.3,
+          29,
+          29.7,
+          28.6,
+          29.2,
+          29.7,
+          30.1,
+          29.2,
+          29.4,
+          30.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2153,6 +2278,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.375,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-08-15T10:42:32.202Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.485,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.365,
+      "top2_sum": 0.85
     }
   ],
   "all_outcomes": [
@@ -2189,11 +2322,11 @@
         27,
         27
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 2062
+      "volume": 2426
     },
     {
       "question": "Will the highest temperature in Shanghai be 28°C on August 16?",
@@ -2206,7 +2339,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 1945
+      "volume": 1952
     },
     {
       "question": "Will the highest temperature in Shanghai be 29°C on August 16?",
@@ -2215,11 +2348,11 @@
         29,
         29
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
-      "volume": 3790
+      "volume": 3921
     },
     {
       "question": "Will the highest temperature in Shanghai be 30°C on August 16?",
@@ -2232,7 +2365,7 @@
       "ask": 0.485,
       "price": 0.485,
       "spread": 0,
-      "volume": 3493
+      "volume": 3798
     },
     {
       "question": "Will the highest temperature in Shanghai be 31°C on August 16?",
@@ -2241,11 +2374,11 @@
         31,
         31
       ],
-      "bid": 0.375,
-      "ask": 0.375,
-      "price": 0.375,
+      "bid": 0.365,
+      "ask": 0.365,
+      "price": 0.365,
       "spread": 0,
-      "volume": 6267
+      "volume": 6289
     },
     {
       "question": "Will the highest temperature in Shanghai be 32°C on August 16?",
@@ -2258,7 +2391,7 @@
       "ask": 0.055,
       "price": 0.055,
       "spread": 0,
-      "volume": 2788
+      "volume": 2842
     },
     {
       "question": "Will the highest temperature in Shanghai be 33°C on August 16?",
@@ -2271,7 +2404,7 @@
       "ask": 0.0085,
       "price": 0.0085,
       "spread": 0,
-      "volume": 1330
+      "volume": 1337
     },
     {
       "question": "Will the highest temperature in Shanghai be 34°C on August 16?",
@@ -2280,11 +2413,11 @@
         34,
         34
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1149
+      "volume": 1156
     },
     {
       "question": "Will the highest temperature in Shanghai be 35°C or higher on August 16?",
