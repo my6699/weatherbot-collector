@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.152,
-      "forecast_change_streak": 2
+      "forecast_change_streak": 3
     }
   ],
   "actual_temp": null,
@@ -2751,6 +2751,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-15T04:49:50.565Z",
+      "horizon": "D+0",
+      "hours_left": 7.2,
+      "ecmwf": 28.7,
+      "hrrr": 27.2,
+      "metar": 21,
+      "best": 27.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 28.7,
+          "gfs_seamless": 27.2,
+          "icon_seamless": 26.6
+        },
+        "mean": 27.8,
+        "spread": 1.2,
+        "gap": 1.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          27.7,
+          29.1,
+          28.8,
+          28.2,
+          27.1,
+          29.9,
+          30.1,
+          27.8,
+          27.9,
+          28.1,
+          28.4,
+          29,
+          29.4,
+          27,
+          28.7,
+          27.3,
+          27.7,
+          26.8,
+          29.8,
+          28.5,
+          29.7,
+          26.8,
+          28.8,
+          28.8,
+          28.4,
+          27.1,
+          29.1,
+          28.1,
+          29.2,
+          28.7,
+          27.5,
+          28.2,
+          27.1,
+          29.3,
+          30.3,
+          26.7,
+          27.6,
+          27.5,
+          30,
+          29,
+          28.2,
+          28,
+          29.8,
+          27.9,
+          30.5,
+          29.2,
+          28.3,
+          30.9,
+          28.4,
+          30.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3041,6 +3116,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.345,
       "top2_sum": 0.79
+    },
+    {
+      "ts": "2026-08-15T04:49:50.565Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.415,
+      "top2_bucket": "27-28C",
+      "top2_price": 0.325,
+      "top2_sum": 0.74
     }
   ],
   "all_outcomes": [
@@ -3103,9 +3186,9 @@
         24,
         24
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
       "volume": 6490
     },
@@ -3116,11 +3199,11 @@
         25,
         25
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
-      "volume": 8168
+      "volume": 8225
     },
     {
       "question": "Will the highest temperature in London be 26°C on August 15?",
@@ -3129,11 +3212,11 @@
         26,
         26
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
+      "bid": 0.19,
+      "ask": 0.19,
+      "price": 0.19,
       "spread": 0,
-      "volume": 10713
+      "volume": 10743
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 15?",
@@ -3142,11 +3225,11 @@
         27,
         27
       ],
-      "bid": 0.445,
-      "ask": 0.445,
-      "price": 0.445,
+      "bid": 0.415,
+      "ask": 0.415,
+      "price": 0.415,
       "spread": 0,
-      "volume": 9503
+      "volume": 9550
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 15?",
@@ -3155,11 +3238,11 @@
         28,
         28
       ],
-      "bid": 0.345,
-      "ask": 0.345,
-      "price": 0.345,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 6772
+      "volume": 6896
     },
     {
       "question": "Will the highest temperature in London be 29°C on August 15?",
@@ -3168,11 +3251,11 @@
         29,
         29
       ],
-      "bid": 0.0185,
-      "ask": 0.0185,
-      "price": 0.0185,
+      "bid": 0.0195,
+      "ask": 0.0195,
+      "price": 0.0195,
       "spread": 0,
-      "volume": 9171
+      "volume": 9436
     },
     {
       "question": "Will the highest temperature in London be 30°C or higher on August 15?",
@@ -3181,11 +3264,11 @@
         30,
         999
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 9377
+      "volume": 9420
     }
   ],
   "created_at": "2026-08-13T05:10:56.523Z"
