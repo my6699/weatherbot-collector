@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-08-15T12:00:00Z",
   "hours_at_discovery": 54.8,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3558064",
     "question": "Will the highest temperature in Wellington be 16°C on August 15?",
@@ -58,7 +58,8 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-08-14T05:08:35.336Z",
       "stop_price": 0.104,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 1,
+      "resolved_hit": false
     },
     {
       "market_id": "3558061",
@@ -84,10 +85,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-08-14T15:10:11.502Z",
       "stop_price": 0.088,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 13,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3302,6 +3304,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-15T11:37:57.456Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 14,
+      "hrrr": 13.8,
+      "metar": 10,
+      "best": 14.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14,
+          "gfs_seamless": 13.8,
+          "icon_seamless": 14.8
+        },
+        "mean": 14.1,
+        "spread": 0.7,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          13.4,
+          13.1,
+          14.8,
+          13.5,
+          13.1,
+          13.5,
+          14.7,
+          14.5,
+          14.5,
+          14.3,
+          13.4,
+          14.4,
+          14.3,
+          12.9,
+          14.5,
+          14.4,
+          13.9,
+          14.4,
+          14,
+          15,
+          13.7,
+          13.1,
+          14.6,
+          13.9,
+          13.7,
+          13.9,
+          13.6,
+          14.1,
+          13.5,
+          14.7,
+          14.9,
+          13.8,
+          12.4,
+          13.6,
+          14.6,
+          13.6,
+          14.3,
+          14.1,
+          14.2,
+          13.5,
+          12.9,
+          14.3,
+          13.7,
+          13.1,
+          13.7,
+          13.7,
+          13.7,
+          13.7,
+          14.5,
+          14.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3648,6 +3724,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-15T11:37:57.456Z",
+      "top_bucket": "13-13C",
+      "top_price": 0.9995,
+      "top2_bucket": "12-13C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -3714,7 +3798,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 19147
+      "volume": 19172
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on August 15?",
@@ -3795,5 +3879,6 @@
       "volume": 417
     }
   ],
-  "created_at": "2026-08-13T05:11:19.492Z"
+  "created_at": "2026-08-13T05:11:19.492Z",
+  "metar_max": 13
 }
