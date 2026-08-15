@@ -2930,6 +2930,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-15T07:01:52.972Z",
+      "horizon": "D+0",
+      "hours_left": 5,
+      "ecmwf": 12.9,
+      "hrrr": 13.8,
+      "metar": 11,
+      "best": 13.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 12.9,
+          "gfs_seamless": 13.8,
+          "icon_seamless": 14.8
+        },
+        "mean": 13.6,
+        "spread": 1.3,
+        "gap": 0.9,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          12.8,
+          11.8,
+          13.1,
+          12.2,
+          12.8,
+          13,
+          12.9,
+          13.3,
+          12.2,
+          13.4,
+          12.2,
+          12.9,
+          12.8,
+          12,
+          12.8,
+          13.1,
+          12.2,
+          13.4,
+          12.5,
+          12.1,
+          12.4,
+          12.5,
+          12.6,
+          12.9,
+          12.3,
+          12.3,
+          12.6,
+          12.1,
+          12.7,
+          12.4,
+          13.1,
+          12.2,
+          12.2,
+          12,
+          12.9,
+          13.8,
+          12.5,
+          12.5,
+          12.9,
+          12.1,
+          12.2,
+          12.2,
+          13.4,
+          12.5,
+          12.7,
+          13.3,
+          11.5,
+          11.5,
+          13.6,
+          13
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3236,6 +3311,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.999,
       "top2_sum": 0.9995
+    },
+    {
+      "ts": "2026-08-15T07:01:52.972Z",
+      "top_bucket": "13-13C",
+      "top_price": 0.9995,
+      "top2_bucket": "12-13C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -3289,7 +3372,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 12499
+      "volume": 12546
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on August 15?",
@@ -3298,11 +3381,11 @@
         13,
         13
       ],
-      "bid": 0.999,
+      "bid": 0.9995,
       "ask": 0.999,
-      "price": 0.999,
-      "spread": 0,
-      "volume": 18351
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 18863
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on August 15?",
@@ -3315,7 +3398,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 15483
+      "volume": 17052
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on August 15?",
