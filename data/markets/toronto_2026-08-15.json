@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-08-15T12:00:00Z",
   "hours_at_discovery": 33.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3575067",
     "question": "Will the highest temperature in Toronto be 24°C on August 15?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-08-15T01:53:26.316Z",
       "stop_price": 0.136,
       "forecast_change_streak": 0,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 24,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2972,6 +2973,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-15T22:41:32.462Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 24.2,
+      "hrrr": 24.7,
+      "metar": 24,
+      "best": 24.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.2,
+          "gfs_seamless": 24.7,
+          "icon_seamless": 23.4
+        },
+        "mean": 24.2,
+        "spread": 0.8,
+        "gap": 0.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          23.4,
+          24.9,
+          24.4,
+          24.5,
+          24.5,
+          25.5,
+          24.7,
+          24.9,
+          25.6,
+          25.9,
+          24.3,
+          24.6,
+          25.1,
+          24.5,
+          25.4,
+          25.4,
+          24,
+          25.1,
+          24.5,
+          24.1,
+          24.9,
+          24.8,
+          24.2,
+          24.5,
+          24.1,
+          25,
+          25.6,
+          24,
+          24.6,
+          25.4,
+          23.2,
+          25.5,
+          23.5,
+          23.8,
+          24.5,
+          23.8,
+          24.9,
+          23.7,
+          23.7,
+          25.6,
+          23.8,
+          24.8,
+          25.1,
+          24.8,
+          24.6,
+          24.4,
+          25.5,
+          24.7,
+          25.2,
+          25
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3286,6 +3361,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.12,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-08-15T22:41:32.462Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.9985,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.002,
+      "top2_sum": 1.0005
     }
   ],
   "all_outcomes": [
@@ -3352,7 +3435,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3159
+      "volume": 3164
     },
     {
       "question": "Will the highest temperature in Toronto be 24°C on August 15?",
@@ -3361,11 +3444,11 @@
         24,
         24
       ],
-      "bid": 0.87,
-      "ask": 0.87,
-      "price": 0.87,
+      "bid": 0.9985,
+      "ask": 0.9985,
+      "price": 0.9985,
       "spread": 0,
-      "volume": 6213
+      "volume": 7639
     },
     {
       "question": "Will the highest temperature in Toronto be 25°C on August 15?",
@@ -3374,11 +3457,11 @@
         25,
         25
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 5190
+      "volume": 6194
     },
     {
       "question": "Will the highest temperature in Toronto be 26°C on August 15?",
@@ -3387,11 +3470,11 @@
         26,
         26
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 9955
+      "volume": 10107
     },
     {
       "question": "Will the highest temperature in Toronto be 27°C on August 15?",
@@ -3400,11 +3483,11 @@
         27,
         27
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 3807
+      "volume": 3965
     },
     {
       "question": "Will the highest temperature in Toronto be 28°C on August 15?",
