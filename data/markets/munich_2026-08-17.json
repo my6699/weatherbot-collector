@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.088
+      "stop_price": 0.088,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -582,6 +583,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-16T04:52:55.039Z",
+      "horizon": "D+1",
+      "hours_left": 31.1,
+      "ecmwf": 24.1,
+      "hrrr": 22,
+      "metar": null,
+      "best": 23.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.1,
+          "gfs_seamless": 22,
+          "icon_seamless": 22.7
+        },
+        "mean": 23.2,
+        "spread": 1.2,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          21.3,
+          24.4,
+          24.7,
+          22.8,
+          21.4,
+          23.9,
+          24.2,
+          24.5,
+          22.8,
+          23.9,
+          25.1,
+          25.3,
+          22.4,
+          24.9,
+          23.4,
+          23.8,
+          25.6,
+          24.9,
+          22.7,
+          23.8,
+          22,
+          23.7,
+          23.5,
+          23.3,
+          25,
+          22.9,
+          24.2,
+          21.9,
+          23.2,
+          23.9,
+          25,
+          22.5,
+          25.4,
+          23.7,
+          22,
+          23.6,
+          24.2,
+          23.8,
+          23.1,
+          23.7,
+          25.1,
+          23.6,
+          25.5,
+          23.4,
+          24.2,
+          22.9,
+          23.6,
+          23.6,
+          25.3,
+          24.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -640,6 +716,14 @@
       "top2_bucket": "22-23C",
       "top2_price": 0.395,
       "top2_sum": 0.705
+    },
+    {
+      "ts": "2026-08-16T04:52:55.039Z",
+      "top_bucket": "23-23C",
+      "top_price": 0.385,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.385,
+      "top2_sum": 0.675
     }
   ],
   "all_outcomes": [
@@ -650,11 +734,11 @@
         -999,
         20
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 1046
+      "volume": 1071
     },
     {
       "question": "Will the highest temperature in Munich be 21°C on August 17?",
@@ -667,7 +751,7 @@
       "ask": 0.135,
       "price": 0.135,
       "spread": 0,
-      "volume": 1465
+      "volume": 1558
     },
     {
       "question": "Will the highest temperature in Munich be 22°C on August 17?",
@@ -676,11 +760,11 @@
         22,
         22
       ],
-      "bid": 0.31,
-      "ask": 0.31,
-      "price": 0.31,
+      "bid": 0.29,
+      "ask": 0.29,
+      "price": 0.29,
       "spread": 0,
-      "volume": 353
+      "volume": 397
     },
     {
       "question": "Will the highest temperature in Munich be 23°C on August 17?",
@@ -689,11 +773,11 @@
         23,
         23
       ],
-      "bid": 0.395,
-      "ask": 0.395,
-      "price": 0.395,
+      "bid": 0.385,
+      "ask": 0.385,
+      "price": 0.385,
       "spread": 0,
-      "volume": 1169
+      "volume": 1208
     },
     {
       "question": "Will the highest temperature in Munich be 24°C on August 17?",
@@ -702,11 +786,11 @@
         24,
         24
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.125,
+      "ask": 0.125,
+      "price": 0.125,
       "spread": 0,
-      "volume": 1716
+      "volume": 1749
     },
     {
       "question": "Will the highest temperature in Munich be 25°C on August 17?",
@@ -728,9 +812,9 @@
         26,
         26
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
       "volume": 310
     },
