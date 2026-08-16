@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-17T12:00:00Z",
   "hours_at_discovery": 39.3,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3614579",
+    "question": "Will the highest temperature in Munich be 24°C on August 17?",
+    "bucket_low": 24,
+    "bucket_high": 24,
+    "entry_price": 0.14,
+    "bid_at_entry": 0.11,
+    "spread": 0.03,
+    "shares": 285.71,
+    "cost": 40,
+    "p": 0.4,
+    "ev": 1.8571,
+    "edge": 0.135,
+    "kelly": 0.0805,
+    "forecast_temp": 25,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-08-16T04:03:07.136Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.088
+  },
+  "positions": [
+    {
+      "market_id": "3614579",
+      "question": "Will the highest temperature in Munich be 24°C on August 17?",
+      "bucket_low": 24,
+      "bucket_high": 24,
+      "entry_price": 0.14,
+      "bid_at_entry": 0.11,
+      "spread": 0.03,
+      "shares": 285.71,
+      "cost": 40,
+      "p": 0.4,
+      "ev": 1.8571,
+      "edge": 0.135,
+      "kelly": 0.0805,
+      "forecast_temp": 25,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-08-16T04:03:07.136Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.088
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -457,6 +507,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-16T04:03:07.136Z",
+      "horizon": "D+1",
+      "hours_left": 31.9,
+      "ecmwf": 24.1,
+      "hrrr": 22,
+      "metar": null,
+      "best": 23,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.1,
+          "gfs_seamless": 22,
+          "icon_seamless": 22
+        },
+        "mean": 23,
+        "spread": 1.1,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          21.3,
+          24.4,
+          24.7,
+          22.8,
+          21.4,
+          23.9,
+          24.2,
+          24.5,
+          22.8,
+          23.9,
+          25.1,
+          25.3,
+          22.4,
+          24.9,
+          23.4,
+          23.8,
+          25.6,
+          24.9,
+          22.7,
+          23.8,
+          22,
+          23.7,
+          23.5,
+          23.3,
+          25,
+          22.9,
+          24.2,
+          21.9,
+          23.2,
+          23.9,
+          25,
+          22.5,
+          25.4,
+          23.7,
+          22,
+          23.6,
+          24.2,
+          23.8,
+          23.1,
+          23.7,
+          25.1,
+          23.6,
+          25.5,
+          23.4,
+          24.2,
+          22.9,
+          23.6,
+          23.6,
+          25.3,
+          24.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -507,6 +632,14 @@
       "top2_bucket": "22-23C",
       "top2_price": 0.385,
       "top2_sum": 0.68
+    },
+    {
+      "ts": "2026-08-16T04:03:07.136Z",
+      "top_bucket": "23-23C",
+      "top_price": 0.395,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.395,
+      "top2_sum": 0.705
     }
   ],
   "all_outcomes": [
@@ -517,11 +650,11 @@
         -999,
         20
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
-      "volume": 755
+      "volume": 1046
     },
     {
       "question": "Will the highest temperature in Munich be 21°C on August 17?",
@@ -534,7 +667,7 @@
       "ask": 0.135,
       "price": 0.135,
       "spread": 0,
-      "volume": 1460
+      "volume": 1465
     },
     {
       "question": "Will the highest temperature in Munich be 22°C on August 17?",
@@ -543,11 +676,11 @@
         22,
         22
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.31,
+      "ask": 0.31,
+      "price": 0.31,
       "spread": 0,
-      "volume": 288
+      "volume": 353
     },
     {
       "question": "Will the highest temperature in Munich be 23°C on August 17?",
@@ -556,9 +689,9 @@
         23,
         23
       ],
-      "bid": 0.385,
-      "ask": 0.385,
-      "price": 0.385,
+      "bid": 0.395,
+      "ask": 0.395,
+      "price": 0.395,
       "spread": 0,
       "volume": 1169
     },
@@ -569,11 +702,11 @@
         24,
         24
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.115,
+      "ask": 0.115,
+      "price": 0.115,
       "spread": 0,
-      "volume": 1429
+      "volume": 1716
     },
     {
       "question": "Will the highest temperature in Munich be 25°C on August 17?",

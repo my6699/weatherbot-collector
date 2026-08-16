@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.11,
-      "forecast_change_streak": 1,
+      "forecast_change_streak": 2,
       "trailing_activated": true
     }
   ],
@@ -3054,6 +3054,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-16T04:03:26.710Z",
+      "horizon": "D+0",
+      "hours_left": 7.9,
+      "ecmwf": 30.4,
+      "hrrr": 34.4,
+      "metar": 27,
+      "best": 31.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.4,
+          "gfs_seamless": 34.4,
+          "icon_seamless": 28.9
+        },
+        "mean": 31.3,
+        "spread": 3.1,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          32.4,
+          29.7,
+          30.4,
+          30.2,
+          29.6,
+          31.8,
+          33.1,
+          31.7,
+          31.3,
+          31.5,
+          31.7,
+          33,
+          30,
+          30.6,
+          32,
+          30.3,
+          31.5,
+          31.3,
+          30.5,
+          30.3,
+          31.9,
+          31.8,
+          31,
+          31.4,
+          32.7,
+          30.3,
+          30,
+          31.4,
+          30.8,
+          32.1,
+          31.8,
+          32.9,
+          32.4,
+          30.2,
+          30.2,
+          32.3,
+          32.6,
+          32.2,
+          31.6,
+          30.6,
+          31.6,
+          31.5,
+          31.8,
+          31.8,
+          31.3,
+          31.6,
+          29,
+          30.8,
+          31.3,
+          30.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3376,6 +3451,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.275,
       "top2_sum": 0.595
+    },
+    {
+      "ts": "2026-08-16T04:03:26.710Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.425,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.275,
+      "top2_sum": 0.7
     }
   ],
   "all_outcomes": [
@@ -3399,11 +3482,11 @@
         28,
         28
       ],
-      "bid": 0.0415,
-      "ask": 0.0415,
-      "price": 0.0415,
+      "bid": 0.032,
+      "ask": 0.032,
+      "price": 0.032,
       "spread": 0,
-      "volume": 956
+      "volume": 1323
     },
     {
       "question": "Will the highest temperature in Lucknow be 29°C on August 16?",
@@ -3412,11 +3495,11 @@
         29,
         29
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 870
+      "volume": 968
     },
     {
       "question": "Will the highest temperature in Lucknow be 30°C on August 16?",
@@ -3425,11 +3508,11 @@
         30,
         30
       ],
-      "bid": 0.32,
-      "ask": 0.32,
-      "price": 0.32,
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
       "spread": 0,
-      "volume": 1814
+      "volume": 1860
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on August 16?",
@@ -3442,7 +3525,7 @@
       "ask": 0.275,
       "price": 0.275,
       "spread": 0,
-      "volume": 2199
+      "volume": 2221
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C on August 16?",
@@ -3451,11 +3534,11 @@
         32,
         32
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.09,
+      "ask": 0.09,
+      "price": 0.09,
       "spread": 0,
-      "volume": 3835
+      "volume": 3874
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on August 16?",
@@ -3464,11 +3547,11 @@
         33,
         33
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 1238
+      "volume": 1296
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C on August 16?",
@@ -3490,9 +3573,9 @@
         35,
         35
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
       "volume": 538
     },
