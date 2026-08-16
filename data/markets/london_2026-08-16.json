@@ -6,7 +6,7 @@
   "station": "EGLC",
   "event_end_date": "2026-08-16T12:00:00Z",
   "hours_at_discovery": 54.9,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3577273",
     "question": "Will the highest temperature in London be 25°C on August 16?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-08-15T15:38:23.308Z",
       "stop_price": 0.14,
       "forecast_change_streak": 14,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 26,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -4187,6 +4188,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-16T16:44:33.738Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 22.1,
+      "hrrr": 24.1,
+      "metar": 26,
+      "best": 23.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 22.1,
+          "gfs_seamless": 24.1,
+          "icon_seamless": 26.2
+        },
+        "mean": 23.5,
+        "spread": 2.7,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          20.1,
+          19.9,
+          20.9,
+          21,
+          22,
+          22.1,
+          20.7,
+          22,
+          23,
+          21.8,
+          22.7,
+          20.4,
+          19.9,
+          20.4,
+          20.4,
+          21.9,
+          21,
+          21.2,
+          19.9,
+          21.7,
+          19.9,
+          19.9,
+          21.1,
+          20.6,
+          21.3,
+          21,
+          21,
+          20.7,
+          19.5,
+          20.9,
+          21.8,
+          20.5,
+          21.9,
+          22.6,
+          20.3,
+          20.4,
+          20.6,
+          20.8,
+          21,
+          21.8,
+          21.3,
+          21.9,
+          21.9,
+          20.9,
+          23.3,
+          21.9,
+          21.3,
+          20.3,
+          21.7,
+          22.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -4629,6 +4705,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.08,
       "top2_sum": 0.975
+    },
+    {
+      "ts": "2026-08-16T16:44:33.738Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.97,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.03,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -4656,7 +4740,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 15596
+      "volume": 15604
     },
     {
       "question": "Will the highest temperature in London be 25°C on August 16?",
@@ -4669,7 +4753,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 23965
+      "volume": 24040
     },
     {
       "question": "Will the highest temperature in London be 26°C on August 16?",
@@ -4678,11 +4762,11 @@
         26,
         26
       ],
-      "bid": 0.895,
-      "ask": 0.895,
-      "price": 0.895,
+      "bid": 0.97,
+      "ask": 0.97,
+      "price": 0.97,
       "spread": 0,
-      "volume": 16532
+      "volume": 18372
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 16?",
@@ -4691,11 +4775,11 @@
         27,
         27
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 21897
+      "volume": 24626
     },
     {
       "question": "Will the highest temperature in London be 28°C on August 16?",
@@ -4708,7 +4792,7 @@
       "ask": 0.0055,
       "price": 0.0055,
       "spread": 0,
-      "volume": 9854
+      "volume": 10371
     },
     {
       "question": "Will the highest temperature in London be 29°C on August 16?",
@@ -4776,5 +4860,6 @@
       "volume": 452
     }
   ],
-  "created_at": "2026-08-14T05:08:09.449Z"
+  "created_at": "2026-08-14T05:08:09.449Z",
+  "metar_max": 19
 }
