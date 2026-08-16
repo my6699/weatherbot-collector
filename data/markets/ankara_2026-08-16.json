@@ -6,7 +6,7 @@
   "station": "LTAC",
   "event_end_date": "2026-08-16T12:00:00Z",
   "hours_at_discovery": 54.9,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "3577310",
     "question": "Will the highest temperature in Ankara be 26°C on August 16?",
@@ -3808,6 +3808,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-16T11:37:57.556Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 27.7,
+      "hrrr": 27.5,
+      "metar": 25,
+      "best": 27.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.7,
+          "gfs_seamless": 27.5,
+          "icon_seamless": 26.3
+        },
+        "mean": 27.4,
+        "spread": 1.1,
+        "gap": 0.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          25.1,
+          27,
+          26,
+          26.9,
+          26.2,
+          26.7,
+          26.5,
+          27.5,
+          27.8,
+          27.1,
+          26.7,
+          27.7,
+          27.5,
+          26.9,
+          27.5,
+          27.5,
+          26.7,
+          27.4,
+          27.5,
+          27.6,
+          28.1,
+          27.7,
+          27.8,
+          27.4,
+          27.3,
+          28.7,
+          28.3,
+          27.1,
+          27.1,
+          27.1,
+          25.7,
+          26.5,
+          26.8,
+          27.9,
+          26.7,
+          27.2,
+          25.3,
+          27.7,
+          25.2,
+          28.1,
+          28.2,
+          26.6,
+          28.4,
+          26.3,
+          26.3,
+          25.1,
+          27.8,
+          26.5,
+          27.7,
+          28
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -4210,6 +4285,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.76,
       "top2_sum": 0.895
+    },
+    {
+      "ts": "2026-08-16T11:37:57.556Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.835,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.835,
+      "top2_sum": 0.945
     }
   ],
   "all_outcomes": [
@@ -4259,11 +4342,11 @@
         25,
         25
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 2071
+      "volume": 2115
     },
     {
       "question": "Will the highest temperature in Ankara be 26°C on August 16?",
@@ -4272,11 +4355,11 @@
         26,
         26
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
-      "volume": 3773
+      "volume": 3848
     },
     {
       "question": "Will the highest temperature in Ankara be 27°C on August 16?",
@@ -4285,11 +4368,11 @@
         27,
         27
       ],
-      "bid": 0.76,
-      "ask": 0.76,
-      "price": 0.76,
+      "bid": 0.835,
+      "ask": 0.835,
+      "price": 0.835,
       "spread": 0,
-      "volume": 6116
+      "volume": 6194
     },
     {
       "question": "Will the highest temperature in Ankara be 28°C on August 16?",
@@ -4298,11 +4381,11 @@
         28,
         28
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
       "spread": 0,
-      "volume": 3957
+      "volume": 4023
     },
     {
       "question": "Will the highest temperature in Ankara be 29°C on August 16?",
@@ -4311,11 +4394,11 @@
         29,
         29
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 1987
+      "volume": 2027
     },
     {
       "question": "Will the highest temperature in Ankara be 30°C on August 16?",
@@ -4324,9 +4407,9 @@
         30,
         30
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 1075
     },
