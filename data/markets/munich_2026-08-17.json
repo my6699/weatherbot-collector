@@ -6,7 +6,7 @@
   "station": "EDDM",
   "event_end_date": "2026-08-17T12:00:00Z",
   "hours_at_discovery": 39.3,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3614579",
     "question": "Will the highest temperature in Munich be 24°C on August 17?",
@@ -57,10 +57,11 @@
       "close_reason": "forecast_changed",
       "closed_at": "2026-08-16T14:42:25.948Z",
       "stop_price": 0.088,
-      "forecast_change_streak": 3
+      "forecast_change_streak": 3,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2216,6 +2217,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-17T11:45:08.532Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 24.8,
+      "hrrr": 23.9,
+      "metar": 25,
+      "best": 24.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.8,
+          "gfs_seamless": 23.9,
+          "icon_seamless": 25.4
+        },
+        "mean": 24.7,
+        "spread": 0.8,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          22.6,
+          24.3,
+          22.5,
+          24.3,
+          23.6,
+          25.1,
+          20.6,
+          23.5,
+          21.5,
+          23.3,
+          24,
+          22.6,
+          23.8,
+          24.1,
+          23.3,
+          23.2,
+          20.8,
+          24.3,
+          23,
+          21.3,
+          24,
+          24.5,
+          24.8,
+          21.8,
+          23.3,
+          21.8,
+          25.6,
+          24.3,
+          24.2,
+          23.3,
+          25.1,
+          24.3,
+          24,
+          24.3,
+          24.2,
+          24,
+          24.3,
+          24.6,
+          23.3,
+          24.1,
+          21.8,
+          23.3,
+          25.3,
+          23.7,
+          23,
+          24.2,
+          21.7,
+          23.8,
+          20.1,
+          23.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2450,6 +2525,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.0125,
       "top2_sum": 0.9895
+    },
+    {
+      "ts": "2026-08-17T11:45:08.532Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.993,
+      "top2_bucket": "27-28C",
+      "top2_price": 0.0065,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -2529,7 +2612,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 13241
+      "volume": 13287
     },
     {
       "question": "Will the highest temperature in Munich be 26°C on August 17?",
@@ -2542,7 +2625,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 20730
+      "volume": 20747
     },
     {
       "question": "Will the highest temperature in Munich be 27°C on August 17?",
@@ -2551,11 +2634,11 @@
         27,
         27
       ],
-      "bid": 0.977,
-      "ask": 0.977,
-      "price": 0.977,
+      "bid": 0.993,
+      "ask": 0.993,
+      "price": 0.993,
       "spread": 0,
-      "volume": 17052
+      "volume": 20795
     },
     {
       "question": "Will the highest temperature in Munich be 28°C on August 17?",
@@ -2564,11 +2647,11 @@
         28,
         28
       ],
-      "bid": 0.0125,
-      "ask": 0.0125,
-      "price": 0.0125,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 16079
+      "volume": 16679
     },
     {
       "question": "Will the highest temperature in Munich be 29°C on August 17?",
@@ -2577,11 +2660,11 @@
         29,
         29
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 18484
+      "volume": 23877
     },
     {
       "question": "Will the highest temperature in Munich be 30°C or higher on August 17?",
@@ -2590,12 +2673,13 @@
         30,
         999
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 12608
+      "volume": 12898
     }
   ],
-  "created_at": "2026-08-15T20:42:42.009Z"
+  "created_at": "2026-08-15T20:42:42.009Z",
+  "metar_max": 21
 }
