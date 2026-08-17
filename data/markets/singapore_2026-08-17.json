@@ -2682,6 +2682,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-17T10:50:39.808Z",
+      "horizon": "D+0",
+      "hours_left": 1.2,
+      "ecmwf": 32.1,
+      "hrrr": 32,
+      "metar": 30,
+      "best": 32,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.1,
+          "gfs_seamless": 32,
+          "icon_seamless": 31.7
+        },
+        "mean": 32,
+        "spread": 0.3,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          32.7,
+          32.9,
+          32.5,
+          31.5,
+          31.8,
+          32.6,
+          32,
+          32.3,
+          32.1,
+          31,
+          32.4,
+          31.3,
+          31.4,
+          31.3,
+          31.8,
+          31.3,
+          32.3,
+          33,
+          33,
+          32.1,
+          32.3,
+          31.7,
+          32.8,
+          32.4,
+          32.7,
+          31.3,
+          31.6,
+          31.8,
+          31.2,
+          32.2,
+          32.6,
+          31.5,
+          32.8,
+          32.2,
+          31.7,
+          31.6,
+          32,
+          32.3,
+          31.8,
+          32.2,
+          32.3,
+          32.6,
+          32.4,
+          31.1,
+          32,
+          31.9,
+          32.1,
+          32.7,
+          31.5,
+          32.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2972,6 +3046,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.0025,
       "top2_sum": 1.001
+    },
+    {
+      "ts": "2026-08-17T10:50:39.808Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -3051,7 +3133,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 9468
+      "volume": 12618
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 17?",
@@ -3060,11 +3142,11 @@
         33,
         33
       ],
-      "bid": 0.9985,
-      "ask": 0.9985,
-      "price": 0.9985,
-      "spread": 0,
-      "volume": 7289
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 9398
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on August 17?",
@@ -3073,11 +3155,11 @@
         34,
         34
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7505
+      "volume": 8011
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 17?",
