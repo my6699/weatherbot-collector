@@ -3081,6 +3081,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T20:42:49.841Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 77,
+      "hrrr": 83,
+      "metar": 79,
+      "best": 79.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 83,
+          "icon_seamless": 80
+        },
+        "mean": 79.4,
+        "spread": 3.6,
+        "gap": 6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          76,
+          77,
+          76,
+          77,
+          74,
+          73,
+          76,
+          76,
+          77,
+          76,
+          78,
+          76,
+          76,
+          73,
+          74,
+          75,
+          77,
+          77,
+          72,
+          76,
+          76,
+          76,
+          78,
+          77,
+          75,
+          76,
+          77,
+          77,
+          77,
+          78,
+          80,
+          76,
+          76,
+          78,
+          76,
+          78,
+          76,
+          77,
+          76,
+          76,
+          72,
+          78,
+          76,
+          77,
+          75,
+          76,
+          77,
+          77,
+          76,
+          75
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3411,6 +3486,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.535,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-08-18T20:42:49.841Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.755,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.22,
+      "top2_sum": 0.975
     }
   ],
   "all_outcomes": [
@@ -3464,7 +3547,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1160
+      "volume": 1260
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on August 18?",
@@ -3473,11 +3556,11 @@
         78,
         79
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.755,
+      "ask": 0.755,
+      "price": 0.755,
       "spread": 0,
-      "volume": 4801
+      "volume": 5518
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on August 18?",
@@ -3486,11 +3569,11 @@
         80,
         81
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
+      "bid": 0.22,
+      "ask": 0.22,
+      "price": 0.22,
       "spread": 0,
-      "volume": 3251
+      "volume": 3331
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on August 18?",
@@ -3499,11 +3582,11 @@
         82,
         83
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 5597
+      "volume": 5775
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on August 18?",
@@ -3512,11 +3595,11 @@
         84,
         85
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 4047
+      "volume": 4147
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on August 18?",
@@ -3529,7 +3612,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 1473
+      "volume": 1833
     },
     {
       "question": "Will the highest temperature in Chicago be between 88-89°F on August 18?",

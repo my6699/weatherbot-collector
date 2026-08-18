@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.088
+      "stop_price": 0.088,
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -1187,6 +1188,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T20:43:05.972Z",
+      "horizon": "D+2",
+      "hours_left": 39.3,
+      "ecmwf": 29.9,
+      "hrrr": 25.8,
+      "metar": null,
+      "best": 28.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.9,
+          "gfs_seamless": 25.8,
+          "icon_seamless": 27.4
+        },
+        "mean": 28.2,
+        "spread": 2.4,
+        "gap": 4.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          30.1,
+          31,
+          30.1,
+          30.3,
+          32.3,
+          29.1,
+          31.3,
+          30.8,
+          27.8,
+          30.9,
+          30.6,
+          31.9,
+          31.1,
+          30.2,
+          30.2,
+          29.1,
+          29.9,
+          31.5,
+          31.1,
+          31.5,
+          31.5,
+          29.8,
+          30,
+          30.9,
+          30.7,
+          30.4,
+          31,
+          31.4,
+          29.9,
+          32.4,
+          28.8,
+          29.5,
+          31.1,
+          30.8,
+          31.2,
+          31.7,
+          30,
+          31.2,
+          29.6,
+          30.3,
+          29.7,
+          31.3,
+          29.1,
+          30.4,
+          29.5,
+          30.4,
+          29.8,
+          29.3,
+          29.2,
+          27.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1309,6 +1385,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.335,
       "top2_sum": 0.73
+    },
+    {
+      "ts": "2026-08-18T20:43:05.972Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.4,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.335,
+      "top2_sum": 0.735
     }
   ],
   "all_outcomes": [
@@ -1358,9 +1442,9 @@
         26,
         26
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
       "volume": 194
     },
@@ -1397,11 +1481,11 @@
         29,
         29
       ],
-      "bid": 0.395,
-      "ask": 0.395,
-      "price": 0.395,
+      "bid": 0.4,
+      "ask": 0.4,
+      "price": 0.4,
       "spread": 0,
-      "volume": 1334
+      "volume": 1337
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 30°C on August 20?",
@@ -1423,11 +1507,11 @@
         31,
         31
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.125,
+      "ask": 0.125,
+      "price": 0.125,
       "spread": 0,
-      "volume": 729
+      "volume": 795
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 32°C on August 20?",
@@ -1449,9 +1533,9 @@
         33,
         999
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.0095,
+      "ask": 0.0095,
+      "price": 0.0095,
       "spread": 0,
       "volume": 712
     }
