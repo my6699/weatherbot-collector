@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-20T12:00:00Z",
   "hours_at_discovery": 54.2,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3688894",
+    "question": "Will the highest temperature in Seoul (Incheon) be 31°C on August 20?",
+    "bucket_low": 31,
+    "bucket_high": 31,
+    "entry_price": 0.13,
+    "bid_at_entry": 0.11,
+    "spread": 0.02,
+    "shares": 307.69,
+    "cost": 40,
+    "p": 0.38,
+    "ev": 1.9231,
+    "edge": 0.1103,
+    "kelly": 0.0739,
+    "forecast_temp": 29.38,
+    "forecast_src": "ensemble",
+    "sigma": 2.6,
+    "opened_at": "2026-08-18T19:43:44.593Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.088
+  },
+  "positions": [
+    {
+      "market_id": "3688894",
+      "question": "Will the highest temperature in Seoul (Incheon) be 31°C on August 20?",
+      "bucket_low": 31,
+      "bucket_high": 31,
+      "entry_price": 0.13,
+      "bid_at_entry": 0.11,
+      "spread": 0.02,
+      "shares": 307.69,
+      "cost": 40,
+      "p": 0.38,
+      "ev": 1.9231,
+      "edge": 0.1103,
+      "kelly": 0.0739,
+      "forecast_temp": 29.38,
+      "forecast_src": "ensemble",
+      "sigma": 2.6,
+      "opened_at": "2026-08-18T19:43:44.593Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.088
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -1062,6 +1112,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T19:43:44.593Z",
+      "horizon": "D+2",
+      "hours_left": 40.3,
+      "ecmwf": 30.3,
+      "hrrr": 25.8,
+      "metar": null,
+      "best": 28.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.3,
+          "gfs_seamless": 25.8,
+          "icon_seamless": 27.4
+        },
+        "mean": 28.4,
+        "spread": 2.6,
+        "gap": 4.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          30.1,
+          31,
+          30.1,
+          30.3,
+          32.3,
+          29.1,
+          31.3,
+          30.8,
+          27.8,
+          30.9,
+          30.6,
+          31.9,
+          31.1,
+          30.2,
+          30.2,
+          29.1,
+          29.9,
+          31.5,
+          31.1,
+          31.5,
+          31.5,
+          29.8,
+          30,
+          30.9,
+          30.7,
+          30.4,
+          31,
+          31.4,
+          29.9,
+          32.4,
+          28.8,
+          29.5,
+          31.1,
+          30.8,
+          31.2,
+          31.7,
+          30,
+          31.2,
+          29.6,
+          30.3,
+          29.7,
+          31.3,
+          29.1,
+          30.4,
+          29.5,
+          30.4,
+          29.8,
+          29.3,
+          29.2,
+          27.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1176,6 +1301,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.335,
       "top2_sum": 0.73
+    },
+    {
+      "ts": "2026-08-18T19:43:44.593Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.395,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.335,
+      "top2_sum": 0.73
     }
   ],
   "all_outcomes": [
@@ -1238,9 +1371,9 @@
         27,
         27
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
       "volume": 191
     },
@@ -1255,7 +1388,7 @@
       "ask": 0.115,
       "price": 0.115,
       "spread": 0,
-      "volume": 686
+      "volume": 745
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 29°C on August 20?",
@@ -1290,11 +1423,11 @@
         31,
         31
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 637
+      "volume": 729
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 32°C on August 20?",
@@ -1303,9 +1436,9 @@
         32,
         32
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
       "volume": 314
     },
