@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-08-18T12:00:00Z",
   "hours_at_discovery": 32.8,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3652776",
     "question": "Will the highest temperature in Dallas be between 102-103°F on August 18?",
@@ -56,10 +56,11 @@
       "exit_price": 0.125,
       "close_reason": "metar_diverged",
       "closed_at": "2026-08-18T03:10:40.135Z",
-      "stop_price": 0.096
+      "stop_price": 0.096,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 104.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3335,6 +3336,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T23:40:16.469Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 103,
+      "hrrr": 107,
+      "metar": 104,
+      "best": 104.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 103,
+          "gfs_seamless": 107,
+          "icon_seamless": 106
+        },
+        "mean": 104.8,
+        "spread": 2.2,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          104,
+          104,
+          104,
+          103,
+          103,
+          104,
+          102,
+          103,
+          103,
+          105,
+          104,
+          104,
+          103,
+          104,
+          103,
+          103,
+          103,
+          103,
+          103,
+          104,
+          102,
+          103,
+          103,
+          104,
+          103,
+          103,
+          104,
+          105,
+          104,
+          103,
+          103,
+          103,
+          103,
+          103,
+          104,
+          105,
+          103,
+          103,
+          102,
+          105,
+          104,
+          103,
+          104,
+          105,
+          103,
+          104,
+          103,
+          104,
+          103,
+          104
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3689,6 +3765,14 @@
       "top2_bucket": "104-107F",
       "top2_price": 0.075,
       "top2_sum": 1.01
+    },
+    {
+      "ts": "2026-08-18T23:40:16.469Z",
+      "top_bucket": "104-105F",
+      "top_price": 0.9955,
+      "top2_bucket": "104-107F",
+      "top2_price": 0.0085,
+      "top2_sum": 1.004
     }
   ],
   "all_outcomes": [
@@ -3742,7 +3826,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 16617
+      "volume": 16629
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on August 18?",
@@ -3751,11 +3835,11 @@
         104,
         105
       ],
-      "bid": 0.935,
-      "ask": 0.935,
-      "price": 0.935,
+      "bid": 0.9955,
+      "ask": 0.9955,
+      "price": 0.9955,
       "spread": 0,
-      "volume": 7618
+      "volume": 8279
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on August 18?",
@@ -3764,11 +3848,11 @@
         106,
         107
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
-      "volume": 11003
+      "volume": 11249
     },
     {
       "question": "Will the highest temperature in Dallas be between 108-109°F on August 18?",
@@ -3777,11 +3861,11 @@
         108,
         109
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 4273
+      "volume": 4295
     },
     {
       "question": "Will the highest temperature in Dallas be between 110-111°F on August 18?",
@@ -3794,7 +3878,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1944
+      "volume": 1953
     },
     {
       "question": "Will the highest temperature in Dallas be between 112-113°F on August 18?",
