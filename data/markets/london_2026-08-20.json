@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-20T12:00:00Z",
   "hours_at_discovery": 54.2,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3688866",
+    "question": "Will the highest temperature in London be 21°C on August 20?",
+    "bucket_low": 21,
+    "bucket_high": 21,
+    "entry_price": 0.18,
+    "bid_at_entry": 0.17,
+    "spread": 0.01,
+    "shares": 222.22,
+    "cost": 40,
+    "p": 0.46,
+    "ev": 1.5556,
+    "edge": 0.1447,
+    "kelly": 0.0864,
+    "forecast_temp": 19.3,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-08-18T15:49:14.615Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.136
+  },
+  "positions": [
+    {
+      "market_id": "3688866",
+      "question": "Will the highest temperature in London be 21°C on August 20?",
+      "bucket_low": 21,
+      "bucket_high": 21,
+      "entry_price": 0.18,
+      "bid_at_entry": 0.17,
+      "spread": 0.01,
+      "shares": 222.22,
+      "cost": 40,
+      "p": 0.46,
+      "ev": 1.5556,
+      "edge": 0.1447,
+      "kelly": 0.0864,
+      "forecast_temp": 19.3,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-08-18T15:49:14.615Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.136
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -760,6 +810,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T15:49:14.615Z",
+      "horizon": "D+2",
+      "hours_left": 44.2,
+      "ecmwf": 20.6,
+      "hrrr": 22,
+      "metar": null,
+      "best": 21.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 20.6,
+          "gfs_seamless": 22,
+          "icon_seamless": 21.8
+        },
+        "mean": 21.3,
+        "spread": 0.7,
+        "gap": 1.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          20.7,
+          20.4,
+          19.5,
+          21,
+          20.1,
+          21.1,
+          19.1,
+          20.9,
+          21.7,
+          20.4,
+          21.8,
+          20.6,
+          21.2,
+          20.7,
+          20.5,
+          21,
+          20.4,
+          20.4,
+          20.2,
+          20.9,
+          20,
+          20.9,
+          20.2,
+          20.7,
+          18.9,
+          19.1,
+          20.6,
+          19,
+          19.9,
+          20.2,
+          20.3,
+          20.9,
+          20.7,
+          18.5,
+          20.9,
+          21.4,
+          20,
+          21.2,
+          21.1,
+          19.8,
+          20.5,
+          20.8,
+          20.2,
+          20.6,
+          18.7,
+          21.1,
+          20.1,
+          20.4,
+          20.2,
+          20
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -842,6 +966,14 @@
       "top2_bucket": "22-23C",
       "top2_price": 0.265,
       "top2_sum": 0.57
+    },
+    {
+      "ts": "2026-08-18T15:49:14.615Z",
+      "top_bucket": "22-22C",
+      "top_price": 0.305,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.265,
+      "top2_sum": 0.57
     }
   ],
   "all_outcomes": [
@@ -882,7 +1014,7 @@
       "ask": 0.175,
       "price": 0.175,
       "spread": 0,
-      "volume": 1146
+      "volume": 1196
     },
     {
       "question": "Will the highest temperature in London be 22°C on August 20?",
@@ -895,7 +1027,7 @@
       "ask": 0.305,
       "price": 0.305,
       "spread": 0,
-      "volume": 360
+      "volume": 407
     },
     {
       "question": "Will the highest temperature in London be 23°C on August 20?",
@@ -908,7 +1040,7 @@
       "ask": 0.265,
       "price": 0.265,
       "spread": 0,
-      "volume": 1798
+      "volume": 1812
     },
     {
       "question": "Will the highest temperature in London be 24°C on August 20?",
@@ -917,9 +1049,9 @@
         24,
         24
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.15,
+      "ask": 0.15,
+      "price": 0.15,
       "spread": 0,
       "volume": 1160
     },
