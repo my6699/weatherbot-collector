@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.08,
-      "forecast_change_streak": 4
+      "forecast_change_streak": 5
     }
   ],
   "actual_temp": null,
@@ -1263,6 +1263,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T18:59:47.641Z",
+      "horizon": "D+1",
+      "hours_left": 17,
+      "ecmwf": 86,
+      "hrrr": 89,
+      "metar": null,
+      "best": 87.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 86,
+          "gfs_seamless": 89,
+          "icon_seamless": 87
+        },
+        "mean": 87.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          86,
+          86,
+          86,
+          88,
+          86,
+          85,
+          85,
+          85,
+          86,
+          88,
+          84,
+          86,
+          86,
+          85,
+          85,
+          83,
+          85,
+          86,
+          85,
+          85,
+          85,
+          86,
+          86,
+          85,
+          87,
+          86,
+          85,
+          84,
+          84,
+          86,
+          86,
+          86,
+          86,
+          87,
+          85,
+          86,
+          84,
+          84,
+          86,
+          83,
+          86,
+          83,
+          87,
+          86,
+          83,
+          85,
+          84,
+          87,
+          86,
+          86
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1393,6 +1468,14 @@
       "top2_bucket": "86-89F",
       "top2_price": 0.305,
       "top2_sum": 0.845
+    },
+    {
+      "ts": "2026-08-18T18:59:47.641Z",
+      "top_bucket": "86-87F",
+      "top_price": 0.495,
+      "top2_bucket": "86-89F",
+      "top2_price": 0.35,
+      "top2_sum": 0.845
     }
   ],
   "all_outcomes": [
@@ -1446,7 +1529,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 495
+      "volume": 504
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on August 19?",
@@ -1459,7 +1542,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 477
+      "volume": 602
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on August 19?",
@@ -1468,11 +1551,11 @@
         84,
         85
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
-      "volume": 944
+      "volume": 996
     },
     {
       "question": "Will the highest temperature in New York City be between 86-87°F on August 19?",
@@ -1481,11 +1564,11 @@
         86,
         87
       ],
-      "bid": 0.54,
-      "ask": 0.54,
-      "price": 0.54,
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
       "spread": 0,
-      "volume": 924
+      "volume": 1137
     },
     {
       "question": "Will the highest temperature in New York City be between 88-89°F on August 19?",
@@ -1494,11 +1577,11 @@
         88,
         89
       ],
-      "bid": 0.305,
-      "ask": 0.305,
-      "price": 0.305,
+      "bid": 0.35,
+      "ask": 0.35,
+      "price": 0.35,
       "spread": 0,
-      "volume": 945
+      "volume": 1089
     },
     {
       "question": "Will the highest temperature in New York City be between 90-91°F on August 19?",
@@ -1511,7 +1594,7 @@
       "ask": 0.055,
       "price": 0.055,
       "spread": 0,
-      "volume": 848
+      "volume": 917
     },
     {
       "question": "Will the highest temperature in New York City be between 92-93°F on August 19?",
@@ -1524,7 +1607,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 399
+      "volume": 509
     },
     {
       "question": "Will the highest temperature in New York City be 94°F or higher on August 19?",
@@ -1537,7 +1620,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 1145
+      "volume": 1184
     }
   ],
   "created_at": "2026-08-18T03:10:36.249Z"

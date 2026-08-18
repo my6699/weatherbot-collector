@@ -51,13 +51,13 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-08-18T01:54:45.055Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -23.33,
+      "exit_price": 0.05,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-18T19:00:59.026Z",
       "stop_price": 0.12,
-      "forecast_change_streak": 6,
+      "forecast_change_streak": 7,
       "trailing_activated": true
     }
   ],
@@ -2813,6 +2813,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T19:00:57.037Z",
+      "horizon": "D+1",
+      "hours_left": 17,
+      "ecmwf": 8.9,
+      "hrrr": 10.3,
+      "metar": null,
+      "best": 9.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 8.9,
+          "gfs_seamless": 10.3,
+          "icon_seamless": 10.5
+        },
+        "mean": 9.6,
+        "spread": 0.9,
+        "gap": 1.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          8.6,
+          9,
+          9.3,
+          8.9,
+          8.5,
+          8.7,
+          9.2,
+          9,
+          9.9,
+          8.9,
+          8.9,
+          8.9,
+          8.8,
+          9,
+          8.9,
+          8.9,
+          9,
+          8.7,
+          8.9,
+          8.9,
+          8.8,
+          9.1,
+          9,
+          8.9,
+          8.8,
+          8.7,
+          9.2,
+          8.4,
+          9.3,
+          9.2,
+          9,
+          9.2,
+          9.1,
+          9.5,
+          8.7,
+          8.9,
+          9.3,
+          8.9,
+          9.6,
+          9.2,
+          8.9,
+          9.1,
+          8.9,
+          8.8,
+          9.1,
+          9,
+          8.8,
+          8.8,
+          9.5,
+          8.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3111,6 +3185,14 @@
       "top2_bucket": "10-11C",
       "top2_price": 0.745,
       "top2_sum": 0.93
+    },
+    {
+      "ts": "2026-08-18T19:00:57.037Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.725,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.725,
+      "top2_sum": 0.93
     }
   ],
   "all_outcomes": [
@@ -3173,11 +3255,11 @@
         9,
         9
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 2073
+      "volume": 2093
     },
     {
       "question": "Will the highest temperature in Wellington be 10°C on August 19?",
@@ -3186,11 +3268,11 @@
         10,
         10
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 5151
+      "volume": 5358
     },
     {
       "question": "Will the highest temperature in Wellington be 11°C on August 19?",
@@ -3199,11 +3281,11 @@
         11,
         11
       ],
-      "bid": 0.745,
-      "ask": 0.745,
-      "price": 0.745,
+      "bid": 0.725,
+      "ask": 0.725,
+      "price": 0.725,
       "spread": 0,
-      "volume": 4087
+      "volume": 4124
     },
     {
       "question": "Will the highest temperature in Wellington be 12°C on August 19?",
@@ -3212,11 +3294,11 @@
         12,
         12
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 4216
+      "volume": 4264
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on August 19?",
@@ -3225,11 +3307,11 @@
         13,
         13
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 1630
+      "volume": 1655
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on August 19?",
