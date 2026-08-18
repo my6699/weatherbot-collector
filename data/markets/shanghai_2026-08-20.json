@@ -83,7 +83,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.088
+      "stop_price": 0.088,
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -906,6 +907,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T16:52:15.324Z",
+      "horizon": "D+2",
+      "hours_left": 43.1,
+      "ecmwf": 31.2,
+      "hrrr": 30.1,
+      "metar": null,
+      "best": 30.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.2,
+          "gfs_seamless": 30.1,
+          "icon_seamless": 28.3
+        },
+        "mean": 30.3,
+        "spread": 2,
+        "gap": 1.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          31.7,
+          31.1,
+          31.7,
+          31.5,
+          30.9,
+          31.3,
+          31.8,
+          32,
+          31.4,
+          31.2,
+          31.8,
+          31,
+          31.5,
+          31.1,
+          31.6,
+          30.8,
+          31.4,
+          31.4,
+          31.5,
+          30.8,
+          32,
+          30.8,
+          30.6,
+          31.6,
+          30.7,
+          31.2,
+          31.6,
+          31.6,
+          31.3,
+          31.5,
+          32.3,
+          30.9,
+          31.9,
+          31.4,
+          31.3,
+          31.2,
+          31.9,
+          30.7,
+          30.2,
+          31.6,
+          30.6,
+          31.2,
+          31.2,
+          31.1,
+          30.4,
+          30.2,
+          31.8,
+          30.6,
+          31.2,
+          30.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -996,6 +1072,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.395,
       "top2_sum": 0.7
+    },
+    {
+      "ts": "2026-08-18T16:52:15.324Z",
+      "top_bucket": "31-31C",
+      "top_price": 0.415,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.415,
+      "top2_sum": 0.73
     }
   ],
   "all_outcomes": [
@@ -1045,11 +1129,11 @@
         28,
         28
       ],
-      "bid": 0.0425,
-      "ask": 0.0425,
-      "price": 0.0425,
+      "bid": 0.0365,
+      "ask": 0.0365,
+      "price": 0.0365,
       "spread": 0,
-      "volume": 661
+      "volume": 1357
     },
     {
       "question": "Will the highest temperature in Shanghai be 29°C on August 20?",
@@ -1058,11 +1142,11 @@
         29,
         29
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 1039
+      "volume": 2476
     },
     {
       "question": "Will the highest temperature in Shanghai be 30°C on August 20?",
@@ -1071,11 +1155,11 @@
         30,
         30
       ],
-      "bid": 0.305,
-      "ask": 0.305,
-      "price": 0.305,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 1170
+      "volume": 1248
     },
     {
       "question": "Will the highest temperature in Shanghai be 31°C on August 20?",
@@ -1084,11 +1168,11 @@
         31,
         31
       ],
-      "bid": 0.395,
-      "ask": 0.395,
-      "price": 0.395,
+      "bid": 0.415,
+      "ask": 0.415,
+      "price": 0.415,
       "spread": 0,
-      "volume": 379
+      "volume": 447
     },
     {
       "question": "Will the highest temperature in Shanghai be 32°C on August 20?",
@@ -1097,11 +1181,11 @@
         32,
         32
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.115,
+      "ask": 0.115,
+      "price": 0.115,
       "spread": 0,
-      "volume": 2152
+      "volume": 2177
     },
     {
       "question": "Will the highest temperature in Shanghai be 33°C on August 20?",
@@ -1110,11 +1194,11 @@
         33,
         33
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 210
+      "volume": 241
     },
     {
       "question": "Will the highest temperature in Shanghai be 34°C on August 20?",
