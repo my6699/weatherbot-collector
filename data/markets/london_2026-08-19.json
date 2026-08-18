@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-19T12:00:00Z",
   "hours_at_discovery": 55,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3655213",
+    "question": "Will the highest temperature in London be 22°C on August 19?",
+    "bucket_low": 22,
+    "bucket_high": 22,
+    "entry_price": 0.11,
+    "bid_at_entry": 0.09,
+    "spread": 0.02,
+    "shares": 363.64,
+    "cost": 40,
+    "p": 0.52,
+    "ev": 3.7273,
+    "edge": 0.27,
+    "kelly": 0.1167,
+    "forecast_temp": 20.6,
+    "forecast_src": "ensemble",
+    "sigma": 2.2,
+    "opened_at": "2026-08-18T01:53:53.307Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.072
+  },
+  "positions": [
+    {
+      "market_id": "3655213",
+      "question": "Will the highest temperature in London be 22°C on August 19?",
+      "bucket_low": 22,
+      "bucket_high": 22,
+      "entry_price": 0.11,
+      "bid_at_entry": 0.09,
+      "spread": 0.02,
+      "shares": 363.64,
+      "cost": 40,
+      "p": 0.52,
+      "ev": 3.7273,
+      "edge": 0.27,
+      "kelly": 0.1167,
+      "forecast_temp": 20.6,
+      "forecast_src": "ensemble",
+      "sigma": 2.2,
+      "opened_at": "2026-08-18T01:53:53.307Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.072
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -1511,6 +1561,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T01:53:53.307Z",
+      "horizon": "D+1",
+      "hours_left": 34.1,
+      "ecmwf": 21.6,
+      "hrrr": 22.9,
+      "metar": null,
+      "best": 22.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 21.6,
+          "gfs_seamless": 22.9,
+          "icon_seamless": 24.8
+        },
+        "mean": 22.6,
+        "spread": 2.2,
+        "gap": 1.3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          22.3,
+          20.5,
+          21.6,
+          21.8,
+          17.9,
+          20.3,
+          20.7,
+          20.9,
+          22.4,
+          20.9,
+          22.6,
+          22.3,
+          21.6,
+          21.6,
+          21.7,
+          21.5,
+          22.5,
+          22.3,
+          19.8,
+          22.1,
+          21.7,
+          20.8,
+          20.9,
+          22.3,
+          21.1,
+          21.8,
+          22.1,
+          22.3,
+          21,
+          22.3,
+          21.1,
+          19.5,
+          22.1,
+          21,
+          22.5,
+          22.6,
+          22,
+          21.5,
+          21.3,
+          21.1,
+          21.1,
+          23.2,
+          23,
+          21.2,
+          21.8,
+          22.1,
+          22.6,
+          21.6,
+          22.6,
+          21.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1673,6 +1798,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.38,
       "top2_sum": 0.695
+    },
+    {
+      "ts": "2026-08-18T01:53:53.307Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.365,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.365,
+      "top2_sum": 0.68
     }
   ],
   "all_outcomes": [
@@ -1683,11 +1816,11 @@
         -999,
         20
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 455
+      "volume": 494
     },
     {
       "question": "Will the highest temperature in London be 21°C on August 19?",
@@ -1696,11 +1829,11 @@
         21,
         21
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 242
+      "volume": 282
     },
     {
       "question": "Will the highest temperature in London be 22°C on August 19?",
@@ -1709,11 +1842,11 @@
         22,
         22
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
-      "volume": 546
+      "volume": 584
     },
     {
       "question": "Will the highest temperature in London be 23°C on August 19?",
@@ -1726,7 +1859,7 @@
       "ask": 0.315,
       "price": 0.315,
       "spread": 0,
-      "volume": 438
+      "volume": 490
     },
     {
       "question": "Will the highest temperature in London be 24°C on August 19?",
@@ -1735,11 +1868,11 @@
         24,
         24
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.365,
+      "ask": 0.365,
+      "price": 0.365,
       "spread": 0,
-      "volume": 595
+      "volume": 705
     },
     {
       "question": "Will the highest temperature in London be 25°C on August 19?",
@@ -1748,11 +1881,11 @@
         25,
         25
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 704
+      "volume": 946
     },
     {
       "question": "Will the highest temperature in London be 26°C on August 19?",
@@ -1761,11 +1894,11 @@
         26,
         26
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 424
+      "volume": 492
     },
     {
       "question": "Will the highest temperature in London be 27°C on August 19?",

@@ -85,7 +85,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.08
+      "stop_price": 0.11,
+      "trailing_activated": true,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -3241,6 +3243,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T01:53:55.600Z",
+      "horizon": "D+0",
+      "hours_left": 10.1,
+      "ecmwf": 25,
+      "hrrr": 27.4,
+      "metar": 20,
+      "best": 25.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25,
+          "gfs_seamless": 27.4,
+          "icon_seamless": 24.8
+        },
+        "mean": 25.7,
+        "spread": 1.7,
+        "gap": 2.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          25.5,
+          24.5,
+          24.1,
+          23.5,
+          24.5,
+          24,
+          25.6,
+          22.6,
+          23.6,
+          24.8,
+          23.6,
+          25.4,
+          23.6,
+          26.9,
+          25.5,
+          23.7,
+          24.8,
+          24.5,
+          24.6,
+          23.9,
+          22.9,
+          24.6,
+          24,
+          22.3,
+          24.6,
+          24.8,
+          23.5,
+          25.1,
+          25.1,
+          22,
+          24.6,
+          25.9,
+          25,
+          23.5,
+          25.6,
+          24.7,
+          25.3,
+          23.8,
+          24.8,
+          25.6,
+          22.2,
+          26.4,
+          25.2,
+          23.4,
+          24.7,
+          24,
+          25.8,
+          23.9,
+          25.6,
+          23.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3579,6 +3656,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.35,
       "top2_sum": 0.815
+    },
+    {
+      "ts": "2026-08-18T01:53:55.600Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.41,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.3,
+      "top2_sum": 0.71
     }
   ],
   "all_outcomes": [
@@ -3589,11 +3674,11 @@
         -999,
         25
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.215,
+      "ask": 0.215,
+      "price": 0.215,
       "spread": 0,
-      "volume": 7236
+      "volume": 8194
     },
     {
       "question": "Will the highest temperature in Paris be 26°C on August 18?",
@@ -3602,11 +3687,11 @@
         26,
         26
       ],
-      "bid": 0.465,
-      "ask": 0.465,
-      "price": 0.465,
+      "bid": 0.41,
+      "ask": 0.41,
+      "price": 0.41,
       "spread": 0,
-      "volume": 8483
+      "volume": 9236
     },
     {
       "question": "Will the highest temperature in Paris be 27°C on August 18?",
@@ -3615,11 +3700,11 @@
         27,
         27
       ],
-      "bid": 0.35,
-      "ask": 0.35,
-      "price": 0.35,
+      "bid": 0.3,
+      "ask": 0.3,
+      "price": 0.3,
       "spread": 0,
-      "volume": 7924
+      "volume": 9315
     },
     {
       "question": "Will the highest temperature in Paris be 28°C on August 18?",
@@ -3628,11 +3713,11 @@
         28,
         28
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 9166
+      "volume": 9367
     },
     {
       "question": "Will the highest temperature in Paris be 29°C on August 18?",
@@ -3641,11 +3726,11 @@
         29,
         29
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 5878
+      "volume": 5963
     },
     {
       "question": "Will the highest temperature in Paris be 30°C on August 18?",
@@ -3658,7 +3743,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 2973
+      "volume": 3045
     },
     {
       "question": "Will the highest temperature in Paris be 31°C on August 18?",
