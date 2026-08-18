@@ -6,7 +6,7 @@
   "station": "WSSS",
   "event_end_date": "2026-08-18T12:00:00Z",
   "hours_at_discovery": 54.2,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3624146",
     "question": "Will the highest temperature in Singapore be 34°C on August 18?",
@@ -58,7 +58,8 @@
       "close_reason": "forecast_changed",
       "closed_at": "2026-08-17T08:03:50.245Z",
       "stop_price": 0.08,
-      "forecast_change_streak": 4
+      "forecast_change_streak": 4,
+      "resolved_hit": false
     },
     {
       "market_id": "3624144",
@@ -84,10 +85,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-08-18T05:48:29.249Z",
       "stop_price": 0.136,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3953,6 +3955,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T11:44:27.416Z",
+      "horizon": "D+0",
+      "hours_left": 0.3,
+      "ecmwf": 32.5,
+      "hrrr": 31.8,
+      "metar": 30,
+      "best": 32.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.5,
+          "gfs_seamless": 31.8,
+          "icon_seamless": 32.2
+        },
+        "mean": 32.2,
+        "spread": 0.4,
+        "gap": 0.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          31.1,
+          32.5,
+          31.5,
+          32.9,
+          31.3,
+          31.4,
+          32.6,
+          33.5,
+          32,
+          32.2,
+          31.9,
+          32.4,
+          31.4,
+          33,
+          31.1,
+          32.4,
+          33.2,
+          32.8,
+          32.5,
+          32.9,
+          31.7,
+          31.5,
+          32.6,
+          31,
+          33.1,
+          31.4,
+          33.2,
+          30.5,
+          32,
+          32.3,
+          30.6,
+          32.3,
+          32.6,
+          32.3,
+          32,
+          33.4,
+          32.2,
+          32.2,
+          31.9,
+          31.7,
+          33,
+          31.9,
+          32.9,
+          30.6,
+          31.1,
+          31,
+          30.3,
+          33.9,
+          32.2,
+          31.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -4371,6 +4447,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.0015,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-18T11:44:27.416Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -4446,11 +4530,11 @@
         33,
         33
       ],
-      "bid": 0.9985,
-      "ask": 0.9985,
-      "price": 0.9985,
-      "spread": 0,
-      "volume": 17811
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 19011
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on August 18?",
@@ -4459,11 +4543,11 @@
         34,
         34
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 8379
+      "volume": 8713
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 18?",
@@ -4518,5 +4602,6 @@
       "volume": 258
     }
   ],
-  "created_at": "2026-08-16T05:46:48.993Z"
+  "created_at": "2026-08-16T05:46:48.993Z",
+  "metar_max": 30
 }

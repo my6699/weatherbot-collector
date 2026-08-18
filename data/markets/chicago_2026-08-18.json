@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-08-18T12:00:00Z",
   "hours_at_discovery": 32.8,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2406,6 +2406,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T11:44:04.893Z",
+      "horizon": "D+0",
+      "hours_left": 0.3,
+      "ecmwf": 78,
+      "hrrr": 83,
+      "metar": 66,
+      "best": 80.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 78,
+          "gfs_seamless": 83,
+          "icon_seamless": 81
+        },
+        "mean": 80.1,
+        "spread": 2.9,
+        "gap": 5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          74,
+          77,
+          76,
+          77,
+          74,
+          77,
+          77,
+          77,
+          77,
+          76,
+          75,
+          77,
+          76,
+          74,
+          75,
+          76,
+          75,
+          78,
+          77,
+          73,
+          75,
+          77,
+          76,
+          75,
+          76,
+          77,
+          77,
+          75,
+          76,
+          77,
+          74,
+          76,
+          75,
+          73,
+          76,
+          75,
+          75,
+          77,
+          76,
+          75,
+          74,
+          76,
+          75,
+          74,
+          76,
+          77,
+          77,
+          77,
+          77,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2664,6 +2739,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.215,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-08-18T11:44:04.893Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.655,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.19,
+      "top2_sum": 0.845
     }
   ],
   "all_outcomes": [
@@ -2717,7 +2800,7 @@
       "ask": 0.02,
       "price": 0.02,
       "spread": 0,
-      "volume": 781
+      "volume": 808
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on August 18?",
@@ -2730,7 +2813,7 @@
       "ask": 0.095,
       "price": 0.095,
       "spread": 0,
-      "volume": 1572
+      "volume": 1595
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on August 18?",
@@ -2739,11 +2822,11 @@
         80,
         81
       ],
-      "bid": 0.645,
-      "ask": 0.645,
-      "price": 0.645,
+      "bid": 0.655,
+      "ask": 0.655,
+      "price": 0.655,
       "spread": 0,
-      "volume": 2798
+      "volume": 2834
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on August 18?",
@@ -2752,11 +2835,11 @@
         82,
         83
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.19,
+      "ask": 0.19,
+      "price": 0.19,
       "spread": 0,
-      "volume": 3828
+      "volume": 4588
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on August 18?",
@@ -2769,7 +2852,7 @@
       "ask": 0.05,
       "price": 0.05,
       "spread": 0,
-      "volume": 2314
+      "volume": 2393
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on August 18?",
@@ -2782,7 +2865,7 @@
       "ask": 0.006,
       "price": 0.006,
       "spread": 0,
-      "volume": 1258
+      "volume": 1271
     },
     {
       "question": "Will the highest temperature in Chicago be between 88-89°F on August 18?",
