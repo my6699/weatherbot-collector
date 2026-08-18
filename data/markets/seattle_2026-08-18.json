@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 2.5,
       "opened_at": "2026-08-17T15:43:59.483Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -7.14,
+      "exit_price": 0.115,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-08-18T03:10:42.224Z",
       "stop_price": 0.088,
       "forecast_change_streak": 0
     }
@@ -1788,6 +1788,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-18T03:10:42.224Z",
+      "horizon": "D+0",
+      "hours_left": 8.8,
+      "ecmwf": 77,
+      "hrrr": 81,
+      "metar": 73,
+      "best": 78,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 81,
+          "icon_seamless": 76
+        },
+        "mean": 78,
+        "spread": 3,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          77,
+          79,
+          77,
+          78,
+          75,
+          70,
+          76,
+          76,
+          75,
+          77,
+          79,
+          75,
+          78,
+          78,
+          77,
+          77,
+          77,
+          74,
+          77,
+          77,
+          79,
+          77,
+          77,
+          74,
+          78,
+          76,
+          75,
+          79,
+          74,
+          77,
+          77,
+          76,
+          78,
+          75,
+          77,
+          76,
+          77,
+          76,
+          77,
+          78,
+          75,
+          77,
+          75,
+          76,
+          76,
+          77,
+          74,
+          77,
+          74,
+          75
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1974,6 +2049,14 @@
       "top2_bucket": "76-79F",
       "top2_price": 0.275,
       "top2_sum": 0.605
+    },
+    {
+      "ts": "2026-08-18T03:10:42.224Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.33,
+      "top2_bucket": "76-79F",
+      "top2_price": 0.275,
+      "top2_sum": 0.605
     }
   ],
   "all_outcomes": [
@@ -1997,9 +2080,9 @@
         72,
         73
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
       "volume": 1132
     },
@@ -2010,11 +2093,11 @@
         74,
         75
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.18,
+      "ask": 0.18,
+      "price": 0.18,
       "spread": 0,
-      "volume": 1424
+      "volume": 1444
     },
     {
       "question": "Will the highest temperature in Seattle be between 76-77°F on August 18?",
@@ -2040,7 +2123,7 @@
       "ask": 0.275,
       "price": 0.275,
       "spread": 0,
-      "volume": 750
+      "volume": 812
     },
     {
       "question": "Will the highest temperature in Seattle be between 80-81°F on August 18?",
