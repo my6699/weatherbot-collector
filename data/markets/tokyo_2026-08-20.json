@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-20T12:00:00Z",
   "hours_at_discovery": 54.2,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3688956",
+    "question": "Will the highest temperature in Tokyo be 30°C on August 20?",
+    "bucket_low": 30,
+    "bucket_high": 30,
+    "entry_price": 0.12,
+    "bid_at_entry": 0.1,
+    "spread": 0.02,
+    "shares": 333.33,
+    "cost": 40,
+    "p": 0.44,
+    "ev": 2.6667,
+    "edge": 0.1799,
+    "kelly": 0.0927,
+    "forecast_temp": 33,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-08-19T11:43:50.631Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.08
+  },
+  "positions": [
+    {
+      "market_id": "3688956",
+      "question": "Will the highest temperature in Tokyo be 30°C on August 20?",
+      "bucket_low": 30,
+      "bucket_high": 30,
+      "entry_price": 0.12,
+      "bid_at_entry": 0.1,
+      "spread": 0.02,
+      "shares": 333.33,
+      "cost": 40,
+      "p": 0.44,
+      "ev": 2.6667,
+      "edge": 0.1799,
+      "kelly": 0.0927,
+      "forecast_temp": 33,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-08-19T11:43:50.631Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.08
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -2183,6 +2233,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-19T11:43:50.631Z",
+      "horizon": "D+1",
+      "hours_left": 24.3,
+      "ecmwf": 30.4,
+      "hrrr": 31.9,
+      "metar": null,
+      "best": 31,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.4,
+          "gfs_seamless": 31.9,
+          "icon_seamless": 31.3
+        },
+        "mean": 31,
+        "spread": 0.9,
+        "gap": 1.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          31,
+          30.4,
+          31.6,
+          30.3,
+          30.3,
+          31,
+          30.8,
+          30.8,
+          31,
+          30.6,
+          31,
+          30.4,
+          30.5,
+          31.4,
+          30.6,
+          30.3,
+          30.4,
+          31.1,
+          29.8,
+          31.4,
+          31.1,
+          30.3,
+          31.2,
+          30.9,
+          30.9,
+          31.3,
+          30.3,
+          30.2,
+          30.7,
+          30.9,
+          31.4,
+          30.9,
+          30.8,
+          30.9,
+          30.4,
+          30.5,
+          31.6,
+          30.5,
+          30.4,
+          30.4,
+          31.1,
+          30.5,
+          30.2,
+          30.7,
+          31.1,
+          30.2,
+          31.4,
+          30.5,
+          29.9,
+          30.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2417,6 +2541,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.35,
       "top2_sum": 0.84
+    },
+    {
+      "ts": "2026-08-19T11:43:50.631Z",
+      "top_bucket": "31-31C",
+      "top_price": 0.475,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.345,
+      "top2_sum": 0.82
     }
   ],
   "all_outcomes": [
@@ -2457,7 +2589,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 1158
+      "volume": 1212
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on August 20?",
@@ -2466,9 +2598,9 @@
         29,
         29
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
       "volume": 632
     },
@@ -2479,9 +2611,9 @@
         30,
         30
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
       "volume": 1917
     },
@@ -2492,11 +2624,11 @@
         31,
         31
       ],
-      "bid": 0.49,
-      "ask": 0.49,
-      "price": 0.49,
+      "bid": 0.475,
+      "ask": 0.475,
+      "price": 0.475,
       "spread": 0,
-      "volume": 1314
+      "volume": 1361
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C on August 20?",
@@ -2505,11 +2637,11 @@
         32,
         32
       ],
-      "bid": 0.35,
-      "ask": 0.35,
-      "price": 0.35,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
-      "volume": 983
+      "volume": 1067
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on August 20?",
@@ -2518,11 +2650,11 @@
         33,
         33
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 1194
+      "volume": 1214
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on August 20?",
@@ -2544,9 +2676,9 @@
         35,
         35
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
       "volume": 215
     },
@@ -2557,9 +2689,9 @@
         36,
         999
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 1247
     }

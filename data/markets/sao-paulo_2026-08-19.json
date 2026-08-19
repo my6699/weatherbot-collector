@@ -6,7 +6,7 @@
   "station": "SBGR",
   "event_end_date": "2026-08-19T12:00:00Z",
   "hours_at_discovery": 32.8,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2412,6 +2412,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-19T11:44:07.119Z",
+      "horizon": "D+0",
+      "hours_left": 0.3,
+      "ecmwf": 33.4,
+      "hrrr": 31.2,
+      "metar": 19,
+      "best": 32.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.4,
+          "gfs_seamless": 31.2,
+          "icon_seamless": 30
+        },
+        "mean": 32.1,
+        "spread": 2.1,
+        "gap": 2.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          33.3,
+          33.3,
+          31.6,
+          32.5,
+          33.9,
+          32,
+          33.7,
+          33.2,
+          32.3,
+          34.1,
+          33.7,
+          33.7,
+          32.2,
+          33.8,
+          33.7,
+          32.8,
+          33.5,
+          31.9,
+          34,
+          33.7,
+          34.5,
+          31.7,
+          33.9,
+          34.2,
+          31.7,
+          33.5,
+          33.5,
+          32.3,
+          33,
+          33.9,
+          31.6,
+          34,
+          34,
+          33.1,
+          33.7,
+          34.4,
+          33.9,
+          34.1,
+          33.2,
+          33.8,
+          34.1,
+          33,
+          33.9,
+          34.2,
+          34.1,
+          33.8,
+          33.5,
+          32.4,
+          34,
+          32
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2670,6 +2745,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.365,
       "top2_sum": 0.895
+    },
+    {
+      "ts": "2026-08-19T11:44:07.119Z",
+      "top_bucket": "31-31C",
+      "top_price": 0.505,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.365,
+      "top2_sum": 0.87
     }
   ],
   "all_outcomes": [
@@ -2706,11 +2789,11 @@
         28,
         28
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 608
+      "volume": 743
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on August 19?",
@@ -2719,11 +2802,11 @@
         29,
         29
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 1418
+      "volume": 1441
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C on August 19?",
@@ -2732,9 +2815,9 @@
         30,
         30
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
       "volume": 1141
     },
@@ -2745,11 +2828,11 @@
         31,
         31
       ],
-      "bid": 0.53,
-      "ask": 0.53,
-      "price": 0.53,
+      "bid": 0.505,
+      "ask": 0.505,
+      "price": 0.505,
       "spread": 0,
-      "volume": 1412
+      "volume": 1445
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 32°C on August 19?",
@@ -2762,7 +2845,7 @@
       "ask": 0.365,
       "price": 0.365,
       "spread": 0,
-      "volume": 1665
+      "volume": 1671
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 33°C on August 19?",
@@ -2771,11 +2854,11 @@
         33,
         33
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 796
+      "volume": 816
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 34°C on August 19?",
@@ -2784,9 +2867,9 @@
         34,
         34
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
       "volume": 248
     },
