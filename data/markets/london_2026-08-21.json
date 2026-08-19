@@ -987,6 +987,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-19T18:56:19.130Z",
+      "horizon": "D+2",
+      "hours_left": 41.1,
+      "ecmwf": 19.6,
+      "hrrr": 22.2,
+      "metar": null,
+      "best": 20.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.6,
+          "gfs_seamless": 22.2,
+          "icon_seamless": 21.7
+        },
+        "mean": 20.8,
+        "spread": 1.4,
+        "gap": 2.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          20.3,
+          19.3,
+          18.9,
+          19.3,
+          18.3,
+          19.4,
+          19.9,
+          19.5,
+          18.6,
+          20.4,
+          18.6,
+          17.8,
+          19.8,
+          19.6,
+          18.9,
+          19.3,
+          20,
+          19.5,
+          18.9,
+          19.6,
+          18.2,
+          18.7,
+          18.7,
+          18.4,
+          18.9,
+          19.2,
+          18.9,
+          18.2,
+          18.8,
+          18.8,
+          19.6,
+          17.8,
+          19.7,
+          19.5,
+          19.7,
+          18.3,
+          19.1,
+          19.9,
+          19.4,
+          18.7,
+          19,
+          20.5,
+          20.5,
+          19.5,
+          19.1,
+          18.9,
+          18.6,
+          18.7,
+          18.7,
+          18.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1093,6 +1168,14 @@
       "top2_bucket": "21-22C",
       "top2_price": 0.24,
       "top2_sum": 0.64
+    },
+    {
+      "ts": "2026-08-19T18:56:19.130Z",
+      "top_bucket": "21-21C",
+      "top_price": 0.405,
+      "top2_bucket": "21-22C",
+      "top2_price": 0.255,
+      "top2_sum": 0.66
     }
   ],
   "all_outcomes": [
@@ -1155,9 +1238,9 @@
         21,
         21
       ],
-      "bid": 0.4,
-      "ask": 0.4,
-      "price": 0.4,
+      "bid": 0.405,
+      "ask": 0.405,
+      "price": 0.405,
       "spread": 0,
       "volume": 585
     },
@@ -1168,9 +1251,9 @@
         22,
         22
       ],
-      "bid": 0.24,
-      "ask": 0.24,
-      "price": 0.24,
+      "bid": 0.255,
+      "ask": 0.255,
+      "price": 0.255,
       "spread": 0,
       "volume": 195
     },
@@ -1198,7 +1281,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 150
+      "volume": 180
     },
     {
       "question": "Will the highest temperature in London be 25°C on August 21?",
@@ -1224,7 +1307,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 164
+      "volume": 170
     },
     {
       "question": "Will the highest temperature in London be 27°C or higher on August 21?",
