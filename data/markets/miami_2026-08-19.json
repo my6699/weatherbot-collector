@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.3,
       "opened_at": "2026-08-18T13:11:45.848Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 8.75,
+      "exit_price": 0.195,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-08-19T01:55:42.338Z",
       "stop_price": 0.16,
       "forecast_change_streak": 0,
       "trailing_activated": true
@@ -1700,6 +1700,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-19T01:55:42.338Z",
+      "horizon": "D+0",
+      "hours_left": 10.1,
+      "ecmwf": 95,
+      "hrrr": 97,
+      "metar": 87,
+      "best": 95.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 95,
+          "gfs_seamless": 97,
+          "icon_seamless": 96
+        },
+        "mean": 95.8,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          95,
+          96,
+          96,
+          95,
+          96,
+          96,
+          95,
+          93,
+          95,
+          95,
+          96,
+          96,
+          95,
+          95,
+          96,
+          96,
+          96,
+          96,
+          95,
+          97,
+          96,
+          94,
+          96,
+          94,
+          96,
+          96,
+          92,
+          96,
+          96,
+          95,
+          95,
+          96,
+          96,
+          95,
+          96,
+          96,
+          96,
+          95,
+          96,
+          96,
+          94,
+          95,
+          94,
+          96,
+          96,
+          96,
+          97,
+          96,
+          95,
+          96
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1878,6 +1952,14 @@
       "top2_bucket": "94-97F",
       "top2_price": 0.585,
       "top2_sum": 0.8
+    },
+    {
+      "ts": "2026-08-19T01:55:42.338Z",
+      "top_bucket": "96-97F",
+      "top_price": 0.645,
+      "top2_bucket": "94-97F",
+      "top2_price": 0.645,
+      "top2_sum": 0.84
     }
   ],
   "all_outcomes": [
@@ -1914,9 +1996,9 @@
         90,
         91
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
       "volume": 3522
     },
@@ -1927,9 +2009,9 @@
         92,
         93
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
       "volume": 1338
     },
@@ -1940,11 +2022,11 @@
         94,
         95
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
-      "volume": 3157
+      "volume": 3279
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on August 19?",
@@ -1953,11 +2035,11 @@
         96,
         97
       ],
-      "bid": 0.585,
-      "ask": 0.585,
-      "price": 0.585,
+      "bid": 0.645,
+      "ask": 0.645,
+      "price": 0.645,
       "spread": 0,
-      "volume": 4552
+      "volume": 5196
     },
     {
       "question": "Will the highest temperature in Miami be between 98-99°F on August 19?",
@@ -1966,11 +2048,11 @@
         98,
         99
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 2506
+      "volume": 2852
     },
     {
       "question": "Will the highest temperature in Miami be between 100-101°F on August 19?",

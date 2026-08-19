@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-08-18T12:00:00Z",
   "hours_at_discovery": 32.8,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3652756",
     "question": "Will the highest temperature in Seattle be between 80-81°F on August 18?",
@@ -57,10 +57,11 @@
       "close_reason": "metar_diverged",
       "closed_at": "2026-08-18T03:10:42.224Z",
       "stop_price": 0.088,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 78.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3940,5 +3941,6 @@
       "volume": 120
     }
   ],
-  "created_at": "2026-08-17T03:14:48.957Z"
+  "created_at": "2026-08-17T03:14:48.957Z",
+  "metar_max": 78.1
 }
