@@ -902,6 +902,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-20T14:57:48.171Z",
+      "horizon": "D+1",
+      "hours_left": 21,
+      "ecmwf": 105,
+      "hrrr": 107,
+      "metar": null,
+      "best": 105.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 105,
+          "gfs_seamless": 107,
+          "icon_seamless": 105
+        },
+        "mean": 105.6,
+        "spread": 1.4,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          107,
+          106,
+          107,
+          104,
+          104,
+          107,
+          106,
+          106,
+          108,
+          106,
+          105,
+          106,
+          107,
+          105,
+          107,
+          105,
+          104,
+          106,
+          106,
+          105,
+          103,
+          105,
+          107,
+          106,
+          105,
+          103,
+          103,
+          104,
+          107,
+          105,
+          105,
+          105,
+          105,
+          107,
+          104,
+          104,
+          105,
+          107,
+          104,
+          105,
+          106,
+          104,
+          107,
+          104,
+          106,
+          106,
+          106,
+          104,
+          105,
+          103
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1000,6 +1074,14 @@
       "top2_bucket": "104-107F",
       "top2_price": 0.295,
       "top2_sum": 0.8
+    },
+    {
+      "ts": "2026-08-20T14:57:48.171Z",
+      "top_bucket": "104-105F",
+      "top_price": 0.505,
+      "top2_bucket": "104-107F",
+      "top2_price": 0.285,
+      "top2_sum": 0.79
     }
   ],
   "all_outcomes": [
@@ -1053,7 +1135,7 @@
       "ask": 0.505,
       "price": 0.505,
       "spread": 0,
-      "volume": 493
+      "volume": 548
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on August 21?",
@@ -1062,11 +1144,11 @@
         106,
         107
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.285,
+      "ask": 0.285,
+      "price": 0.285,
       "spread": 0,
-      "volume": 240
+      "volume": 293
     },
     {
       "question": "Will the highest temperature in Dallas be between 108-109°F on August 21?",
@@ -1114,9 +1196,9 @@
         114,
         115
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 247
     },
