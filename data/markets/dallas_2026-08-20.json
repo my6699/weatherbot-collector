@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-08-20T12:00:00Z",
   "hours_at_discovery": 32.8,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3713278",
     "question": "Will the highest temperature in Dallas be between 106-107°F on August 20?",
@@ -57,10 +57,11 @@
       "close_reason": "metar_diverged",
       "closed_at": "2026-08-20T01:54:44.106Z",
       "stop_price": 0.128,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 104.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3253,6 +3254,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-20T22:47:42.291Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 104,
+      "hrrr": 107,
+      "metar": 104,
+      "best": 105.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 104,
+          "gfs_seamless": 107,
+          "icon_seamless": 105
+        },
+        "mean": 105.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          104,
+          102,
+          103,
+          103,
+          103,
+          103,
+          102,
+          103,
+          104,
+          104,
+          103,
+          102,
+          103,
+          103,
+          103,
+          104,
+          103,
+          102,
+          103,
+          103,
+          102,
+          102,
+          104,
+          104,
+          103,
+          103,
+          104,
+          104,
+          103,
+          102,
+          102,
+          102,
+          103,
+          102,
+          103,
+          104,
+          103,
+          102,
+          103,
+          102,
+          104,
+          104,
+          104,
+          104,
+          102,
+          104,
+          103,
+          101,
+          103,
+          104
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3599,6 +3675,14 @@
       "top2_bucket": "102-105F",
       "top2_price": 0.85,
       "top2_sum": 0.915
+    },
+    {
+      "ts": "2026-08-20T22:47:42.291Z",
+      "top_bucket": "104-105F",
+      "top_price": 0.9945,
+      "top2_bucket": "104-107F",
+      "top2_price": 0.01,
+      "top2_sum": 1.0045
     }
   ],
   "all_outcomes": [
@@ -3635,11 +3719,11 @@
         102,
         103
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5016
+      "volume": 6430
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on August 20?",
@@ -3648,11 +3732,11 @@
         104,
         105
       ],
-      "bid": 0.85,
-      "ask": 0.85,
-      "price": 0.85,
+      "bid": 0.9945,
+      "ask": 0.9945,
+      "price": 0.9945,
       "spread": 0,
-      "volume": 7080
+      "volume": 8090
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on August 20?",
@@ -3661,11 +3745,11 @@
         106,
         107
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 6989
+      "volume": 7337
     },
     {
       "question": "Will the highest temperature in Dallas be between 108-109°F on August 20?",
@@ -3674,11 +3758,11 @@
         108,
         109
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 2925
+      "volume": 3103
     },
     {
       "question": "Will the highest temperature in Dallas be between 110-111°F on August 20?",

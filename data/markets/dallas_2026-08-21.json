@@ -51,13 +51,14 @@
       "forecast_src": "ensemble",
       "sigma": 1,
       "opened_at": "2026-08-20T15:51:24.831Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -13.91,
+      "exit_price": 0.15,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-20T22:48:07.271Z",
       "stop_price": 0.168,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "stop_pending": true
     }
   ],
   "actual_temp": null,
@@ -1548,6 +1549,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-20T22:47:42.291Z",
+      "horizon": "D+1",
+      "hours_left": 13.2,
+      "ecmwf": 103,
+      "hrrr": 107,
+      "metar": null,
+      "best": 105,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 103,
+          "gfs_seamless": 107,
+          "icon_seamless": 107
+        },
+        "mean": 105,
+        "spread": 2,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          104,
+          105,
+          106,
+          105,
+          104,
+          105,
+          104,
+          103,
+          106,
+          104,
+          102,
+          106,
+          106,
+          104,
+          102,
+          106,
+          103,
+          103,
+          104,
+          102,
+          103,
+          103,
+          103,
+          103,
+          104,
+          105,
+          105,
+          108,
+          105,
+          104,
+          105,
+          103,
+          106,
+          104,
+          103,
+          103,
+          104,
+          105,
+          106,
+          102,
+          106,
+          103,
+          105,
+          104,
+          101,
+          103,
+          104,
+          105,
+          102,
+          103
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1710,6 +1786,14 @@
       "top2_bucket": "102-105F",
       "top2_price": 0.505,
       "top2_sum": 0.74
+    },
+    {
+      "ts": "2026-08-20T22:47:42.291Z",
+      "top_bucket": "104-105F",
+      "top_price": 0.5,
+      "top2_bucket": "102-105F",
+      "top2_price": 0.5,
+      "top2_sum": 0.755
     }
   ],
   "all_outcomes": [
@@ -1720,11 +1804,11 @@
         -999,
         99
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.0095,
+      "ask": 0.0095,
+      "price": 0.0095,
       "spread": 0,
-      "volume": 5065
+      "volume": 5080
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on August 21?",
@@ -1737,7 +1821,7 @@
       "ask": 0.0605,
       "price": 0.0605,
       "spread": 0,
-      "volume": 2783
+      "volume": 3158
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on August 21?",
@@ -1746,11 +1830,11 @@
         102,
         103
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.255,
+      "ask": 0.255,
+      "price": 0.255,
       "spread": 0,
-      "volume": 1220
+      "volume": 1318
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on August 21?",
@@ -1759,11 +1843,11 @@
         104,
         105
       ],
-      "bid": 0.505,
-      "ask": 0.505,
-      "price": 0.505,
+      "bid": 0.5,
+      "ask": 0.5,
+      "price": 0.5,
       "spread": 0,
-      "volume": 1138
+      "volume": 1333
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on August 21?",
@@ -1772,11 +1856,11 @@
         106,
         107
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 2130
+      "volume": 2354
     },
     {
       "question": "Will the highest temperature in Dallas be between 108-109°F on August 21?",
@@ -1785,11 +1869,11 @@
         108,
         109
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 240
+      "volume": 256
     },
     {
       "question": "Will the highest temperature in Dallas be between 110-111°F on August 21?",
@@ -1802,7 +1886,7 @@
       "ask": 0.0125,
       "price": 0.0125,
       "spread": 0,
-      "volume": 669
+      "volume": 685
     },
     {
       "question": "Will the highest temperature in Dallas be between 112-113°F on August 21?",
@@ -1811,11 +1895,11 @@
         112,
         113
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 1117
+      "volume": 1133
     },
     {
       "question": "Will the highest temperature in Dallas be between 114-115°F on August 21?",
