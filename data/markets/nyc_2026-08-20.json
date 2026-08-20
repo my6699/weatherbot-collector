@@ -6,10 +6,10 @@
   "station": "KLGA",
   "event_end_date": "2026-08-20T12:00:00Z",
   "hours_at_discovery": 32.8,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 84.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2862,6 +2862,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-20T17:48:20.678Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 84,
+      "hrrr": 86,
+      "metar": 83,
+      "best": 84.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 84,
+          "gfs_seamless": 86,
+          "icon_seamless": 83
+        },
+        "mean": 84.4,
+        "spread": 1.6,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          83,
+          85,
+          83,
+          83,
+          83,
+          82,
+          82,
+          83,
+          82,
+          84,
+          81,
+          82,
+          85,
+          84,
+          82,
+          81,
+          81,
+          82,
+          85,
+          83,
+          85,
+          81,
+          83,
+          82,
+          83,
+          85,
+          82,
+          82,
+          83,
+          84,
+          82,
+          83,
+          83,
+          81,
+          84,
+          82,
+          84,
+          83,
+          84,
+          82,
+          81,
+          83,
+          84,
+          84,
+          82,
+          82,
+          83,
+          82,
+          82,
+          83
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3168,6 +3242,14 @@
       "top2_bucket": "84-87F",
       "top2_price": 0.075,
       "top2_sum": 0.975
+    },
+    {
+      "ts": "2026-08-20T17:48:20.678Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.985,
+      "top2_bucket": "84-87F",
+      "top2_price": 0.015,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -3260,7 +3342,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6818
+      "volume": 6840
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on August 20?",
@@ -3269,11 +3351,11 @@
         84,
         85
       ],
-      "bid": 0.9,
-      "ask": 0.9,
-      "price": 0.9,
+      "bid": 0.985,
+      "ask": 0.985,
+      "price": 0.985,
       "spread": 0,
-      "volume": 8309
+      "volume": 9007
     },
     {
       "question": "Will the highest temperature in New York City be between 86-87°F on August 20?",
@@ -3282,11 +3364,11 @@
         86,
         87
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 9783
+      "volume": 10174
     },
     {
       "question": "Will the highest temperature in New York City be between 88-89°F on August 20?",
@@ -3295,11 +3377,11 @@
         88,
         89
       ],
-      "bid": 0.0215,
-      "ask": 0.0215,
-      "price": 0.0215,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 3195
+      "volume": 3537
     },
     {
       "question": "Will the highest temperature in New York City be 90°F or higher on August 20?",
@@ -3308,11 +3390,11 @@
         90,
         999
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 1868
+      "volume": 1957
     }
   ],
   "created_at": "2026-08-19T03:12:47.394Z"
