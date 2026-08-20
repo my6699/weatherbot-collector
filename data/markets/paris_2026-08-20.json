@@ -3955,6 +3955,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-20T13:14:13.243Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 25.4,
+      "hrrr": 25.1,
+      "metar": 25,
+      "best": 25.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.4,
+          "gfs_seamless": 25.1,
+          "icon_seamless": 24.3
+        },
+        "mean": 25.1,
+        "spread": 0.8,
+        "gap": 0.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          25.6,
+          25.2,
+          25.6,
+          25.1,
+          25.1,
+          25.7,
+          26,
+          25.9,
+          25.4,
+          26.1,
+          26.5,
+          28.3,
+          24.5,
+          26.9,
+          26.4,
+          24.9,
+          24.5,
+          23.9,
+          25.3,
+          25.2,
+          25.8,
+          24.9,
+          24.9,
+          25.3,
+          25.8,
+          25.7,
+          25.5,
+          26.3,
+          26.1,
+          24.5,
+          24.1,
+          25.1,
+          25.9,
+          25.2,
+          25.3,
+          26.6,
+          26.7,
+          24.5,
+          26.8,
+          24.7,
+          25,
+          24.9,
+          25.8,
+          25.6,
+          25.9,
+          26.4,
+          26,
+          26,
+          24.6,
+          25.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -4381,6 +4455,14 @@
       "top2_bucket": "25-26C",
       "top2_price": 0.205,
       "top2_sum": 0.89
+    },
+    {
+      "ts": "2026-08-20T13:14:13.243Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.765,
+      "top2_bucket": "25-26C",
+      "top2_price": 0.2,
+      "top2_sum": 0.965
     }
   ],
   "all_outcomes": [
@@ -4434,7 +4516,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4600
+      "volume": 4601
     },
     {
       "question": "Will the highest temperature in Paris be 23°C on August 20?",
@@ -4443,11 +4525,11 @@
         23,
         23
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5888
+      "volume": 7880
     },
     {
       "question": "Will the highest temperature in Paris be 24°C on August 20?",
@@ -4456,11 +4538,11 @@
         24,
         24
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 8244
+      "volume": 9142
     },
     {
       "question": "Will the highest temperature in Paris be 25°C on August 20?",
@@ -4469,11 +4551,11 @@
         25,
         25
       ],
-      "bid": 0.685,
-      "ask": 0.685,
-      "price": 0.685,
+      "bid": 0.765,
+      "ask": 0.765,
+      "price": 0.765,
       "spread": 0,
-      "volume": 8695
+      "volume": 9161
     },
     {
       "question": "Will the highest temperature in Paris be 26°C on August 20?",
@@ -4482,11 +4564,11 @@
         26,
         26
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.2,
+      "ask": 0.2,
+      "price": 0.2,
       "spread": 0,
-      "volume": 7859
+      "volume": 8717
     },
     {
       "question": "Will the highest temperature in Paris be 27°C on August 20?",
@@ -4495,11 +4577,11 @@
         27,
         27
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.012,
+      "ask": 0.012,
+      "price": 0.012,
       "spread": 0,
-      "volume": 9289
+      "volume": 9726
     },
     {
       "question": "Will the highest temperature in Paris be 28°C on August 20?",
@@ -4512,7 +4594,7 @@
       "ask": 0.007,
       "price": 0.007,
       "spread": 0,
-      "volume": 4640
+      "volume": 5612
     },
     {
       "question": "Will the highest temperature in Paris be 29°C or higher on August 20?",
@@ -4521,11 +4603,11 @@
         29,
         999
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 5728
+      "volume": 7004
     }
   ],
   "created_at": "2026-08-18T05:48:20.542Z"
