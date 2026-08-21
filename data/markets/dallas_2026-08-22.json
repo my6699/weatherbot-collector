@@ -610,6 +610,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-21T09:54:01.387Z",
+      "horizon": "D+1",
+      "hours_left": 26.1,
+      "ecmwf": 106,
+      "hrrr": 109,
+      "metar": null,
+      "best": 107.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 106,
+          "gfs_seamless": 109,
+          "icon_seamless": 107
+        },
+        "mean": 107.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          104,
+          108,
+          106,
+          106,
+          106,
+          106,
+          100,
+          107,
+          108,
+          108,
+          103,
+          106,
+          102,
+          104,
+          103,
+          104,
+          103,
+          108,
+          103,
+          102,
+          105,
+          104,
+          103,
+          105,
+          100,
+          105,
+          107,
+          106,
+          103,
+          106,
+          105,
+          105,
+          104,
+          102,
+          107,
+          107,
+          104,
+          104,
+          106,
+          101,
+          110,
+          106,
+          108,
+          100,
+          102,
+          101,
+          105,
+          104,
+          95,
+          103
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -676,6 +751,14 @@
       "top2_bucket": "104-107F",
       "top2_price": 0.26,
       "top2_sum": 0.7
+    },
+    {
+      "ts": "2026-08-21T09:54:01.387Z",
+      "top_bucket": "104-105F",
+      "top_price": 0.395,
+      "top2_bucket": "104-107F",
+      "top2_price": 0.275,
+      "top2_sum": 0.67
     }
   ],
   "all_outcomes": [
@@ -725,11 +808,11 @@
         102,
         103
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 411
+      "volume": 443
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on August 22?",
@@ -738,11 +821,11 @@
         104,
         105
       ],
-      "bid": 0.44,
-      "ask": 0.44,
-      "price": 0.44,
+      "bid": 0.395,
+      "ask": 0.395,
+      "price": 0.395,
       "spread": 0,
-      "volume": 361
+      "volume": 483
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on August 22?",
@@ -751,11 +834,11 @@
         106,
         107
       ],
-      "bid": 0.26,
-      "ask": 0.26,
-      "price": 0.26,
+      "bid": 0.275,
+      "ask": 0.275,
+      "price": 0.275,
       "spread": 0,
-      "volume": 117
+      "volume": 170
     },
     {
       "question": "Will the highest temperature in Dallas be between 108-109°F on August 22?",
@@ -764,9 +847,9 @@
         108,
         109
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
       "volume": 69
     },
