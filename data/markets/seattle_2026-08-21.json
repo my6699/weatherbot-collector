@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-08-21T12:00:00Z",
   "hours_at_discovery": 32.8,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2412,6 +2412,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-21T11:45:28.933Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 82,
+      "hrrr": 87,
+      "metar": 63,
+      "best": 82.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 82,
+          "gfs_seamless": 87,
+          "icon_seamless": 79
+        },
+        "mean": 82.9,
+        "spread": 4.1,
+        "gap": 5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          81,
+          82,
+          83,
+          80,
+          83,
+          83,
+          81,
+          77,
+          84,
+          84,
+          79,
+          80,
+          83,
+          81,
+          80,
+          83,
+          82,
+          81,
+          82,
+          82,
+          83,
+          81,
+          81,
+          80,
+          78,
+          79,
+          84,
+          83,
+          83,
+          80,
+          83,
+          81,
+          82,
+          83,
+          81,
+          83,
+          82,
+          83,
+          83,
+          79,
+          82,
+          82,
+          83,
+          84,
+          84,
+          79,
+          82,
+          81,
+          82,
+          81
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2670,6 +2745,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.275,
       "top2_sum": 0.555
+    },
+    {
+      "ts": "2026-08-21T11:45:28.933Z",
+      "top_bucket": "82-83F",
+      "top_price": 0.3,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.3,
+      "top2_sum": 0.575
     }
   ],
   "all_outcomes": [
@@ -2693,11 +2776,11 @@
         74,
         75
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 1014
+      "volume": 1027
     },
     {
       "question": "Will the highest temperature in Seattle be between 76-77°F on August 21?",
@@ -2706,11 +2789,11 @@
         76,
         77
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 1982
+      "volume": 2040
     },
     {
       "question": "Will the highest temperature in Seattle be between 78-79°F on August 21?",
@@ -2723,7 +2806,7 @@
       "ask": 0.155,
       "price": 0.155,
       "spread": 0,
-      "volume": 1728
+      "volume": 1732
     },
     {
       "question": "Will the highest temperature in Seattle be between 80-81°F on August 21?",
@@ -2732,11 +2815,11 @@
         80,
         81
       ],
-      "bid": 0.28,
-      "ask": 0.28,
-      "price": 0.28,
+      "bid": 0.275,
+      "ask": 0.275,
+      "price": 0.275,
       "spread": 0,
-      "volume": 2247
+      "volume": 2256
     },
     {
       "question": "Will the highest temperature in Seattle be between 82-83°F on August 21?",
@@ -2745,11 +2828,11 @@
         82,
         83
       ],
-      "bid": 0.275,
-      "ask": 0.275,
-      "price": 0.275,
+      "bid": 0.3,
+      "ask": 0.3,
+      "price": 0.3,
       "spread": 0,
-      "volume": 1512
+      "volume": 1526
     },
     {
       "question": "Will the highest temperature in Seattle be between 84-85°F on August 21?",
@@ -2758,11 +2841,11 @@
         84,
         85
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.15,
+      "ask": 0.15,
+      "price": 0.15,
       "spread": 0,
-      "volume": 793
+      "volume": 818
     },
     {
       "question": "Will the highest temperature in Seattle be between 86-87°F on August 21?",
@@ -2771,11 +2854,11 @@
         86,
         87
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 1091
+      "volume": 1107
     },
     {
       "question": "Will the highest temperature in Seattle be between 88-89°F on August 21?",
@@ -2784,11 +2867,11 @@
         88,
         89
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 891
+      "volume": 1256
     },
     {
       "question": "Will the highest temperature in Seattle be between 90-91°F on August 21?",

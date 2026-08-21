@@ -6,7 +6,7 @@
   "station": "SBGR",
   "event_end_date": "2026-08-21T12:00:00Z",
   "hours_at_discovery": 32.8,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2399,6 +2399,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-21T11:45:50.987Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 27.9,
+      "hrrr": 26.4,
+      "metar": 21,
+      "best": 26.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.9,
+          "gfs_seamless": 26.4,
+          "icon_seamless": 23.8
+        },
+        "mean": 26.6,
+        "spread": 2.8,
+        "gap": 1.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          28.3,
+          28.5,
+          26.6,
+          27.5,
+          27.1,
+          26.4,
+          26.6,
+          28.3,
+          28.1,
+          28.3,
+          27.5,
+          28,
+          29.1,
+          27.7,
+          27.9,
+          27.7,
+          29,
+          28.1,
+          28.3,
+          28.1,
+          27.7,
+          27.9,
+          28.4,
+          27.9,
+          26.8,
+          27.6,
+          27.9,
+          27.6,
+          28.3,
+          27.7,
+          26.9,
+          27.9,
+          28.1,
+          27.7,
+          28.3,
+          28,
+          28.2,
+          28,
+          26.9,
+          28,
+          28.1,
+          28.1,
+          28.5,
+          28.3,
+          27.2,
+          28.2,
+          28.7,
+          27.3,
+          28,
+          27.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2657,6 +2732,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.415,
       "top2_sum": 0.795
+    },
+    {
+      "ts": "2026-08-21T11:45:50.987Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.385,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.37,
+      "top2_sum": 0.755
     }
   ],
   "all_outcomes": [
@@ -2732,11 +2815,11 @@
         25,
         25
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
       "spread": 0,
-      "volume": 2972
+      "volume": 3063
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 26°C on August 21?",
@@ -2745,11 +2828,11 @@
         26,
         26
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.385,
+      "ask": 0.385,
+      "price": 0.385,
       "spread": 0,
-      "volume": 1044
+      "volume": 1078
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 27°C on August 21?",
@@ -2758,11 +2841,11 @@
         27,
         27
       ],
-      "bid": 0.415,
-      "ask": 0.415,
-      "price": 0.415,
+      "bid": 0.37,
+      "ask": 0.37,
+      "price": 0.37,
       "spread": 0,
-      "volume": 1333
+      "volume": 1528
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 28°C on August 21?",
@@ -2771,11 +2854,11 @@
         28,
         28
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
-      "volume": 239
+      "volume": 257
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on August 21?",
@@ -2784,11 +2867,11 @@
         29,
         29
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 192
+      "volume": 202
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C or higher on August 21?",
@@ -2797,11 +2880,11 @@
         30,
         999
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 833
+      "volume": 849
     }
   ],
   "created_at": "2026-08-20T03:13:08.037Z"
