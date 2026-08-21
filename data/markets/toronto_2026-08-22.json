@@ -530,6 +530,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-21T09:01:41.828Z",
+      "horizon": "D+1",
+      "hours_left": 27,
+      "ecmwf": 23.4,
+      "hrrr": 24.3,
+      "metar": null,
+      "best": 23.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 23.4,
+          "gfs_seamless": 24.3,
+          "icon_seamless": 23.2
+        },
+        "mean": 23.6,
+        "spread": 0.7,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          22.2,
+          24.7,
+          22,
+          24.1,
+          19,
+          23.4,
+          21.4,
+          25.5,
+          23.8,
+          24.1,
+          22.8,
+          23.1,
+          22.4,
+          21.3,
+          20.9,
+          19.6,
+          24.2,
+          23.6,
+          22.9,
+          21.3,
+          22.2,
+          23.6,
+          21,
+          22.6,
+          22.8,
+          22.7,
+          23,
+          23.4,
+          25.4,
+          23.9,
+          24.1,
+          19.5,
+          23.4,
+          20.7,
+          20.2,
+          23.3,
+          23.4,
+          24.1,
+          23.8,
+          22.3,
+          24.6,
+          24.3,
+          24.2,
+          23.9,
+          24.9,
+          23.6,
+          22.9,
+          25.1,
+          23.2,
+          25
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -588,6 +662,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.35,
       "top2_sum": 0.65
+    },
+    {
+      "ts": "2026-08-21T09:01:41.828Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.355,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.355,
+      "top2_sum": 0.655
     }
   ],
   "all_outcomes": [
@@ -663,11 +745,11 @@
         25,
         25
       ],
-      "bid": 0.35,
-      "ask": 0.35,
-      "price": 0.35,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 65
+      "volume": 154
     },
     {
       "question": "Will the highest temperature in Toronto be 26°C on August 22?",
@@ -680,7 +762,7 @@
       "ask": 0.13,
       "price": 0.13,
       "spread": 0,
-      "volume": 169
+      "volume": 184
     },
     {
       "question": "Will the highest temperature in Toronto be 27°C on August 22?",
@@ -702,9 +784,9 @@
         28,
         28
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
       "volume": 25
     },
