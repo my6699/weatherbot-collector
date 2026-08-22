@@ -3080,6 +3080,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-22T19:39:54.529Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 90,
+      "hrrr": 93,
+      "metar": 93,
+      "best": 91.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 90,
+          "gfs_seamless": 93,
+          "icon_seamless": 91
+        },
+        "mean": 91.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          92,
+          90,
+          89,
+          88,
+          90,
+          91,
+          88,
+          92,
+          92,
+          87,
+          89,
+          92,
+          90,
+          90,
+          92,
+          90,
+          93,
+          88,
+          89,
+          90,
+          91,
+          93,
+          94,
+          88,
+          91,
+          90,
+          89,
+          92,
+          90,
+          88,
+          91,
+          88,
+          89,
+          89,
+          89,
+          93,
+          91,
+          89,
+          88,
+          90,
+          89,
+          90,
+          88,
+          90,
+          90,
+          94,
+          89,
+          91,
+          89,
+          91
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3410,6 +3485,14 @@
       "top2_bucket": "92-95F",
       "top2_price": 0.19,
       "top2_sum": 0.875
+    },
+    {
+      "ts": "2026-08-22T19:39:54.529Z",
+      "top_bucket": "92-93F",
+      "top_price": 0.69,
+      "top2_bucket": "92-95F",
+      "top2_price": 0.275,
+      "top2_sum": 0.965
     }
   ],
   "all_outcomes": [
@@ -3489,7 +3572,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1736
+      "volume": 1766
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on August 22?",
@@ -3498,11 +3581,11 @@
         90,
         91
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3312
+      "volume": 5001
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on August 22?",
@@ -3511,11 +3594,11 @@
         92,
         93
       ],
-      "bid": 0.685,
-      "ask": 0.685,
-      "price": 0.685,
+      "bid": 0.69,
+      "ask": 0.69,
+      "price": 0.69,
       "spread": 0,
-      "volume": 3328
+      "volume": 3401
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on August 22?",
@@ -3524,11 +3607,11 @@
         94,
         95
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.275,
+      "ask": 0.275,
+      "price": 0.275,
       "spread": 0,
-      "volume": 2271
+      "volume": 2527
     },
     {
       "question": "Will the highest temperature in Atlanta be between 96-97°F on August 22?",
@@ -3541,7 +3624,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 1311
+      "volume": 1380
     },
     {
       "question": "Will the highest temperature in Atlanta be 98°F or higher on August 22?",
@@ -3550,9 +3633,9 @@
         98,
         999
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
       "volume": 2273
     }
