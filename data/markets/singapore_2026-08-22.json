@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-08-22T12:00:00Z",
   "hours_at_discovery": 54.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3893,6 +3893,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-22T11:39:16.421Z",
+      "horizon": "D+0",
+      "hours_left": 0.3,
+      "ecmwf": 33.6,
+      "hrrr": 32,
+      "metar": 30,
+      "best": 33,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.6,
+          "gfs_seamless": 32,
+          "icon_seamless": 33.2
+        },
+        "mean": 33,
+        "spread": 1,
+        "gap": 1.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          33.8,
+          33.8,
+          33.2,
+          33.8,
+          34.1,
+          33.7,
+          33.9,
+          33.7,
+          33.5,
+          33.6,
+          34,
+          33.5,
+          33.7,
+          33.8,
+          32.8,
+          33.6,
+          33.8,
+          34.4,
+          33.7,
+          33.5,
+          33.6,
+          32.6,
+          33.4,
+          33.1,
+          33.8,
+          32.6,
+          33.9,
+          33.6,
+          33.6,
+          33.7,
+          33,
+          33,
+          34,
+          33.3,
+          32.8,
+          33.3,
+          33.9,
+          33.7,
+          32.8,
+          34,
+          33.4,
+          33.9,
+          33.5,
+          32.9,
+          33.8,
+          34,
+          32.4,
+          33.8,
+          33.4,
+          33.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -4311,6 +4386,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-22T11:39:16.421Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -4377,7 +4460,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 13690
+      "volume": 13691
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 22?",
@@ -4390,7 +4473,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 7768
+      "volume": 7888
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on August 22?",
@@ -4403,7 +4486,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 8235
+      "volume": 8241
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 22?",
@@ -4458,5 +4541,6 @@
       "volume": 263
     }
   ],
-  "created_at": "2026-08-20T05:49:35.214Z"
+  "created_at": "2026-08-20T05:49:35.214Z",
+  "metar_max": 30
 }

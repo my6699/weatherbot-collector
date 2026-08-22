@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-08-22T12:00:00Z",
   "hours_at_discovery": 34,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2481,6 +2481,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-22T11:38:55.352Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 77,
+      "hrrr": 76,
+      "metar": 70,
+      "best": 76.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 76,
+          "icon_seamless": 78
+        },
+        "mean": 76.9,
+        "spread": 1.1,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          76,
+          75,
+          75,
+          78,
+          76,
+          76,
+          78,
+          80,
+          77,
+          77,
+          76,
+          77,
+          76,
+          76,
+          77,
+          75,
+          75,
+          75,
+          78,
+          76,
+          76,
+          78,
+          76,
+          77,
+          75,
+          76,
+          78,
+          75,
+          77,
+          80,
+          77,
+          76,
+          75,
+          78,
+          77,
+          77,
+          76,
+          77,
+          77,
+          77,
+          76,
+          76,
+          76,
+          77,
+          77,
+          76,
+          79,
+          74,
+          78,
+          78
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2747,6 +2821,14 @@
       "top2_bucket": "74-77F",
       "top2_price": 0.47,
       "top2_sum": 0.685
+    },
+    {
+      "ts": "2026-08-22T11:38:55.352Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.455,
+      "top2_bucket": "74-77F",
+      "top2_price": 0.455,
+      "top2_sum": 0.67
     }
   ],
   "all_outcomes": [
@@ -2787,7 +2869,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 26796
+      "volume": 27962
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on August 22?",
@@ -2796,11 +2878,11 @@
         72,
         73
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 9221
+      "volume": 9682
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on August 22?",
@@ -2813,7 +2895,7 @@
       "ask": 0.215,
       "price": 0.215,
       "spread": 0,
-      "volume": 7571
+      "volume": 7709
     },
     {
       "question": "Will the highest temperature in New York City be between 76-77°F on August 22?",
@@ -2822,11 +2904,11 @@
         76,
         77
       ],
-      "bid": 0.47,
-      "ask": 0.47,
-      "price": 0.47,
+      "bid": 0.455,
+      "ask": 0.455,
+      "price": 0.455,
       "spread": 0,
-      "volume": 5111
+      "volume": 5403
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on August 22?",
@@ -2835,11 +2917,11 @@
         78,
         79
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.21,
+      "ask": 0.21,
+      "price": 0.21,
       "spread": 0,
-      "volume": 7139
+      "volume": 7263
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on August 22?",
@@ -2848,11 +2930,11 @@
         80,
         81
       ],
-      "bid": 0.0355,
-      "ask": 0.0355,
-      "price": 0.0355,
+      "bid": 0.0455,
+      "ask": 0.0455,
+      "price": 0.0455,
       "spread": 0,
-      "volume": 5379
+      "volume": 5451
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on August 22?",
@@ -2861,11 +2943,11 @@
         82,
         83
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 2075
+      "volume": 2200
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on August 22?",
@@ -2874,9 +2956,9 @@
         84,
         85
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1628
     },

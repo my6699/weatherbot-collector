@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-08-22T12:00:00Z",
   "hours_at_discovery": 54.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 31,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3860,6 +3860,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-22T11:39:14.439Z",
+      "horizon": "D+0",
+      "hours_left": 0.3,
+      "ecmwf": 29.4,
+      "hrrr": 29.6,
+      "metar": 28,
+      "best": 29.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.4,
+          "gfs_seamless": 29.6,
+          "icon_seamless": 29.3
+        },
+        "mean": 29.4,
+        "spread": 0.2,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          29.8,
+          29.4,
+          29.7,
+          29.9,
+          29.7,
+          29.7,
+          30,
+          29.8,
+          29.6,
+          29.5,
+          29.6,
+          29.2,
+          29.4,
+          29.4,
+          29.1,
+          29.5,
+          29.9,
+          29.8,
+          29.6,
+          29.9,
+          29.4,
+          29.7,
+          29.8,
+          29.3,
+          29.4,
+          28.5,
+          30,
+          29.4,
+          29.7,
+          29.9,
+          29.6,
+          29.4,
+          29.7,
+          29.9,
+          29.8,
+          29.7,
+          30,
+          29.8,
+          28.8,
+          29.8,
+          29.2,
+          29.2,
+          29.5,
+          29.9,
+          29.5,
+          29.3,
+          29.2,
+          29.9,
+          29.2,
+          29.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -4278,6 +4352,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-22T11:39:14.439Z",
+      "top_bucket": "31-31C",
+      "top_price": 0.9995,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -4344,7 +4426,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 11856
+      "volume": 11878
     },
     {
       "question": "Will the highest temperature in Shanghai be 29°C on August 22?",
@@ -4357,7 +4439,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 17346
+      "volume": 17369
     },
     {
       "question": "Will the highest temperature in Shanghai be 30°C on August 22?",
@@ -4383,7 +4465,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 19839
+      "volume": 20365
     },
     {
       "question": "Will the highest temperature in Shanghai be 32°C on August 22?",
@@ -4425,5 +4507,6 @@
       "volume": 1350
     }
   ],
-  "created_at": "2026-08-20T05:49:32.579Z"
+  "created_at": "2026-08-20T05:49:32.579Z",
+  "metar_max": 29
 }
