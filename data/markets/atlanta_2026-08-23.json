@@ -683,6 +683,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-22T13:46:35.643Z",
+      "horizon": "D+1",
+      "hours_left": 22.2,
+      "ecmwf": 96,
+      "hrrr": 93,
+      "metar": null,
+      "best": 94.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 96,
+          "gfs_seamless": 93,
+          "icon_seamless": 92
+        },
+        "mean": 94.3,
+        "spread": 2.3,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          98,
+          96,
+          95,
+          94,
+          95,
+          94,
+          91,
+          94,
+          99,
+          92,
+          96,
+          97,
+          92,
+          95,
+          99,
+          97,
+          97,
+          94,
+          96,
+          95,
+          93,
+          96,
+          97,
+          95,
+          97,
+          95,
+          96,
+          97,
+          95,
+          93,
+          98,
+          94,
+          91,
+          92,
+          94,
+          96,
+          92,
+          96,
+          95,
+          98,
+          92,
+          96,
+          91,
+          96,
+          94,
+          95,
+          92,
+          95,
+          94,
+          97
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -757,6 +832,14 @@
       "top2_bucket": "90-93F",
       "top2_price": 0.505,
       "top2_sum": 0.77
+    },
+    {
+      "ts": "2026-08-22T13:46:35.643Z",
+      "top_bucket": "92-93F",
+      "top_price": 0.495,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.495,
+      "top2_sum": 0.76
     }
   ],
   "all_outcomes": [
@@ -832,11 +915,11 @@
         92,
         93
       ],
-      "bid": 0.505,
-      "ask": 0.505,
-      "price": 0.505,
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
       "spread": 0,
-      "volume": 481
+      "volume": 491
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on August 23?",
@@ -897,9 +980,9 @@
         102,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
       "volume": 489
     }
