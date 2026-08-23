@@ -6,10 +6,10 @@
   "station": "KATL",
   "event_end_date": "2026-08-23T12:00:00Z",
   "hours_at_discovery": 31.1,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 92.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -3001,6 +3001,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-23T21:39:54.067Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 93,
+      "hrrr": 91,
+      "metar": 92,
+      "best": 92,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 93,
+          "gfs_seamless": 91,
+          "icon_seamless": 91
+        },
+        "mean": 92,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          94,
+          95,
+          95,
+          91,
+          94,
+          92,
+          91,
+          95,
+          95,
+          92,
+          95,
+          94,
+          94,
+          94,
+          97,
+          96,
+          97,
+          93,
+          93,
+          94,
+          93,
+          96,
+          96,
+          92,
+          96,
+          94,
+          94,
+          95,
+          97,
+          91,
+          96,
+          91,
+          90,
+          93,
+          93,
+          96,
+          94,
+          94,
+          92,
+          95,
+          93,
+          93,
+          91,
+          95,
+          94,
+          96,
+          94,
+          95,
+          90,
+          97
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3323,6 +3397,14 @@
       "top2_bucket": "92-95F",
       "top2_price": 0.09,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-08-23T21:39:54.067Z",
+      "top_bucket": "92-93F",
+      "top_price": 0.975,
+      "top2_bucket": "92-95F",
+      "top2_price": 0.01,
+      "top2_sum": 0.985
     }
   ],
   "all_outcomes": [
@@ -3389,7 +3471,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6343
+      "volume": 6370
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on August 23?",
@@ -3398,11 +3480,11 @@
         92,
         93
       ],
-      "bid": 0.9,
-      "ask": 0.9,
-      "price": 0.9,
+      "bid": 0.975,
+      "ask": 0.975,
+      "price": 0.975,
       "spread": 0,
-      "volume": 5976
+      "volume": 6435
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on August 23?",
@@ -3411,11 +3493,11 @@
         94,
         95
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 3956
+      "volume": 4115
     },
     {
       "question": "Will the highest temperature in Atlanta be between 96-97°F on August 23?",
@@ -3428,7 +3510,7 @@
       "ask": 0.01,
       "price": 0.01,
       "spread": 0,
-      "volume": 2678
+      "volume": 2698
     },
     {
       "question": "Will the highest temperature in Atlanta be between 98-99°F on August 23?",
