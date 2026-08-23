@@ -3787,6 +3787,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-23T10:44:30.555Z",
+      "horizon": "D+0",
+      "hours_left": 1.3,
+      "ecmwf": 31,
+      "hrrr": 29.5,
+      "metar": 29,
+      "best": 30.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31,
+          "gfs_seamless": 29.5,
+          "icon_seamless": 30
+        },
+        "mean": 30.4,
+        "spread": 0.9,
+        "gap": 1.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          31.4,
+          31,
+          31.2,
+          31.2,
+          30.7,
+          30.3,
+          31,
+          31.6,
+          30.9,
+          30.9,
+          31.5,
+          30.8,
+          31,
+          31.2,
+          31.5,
+          31.4,
+          31.6,
+          31.3,
+          31.1,
+          31.7,
+          31.1,
+          30.8,
+          31.1,
+          31,
+          31,
+          30.2,
+          31.6,
+          31.7,
+          31.5,
+          31,
+          31.3,
+          31.1,
+          31.3,
+          31.3,
+          31.4,
+          31.3,
+          30.9,
+          31.7,
+          30.8,
+          31,
+          30.9,
+          31.4,
+          31.3,
+          30.6,
+          31.1,
+          31,
+          31.5,
+          31.5,
+          31.3,
+          30.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -4197,6 +4271,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.9975,
       "top2_sum": 0.998
+    },
+    {
+      "ts": "2026-08-23T10:44:30.555Z",
+      "top_bucket": "31-31C",
+      "top_price": 0.9995,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -4263,7 +4345,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 14201
+      "volume": 14205
     },
     {
       "question": "Will the highest temperature in Shanghai be 31°C on August 23?",
@@ -4272,11 +4354,11 @@
         31,
         31
       ],
-      "bid": 0.9975,
-      "ask": 0.9975,
-      "price": 0.9975,
-      "spread": 0,
-      "volume": 10721
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 11505
     },
     {
       "question": "Will the highest temperature in Shanghai be 32°C on August 23?",
@@ -4289,7 +4371,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 10967
+      "volume": 10972
     },
     {
       "question": "Will the highest temperature in Shanghai be 33°C on August 23?",
@@ -4302,7 +4384,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6870
+      "volume": 6912
     },
     {
       "question": "Will the highest temperature in Shanghai be 34°C on August 23?",

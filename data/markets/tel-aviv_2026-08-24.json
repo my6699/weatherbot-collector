@@ -2024,6 +2024,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-23T10:44:36.275Z",
+      "horizon": "D+1",
+      "hours_left": 25.3,
+      "ecmwf": 35.1,
+      "hrrr": 33.3,
+      "metar": null,
+      "best": 33.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 35.1,
+          "gfs_seamless": 33.3,
+          "icon_seamless": 32
+        },
+        "mean": 33.9,
+        "spread": 1.9,
+        "gap": 1.8,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          35.2,
+          35,
+          35.3,
+          35.1,
+          34.6,
+          35.2,
+          35.3,
+          34.9,
+          34.9,
+          35.4,
+          35.3,
+          35,
+          35.5,
+          35.1,
+          35.2,
+          35.2,
+          34.8,
+          35,
+          35.2,
+          35.1,
+          35.1,
+          35.5,
+          35.4,
+          35.6,
+          34.6,
+          35.3,
+          35.7,
+          35.3,
+          35.2,
+          35,
+          35.1,
+          35.8,
+          35.3,
+          35.4,
+          35.1,
+          34.8,
+          35.3,
+          35.3,
+          35.1,
+          35.4,
+          35.2,
+          35,
+          34.9,
+          35.1,
+          35.3,
+          34.6,
+          34.9,
+          35.3,
+          35.6,
+          34.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2242,6 +2317,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.585,
       "top2_sum": 0.92
+    },
+    {
+      "ts": "2026-08-23T10:44:36.275Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.59,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.59,
+      "top2_sum": 0.925
     }
   ],
   "all_outcomes": [
@@ -2282,7 +2365,7 @@
       "ask": 0.03,
       "price": 0.03,
       "spread": 0,
-      "volume": 444
+      "volume": 455
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 32°C on August 24?",
@@ -2295,7 +2378,7 @@
       "ask": 0.335,
       "price": 0.335,
       "spread": 0,
-      "volume": 1003
+      "volume": 1153
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on August 24?",
@@ -2304,11 +2387,11 @@
         33,
         33
       ],
-      "bid": 0.585,
-      "ask": 0.585,
-      "price": 0.585,
+      "bid": 0.59,
+      "ask": 0.59,
+      "price": 0.59,
       "spread": 0,
-      "volume": 805
+      "volume": 968
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on August 24?",
@@ -2317,9 +2400,9 @@
         34,
         34
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
       "volume": 490
     },
