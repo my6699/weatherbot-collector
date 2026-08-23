@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-24T12:00:00Z",
   "hours_at_discovery": 34,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3790885",
+    "question": "Will the highest temperature in Dallas be between 108-109°F on August 24?",
+    "bucket_low": 108,
+    "bucket_high": 109,
+    "entry_price": 0.12,
+    "bid_at_entry": 0.11,
+    "spread": 0.01,
+    "shares": 333.33,
+    "cost": 40,
+    "p": 0.76,
+    "ev": 5.3333,
+    "edge": 0.495,
+    "kelly": 0.1822,
+    "forecast_temp": 104.82,
+    "forecast_src": "ensemble",
+    "sigma": 0.85,
+    "opened_at": "2026-08-23T23:38:49.041Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.088
+  },
+  "positions": [
+    {
+      "market_id": "3790885",
+      "question": "Will the highest temperature in Dallas be between 108-109°F on August 24?",
+      "bucket_low": 108,
+      "bucket_high": 109,
+      "entry_price": 0.12,
+      "bid_at_entry": 0.11,
+      "spread": 0.01,
+      "shares": 333.33,
+      "cost": 40,
+      "p": 0.76,
+      "ev": 5.3333,
+      "edge": 0.495,
+      "kelly": 0.1822,
+      "forecast_temp": 104.82,
+      "forecast_src": "ensemble",
+      "sigma": 0.85,
+      "opened_at": "2026-08-23T23:38:49.041Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.088
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -1640,6 +1690,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-23T23:38:49.041Z",
+      "horizon": "D+1",
+      "hours_left": 12.4,
+      "ecmwf": 108,
+      "hrrr": 107,
+      "metar": null,
+      "best": 107.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 108,
+          "gfs_seamless": 107,
+          "icon_seamless": 107
+        },
+        "mean": 107.5,
+        "spread": 0.5,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          109,
+          108,
+          109,
+          109,
+          108,
+          109,
+          109,
+          108,
+          108,
+          107,
+          109,
+          109,
+          106,
+          107,
+          108,
+          107,
+          108,
+          109,
+          105,
+          109,
+          109,
+          109,
+          109,
+          107,
+          107,
+          108,
+          109,
+          110,
+          106,
+          108,
+          108,
+          109,
+          107,
+          108,
+          109,
+          108,
+          108,
+          108,
+          107,
+          107,
+          109,
+          108,
+          108,
+          108,
+          108,
+          108,
+          108,
+          109,
+          108,
+          108
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1818,6 +1942,14 @@
       "top2_bucket": "104-107F",
       "top2_price": 0.59,
       "top2_sum": 0.855
+    },
+    {
+      "ts": "2026-08-23T23:38:49.041Z",
+      "top_bucket": "106-107F",
+      "top_price": 0.585,
+      "top2_bucket": "104-107F",
+      "top2_price": 0.585,
+      "top2_sum": 0.835
     }
   ],
   "all_outcomes": [
@@ -1832,7 +1964,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 735
+      "volume": 866
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on August 24?",
@@ -1845,7 +1977,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 691
+      "volume": 822
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on August 24?",
@@ -1854,11 +1986,11 @@
         102,
         103
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 1490
+      "volume": 1745
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on August 24?",
@@ -1867,11 +1999,11 @@
         104,
         105
       ],
-      "bid": 0.265,
-      "ask": 0.265,
-      "price": 0.265,
+      "bid": 0.25,
+      "ask": 0.25,
+      "price": 0.25,
       "spread": 0,
-      "volume": 1083
+      "volume": 1216
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on August 24?",
@@ -1880,11 +2012,11 @@
         106,
         107
       ],
-      "bid": 0.59,
-      "ask": 0.59,
-      "price": 0.59,
+      "bid": 0.585,
+      "ask": 0.585,
+      "price": 0.585,
       "spread": 0,
-      "volume": 1250
+      "volume": 1969
     },
     {
       "question": "Will the highest temperature in Dallas be between 108-109°F on August 24?",
@@ -1897,7 +2029,7 @@
       "ask": 0.115,
       "price": 0.115,
       "spread": 0,
-      "volume": 203
+      "volume": 571
     },
     {
       "question": "Will the highest temperature in Dallas be between 110-111°F on August 24?",
@@ -1906,11 +2038,11 @@
         110,
         111
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0145,
+      "ask": 0.0145,
+      "price": 0.0145,
       "spread": 0,
-      "volume": 782
+      "volume": 947
     },
     {
       "question": "Will the highest temperature in Dallas be between 112-113°F on August 24?",
@@ -1923,7 +2055,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 528
+      "volume": 658
     },
     {
       "question": "Will the highest temperature in Dallas be between 114-115°F on August 24?",
@@ -1936,7 +2068,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 95
+      "volume": 166
     },
     {
       "question": "Will the highest temperature in Dallas be between 116-117°F on August 24?",
