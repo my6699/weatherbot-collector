@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-08-23T12:00:00Z",
   "hours_at_discovery": 31.1,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2258,6 +2258,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-23T11:39:22.252Z",
+      "horizon": "D+0",
+      "hours_left": 0.3,
+      "ecmwf": 78,
+      "hrrr": 78,
+      "metar": 61,
+      "best": 77.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 78,
+          "gfs_seamless": 78,
+          "icon_seamless": 76
+        },
+        "mean": 77.6,
+        "spread": 1.6,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          79,
+          78,
+          77,
+          78,
+          77,
+          78,
+          78,
+          78,
+          78,
+          77,
+          78,
+          78,
+          77,
+          78,
+          78,
+          78,
+          78,
+          79,
+          77,
+          79,
+          78,
+          77,
+          78,
+          76,
+          77,
+          78,
+          78,
+          80,
+          78,
+          78,
+          77,
+          79,
+          78,
+          79,
+          78,
+          79,
+          78,
+          77,
+          79,
+          79,
+          79,
+          79,
+          76,
+          77,
+          78,
+          77,
+          78,
+          79,
+          79,
+          78
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2500,6 +2574,14 @@
       "top2_bucket": "74-77F",
       "top2_price": 0.54,
       "top2_sum": 0.78
+    },
+    {
+      "ts": "2026-08-23T11:39:22.252Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.585,
+      "top2_bucket": "74-77F",
+      "top2_price": 0.585,
+      "top2_sum": 0.92
     }
   ],
   "all_outcomes": [
@@ -2536,9 +2618,9 @@
         68,
         69
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 2953
     },
@@ -2553,7 +2635,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 2326
+      "volume": 2328
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on August 23?",
@@ -2562,11 +2644,11 @@
         72,
         73
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 1759
+      "volume": 1762
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on August 23?",
@@ -2575,11 +2657,11 @@
         74,
         75
       ],
-      "bid": 0.24,
-      "ask": 0.24,
-      "price": 0.24,
+      "bid": 0.335,
+      "ask": 0.335,
+      "price": 0.335,
       "spread": 0,
-      "volume": 3122
+      "volume": 3277
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on August 23?",
@@ -2588,11 +2670,11 @@
         76,
         77
       ],
-      "bid": 0.54,
-      "ask": 0.54,
-      "price": 0.54,
+      "bid": 0.585,
+      "ask": 0.585,
+      "price": 0.585,
       "spread": 0,
-      "volume": 3756
+      "volume": 3965
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on August 23?",
@@ -2601,11 +2683,11 @@
         78,
         79
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
-      "volume": 2961
+      "volume": 3376
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on August 23?",
@@ -2618,7 +2700,7 @@
       "ask": 0.0085,
       "price": 0.0085,
       "spread": 0,
-      "volume": 1779
+      "volume": 1782
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on August 23?",
@@ -2627,11 +2709,11 @@
         82,
         83
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 1310
+      "volume": 1313
     },
     {
       "question": "Will the highest temperature in Chicago be 84°F or higher on August 23?",

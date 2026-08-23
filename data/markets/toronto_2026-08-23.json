@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-08-23T12:00:00Z",
   "hours_at_discovery": 32,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2335,6 +2335,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-23T11:39:47.096Z",
+      "horizon": "D+0",
+      "hours_left": 0.3,
+      "ecmwf": 22.1,
+      "hrrr": 20.2,
+      "metar": 16,
+      "best": 21.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 22.1,
+          "gfs_seamless": 20.2,
+          "icon_seamless": 20.9
+        },
+        "mean": 21.3,
+        "spread": 1.1,
+        "gap": 1.9,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          21.2,
+          22.8,
+          21.7,
+          22.4,
+          22.3,
+          22.1,
+          22,
+          22.5,
+          22.3,
+          23,
+          22.5,
+          22.2,
+          20.6,
+          21.5,
+          22.1,
+          22,
+          22,
+          23.2,
+          21,
+          22.1,
+          21.5,
+          22.7,
+          22.9,
+          21.6,
+          22,
+          21.1,
+          21.9,
+          22.1,
+          22.3,
+          22.8,
+          22.6,
+          23.6,
+          20.4,
+          22.3,
+          22.5,
+          21.5,
+          22.2,
+          24.4,
+          22.5,
+          22.2,
+          22,
+          22.9,
+          20.6,
+          22.7,
+          21.8,
+          20.2,
+          22.1,
+          21,
+          21.6,
+          23
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2585,6 +2660,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.44,
       "top2_sum": 0.7
+    },
+    {
+      "ts": "2026-08-23T11:39:47.096Z",
+      "top_bucket": "21-21C",
+      "top_price": 0.415,
+      "top2_bucket": "20-21C",
+      "top2_price": 0.415,
+      "top2_sum": 0.735
     }
   ],
   "all_outcomes": [
@@ -2647,9 +2730,9 @@
         19,
         19
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
       "volume": 2349
     },
@@ -2660,11 +2743,11 @@
         20,
         20
       ],
-      "bid": 0.26,
-      "ask": 0.26,
-      "price": 0.26,
+      "bid": 0.32,
+      "ask": 0.32,
+      "price": 0.32,
       "spread": 0,
-      "volume": 3089
+      "volume": 3092
     },
     {
       "question": "Will the highest temperature in Toronto be 21°C on August 23?",
@@ -2673,11 +2756,11 @@
         21,
         21
       ],
-      "bid": 0.44,
-      "ask": 0.44,
-      "price": 0.44,
+      "bid": 0.415,
+      "ask": 0.415,
+      "price": 0.415,
       "spread": 0,
-      "volume": 1870
+      "volume": 1997
     },
     {
       "question": "Will the highest temperature in Toronto be 22°C on August 23?",
@@ -2686,11 +2769,11 @@
         22,
         22
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.215,
+      "ask": 0.215,
+      "price": 0.215,
       "spread": 0,
-      "volume": 2638
+      "volume": 2646
     },
     {
       "question": "Will the highest temperature in Toronto be 23°C on August 23?",
@@ -2699,11 +2782,11 @@
         23,
         23
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.011,
+      "ask": 0.011,
+      "price": 0.011,
       "spread": 0,
-      "volume": 1162
+      "volume": 1187
     },
     {
       "question": "Will the highest temperature in Toronto be 24°C on August 23?",
