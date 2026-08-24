@@ -1,0 +1,248 @@
+{
+  "city": "atlanta",
+  "city_name": "Atlanta",
+  "date": "2026-08-25",
+  "unit": "F",
+  "station": "KATL",
+  "event_end_date": "2026-08-25T12:00:00Z",
+  "hours_at_discovery": 34,
+  "status": "open",
+  "position": null,
+  "positions": [],
+  "actual_temp": null,
+  "resolved_outcome": null,
+  "pnl": null,
+  "forecast_snapshots": [
+    {
+      "ts": "2026-08-24T02:00:20.599Z",
+      "horizon": "D+1",
+      "hours_left": 34,
+      "ecmwf": 91,
+      "hrrr": 95,
+      "metar": null,
+      "best": 92.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 91,
+          "gfs_seamless": 95,
+          "icon_seamless": 91
+        },
+        "mean": 92.2,
+        "spread": 2.8,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          92,
+          92,
+          92,
+          86,
+          91,
+          89,
+          88,
+          92,
+          93,
+          88,
+          92,
+          89,
+          92,
+          91,
+          94,
+          93,
+          94,
+          88,
+          92,
+          91,
+          92,
+          94,
+          94,
+          88,
+          92,
+          90,
+          90,
+          90,
+          92,
+          87,
+          92,
+          89,
+          87,
+          89,
+          89,
+          95,
+          90,
+          91,
+          86,
+          92,
+          88,
+          89,
+          86,
+          91,
+          89,
+          93,
+          89,
+          90,
+          88,
+          94
+        ],
+        "membersSource": "ecmwf_ens"
+      }
+    }
+  ],
+  "market_snapshots": [
+    {
+      "ts": "2026-08-24T02:00:20.599Z",
+      "top_bucket": "92-93F",
+      "top_price": 0.425,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.425,
+      "top2_sum": 0.74
+    }
+  ],
+  "all_outcomes": [
+    {
+      "question": "Will the highest temperature in Atlanta be 85°F or below on August 25?",
+      "market_id": "3828421",
+      "range": [
+        -999,
+        85
+      ],
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
+      "spread": 0,
+      "volume": 5
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be between 86-87°F on August 25?",
+      "market_id": "3828422",
+      "range": [
+        86,
+        87
+      ],
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
+      "spread": 0,
+      "volume": 0
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be between 88-89°F on August 25?",
+      "market_id": "3828423",
+      "range": [
+        88,
+        89
+      ],
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
+      "spread": 0,
+      "volume": 20
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be between 90-91°F on August 25?",
+      "market_id": "3828424",
+      "range": [
+        90,
+        91
+      ],
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
+      "spread": 0,
+      "volume": 0
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be between 92-93°F on August 25?",
+      "market_id": "3828425",
+      "range": [
+        92,
+        93
+      ],
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
+      "spread": 0,
+      "volume": 83
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be between 94-95°F on August 25?",
+      "market_id": "3828426",
+      "range": [
+        94,
+        95
+      ],
+      "bid": 0.245,
+      "ask": 0.245,
+      "price": 0.245,
+      "spread": 0,
+      "volume": 2
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be between 96-97°F on August 25?",
+      "market_id": "3828427",
+      "range": [
+        96,
+        97
+      ],
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
+      "spread": 0,
+      "volume": 0
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be between 98-99°F on August 25?",
+      "market_id": "3828428",
+      "range": [
+        98,
+        99
+      ],
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
+      "spread": 0,
+      "volume": 5
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be between 100-101°F on August 25?",
+      "market_id": "3828429",
+      "range": [
+        100,
+        101
+      ],
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
+      "spread": 0,
+      "volume": 0
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be between 102-103°F on August 25?",
+      "market_id": "3828430",
+      "range": [
+        102,
+        103
+      ],
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
+      "spread": 0,
+      "volume": 0
+    },
+    {
+      "question": "Will the highest temperature in Atlanta be 104°F or higher on August 25?",
+      "market_id": "3828431",
+      "range": [
+        104,
+        999
+      ],
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
+      "spread": 0,
+      "volume": 0
+    }
+  ],
+  "created_at": "2026-08-24T02:00:21.092Z"
+}

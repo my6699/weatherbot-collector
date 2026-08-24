@@ -1,0 +1,248 @@
+{
+  "city": "dallas",
+  "city_name": "Dallas",
+  "date": "2026-08-25",
+  "unit": "F",
+  "station": "KDAL",
+  "event_end_date": "2026-08-25T12:00:00Z",
+  "hours_at_discovery": 34,
+  "status": "open",
+  "position": null,
+  "positions": [],
+  "actual_temp": null,
+  "resolved_outcome": null,
+  "pnl": null,
+  "forecast_snapshots": [
+    {
+      "ts": "2026-08-24T02:00:15.900Z",
+      "horizon": "D+1",
+      "hours_left": 34,
+      "ecmwf": 111,
+      "hrrr": 105,
+      "metar": null,
+      "best": 108.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 111,
+          "gfs_seamless": 105,
+          "icon_seamless": 107
+        },
+        "mean": 108.4,
+        "spread": 3.4,
+        "gap": 6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          111,
+          109,
+          113,
+          111,
+          111,
+          112,
+          111,
+          112,
+          111,
+          107,
+          112,
+          112,
+          111,
+          110,
+          108,
+          107,
+          111,
+          110,
+          104,
+          110,
+          110,
+          111,
+          112,
+          108,
+          111,
+          111,
+          113,
+          109,
+          108,
+          113,
+          111,
+          112,
+          110,
+          111,
+          111,
+          110,
+          111,
+          111,
+          108,
+          108,
+          112,
+          111,
+          106,
+          111,
+          110,
+          110,
+          109,
+          111,
+          109,
+          110
+        ],
+        "membersSource": "ecmwf_ens"
+      }
+    }
+  ],
+  "market_snapshots": [
+    {
+      "ts": "2026-08-24T02:00:15.900Z",
+      "top_bucket": "102-103F",
+      "top_price": 0.425,
+      "top2_bucket": "102-105F",
+      "top2_price": 0.25,
+      "top2_sum": 0.675
+    }
+  ],
+  "all_outcomes": [
+    {
+      "question": "Will the highest temperature in Dallas be 99°F or below on August 25?",
+      "market_id": "3828410",
+      "range": [
+        -999,
+        99
+      ],
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
+      "spread": 0,
+      "volume": 10
+    },
+    {
+      "question": "Will the highest temperature in Dallas be between 100-101°F on August 25?",
+      "market_id": "3828411",
+      "range": [
+        100,
+        101
+      ],
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
+      "spread": 0,
+      "volume": 0
+    },
+    {
+      "question": "Will the highest temperature in Dallas be between 102-103°F on August 25?",
+      "market_id": "3828412",
+      "range": [
+        102,
+        103
+      ],
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
+      "spread": 0,
+      "volume": 64
+    },
+    {
+      "question": "Will the highest temperature in Dallas be between 104-105°F on August 25?",
+      "market_id": "3828413",
+      "range": [
+        104,
+        105
+      ],
+      "bid": 0.25,
+      "ask": 0.25,
+      "price": 0.25,
+      "spread": 0,
+      "volume": 45
+    },
+    {
+      "question": "Will the highest temperature in Dallas be between 106-107°F on August 25?",
+      "market_id": "3828414",
+      "range": [
+        106,
+        107
+      ],
+      "bid": 0.14,
+      "ask": 0.14,
+      "price": 0.14,
+      "spread": 0,
+      "volume": 0
+    },
+    {
+      "question": "Will the highest temperature in Dallas be between 108-109°F on August 25?",
+      "market_id": "3828415",
+      "range": [
+        108,
+        109
+      ],
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
+      "spread": 0,
+      "volume": 0
+    },
+    {
+      "question": "Will the highest temperature in Dallas be between 110-111°F on August 25?",
+      "market_id": "3828416",
+      "range": [
+        110,
+        111
+      ],
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
+      "spread": 0,
+      "volume": 10
+    },
+    {
+      "question": "Will the highest temperature in Dallas be between 112-113°F on August 25?",
+      "market_id": "3828417",
+      "range": [
+        112,
+        113
+      ],
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
+      "spread": 0,
+      "volume": 10
+    },
+    {
+      "question": "Will the highest temperature in Dallas be between 114-115°F on August 25?",
+      "market_id": "3828418",
+      "range": [
+        114,
+        115
+      ],
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
+      "spread": 0,
+      "volume": 10
+    },
+    {
+      "question": "Will the highest temperature in Dallas be between 116-117°F on August 25?",
+      "market_id": "3828419",
+      "range": [
+        116,
+        117
+      ],
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
+      "spread": 0,
+      "volume": 5
+    },
+    {
+      "question": "Will the highest temperature in Dallas be 118°F or higher on August 25?",
+      "market_id": "3828420",
+      "range": [
+        118,
+        999
+      ],
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
+      "spread": 0,
+      "volume": 5
+    }
+  ],
+  "created_at": "2026-08-24T02:00:16.386Z"
+}
