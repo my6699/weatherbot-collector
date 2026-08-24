@@ -6,10 +6,10 @@
   "station": "SBGR",
   "event_end_date": "2026-08-24T12:00:00Z",
   "hours_at_discovery": 34,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 18,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2787,6 +2787,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-24T16:58:10.377Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 18.9,
+      "hrrr": 21.5,
+      "metar": 17,
+      "best": 20.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 18.9,
+          "gfs_seamless": 21.5,
+          "icon_seamless": 22.3
+        },
+        "mean": 20.4,
+        "spread": 1.9,
+        "gap": 2.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          17.3,
+          18.8,
+          16.8,
+          21.1,
+          19.4,
+          19.7,
+          17,
+          17,
+          19,
+          20.9,
+          19.6,
+          18.7,
+          19.4,
+          18.3,
+          18.3,
+          17.7,
+          20.7,
+          18.6,
+          19.1,
+          18.9,
+          18,
+          19.2,
+          16.8,
+          18.8,
+          18.6,
+          20.3,
+          17.4,
+          18.8,
+          18.7,
+          18.4,
+          18,
+          17.6,
+          18.9,
+          18.3,
+          19,
+          18.3,
+          18.5,
+          18.1,
+          19.4,
+          18.4,
+          15.7,
+          20.7,
+          18.7,
+          18.5,
+          18.3,
+          19.9,
+          18.7,
+          20.5,
+          18.7,
+          17.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -3085,6 +3160,14 @@
       "top2_bucket": "19-20C",
       "top2_price": 0.31,
       "top2_sum": 0.595
+    },
+    {
+      "ts": "2026-08-24T16:58:10.377Z",
+      "top_bucket": "18-18C",
+      "top_price": 0.955,
+      "top2_bucket": "18-19C",
+      "top2_price": 0.04,
+      "top2_sum": 0.995
     }
   ],
   "all_outcomes": [
@@ -3134,11 +3217,11 @@
         18,
         18
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.955,
+      "ask": 0.955,
+      "price": 0.955,
       "spread": 0,
-      "volume": 2474
+      "volume": 5465
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 19°C on August 24?",
@@ -3147,11 +3230,11 @@
         19,
         19
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 3867
+      "volume": 4761
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 20°C on August 24?",
@@ -3160,11 +3243,11 @@
         20,
         20
       ],
-      "bid": 0.31,
-      "ask": 0.31,
-      "price": 0.31,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 2474
+      "volume": 3189
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 21°C on August 24?",
@@ -3173,11 +3256,11 @@
         21,
         21
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 1390
+      "volume": 2085
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 22°C on August 24?",
@@ -3186,11 +3269,11 @@
         22,
         22
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1350
+      "volume": 1891
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 23°C on August 24?",
@@ -3199,11 +3282,11 @@
         23,
         23
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 896
+      "volume": 1306
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 24°C on August 24?",
@@ -3212,11 +3295,11 @@
         24,
         24
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 382
+      "volume": 654
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 25°C or higher on August 24?",
@@ -3225,11 +3308,11 @@
         25,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 159
+      "volume": 251
     }
   ],
   "created_at": "2026-08-23T02:02:29.334Z"

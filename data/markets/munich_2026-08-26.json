@@ -837,6 +837,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-24T16:57:56.499Z",
+      "horizon": "D+2",
+      "hours_left": 43,
+      "ecmwf": 23,
+      "hrrr": 27.1,
+      "metar": null,
+      "best": 24.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 23,
+          "gfs_seamless": 27.1,
+          "icon_seamless": 23.6
+        },
+        "mean": 24.4,
+        "spread": 2.8,
+        "gap": 4.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          22.4,
+          22.9,
+          23.5,
+          22.9,
+          24.6,
+          24,
+          23.1,
+          22.6,
+          24.3,
+          23.2,
+          23.9,
+          23.3,
+          23.6,
+          23,
+          24.1,
+          24.5,
+          22.8,
+          22.8,
+          24.7,
+          23.1,
+          23.2,
+          24.5,
+          23.2,
+          21.3,
+          22.8,
+          25,
+          23.2,
+          25,
+          24.1,
+          22.3,
+          23.9,
+          23.6,
+          24.8,
+          22.7,
+          22,
+          24.1,
+          22.7,
+          22.9,
+          24.1,
+          22.4,
+          23.5,
+          24,
+          23.5,
+          23.9,
+          21.3,
+          23.8,
+          22.8,
+          22.7,
+          24.8,
+          23.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -927,6 +1002,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.395,
       "top2_sum": 0.645
+    },
+    {
+      "ts": "2026-08-24T16:57:56.499Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.34,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.34,
+      "top2_sum": 0.59
     }
   ],
   "all_outcomes": [
@@ -941,7 +1024,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 23
+      "volume": 40
     },
     {
       "question": "Will the highest temperature in Munich be 22°C on August 26?",
@@ -976,11 +1059,11 @@
         24,
         24
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 0
+      "volume": 99
     },
     {
       "question": "Will the highest temperature in Munich be 25°C on August 26?",
@@ -989,9 +1072,9 @@
         25,
         25
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.13,
+      "ask": 0.13,
+      "price": 0.13,
       "spread": 0,
       "volume": 221
     },
@@ -1015,11 +1098,11 @@
         27,
         27
       ],
-      "bid": 0.395,
-      "ask": 0.395,
-      "price": 0.395,
+      "bid": 0.34,
+      "ask": 0.34,
+      "price": 0.34,
       "spread": 0,
-      "volume": 157
+      "volume": 162
     },
     {
       "question": "Will the highest temperature in Munich be 28°C on August 26?",
@@ -1028,9 +1111,9 @@
         28,
         28
       ],
-      "bid": 0.22,
-      "ask": 0.22,
-      "price": 0.22,
+      "bid": 0.215,
+      "ask": 0.215,
+      "price": 0.215,
       "spread": 0,
       "volume": 18
     },
