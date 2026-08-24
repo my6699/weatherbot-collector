@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.136,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -1917,6 +1917,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-24T09:08:00.228Z",
+      "horizon": "D+1",
+      "hours_left": 26.9,
+      "ecmwf": 16.7,
+      "hrrr": 15.4,
+      "metar": null,
+      "best": 16.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 16.7,
+          "gfs_seamless": 15.4,
+          "icon_seamless": 15.5
+        },
+        "mean": 16.1,
+        "spread": 0.7,
+        "gap": 1.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          16.6,
+          16.2,
+          16.5,
+          16.2,
+          16.4,
+          16.5,
+          16.5,
+          16.1,
+          17.1,
+          16.6,
+          16.3,
+          16.5,
+          16.7,
+          16.8,
+          16.8,
+          16.4,
+          16.7,
+          16.4,
+          16.1,
+          16.7,
+          16.6,
+          16.1,
+          16.1,
+          16.6,
+          16.3,
+          15.6,
+          16.5,
+          16.6,
+          16.7,
+          16.1,
+          16.9,
+          16.2,
+          16.4,
+          16.5,
+          16.6,
+          16.5,
+          16.2,
+          16.4,
+          16.1,
+          16.2,
+          16.9,
+          16.1,
+          17.2,
+          16.4,
+          16.6,
+          16.8,
+          17,
+          16.1,
+          16.7,
+          16.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2119,6 +2193,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.255,
       "top2_sum": 0.83
+    },
+    {
+      "ts": "2026-08-24T09:08:00.228Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.525,
+      "top2_bucket": "16-17C",
+      "top2_price": 0.27,
+      "top2_sum": 0.795
     }
   ],
   "all_outcomes": [
@@ -2129,11 +2211,11 @@
         -999,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 239
+      "volume": 650
     },
     {
       "question": "Will the highest temperature in Wellington be 11°C on August 25?",
@@ -2142,11 +2224,11 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 239
+      "volume": 521
     },
     {
       "question": "Will the highest temperature in Wellington be 12°C on August 25?",
@@ -2185,7 +2267,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 998
+      "volume": 1048
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on August 25?",
@@ -2198,7 +2280,7 @@
       "ask": 0.135,
       "price": 0.135,
       "spread": 0,
-      "volume": 2118
+      "volume": 2151
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on August 25?",
@@ -2207,11 +2289,11 @@
         16,
         16
       ],
-      "bid": 0.575,
-      "ask": 0.575,
-      "price": 0.575,
+      "bid": 0.525,
+      "ask": 0.525,
+      "price": 0.525,
       "spread": 0,
-      "volume": 3213
+      "volume": 3643
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on August 25?",
@@ -2220,11 +2302,11 @@
         17,
         17
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.27,
+      "ask": 0.27,
+      "price": 0.27,
       "spread": 0,
-      "volume": 2239
+      "volume": 2303
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on August 25?",
@@ -2237,7 +2319,7 @@
       "ask": 0.035,
       "price": 0.035,
       "spread": 0,
-      "volume": 880
+      "volume": 937
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on August 25?",
@@ -2246,11 +2328,11 @@
         19,
         19
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 221
+      "volume": 238
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C or higher on August 25?",
@@ -2263,7 +2345,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 1211
+      "volume": 1261
     }
   ],
   "created_at": "2026-08-23T05:48:52.286Z"
