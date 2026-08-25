@@ -686,6 +686,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-25T15:08:51.316Z",
+      "horizon": "D+2",
+      "hours_left": 44.9,
+      "ecmwf": 31.5,
+      "hrrr": 29.6,
+      "metar": null,
+      "best": 30.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.5,
+          "gfs_seamless": 29.6,
+          "icon_seamless": 29.9
+        },
+        "mean": 30.6,
+        "spread": 1,
+        "gap": 1.9,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          31.9,
+          31.9,
+          30.5,
+          31.2,
+          30.9,
+          29.6,
+          30.1,
+          30.4,
+          30.2,
+          31,
+          31.9,
+          31.1,
+          32.2,
+          31.7,
+          30.6,
+          31.3,
+          30.4,
+          32.6,
+          30.6,
+          30.3,
+          32.2,
+          31.9,
+          31.5,
+          30.7,
+          30.7,
+          30.6,
+          29.9,
+          31.6,
+          30.8,
+          30.3,
+          31.3,
+          30.2,
+          31.4,
+          31.2,
+          31.2,
+          31.3,
+          31.9,
+          30.5,
+          31.3,
+          31,
+          33.2,
+          30.7,
+          30.6,
+          31.6,
+          30.1,
+          32.7,
+          31,
+          30.6,
+          30.4,
+          31.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -760,6 +835,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.255,
       "top2_sum": 0.57
+    },
+    {
+      "ts": "2026-08-25T15:08:51.316Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.32,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.255,
+      "top2_sum": 0.575
     }
   ],
   "all_outcomes": [
@@ -823,9 +906,9 @@
         29
       ],
       "bid": 0.14,
-      "ask": 0.145,
+      "ask": 0.14,
       "price": 0.14,
-      "spread": 0.005,
+      "spread": 0,
       "volume": 12
     },
     {
@@ -835,11 +918,11 @@
         30,
         30
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.32,
+      "ask": 0.32,
+      "price": 0.32,
       "spread": 0,
-      "volume": 252
+      "volume": 258
     },
     {
       "question": "Will the highest temperature in Munich be 31°C on August 27?",
