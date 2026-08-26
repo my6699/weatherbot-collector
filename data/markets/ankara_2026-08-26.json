@@ -6,7 +6,7 @@
   "station": "LTAC",
   "event_end_date": "2026-08-26T12:00:00Z",
   "hours_at_discovery": 54.9,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -3824,6 +3824,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-26T11:48:47.638Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 31.1,
+      "hrrr": 31.5,
+      "metar": 31,
+      "best": 31.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.1,
+          "gfs_seamless": 31.5,
+          "icon_seamless": 31.7
+        },
+        "mean": 31.3,
+        "spread": 0.4,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          31,
+          31.3,
+          31,
+          31.4,
+          31.2,
+          31.3,
+          30.9,
+          31,
+          30.9,
+          31.4,
+          30.9,
+          30.9,
+          30.9,
+          31,
+          31,
+          31,
+          31,
+          31.2,
+          31.1,
+          31.3,
+          30.9,
+          31.1,
+          31.1,
+          31.4,
+          31.3,
+          31.5,
+          31.3,
+          31.2,
+          31.2,
+          31.1,
+          30.9,
+          30.8,
+          31,
+          31.3,
+          31,
+          31.4,
+          31.1,
+          31.2,
+          31.3,
+          31.5,
+          31.1,
+          31.3,
+          31.3,
+          30.8,
+          31.6,
+          31.1,
+          31.4,
+          31.2,
+          31.1,
+          30.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -4234,6 +4308,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.285,
       "top2_sum": 0.96
+    },
+    {
+      "ts": "2026-08-26T11:48:47.638Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.56,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.315,
+      "top2_sum": 0.875
     }
   ],
   "all_outcomes": [
@@ -4283,11 +4365,11 @@
         31,
         31
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.049,
+      "ask": 0.049,
+      "price": 0.049,
       "spread": 0,
-      "volume": 2231
+      "volume": 2787
     },
     {
       "question": "Will the highest temperature in Ankara be 32°C on August 26?",
@@ -4296,11 +4378,11 @@
         32,
         32
       ],
-      "bid": 0.675,
-      "ask": 0.675,
-      "price": 0.675,
+      "bid": 0.56,
+      "ask": 0.56,
+      "price": 0.56,
       "spread": 0,
-      "volume": 4197
+      "volume": 4530
     },
     {
       "question": "Will the highest temperature in Ankara be 33°C on August 26?",
@@ -4309,11 +4391,11 @@
         33,
         33
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 3455
+      "volume": 3668
     },
     {
       "question": "Will the highest temperature in Ankara be 34°C on August 26?",
@@ -4326,7 +4408,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 2609
+      "volume": 2817
     },
     {
       "question": "Will the highest temperature in Ankara be 35°C on August 26?",
@@ -4339,7 +4421,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 633
+      "volume": 803
     },
     {
       "question": "Will the highest temperature in Ankara be 36°C on August 26?",

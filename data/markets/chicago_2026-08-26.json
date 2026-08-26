@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-08-26T12:00:00Z",
   "hours_at_discovery": 34.1,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2411,6 +2411,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-26T11:48:30.688Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 79,
+      "hrrr": 87,
+      "metar": 71,
+      "best": 82.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 79,
+          "gfs_seamless": 87,
+          "icon_seamless": 84
+        },
+        "mean": 82.4,
+        "spread": 4.6,
+        "gap": 8,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          79,
+          79,
+          79,
+          79,
+          78,
+          79,
+          81,
+          79,
+          80,
+          79,
+          79,
+          80,
+          79,
+          79,
+          80,
+          81,
+          79,
+          79,
+          80,
+          80,
+          80,
+          79,
+          80,
+          80,
+          78,
+          79,
+          79,
+          78,
+          80,
+          79,
+          80,
+          79,
+          78,
+          80,
+          79,
+          80,
+          79,
+          78,
+          80,
+          80,
+          80,
+          80,
+          79,
+          79,
+          80,
+          80,
+          78,
+          79,
+          79,
+          77
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2669,6 +2744,14 @@
       "top2_bucket": "82-85F",
       "top2_price": 0.515,
       "top2_sum": 0.87
+    },
+    {
+      "ts": "2026-08-26T11:48:30.688Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.565,
+      "top2_bucket": "82-85F",
+      "top2_price": 0.565,
+      "top2_sum": 0.885
     }
   ],
   "all_outcomes": [
@@ -2692,9 +2775,9 @@
         76,
         77
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
       "volume": 405
     },
@@ -2705,9 +2788,9 @@
         78,
         79
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
       "volume": 1718
     },
@@ -2718,9 +2801,9 @@
         80,
         81
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
       "volume": 538
     },
@@ -2731,11 +2814,11 @@
         82,
         83
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.32,
+      "ask": 0.32,
+      "price": 0.32,
       "spread": 0,
-      "volume": 1862
+      "volume": 1873
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on August 26?",
@@ -2744,9 +2827,9 @@
         84,
         85
       ],
-      "bid": 0.515,
-      "ask": 0.515,
-      "price": 0.515,
+      "bid": 0.565,
+      "ask": 0.565,
+      "price": 0.565,
       "spread": 0,
       "volume": 2041
     },
@@ -2757,9 +2840,9 @@
         86,
         87
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
       "volume": 1471
     },
@@ -2783,9 +2866,9 @@
         90,
         91
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 358
     },

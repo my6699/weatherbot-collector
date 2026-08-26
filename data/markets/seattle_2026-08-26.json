@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-08-26T12:00:00Z",
   "hours_at_discovery": 34.1,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -2406,6 +2406,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-26T11:48:36.924Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 75,
+      "hrrr": 77,
+      "metar": 59,
+      "best": 75.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 75,
+          "gfs_seamless": 77,
+          "icon_seamless": 74
+        },
+        "mean": 75.4,
+        "spread": 1.6,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          74,
+          76,
+          74,
+          74,
+          73,
+          74,
+          75,
+          75,
+          76,
+          77,
+          74,
+          74,
+          73,
+          75,
+          74,
+          75,
+          75,
+          76,
+          74,
+          73,
+          75,
+          75,
+          73,
+          74,
+          75,
+          75,
+          76,
+          75,
+          75,
+          74,
+          75,
+          76,
+          75,
+          76,
+          74,
+          74,
+          75,
+          74,
+          74,
+          75,
+          75,
+          74,
+          75,
+          75,
+          76,
+          74,
+          74,
+          74,
+          75,
+          74
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2664,6 +2738,14 @@
       "top2_bucket": "76-79F",
       "top2_price": 0.255,
       "top2_sum": 0.68
+    },
+    {
+      "ts": "2026-08-26T11:48:36.924Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.425,
+      "top2_bucket": "76-79F",
+      "top2_price": 0.235,
+      "top2_sum": 0.66
     }
   ],
   "all_outcomes": [
@@ -2678,7 +2760,7 @@
       "ask": 0.005,
       "price": 0.005,
       "spread": 0,
-      "volume": 99
+      "volume": 109
     },
     {
       "question": "Will the highest temperature in Seattle be between 72-73°F on August 26?",
@@ -2717,7 +2799,7 @@
       "ask": 0.425,
       "price": 0.425,
       "spread": 0,
-      "volume": 1708
+      "volume": 1795
     },
     {
       "question": "Will the highest temperature in Seattle be between 78-79°F on August 26?",
@@ -2726,11 +2808,11 @@
         78,
         79
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.235,
+      "ask": 0.235,
+      "price": 0.235,
       "spread": 0,
-      "volume": 2228
+      "volume": 2697
     },
     {
       "question": "Will the highest temperature in Seattle be between 80-81°F on August 26?",
@@ -2739,11 +2821,11 @@
         80,
         81
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 882
+      "volume": 897
     },
     {
       "question": "Will the highest temperature in Seattle be between 82-83°F on August 26?",
@@ -2752,9 +2834,9 @@
         82,
         83
       ],
-      "bid": 0.03,
-      "ask": 0.03,
-      "price": 0.03,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
       "volume": 299
     },
@@ -2769,7 +2851,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 198
+      "volume": 298
     },
     {
       "question": "Will the highest temperature in Seattle be between 86-87°F on August 26?",
