@@ -981,6 +981,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-26T23:41:01.333Z",
+      "horizon": "D+2",
+      "hours_left": 36.3,
+      "ecmwf": 19.9,
+      "hrrr": 22.4,
+      "metar": null,
+      "best": 21.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.9,
+          "gfs_seamless": 22.4,
+          "icon_seamless": 23.6
+        },
+        "mean": 21.4,
+        "spread": 2.2,
+        "gap": 2.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          20.6,
+          20.3,
+          20.3,
+          20,
+          19.6,
+          20.9,
+          20.1,
+          20.7,
+          18.8,
+          17.9,
+          19.9,
+          20.5,
+          19.7,
+          20.4,
+          19.8,
+          19.7,
+          19.9,
+          19.6,
+          20.8,
+          19.2,
+          20.7,
+          20.1,
+          20.4,
+          18.9,
+          19.7,
+          19.7,
+          20.9,
+          20.2,
+          19.8,
+          18.5,
+          19.9,
+          21,
+          20.8,
+          20.5,
+          20.4,
+          22,
+          18.9,
+          21.6,
+          18.7,
+          19.2,
+          20.2,
+          19.5,
+          19.5,
+          19.7,
+          19.8,
+          19.2,
+          19.1,
+          19.1,
+          20.4,
+          20.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1087,6 +1162,14 @@
       "top2_bucket": "22-23C",
       "top2_price": 0.39,
       "top2_sum": 0.625
+    },
+    {
+      "ts": "2026-08-26T23:41:01.333Z",
+      "top_bucket": "23-23C",
+      "top_price": 0.4,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.4,
+      "top2_sum": 0.635
     }
   ],
   "all_outcomes": [
@@ -1101,7 +1184,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 105
+      "volume": 108
     },
     {
       "question": "Will the highest temperature in Paris be 17°C on August 28?",
@@ -1114,7 +1197,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 26
+      "volume": 29
     },
     {
       "question": "Will the highest temperature in Paris be 18°C on August 28?",
@@ -1123,11 +1206,11 @@
         18,
         18
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 26
+      "volume": 29
     },
     {
       "question": "Will the highest temperature in Paris be 19°C on August 28?",
@@ -1149,9 +1232,9 @@
         20,
         20
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
       "volume": 78
     },
@@ -1162,11 +1245,11 @@
         21,
         21
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 225
+      "volume": 508
     },
     {
       "question": "Will the highest temperature in Paris be 22°C on August 28?",
@@ -1179,7 +1262,7 @@
       "ask": 0.235,
       "price": 0.235,
       "spread": 0,
-      "volume": 367
+      "volume": 979
     },
     {
       "question": "Will the highest temperature in Paris be 23°C on August 28?",
@@ -1188,11 +1271,11 @@
         23,
         23
       ],
-      "bid": 0.39,
-      "ask": 0.39,
-      "price": 0.39,
+      "bid": 0.4,
+      "ask": 0.4,
+      "price": 0.4,
       "spread": 0,
-      "volume": 498
+      "volume": 644
     },
     {
       "question": "Will the highest temperature in Paris be 24°C on August 28?",
@@ -1205,7 +1288,7 @@
       "ask": 0.23,
       "price": 0.23,
       "spread": 0,
-      "volume": 266
+      "volume": 326
     },
     {
       "question": "Will the highest temperature in Paris be 25°C on August 28?",
@@ -1214,11 +1297,11 @@
         25,
         25
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 301
+      "volume": 357
     },
     {
       "question": "Will the highest temperature in Paris be 26°C or higher on August 28?",
@@ -1227,11 +1310,11 @@
         26,
         999
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 117
+      "volume": 159
     }
   ],
   "created_at": "2026-08-26T04:58:33.826Z"
