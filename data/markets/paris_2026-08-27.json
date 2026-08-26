@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.096,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 2
     }
   ],
   "actual_temp": null,
@@ -2238,6 +2238,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-26T13:20:20.358Z",
+      "horizon": "D+1",
+      "hours_left": 22.7,
+      "ecmwf": 27.8,
+      "hrrr": 28.5,
+      "metar": null,
+      "best": 27.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.8,
+          "gfs_seamless": 28.5,
+          "icon_seamless": 26.1
+        },
+        "mean": 27.7,
+        "spread": 1.6,
+        "gap": 0.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          28.8,
+          28,
+          30.3,
+          28.7,
+          27.6,
+          31,
+          28.2,
+          32.5,
+          30.5,
+          29.1,
+          29,
+          28.1,
+          28.2,
+          32,
+          29.5,
+          30.3,
+          31.8,
+          28,
+          28.9,
+          28.1,
+          29,
+          30,
+          27.9,
+          28,
+          27.7,
+          30.2,
+          28.7,
+          29.8,
+          29,
+          28.4,
+          28.3,
+          29.6,
+          29.6,
+          29.1,
+          28.1,
+          30.5,
+          26.9,
+          29.8,
+          27.9,
+          27.8,
+          30.1,
+          27.3,
+          28.8,
+          31.3,
+          28.8,
+          29.8,
+          28.3,
+          30.2,
+          29.1,
+          28.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2472,6 +2547,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.365,
       "top2_sum": 0.715
+    },
+    {
+      "ts": "2026-08-26T13:20:20.358Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.355,
+      "top2_bucket": "27-28C",
+      "top2_price": 0.355,
+      "top2_sum": 0.67
     }
   ],
   "all_outcomes": [
@@ -2499,7 +2582,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 917
+      "volume": 1052
     },
     {
       "question": "Will the highest temperature in Paris be 22°C on August 27?",
@@ -2512,7 +2595,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 449
+      "volume": 477
     },
     {
       "question": "Will the highest temperature in Paris be 23°C on August 27?",
@@ -2525,7 +2608,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 231
+      "volume": 258
     },
     {
       "question": "Will the highest temperature in Paris be 24°C on August 27?",
@@ -2538,7 +2621,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 1304
+      "volume": 1334
     },
     {
       "question": "Will the highest temperature in Paris be 25°C on August 27?",
@@ -2547,11 +2630,11 @@
         25,
         25
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 2499
+      "volume": 2734
     },
     {
       "question": "Will the highest temperature in Paris be 26°C on August 27?",
@@ -2560,11 +2643,11 @@
         26,
         26
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 1613
+      "volume": 1675
     },
     {
       "question": "Will the highest temperature in Paris be 27°C on August 27?",
@@ -2573,11 +2656,11 @@
         27,
         27
       ],
-      "bid": 0.35,
-      "ask": 0.35,
-      "price": 0.35,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 1151
+      "volume": 1413
     },
     {
       "question": "Will the highest temperature in Paris be 28°C on August 27?",
@@ -2586,11 +2669,11 @@
         28,
         28
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 2452
+      "volume": 2527
     },
     {
       "question": "Will the highest temperature in Paris be 29°C on August 27?",
@@ -2599,11 +2682,11 @@
         29,
         29
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 2167
+      "volume": 2289
     },
     {
       "question": "Will the highest temperature in Paris be 30°C or higher on August 27?",
@@ -2612,11 +2695,11 @@
         30,
         999
       ],
-      "bid": 0.03,
-      "ask": 0.03,
-      "price": 0.03,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 588
+      "volume": 615
     }
   ],
   "created_at": "2026-08-25T05:50:00.174Z"
