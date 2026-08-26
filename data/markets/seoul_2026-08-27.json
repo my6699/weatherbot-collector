@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.152
+      "stop_price": 0.152,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -1862,6 +1863,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-26T08:03:22.525Z",
+      "horizon": "D+1",
+      "hours_left": 27.9,
+      "ecmwf": 28.9,
+      "hrrr": 26.5,
+      "metar": null,
+      "best": 28.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 28.9,
+          "gfs_seamless": 26.5,
+          "icon_seamless": 29.5
+        },
+        "mean": 28.3,
+        "spread": 1.8,
+        "gap": 2.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          28.7,
+          28.7,
+          27.8,
+          29.7,
+          28,
+          28.6,
+          29.6,
+          29.2,
+          28.2,
+          27.4,
+          29.4,
+          28.6,
+          29.5,
+          30,
+          29.5,
+          29.6,
+          29.8,
+          28.6,
+          28,
+          28.6,
+          28.9,
+          28.8,
+          27.6,
+          28.6,
+          28.9,
+          29.5,
+          29.3,
+          29.1,
+          28.6,
+          29.1,
+          29.4,
+          28.4,
+          28.2,
+          29.5,
+          29.1,
+          28.3,
+          29.3,
+          29,
+          28.9,
+          29.4,
+          27.5,
+          28.1,
+          28.9,
+          29.7,
+          29.2,
+          29.3,
+          29,
+          28.1,
+          29.2,
+          29
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -2056,6 +2132,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.295,
       "top2_sum": 0.695
+    },
+    {
+      "ts": "2026-08-26T08:03:22.525Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.4,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.295,
+      "top2_sum": 0.695
     }
   ],
   "all_outcomes": [
@@ -2131,9 +2215,9 @@
         28,
         28
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
       "volume": 522
     },
@@ -2183,9 +2267,9 @@
         32,
         32
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
       "volume": 734
     },
@@ -2196,9 +2280,9 @@
         33,
         999
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
       "volume": 818
     }
