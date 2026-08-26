@@ -58,7 +58,8 @@
       "closed_at": null,
       "stop_price": 0.15,
       "trailing_activated": true,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "stop_pending": true
     }
   ],
   "actual_temp": null,
@@ -1111,6 +1112,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-26T20:07:39.907Z",
+      "horizon": "D+1",
+      "hours_left": 15.9,
+      "ecmwf": 79,
+      "hrrr": 81,
+      "metar": null,
+      "best": 80.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 79,
+          "gfs_seamless": 81,
+          "icon_seamless": 82
+        },
+        "mean": 80.2,
+        "spread": 1.8,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          79,
+          79,
+          76,
+          80,
+          79,
+          80,
+          77,
+          79,
+          81,
+          79,
+          78,
+          78,
+          79,
+          80,
+          79,
+          79,
+          79,
+          79,
+          80,
+          79,
+          78,
+          79,
+          80,
+          80,
+          79,
+          78,
+          77,
+          79,
+          79,
+          78,
+          78,
+          81,
+          79,
+          78,
+          82,
+          78,
+          79,
+          79,
+          79,
+          80,
+          78,
+          78,
+          79,
+          78,
+          79,
+          80,
+          78,
+          80,
+          78,
+          79
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1225,6 +1300,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.295,
       "top2_sum": 0.73
+    },
+    {
+      "ts": "2026-08-26T20:07:39.907Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.445,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.295,
+      "top2_sum": 0.74
     }
   ],
   "all_outcomes": [
@@ -1261,9 +1344,9 @@
         72,
         73
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
       "volume": 80
     },
@@ -1274,9 +1357,9 @@
         74,
         75
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
       "volume": 73
     },
@@ -1300,11 +1383,11 @@
         78,
         79
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.155,
+      "ask": 0.155,
+      "price": 0.155,
       "spread": 0,
-      "volume": 788
+      "volume": 940
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on August 27?",
@@ -1313,11 +1396,11 @@
         80,
         81
       ],
-      "bid": 0.435,
-      "ask": 0.435,
-      "price": 0.435,
+      "bid": 0.445,
+      "ask": 0.445,
+      "price": 0.445,
       "spread": 0,
-      "volume": 208
+      "volume": 243
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on August 27?",
@@ -1330,7 +1413,7 @@
       "ask": 0.295,
       "price": 0.295,
       "spread": 0,
-      "volume": 297
+      "volume": 307
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on August 27?",
