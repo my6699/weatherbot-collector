@@ -312,6 +312,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-26T10:01:12.242Z",
+      "horizon": "D+2",
+      "hours_left": 50,
+      "ecmwf": 32,
+      "hrrr": 34,
+      "metar": null,
+      "best": 32.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32,
+          "gfs_seamless": 34,
+          "icon_seamless": 30.7
+        },
+        "mean": 32.3,
+        "spread": 1.7,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          29.7,
+          33.5,
+          32.4,
+          32,
+          33,
+          30.1,
+          31.2,
+          31.7,
+          31.8,
+          33.1,
+          32.1,
+          31.7,
+          34.5,
+          31.2,
+          31.8,
+          31.9,
+          30.3,
+          32.3,
+          30.5,
+          32.3,
+          32.1,
+          31.9,
+          32.1,
+          31.3,
+          33.6,
+          32.2,
+          33.4,
+          30.8,
+          30.8,
+          31,
+          32.4,
+          31.9,
+          32.9,
+          33.2,
+          32.9,
+          33.6,
+          31.7,
+          32,
+          32.4,
+          31.6,
+          31.7,
+          33.4,
+          31,
+          32.5,
+          32.3,
+          32,
+          32.2,
+          30.7,
+          32.9,
+          32.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -346,6 +421,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.315,
       "top2_sum": 0.655
+    },
+    {
+      "ts": "2026-08-26T10:01:12.242Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.345,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.295,
+      "top2_sum": 0.64
     }
   ],
   "all_outcomes": [
@@ -356,11 +439,11 @@
         -999,
         26
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 0
+      "volume": 105
     },
     {
       "question": "Will the highest temperature in Lucknow be 27°C on August 28?",
@@ -373,7 +456,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 0
+      "volume": 5
     },
     {
       "question": "Will the highest temperature in Lucknow be 28°C on August 28?",
@@ -382,9 +465,9 @@
         28,
         28
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
       "volume": 24
     },
@@ -395,9 +478,9 @@
         29,
         29
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
       "volume": 0
     },
@@ -421,9 +504,9 @@
         31,
         31
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
       "volume": 0
     },
@@ -434,9 +517,9 @@
         32,
         32
       ],
-      "bid": 0.34,
-      "ask": 0.34,
-      "price": 0.34,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
       "volume": 0
     },
@@ -447,9 +530,9 @@
         33,
         33
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.295,
+      "ask": 0.295,
+      "price": 0.295,
       "spread": 0,
       "volume": 0
     },
@@ -460,11 +543,11 @@
         34,
         34
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 0
+      "volume": 6
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on August 28?",
@@ -486,9 +569,9 @@
         36,
         999
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
       "volume": 24
     }

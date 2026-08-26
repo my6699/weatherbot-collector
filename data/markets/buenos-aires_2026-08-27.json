@@ -537,6 +537,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-26T10:01:33.165Z",
+      "horizon": "D+1",
+      "hours_left": 26,
+      "ecmwf": 17.7,
+      "hrrr": 18.6,
+      "metar": null,
+      "best": 17.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 17.7,
+          "gfs_seamless": 18.6,
+          "icon_seamless": 17.4
+        },
+        "mean": 17.9,
+        "spread": 0.7,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          17.2,
+          19.2,
+          19.8,
+          19.2,
+          18.3,
+          20,
+          18.9,
+          19.4,
+          20,
+          19.2,
+          18.7,
+          19.7,
+          19,
+          20,
+          19.5,
+          18.3,
+          19.5,
+          20.8,
+          19.6,
+          19.4,
+          19.8,
+          19.2,
+          18.6,
+          19.3,
+          18.8,
+          19.9,
+          20.2,
+          17.9,
+          19.4,
+          18.5,
+          18.3,
+          18.3,
+          18.4,
+          18.7,
+          19.8,
+          18.4,
+          18,
+          21.5,
+          15.7,
+          19.9,
+          18.6,
+          17.4,
+          20.2,
+          19.8,
+          19.2,
+          20.1,
+          18.4,
+          18.6,
+          19.6,
+          16.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -595,6 +669,14 @@
       "top2_bucket": "18-19C",
       "top2_price": 0.345,
       "top2_sum": 0.63
+    },
+    {
+      "ts": "2026-08-26T10:01:33.165Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.355,
+      "top2_bucket": "18-19C",
+      "top2_price": 0.355,
+      "top2_sum": 0.64
     }
   ],
   "all_outcomes": [
@@ -609,7 +691,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 0
+      "volume": 5
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 15°C on August 27?",
@@ -622,7 +704,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 22
+      "volume": 33
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 16°C on August 27?",
@@ -635,7 +717,7 @@
       "ask": 0.06,
       "price": 0.06,
       "spread": 0,
-      "volume": 15
+      "volume": 51
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on August 27?",
@@ -661,7 +743,7 @@
       "ask": 0.285,
       "price": 0.285,
       "spread": 0,
-      "volume": 353
+      "volume": 397
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 19°C on August 27?",
@@ -670,11 +752,11 @@
         19,
         19
       ],
-      "bid": 0.345,
-      "ask": 0.345,
-      "price": 0.345,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 107
+      "volume": 112
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on August 27?",
@@ -683,9 +765,9 @@
         20,
         20
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.19,
+      "ask": 0.19,
+      "price": 0.19,
       "spread": 0,
       "volume": 0
     },
@@ -709,11 +791,11 @@
         22,
         22
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 21
+      "volume": 59
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on August 27?",
@@ -726,7 +808,7 @@
       "ask": 0.01,
       "price": 0.01,
       "spread": 0,
-      "volume": 0
+      "volume": 5
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C or higher on August 27?",
@@ -739,7 +821,7 @@
       "ask": 0.01,
       "price": 0.01,
       "spread": 0,
-      "volume": 0
+      "volume": 5
     }
   ],
   "created_at": "2026-08-26T02:05:12.287Z"
