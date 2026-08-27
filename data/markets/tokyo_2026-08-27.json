@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-08-27T12:00:00Z",
   "hours_at_discovery": 54.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 30,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2709,6 +2709,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-27T20:34:39.107Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 27,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -2999,6 +3010,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-27T20:34:39.107Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.9995,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.9995,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -3009,9 +3028,9 @@
         -999,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2561
     },
@@ -3022,11 +3041,11 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1738
+      "volume": 1889
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on August 27?",
@@ -3035,9 +3054,9 @@
         29,
         29
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 24535
     },
@@ -3052,7 +3071,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 20273
+      "volume": 27275
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on August 27?",
@@ -3061,11 +3080,11 @@
         31,
         31
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8295
+      "volume": 8324
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C on August 27?",
@@ -3074,11 +3093,11 @@
         32,
         32
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6724
+      "volume": 6744
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on August 27?",
@@ -3087,11 +3106,11 @@
         33,
         33
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4682
+      "volume": 4704
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on August 27?",
@@ -3100,11 +3119,11 @@
         34,
         34
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6114
+      "volume": 6134
     },
     {
       "question": "Will the highest temperature in Tokyo be 35°C on August 27?",
@@ -3113,11 +3132,11 @@
         35,
         35
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2109
+      "volume": 2139
     },
     {
       "question": "Will the highest temperature in Tokyo be 36°C on August 27?",
@@ -3126,9 +3145,9 @@
         36,
         36
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3533
     },
@@ -3139,12 +3158,13 @@
         37,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1813
     }
   ],
-  "created_at": "2026-08-25T05:50:07.920Z"
+  "created_at": "2026-08-25T05:50:07.920Z",
+  "metar_max": 30
 }

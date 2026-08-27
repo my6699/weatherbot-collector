@@ -6,7 +6,7 @@
   "station": "RKSI",
   "event_end_date": "2026-08-27T12:00:00Z",
   "hours_at_discovery": 54.2,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3867557",
     "question": "Will the highest temperature in Seoul (Incheon) be 29°C on August 27?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-08-27T09:56:18.457Z",
       "stop_price": 0.21,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 30,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -2764,6 +2765,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-27T20:34:37.265Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 26,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -3054,6 +3066,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-27T20:34:37.265Z",
+      "top_bucket": "30-30C",
+      "top_price": 1,
+      "top2_bucket": "29-30C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -3064,9 +3084,9 @@
         -999,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 361
     },
@@ -3077,9 +3097,9 @@
         24,
         24
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 361
     },
@@ -3090,9 +3110,9 @@
         25,
         25
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 361
     },
@@ -3103,9 +3123,9 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 497
     },
@@ -3116,11 +3136,11 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3680
+      "volume": 3946
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 28°C on August 27?",
@@ -3129,11 +3149,11 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 5043
+      "volume": 5199
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 29°C on August 27?",
@@ -3142,11 +3162,11 @@
         29,
         29
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6144
+      "volume": 6235
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 30°C on August 27?",
@@ -3155,11 +3175,11 @@
         30,
         30
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 10547
+      "price": 1,
+      "spread": -0.001,
+      "volume": 16043
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 31°C on August 27?",
@@ -3168,11 +3188,11 @@
         31,
         31
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8502
+      "volume": 8766
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 32°C on August 27?",
@@ -3181,9 +3201,9 @@
         32,
         32
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 4111
     },
@@ -3194,12 +3214,13 @@
         33,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2167
     }
   ],
-  "created_at": "2026-08-25T05:50:06.499Z"
+  "created_at": "2026-08-25T05:50:06.499Z",
+  "metar_max": 30
 }
