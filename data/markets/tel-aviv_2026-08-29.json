@@ -56,7 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.16
+      "stop_price": 0.16,
+      "forecast_change_streak": 0,
+      "stop_pending": true
     }
   ],
   "actual_temp": null,
@@ -286,6 +288,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-28T18:48:18.240Z",
+      "horizon": "D+1",
+      "hours_left": 17.2,
+      "ecmwf": 33.5,
+      "hrrr": 33.6,
+      "metar": null,
+      "best": 33.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.5,
+          "gfs_seamless": 33.6,
+          "icon_seamless": 33
+        },
+        "mean": 33.4,
+        "spread": 0.4,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          33.4,
+          33.4,
+          33.7,
+          34.1,
+          33.4,
+          33.5,
+          33.8,
+          33.4,
+          33.2,
+          34,
+          33.4,
+          34.2,
+          33.8,
+          33.7,
+          33.1,
+          33.5,
+          33.1,
+          33.2,
+          33.9,
+          33.7,
+          33.4,
+          34,
+          33,
+          33.5,
+          33.5,
+          33.5,
+          33.3,
+          33.3,
+          33.5,
+          33.7,
+          33.6,
+          34.1,
+          33.5,
+          33.1,
+          33.4,
+          33.3,
+          34,
+          33.7,
+          33.4,
+          33.7,
+          32.9,
+          33.8,
+          33.6,
+          33.8,
+          33.1,
+          33.7,
+          33.5,
+          33.5,
+          33.5,
+          33.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -312,6 +388,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.205,
       "top2_sum": 0.835
+    },
+    {
+      "ts": "2026-08-28T18:48:18.240Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.705,
+      "top2_bucket": "33-34C",
+      "top2_price": 0.17,
+      "top2_sum": 0.875
     }
   ],
   "all_outcomes": [
@@ -322,11 +406,11 @@
         -999,
         29
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 208
+      "volume": 342
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 30°C on August 29?",
@@ -335,11 +419,11 @@
         30,
         30
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 49
+      "volume": 254
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 31°C on August 29?",
@@ -348,11 +432,11 @@
         31,
         31
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 246
+      "volume": 700
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 32°C on August 29?",
@@ -361,11 +445,11 @@
         32,
         32
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.13,
+      "ask": 0.13,
+      "price": 0.13,
       "spread": 0,
-      "volume": 716
+      "volume": 1285
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on August 29?",
@@ -374,11 +458,11 @@
         33,
         33
       ],
-      "bid": 0.63,
-      "ask": 0.63,
-      "price": 0.63,
+      "bid": 0.705,
+      "ask": 0.705,
+      "price": 0.705,
       "spread": 0,
-      "volume": 1245
+      "volume": 2079
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on August 29?",
@@ -387,11 +471,11 @@
         34,
         34
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
       "spread": 0,
-      "volume": 1159
+      "volume": 2076
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on August 29?",
@@ -400,11 +484,11 @@
         35,
         35
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 302
+      "volume": 584
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 36°C on August 29?",
@@ -413,11 +497,11 @@
         36,
         36
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 151
+      "volume": 229
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 37°C on August 29?",
@@ -426,11 +510,11 @@
         37,
         37
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 169
+      "volume": 247
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 38°C on August 29?",
@@ -439,11 +523,11 @@
         38,
         38
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 335
+      "volume": 608
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 39°C or higher on August 29?",
@@ -452,11 +536,11 @@
         39,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 190
+      "volume": 334
     }
   ],
   "created_at": "2026-08-27T09:56:26.021Z"

@@ -6,10 +6,10 @@
   "station": "NZWN",
   "event_end_date": "2026-08-28T12:00:00Z",
   "hours_at_discovery": 55,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 16,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1281,6 +1281,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-28T18:48:25.241Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 11,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1419,6 +1430,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.004,
       "top2_sum": 0.9995
+    },
+    {
+      "ts": "2026-08-28T18:48:25.241Z",
+      "top_bucket": "16-16C",
+      "top_price": 1,
+      "top2_bucket": "15-16C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1429,9 +1448,9 @@
         -999,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 667
     },
@@ -1442,9 +1461,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 520
     },
@@ -1455,9 +1474,9 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1446
     },
@@ -1468,9 +1487,9 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3762
     },
@@ -1481,11 +1500,11 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 9485
+      "volume": 9497
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on August 28?",
@@ -1494,11 +1513,11 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 13336
+      "volume": 13377
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on August 28?",
@@ -1507,11 +1526,11 @@
         16,
         16
       ],
-      "bid": 0.9955,
-      "ask": 0.9955,
-      "price": 0.9955,
-      "spread": 0,
-      "volume": 8322
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 10289
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on August 28?",
@@ -1520,11 +1539,11 @@
         17,
         17
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 11341
+      "volume": 11496
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on August 28?",
@@ -1533,11 +1552,11 @@
         18,
         18
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4813
+      "volume": 4913
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on August 28?",
@@ -1546,9 +1565,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 646
     },
@@ -1559,12 +1578,13 @@
         20,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 557
     }
   ],
-  "created_at": "2026-08-26T04:58:52.897Z"
+  "created_at": "2026-08-26T04:58:52.897Z",
+  "metar_max": 16
 }
