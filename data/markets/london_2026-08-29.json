@@ -6,7 +6,7 @@
   "station": "EGLC",
   "event_end_date": "2026-08-29T12:00:00Z",
   "hours_at_discovery": 39.4,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "3926316",
     "question": "Will the highest temperature in London be 19°C on August 29?",
@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.9,
       "opened_at": "2026-08-28T18:48:01.689Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.86,
+      "exit_price": 0.0005,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-29T14:32:00.665Z",
       "stop_price": 0.14,
       "forecast_change_streak": 2,
       "trailing_activated": true
@@ -438,6 +438,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-29T14:32:00.665Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 21.5,
+      "hrrr": 20.2,
+      "metar": 20,
+      "best": 20.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 21.5,
+          "gfs_seamless": 20.2,
+          "icon_seamless": 20.5
+        },
+        "mean": 20.9,
+        "spread": 0.7,
+        "gap": 1.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          21,
+          20.7,
+          21.3,
+          21.7,
+          20.5,
+          22.2,
+          20.8,
+          21.4,
+          21.4,
+          22,
+          21.1,
+          21.7,
+          21.9,
+          22,
+          22.5,
+          21.5,
+          21.6,
+          21.4,
+          21.3,
+          20.8,
+          21.2,
+          21.4,
+          21.8,
+          22.1,
+          21.3,
+          21.2,
+          21.6,
+          21.5,
+          21,
+          21.8,
+          21.2,
+          22,
+          21.4,
+          21.2,
+          21.1,
+          22,
+          21.7,
+          22.3,
+          20.7,
+          21.5,
+          21.6,
+          21.3,
+          22.3,
+          21.2,
+          21.1,
+          21.4,
+          20.9,
+          22.3,
+          21.1,
+          21.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -480,6 +554,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.385,
       "top2_sum": 0.68
+    },
+    {
+      "ts": "2026-08-29T14:32:00.665Z",
+      "top_bucket": "20-20C",
+      "top_price": 0.82,
+      "top2_bucket": "20-21C",
+      "top2_price": 0.145,
+      "top2_sum": 0.965
     }
   ],
   "all_outcomes": [
@@ -520,7 +602,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 10474
+      "volume": 11474
     },
     {
       "question": "Will the highest temperature in London be 19°C on August 29?",
@@ -529,11 +611,11 @@
         19,
         19
       ],
-      "bid": 0.18,
-      "ask": 0.18,
-      "price": 0.18,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 17982
+      "volume": 27794
     },
     {
       "question": "Will the highest temperature in London be 20°C on August 29?",
@@ -542,11 +624,11 @@
         20,
         20
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.82,
+      "ask": 0.82,
+      "price": 0.82,
       "spread": 0,
-      "volume": 10472
+      "volume": 14975
     },
     {
       "question": "Will the highest temperature in London be 21°C on August 29?",
@@ -555,11 +637,11 @@
         21,
         21
       ],
-      "bid": 0.385,
-      "ask": 0.385,
-      "price": 0.385,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 13114
+      "volume": 15583
     },
     {
       "question": "Will the highest temperature in London be 22°C on August 29?",
@@ -568,11 +650,11 @@
         22,
         22
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 9856
+      "volume": 15584
     },
     {
       "question": "Will the highest temperature in London be 23°C on August 29?",
@@ -581,11 +663,11 @@
         23,
         23
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 8471
+      "volume": 11765
     },
     {
       "question": "Will the highest temperature in London be 24°C on August 29?",
@@ -594,11 +676,11 @@
         24,
         24
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6373
+      "volume": 12370
     },
     {
       "question": "Will the highest temperature in London be 25°C on August 29?",

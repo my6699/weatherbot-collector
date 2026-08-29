@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-08-29T12:00:00Z",
   "hours_at_discovery": 50.1,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "3926330",
     "question": "Will the highest temperature in Paris be 21°C on August 29?",
@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 2.3,
       "opened_at": "2026-08-28T18:48:04.116Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.85,
+      "exit_price": 0.0005,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-29T14:32:02.764Z",
       "stop_price": 0.096,
       "forecast_change_streak": 0
     }
@@ -513,6 +513,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-29T14:32:02.764Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 24.3,
+      "hrrr": 21.3,
+      "metar": 19,
+      "best": 23.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.3,
+          "gfs_seamless": 21.3,
+          "icon_seamless": 22.9
+        },
+        "mean": 23.1,
+        "spread": 1.8,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          23.4,
+          22.8,
+          24,
+          23.6,
+          23.5,
+          25.2,
+          24.6,
+          23.1,
+          23.4,
+          24.9,
+          22.7,
+          24.8,
+          22.9,
+          23.8,
+          24.6,
+          24.7,
+          22.4,
+          23.5,
+          23.6,
+          22.7,
+          22,
+          22.5,
+          24.1,
+          24.2,
+          23.1,
+          23.8,
+          24,
+          24,
+          22.9,
+          22.8,
+          22.3,
+          23.6,
+          23.7,
+          22.5,
+          23.5,
+          24.3,
+          23.4,
+          23.6,
+          23.7,
+          22.6,
+          22.9,
+          23.4,
+          23.4,
+          23.3,
+          23.5,
+          23,
+          22.3,
+          23,
+          22.5,
+          23.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -563,6 +638,14 @@
       "top2_bucket": "22-23C",
       "top2_price": 0.34,
       "top2_sum": 0.71
+    },
+    {
+      "ts": "2026-08-29T14:32:02.764Z",
+      "top_bucket": "22-22C",
+      "top_price": 0.77,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.17,
+      "top2_sum": 0.94
     }
   ],
   "all_outcomes": [
@@ -590,7 +673,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1873
+      "volume": 1886
     },
     {
       "question": "Will the highest temperature in Paris be 17°C on August 29?",
@@ -603,7 +686,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1346
+      "volume": 1353
     },
     {
       "question": "Will the highest temperature in Paris be 18°C on August 29?",
@@ -616,7 +699,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1424
+      "volume": 1453
     },
     {
       "question": "Will the highest temperature in Paris be 19°C on August 29?",
@@ -638,11 +721,11 @@
         20,
         20
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4441
+      "volume": 6856
     },
     {
       "question": "Will the highest temperature in Paris be 21°C on August 29?",
@@ -651,11 +734,11 @@
         21,
         21
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5241
+      "volume": 8382
     },
     {
       "question": "Will the highest temperature in Paris be 22°C on August 29?",
@@ -664,11 +747,11 @@
         22,
         22
       ],
-      "bid": 0.37,
-      "ask": 0.37,
-      "price": 0.37,
+      "bid": 0.77,
+      "ask": 0.77,
+      "price": 0.77,
       "spread": 0,
-      "volume": 5757
+      "volume": 10910
     },
     {
       "question": "Will the highest temperature in Paris be 23°C on August 29?",
@@ -677,11 +760,11 @@
         23,
         23
       ],
-      "bid": 0.34,
-      "ask": 0.34,
-      "price": 0.34,
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
       "spread": 0,
-      "volume": 7301
+      "volume": 11544
     },
     {
       "question": "Will the highest temperature in Paris be 24°C on August 29?",
@@ -690,11 +773,11 @@
         24,
         24
       ],
-      "bid": 0.15,
-      "ask": 0.15,
-      "price": 0.15,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 7355
+      "volume": 11610
     },
     {
       "question": "Will the highest temperature in Paris be 25°C or higher on August 29?",
@@ -703,11 +786,11 @@
         25,
         999
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 4516
+      "volume": 10811
     }
   ],
   "created_at": "2026-08-27T09:56:13.242Z"

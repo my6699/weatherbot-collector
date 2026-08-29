@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-08-29T12:00:00Z",
   "hours_at_discovery": 50.1,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3926362",
     "question": "Will the highest temperature in Wellington be 14°C on August 29?",
@@ -56,10 +56,11 @@
       "exit_price": 0.065,
       "close_reason": "stop_loss",
       "closed_at": "2026-08-28T18:48:25.241Z",
-      "stop_price": 0.16
+      "stop_price": 0.16,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 15,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -507,6 +508,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-29T14:32:30.089Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 12,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -557,6 +569,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-08-29T14:32:30.089Z",
+      "top_bucket": "15-15C",
+      "top_price": 1,
+      "top2_bucket": "14-15C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -567,9 +587,9 @@
         -999,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 900
     },
@@ -580,9 +600,9 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2860
     },
@@ -593,9 +613,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 345
     },
@@ -606,11 +626,11 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1050
+      "volume": 1070
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on August 29?",
@@ -619,9 +639,9 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2426
     },
@@ -632,9 +652,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 23107
     },
@@ -645,11 +665,11 @@
         15,
         15
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 10375
+      "price": 1,
+      "spread": -0.001,
+      "volume": 10393
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on August 29?",
@@ -658,11 +678,11 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 10718
+      "volume": 10723
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on August 29?",
@@ -671,9 +691,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 9335
     },
@@ -684,11 +704,11 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6529
+      "volume": 6530
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C or higher on August 29?",
@@ -697,12 +717,13 @@
         19,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1249
     }
   ],
-  "created_at": "2026-08-27T09:56:31.462Z"
+  "created_at": "2026-08-27T09:56:31.462Z",
+  "metar_max": 15
 }
