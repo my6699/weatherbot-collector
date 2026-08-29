@@ -7,8 +7,58 @@
   "event_end_date": "2026-08-30T12:00:00Z",
   "hours_at_discovery": 54.5,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "3945522",
+    "question": "Will the highest temperature in Munich be 28°C on August 30?",
+    "bucket_low": 28,
+    "bucket_high": 28,
+    "entry_price": 0.21,
+    "bid_at_entry": 0.18,
+    "spread": 0.03,
+    "shares": 190.48,
+    "cost": 40,
+    "p": 0.56,
+    "ev": 1.6667,
+    "edge": 0.2302,
+    "kelly": 0.1134,
+    "forecast_temp": 28.05,
+    "forecast_src": "ensemble",
+    "sigma": 1.6,
+    "opened_at": "2026-08-29T09:07:47.218Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.144
+  },
+  "positions": [
+    {
+      "market_id": "3945522",
+      "question": "Will the highest temperature in Munich be 28°C on August 30?",
+      "bucket_low": 28,
+      "bucket_high": 28,
+      "entry_price": 0.21,
+      "bid_at_entry": 0.18,
+      "spread": 0.03,
+      "shares": 190.48,
+      "cost": 40,
+      "p": 0.56,
+      "ev": 1.6667,
+      "edge": 0.2302,
+      "kelly": 0.1134,
+      "forecast_temp": 28.05,
+      "forecast_src": "ensemble",
+      "sigma": 1.6,
+      "opened_at": "2026-08-29T09:07:47.218Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.144
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -236,6 +286,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-29T09:07:47.218Z",
+      "horizon": "D+1",
+      "hours_left": 26.9,
+      "ecmwf": 27.8,
+      "hrrr": 26.1,
+      "metar": null,
+      "best": 26.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.8,
+          "gfs_seamless": 26.1,
+          "icon_seamless": 25.1
+        },
+        "mean": 26.8,
+        "spread": 1.6,
+        "gap": 1.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          27.5,
+          27.3,
+          27.8,
+          27.7,
+          28.3,
+          28,
+          27.3,
+          27.6,
+          27.3,
+          27.9,
+          26.3,
+          27.8,
+          28.1,
+          27.3,
+          27,
+          28.2,
+          26.6,
+          28,
+          27.6,
+          27.4,
+          26.8,
+          28.1,
+          28.3,
+          28.2,
+          26.3,
+          27.1,
+          27.5,
+          27.6,
+          27.1,
+          28.1,
+          27.2,
+          27.8,
+          27.2,
+          27.8,
+          27.2,
+          27.6,
+          28,
+          28.2,
+          27.7,
+          27.9,
+          27.4,
+          27.7,
+          27,
+          27.9,
+          27.2,
+          28,
+          27.3,
+          27.3,
+          28.7,
+          27
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -262,6 +387,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.39,
       "top2_sum": 0.64
+    },
+    {
+      "ts": "2026-08-29T09:07:47.218Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.42,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.42,
+      "top2_sum": 0.705
     }
   ],
   "all_outcomes": [
@@ -285,11 +418,11 @@
         22,
         22
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 0
+      "volume": 8
     },
     {
       "question": "Will the highest temperature in Munich be 23°C on August 30?",
@@ -315,7 +448,7 @@
       "ask": 0.02,
       "price": 0.02,
       "spread": 0,
-      "volume": 0
+      "volume": 8
     },
     {
       "question": "Will the highest temperature in Munich be 25°C on August 30?",
@@ -324,11 +457,11 @@
         25,
         25
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 72
+      "volume": 398
     },
     {
       "question": "Will the highest temperature in Munich be 26°C on August 30?",
@@ -337,11 +470,11 @@
         26,
         26
       ],
-      "bid": 0.25,
-      "ask": 0.25,
-      "price": 0.25,
+      "bid": 0.285,
+      "ask": 0.285,
+      "price": 0.285,
       "spread": 0,
-      "volume": 628
+      "volume": 964
     },
     {
       "question": "Will the highest temperature in Munich be 27°C on August 30?",
@@ -350,11 +483,11 @@
         27,
         27
       ],
-      "bid": 0.39,
-      "ask": 0.39,
-      "price": 0.39,
+      "bid": 0.42,
+      "ask": 0.42,
+      "price": 0.42,
       "spread": 0,
-      "volume": 378
+      "volume": 501
     },
     {
       "question": "Will the highest temperature in Munich be 28°C on August 30?",
@@ -363,11 +496,11 @@
         28,
         28
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
-      "volume": 520
+      "volume": 1523
     },
     {
       "question": "Will the highest temperature in Munich be 29°C on August 30?",
@@ -376,11 +509,11 @@
         29,
         29
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 174
+      "volume": 218
     },
     {
       "question": "Will the highest temperature in Munich be 30°C on August 30?",
@@ -389,11 +522,11 @@
         30,
         30
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 77
+      "volume": 87
     },
     {
       "question": "Will the highest temperature in Munich be 31°C or higher on August 30?",
@@ -402,11 +535,11 @@
         31,
         999
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 77
+      "volume": 104
     }
   ],
   "created_at": "2026-08-28T05:27:45.210Z"

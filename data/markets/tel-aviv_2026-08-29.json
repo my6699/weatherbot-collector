@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-08-28T05:27:56.418Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -34.29,
+      "exit_price": 0.03,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-08-29T09:07:57.916Z",
       "stop_price": 0.16,
       "forecast_change_streak": 0,
       "stop_pending": true
@@ -436,6 +436,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-29T09:07:57.916Z",
+      "horizon": "D+0",
+      "hours_left": 2.9,
+      "ecmwf": 33.5,
+      "hrrr": 33.6,
+      "metar": 32,
+      "best": 33.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.5,
+          "gfs_seamless": 33.6,
+          "icon_seamless": 33.1
+        },
+        "mean": 33.5,
+        "spread": 0.4,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          34.3,
+          33.3,
+          34.3,
+          33.9,
+          33.7,
+          33.5,
+          34.5,
+          34.2,
+          33.7,
+          33.7,
+          33.9,
+          33.5,
+          33.4,
+          33.7,
+          33.9,
+          33.4,
+          33.9,
+          33.8,
+          34.4,
+          34,
+          34.1,
+          33.8,
+          33.5,
+          34.1,
+          33.4,
+          34.5,
+          34,
+          33.9,
+          33.4,
+          33.9,
+          33.6,
+          33.9,
+          33.4,
+          33.7,
+          33.8,
+          33.7,
+          33.5,
+          34.1,
+          34.1,
+          34.4,
+          33.5,
+          33.9,
+          33.1,
+          33.5,
+          33.9,
+          33.6,
+          34,
+          33.9,
+          34,
+          34.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -478,6 +552,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.155,
       "top2_sum": 0.975
+    },
+    {
+      "ts": "2026-08-29T09:07:57.916Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.8,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.8,
+      "top2_sum": 0.92
     }
   ],
   "all_outcomes": [
@@ -514,11 +596,11 @@
         31,
         31
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 912
+      "volume": 1920
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 32°C on August 29?",
@@ -527,11 +609,11 @@
         32,
         32
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 1513
+      "volume": 2296
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on August 29?",
@@ -540,11 +622,11 @@
         33,
         33
       ],
-      "bid": 0.82,
-      "ask": 0.82,
-      "price": 0.82,
+      "bid": 0.8,
+      "ask": 0.8,
+      "price": 0.8,
       "spread": 0,
-      "volume": 2899
+      "volume": 3296
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on August 29?",
@@ -553,11 +635,11 @@
         34,
         34
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 2639
+      "volume": 3479
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on August 29?",
