@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-08-28T12:00:00Z",
   "hours_at_discovery": 26.1,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3922318",
     "question": "Will the highest temperature in Toronto be 22°C on August 28?",
@@ -51,18 +51,19 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-08-27T20:34:49.794Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 267.69,
+      "exit_price": 1,
+      "close_reason": "resolved",
+      "closed_at": "2026-08-29T02:15:33.160Z",
       "stop_price": 0.096,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
-  "resolved_outcome": null,
-  "pnl": null,
+  "actual_temp": 22,
+  "resolved_outcome": "win",
+  "pnl": 267.69,
   "forecast_snapshots": [
     {
       "ts": "2026-08-27T09:56:26.926Z",
@@ -540,5 +541,6 @@
       "volume": 289
     }
   ],
-  "created_at": "2026-08-27T09:56:27.361Z"
+  "created_at": "2026-08-27T09:56:27.361Z",
+  "metar_max": 22
 }
