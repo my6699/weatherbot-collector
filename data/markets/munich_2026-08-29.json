@@ -6,7 +6,7 @@
   "station": "EDDM",
   "event_end_date": "2026-08-29T12:00:00Z",
   "hours_at_discovery": 50.1,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "3926386",
     "question": "Will the highest temperature in Munich be 26°C on August 29?",
@@ -56,10 +56,11 @@
       "exit_price": 0.03,
       "close_reason": "stop_loss",
       "closed_at": "2026-08-29T02:16:05.912Z",
-      "stop_price": 0.08
+      "stop_price": 0.08,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 25,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -584,6 +585,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-29T18:35:45.253Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 25.3,
+      "hrrr": 23.3,
+      "metar": 19,
+      "best": 24.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.3,
+          "gfs_seamless": 23.3,
+          "icon_seamless": 24.6
+        },
+        "mean": 24.6,
+        "spread": 1.3,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          25.1,
+          25.2,
+          25.2,
+          25.1,
+          24.7,
+          24.9,
+          25.3,
+          25.3,
+          25.3,
+          25.5,
+          25,
+          25.1,
+          25.3,
+          25.3,
+          25.7,
+          25.3,
+          25.2,
+          24.9,
+          25.1,
+          24.8,
+          25.3,
+          25.3,
+          25.2,
+          25,
+          25.1,
+          25.3,
+          25.1,
+          25.2,
+          25.1,
+          25.4,
+          25.3,
+          25.3,
+          24.9,
+          25.2,
+          24.5,
+          25.6,
+          25.6,
+          25.3,
+          25.4,
+          25,
+          25.7,
+          25.3,
+          25.1,
+          25.2,
+          25.3,
+          26.1,
+          25.3,
+          25,
+          25.1,
+          24.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -642,6 +718,14 @@
       "top2_bucket": "25-26C",
       "top2_price": 0.055,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-08-29T18:35:45.253Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.9995,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -708,7 +792,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 8179
+      "volume": 8184
     },
     {
       "question": "Will the highest temperature in Munich be 24°C on August 29?",
@@ -721,7 +805,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6609
+      "volume": 8500
     },
     {
       "question": "Will the highest temperature in Munich be 25°C on August 29?",
@@ -730,11 +814,11 @@
         25,
         25
       ],
-      "bid": 0.94,
-      "ask": 0.94,
-      "price": 0.94,
-      "spread": 0,
-      "volume": 10623
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 14238
     },
     {
       "question": "Will the highest temperature in Munich be 26°C on August 29?",
@@ -743,11 +827,11 @@
         26,
         26
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5583
+      "volume": 9717
     },
     {
       "question": "Will the highest temperature in Munich be 27°C on August 29?",
@@ -756,9 +840,9 @@
         27,
         27
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 4481
     },
@@ -773,7 +857,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3520
+      "volume": 3553
     },
     {
       "question": "Will the highest temperature in Munich be 29°C or higher on August 29?",
@@ -789,5 +873,6 @@
       "volume": 2525
     }
   ],
-  "created_at": "2026-08-27T09:56:15.042Z"
+  "created_at": "2026-08-27T09:56:15.042Z",
+  "metar_max": 16
 }
