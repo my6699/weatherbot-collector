@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-08-30T12:00:00Z",
   "hours_at_discovery": 54.5,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -681,6 +681,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-30T12:57:49.787Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 31.9,
+      "hrrr": 31.3,
+      "metar": 29,
+      "best": 31.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.9,
+          "gfs_seamless": 31.3,
+          "icon_seamless": 32.3
+        },
+        "mean": 31.8,
+        "spread": 0.5,
+        "gap": 0.6,
+        "llmEnhanced": false,
+        "membersMax": [
+          31.1,
+          30.4,
+          30.6,
+          30.1,
+          30.9,
+          29.7,
+          31.6,
+          31.3,
+          31,
+          29.6,
+          31.1,
+          30.4,
+          30,
+          30.2,
+          29.7,
+          31.1,
+          30,
+          31.2,
+          31.4,
+          30.5,
+          30.1,
+          29.7,
+          30.9,
+          29.6,
+          30,
+          30.4,
+          30.4,
+          30.2,
+          31.1,
+          30.1,
+          30.9,
+          31.2,
+          29.7,
+          30.9,
+          29.2,
+          30.7,
+          31.5,
+          31.5,
+          30.8,
+          30.6,
+          30,
+          30.2,
+          30.8,
+          31,
+          31.5,
+          31.1,
+          30.1,
+          29.8,
+          29.9,
+          30
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -755,6 +829,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.105,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-08-30T12:57:49.787Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.9995,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -769,7 +851,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1157
+      "volume": 2157
     },
     {
       "question": "Will the highest temperature in Singapore be 28°C on August 30?",
@@ -795,7 +877,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7419
+      "volume": 7424
     },
     {
       "question": "Will the highest temperature in Singapore be 30°C on August 30?",
@@ -808,7 +890,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 9659
+      "volume": 9785
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on August 30?",
@@ -821,7 +903,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6639
+      "volume": 8623
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on August 30?",
@@ -830,11 +912,11 @@
         32,
         32
       ],
-      "bid": 0.89,
-      "ask": 0.89,
-      "price": 0.89,
-      "spread": 0,
-      "volume": 6016
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 10047
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on August 30?",
@@ -843,11 +925,11 @@
         33,
         33
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7749
+      "volume": 11096
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on August 30?",
@@ -856,11 +938,11 @@
         34,
         34
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4914
+      "volume": 5016
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on August 30?",
@@ -902,5 +984,6 @@
       "volume": 145
     }
   ],
-  "created_at": "2026-08-28T05:27:54.296Z"
+  "created_at": "2026-08-28T05:27:54.296Z",
+  "metar_max": 29
 }
