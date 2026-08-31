@@ -6,10 +6,10 @@
   "station": "KMIA",
   "event_end_date": "2026-08-31T12:00:00Z",
   "hours_at_discovery": 50.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 90.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -908,6 +908,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-31T20:10:02.661Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 89,
+      "hrrr": 88,
+      "metar": 89,
+      "best": 88.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 89,
+          "gfs_seamless": 88,
+          "icon_seamless": 90
+        },
+        "mean": 88.9,
+        "spread": 1.1,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          87,
+          87,
+          87,
+          86,
+          85,
+          88,
+          88,
+          88,
+          88,
+          87,
+          87,
+          88,
+          87,
+          89,
+          88,
+          87,
+          88,
+          89,
+          88,
+          90,
+          88,
+          89,
+          86,
+          88,
+          88,
+          88,
+          89,
+          88,
+          87,
+          89,
+          88,
+          88,
+          90,
+          88,
+          88,
+          84,
+          89,
+          88,
+          88,
+          87,
+          88,
+          88,
+          84,
+          88,
+          86,
+          89,
+          87,
+          85,
+          89,
+          88
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1006,6 +1080,14 @@
       "top2_bucket": "90-93F",
       "top2_price": 0.245,
       "top2_sum": 0.88
+    },
+    {
+      "ts": "2026-08-31T20:10:02.661Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.977,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.0155,
+      "top2_sum": 0.9925
     }
   ],
   "all_outcomes": [
@@ -1055,11 +1137,11 @@
         84,
         85
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1954
+      "volume": 2339
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on August 31?",
@@ -1068,11 +1150,11 @@
         86,
         87
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1695
+      "volume": 2142
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on August 31?",
@@ -1081,11 +1163,11 @@
         88,
         89
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2594
+      "volume": 4930
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on August 31?",
@@ -1094,11 +1176,11 @@
         90,
         91
       ],
-      "bid": 0.635,
-      "ask": 0.635,
-      "price": 0.635,
+      "bid": 0.977,
+      "ask": 0.977,
+      "price": 0.977,
       "spread": 0,
-      "volume": 4623
+      "volume": 8689
     },
     {
       "question": "Will the highest temperature in Miami be between 92-93°F on August 31?",
@@ -1107,11 +1189,11 @@
         92,
         93
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
-      "volume": 5273
+      "volume": 8001
     },
     {
       "question": "Will the highest temperature in Miami be between 94-95°F on August 31?",
@@ -1120,11 +1202,11 @@
         94,
         95
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 982
+      "volume": 2829
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on August 31?",
@@ -1133,11 +1215,11 @@
         96,
         97
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 783
+      "volume": 3187
     },
     {
       "question": "Will the highest temperature in Miami be 98°F or higher on August 31?",
@@ -1146,12 +1228,13 @@
         98,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 975
+      "volume": 1142
     }
   ],
-  "created_at": "2026-08-29T09:07:37.092Z"
+  "created_at": "2026-08-29T09:07:37.092Z",
+  "metar_max": 81
 }

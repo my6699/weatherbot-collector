@@ -25,12 +25,14 @@
     "forecast_src": "ensemble",
     "sigma": 1.15,
     "opened_at": "2026-08-30T23:34:11.261Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null,
-    "stop_price": 0.12
+    "status": "closed",
+    "pnl": -18.75,
+    "exit_price": 0.085,
+    "close_reason": "forecast_changed",
+    "closed_at": "2026-08-31T14:01:48.778Z",
+    "stop_price": 0.12,
+    "forecast_change_streak": 2,
+    "stop_pending": true
   },
   "positions": [
     {
@@ -59,6 +61,31 @@
       "stop_price": 0.12,
       "forecast_change_streak": 2,
       "stop_pending": true
+    },
+    {
+      "market_id": "3992359",
+      "question": "Will the highest temperature in Tokyo be 28°C on September 1?",
+      "bucket_low": 28,
+      "bucket_high": 28,
+      "entry_price": 0.18,
+      "bid_at_entry": 0.16,
+      "spread": 0.02,
+      "shares": 222.22,
+      "cost": 40,
+      "p": 0.64,
+      "ev": 2.5556,
+      "edge": 0.3362,
+      "kelly": 0.1429,
+      "forecast_temp": 27.88,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-08-31T20:11:02.821Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.128
     }
   ],
   "actual_temp": null,
@@ -582,6 +609,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-31T20:11:02.821Z",
+      "horizon": "D+1",
+      "hours_left": 15.8,
+      "ecmwf": 26.9,
+      "hrrr": 27.7,
+      "metar": null,
+      "best": 27.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.9,
+          "gfs_seamless": 27.7,
+          "icon_seamless": 28.2
+        },
+        "mean": 27.4,
+        "spread": 0.8,
+        "gap": 0.8,
+        "llmEnhanced": false,
+        "membersMax": [
+          27.8,
+          28,
+          28.1,
+          27.2,
+          27.1,
+          27.4,
+          27.7,
+          27.8,
+          27.7,
+          27.5,
+          27.9,
+          27.1,
+          26.9,
+          27.3,
+          27.4,
+          28,
+          27.5,
+          27.1,
+          27.8,
+          27.7,
+          27.9,
+          27.6,
+          28.6,
+          27.8,
+          27.7,
+          28.4,
+          27.4,
+          27,
+          27.4,
+          27.5,
+          27.6,
+          27.3,
+          27.9,
+          27.5,
+          27.5,
+          26.7,
+          28,
+          27.3,
+          27.6,
+          28.7,
+          27.5,
+          27.6,
+          27.1,
+          27.7,
+          27.8,
+          27.8,
+          27.6,
+          27.8,
+          28.1,
+          27.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -640,6 +741,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.31,
       "top2_sum": 0.71
+    },
+    {
+      "ts": "2026-08-31T20:11:02.821Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.4,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.31,
+      "top2_sum": 0.71
     }
   ],
   "all_outcomes": [
@@ -650,11 +759,11 @@
         -999,
         26
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 502
+      "volume": 728
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on September 1?",
@@ -663,11 +772,11 @@
         27,
         27
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 556
+      "volume": 1095
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on September 1?",
@@ -676,11 +785,11 @@
         28,
         28
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.16,
+      "ask": 0.16,
+      "price": 0.16,
       "spread": 0,
-      "volume": 1596
+      "volume": 2201
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on September 1?",
@@ -693,7 +802,7 @@
       "ask": 0.4,
       "price": 0.4,
       "spread": 0,
-      "volume": 2106
+      "volume": 2545
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on September 1?",
@@ -706,7 +815,7 @@
       "ask": 0.31,
       "price": 0.31,
       "spread": 0,
-      "volume": 1441
+      "volume": 1957
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on September 1?",
@@ -715,11 +824,11 @@
         31,
         31
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 2928
+      "volume": 3293
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C on September 1?",
@@ -732,7 +841,7 @@
       "ask": 0.035,
       "price": 0.035,
       "spread": 0,
-      "volume": 4524
+      "volume": 5663
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on September 1?",
@@ -741,11 +850,11 @@
         33,
         33
       ],
-      "bid": 0.03,
-      "ask": 0.03,
-      "price": 0.03,
+      "bid": 0.061,
+      "ask": 0.061,
+      "price": 0.061,
       "spread": 0,
-      "volume": 1301
+      "volume": 2279
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on September 1?",
@@ -754,11 +863,11 @@
         34,
         34
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.085,
+      "ask": 0.085,
+      "price": 0.085,
       "spread": 0,
-      "volume": 873
+      "volume": 1407
     },
     {
       "question": "Will the highest temperature in Tokyo be 35°C on September 1?",
@@ -767,9 +876,9 @@
         35,
         35
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.012,
+      "ask": 0.012,
+      "price": 0.012,
       "spread": 0,
       "volume": 1095
     },
@@ -780,9 +889,9 @@
         36,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
       "volume": 2128
     }
