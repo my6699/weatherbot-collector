@@ -383,6 +383,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-31T14:01:01.004Z",
+      "horizon": "D+1",
+      "hours_left": 22,
+      "ecmwf": 98,
+      "hrrr": 97,
+      "metar": null,
+      "best": 97.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 98,
+          "gfs_seamless": 97,
+          "icon_seamless": 95
+        },
+        "mean": 97.1,
+        "spread": 2.1,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          97,
+          100,
+          96,
+          96,
+          100,
+          97,
+          95,
+          99,
+          97,
+          101,
+          99,
+          96,
+          100,
+          99,
+          97,
+          102,
+          98,
+          95,
+          98,
+          96,
+          97,
+          99,
+          99,
+          96,
+          98,
+          96,
+          98,
+          97,
+          99,
+          95,
+          99,
+          99,
+          97,
+          96,
+          99,
+          102,
+          95,
+          96,
+          97,
+          100,
+          98,
+          99,
+          97,
+          99,
+          99,
+          98,
+          96,
+          100,
+          96,
+          97
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -425,6 +500,14 @@
       "top2_bucket": "94-97F",
       "top2_price": 0.325,
       "top2_sum": 0.79
+    },
+    {
+      "ts": "2026-08-31T14:01:01.004Z",
+      "top_bucket": "94-95F",
+      "top_price": 0.485,
+      "top2_bucket": "94-97F",
+      "top2_price": 0.335,
+      "top2_sum": 0.82
     }
   ],
   "all_outcomes": [
@@ -452,7 +535,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 18
+      "volume": 20
     },
     {
       "question": "Will the highest temperature in Atlanta be between 86-87°F on September 1?",
@@ -465,7 +548,7 @@
       "ask": 0.005,
       "price": 0.005,
       "spread": 0,
-      "volume": 127
+      "volume": 180
     },
     {
       "question": "Will the highest temperature in Atlanta be between 88-89°F on September 1?",
@@ -474,11 +557,11 @@
         88,
         89
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 85
+      "volume": 95
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on September 1?",
@@ -491,7 +574,7 @@
       "ask": 0.035,
       "price": 0.035,
       "spread": 0,
-      "volume": 48
+      "volume": 56
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on September 1?",
@@ -500,11 +583,11 @@
         92,
         93
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
-      "volume": 135
+      "volume": 145
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on September 1?",
@@ -513,11 +596,11 @@
         94,
         95
       ],
-      "bid": 0.465,
-      "ask": 0.465,
-      "price": 0.465,
+      "bid": 0.485,
+      "ask": 0.485,
+      "price": 0.485,
       "spread": 0,
-      "volume": 2191
+      "volume": 2349
     },
     {
       "question": "Will the highest temperature in Atlanta be between 96-97°F on September 1?",
@@ -526,11 +609,11 @@
         96,
         97
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.335,
+      "ask": 0.335,
+      "price": 0.335,
       "spread": 0,
-      "volume": 388
+      "volume": 723
     },
     {
       "question": "Will the highest temperature in Atlanta be between 98-99°F on September 1?",
@@ -543,7 +626,7 @@
       "ask": 0.075,
       "price": 0.075,
       "spread": 0,
-      "volume": 149
+      "volume": 330
     },
     {
       "question": "Will the highest temperature in Atlanta be between 100-101°F on September 1?",
@@ -552,11 +635,11 @@
         100,
         101
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 174
+      "volume": 239
     },
     {
       "question": "Will the highest temperature in Atlanta be 102°F or higher on September 1?",
@@ -565,11 +648,11 @@
         102,
         999
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 48
+      "volume": 122
     }
   ],
   "created_at": "2026-08-30T12:57:33.814Z"
