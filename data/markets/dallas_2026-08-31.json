@@ -6,10 +6,10 @@
   "station": "KDAL",
   "event_end_date": "2026-08-31T12:00:00Z",
   "hours_at_discovery": 50.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 100.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -984,6 +984,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-31T23:53:46.930Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 99,
+      "hrrr": 102,
+      "metar": 100,
+      "best": 100.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 99,
+          "gfs_seamless": 102,
+          "icon_seamless": 100
+        },
+        "mean": 100.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          99,
+          99,
+          99,
+          100,
+          99,
+          100,
+          99,
+          99,
+          99,
+          100,
+          100,
+          99,
+          98,
+          99,
+          100,
+          99,
+          98,
+          99,
+          99,
+          100,
+          98,
+          100,
+          99,
+          101,
+          100,
+          99,
+          99,
+          99,
+          99,
+          99,
+          99,
+          100,
+          99,
+          101,
+          100,
+          99,
+          99,
+          99,
+          98,
+          100,
+          99,
+          99,
+          99,
+          100,
+          98,
+          100,
+          99,
+          99,
+          99,
+          99
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1090,6 +1165,14 @@
       "top2_bucket": "100-103F",
       "top2_price": 0.07,
       "top2_sum": 0.965
+    },
+    {
+      "ts": "2026-08-31T23:53:46.930Z",
+      "top_bucket": "100-101F",
+      "top_price": 0.9955,
+      "top2_bucket": "100-103F",
+      "top2_price": 0.0045,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1100,11 +1183,11 @@
         -999,
         89
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 915
+      "volume": 1015
     },
     {
       "question": "Will the highest temperature in Dallas be between 90-91°F on August 31?",
@@ -1143,7 +1226,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1125
+      "volume": 1171
     },
     {
       "question": "Will the highest temperature in Dallas be between 96-97°F on August 31?",
@@ -1156,7 +1239,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4012
+      "volume": 4890
     },
     {
       "question": "Will the highest temperature in Dallas be between 98-99°F on August 31?",
@@ -1169,7 +1252,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 8906
+      "volume": 10123
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on August 31?",
@@ -1178,11 +1261,11 @@
         100,
         101
       ],
-      "bid": 0.895,
-      "ask": 0.895,
-      "price": 0.895,
+      "bid": 0.9955,
+      "ask": 0.9955,
+      "price": 0.9955,
       "spread": 0,
-      "volume": 10147
+      "volume": 13564
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on August 31?",
@@ -1191,11 +1274,11 @@
         102,
         103
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 2363
+      "volume": 5174
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on August 31?",
@@ -1204,11 +1287,11 @@
         104,
         105
       ],
-      "bid": 0.0255,
-      "ask": 0.0255,
-      "price": 0.0255,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 2028
+      "volume": 3624
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on August 31?",
@@ -1217,11 +1300,11 @@
         106,
         107
       ],
-      "bid": 0.2755,
-      "ask": 0.2755,
-      "price": 0.2755,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 365
+      "volume": 462
     },
     {
       "question": "Will the highest temperature in Dallas be 108°F or higher on August 31?",
@@ -1230,11 +1313,11 @@
         108,
         999
       ],
-      "bid": 0.306,
-      "ask": 0.306,
-      "price": 0.306,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 485
+      "volume": 590
     }
   ],
   "created_at": "2026-08-29T09:07:38.763Z"

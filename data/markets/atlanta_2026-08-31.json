@@ -6,10 +6,10 @@
   "station": "KATL",
   "event_end_date": "2026-08-31T12:00:00Z",
   "hours_at_discovery": 50.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 92.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -975,6 +975,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-08-31T23:53:50.429Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 90,
+      "hrrr": 94,
+      "metar": 91,
+      "best": 91.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 90,
+          "gfs_seamless": 94,
+          "icon_seamless": 92
+        },
+        "mean": 91.6,
+        "spread": 2.4,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          89,
+          91,
+          89,
+          89,
+          89,
+          90,
+          90,
+          90,
+          91,
+          91,
+          90,
+          88,
+          89,
+          90,
+          89,
+          92,
+          92,
+          89,
+          90,
+          88,
+          89,
+          92,
+          92,
+          89,
+          91,
+          89,
+          90,
+          89,
+          90,
+          87,
+          91,
+          90,
+          90,
+          87,
+          90,
+          93,
+          89,
+          89,
+          89,
+          91,
+          90,
+          91,
+          89,
+          89,
+          90,
+          90,
+          89,
+          92,
+          88,
+          89
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1081,6 +1156,14 @@
       "top2_bucket": "92-95F",
       "top2_price": 0.42,
       "top2_sum": 1.115
+    },
+    {
+      "ts": "2026-08-31T23:53:50.429Z",
+      "top_bucket": "92-93F",
+      "top_price": 0.9995,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1169,11 +1252,11 @@
         92,
         93
       ],
-      "bid": 0.695,
-      "ask": 0.695,
-      "price": 0.695,
-      "spread": 0,
-      "volume": 4638
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 7276
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on August 31?",
@@ -1182,11 +1265,11 @@
         94,
         95
       ],
-      "bid": 0.42,
-      "ask": 0.42,
-      "price": 0.42,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3860
+      "volume": 6372
     },
     {
       "question": "Will the highest temperature in Atlanta be between 96-97°F on August 31?",
@@ -1195,11 +1278,11 @@
         96,
         97
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2222
+      "volume": 2229
     },
     {
       "question": "Will the highest temperature in Atlanta be between 98-99°F on August 31?",
@@ -1208,11 +1291,11 @@
         98,
         99
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1768
+      "volume": 1938
     },
     {
       "question": "Will the highest temperature in Atlanta be 100°F or higher on August 31?",
@@ -1221,11 +1304,11 @@
         100,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 481
+      "volume": 581
     }
   ],
   "created_at": "2026-08-29T09:07:42.415Z"
