@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-09-01T12:00:00Z",
   "hours_at_discovery": 53.2,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "3992318",
     "question": "Will the highest temperature in Wellington be 13°C on September 1?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-09-01T05:17:58.866Z",
       "stop_price": 0.18,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 14,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -883,6 +884,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-01T14:57:19.079Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 11,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -973,6 +985,14 @@
       "top2_bucket": "13-14C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-09-01T14:57:19.079Z",
+      "top_bucket": "14-14C",
+      "top_price": 1,
+      "top2_bucket": "13-14C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -983,9 +1003,9 @@
         -999,
         8
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 267
     },
@@ -996,9 +1016,9 @@
         9,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 330
     },
@@ -1009,9 +1029,9 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 371
     },
@@ -1022,9 +1042,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1341
     },
@@ -1035,9 +1055,9 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5188
     },
@@ -1048,11 +1068,11 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 12657
+      "volume": 12704
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on September 1?",
@@ -1061,11 +1081,11 @@
         14,
         14
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 10905
+      "price": 1,
+      "spread": -0.001,
+      "volume": 11536
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on September 1?",
@@ -1074,11 +1094,11 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 10740
+      "volume": 11058
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on September 1?",
@@ -1087,9 +1107,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 4766
     },
@@ -1100,9 +1120,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1716
     },
@@ -1113,12 +1133,13 @@
         18,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3281
     }
   ],
-  "created_at": "2026-08-30T06:46:36.326Z"
+  "created_at": "2026-08-30T06:46:36.326Z",
+  "metar_max": 14
 }
