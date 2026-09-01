@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-02T12:00:00Z",
   "hours_at_discovery": 54.3,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4018359",
+    "question": "Will the highest temperature in Singapore be 32°C on September 2?",
+    "bucket_low": 32,
+    "bucket_high": 32,
+    "entry_price": 0.2,
+    "bid_at_entry": 0.19,
+    "spread": 0.01,
+    "shares": 200,
+    "cost": 40,
+    "p": 0.64,
+    "ev": 2.2,
+    "edge": 0.3102,
+    "kelly": 0.1382,
+    "forecast_temp": 32.15,
+    "forecast_src": "ensemble",
+    "sigma": 1.2,
+    "opened_at": "2026-09-01T21:50:45.094Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.152
+  },
+  "positions": [
+    {
+      "market_id": "4018359",
+      "question": "Will the highest temperature in Singapore be 32°C on September 2?",
+      "bucket_low": 32,
+      "bucket_high": 32,
+      "entry_price": 0.2,
+      "bid_at_entry": 0.19,
+      "spread": 0.01,
+      "shares": 200,
+      "cost": 40,
+      "p": 0.64,
+      "ev": 2.2,
+      "edge": 0.3102,
+      "kelly": 0.1382,
+      "forecast_temp": 32.15,
+      "forecast_src": "ensemble",
+      "sigma": 1.2,
+      "opened_at": "2026-09-01T21:50:45.094Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.152
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -612,6 +662,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-01T21:50:45.094Z",
+      "horizon": "D+1",
+      "hours_left": 14.2,
+      "ecmwf": 32.4,
+      "hrrr": 32,
+      "metar": null,
+      "best": 32.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.4,
+          "gfs_seamless": 32,
+          "icon_seamless": 33.7
+        },
+        "mean": 32.5,
+        "spread": 1.2,
+        "gap": 0.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          31.8,
+          32,
+          31.5,
+          31.8,
+          32.1,
+          32,
+          31.4,
+          31.5,
+          30.9,
+          32.1,
+          31.7,
+          31.5,
+          31.7,
+          31.3,
+          31.1,
+          31.7,
+          32.8,
+          32.9,
+          31.3,
+          31.8,
+          31.5,
+          31.4,
+          31.9,
+          31.2,
+          31.8,
+          32.3,
+          32.2,
+          31.5,
+          31.4,
+          31.9,
+          32.6,
+          31.8,
+          30.3,
+          32.1,
+          31.6,
+          32.2,
+          31.5,
+          31.7,
+          32.3,
+          32,
+          32.3,
+          31.6,
+          32.1,
+          31.2,
+          31.7,
+          31.4,
+          30.8,
+          32.9,
+          30.8,
+          31.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -678,6 +803,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.715,
       "top2_sum": 0.915
+    },
+    {
+      "ts": "2026-09-01T21:50:45.094Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.715,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.715,
+      "top2_sum": 0.91
     }
   ],
   "all_outcomes": [
@@ -740,11 +873,11 @@
         31,
         31
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.008,
+      "ask": 0.008,
+      "price": 0.008,
       "spread": 0,
-      "volume": 796
+      "volume": 1137
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on September 2?",
@@ -753,11 +886,11 @@
         32,
         32
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
-      "volume": 1921
+      "volume": 2187
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on September 2?",
@@ -770,7 +903,7 @@
       "ask": 0.715,
       "price": 0.715,
       "spread": 0,
-      "volume": 2463
+      "volume": 2653
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on September 2?",
@@ -779,11 +912,11 @@
         34,
         34
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
       "spread": 0,
-      "volume": 4448
+      "volume": 4561
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on September 2?",
@@ -796,7 +929,7 @@
       "ask": 0.01,
       "price": 0.01,
       "spread": 0,
-      "volume": 750
+      "volume": 760
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C on September 2?",
@@ -805,11 +938,11 @@
         36,
         36
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 502
+      "volume": 757
     },
     {
       "question": "Will the highest temperature in Singapore be 37°C or higher on September 2?",

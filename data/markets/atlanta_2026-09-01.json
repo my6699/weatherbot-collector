@@ -6,10 +6,10 @@
   "station": "KATL",
   "event_end_date": "2026-09-01T12:00:00Z",
   "hours_at_discovery": 47,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 92.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -902,6 +902,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-01T21:50:04.361Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 94,
+      "hrrr": 94,
+      "metar": 91,
+      "best": 94,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 94,
+          "gfs_seamless": 94,
+          "icon_seamless": 94
+        },
+        "mean": 94,
+        "spread": 0,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          94,
+          95,
+          93,
+          93,
+          94,
+          93,
+          93,
+          94,
+          95,
+          94,
+          93,
+          93,
+          94,
+          94,
+          93,
+          96,
+          95,
+          92,
+          95,
+          93,
+          92,
+          95,
+          96,
+          92,
+          94,
+          94,
+          94,
+          93,
+          95,
+          91,
+          95,
+          93,
+          94,
+          92,
+          94,
+          97,
+          93,
+          92,
+          93,
+          95,
+          93,
+          96,
+          91,
+          94,
+          93,
+          94,
+          93,
+          97,
+          92,
+          94
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1000,6 +1074,14 @@
       "top2_bucket": "94-97F",
       "top2_price": 0.285,
       "top2_sum": 0.94
+    },
+    {
+      "ts": "2026-09-01T21:50:04.361Z",
+      "top_bucket": "92-93F",
+      "top_price": 0.976,
+      "top2_bucket": "92-95F",
+      "top2_price": 0.0785,
+      "top2_sum": 1.0545
     }
   ],
   "all_outcomes": [
@@ -1062,11 +1144,11 @@
         90,
         91
       ],
-      "bid": 0.0125,
-      "ask": 0.0125,
-      "price": 0.0125,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 940
+      "volume": 1314
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on September 1?",
@@ -1075,11 +1157,11 @@
         92,
         93
       ],
-      "bid": 0.03,
-      "ask": 0.03,
-      "price": 0.03,
+      "bid": 0.976,
+      "ask": 0.976,
+      "price": 0.976,
       "spread": 0,
-      "volume": 1632
+      "volume": 5168
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on September 1?",
@@ -1088,11 +1170,11 @@
         94,
         95
       ],
-      "bid": 0.655,
-      "ask": 0.655,
-      "price": 0.655,
+      "bid": 0.0785,
+      "ask": 0.0785,
+      "price": 0.0785,
       "spread": 0,
-      "volume": 5501
+      "volume": 6759
     },
     {
       "question": "Will the highest temperature in Atlanta be between 96-97°F on September 1?",
@@ -1101,11 +1183,11 @@
         96,
         97
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 3232
+      "volume": 5583
     },
     {
       "question": "Will the highest temperature in Atlanta be between 98-99°F on September 1?",
@@ -1114,11 +1196,11 @@
         98,
         99
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1801
+      "volume": 1980
     },
     {
       "question": "Will the highest temperature in Atlanta be between 100-101°F on September 1?",
@@ -1127,11 +1209,11 @@
         100,
         101
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1398
+      "volume": 3370
     },
     {
       "question": "Will the highest temperature in Atlanta be 102°F or higher on September 1?",
