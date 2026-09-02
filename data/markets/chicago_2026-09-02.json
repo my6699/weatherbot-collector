@@ -6,10 +6,10 @@
   "station": "KORD",
   "event_end_date": "2026-09-02T12:00:00Z",
   "hours_at_discovery": 46,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 94.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -983,6 +983,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-02T21:52:06.137Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 94,
+      "hrrr": 96,
+      "metar": 95,
+      "best": 95,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 94,
+          "gfs_seamless": 96,
+          "icon_seamless": 96
+        },
+        "mean": 95,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          95,
+          93,
+          92,
+          93,
+          93,
+          92,
+          93,
+          93,
+          95,
+          93,
+          93,
+          93,
+          89,
+          93,
+          93,
+          94,
+          95,
+          93,
+          95,
+          96,
+          96,
+          92,
+          95,
+          95,
+          92,
+          94,
+          93,
+          96,
+          94,
+          94,
+          93,
+          94,
+          93,
+          94,
+          94,
+          95,
+          94,
+          92,
+          97,
+          94,
+          93,
+          95,
+          96,
+          94,
+          95,
+          93,
+          93,
+          93,
+          95,
+          93
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1089,6 +1163,14 @@
       "top2_bucket": "94-97F",
       "top2_price": 0.26,
       "top2_sum": 0.985
+    },
+    {
+      "ts": "2026-09-02T21:52:06.137Z",
+      "top_bucket": "94-95F",
+      "top_price": 0.985,
+      "top2_bucket": "94-97F",
+      "top2_price": 0.025,
+      "top2_sum": 1.01
     }
   ],
   "all_outcomes": [
@@ -1151,11 +1233,11 @@
         90,
         91
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1596
+      "volume": 1691
     },
     {
       "question": "Will the highest temperature in Chicago be between 92-93°F on September 2?",
@@ -1168,7 +1250,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7034
+      "volume": 7127
     },
     {
       "question": "Will the highest temperature in Chicago be between 94-95°F on September 2?",
@@ -1177,11 +1259,11 @@
         94,
         95
       ],
-      "bid": 0.725,
-      "ask": 0.725,
-      "price": 0.725,
+      "bid": 0.985,
+      "ask": 0.985,
+      "price": 0.985,
       "spread": 0,
-      "volume": 3812
+      "volume": 4629
     },
     {
       "question": "Will the highest temperature in Chicago be between 96-97°F on September 2?",
@@ -1190,11 +1272,11 @@
         96,
         97
       ],
-      "bid": 0.26,
-      "ask": 0.26,
-      "price": 0.26,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 4405
+      "volume": 5803
     },
     {
       "question": "Will the highest temperature in Chicago be between 98-99°F on September 2?",
@@ -1203,11 +1285,11 @@
         98,
         99
       ],
-      "bid": 0.0155,
-      "ask": 0.0155,
-      "price": 0.0155,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 1242
+      "volume": 1770
     },
     {
       "question": "Will the highest temperature in Chicago be between 100-101°F on September 2?",
@@ -1216,11 +1298,11 @@
         100,
         101
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 473
+      "volume": 1673
     },
     {
       "question": "Will the highest temperature in Chicago be 102°F or higher on September 2?",
@@ -1229,11 +1311,11 @@
         102,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 388
+      "volume": 924
     }
   ],
   "created_at": "2026-08-31T14:00:10.838Z"
