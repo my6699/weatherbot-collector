@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-09-01T21:50:52.321Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -1.43,
+      "exit_price": 0.135,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-09-02T00:19:12.290Z",
       "stop_price": 0.104
     }
   ],
@@ -658,6 +658,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-02T00:19:12.290Z",
+      "horizon": "D+0",
+      "hours_left": 11.7,
+      "ecmwf": 20.6,
+      "hrrr": 20.7,
+      "metar": 16,
+      "best": 20.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 20.6,
+          "gfs_seamless": 20.7,
+          "icon_seamless": 19.7
+        },
+        "mean": 20.5,
+        "spread": 0.8,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          20.4,
+          19.7,
+          17.8,
+          19.2,
+          19.1,
+          20.2,
+          20.4,
+          19.8,
+          20.9,
+          20.9,
+          18.7,
+          19.6,
+          19.4,
+          20.6,
+          21.3,
+          20.2,
+          20.9,
+          20.2,
+          21.1,
+          20.5,
+          19.7,
+          20.2,
+          19.4,
+          20.6,
+          19.8,
+          20.1,
+          19.6,
+          19.4,
+          20.1,
+          20.1,
+          19.4,
+          19.5,
+          18.9,
+          20.4,
+          19.3,
+          19,
+          20.2,
+          19.7,
+          19.5,
+          21,
+          19.9,
+          19.4,
+          20.4,
+          20.6,
+          20.5,
+          20.4,
+          19.9,
+          18.3,
+          19.1,
+          20.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -724,6 +798,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.355,
       "top2_sum": 0.6
+    },
+    {
+      "ts": "2026-09-02T00:19:12.290Z",
+      "top_bucket": "21-21C",
+      "top_price": 0.375,
+      "top2_bucket": "20-21C",
+      "top2_price": 0.375,
+      "top2_sum": 0.63
     }
   ],
   "all_outcomes": [
@@ -786,9 +868,9 @@
         18,
         18
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
       "volume": 259
     },
@@ -803,7 +885,7 @@
       "ask": 0.135,
       "price": 0.135,
       "spread": 0,
-      "volume": 1063
+      "volume": 1206
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 20°C on September 2?",
@@ -812,11 +894,11 @@
         20,
         20
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.255,
+      "ask": 0.255,
+      "price": 0.255,
       "spread": 0,
-      "volume": 1836
+      "volume": 2156
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 21°C on September 2?",
@@ -825,11 +907,11 @@
         21,
         21
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.375,
+      "ask": 0.375,
+      "price": 0.375,
       "spread": 0,
-      "volume": 1088
+      "volume": 1520
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 22°C on September 2?",
@@ -838,9 +920,9 @@
         22,
         22
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
       "volume": 2132
     },
@@ -855,7 +937,7 @@
       "ask": 0.055,
       "price": 0.055,
       "spread": 0,
-      "volume": 1134
+      "volume": 1169
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 24°C or higher on September 2?",
@@ -864,11 +946,11 @@
         24,
         999
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0105,
+      "ask": 0.0105,
+      "price": 0.0105,
       "spread": 0,
-      "volume": 715
+      "volume": 777
     }
   ],
   "created_at": "2026-08-31T14:02:11.270Z"
