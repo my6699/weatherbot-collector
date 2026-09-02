@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-09-02T12:00:00Z",
   "hours_at_discovery": 46,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -758,6 +758,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-02T14:32:59.083Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 98,
+      "hrrr": 100,
+      "metar": 84,
+      "best": 98.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 98,
+          "gfs_seamless": 100,
+          "icon_seamless": 98
+        },
+        "mean": 98.6,
+        "spread": 1.4,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          98,
+          98,
+          97,
+          98,
+          96,
+          98,
+          99,
+          97,
+          98,
+          97,
+          99,
+          98,
+          98,
+          98,
+          97,
+          99,
+          98,
+          98,
+          99,
+          95,
+          95,
+          97,
+          96,
+          97,
+          98,
+          97,
+          97,
+          99,
+          96,
+          97,
+          99,
+          98,
+          99,
+          98,
+          99,
+          97,
+          96,
+          98,
+          97,
+          99,
+          96,
+          95,
+          99,
+          96,
+          99,
+          97,
+          98,
+          91,
+          98,
+          95
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -840,6 +914,14 @@
       "top2_bucket": "96-99F",
       "top2_price": 0.31,
       "top2_sum": 0.745
+    },
+    {
+      "ts": "2026-09-02T14:32:59.083Z",
+      "top_bucket": "98-99F",
+      "top_price": 0.455,
+      "top2_bucket": "96-99F",
+      "top2_price": 0.455,
+      "top2_sum": 0.79
     }
   ],
   "all_outcomes": [
@@ -863,9 +945,9 @@
         88,
         89
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 527
     },
@@ -876,11 +958,11 @@
         90,
         91
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 2158
+      "volume": 2867
     },
     {
       "question": "Will the highest temperature in Dallas be between 92-93°F on September 2?",
@@ -889,11 +971,11 @@
         92,
         93
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 3992
+      "volume": 4997
     },
     {
       "question": "Will the highest temperature in Dallas be between 94-95°F on September 2?",
@@ -902,11 +984,11 @@
         94,
         95
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 5143
+      "volume": 6297
     },
     {
       "question": "Will the highest temperature in Dallas be between 96-97°F on September 2?",
@@ -915,11 +997,11 @@
         96,
         97
       ],
-      "bid": 0.435,
-      "ask": 0.435,
-      "price": 0.435,
+      "bid": 0.335,
+      "ask": 0.335,
+      "price": 0.335,
       "spread": 0,
-      "volume": 2666
+      "volume": 3411
     },
     {
       "question": "Will the highest temperature in Dallas be between 98-99°F on September 2?",
@@ -928,11 +1010,11 @@
         98,
         99
       ],
-      "bid": 0.31,
-      "ask": 0.31,
-      "price": 0.31,
+      "bid": 0.455,
+      "ask": 0.455,
+      "price": 0.455,
       "spread": 0,
-      "volume": 1236
+      "volume": 2219
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on September 2?",
@@ -941,11 +1023,11 @@
         100,
         101
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.125,
+      "ask": 0.125,
+      "price": 0.125,
       "spread": 0,
-      "volume": 413
+      "volume": 876
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on September 2?",
@@ -954,11 +1036,11 @@
         102,
         103
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 1159
+      "volume": 1376
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on September 2?",
@@ -971,7 +1053,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 380
+      "volume": 386
     },
     {
       "question": "Will the highest temperature in Dallas be 106°F or higher on September 2?",
