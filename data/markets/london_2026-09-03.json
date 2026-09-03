@@ -782,6 +782,80 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-09-03T04:40:03.850Z",
+      "horizon": "D+0",
+      "hours_left": 7.3,
+      "ecmwf": 25.2,
+      "hrrr": 25.9,
+      "metar": 19,
+      "best": 25.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.2,
+          "gfs_seamless": 25.9,
+          "icon_seamless": 24.5
+        },
+        "mean": 25.3,
+        "spread": 0.8,
+        "gap": 0.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          25.7,
+          25.9,
+          27.1,
+          26.6,
+          25.2,
+          25.5,
+          26.3,
+          25.3,
+          26,
+          25.4,
+          26,
+          25.9,
+          26.1,
+          24.4,
+          25.7,
+          25.1,
+          25.3,
+          24.9,
+          25,
+          26.9,
+          27.3,
+          26.3,
+          26.3,
+          25.7,
+          25.8,
+          25.9,
+          25.5,
+          24.9,
+          27.8,
+          25.8,
+          25.5,
+          26.9,
+          25.4,
+          25.4,
+          24.6,
+          26.4,
+          25.9,
+          26.1,
+          24.7,
+          25.4,
+          25.3,
+          25.9,
+          24.9,
+          24.3,
+          26.4,
+          26.2,
+          24.4,
+          25.5,
+          25.4,
+          25.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -880,6 +954,14 @@
       "top2_bucket": "25-26C",
       "top2_price": 0.29,
       "top2_sum": 0.79
+    },
+    {
+      "ts": "2026-09-03T04:40:03.850Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.565,
+      "top2_bucket": "25-26C",
+      "top2_price": 0.225,
+      "top2_sum": 0.79
     }
   ],
   "all_outcomes": [
@@ -894,7 +976,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4844
+      "volume": 4849
     },
     {
       "question": "Will the highest temperature in London be 20°C on September 3?",
@@ -942,11 +1024,11 @@
         23,
         23
       ],
-      "bid": 0.03,
-      "ask": 0.03,
-      "price": 0.03,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 3051
+      "volume": 3300
     },
     {
       "question": "Will the highest temperature in London be 24°C on September 3?",
@@ -955,11 +1037,11 @@
         24,
         24
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
       "spread": 0,
-      "volume": 6292
+      "volume": 7103
     },
     {
       "question": "Will the highest temperature in London be 25°C on September 3?",
@@ -968,11 +1050,11 @@
         25,
         25
       ],
-      "bid": 0.5,
-      "ask": 0.5,
-      "price": 0.5,
+      "bid": 0.565,
+      "ask": 0.565,
+      "price": 0.565,
       "spread": 0,
-      "volume": 6565
+      "volume": 7074
     },
     {
       "question": "Will the highest temperature in London be 26°C on September 3?",
@@ -981,11 +1063,11 @@
         26,
         26
       ],
-      "bid": 0.29,
-      "ask": 0.29,
-      "price": 0.29,
+      "bid": 0.225,
+      "ask": 0.225,
+      "price": 0.225,
       "spread": 0,
-      "volume": 6004
+      "volume": 6516
     },
     {
       "question": "Will the highest temperature in London be 27°C on September 3?",
@@ -994,11 +1076,11 @@
         27,
         27
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 3120
+      "volume": 3603
     },
     {
       "question": "Will the highest temperature in London be 28°C on September 3?",
@@ -1011,7 +1093,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 2909
+      "volume": 3361
     },
     {
       "question": "Will the highest temperature in London be 29°C or higher on September 3?",
@@ -1024,7 +1106,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 1391
+      "volume": 2098
     }
   ],
   "created_at": "2026-09-01T05:17:11.971Z"

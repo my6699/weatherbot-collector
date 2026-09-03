@@ -323,6 +323,81 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-09-03T04:40:12.734Z",
+      "horizon": "D+1",
+      "hours_left": 31.3,
+      "ecmwf": 28.8,
+      "hrrr": 27.2,
+      "metar": null,
+      "best": 28.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 28.8,
+          "gfs_seamless": 27.2,
+          "icon_seamless": 29.2
+        },
+        "mean": 28.4,
+        "spread": 1.2,
+        "gap": 1.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          29,
+          29,
+          29.1,
+          29,
+          28.6,
+          28.8,
+          28.5,
+          29,
+          29,
+          28.8,
+          29.3,
+          28.8,
+          28.8,
+          29,
+          29,
+          28.8,
+          29.1,
+          29.2,
+          29.7,
+          29.1,
+          29.2,
+          29,
+          29.1,
+          29.1,
+          28.7,
+          28.9,
+          29.1,
+          28.5,
+          29.3,
+          28.6,
+          29.4,
+          29,
+          29.2,
+          28.4,
+          28.9,
+          28.5,
+          28.7,
+          28.9,
+          29.1,
+          28.7,
+          28.9,
+          29.1,
+          29,
+          28.8,
+          28.9,
+          28.5,
+          28.7,
+          28.9,
+          28.7,
+          29.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -365,6 +440,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.465,
       "top2_sum": 0.79
+    },
+    {
+      "ts": "2026-09-03T04:40:12.734Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.43,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.43,
+      "top2_sum": 0.72
     }
   ],
   "all_outcomes": [
@@ -418,7 +501,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 292
+      "volume": 510
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 27°C on September 4?",
@@ -427,11 +510,11 @@
         27,
         27
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 301
+      "volume": 1493
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 28°C on September 4?",
@@ -440,11 +523,11 @@
         28,
         28
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.085,
+      "ask": 0.085,
+      "price": 0.085,
       "spread": 0,
-      "volume": 294
+      "volume": 958
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 29°C on September 4?",
@@ -453,11 +536,11 @@
         29,
         29
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.29,
+      "ask": 0.29,
+      "price": 0.29,
       "spread": 0,
-      "volume": 522
+      "volume": 1049
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 30°C on September 4?",
@@ -466,11 +549,11 @@
         30,
         30
       ],
-      "bid": 0.465,
-      "ask": 0.465,
-      "price": 0.465,
+      "bid": 0.43,
+      "ask": 0.43,
+      "price": 0.43,
       "spread": 0,
-      "volume": 1357
+      "volume": 2143
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 31°C on September 4?",
@@ -479,11 +562,11 @@
         31,
         31
       ],
-      "bid": 0.14,
-      "ask": 0.14,
-      "price": 0.14,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 1138
+      "volume": 1788
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 32°C on September 4?",
@@ -492,11 +575,11 @@
         32,
         32
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 241
+      "volume": 768
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 33°C or higher on September 4?",
@@ -505,11 +588,11 @@
         33,
         999
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 334
+      "volume": 1460
     }
   ],
   "created_at": "2026-09-02T09:41:54.283Z"
