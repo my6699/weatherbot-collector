@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-09-03T12:00:00Z",
   "hours_at_discovery": 45,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -910,6 +910,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-03T14:37:27.599Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 27.6,
+      "hrrr": 29.7,
+      "metar": 25,
+      "best": 28.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.6,
+          "gfs_seamless": 29.7,
+          "icon_seamless": 28.1
+        },
+        "mean": 28.3,
+        "spread": 1.4,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          26,
+          27.1,
+          27,
+          27.4,
+          27.2,
+          26.1,
+          26.9,
+          26.9,
+          27.8,
+          25.6,
+          26.6,
+          26.6,
+          25.5,
+          25.8,
+          26.4,
+          26.3,
+          27.8,
+          26.8,
+          26.6,
+          26.8,
+          25.2,
+          28,
+          27.1,
+          27,
+          27.9,
+          27.2,
+          26.2,
+          25.4,
+          26.8,
+          27.1,
+          26.1,
+          27.3,
+          26.7,
+          26.9,
+          27.3,
+          27.1,
+          27,
+          27.3,
+          26.6,
+          28.1,
+          26.7,
+          27.8,
+          27.6,
+          27.5,
+          26.9,
+          25.7,
+          26.6,
+          27.1,
+          26.7,
+          27.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1008,6 +1083,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.44,
       "top2_sum": 0.71
+    },
+    {
+      "ts": "2026-09-03T14:37:27.599Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.44,
+      "top2_bucket": "28-29C",
+      "top2_price": 0.44,
+      "top2_sum": 0.83
     }
   ],
   "all_outcomes": [
@@ -1018,11 +1101,11 @@
         -999,
         23
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1928
+      "volume": 1929
     },
     {
       "question": "Will the highest temperature in Toronto be 24°C on September 3?",
@@ -1031,11 +1114,11 @@
         24,
         24
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6198
+      "volume": 8652
     },
     {
       "question": "Will the highest temperature in Toronto be 25°C on September 3?",
@@ -1044,11 +1127,11 @@
         25,
         25
       ],
-      "bid": 0.0145,
-      "ask": 0.0145,
-      "price": 0.0145,
+      "bid": 0.0105,
+      "ask": 0.0105,
+      "price": 0.0105,
       "spread": 0,
-      "volume": 1320
+      "volume": 2984
     },
     {
       "question": "Will the highest temperature in Toronto be 26°C on September 3?",
@@ -1057,11 +1140,11 @@
         26,
         26
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 2996
+      "volume": 6945
     },
     {
       "question": "Will the highest temperature in Toronto be 27°C on September 3?",
@@ -1070,11 +1153,11 @@
         27,
         27
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
-      "volume": 5353
+      "volume": 8945
     },
     {
       "question": "Will the highest temperature in Toronto be 28°C on September 3?",
@@ -1083,11 +1166,11 @@
         28,
         28
       ],
-      "bid": 0.44,
-      "ask": 0.44,
-      "price": 0.44,
+      "bid": 0.39,
+      "ask": 0.39,
+      "price": 0.39,
       "spread": 0,
-      "volume": 3004
+      "volume": 3840
     },
     {
       "question": "Will the highest temperature in Toronto be 29°C on September 3?",
@@ -1096,11 +1179,11 @@
         29,
         29
       ],
-      "bid": 0.18,
-      "ask": 0.18,
-      "price": 0.18,
+      "bid": 0.44,
+      "ask": 0.44,
+      "price": 0.44,
       "spread": 0,
-      "volume": 3622
+      "volume": 4813
     },
     {
       "question": "Will the highest temperature in Toronto be 30°C on September 3?",
@@ -1109,11 +1192,11 @@
         30,
         30
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.0395,
+      "ask": 0.0395,
+      "price": 0.0395,
       "spread": 0,
-      "volume": 711
+      "volume": 1949
     },
     {
       "question": "Will the highest temperature in Toronto be 31°C on September 3?",
@@ -1122,11 +1205,11 @@
         31,
         31
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 416
+      "volume": 1198
     },
     {
       "question": "Will the highest temperature in Toronto be 32°C on September 3?",
@@ -1139,7 +1222,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 652
+      "volume": 845
     },
     {
       "question": "Will the highest temperature in Toronto be 33°C or higher on September 3?",
@@ -1148,9 +1231,9 @@
         33,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 543
     }
