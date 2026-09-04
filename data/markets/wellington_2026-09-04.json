@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-09-04T12:00:00Z",
   "hours_at_discovery": 50.3,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "4107069",
     "question": "Will the highest temperature in Wellington be 16°C on September 4?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-09-03T00:24:25.484Z",
       "stop_price": 0.072,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 18,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1025,6 +1026,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-04T14:25:28.753Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 13,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1131,6 +1143,14 @@
       "top2_bucket": "17-18C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-09-04T14:25:28.753Z",
+      "top_bucket": "18-18C",
+      "top_price": 1,
+      "top2_bucket": "17-18C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1141,9 +1161,9 @@
         -999,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 399
     },
@@ -1154,9 +1174,9 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1400
     },
@@ -1167,11 +1187,11 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1652
+      "volume": 1702
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on September 4?",
@@ -1180,11 +1200,11 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3557
+      "volume": 4657
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on September 4?",
@@ -1193,11 +1213,11 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8581
+      "volume": 9781
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on September 4?",
@@ -1206,11 +1226,11 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 11569
+      "volume": 12629
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on September 4?",
@@ -1219,10 +1239,10 @@
         18,
         18
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
+      "price": 1,
+      "spread": -0.001,
       "volume": 15000
     },
     {
@@ -1232,11 +1252,11 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7833
+      "volume": 8833
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on September 4?",
@@ -1245,11 +1265,11 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7570
+      "volume": 8670
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C on September 4?",
@@ -1258,11 +1278,11 @@
         21,
         21
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1953
+      "volume": 2053
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C or higher on September 4?",
@@ -1271,12 +1291,13 @@
         22,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 299
     }
   ],
-  "created_at": "2026-09-02T09:42:09.159Z"
+  "created_at": "2026-09-02T09:42:09.159Z",
+  "metar_max": 17
 }

@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-09-04T12:00:00Z",
   "hours_at_discovery": 50.3,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -980,6 +980,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-04T14:25:15.993Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 26.4,
+      "hrrr": 26.2,
+      "metar": 22,
+      "best": 26.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.4,
+          "gfs_seamless": 26.2,
+          "icon_seamless": 25.1
+        },
+        "mean": 26.1,
+        "spread": 1,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          26,
+          26.9,
+          27.5,
+          25.1,
+          26.3,
+          27.8,
+          25.9,
+          27.4,
+          26.8,
+          26.4,
+          26.3,
+          26.8,
+          26.6,
+          26.4,
+          26.7,
+          26.5,
+          26.2,
+          26.8,
+          27.8,
+          26.5,
+          25.8,
+          26,
+          25.5,
+          27.2,
+          25,
+          26.8,
+          27.6,
+          26.3,
+          25.6,
+          26.6,
+          27,
+          25.9,
+          26.8,
+          25.9,
+          25.6,
+          26.1,
+          26.9,
+          25.4,
+          26.4,
+          27.2,
+          25.7,
+          25.7,
+          26.8,
+          26.4,
+          27.8,
+          25.5,
+          27.6,
+          26.4,
+          27.9,
+          26.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1086,6 +1160,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-09-04T14:25:15.993Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.9995,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1165,7 +1247,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 16118
+      "volume": 16119
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on September 4?",
@@ -1178,7 +1260,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 12195
+      "volume": 12213
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on September 4?",
@@ -1191,7 +1273,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5368
+      "volume": 5569
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on September 4?",
@@ -1204,7 +1286,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3803
+      "volume": 3945
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on September 4?",
@@ -1217,7 +1299,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3103
+      "volume": 3133
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C or higher on September 4?",
@@ -1233,5 +1315,6 @@
       "volume": 864
     }
   ],
-  "created_at": "2026-09-02T09:41:56.182Z"
+  "created_at": "2026-09-02T09:41:56.182Z",
+  "metar_max": 27
 }
