@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-07T12:00:00Z",
   "hours_at_discovery": 50.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4242186",
+    "question": "Will the highest temperature in Miami be between 88-89°F on September 7?",
+    "bucket_low": 88,
+    "bucket_high": 89,
+    "entry_price": 0.23,
+    "bid_at_entry": 0.21,
+    "spread": 0.02,
+    "shares": 173.91,
+    "cost": 40,
+    "p": 0.46,
+    "ev": 1,
+    "edge": 0.1131,
+    "kelly": 0.0769,
+    "forecast_temp": 92.68,
+    "forecast_src": "ensemble",
+    "sigma": 4.7,
+    "opened_at": "2026-09-05T20:29:10.710Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.168
+  },
+  "positions": [
+    {
+      "market_id": "4242186",
+      "question": "Will the highest temperature in Miami be between 88-89°F on September 7?",
+      "bucket_low": 88,
+      "bucket_high": 89,
+      "entry_price": 0.23,
+      "bid_at_entry": 0.21,
+      "spread": 0.02,
+      "shares": 173.91,
+      "cost": 40,
+      "p": 0.46,
+      "ev": 1,
+      "edge": 0.1131,
+      "kelly": 0.0769,
+      "forecast_temp": 92.68,
+      "forecast_src": "ensemble",
+      "sigma": 4.7,
+      "opened_at": "2026-09-05T20:29:10.710Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.168
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -312,6 +362,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-05T20:29:10.710Z",
+      "horizon": "D+2",
+      "hours_left": 39.5,
+      "ecmwf": 89,
+      "hrrr": 96,
+      "metar": null,
+      "best": 91.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 89,
+          "gfs_seamless": 96,
+          "icon_seamless": 90
+        },
+        "mean": 91.3,
+        "spread": 4.7,
+        "gap": 7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          88,
+          88,
+          88,
+          87,
+          86,
+          90,
+          88,
+          91,
+          87,
+          90,
+          89,
+          85,
+          90,
+          89,
+          88,
+          89,
+          87,
+          90,
+          86,
+          89,
+          89,
+          89,
+          88,
+          88,
+          91,
+          90,
+          89,
+          89,
+          88,
+          90,
+          88,
+          90,
+          89,
+          86,
+          88,
+          90,
+          90,
+          91,
+          88,
+          89,
+          87,
+          90,
+          86,
+          87,
+          88,
+          88,
+          90,
+          90,
+          91,
+          90
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -346,6 +471,14 @@
       "top2_bucket": "90-93F",
       "top2_price": 0.27,
       "top2_sum": 0.71
+    },
+    {
+      "ts": "2026-09-05T20:29:10.710Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.44,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.25,
+      "top2_sum": 0.69
     }
   ],
   "all_outcomes": [
@@ -369,9 +502,9 @@
         80,
         81
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
       "volume": 0
     },
@@ -382,9 +515,9 @@
         82,
         83
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
       "volume": 0
     },
@@ -421,11 +554,11 @@
         88,
         89
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.22,
+      "ask": 0.22,
+      "price": 0.22,
       "spread": 0,
-      "volume": 329
+      "volume": 528
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on September 7?",
@@ -438,7 +571,7 @@
       "ask": 0.44,
       "price": 0.44,
       "spread": 0,
-      "volume": 56
+      "volume": 65
     },
     {
       "question": "Will the highest temperature in Miami be between 92-93°F on September 7?",
@@ -447,11 +580,11 @@
         92,
         93
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.25,
+      "ask": 0.25,
+      "price": 0.25,
       "spread": 0,
-      "volume": 102
+      "volume": 149
     },
     {
       "question": "Will the highest temperature in Miami be between 94-95°F on September 7?",
@@ -460,11 +593,11 @@
         94,
         95
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 203
+      "volume": 299
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on September 7?",
@@ -473,9 +606,9 @@
         96,
         97
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
       "volume": 0
     },
@@ -486,9 +619,9 @@
         98,
         999
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
       "volume": 0
     }
