@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-09-05T12:00:00Z",
   "hours_at_discovery": 50.1,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -982,6 +982,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-05T12:46:18.043Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 79,
+      "hrrr": 80,
+      "metar": 73,
+      "best": 79.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 79,
+          "gfs_seamless": 80,
+          "icon_seamless": 80
+        },
+        "mean": 79.5,
+        "spread": 0.5,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          79,
+          79,
+          79,
+          80,
+          80,
+          80,
+          81,
+          78,
+          80,
+          78,
+          80,
+          80,
+          80,
+          79,
+          79,
+          80,
+          78,
+          79,
+          80,
+          78,
+          79,
+          79,
+          79,
+          80,
+          79,
+          78,
+          79,
+          79,
+          79,
+          80,
+          77,
+          79,
+          81,
+          78,
+          79,
+          79,
+          79,
+          79,
+          81,
+          79,
+          79,
+          79,
+          77,
+          80,
+          79,
+          79,
+          80,
+          78,
+          80,
+          79
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1088,6 +1162,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.68,
       "top2_sum": 0.865
+    },
+    {
+      "ts": "2026-09-05T12:46:18.043Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.62,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.62,
+      "top2_sum": 0.95
     }
   ],
   "all_outcomes": [
@@ -1150,11 +1232,11 @@
         76,
         77
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 5280
+      "volume": 6138
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on September 5?",
@@ -1163,11 +1245,11 @@
         78,
         79
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.33,
+      "ask": 0.33,
+      "price": 0.33,
       "spread": 0,
-      "volume": 5014
+      "volume": 6441
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on September 5?",
@@ -1176,11 +1258,11 @@
         80,
         81
       ],
-      "bid": 0.68,
-      "ask": 0.68,
-      "price": 0.68,
+      "bid": 0.62,
+      "ask": 0.62,
+      "price": 0.62,
       "spread": 0,
-      "volume": 4208
+      "volume": 5075
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on September 5?",
@@ -1189,11 +1271,11 @@
         82,
         83
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 3919
+      "volume": 4911
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on September 5?",
@@ -1206,7 +1288,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 1432
+      "volume": 1778
     },
     {
       "question": "Will the highest temperature in New York City be between 86-87°F on September 5?",
@@ -1215,11 +1297,11 @@
         86,
         87
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 1328
+      "volume": 1660
     },
     {
       "question": "Will the highest temperature in New York City be 88°F or higher on September 5?",
