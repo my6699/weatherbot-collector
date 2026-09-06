@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-09-06T12:00:00Z",
   "hours_at_discovery": 45.6,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "4213049",
     "question": "Will the highest temperature in Toronto be 24°C on September 6?",
@@ -59,10 +59,11 @@
       "stop_price": 0.17,
       "trailing_activated": true,
       "forecast_change_streak": 1,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 22,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1260,6 +1261,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-06T19:16:11.245Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 21.5,
+      "hrrr": 22.2,
+      "metar": 20,
+      "best": 21.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 21.5,
+          "gfs_seamless": 22.2,
+          "icon_seamless": 22
+        },
+        "mean": 21.8,
+        "spread": 0.4,
+        "gap": 0.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          20.8,
+          20.3,
+          20.7,
+          22.1,
+          20.7,
+          20.5,
+          21.6,
+          20.3,
+          22.3,
+          21.2,
+          20.2,
+          20.4,
+          20.5,
+          20.4,
+          21.5,
+          21.8,
+          20.1,
+          21.1,
+          20.9,
+          22.4,
+          20.6,
+          21.9,
+          21.6,
+          21.3,
+          20.5,
+          21.7,
+          21.5,
+          22.6,
+          19.9,
+          21.2,
+          21.4,
+          20.9,
+          20.4,
+          19.7,
+          21.4,
+          22.4,
+          21.1,
+          21.9,
+          21.6,
+          22.6,
+          20.6,
+          22.4,
+          20.7,
+          22.3,
+          21.8,
+          20.9,
+          22,
+          22,
+          20.5,
+          21
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1390,6 +1465,14 @@
       "top2_bucket": "22-23C",
       "top2_price": 0.37,
       "top2_sum": 0.865
+    },
+    {
+      "ts": "2026-09-06T19:16:11.245Z",
+      "top_bucket": "22-22C",
+      "top_price": 0.965,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.035,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1426,11 +1509,11 @@
         21,
         21
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3911
+      "volume": 6698
     },
     {
       "question": "Will the highest temperature in Toronto be 22°C on September 6?",
@@ -1439,11 +1522,11 @@
         22,
         22
       ],
-      "bid": 0.495,
-      "ask": 0.495,
-      "price": 0.495,
+      "bid": 0.965,
+      "ask": 0.965,
+      "price": 0.965,
       "spread": 0,
-      "volume": 4279
+      "volume": 6477
     },
     {
       "question": "Will the highest temperature in Toronto be 23°C on September 6?",
@@ -1452,11 +1535,11 @@
         23,
         23
       ],
-      "bid": 0.37,
-      "ask": 0.37,
-      "price": 0.37,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 5216
+      "volume": 6846
     },
     {
       "question": "Will the highest temperature in Toronto be 24°C on September 6?",
@@ -1465,11 +1548,11 @@
         24,
         24
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 3963
+      "volume": 5056
     },
     {
       "question": "Will the highest temperature in Toronto be 25°C on September 6?",
@@ -1478,11 +1561,11 @@
         25,
         25
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1098
+      "volume": 2009
     },
     {
       "question": "Will the highest temperature in Toronto be 26°C on September 6?",
@@ -1491,9 +1574,9 @@
         26,
         26
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 390
     },
