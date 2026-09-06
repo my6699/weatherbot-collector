@@ -51,13 +51,14 @@
       "forecast_src": "ensemble",
       "sigma": 1.5,
       "opened_at": "2026-09-06T11:03:33.875Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -15,
+      "exit_price": 0.1,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-09-06T17:07:09.340Z",
       "stop_price": 0.12,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "stop_pending": true
     }
   ],
   "actual_temp": null,
@@ -811,6 +812,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-06T17:06:52.513Z",
+      "horizon": "D+1",
+      "hours_left": 18.9,
+      "ecmwf": 26.3,
+      "hrrr": 23.6,
+      "metar": null,
+      "best": 25.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.3,
+          "gfs_seamless": 23.6,
+          "icon_seamless": 24.3
+        },
+        "mean": 25.1,
+        "spread": 1.5,
+        "gap": 2.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          25.6,
+          26.2,
+          26.8,
+          25.6,
+          26.4,
+          26,
+          26.8,
+          26.3,
+          26.7,
+          27.4,
+          26.3,
+          25.8,
+          26.9,
+          26.6,
+          26,
+          26,
+          26.5,
+          26.8,
+          26.6,
+          26.1,
+          26.4,
+          26.1,
+          25.9,
+          26.6,
+          27,
+          26.8,
+          26.4,
+          26.1,
+          26.2,
+          25.8,
+          26.1,
+          26.2,
+          26,
+          25.4,
+          26.2,
+          26.8,
+          26.2,
+          25.9,
+          26.6,
+          26.7,
+          26.9,
+          26.3,
+          26.8,
+          26.3,
+          26.6,
+          27.2,
+          25.6,
+          25.9,
+          26.1,
+          26.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -893,6 +969,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.605,
       "top2_sum": 0.85
+    },
+    {
+      "ts": "2026-09-06T17:06:52.513Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.475,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.475,
+      "top2_sum": 0.92
     }
   ],
   "all_outcomes": [
@@ -907,7 +991,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 633
+      "volume": 671
     },
     {
       "question": "Will the highest temperature in Ankara be 22°C on September 7?",
@@ -916,11 +1000,11 @@
         22,
         22
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 344
+      "volume": 359
     },
     {
       "question": "Will the highest temperature in Ankara be 23°C on September 7?",
@@ -929,11 +1013,11 @@
         23,
         23
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 233
+      "volume": 440
     },
     {
       "question": "Will the highest temperature in Ankara be 24°C on September 7?",
@@ -942,11 +1026,11 @@
         24,
         24
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.445,
+      "ask": 0.445,
+      "price": 0.445,
       "spread": 0,
-      "volume": 1409
+      "volume": 1626
     },
     {
       "question": "Will the highest temperature in Ankara be 25°C on September 7?",
@@ -955,11 +1039,11 @@
         25,
         25
       ],
-      "bid": 0.605,
-      "ask": 0.605,
-      "price": 0.605,
+      "bid": 0.475,
+      "ask": 0.475,
+      "price": 0.475,
       "spread": 0,
-      "volume": 3076
+      "volume": 3338
     },
     {
       "question": "Will the highest temperature in Ankara be 26°C on September 7?",
@@ -968,11 +1052,11 @@
         26,
         26
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 4396
+      "volume": 4780
     },
     {
       "question": "Will the highest temperature in Ankara be 27°C on September 7?",
@@ -981,11 +1065,11 @@
         27,
         27
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 724
+      "volume": 1031
     },
     {
       "question": "Will the highest temperature in Ankara be 28°C on September 7?",

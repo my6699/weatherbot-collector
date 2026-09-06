@@ -6,7 +6,7 @@
   "station": "EGLC",
   "event_end_date": "2026-09-06T12:00:00Z",
   "hours_at_discovery": 50.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "4207263",
     "question": "Will the highest temperature in London be 24°C on September 6?",
@@ -58,7 +58,8 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-09-05T04:36:49.847Z",
       "stop_price": 0.096,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 1,
+      "resolved_hit": false
     },
     {
       "market_id": "4207264",
@@ -85,10 +86,11 @@
       "closed_at": "2026-09-05T20:30:11.350Z",
       "stop_price": 0.184,
       "forecast_change_streak": 0,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1281,6 +1283,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-06T17:06:47.450Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 26.6,
+      "hrrr": 26.4,
+      "metar": 23,
+      "best": 26.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.6,
+          "gfs_seamless": 26.4,
+          "icon_seamless": 26.7
+        },
+        "mean": 26.6,
+        "spread": 0.2,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          27.1,
+          25.9,
+          25.5,
+          26.8,
+          25.8,
+          26.9,
+          24.9,
+          26.6,
+          25.6,
+          26.9,
+          26,
+          25.1,
+          24.9,
+          27.5,
+          26.6,
+          26.3,
+          26.7,
+          26.5,
+          26.2,
+          26.7,
+          25.9,
+          25.8,
+          26,
+          26.2,
+          24.1,
+          26.9,
+          26.9,
+          24.4,
+          25.2,
+          26.2,
+          26.9,
+          25.9,
+          25.1,
+          26.8,
+          26.3,
+          26.9,
+          26.5,
+          25.9,
+          26.2,
+          26.2,
+          26.3,
+          26,
+          26.6,
+          26.2,
+          26.3,
+          26.7,
+          26.7,
+          26.6,
+          25.7,
+          26.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1411,6 +1487,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.26,
       "top2_sum": 1.01
+    },
+    {
+      "ts": "2026-09-06T17:06:47.450Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.9995,
+      "top2_bucket": "27-28C",
+      "top2_price": 0.002,
+      "top2_sum": 1.0015
     }
   ],
   "all_outcomes": [
@@ -1464,7 +1548,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 14632
+      "volume": 14714
     },
     {
       "question": "Will the highest temperature in London be 26°C on September 6?",
@@ -1477,7 +1561,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 13894
+      "volume": 14052
     },
     {
       "question": "Will the highest temperature in London be 27°C on September 6?",
@@ -1486,11 +1570,11 @@
         27,
         27
       ],
-      "bid": 0.75,
-      "ask": 0.75,
-      "price": 0.75,
-      "spread": 0,
-      "volume": 13009
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 16969
     },
     {
       "question": "Will the highest temperature in London be 28°C on September 6?",
@@ -1499,11 +1583,11 @@
         28,
         28
       ],
-      "bid": 0.26,
-      "ask": 0.26,
-      "price": 0.26,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 13515
+      "volume": 16371
     },
     {
       "question": "Will the highest temperature in London be 29°C on September 6?",
@@ -1512,11 +1596,11 @@
         29,
         29
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6833
+      "volume": 9161
     },
     {
       "question": "Will the highest temperature in London be 30°C on September 6?",
@@ -1525,11 +1609,11 @@
         30,
         30
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2472
+      "volume": 3175
     },
     {
       "question": "Will the highest temperature in London be 31°C on September 6?",
@@ -1558,5 +1642,6 @@
       "volume": 1479
     }
   ],
-  "created_at": "2026-09-04T09:49:42.763Z"
+  "created_at": "2026-09-04T09:49:42.763Z",
+  "metar_max": 17
 }

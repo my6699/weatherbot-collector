@@ -6,7 +6,7 @@
   "station": "RJTT",
   "event_end_date": "2026-09-06T12:00:00Z",
   "hours_at_discovery": 50.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "4207357",
     "question": "Will the highest temperature in Tokyo be 26°C on September 6?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-09-05T12:46:38.546Z",
       "stop_price": 0.072,
       "forecast_change_streak": 2,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 23,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1255,6 +1256,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-06T17:06:56.092Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 23,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1385,6 +1397,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.11,
       "top2_sum": 1.01
+    },
+    {
+      "ts": "2026-09-06T17:06:56.092Z",
+      "top_bucket": "23-23C",
+      "top_price": 1,
+      "top2_bucket": "22-23C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1395,9 +1415,9 @@
         -999,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1245
     },
@@ -1408,9 +1428,9 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1351
     },
@@ -1421,9 +1441,9 @@
         21,
         21
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 522
     },
@@ -1434,9 +1454,9 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 14249
     },
@@ -1447,11 +1467,11 @@
         23,
         23
       ],
-      "bid": 0.9,
-      "ask": 0.9,
-      "price": 0.9,
-      "spread": 0,
-      "volume": 17178
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 19257
     },
     {
       "question": "Will the highest temperature in Tokyo be 24°C on September 6?",
@@ -1460,11 +1480,11 @@
         24,
         24
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6903
+      "volume": 8995
     },
     {
       "question": "Will the highest temperature in Tokyo be 25°C on September 6?",
@@ -1473,11 +1493,11 @@
         25,
         25
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 12639
+      "volume": 14822
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on September 6?",
@@ -1486,9 +1506,9 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 10151
     },
@@ -1499,9 +1519,9 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 4587
     },
@@ -1512,9 +1532,9 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1599
     },
@@ -1525,12 +1545,13 @@
         29,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3219
     }
   ],
-  "created_at": "2026-09-04T09:49:52.628Z"
+  "created_at": "2026-09-04T09:49:52.628Z",
+  "metar_max": 23
 }
