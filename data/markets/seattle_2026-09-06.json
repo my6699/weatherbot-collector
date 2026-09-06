@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-09-06T12:00:00Z",
   "hours_at_discovery": 45.6,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "4212296",
     "question": "Will the highest temperature in Seattle be between 74-75°F on September 6?",
@@ -1137,6 +1137,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-06T14:13:40.461Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 71,
+      "hrrr": 72,
+      "metar": 55,
+      "best": 71.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 71,
+          "gfs_seamless": 72,
+          "icon_seamless": 70
+        },
+        "mean": 71.1,
+        "spread": 1.1,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          70,
+          69,
+          70,
+          71,
+          72,
+          69,
+          71,
+          69,
+          71,
+          70,
+          71,
+          71,
+          70,
+          71,
+          70,
+          71,
+          72,
+          70,
+          70,
+          69,
+          70,
+          70,
+          69,
+          70,
+          70,
+          71,
+          71,
+          70,
+          70,
+          69,
+          69,
+          70,
+          72,
+          69,
+          71,
+          70,
+          71,
+          71,
+          71,
+          71,
+          69,
+          72,
+          69,
+          70,
+          71,
+          69,
+          70,
+          71,
+          69,
+          70
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1251,6 +1325,14 @@
       "top2_bucket": "72-75F",
       "top2_price": 0.235,
       "top2_sum": 0.84
+    },
+    {
+      "ts": "2026-09-06T14:13:40.461Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.615,
+      "top2_bucket": "72-75F",
+      "top2_price": 0.235,
+      "top2_sum": 0.85
     }
   ],
   "all_outcomes": [
@@ -1287,11 +1369,11 @@
         66,
         67
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 451
+      "volume": 583
     },
     {
       "question": "Will the highest temperature in Seattle be between 68-69°F on September 6?",
@@ -1300,11 +1382,11 @@
         68,
         69
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 1145
+      "volume": 1148
     },
     {
       "question": "Will the highest temperature in Seattle be between 70-71°F on September 6?",
@@ -1313,11 +1395,11 @@
         70,
         71
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 1904
+      "volume": 1940
     },
     {
       "question": "Will the highest temperature in Seattle be between 72-73°F on September 6?",
@@ -1326,11 +1408,11 @@
         72,
         73
       ],
-      "bid": 0.605,
-      "ask": 0.605,
-      "price": 0.605,
+      "bid": 0.615,
+      "ask": 0.615,
+      "price": 0.615,
       "spread": 0,
-      "volume": 3270
+      "volume": 3406
     },
     {
       "question": "Will the highest temperature in Seattle be between 74-75°F on September 6?",
@@ -1343,7 +1425,7 @@
       "ask": 0.235,
       "price": 0.235,
       "spread": 0,
-      "volume": 1255
+      "volume": 1318
     },
     {
       "question": "Will the highest temperature in Seattle be between 76-77°F on September 6?",
@@ -1356,7 +1438,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 477
+      "volume": 597
     },
     {
       "question": "Will the highest temperature in Seattle be between 78-79°F on September 6?",
@@ -1365,9 +1447,9 @@
         78,
         79
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
       "volume": 479
     },

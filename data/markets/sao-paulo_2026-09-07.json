@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-07T12:00:00Z",
   "hours_at_discovery": 43.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4245898",
+    "question": "Will the highest temperature in Sao Paulo be 15°C on September 7?",
+    "bucket_low": 15,
+    "bucket_high": 15,
+    "entry_price": 0.11,
+    "bid_at_entry": 0.09,
+    "spread": 0.02,
+    "shares": 363.64,
+    "cost": 40,
+    "p": 0.48,
+    "ev": 3.3636,
+    "edge": 0.23,
+    "kelly": 0.1056,
+    "forecast_temp": 15.98,
+    "forecast_src": "ensemble",
+    "sigma": 2.2,
+    "opened_at": "2026-09-06T14:14:08.940Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.072
+  },
+  "positions": [
+    {
+      "market_id": "4245898",
+      "question": "Will the highest temperature in Sao Paulo be 15°C on September 7?",
+      "bucket_low": 15,
+      "bucket_high": 15,
+      "entry_price": 0.11,
+      "bid_at_entry": 0.09,
+      "spread": 0.02,
+      "shares": 363.64,
+      "cost": 40,
+      "p": 0.48,
+      "ev": 3.3636,
+      "edge": 0.23,
+      "kelly": 0.1056,
+      "forecast_temp": 15.98,
+      "forecast_src": "ensemble",
+      "sigma": 2.2,
+      "opened_at": "2026-09-06T14:14:08.940Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.072
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -537,6 +587,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-06T14:14:08.940Z",
+      "horizon": "D+1",
+      "hours_left": 21.8,
+      "ecmwf": 16,
+      "hrrr": 12,
+      "metar": null,
+      "best": 14.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 16,
+          "gfs_seamless": 12,
+          "icon_seamless": 13.2
+        },
+        "mean": 14.2,
+        "spread": 2.2,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          15.1,
+          15.5,
+          15.8,
+          15.1,
+          15,
+          14.3,
+          15.7,
+          15.8,
+          16.5,
+          17.3,
+          16.2,
+          16.1,
+          15.8,
+          14.8,
+          14.9,
+          15.2,
+          14.5,
+          15.6,
+          14.8,
+          14.9,
+          15.7,
+          16,
+          15,
+          15.3,
+          15.4,
+          15,
+          16.3,
+          16.6,
+          15.9,
+          15.9,
+          16,
+          15.2,
+          15.1,
+          15.9,
+          16,
+          14.6,
+          16.7,
+          15.1,
+          14,
+          16.6,
+          17.9,
+          14.6,
+          15.1,
+          15.1,
+          15.5,
+          15.6,
+          17.3,
+          18.1,
+          15.3,
+          15.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -595,6 +720,14 @@
       "top2_bucket": "13-14C",
       "top2_price": 0.335,
       "top2_sum": 0.625
+    },
+    {
+      "ts": "2026-09-06T14:14:08.940Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.325,
+      "top2_bucket": "13-14C",
+      "top2_price": 0.325,
+      "top2_sum": 0.61
     }
   ],
   "all_outcomes": [
@@ -605,11 +738,11 @@
         -999,
         6
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 151
+      "volume": 445
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 7°C on September 7?",
@@ -618,11 +751,11 @@
         7,
         7
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 141
+      "volume": 505
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 8°C on September 7?",
@@ -631,11 +764,11 @@
         8,
         8
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 141
+      "volume": 505
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 9°C on September 7?",
@@ -644,11 +777,11 @@
         9,
         9
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7
+      "volume": 62
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 10°C on September 7?",
@@ -657,11 +790,11 @@
         10,
         10
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 176
+      "volume": 377
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 11°C on September 7?",
@@ -670,11 +803,11 @@
         11,
         11
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
       "spread": 0,
-      "volume": 358
+      "volume": 1236
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 12°C on September 7?",
@@ -683,11 +816,11 @@
         12,
         12
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.155,
+      "ask": 0.155,
+      "price": 0.155,
       "spread": 0,
-      "volume": 1618
+      "volume": 3651
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 13°C on September 7?",
@@ -696,11 +829,11 @@
         13,
         13
       ],
-      "bid": 0.29,
-      "ask": 0.29,
-      "price": 0.29,
+      "bid": 0.285,
+      "ask": 0.285,
+      "price": 0.285,
       "spread": 0,
-      "volume": 751
+      "volume": 1099
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 14°C on September 7?",
@@ -709,11 +842,11 @@
         14,
         14
       ],
-      "bid": 0.335,
-      "ask": 0.335,
-      "price": 0.335,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 1351
+      "volume": 2021
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 15°C on September 7?",
@@ -722,11 +855,11 @@
         15,
         15
       ],
-      "bid": 0.15,
-      "ask": 0.15,
-      "price": 0.15,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
-      "volume": 101
+      "volume": 564
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 16°C or higher on September 7?",
@@ -735,11 +868,11 @@
         16,
         999
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 113
+      "volume": 637
     }
   ],
   "created_at": "2026-09-05T16:07:43.288Z"
