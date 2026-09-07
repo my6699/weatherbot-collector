@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-08T12:00:00Z",
   "hours_at_discovery": 45.8,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4287070",
+    "question": "Will the highest temperature in Buenos Aires be 17°C on September 8?",
+    "bucket_low": 17,
+    "bucket_high": 17,
+    "entry_price": 0.16,
+    "bid_at_entry": 0.14,
+    "spread": 0.02,
+    "shares": 250,
+    "cost": 40,
+    "p": 0.68,
+    "ev": 3.25,
+    "edge": 0.3842,
+    "kelly": 0.1559,
+    "forecast_temp": 18.23,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-09-07T20:37:43.675Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.112
+  },
+  "positions": [
+    {
+      "market_id": "4287070",
+      "question": "Will the highest temperature in Buenos Aires be 17°C on September 8?",
+      "bucket_low": 17,
+      "bucket_high": 17,
+      "entry_price": 0.16,
+      "bid_at_entry": 0.14,
+      "spread": 0.02,
+      "shares": 250,
+      "cost": 40,
+      "p": 0.68,
+      "ev": 3.25,
+      "edge": 0.3842,
+      "kelly": 0.1559,
+      "forecast_temp": 18.23,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-09-07T20:37:43.675Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.112
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -605,6 +655,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-07T20:37:43.675Z",
+      "horizon": "D+1",
+      "hours_left": 15.4,
+      "ecmwf": 17.4,
+      "hrrr": 16.9,
+      "metar": null,
+      "best": 17.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 17.4,
+          "gfs_seamless": 16.9,
+          "icon_seamless": 17.1
+        },
+        "mean": 17.2,
+        "spread": 0.3,
+        "gap": 0.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          18.1,
+          17.3,
+          17.5,
+          17.4,
+          17.4,
+          17.2,
+          17.9,
+          17.4,
+          17.1,
+          18.1,
+          17,
+          17.9,
+          17.5,
+          17.7,
+          17.5,
+          17.6,
+          16.8,
+          17,
+          17.6,
+          17.6,
+          16.9,
+          16.9,
+          17.6,
+          17.9,
+          16.8,
+          17.4,
+          17.4,
+          17.5,
+          17.7,
+          17.9,
+          17.5,
+          17,
+          17.5,
+          17.5,
+          17.6,
+          17.7,
+          17.9,
+          17.5,
+          17.1,
+          17.1,
+          16.6,
+          17.3,
+          17.7,
+          17.3,
+          16.7,
+          16.7,
+          17.1,
+          17.2,
+          17.4,
+          17
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -671,6 +795,14 @@
       "top2_bucket": "18-19C",
       "top2_price": 0.2,
       "top2_sum": 0.72
+    },
+    {
+      "ts": "2026-09-07T20:37:43.675Z",
+      "top_bucket": "18-18C",
+      "top_price": 0.525,
+      "top2_bucket": "18-19C",
+      "top2_price": 0.26,
+      "top2_sum": 0.785
     }
   ],
   "all_outcomes": [
@@ -681,11 +813,11 @@
         -999,
         11
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 293
+      "volume": 299
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 12°C on September 8?",
@@ -724,7 +856,7 @@
       "ask": 0.005,
       "price": 0.005,
       "spread": 0,
-      "volume": 68
+      "volume": 92
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 15°C on September 8?",
@@ -737,7 +869,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 305
+      "volume": 324
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 16°C on September 8?",
@@ -746,11 +878,11 @@
         16,
         16
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 239
+      "volume": 257
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on September 8?",
@@ -759,11 +891,11 @@
         17,
         17
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
+      "bid": 0.15,
+      "ask": 0.15,
+      "price": 0.15,
       "spread": 0,
-      "volume": 364
+      "volume": 585
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 18°C on September 8?",
@@ -772,11 +904,11 @@
         18,
         18
       ],
-      "bid": 0.52,
-      "ask": 0.52,
-      "price": 0.52,
+      "bid": 0.525,
+      "ask": 0.525,
+      "price": 0.525,
       "spread": 0,
-      "volume": 1166
+      "volume": 1436
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 19°C on September 8?",
@@ -785,11 +917,11 @@
         19,
         19
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.26,
+      "ask": 0.26,
+      "price": 0.26,
       "spread": 0,
-      "volume": 1629
+      "volume": 2175
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on September 8?",
@@ -802,7 +934,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 437
+      "volume": 484
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C or higher on September 8?",
@@ -811,11 +943,11 @@
         21,
         999
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 90
+      "volume": 252
     }
   ],
   "created_at": "2026-09-06T14:14:12.212Z"

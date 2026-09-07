@@ -6,10 +6,10 @@
   "station": "KORD",
   "event_end_date": "2026-09-07T12:00:00Z",
   "hours_at_discovery": 50.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 80.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1283,6 +1283,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-07T20:37:17.991Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 78,
+      "hrrr": 81,
+      "metar": 79,
+      "best": 78.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 78,
+          "gfs_seamless": 81,
+          "icon_seamless": 78
+        },
+        "mean": 78.9,
+        "spread": 2.1,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          78,
+          77,
+          77,
+          77,
+          77,
+          78,
+          77,
+          80,
+          80,
+          80,
+          77,
+          77,
+          78,
+          78,
+          77,
+          78,
+          77,
+          77,
+          77,
+          81,
+          77,
+          78,
+          78,
+          80,
+          77,
+          78,
+          77,
+          79,
+          78,
+          78,
+          77,
+          77,
+          77,
+          81,
+          77,
+          79,
+          77,
+          78,
+          81,
+          79,
+          79,
+          78,
+          81,
+          78,
+          78,
+          77,
+          77,
+          77,
+          77,
+          78
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1421,6 +1496,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.465,
       "top2_sum": 0.965
+    },
+    {
+      "ts": "2026-09-07T20:37:17.991Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.975,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.035,
+      "top2_sum": 1.01
     }
   ],
   "all_outcomes": [
@@ -1470,11 +1553,11 @@
         76,
         77
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3827
+      "volume": 4279
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on September 7?",
@@ -1483,11 +1566,11 @@
         78,
         79
       ],
-      "bid": 0.5,
-      "ask": 0.5,
-      "price": 0.5,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7338
+      "volume": 8906
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on September 7?",
@@ -1496,11 +1579,11 @@
         80,
         81
       ],
-      "bid": 0.465,
-      "ask": 0.465,
-      "price": 0.465,
+      "bid": 0.975,
+      "ask": 0.975,
+      "price": 0.975,
       "spread": 0,
-      "volume": 3029
+      "volume": 4785
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on September 7?",
@@ -1509,11 +1592,11 @@
         82,
         83
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 3101
+      "volume": 4504
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on September 7?",
@@ -1522,11 +1605,11 @@
         84,
         85
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 2878
+      "volume": 3410
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on September 7?",
@@ -1535,11 +1618,11 @@
         86,
         87
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 571
+      "volume": 598
     },
     {
       "question": "Will the highest temperature in Chicago be between 88-89°F on September 7?",
