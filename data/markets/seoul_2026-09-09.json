@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-09T12:00:00Z",
   "hours_at_discovery": 49.6,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4321775",
+    "question": "Will the highest temperature in Seoul (Incheon) be 25°C on September 9?",
+    "bucket_low": 25,
+    "bucket_high": 25,
+    "entry_price": 0.22,
+    "bid_at_entry": 0.21,
+    "spread": 0.01,
+    "shares": 181.82,
+    "cost": 40,
+    "p": 0.46,
+    "ev": 1.0909,
+    "edge": 0.1165,
+    "kelly": 0.078,
+    "forecast_temp": 25.97,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-09-07T23:33:46.245Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.168
+  },
+  "positions": [
+    {
+      "market_id": "4321775",
+      "question": "Will the highest temperature in Seoul (Incheon) be 25°C on September 9?",
+      "bucket_low": 25,
+      "bucket_high": 25,
+      "entry_price": 0.22,
+      "bid_at_entry": 0.21,
+      "spread": 0.01,
+      "shares": 181.82,
+      "cost": 40,
+      "p": 0.46,
+      "ev": 1.0909,
+      "edge": 0.1165,
+      "kelly": 0.078,
+      "forecast_temp": 25.97,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-09-07T23:33:46.245Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.168
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -236,6 +286,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-07T23:33:46.245Z",
+      "horizon": "D+2",
+      "hours_left": 36.4,
+      "ecmwf": 25.9,
+      "hrrr": 24.8,
+      "metar": null,
+      "best": 25.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.9,
+          "gfs_seamless": 24.8,
+          "icon_seamless": 25.5
+        },
+        "mean": 25.5,
+        "spread": 0.7,
+        "gap": 1.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          23.2,
+          25.4,
+          25.6,
+          25.8,
+          25.3,
+          26.3,
+          23.7,
+          25.7,
+          25.5,
+          25.9,
+          26.1,
+          25.4,
+          26.2,
+          26,
+          25.2,
+          25.5,
+          24.8,
+          23.4,
+          25.5,
+          25,
+          25.7,
+          25.1,
+          25.3,
+          23.9,
+          25.9,
+          25.9,
+          24.6,
+          25.2,
+          25.7,
+          25.5,
+          25.6,
+          25.8,
+          24.6,
+          26.1,
+          25.8,
+          25.8,
+          24.5,
+          24.9,
+          25.6,
+          25.3,
+          25.8,
+          25.4,
+          24.6,
+          24.3,
+          25.4,
+          25.8,
+          26.1,
+          25.4,
+          25.6,
+          25.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -262,6 +386,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.26,
       "top2_sum": 0.7
+    },
+    {
+      "ts": "2026-09-07T23:33:46.245Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.44,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.255,
+      "top2_sum": 0.695
     }
   ],
   "all_outcomes": [
@@ -285,11 +417,11 @@
         21,
         21
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 777
+      "volume": 806
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 22°C on September 9?",
@@ -302,7 +434,7 @@
       "ask": 0.0055,
       "price": 0.0055,
       "spread": 0,
-      "volume": 458
+      "volume": 486
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 23°C on September 9?",
@@ -315,7 +447,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 180
+      "volume": 183
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 24°C on September 9?",
@@ -328,7 +460,7 @@
       "ask": 0.04,
       "price": 0.04,
       "spread": 0,
-      "volume": 1161
+      "volume": 1169
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 25°C on September 9?",
@@ -337,11 +469,11 @@
         25,
         25
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.215,
+      "ask": 0.215,
+      "price": 0.215,
       "spread": 0,
-      "volume": 1455
+      "volume": 1843
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 26°C on September 9?",
@@ -354,7 +486,7 @@
       "ask": 0.44,
       "price": 0.44,
       "spread": 0,
-      "volume": 1537
+      "volume": 1616
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 27°C on September 9?",
@@ -363,9 +495,9 @@
         27,
         27
       ],
-      "bid": 0.26,
-      "ask": 0.26,
-      "price": 0.26,
+      "bid": 0.255,
+      "ask": 0.255,
+      "price": 0.255,
       "spread": 0,
       "volume": 791
     },
@@ -393,7 +525,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 684
+      "volume": 704
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 30°C or higher on September 9?",
@@ -402,11 +534,11 @@
         30,
         999
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 180
+      "volume": 204
     }
   ],
   "created_at": "2026-09-07T10:25:59.566Z"
