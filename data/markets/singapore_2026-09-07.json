@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-09-07T12:00:00Z",
   "hours_at_discovery": 50.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1205,6 +1205,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-07T16:31:03.635Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 29,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1335,6 +1346,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.001,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-09-07T16:31:03.635Z",
+      "top_bucket": "33-33C",
+      "top_price": 1,
+      "top2_bucket": "32-33C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1345,9 +1364,9 @@
         -999,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1617
     },
@@ -1358,9 +1377,9 @@
         29,
         29
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1380
     },
@@ -1371,9 +1390,9 @@
         30,
         30
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1716
     },
@@ -1384,11 +1403,11 @@
         31,
         31
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4139
+      "volume": 4159
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on September 7?",
@@ -1397,11 +1416,11 @@
         32,
         32
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 10696
+      "volume": 10740
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on September 7?",
@@ -1410,11 +1429,11 @@
         33,
         33
       ],
-      "bid": 0.999,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.999,
-      "spread": 0,
-      "volume": 8783
+      "price": 1,
+      "spread": -0.001,
+      "volume": 9098
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on September 7?",
@@ -1423,11 +1442,11 @@
         34,
         34
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 16686
+      "volume": 16953
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on September 7?",
@@ -1436,9 +1455,9 @@
         35,
         35
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2171
     },
@@ -1449,9 +1468,9 @@
         36,
         36
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1104
     },
@@ -1462,9 +1481,9 @@
         37,
         37
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 385
     },
@@ -1475,12 +1494,13 @@
         38,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 318
     }
   ],
-  "created_at": "2026-09-05T09:08:31.196Z"
+  "created_at": "2026-09-05T09:08:31.196Z",
+  "metar_max": 32
 }

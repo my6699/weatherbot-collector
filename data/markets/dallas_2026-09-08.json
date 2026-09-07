@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.08
+      "stop_price": 0.08,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -660,6 +661,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-07T16:30:41.947Z",
+      "horizon": "D+1",
+      "hours_left": 19.5,
+      "ecmwf": 97,
+      "hrrr": 101,
+      "metar": null,
+      "best": 99,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 97,
+          "gfs_seamless": 101,
+          "icon_seamless": 101
+        },
+        "mean": 99,
+        "spread": 2,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          98,
+          96,
+          96,
+          98,
+          96,
+          98,
+          98,
+          99,
+          97,
+          98,
+          99,
+          99,
+          98,
+          99,
+          99,
+          98,
+          99,
+          98,
+          95,
+          100,
+          99,
+          98,
+          99,
+          99,
+          97,
+          98,
+          97,
+          92,
+          96,
+          98,
+          98,
+          97,
+          96,
+          98,
+          99,
+          98,
+          97,
+          100,
+          99,
+          96,
+          92,
+          100,
+          97,
+          98,
+          98,
+          98,
+          96,
+          100,
+          94,
+          97
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -726,6 +802,14 @@
       "top2_bucket": "100-103F",
       "top2_price": 0.13,
       "top2_sum": 0.805
+    },
+    {
+      "ts": "2026-09-07T16:30:41.947Z",
+      "top_bucket": "100-101F",
+      "top_price": 0.695,
+      "top2_bucket": "100-103F",
+      "top2_price": 0.135,
+      "top2_sum": 0.83
     }
   ],
   "all_outcomes": [
@@ -736,11 +820,11 @@
         -999,
         91
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 625
+      "volume": 957
     },
     {
       "question": "Will the highest temperature in Dallas be between 92-93°F on September 8?",
@@ -766,7 +850,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 87
+      "volume": 317
     },
     {
       "question": "Will the highest temperature in Dallas be between 96-97°F on September 8?",
@@ -788,11 +872,11 @@
         98,
         99
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 954
+      "volume": 1001
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on September 8?",
@@ -801,11 +885,11 @@
         100,
         101
       ],
-      "bid": 0.675,
-      "ask": 0.675,
-      "price": 0.675,
+      "bid": 0.695,
+      "ask": 0.695,
+      "price": 0.695,
       "spread": 0,
-      "volume": 1080
+      "volume": 1184
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on September 8?",
@@ -814,11 +898,11 @@
         102,
         103
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 344
+      "volume": 395
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on September 8?",
@@ -831,7 +915,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 164
+      "volume": 167
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on September 8?",
@@ -853,9 +937,9 @@
         108,
         109
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
       "volume": 264
     },
