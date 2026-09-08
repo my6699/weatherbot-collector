@@ -85,7 +85,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.128
+      "stop_price": 0.128,
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -688,6 +689,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-08T21:54:28.829Z",
+      "horizon": "D+1",
+      "hours_left": 14.1,
+      "ecmwf": 26.6,
+      "hrrr": 24.7,
+      "metar": null,
+      "best": 25.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.6,
+          "gfs_seamless": 24.7,
+          "icon_seamless": 24.6
+        },
+        "mean": 25.6,
+        "spread": 1,
+        "gap": 1.9,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          27.4,
+          27.3,
+          25.9,
+          27.6,
+          27.2,
+          26.6,
+          26.4,
+          27.1,
+          26.5,
+          25.6,
+          26.5,
+          26.5,
+          27.6,
+          26.5,
+          26.1,
+          26.9,
+          26.5,
+          24.7,
+          26.4,
+          26.2,
+          26.2,
+          26.4,
+          26.4,
+          27.2,
+          26,
+          26.5,
+          26,
+          26.6,
+          26.6,
+          27.4,
+          26.6,
+          26.9,
+          27.1,
+          26.9,
+          26.9,
+          25.9,
+          27.1,
+          26.2,
+          26.6,
+          24.9,
+          26.3,
+          26.8,
+          26.9,
+          27.7,
+          25.9,
+          26.9,
+          27.6,
+          26.3,
+          26.5,
+          26.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -754,6 +830,14 @@
       "top2_bucket": "25-26C",
       "top2_price": 0.435,
       "top2_sum": 0.73
+    },
+    {
+      "ts": "2026-09-08T21:54:28.829Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.44,
+      "top2_bucket": "25-26C",
+      "top2_price": 0.44,
+      "top2_sum": 0.815
     }
   ],
   "all_outcomes": [
@@ -807,7 +891,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 712
+      "volume": 752
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 24°C on September 9?",
@@ -829,11 +913,11 @@
         25,
         25
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.375,
+      "ask": 0.375,
+      "price": 0.375,
       "spread": 0,
-      "volume": 4295
+      "volume": 5208
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 26°C on September 9?",
@@ -842,11 +926,11 @@
         26,
         26
       ],
-      "bid": 0.435,
-      "ask": 0.435,
-      "price": 0.435,
+      "bid": 0.44,
+      "ask": 0.44,
+      "price": 0.44,
       "spread": 0,
-      "volume": 3253
+      "volume": 3370
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 27°C on September 9?",
@@ -855,11 +939,11 @@
         27,
         27
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 2044
+      "volume": 2225
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 28°C on September 9?",
@@ -872,7 +956,7 @@
       "ask": 0.055,
       "price": 0.055,
       "spread": 0,
-      "volume": 1409
+      "volume": 1563
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 29°C on September 9?",
@@ -881,11 +965,11 @@
         29,
         29
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1559
+      "volume": 1699
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 30°C or higher on September 9?",
