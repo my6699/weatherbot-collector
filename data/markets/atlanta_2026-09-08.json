@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-09-08T12:00:00Z",
   "hours_at_discovery": 48.9,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "4279679",
     "question": "Will the highest temperature in Atlanta be between 86-87°F on September 8?",
@@ -1033,6 +1033,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-08T14:36:45.308Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 87,
+      "hrrr": 89,
+      "metar": 77,
+      "best": 87.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 87,
+          "gfs_seamless": 89,
+          "icon_seamless": 88
+        },
+        "mean": 87.8,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          85,
+          87,
+          87,
+          86,
+          91,
+          87,
+          87,
+          87,
+          86,
+          87,
+          89,
+          86,
+          87,
+          89,
+          87,
+          89,
+          91,
+          86,
+          87,
+          88,
+          88,
+          88,
+          85,
+          87,
+          86,
+          90,
+          87,
+          89,
+          88,
+          87,
+          87,
+          88,
+          86,
+          85,
+          87,
+          90,
+          86,
+          90,
+          85,
+          88,
+          87,
+          86,
+          88,
+          87,
+          91,
+          87,
+          89,
+          88,
+          84,
+          87
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1139,6 +1213,14 @@
       "top2_bucket": "88-91F",
       "top2_price": 0.195,
       "top2_sum": 0.82
+    },
+    {
+      "ts": "2026-09-08T14:36:45.308Z",
+      "top_bucket": "88-89F",
+      "top_price": 0.635,
+      "top2_bucket": "86-89F",
+      "top2_price": 0.635,
+      "top2_sum": 0.84
     }
   ],
   "all_outcomes": [
@@ -1192,7 +1274,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 1789
+      "volume": 1851
     },
     {
       "question": "Will the highest temperature in Atlanta be between 84-85°F on September 8?",
@@ -1205,7 +1287,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 1621
+      "volume": 1718
     },
     {
       "question": "Will the highest temperature in Atlanta be between 86-87°F on September 8?",
@@ -1214,11 +1296,11 @@
         86,
         87
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 5214
+      "volume": 5579
     },
     {
       "question": "Will the highest temperature in Atlanta be between 88-89°F on September 8?",
@@ -1227,11 +1309,11 @@
         88,
         89
       ],
-      "bid": 0.625,
-      "ask": 0.625,
-      "price": 0.625,
+      "bid": 0.635,
+      "ask": 0.635,
+      "price": 0.635,
       "spread": 0,
-      "volume": 3781
+      "volume": 4002
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on September 8?",
@@ -1240,11 +1322,11 @@
         90,
         91
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
-      "volume": 2997
+      "volume": 3323
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on September 8?",
@@ -1253,11 +1335,11 @@
         92,
         93
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 1433
+      "volume": 1469
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on September 8?",
@@ -1266,11 +1348,11 @@
         94,
         95
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 1520
+      "volume": 1607
     },
     {
       "question": "Will the highest temperature in Atlanta be 96°F or higher on September 8?",
@@ -1279,11 +1361,11 @@
         96,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 636
+      "volume": 791
     }
   ],
   "created_at": "2026-09-06T11:03:26.627Z"

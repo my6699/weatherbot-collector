@@ -6,7 +6,7 @@
   "station": "LLBG",
   "event_end_date": "2026-09-08T12:00:00Z",
   "hours_at_discovery": 54,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "4275693",
     "question": "Will the highest temperature in Tel Aviv be 34°C on September 8?",
@@ -51,18 +51,19 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-09-06T23:59:38.398Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 141.73,
+      "exit_price": 0.9995,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-09-08T14:37:03.091Z",
       "stop_price": 0.22,
       "forecast_change_streak": 0,
       "stop_pending": true,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 34,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1104,6 +1105,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-08T14:37:03.091Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 35.5,
+      "hrrr": 34.3,
+      "metar": 32,
+      "best": 34.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 35.5,
+          "gfs_seamless": 34.3,
+          "icon_seamless": 33.7
+        },
+        "mean": 34.8,
+        "spread": 1.1,
+        "gap": 1.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          35.7,
+          35.8,
+          35.7,
+          35.4,
+          35.2,
+          35.5,
+          35.4,
+          35.6,
+          35.4,
+          35.6,
+          35.6,
+          35.7,
+          35.3,
+          35.5,
+          35.5,
+          35.6,
+          35.7,
+          35.7,
+          35.3,
+          35.9,
+          35.6,
+          35.1,
+          35.8,
+          35.5,
+          35.5,
+          35.9,
+          35.6,
+          35.4,
+          35.5,
+          35.5,
+          35.6,
+          35.5,
+          35.5,
+          35.5,
+          35.5,
+          35.2,
+          35.4,
+          35.7,
+          35.8,
+          35.4,
+          35.3,
+          35.6,
+          35.7,
+          35.8,
+          35.7,
+          35.6,
+          35.4,
+          35.8,
+          35.5,
+          35.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1218,6 +1294,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.705,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-09-08T14:37:03.091Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.9995,
+      "top2_bucket": "33-34C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1258,7 +1342,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3185
+      "volume": 3204
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on September 8?",
@@ -1267,11 +1351,11 @@
         33,
         33
       ],
-      "bid": 0.29,
-      "ask": 0.29,
-      "price": 0.29,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5506
+      "volume": 7413
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on September 8?",
@@ -1280,11 +1364,11 @@
         34,
         34
       ],
-      "bid": 0.705,
-      "ask": 0.705,
-      "price": 0.705,
-      "spread": 0,
-      "volume": 4205
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 5906
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on September 8?",
@@ -1293,11 +1377,11 @@
         35,
         35
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2005
+      "volume": 3711
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 36°C on September 8?",
@@ -1310,7 +1394,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 970
+      "volume": 976
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 37°C on September 8?",
@@ -1323,7 +1407,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 273
+      "volume": 279
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 38°C on September 8?",
@@ -1336,7 +1420,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1200
+      "volume": 1206
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 39°C on September 8?",
@@ -1349,7 +1433,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 396
+      "volume": 402
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 40°C or higher on September 8?",
@@ -1362,8 +1446,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 396
+      "volume": 402
     }
   ],
-  "created_at": "2026-09-06T06:01:16.374Z"
+  "created_at": "2026-09-06T06:01:16.374Z",
+  "metar_max": 27
 }
