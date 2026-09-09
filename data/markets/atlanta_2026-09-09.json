@@ -6,10 +6,10 @@
   "station": "KATL",
   "event_end_date": "2026-09-09T12:00:00Z",
   "hours_at_discovery": 49.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 88.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1055,6 +1055,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-09T21:44:36.284Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 91,
+      "hrrr": 90,
+      "metar": 88,
+      "best": 90.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 91,
+          "gfs_seamless": 90,
+          "icon_seamless": 89
+        },
+        "mean": 90.3,
+        "spread": 1.3,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          88,
+          90,
+          90,
+          88,
+          91,
+          90,
+          90,
+          90,
+          89,
+          89,
+          91,
+          87,
+          89,
+          93,
+          89,
+          91,
+          91,
+          89,
+          90,
+          91,
+          91,
+          91,
+          88,
+          90,
+          89,
+          90,
+          89,
+          90,
+          90,
+          88,
+          89,
+          91,
+          89,
+          87,
+          89,
+          92,
+          89,
+          90,
+          88,
+          90,
+          91,
+          90,
+          90,
+          89,
+          92,
+          91,
+          90,
+          91,
+          87,
+          90
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1169,6 +1243,14 @@
       "top2_bucket": "88-91F",
       "top2_price": 0.7,
       "top2_sum": 0.935
+    },
+    {
+      "ts": "2026-09-09T21:44:36.284Z",
+      "top_bucket": "88-89F",
+      "top_price": 0.955,
+      "top2_bucket": "88-91F",
+      "top2_price": 0.04,
+      "top2_sum": 0.995
     }
   ],
   "all_outcomes": [
@@ -1244,11 +1326,11 @@
         86,
         87
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1108
+      "volume": 1501
     },
     {
       "question": "Will the highest temperature in Atlanta be between 88-89°F on September 9?",
@@ -1257,11 +1339,11 @@
         88,
         89
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.955,
+      "ask": 0.955,
+      "price": 0.955,
       "spread": 0,
-      "volume": 3696
+      "volume": 5417
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on September 9?",
@@ -1270,11 +1352,11 @@
         90,
         91
       ],
-      "bid": 0.7,
-      "ask": 0.7,
-      "price": 0.7,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 5439
+      "volume": 6696
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on September 9?",
@@ -1283,11 +1365,11 @@
         92,
         93
       ],
-      "bid": 0.056,
-      "ask": 0.056,
-      "price": 0.056,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2405
+      "volume": 2954
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on September 9?",
@@ -1296,11 +1378,11 @@
         94,
         95
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1187
+      "volume": 1395
     },
     {
       "question": "Will the highest temperature in Atlanta be 96°F or higher on September 9?",
@@ -1309,9 +1391,9 @@
         96,
         999
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 302
     }
