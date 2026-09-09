@@ -80,11 +80,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-09-08T18:45:03.859Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.88,
+      "exit_price": 0.0005,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-09-09T09:51:01.331Z",
       "stop_price": 0.17,
       "forecast_change_streak": 3,
       "trailing_activated": true
@@ -913,6 +913,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-09T09:51:01.331Z",
+      "horizon": "D+0",
+      "hours_left": 2.1,
+      "ecmwf": 25.3,
+      "hrrr": 24.7,
+      "metar": 24,
+      "best": 25.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.3,
+          "gfs_seamless": 24.7,
+          "icon_seamless": 25.2
+        },
+        "mean": 25.1,
+        "spread": 0.4,
+        "gap": 0.6,
+        "llmEnhanced": false,
+        "membersMax": [
+          23.6,
+          23,
+          25.2,
+          24.7,
+          25,
+          24.2,
+          24.9,
+          25,
+          24.8,
+          24.4,
+          23.9,
+          25.2,
+          24.9,
+          25,
+          25.1,
+          24,
+          24.8,
+          23.2,
+          24.8,
+          25,
+          25,
+          25.2,
+          23.6,
+          25.2,
+          24.7,
+          23.4,
+          23.6,
+          24.5,
+          23.7,
+          24.8,
+          23.9,
+          24.5,
+          25.4,
+          23.8,
+          23.8,
+          24.9,
+          26.3,
+          23.9,
+          23.5,
+          23.9,
+          25.5,
+          24.8,
+          25.3,
+          23.2,
+          23.9,
+          24.8,
+          23.4,
+          26.4,
+          24.8,
+          23.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1003,6 +1077,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.27,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-09-09T09:51:01.331Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.9995,
+      "top2_bucket": "25-26C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1069,7 +1151,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4997
+      "volume": 5100
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 25°C on September 9?",
@@ -1082,7 +1164,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 16458
+      "volume": 16706
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 26°C on September 9?",
@@ -1091,11 +1173,11 @@
         26,
         26
       ],
-      "bid": 0.72,
-      "ask": 0.72,
-      "price": 0.72,
-      "spread": 0,
-      "volume": 6334
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 15493
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 27°C on September 9?",
@@ -1104,11 +1186,11 @@
         27,
         27
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4858
+      "volume": 11649
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 28°C on September 9?",
@@ -1117,11 +1199,11 @@
         28,
         28
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4145
+      "volume": 6825
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 29°C on September 9?",
@@ -1130,11 +1212,11 @@
         29,
         29
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2150
+      "volume": 2475
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 30°C or higher on September 9?",

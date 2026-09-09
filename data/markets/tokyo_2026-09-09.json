@@ -834,6 +834,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-09T09:51:02.360Z",
+      "horizon": "D+0",
+      "hours_left": 2.1,
+      "ecmwf": 31,
+      "hrrr": 32.1,
+      "metar": 23,
+      "best": 31.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31,
+          "gfs_seamless": 32.1,
+          "icon_seamless": 30.4
+        },
+        "mean": 31.2,
+        "spread": 0.9,
+        "gap": 1.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          29.9,
+          30.6,
+          30.9,
+          30.6,
+          30.5,
+          30.9,
+          30.5,
+          30.4,
+          30.7,
+          30.6,
+          30.6,
+          30.8,
+          30.5,
+          30.7,
+          30.6,
+          30.9,
+          30.6,
+          30.1,
+          30.4,
+          29.5,
+          30.9,
+          30.4,
+          30.7,
+          30.3,
+          30.9,
+          31.3,
+          31.2,
+          30.4,
+          30.9,
+          31.1,
+          31,
+          30.7,
+          30.5,
+          30.6,
+          30,
+          30.9,
+          30.4,
+          31.1,
+          31.3,
+          30.5,
+          31.1,
+          30.8,
+          30.7,
+          30.8,
+          30.3,
+          30.9,
+          30.2,
+          31.4,
+          30.1,
+          31.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -924,6 +998,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.075,
       "top2_sum": 0.985
+    },
+    {
+      "ts": "2026-09-09T09:51:02.360Z",
+      "top_bucket": "31-31C",
+      "top_price": 0.9995,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -938,7 +1020,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5563
+      "volume": 5573
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on September 9?",
@@ -977,7 +1059,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4549
+      "volume": 4599
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on September 9?",
@@ -990,7 +1072,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6044
+      "volume": 6573
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on September 9?",
@@ -1003,7 +1085,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7438
+      "volume": 7507
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on September 9?",
@@ -1012,11 +1094,11 @@
         31,
         31
       ],
-      "bid": 0.91,
-      "ask": 0.91,
-      "price": 0.91,
-      "spread": 0,
-      "volume": 9699
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 13690
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C on September 9?",
@@ -1025,11 +1107,11 @@
         32,
         32
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6185
+      "volume": 10054
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on September 9?",
@@ -1038,11 +1120,11 @@
         33,
         33
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4947
+      "volume": 6676
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on September 9?",
@@ -1055,7 +1137,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2538
+      "volume": 2695
     },
     {
       "question": "Will the highest temperature in Tokyo be 35°C or higher on September 9?",
@@ -1064,11 +1146,11 @@
         35,
         999
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2082
+      "volume": 2119
     }
   ],
   "created_at": "2026-09-07T10:26:00.886Z"
