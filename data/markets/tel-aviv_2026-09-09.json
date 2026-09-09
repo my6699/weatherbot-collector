@@ -6,10 +6,10 @@
   "station": "LLBG",
   "event_end_date": "2026-09-09T12:00:00Z",
   "hours_at_discovery": 49.6,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 34,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -904,6 +904,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-09T14:39:30.365Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 35.1,
+      "hrrr": 34.1,
+      "metar": 32,
+      "best": 34.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 35.1,
+          "gfs_seamless": 34.1,
+          "icon_seamless": 33.3
+        },
+        "mean": 34.4,
+        "spread": 1.1,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          34.9,
+          34.9,
+          35.1,
+          35.1,
+          35,
+          34.9,
+          34.7,
+          34.9,
+          35,
+          35,
+          35,
+          35.2,
+          34.8,
+          34.9,
+          34.9,
+          34.9,
+          35,
+          35.2,
+          34.9,
+          35.3,
+          34.7,
+          35.1,
+          34.9,
+          35,
+          35.1,
+          35.2,
+          34.9,
+          34.6,
+          34.9,
+          35.1,
+          35.1,
+          34.9,
+          35.1,
+          35,
+          34.8,
+          34.9,
+          34.7,
+          35,
+          35.1,
+          34.9,
+          35.1,
+          34.9,
+          35.1,
+          35.1,
+          35.3,
+          35.3,
+          35,
+          35,
+          35.1,
+          35.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1002,6 +1077,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.43,
       "top2_sum": 1.06
+    },
+    {
+      "ts": "2026-09-09T14:39:30.365Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.9985,
+      "top2_bucket": "34-35C",
+      "top2_price": 0.0025,
+      "top2_sum": 1.001
     }
   ],
   "all_outcomes": [
@@ -1016,7 +1099,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1216
+      "volume": 1236
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 30°C on September 9?",
@@ -1055,7 +1138,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6028
+      "volume": 6061
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on September 9?",
@@ -1064,11 +1147,11 @@
         33,
         33
       ],
-      "bid": 0.63,
-      "ask": 0.63,
-      "price": 0.63,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4122
+      "volume": 7313
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on September 9?",
@@ -1077,11 +1160,11 @@
         34,
         34
       ],
-      "bid": 0.43,
-      "ask": 0.43,
-      "price": 0.43,
+      "bid": 0.9985,
+      "ask": 0.9985,
+      "price": 0.9985,
       "spread": 0,
-      "volume": 2966
+      "volume": 4923
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on September 9?",
@@ -1090,11 +1173,11 @@
         35,
         35
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 959
+      "volume": 1488
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 36°C on September 9?",
@@ -1103,11 +1186,11 @@
         36,
         36
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 321
+      "volume": 359
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 37°C on September 9?",
@@ -1120,7 +1203,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1287
+      "volume": 1293
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 38°C on September 9?",
@@ -1133,7 +1216,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 199
+      "volume": 205
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 39°C or higher on September 9?",
@@ -1146,8 +1229,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 240
+      "volume": 246
     }
   ],
-  "created_at": "2026-09-07T10:26:11.271Z"
+  "created_at": "2026-09-07T10:26:11.271Z",
+  "metar_max": 27
 }
