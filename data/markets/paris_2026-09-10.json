@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.104
+      "stop_price": 0.104,
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -433,6 +434,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-09T04:50:13.182Z",
+      "horizon": "D+1",
+      "hours_left": 31.2,
+      "ecmwf": 22.5,
+      "hrrr": 22.1,
+      "metar": null,
+      "best": 22.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 22.5,
+          "gfs_seamless": 22.1,
+          "icon_seamless": 21
+        },
+        "mean": 22.1,
+        "spread": 1.1,
+        "gap": 0.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          23.5,
+          22.5,
+          21.5,
+          22.1,
+          21.8,
+          22.7,
+          23.2,
+          21.8,
+          23,
+          22.4,
+          23.1,
+          22.3,
+          22.5,
+          23.1,
+          21.8,
+          23,
+          23.2,
+          20.9,
+          23.1,
+          22.1,
+          23.3,
+          21.3,
+          22.1,
+          23.2,
+          23.4,
+          23,
+          22.1,
+          21.8,
+          23.3,
+          23.3,
+          22.4,
+          22.7,
+          22.9,
+          21.4,
+          22.7,
+          22.7,
+          22.6,
+          22.9,
+          22.5,
+          22.5,
+          23,
+          23.4,
+          22.2,
+          22.1,
+          22.3,
+          22.6,
+          23.2,
+          21.9,
+          22.4,
+          22.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -475,6 +551,14 @@
       "top2_bucket": "22-23C",
       "top2_price": 0.265,
       "top2_sum": 0.78
+    },
+    {
+      "ts": "2026-09-09T04:50:13.182Z",
+      "top_bucket": "22-22C",
+      "top_price": 0.535,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.225,
+      "top2_sum": 0.76
     }
   ],
   "all_outcomes": [
@@ -498,11 +582,11 @@
         18,
         18
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 1
+      "volume": 81
     },
     {
       "question": "Will the highest temperature in Paris be 19°C on September 10?",
@@ -511,11 +595,11 @@
         19,
         19
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 0
+      "volume": 80
     },
     {
       "question": "Will the highest temperature in Paris be 20°C on September 10?",
@@ -528,7 +612,7 @@
       "ask": 0.03,
       "price": 0.03,
       "spread": 0,
-      "volume": 234
+      "volume": 235
     },
     {
       "question": "Will the highest temperature in Paris be 21°C on September 10?",
@@ -541,7 +625,7 @@
       "ask": 0.135,
       "price": 0.135,
       "spread": 0,
-      "volume": 1906
+      "volume": 1920
     },
     {
       "question": "Will the highest temperature in Paris be 22°C on September 10?",
@@ -550,11 +634,11 @@
         22,
         22
       ],
-      "bid": 0.515,
-      "ask": 0.515,
-      "price": 0.515,
+      "bid": 0.535,
+      "ask": 0.535,
+      "price": 0.535,
       "spread": 0,
-      "volume": 1321
+      "volume": 1511
     },
     {
       "question": "Will the highest temperature in Paris be 23°C on September 10?",
@@ -563,11 +647,11 @@
         23,
         23
       ],
-      "bid": 0.265,
-      "ask": 0.265,
-      "price": 0.265,
+      "bid": 0.225,
+      "ask": 0.225,
+      "price": 0.225,
       "spread": 0,
-      "volume": 1355
+      "volume": 1715
     },
     {
       "question": "Will the highest temperature in Paris be 24°C on September 10?",
@@ -580,7 +664,7 @@
       "ask": 0.045,
       "price": 0.045,
       "spread": 0,
-      "volume": 346
+      "volume": 359
     },
     {
       "question": "Will the highest temperature in Paris be 25°C on September 10?",
@@ -589,9 +673,9 @@
         25,
         25
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
       "volume": 174
     },
