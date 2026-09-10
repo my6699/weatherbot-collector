@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.176
+      "stop_price": 0.176,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -657,6 +658,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-10T21:41:07.784Z",
+      "horizon": "D+1",
+      "hours_left": 14.3,
+      "ecmwf": 24.1,
+      "hrrr": 24,
+      "metar": null,
+      "best": 23.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.1,
+          "gfs_seamless": 24,
+          "icon_seamless": 23.1
+        },
+        "mean": 23.9,
+        "spread": 0.8,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          24.2,
+          24.8,
+          23.6,
+          24.8,
+          23.8,
+          24.7,
+          24.8,
+          24.3,
+          25.8,
+          24.7,
+          25,
+          24.4,
+          24.2,
+          23.7,
+          23.8,
+          24.8,
+          24.8,
+          24.8,
+          23.9,
+          25.5,
+          23.7,
+          24.6,
+          24.4,
+          23.7,
+          24.5,
+          24,
+          24.8,
+          23.6,
+          24.9,
+          23.8,
+          23.8,
+          24.7,
+          24,
+          24.3,
+          24.9,
+          24.1,
+          24,
+          24.4,
+          23.5,
+          25,
+          24.7,
+          24,
+          24.5,
+          24.5,
+          24.5,
+          23.5,
+          25.8,
+          24.8,
+          24.1,
+          23.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -723,6 +798,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.23,
       "top2_sum": 0.76
+    },
+    {
+      "ts": "2026-09-10T21:41:07.784Z",
+      "top_bucket": "23-23C",
+      "top_price": 0.615,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.205,
+      "top2_sum": 0.82
     }
   ],
   "all_outcomes": [
@@ -776,7 +859,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 427
+      "volume": 474
     },
     {
       "question": "Will the highest temperature in Toronto be 22°C on September 11?",
@@ -785,11 +868,11 @@
         22,
         22
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.16,
+      "ask": 0.16,
+      "price": 0.16,
       "spread": 0,
-      "volume": 2065
+      "volume": 2115
     },
     {
       "question": "Will the highest temperature in Toronto be 23°C on September 11?",
@@ -798,11 +881,11 @@
         23,
         23
       ],
-      "bid": 0.53,
-      "ask": 0.53,
-      "price": 0.53,
+      "bid": 0.615,
+      "ask": 0.615,
+      "price": 0.615,
       "spread": 0,
-      "volume": 3373
+      "volume": 3913
     },
     {
       "question": "Will the highest temperature in Toronto be 24°C on September 11?",
@@ -811,11 +894,11 @@
         24,
         24
       ],
-      "bid": 0.23,
-      "ask": 0.23,
-      "price": 0.23,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 1434
+      "volume": 1656
     },
     {
       "question": "Will the highest temperature in Toronto be 25°C on September 11?",
@@ -824,11 +907,11 @@
         25,
         25
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 919
+      "volume": 1124
     },
     {
       "question": "Will the highest temperature in Toronto be 26°C on September 11?",

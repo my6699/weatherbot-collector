@@ -6,7 +6,7 @@
   "station": "SAEZ",
   "event_end_date": "2026-09-10T12:00:00Z",
   "hours_at_discovery": 45.4,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "4363757",
     "question": "Will the highest temperature in Buenos Aires be 20°C on September 10?",
@@ -57,10 +57,11 @@
       "close_reason": "metar_diverged",
       "closed_at": "2026-09-10T00:18:21.910Z",
       "stop_price": 0.096,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 21,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1102,6 +1103,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-10T21:41:12.077Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 21.7,
+      "hrrr": 21.1,
+      "metar": 19,
+      "best": 21.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 21.7,
+          "gfs_seamless": 21.1,
+          "icon_seamless": 20.9
+        },
+        "mean": 21.4,
+        "spread": 0.5,
+        "gap": 0.6,
+        "llmEnhanced": false,
+        "membersMax": [
+          22.1,
+          21.4,
+          20.7,
+          21.4,
+          20.4,
+          21.4,
+          21.3,
+          21,
+          21.1,
+          21.2,
+          20.7,
+          23,
+          20.5,
+          21.8,
+          20.7,
+          21.1,
+          20.3,
+          20.7,
+          21.2,
+          21.4,
+          22.6,
+          20.2,
+          21.3,
+          21,
+          20.1,
+          21.2,
+          21.5,
+          20.8,
+          20.8,
+          21.4,
+          21.4,
+          20.9,
+          21.8,
+          21.2,
+          22,
+          20.3,
+          21.2,
+          20.5,
+          21.2,
+          21,
+          20.6,
+          22,
+          21.9,
+          22,
+          20.9,
+          20.2,
+          20.1,
+          21.3,
+          21,
+          21.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1216,6 +1291,14 @@
       "top2_bucket": "21-22C",
       "top2_price": 0.14,
       "top2_sum": 0.965
+    },
+    {
+      "ts": "2026-09-10T21:41:12.077Z",
+      "top_bucket": "21-21C",
+      "top_price": 0.9985,
+      "top2_bucket": "21-22C",
+      "top2_price": 0.0015,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1295,7 +1378,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3711
+      "volume": 3871
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on September 10?",
@@ -1304,11 +1387,11 @@
         21,
         21
       ],
-      "bid": 0.825,
-      "ask": 0.825,
-      "price": 0.825,
+      "bid": 0.9985,
+      "ask": 0.9985,
+      "price": 0.9985,
       "spread": 0,
-      "volume": 5958
+      "volume": 7769
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C on September 10?",
@@ -1317,11 +1400,11 @@
         22,
         22
       ],
-      "bid": 0.14,
-      "ask": 0.14,
-      "price": 0.14,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 4675
+      "volume": 4910
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on September 10?",
@@ -1330,11 +1413,11 @@
         23,
         23
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4362
+      "volume": 5281
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C on September 10?",
@@ -1343,11 +1426,11 @@
         24,
         24
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5167
+      "volume": 6541
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 25°C or higher on September 10?",
@@ -1356,11 +1439,11 @@
         25,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2231
+      "volume": 2511
     }
   ],
   "created_at": "2026-09-08T14:37:10.140Z"
