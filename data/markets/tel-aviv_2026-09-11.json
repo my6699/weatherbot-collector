@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.12
+      "stop_price": 0.12,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -358,6 +359,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-10T00:18:17.075Z",
+      "horizon": "D+1",
+      "hours_left": 35.7,
+      "ecmwf": 30.7,
+      "hrrr": 32,
+      "metar": null,
+      "best": 31.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.7,
+          "gfs_seamless": 32,
+          "icon_seamless": 31.7
+        },
+        "mean": 31.3,
+        "spread": 0.7,
+        "gap": 1.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          31,
+          30.9,
+          30.4,
+          30.5,
+          30.6,
+          30.4,
+          30.4,
+          31,
+          30.3,
+          30.6,
+          30.7,
+          30.7,
+          31,
+          31,
+          30.5,
+          30.9,
+          30.6,
+          30.8,
+          30.9,
+          30.2,
+          30.4,
+          30.8,
+          30.7,
+          30.4,
+          30.7,
+          30.8,
+          30.6,
+          30.9,
+          30.9,
+          30.4,
+          30.2,
+          30.5,
+          30.7,
+          30.2,
+          30.8,
+          30.4,
+          30.7,
+          30.7,
+          30.5,
+          30.5,
+          30.7,
+          30.8,
+          30.7,
+          31.3,
+          30.8,
+          30.8,
+          30.6,
+          30.6,
+          30.8,
+          31
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -392,6 +467,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.685,
       "top2_sum": 0.85
+    },
+    {
+      "ts": "2026-09-10T00:18:17.075Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.695,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.695,
+      "top2_sum": 0.85
     }
   ],
   "all_outcomes": [
@@ -406,7 +489,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 461
+      "volume": 465
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 29°C on September 11?",
@@ -419,7 +502,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 221
+      "volume": 224
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 30°C on September 11?",
@@ -428,11 +511,11 @@
         30,
         30
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 227
+      "volume": 279
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 31°C on September 11?",
@@ -441,11 +524,11 @@
         31,
         31
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.155,
+      "ask": 0.155,
+      "price": 0.155,
       "spread": 0,
-      "volume": 532
+      "volume": 565
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 32°C on September 11?",
@@ -454,11 +537,11 @@
         32,
         32
       ],
-      "bid": 0.685,
-      "ask": 0.685,
-      "price": 0.685,
+      "bid": 0.695,
+      "ask": 0.695,
+      "price": 0.695,
       "spread": 0,
-      "volume": 363
+      "volume": 465
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on September 11?",
@@ -471,7 +554,7 @@
       "ask": 0.15,
       "price": 0.15,
       "spread": 0,
-      "volume": 447
+      "volume": 477
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on September 11?",
@@ -484,7 +567,7 @@
       "ask": 0.02,
       "price": 0.02,
       "spread": 0,
-      "volume": 189
+      "volume": 223
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on September 11?",
