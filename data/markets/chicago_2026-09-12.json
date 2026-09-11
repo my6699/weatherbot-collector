@@ -387,6 +387,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-11T04:47:23.600Z",
+      "horizon": "D+1",
+      "hours_left": 31.2,
+      "ecmwf": 79,
+      "hrrr": 89,
+      "metar": null,
+      "best": 83,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 79,
+          "gfs_seamless": 89,
+          "icon_seamless": 84
+        },
+        "mean": 83,
+        "spread": 6,
+        "gap": 10,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          77,
+          78,
+          77,
+          80,
+          80,
+          78,
+          79,
+          79,
+          80,
+          81,
+          77,
+          78,
+          78,
+          78,
+          78,
+          79,
+          78,
+          79,
+          78,
+          78,
+          79,
+          77,
+          78,
+          80,
+          78,
+          78,
+          78,
+          80,
+          79,
+          78,
+          79,
+          79,
+          79,
+          86,
+          79,
+          80,
+          80,
+          76,
+          82,
+          79,
+          78,
+          79,
+          82,
+          80,
+          78,
+          77,
+          76,
+          77,
+          77,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -429,6 +504,14 @@
       "top2_bucket": "82-85F",
       "top2_price": 0.42,
       "top2_sum": 0.775
+    },
+    {
+      "ts": "2026-09-11T04:47:23.600Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.47,
+      "top2_bucket": "82-85F",
+      "top2_price": 0.47,
+      "top2_sum": 0.735
     }
   ],
   "all_outcomes": [
@@ -443,7 +526,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 0
+      "volume": 55
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on September 12?",
@@ -456,7 +539,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 0
+      "volume": 15
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on September 12?",
@@ -465,9 +548,9 @@
         76,
         77
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
       "volume": 0
     },
@@ -478,9 +561,9 @@
         78,
         79
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
       "volume": 0
     },
@@ -491,11 +574,11 @@
         80,
         81
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 44
+      "volume": 66
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on September 12?",
@@ -504,11 +587,11 @@
         82,
         83
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 197
+      "volume": 574
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on September 12?",
@@ -517,11 +600,11 @@
         84,
         85
       ],
-      "bid": 0.42,
-      "ask": 0.42,
-      "price": 0.42,
+      "bid": 0.47,
+      "ask": 0.47,
+      "price": 0.47,
       "spread": 0,
-      "volume": 133
+      "volume": 171
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on September 12?",
@@ -530,11 +613,11 @@
         86,
         87
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.16,
+      "ask": 0.16,
+      "price": 0.16,
       "spread": 0,
-      "volume": 196
+      "volume": 260
     },
     {
       "question": "Will the highest temperature in Chicago be between 88-89°F on September 12?",
@@ -543,11 +626,11 @@
         88,
         89
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 5
+      "volume": 27
     },
     {
       "question": "Will the highest temperature in Chicago be between 90-91°F on September 12?",
@@ -556,9 +639,9 @@
         90,
         91
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
       "volume": 0
     },
@@ -569,9 +652,9 @@
         92,
         999
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
       "volume": 0
     }
