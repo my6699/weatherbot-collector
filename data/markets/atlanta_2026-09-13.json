@@ -237,6 +237,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-11T21:45:43.247Z",
+      "horizon": "D+2",
+      "hours_left": 38.2,
+      "ecmwf": 89,
+      "hrrr": 95,
+      "metar": null,
+      "best": 91,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 89,
+          "gfs_seamless": 95,
+          "icon_seamless": 90
+        },
+        "mean": 91,
+        "spread": 4,
+        "gap": 6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          87,
+          87,
+          88,
+          88,
+          90,
+          88,
+          87,
+          88,
+          87,
+          87,
+          90,
+          87,
+          87,
+          87,
+          91,
+          88,
+          85,
+          87,
+          89,
+          88,
+          90,
+          89,
+          87,
+          87,
+          89,
+          86,
+          89,
+          87,
+          85,
+          86,
+          86,
+          88,
+          89,
+          88,
+          89,
+          88,
+          90,
+          87,
+          88,
+          88,
+          86,
+          90,
+          88,
+          87,
+          87,
+          88,
+          88,
+          85,
+          86,
+          87
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -263,6 +338,14 @@
       "top2_bucket": "90-93F",
       "top2_price": 0.27,
       "top2_sum": 0.76
+    },
+    {
+      "ts": "2026-09-11T21:45:43.247Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.49,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.275,
+      "top2_sum": 0.765
     }
   ],
   "all_outcomes": [
@@ -338,11 +421,11 @@
         88,
         89
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 137
+      "volume": 150
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on September 13?",
@@ -355,7 +438,7 @@
       "ask": 0.49,
       "price": 0.49,
       "spread": 0,
-      "volume": 354
+      "volume": 373
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on September 13?",
@@ -364,9 +447,9 @@
         92,
         93
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.275,
+      "ask": 0.275,
+      "price": 0.275,
       "spread": 0,
       "volume": 8
     },

@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.152
+      "stop_price": 0.152,
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -658,6 +659,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-11T21:46:04.203Z",
+      "horizon": "D+1",
+      "hours_left": 14.2,
+      "ecmwf": 10.8,
+      "hrrr": 10.6,
+      "metar": null,
+      "best": 11,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.8,
+          "gfs_seamless": 10.6,
+          "icon_seamless": 12
+        },
+        "mean": 11,
+        "spread": 1,
+        "gap": 0.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          11.1,
+          10.4,
+          10.9,
+          10.8,
+          11.4,
+          10.9,
+          10.4,
+          11.4,
+          11.1,
+          10.9,
+          10.6,
+          10.5,
+          10.6,
+          10.9,
+          10.3,
+          10.5,
+          10.6,
+          10.8,
+          11,
+          11.1,
+          10,
+          11.3,
+          10.5,
+          11.3,
+          10.3,
+          11,
+          11.1,
+          10.8,
+          10.7,
+          10.9,
+          11.3,
+          11.8,
+          11.5,
+          11.1,
+          9.9,
+          10.4,
+          10.8,
+          10.9,
+          11.5,
+          10.9,
+          10.5,
+          10.9,
+          11.1,
+          10.8,
+          10.7,
+          9.7,
+          10.6,
+          10.9,
+          10.8,
+          10.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -724,6 +800,14 @@
       "top2_bucket": "11-12C",
       "top2_price": 0.475,
       "top2_sum": 0.745
+    },
+    {
+      "ts": "2026-09-11T21:46:04.203Z",
+      "top_bucket": "12-12C",
+      "top_price": 0.52,
+      "top2_bucket": "11-12C",
+      "top2_price": 0.52,
+      "top2_sum": 0.73
     }
   ],
   "all_outcomes": [
@@ -734,9 +818,9 @@
         -999,
         8
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
       "volume": 147
     },
@@ -773,11 +857,11 @@
         11,
         11
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.21,
+      "ask": 0.21,
+      "price": 0.21,
       "spread": 0,
-      "volume": 2378
+      "volume": 2585
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 12°C on September 12?",
@@ -786,11 +870,11 @@
         12,
         12
       ],
-      "bid": 0.475,
-      "ask": 0.475,
-      "price": 0.475,
+      "bid": 0.52,
+      "ask": 0.52,
+      "price": 0.52,
       "spread": 0,
-      "volume": 1650
+      "volume": 1792
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 13°C on September 12?",
@@ -799,11 +883,11 @@
         13,
         13
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 3331
+      "volume": 3910
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 14°C on September 12?",
@@ -816,7 +900,7 @@
       "ask": 0.04,
       "price": 0.04,
       "spread": 0,
-      "volume": 161
+      "volume": 172
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 15°C on September 12?",
@@ -838,11 +922,11 @@
         16,
         16
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 18
+      "volume": 24
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on September 12?",

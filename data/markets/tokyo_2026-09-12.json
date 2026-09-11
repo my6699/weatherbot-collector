@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.176,
-      "forecast_change_streak": 2
+      "forecast_change_streak": 3
     }
   ],
   "actual_temp": null,
@@ -738,6 +738,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-11T21:45:53.221Z",
+      "horizon": "D+1",
+      "hours_left": 14.2,
+      "ecmwf": 23.5,
+      "hrrr": 21.8,
+      "metar": null,
+      "best": 22.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 23.5,
+          "gfs_seamless": 21.8,
+          "icon_seamless": 22.5
+        },
+        "mean": 22.8,
+        "spread": 1,
+        "gap": 1.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          23.3,
+          23.6,
+          23.7,
+          25.4,
+          23.5,
+          23.4,
+          23.5,
+          24.6,
+          24.1,
+          23.6,
+          24.8,
+          24.1,
+          23.7,
+          24.3,
+          23.9,
+          24,
+          22.6,
+          23.8,
+          25.4,
+          24.1,
+          23.7,
+          23.4,
+          24.8,
+          25.1,
+          23.8,
+          23.6,
+          24,
+          24.3,
+          25.5,
+          24.3,
+          24,
+          25.1,
+          24.9,
+          24.2,
+          25.1,
+          24.8,
+          23.7,
+          24.9,
+          25.2,
+          24.3,
+          24.7,
+          26,
+          25.3,
+          23.7,
+          24.9,
+          25.4,
+          23.5,
+          23.4,
+          23.7,
+          23.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -812,6 +886,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.465,
       "top2_sum": 0.715
+    },
+    {
+      "ts": "2026-09-11T21:45:53.221Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.485,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.215,
+      "top2_sum": 0.7
     }
   ],
   "all_outcomes": [
@@ -861,11 +943,11 @@
         21,
         21
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0115,
+      "ask": 0.0115,
+      "price": 0.0115,
       "spread": 0,
-      "volume": 1446
+      "volume": 1461
     },
     {
       "question": "Will the highest temperature in Tokyo be 22°C on September 12?",
@@ -887,11 +969,11 @@
         23,
         23
       ],
-      "bid": 0.25,
-      "ask": 0.25,
-      "price": 0.25,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 1758
+      "volume": 1803
     },
     {
       "question": "Will the highest temperature in Tokyo be 24°C on September 12?",
@@ -900,11 +982,11 @@
         24,
         24
       ],
-      "bid": 0.465,
-      "ask": 0.465,
-      "price": 0.465,
+      "bid": 0.485,
+      "ask": 0.485,
+      "price": 0.485,
       "spread": 0,
-      "volume": 1261
+      "volume": 1403
     },
     {
       "question": "Will the highest temperature in Tokyo be 25°C on September 12?",
@@ -917,7 +999,7 @@
       "ask": 0.215,
       "price": 0.215,
       "spread": 0,
-      "volume": 1629
+      "volume": 1706
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on September 12?",
@@ -930,7 +1012,7 @@
       "ask": 0.045,
       "price": 0.045,
       "spread": 0,
-      "volume": 1477
+      "volume": 1561
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on September 12?",
@@ -939,11 +1021,11 @@
         27,
         27
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 1652
+      "volume": 1902
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C or higher on September 12?",
@@ -952,11 +1034,11 @@
         28,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 935
+      "volume": 1143
     }
   ],
   "created_at": "2026-09-10T09:49:00.127Z"
