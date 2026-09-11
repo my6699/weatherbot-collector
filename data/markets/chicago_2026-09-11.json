@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-09-11T12:00:00Z",
   "hours_at_discovery": 50.2,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "4402224",
     "question": "Will the highest temperature in Chicago be between 78-79°F on September 11?",
@@ -1038,6 +1038,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-11T14:28:39.581Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 76,
+      "hrrr": 81,
+      "metar": 69,
+      "best": 78.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 76,
+          "gfs_seamless": 81,
+          "icon_seamless": 80
+        },
+        "mean": 78.3,
+        "spread": 2.7,
+        "gap": 5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          79,
+          76,
+          76,
+          76,
+          77,
+          77,
+          77,
+          78,
+          77,
+          78,
+          77,
+          76,
+          77,
+          76,
+          76,
+          76,
+          76,
+          77,
+          75,
+          77,
+          76,
+          75,
+          78,
+          79,
+          77,
+          76,
+          77,
+          77,
+          79,
+          77,
+          76,
+          75,
+          77,
+          81,
+          77,
+          76,
+          76,
+          77,
+          82,
+          78,
+          76,
+          77,
+          78,
+          76,
+          79,
+          76,
+          75,
+          76,
+          76,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1144,6 +1219,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.71,
       "top2_sum": 0.91
+    },
+    {
+      "ts": "2026-09-11T14:28:39.581Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.715,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.715,
+      "top2_sum": 0.935
     }
   ],
   "all_outcomes": [
@@ -1180,11 +1263,11 @@
         74,
         75
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 568
+      "volume": 764
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on September 11?",
@@ -1197,7 +1280,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 2375
+      "volume": 3363
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on September 11?",
@@ -1206,11 +1289,11 @@
         78,
         79
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.22,
+      "ask": 0.22,
+      "price": 0.22,
       "spread": 0,
-      "volume": 7006
+      "volume": 7271
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on September 11?",
@@ -1219,11 +1302,11 @@
         80,
         81
       ],
-      "bid": 0.71,
-      "ask": 0.71,
-      "price": 0.71,
+      "bid": 0.715,
+      "ask": 0.715,
+      "price": 0.715,
       "spread": 0,
-      "volume": 4516
+      "volume": 5031
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on September 11?",
@@ -1232,11 +1315,11 @@
         82,
         83
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 2404
+      "volume": 2683
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on September 11?",
@@ -1245,11 +1328,11 @@
         84,
         85
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 1375
+      "volume": 1458
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on September 11?",
