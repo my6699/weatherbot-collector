@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-13T12:00:00Z",
   "hours_at_discovery": 50.2,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4463480",
+    "question": "Will the highest temperature in Dallas be between 98-99°F on September 13?",
+    "bucket_low": 98,
+    "bucket_high": 99,
+    "entry_price": 0.24,
+    "bid_at_entry": 0.23,
+    "spread": 0.01,
+    "shares": 166.67,
+    "cost": 40,
+    "p": 0.62,
+    "ev": 1.5833,
+    "edge": 0.2634,
+    "kelly": 0.1258,
+    "forecast_temp": 98.06,
+    "forecast_src": "ensemble",
+    "sigma": 1.9,
+    "opened_at": "2026-09-11T18:37:42.549Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.184
+  },
+  "positions": [
+    {
+      "market_id": "4463480",
+      "question": "Will the highest temperature in Dallas be between 98-99°F on September 13?",
+      "bucket_low": 98,
+      "bucket_high": 99,
+      "entry_price": 0.24,
+      "bid_at_entry": 0.23,
+      "spread": 0.01,
+      "shares": 166.67,
+      "cost": 40,
+      "p": 0.62,
+      "ev": 1.5833,
+      "edge": 0.2634,
+      "kelly": 0.1258,
+      "forecast_temp": 98.06,
+      "forecast_src": "ensemble",
+      "sigma": 1.9,
+      "opened_at": "2026-09-11T18:37:42.549Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.184
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -161,6 +211,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-11T18:37:42.549Z",
+      "horizon": "D+2",
+      "hours_left": 41.4,
+      "ecmwf": 99,
+      "hrrr": 102,
+      "metar": null,
+      "best": 100.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 99,
+          "gfs_seamless": 102,
+          "icon_seamless": 100
+        },
+        "mean": 100.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          99,
+          98,
+          99,
+          99,
+          98,
+          98,
+          99,
+          97,
+          97,
+          98,
+          99,
+          98,
+          100,
+          98,
+          97,
+          97,
+          98,
+          97,
+          95,
+          97,
+          97,
+          99,
+          97,
+          99,
+          100,
+          98,
+          100,
+          98,
+          98,
+          99,
+          100,
+          99,
+          100,
+          99,
+          98,
+          98,
+          98,
+          100,
+          99,
+          98,
+          98,
+          95,
+          98,
+          98,
+          97,
+          99,
+          96,
+          99,
+          96,
+          98
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -179,6 +304,14 @@
       "top2_bucket": "98-101F",
       "top2_price": 0.565,
       "top2_sum": 0.8
+    },
+    {
+      "ts": "2026-09-11T18:37:42.549Z",
+      "top_bucket": "100-101F",
+      "top_price": 0.575,
+      "top2_bucket": "98-101F",
+      "top2_price": 0.575,
+      "top2_sum": 0.81
     }
   ],
   "all_outcomes": [
@@ -189,11 +322,11 @@
         -999,
         89
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 0
+      "volume": 3
     },
     {
       "question": "Will the highest temperature in Dallas be between 90-91°F on September 13?",
@@ -202,9 +335,9 @@
         90,
         91
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
       "volume": 118
     },
@@ -241,9 +374,9 @@
         96,
         97
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
       "volume": 37
     },
@@ -258,7 +391,7 @@
       "ask": 0.235,
       "price": 0.235,
       "spread": 0,
-      "volume": 2392
+      "volume": 2631
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on September 13?",
@@ -267,11 +400,11 @@
         100,
         101
       ],
-      "bid": 0.565,
-      "ask": 0.565,
-      "price": 0.565,
+      "bid": 0.575,
+      "ask": 0.575,
+      "price": 0.575,
       "spread": 0,
-      "volume": 726
+      "volume": 816
     },
     {
       "question": "Will the highest temperature in Dallas be between 102-103°F on September 13?",
@@ -280,11 +413,11 @@
         102,
         103
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.125,
+      "ask": 0.125,
+      "price": 0.125,
       "spread": 0,
-      "volume": 77
+      "volume": 141
     },
     {
       "question": "Will the highest temperature in Dallas be between 104-105°F on September 13?",
@@ -293,11 +426,11 @@
         104,
         105
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 10
+      "volume": 58
     },
     {
       "question": "Will the highest temperature in Dallas be between 106-107°F on September 13?",
@@ -319,11 +452,11 @@
         108,
         999
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 111
+      "volume": 218
     }
   ],
   "created_at": "2026-09-11T09:47:41.628Z"
