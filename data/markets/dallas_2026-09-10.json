@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-09-10T12:00:00Z",
   "hours_at_discovery": 50.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "4358663",
     "question": "Will the highest temperature in Dallas be between 100-101°F on September 10?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-09-09T21:44:33.313Z",
       "stop_price": 0.16,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 98.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1532,5 +1533,6 @@
       "volume": 425
     }
   ],
-  "created_at": "2026-09-08T09:46:31.429Z"
+  "created_at": "2026-09-08T09:46:31.429Z",
+  "metar_max": 99
 }

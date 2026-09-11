@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 2.2,
       "opened_at": "2026-09-10T18:31:29.988Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 9.17,
+      "exit_price": 0.295,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-09-11T00:13:51.869Z",
       "stop_price": 0.168,
       "forecast_change_streak": 0
     }
@@ -813,6 +813,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-11T00:13:51.869Z",
+      "horizon": "D+0",
+      "hours_left": 11.8,
+      "ecmwf": 76,
+      "hrrr": 82,
+      "metar": 73,
+      "best": 78.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 76,
+          "gfs_seamless": 82,
+          "icon_seamless": 81
+        },
+        "mean": 78.8,
+        "spread": 3.2,
+        "gap": 6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          79,
+          77,
+          79,
+          77,
+          77,
+          76,
+          78,
+          77,
+          77,
+          79,
+          78,
+          78,
+          76,
+          78,
+          75,
+          76,
+          77,
+          77,
+          76,
+          78,
+          75,
+          76,
+          78,
+          81,
+          76,
+          76,
+          77,
+          78,
+          79,
+          77,
+          76,
+          77,
+          77,
+          82,
+          77,
+          77,
+          78,
+          76,
+          82,
+          78,
+          78,
+          78,
+          79,
+          77,
+          77,
+          78,
+          75,
+          77,
+          77,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -895,6 +970,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.59,
       "top2_sum": 0.855
+    },
+    {
+      "ts": "2026-09-11T00:13:51.869Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.585,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.585,
+      "top2_sum": 0.88
     }
   ],
   "all_outcomes": [
@@ -905,9 +988,9 @@
         -999,
         71
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
       "volume": 745
     },
@@ -948,7 +1031,7 @@
       "ask": 0.035,
       "price": 0.035,
       "spread": 0,
-      "volume": 2052
+      "volume": 2053
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on September 11?",
@@ -957,11 +1040,11 @@
         78,
         79
       ],
-      "bid": 0.265,
-      "ask": 0.265,
-      "price": 0.265,
+      "bid": 0.295,
+      "ask": 0.295,
+      "price": 0.295,
       "spread": 0,
-      "volume": 6081
+      "volume": 6300
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on September 11?",
@@ -970,11 +1053,11 @@
         80,
         81
       ],
-      "bid": 0.59,
-      "ask": 0.59,
-      "price": 0.59,
+      "bid": 0.585,
+      "ask": 0.585,
+      "price": 0.585,
       "spread": 0,
-      "volume": 3375
+      "volume": 3440
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on September 11?",
@@ -983,11 +1066,11 @@
         82,
         83
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
-      "volume": 1822
+      "volume": 1844
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on September 11?",
@@ -1000,7 +1083,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 971
+      "volume": 1071
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on September 11?",
@@ -1009,11 +1092,11 @@
         86,
         87
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1280
+      "volume": 1334
     },
     {
       "question": "Will the highest temperature in Chicago be between 88-89°F on September 11?",
@@ -1022,9 +1105,9 @@
         88,
         89
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 316
     },
@@ -1035,9 +1118,9 @@
         90,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 156
     }
