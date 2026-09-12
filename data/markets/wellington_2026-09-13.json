@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.144,
-      "forecast_change_streak": 0
+      "stop_price": 0.2,
+      "forecast_change_streak": 0,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -657,6 +658,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-12T17:14:51.263Z",
+      "horizon": "D+1",
+      "hours_left": 18.8,
+      "ecmwf": 12.8,
+      "hrrr": 13.8,
+      "metar": null,
+      "best": 13.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 12.8,
+          "gfs_seamless": 13.8,
+          "icon_seamless": 14.8
+        },
+        "mean": 13.5,
+        "spread": 1.3,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          12.9,
+          12.3,
+          12.7,
+          13.1,
+          13.7,
+          13.4,
+          12,
+          13.1,
+          14.2,
+          12.2,
+          14.3,
+          14.1,
+          13,
+          13.6,
+          13.9,
+          12.8,
+          13.7,
+          14.3,
+          13.3,
+          12.9,
+          12.5,
+          13,
+          13.9,
+          13.3,
+          12.9,
+          12.7,
+          12.5,
+          12.5,
+          12.4,
+          12.6,
+          12.7,
+          13,
+          12.8,
+          12.8,
+          13.4,
+          14.4,
+          13.6,
+          13.1,
+          12.9,
+          12.5,
+          12.9,
+          12.6,
+          12.6,
+          12.6,
+          12.9,
+          14.1,
+          12.7,
+          12.8,
+          12.7,
+          12.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -723,6 +799,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.68,
       "top2_sum": 0.9
+    },
+    {
+      "ts": "2026-09-12T17:14:51.263Z",
+      "top_bucket": "15-15C",
+      "top_price": 0.665,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.665,
+      "top2_sum": 0.91
     }
   ],
   "all_outcomes": [
@@ -759,11 +843,11 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 180
+      "volume": 515
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on September 13?",
@@ -776,7 +860,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 1190
+      "volume": 1450
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on September 13?",
@@ -785,11 +869,11 @@
         14,
         14
       ],
-      "bid": 0.22,
-      "ask": 0.22,
-      "price": 0.22,
+      "bid": 0.245,
+      "ask": 0.245,
+      "price": 0.245,
       "spread": 0,
-      "volume": 3673
+      "volume": 4167
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on September 13?",
@@ -798,11 +882,11 @@
         15,
         15
       ],
-      "bid": 0.68,
-      "ask": 0.68,
-      "price": 0.68,
+      "bid": 0.665,
+      "ask": 0.665,
+      "price": 0.665,
       "spread": 0,
-      "volume": 4611
+      "volume": 4929
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on September 13?",
@@ -811,11 +895,11 @@
         16,
         16
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.085,
+      "ask": 0.085,
+      "price": 0.085,
       "spread": 0,
-      "volume": 4721
+      "volume": 5475
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on September 13?",
@@ -824,11 +908,11 @@
         17,
         17
       ],
-      "bid": 0.0125,
-      "ask": 0.0125,
-      "price": 0.0125,
+      "bid": 0.0105,
+      "ask": 0.0105,
+      "price": 0.0105,
       "spread": 0,
-      "volume": 692
+      "volume": 733
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on September 13?",
