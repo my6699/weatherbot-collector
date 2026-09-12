@@ -6,7 +6,7 @@
   "station": "EGLC",
   "event_end_date": "2026-09-12T12:00:00Z",
   "hours_at_discovery": 50.2,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -987,6 +987,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-12T13:37:59.173Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 23.5,
+      "hrrr": 23.7,
+      "metar": 23,
+      "best": 23.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 23.5,
+          "gfs_seamless": 23.7,
+          "icon_seamless": 22.4
+        },
+        "mean": 23.3,
+        "spread": 0.9,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          25.1,
+          23.5,
+          23,
+          23.7,
+          24.2,
+          23.8,
+          23.7,
+          24.9,
+          22.8,
+          23.2,
+          23.3,
+          23,
+          23.6,
+          24,
+          23.8,
+          24.3,
+          24,
+          24.4,
+          24.5,
+          24.3,
+          24.9,
+          23.7,
+          23.5,
+          23.8,
+          22.8,
+          22.9,
+          23.7,
+          23.7,
+          23.3,
+          22.6,
+          23.7,
+          24.1,
+          23.2,
+          22.1,
+          24.2,
+          23.4,
+          23.6,
+          23.1,
+          24,
+          23.8,
+          23.9,
+          23.9,
+          23.2,
+          23.5,
+          24.1,
+          24.1,
+          23.6,
+          23.7,
+          23.3,
+          22.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1093,6 +1167,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.3,
       "top2_sum": 0.765
+    },
+    {
+      "ts": "2026-09-12T13:37:59.173Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.55,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.55,
+      "top2_sum": 0.875
     }
   ],
   "all_outcomes": [
@@ -1129,11 +1211,11 @@
         19,
         19
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 604
+      "volume": 1641
     },
     {
       "question": "Will the highest temperature in London be 20°C on September 12?",
@@ -1142,11 +1224,11 @@
         20,
         20
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2210
+      "volume": 3835
     },
     {
       "question": "Will the highest temperature in London be 21°C on September 12?",
@@ -1155,11 +1237,11 @@
         21,
         21
       ],
-      "bid": 0.0265,
-      "ask": 0.0265,
-      "price": 0.0265,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4901
+      "volume": 8588
     },
     {
       "question": "Will the highest temperature in London be 22°C on September 12?",
@@ -1168,11 +1250,11 @@
         22,
         22
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4371
+      "volume": 9342
     },
     {
       "question": "Will the highest temperature in London be 23°C on September 12?",
@@ -1181,11 +1263,11 @@
         23,
         23
       ],
-      "bid": 0.465,
-      "ask": 0.465,
-      "price": 0.465,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 6326
+      "volume": 8542
     },
     {
       "question": "Will the highest temperature in London be 24°C on September 12?",
@@ -1194,11 +1276,11 @@
         24,
         24
       ],
-      "bid": 0.3,
-      "ask": 0.3,
-      "price": 0.3,
+      "bid": 0.55,
+      "ask": 0.55,
+      "price": 0.55,
       "spread": 0,
-      "volume": 7972
+      "volume": 9166
     },
     {
       "question": "Will the highest temperature in London be 25°C on September 12?",
@@ -1207,11 +1289,11 @@
         25,
         25
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.13,
+      "ask": 0.13,
+      "price": 0.13,
       "spread": 0,
-      "volume": 4195
+      "volume": 6937
     },
     {
       "question": "Will the highest temperature in London be 26°C on September 12?",
@@ -1220,11 +1302,11 @@
         26,
         26
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.009,
+      "ask": 0.009,
+      "price": 0.009,
       "spread": 0,
-      "volume": 2767
+      "volume": 4792
     },
     {
       "question": "Will the highest temperature in London be 27°C or higher on September 12?",
@@ -1233,11 +1315,11 @@
         27,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 1447
+      "volume": 1452
     }
   ],
   "created_at": "2026-09-10T09:48:51.785Z"
