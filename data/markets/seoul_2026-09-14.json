@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.184
+      "stop_price": 0.184,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -362,6 +363,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-12T22:21:56.904Z",
+      "horizon": "D+2",
+      "hours_left": 37.6,
+      "ecmwf": 24.5,
+      "hrrr": 23.6,
+      "metar": null,
+      "best": 24.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.5,
+          "gfs_seamless": 23.6,
+          "icon_seamless": 25.5
+        },
+        "mean": 24.4,
+        "spread": 1.1,
+        "gap": 0.9,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          24.7,
+          24.5,
+          24.1,
+          25.4,
+          25.3,
+          24,
+          24.5,
+          24,
+          24.2,
+          24.5,
+          24.5,
+          23.2,
+          25.1,
+          24.8,
+          24.3,
+          24.7,
+          25.2,
+          24.1,
+          23.7,
+          24.2,
+          24,
+          24.5,
+          23.9,
+          24.8,
+          24.9,
+          24.7,
+          24,
+          24.4,
+          24.3,
+          24.6,
+          24.1,
+          24.5,
+          23.4,
+          24.4,
+          24.5,
+          23,
+          24,
+          23.6,
+          24.4,
+          25,
+          23.5,
+          24.6,
+          24.6,
+          24.4,
+          25.5,
+          24.3,
+          24.8,
+          24.5,
+          24.5,
+          23.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -396,6 +472,14 @@
       "top2_bucket": "25-26C",
       "top2_price": 0.495,
       "top2_sum": 0.73
+    },
+    {
+      "ts": "2026-09-12T22:21:56.904Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.505,
+      "top2_bucket": "25-26C",
+      "top2_price": 0.505,
+      "top2_sum": 0.77
     }
   ],
   "all_outcomes": [
@@ -449,7 +533,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 520
+      "volume": 565
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 24°C on September 14?",
@@ -458,11 +542,11 @@
         24,
         24
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 661
+      "volume": 888
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 25°C on September 14?",
@@ -471,11 +555,11 @@
         25,
         25
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 889
+      "volume": 1105
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 26°C on September 14?",
@@ -484,11 +568,11 @@
         26,
         26
       ],
-      "bid": 0.495,
-      "ask": 0.495,
-      "price": 0.495,
+      "bid": 0.505,
+      "ask": 0.505,
+      "price": 0.505,
       "spread": 0,
-      "volume": 1773
+      "volume": 1854
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 27°C on September 14?",
@@ -497,11 +581,11 @@
         27,
         27
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 1049
+      "volume": 1202
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 28°C on September 14?",
@@ -510,11 +594,11 @@
         28,
         28
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 445
+      "volume": 480
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 29°C on September 14?",

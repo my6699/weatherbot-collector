@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-09-12T12:00:00Z",
   "hours_at_discovery": 50.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "4434107",
     "question": "Will the highest temperature in New York City be between 80-81°F on September 12?",
@@ -58,7 +58,8 @@
       "close_reason": "metar_diverged",
       "closed_at": "2026-09-12T00:21:37.495Z",
       "stop_price": 0.152,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     },
     {
       "market_id": "4434105",
@@ -83,10 +84,11 @@
       "exit_price": 0.2,
       "close_reason": "metar_diverged",
       "closed_at": "2026-09-12T04:43:57.064Z",
-      "stop_price": 0.168
+      "stop_price": 0.168,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 78.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1283,6 +1285,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-12T22:21:39.108Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 75,
+      "hrrr": 79,
+      "metar": 77,
+      "best": 76.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 75,
+          "gfs_seamless": 79,
+          "icon_seamless": 78
+        },
+        "mean": 76.8,
+        "spread": 2.2,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          73,
+          74,
+          74,
+          75,
+          76,
+          77,
+          75,
+          74,
+          74,
+          76,
+          76,
+          76,
+          75,
+          75,
+          74,
+          75,
+          73,
+          74,
+          74,
+          74,
+          73,
+          74,
+          74,
+          73,
+          74,
+          75,
+          74,
+          75,
+          73,
+          75,
+          74,
+          73,
+          76,
+          76,
+          75,
+          74,
+          74,
+          75,
+          77,
+          73,
+          74,
+          75,
+          75,
+          76,
+          74,
+          75,
+          76,
+          73,
+          76,
+          73
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1413,6 +1490,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.045,
       "top2_sum": 0.985
+    },
+    {
+      "ts": "2026-09-12T22:21:39.108Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.9975,
+      "top2_bucket": "76-79F",
+      "top2_price": 0.9975,
+      "top2_sum": 0.998
     }
   ],
   "all_outcomes": [
@@ -1479,7 +1564,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 11567
+      "volume": 11599
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on September 12?",
@@ -1488,11 +1573,11 @@
         78,
         79
       ],
-      "bid": 0.94,
-      "ask": 0.94,
-      "price": 0.94,
+      "bid": 0.9975,
+      "ask": 0.9975,
+      "price": 0.9975,
       "spread": 0,
-      "volume": 8964
+      "volume": 11184
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on September 12?",
@@ -1501,11 +1586,11 @@
         80,
         81
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7876
+      "volume": 8377
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on September 12?",
@@ -1514,11 +1599,11 @@
         82,
         83
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4484
+      "volume": 5260
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on September 12?",

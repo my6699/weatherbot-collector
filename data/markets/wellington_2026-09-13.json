@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.7,
       "opened_at": "2026-09-11T21:46:05.961Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.9,
+      "exit_price": 0.0005,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-09-12T22:22:11.614Z",
       "stop_price": 0.2,
       "forecast_change_streak": 0,
       "trailing_activated": true
@@ -808,6 +808,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-12T22:22:11.614Z",
+      "horizon": "D+1",
+      "hours_left": 13.6,
+      "ecmwf": 12.9,
+      "hrrr": 13.4,
+      "metar": null,
+      "best": 13.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 12.9,
+          "gfs_seamless": 13.4,
+          "icon_seamless": 14.4
+        },
+        "mean": 13.4,
+        "spread": 1.1,
+        "gap": 0.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          12.9,
+          12.3,
+          12.7,
+          13.1,
+          13.7,
+          13.4,
+          12,
+          13.1,
+          14.2,
+          12.2,
+          14.3,
+          14.1,
+          13,
+          13.6,
+          13.9,
+          12.8,
+          13.7,
+          14.3,
+          13.3,
+          12.9,
+          12.5,
+          13,
+          13.9,
+          13.3,
+          12.9,
+          12.7,
+          12.5,
+          12.5,
+          12.4,
+          12.6,
+          12.7,
+          13,
+          12.8,
+          12.8,
+          13.4,
+          14.4,
+          13.6,
+          13.1,
+          12.9,
+          12.5,
+          12.9,
+          12.6,
+          12.6,
+          12.6,
+          12.9,
+          14.1,
+          12.7,
+          12.8,
+          12.7,
+          12.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -890,6 +965,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.65,
       "top2_sum": 0.89
+    },
+    {
+      "ts": "2026-09-12T22:22:11.614Z",
+      "top_bucket": "15-15C",
+      "top_price": 0.655,
+      "top2_bucket": "15-16C",
+      "top2_price": 0.335,
+      "top2_sum": 0.99
     }
   ],
   "all_outcomes": [
@@ -926,11 +1009,11 @@
         12,
         12
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 584
+      "volume": 691
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on September 13?",
@@ -939,11 +1022,11 @@
         13,
         13
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1758
+      "volume": 3308
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on September 13?",
@@ -952,11 +1035,11 @@
         14,
         14
       ],
-      "bid": 0.24,
-      "ask": 0.24,
-      "price": 0.24,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4693
+      "volume": 7828
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on September 13?",
@@ -965,11 +1048,11 @@
         15,
         15
       ],
-      "bid": 0.65,
-      "ask": 0.65,
-      "price": 0.65,
+      "bid": 0.655,
+      "ask": 0.655,
+      "price": 0.655,
       "spread": 0,
-      "volume": 5124
+      "volume": 6174
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on September 13?",
@@ -978,11 +1061,11 @@
         16,
         16
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.335,
+      "ask": 0.335,
+      "price": 0.335,
       "spread": 0,
-      "volume": 5767
+      "volume": 7853
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on September 13?",
@@ -991,11 +1074,11 @@
         17,
         17
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 797
+      "volume": 1946
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on September 13?",
@@ -1004,11 +1087,11 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 48
+      "volume": 1136
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on September 13?",
