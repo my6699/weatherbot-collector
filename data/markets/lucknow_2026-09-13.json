@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.168,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -436,6 +436,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-12T04:44:19.049Z",
+      "horizon": "D+1",
+      "hours_left": 31.3,
+      "ecmwf": 33.1,
+      "hrrr": 33.9,
+      "metar": null,
+      "best": 33.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.1,
+          "gfs_seamless": 33.9,
+          "icon_seamless": 32.8
+        },
+        "mean": 33.3,
+        "spread": 0.6,
+        "gap": 0.8,
+        "llmEnhanced": false,
+        "membersMax": [
+          31.8,
+          31,
+          32.9,
+          32.3,
+          32.9,
+          32.7,
+          31.5,
+          29.8,
+          32.8,
+          32.7,
+          31.5,
+          32.7,
+          32.8,
+          32.5,
+          32.6,
+          32.7,
+          33.1,
+          32.7,
+          32.1,
+          31.6,
+          32,
+          33.3,
+          32.7,
+          33.1,
+          32.7,
+          33,
+          32.1,
+          32.4,
+          32.5,
+          32.1,
+          32.6,
+          31.2,
+          32.4,
+          33,
+          32.6,
+          32.5,
+          32.1,
+          32.7,
+          33,
+          32.6,
+          32.4,
+          33,
+          32.5,
+          33,
+          33.5,
+          32.7,
+          32.1,
+          32,
+          32.9,
+          33.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -478,6 +552,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.265,
       "top2_sum": 0.73
+    },
+    {
+      "ts": "2026-09-12T04:44:19.049Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.455,
+      "top2_bucket": "33-34C",
+      "top2_price": 0.295,
+      "top2_sum": 0.75
     }
   ],
   "all_outcomes": [
@@ -518,7 +600,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 51
+      "volume": 55
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on September 13?",
@@ -540,11 +622,11 @@
         32,
         32
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.14,
+      "ask": 0.14,
+      "price": 0.14,
       "spread": 0,
-      "volume": 1627
+      "volume": 1787
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on September 13?",
@@ -553,11 +635,11 @@
         33,
         33
       ],
-      "bid": 0.465,
-      "ask": 0.465,
-      "price": 0.465,
+      "bid": 0.455,
+      "ask": 0.455,
+      "price": 0.455,
       "spread": 0,
-      "volume": 546
+      "volume": 556
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C on September 13?",
@@ -566,11 +648,11 @@
         34,
         34
       ],
-      "bid": 0.265,
-      "ask": 0.265,
-      "price": 0.265,
+      "bid": 0.295,
+      "ask": 0.295,
+      "price": 0.295,
       "spread": 0,
-      "volume": 312
+      "volume": 332
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on September 13?",
@@ -583,7 +665,7 @@
       "ask": 0.085,
       "price": 0.085,
       "spread": 0,
-      "volume": 649
+      "volume": 683
     },
     {
       "question": "Will the highest temperature in Lucknow be 36°C on September 13?",
