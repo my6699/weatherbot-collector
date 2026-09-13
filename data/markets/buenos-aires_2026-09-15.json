@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-15T12:00:00Z",
   "hours_at_discovery": 41.7,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4529770",
+    "question": "Will the highest temperature in Buenos Aires be 18°C on September 15?",
+    "bucket_low": 18,
+    "bucket_high": 18,
+    "entry_price": 0.14,
+    "bid_at_entry": 0.13,
+    "spread": 0.01,
+    "shares": 285.71,
+    "cost": 40,
+    "p": 0.38,
+    "ev": 1.7143,
+    "edge": 0.0968,
+    "kelly": 0.0708,
+    "forecast_temp": 18.97,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-09-13T23:12:55.101Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.104
+  },
+  "positions": [
+    {
+      "market_id": "4529770",
+      "question": "Will the highest temperature in Buenos Aires be 18°C on September 15?",
+      "bucket_low": 18,
+      "bucket_high": 18,
+      "entry_price": 0.14,
+      "bid_at_entry": 0.13,
+      "spread": 0.01,
+      "shares": 285.71,
+      "cost": 40,
+      "p": 0.38,
+      "ev": 1.7143,
+      "edge": 0.0968,
+      "kelly": 0.0708,
+      "forecast_temp": 18.97,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-09-13T23:12:55.101Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.104
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -160,6 +210,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-13T23:12:55.101Z",
+      "horizon": "D+2",
+      "hours_left": 36.8,
+      "ecmwf": 18.3,
+      "hrrr": 18.1,
+      "metar": null,
+      "best": 18.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 18.3,
+          "gfs_seamless": 18.1,
+          "icon_seamless": 19
+        },
+        "mean": 18.4,
+        "spread": 0.6,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          18.6,
+          18.2,
+          16.5,
+          18,
+          18,
+          18.7,
+          17.4,
+          18.2,
+          17.9,
+          19,
+          17,
+          17.3,
+          19.9,
+          18.3,
+          18.8,
+          18.3,
+          15.9,
+          19,
+          18.3,
+          17.4,
+          17.7,
+          19.2,
+          17.6,
+          19.1,
+          18.8,
+          18.3,
+          21.4,
+          18,
+          19.3,
+          18.2,
+          19.1,
+          18,
+          20.8,
+          19,
+          18.6,
+          18.8,
+          18.3,
+          17.8,
+          18.6,
+          16.7,
+          18.5,
+          19.5,
+          19,
+          18,
+          19.6,
+          19.6,
+          16.7,
+          16.4,
+          16.9,
+          18.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -177,6 +301,14 @@
       "top_price": 0.295,
       "top2_bucket": "19-20C",
       "top2_price": 0.295,
+      "top2_sum": 0.575
+    },
+    {
+      "ts": "2026-09-13T23:12:55.101Z",
+      "top_bucket": "20-20C",
+      "top_price": 0.315,
+      "top2_bucket": "19-20C",
+      "top2_price": 0.315,
       "top2_sum": 0.575
     }
   ],
@@ -240,9 +372,9 @@
         17,
         17
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
       "volume": 0
     },
@@ -253,11 +385,11 @@
         18,
         18
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 519
+      "volume": 563
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 19°C on September 15?",
@@ -266,11 +398,11 @@
         19,
         19
       ],
-      "bid": 0.28,
-      "ask": 0.28,
-      "price": 0.28,
+      "bid": 0.26,
+      "ask": 0.26,
+      "price": 0.26,
       "spread": 0,
-      "volume": 241
+      "volume": 249
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on September 15?",
@@ -279,11 +411,11 @@
         20,
         20
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 73
+      "volume": 145
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on September 15?",
@@ -292,9 +424,9 @@
         21,
         21
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
       "volume": 340
     },
@@ -305,11 +437,11 @@
         22,
         22
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 0
+      "volume": 44
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C or higher on September 15?",
@@ -318,9 +450,9 @@
         23,
         999
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
       "volume": 0
     }
