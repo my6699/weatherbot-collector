@@ -6,7 +6,7 @@
   "station": "EGLC",
   "event_end_date": "2026-09-13T12:00:00Z",
   "hours_at_discovery": 50.2,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "4461631",
     "question": "Will the highest temperature in London be 24°C on September 13?",
@@ -57,10 +57,11 @@
       "close_reason": "forecast_changed",
       "closed_at": "2026-09-12T19:25:37.089Z",
       "stop_price": 0.112,
-      "forecast_change_streak": 2
+      "forecast_change_streak": 2,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 23,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1184,6 +1185,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-13T18:15:08.852Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 23.3,
+      "hrrr": 22,
+      "metar": 21,
+      "best": 22.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 23.3,
+          "gfs_seamless": 22,
+          "icon_seamless": 22.9
+        },
+        "mean": 22.8,
+        "spread": 0.8,
+        "gap": 1.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          23.7,
+          22.5,
+          21.5,
+          23.2,
+          22.5,
+          23.2,
+          23.8,
+          22.5,
+          22.5,
+          22.3,
+          24.2,
+          23.8,
+          21.8,
+          24,
+          23,
+          24.3,
+          23.7,
+          23.2,
+          23.8,
+          23.8,
+          21.2,
+          21.8,
+          22.8,
+          22.3,
+          23.8,
+          22.8,
+          23.7,
+          22.8,
+          24.2,
+          23,
+          23.7,
+          23.8,
+          23.3,
+          22.8,
+          22.3,
+          23.7,
+          24.2,
+          23.2,
+          23,
+          24,
+          23.3,
+          22.3,
+          23,
+          23.5,
+          23.3,
+          23.5,
+          23.7,
+          23.2,
+          23.3,
+          23.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1306,6 +1381,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.05,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-09-13T18:15:08.852Z",
+      "top_bucket": "23-23C",
+      "top_price": 0.999,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.999,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -1372,7 +1455,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3994
+      "volume": 4009
     },
     {
       "question": "Will the highest temperature in London be 21°C on September 13?",
@@ -1385,7 +1468,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 9716
+      "volume": 10160
     },
     {
       "question": "Will the highest temperature in London be 22°C on September 13?",
@@ -1398,7 +1481,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 11485
+      "volume": 11645
     },
     {
       "question": "Will the highest temperature in London be 23°C on September 13?",
@@ -1407,11 +1490,11 @@
         23,
         23
       ],
-      "bid": 0.94,
-      "ask": 0.94,
-      "price": 0.94,
+      "bid": 0.999,
+      "ask": 0.999,
+      "price": 0.999,
       "spread": 0,
-      "volume": 16333
+      "volume": 23862
     },
     {
       "question": "Will the highest temperature in London be 24°C on September 13?",
@@ -1420,11 +1503,11 @@
         24,
         24
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 12619
+      "volume": 15151
     },
     {
       "question": "Will the highest temperature in London be 25°C on September 13?",
@@ -1433,11 +1516,11 @@
         25,
         25
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6754
+      "volume": 7641
     },
     {
       "question": "Will the highest temperature in London be 26°C or higher on September 13?",
@@ -1453,5 +1536,6 @@
       "volume": 2109
     }
   ],
-  "created_at": "2026-09-11T09:47:45.879Z"
+  "created_at": "2026-09-11T09:47:45.879Z",
+  "metar_max": 19
 }
