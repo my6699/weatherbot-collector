@@ -6,10 +6,10 @@
   "station": "LTAC",
   "event_end_date": "2026-09-13T12:00:00Z",
   "hours_at_discovery": 50.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1051,6 +1051,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-13T14:29:09.946Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 32.5,
+      "hrrr": 32,
+      "metar": 32,
+      "best": 32.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.5,
+          "gfs_seamless": 32,
+          "icon_seamless": 32
+        },
+        "mean": 32.3,
+        "spread": 0.3,
+        "gap": 0.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          32.2,
+          32.5,
+          32.6,
+          32.6,
+          32.7,
+          32.5,
+          32.5,
+          32.7,
+          32.7,
+          32.5,
+          32.7,
+          32.3,
+          32.6,
+          32.5,
+          32.6,
+          32.8,
+          32.6,
+          32.7,
+          32.7,
+          32.7,
+          32.5,
+          32.9,
+          32.6,
+          32.5,
+          32.4,
+          32.6,
+          32.5,
+          32.5,
+          32.8,
+          32.5,
+          32.6,
+          32.7,
+          32.6,
+          32.4,
+          32.8,
+          32.7,
+          32.7,
+          32.8,
+          32.8,
+          32.7,
+          32.7,
+          32.6,
+          32.4,
+          32.7,
+          32.7,
+          32.8,
+          32.5,
+          32.9,
+          32.5,
+          32.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1165,6 +1239,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.835,
       "top2_sum": 0.98
+    },
+    {
+      "ts": "2026-09-13T14:29:09.946Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9965,
+      "top2_bucket": "33-34C",
+      "top2_price": 0.004,
+      "top2_sum": 1.0005
     }
   ],
   "all_outcomes": [
@@ -1227,11 +1309,11 @@
         31,
         31
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2876
+      "volume": 3225
     },
     {
       "question": "Will the highest temperature in Ankara be 32°C on September 13?",
@@ -1240,11 +1322,11 @@
         32,
         32
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6533
+      "volume": 8524
     },
     {
       "question": "Will the highest temperature in Ankara be 33°C on September 13?",
@@ -1253,11 +1335,11 @@
         33,
         33
       ],
-      "bid": 0.835,
-      "ask": 0.835,
-      "price": 0.835,
+      "bid": 0.9965,
+      "ask": 0.9965,
+      "price": 0.9965,
       "spread": 0,
-      "volume": 5356
+      "volume": 6513
     },
     {
       "question": "Will the highest temperature in Ankara be 34°C on September 13?",
@@ -1266,11 +1348,11 @@
         34,
         34
       ],
-      "bid": 0.021,
-      "ask": 0.021,
-      "price": 0.021,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 3148
+      "volume": 4620
     },
     {
       "question": "Will the highest temperature in Ankara be 35°C on September 13?",
@@ -1279,11 +1361,11 @@
         35,
         35
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 1418
+      "volume": 1799
     },
     {
       "question": "Will the highest temperature in Ankara be 36°C on September 13?",
@@ -1312,5 +1394,6 @@
       "volume": 1105
     }
   ],
-  "created_at": "2026-09-11T09:47:51.282Z"
+  "created_at": "2026-09-11T09:47:51.282Z",
+  "metar_max": 16
 }
