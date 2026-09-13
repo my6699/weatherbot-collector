@@ -51,13 +51,14 @@
       "forecast_src": "ensemble",
       "sigma": 1.3,
       "opened_at": "2026-09-13T00:03:49.378Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
-      "stop_price": 0.12,
-      "forecast_change_streak": 1
+      "status": "closed",
+      "pnl": 15.29,
+      "exit_price": 0.235,
+      "close_reason": "forecast_changed",
+      "closed_at": "2026-09-13T10:21:18.934Z",
+      "stop_price": 0.17,
+      "forecast_change_streak": 2,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -588,6 +589,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-13T10:21:18.934Z",
+      "horizon": "D+1",
+      "hours_left": 25.6,
+      "ecmwf": 29.5,
+      "hrrr": 31.6,
+      "metar": null,
+      "best": 30.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.5,
+          "gfs_seamless": 31.6,
+          "icon_seamless": 30.3
+        },
+        "mean": 30.3,
+        "spread": 1.3,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          29.3,
+          30.2,
+          29.2,
+          28.8,
+          29.9,
+          29.9,
+          30.2,
+          29.3,
+          28.8,
+          29.2,
+          29.2,
+          29.7,
+          29.5,
+          29.4,
+          29.4,
+          29.4,
+          29.2,
+          29.1,
+          29.3,
+          30.4,
+          30.3,
+          29.9,
+          29.3,
+          29.7,
+          29.7,
+          29.7,
+          29.1,
+          30.1,
+          29.4,
+          29.6,
+          29.7,
+          29.6,
+          30.3,
+          29.9,
+          29.5,
+          29.7,
+          29.9,
+          29.2,
+          30.1,
+          29.1,
+          29.7,
+          29.5,
+          29.4,
+          29.4,
+          29.8,
+          29.7,
+          29.3,
+          29.7,
+          29.8,
+          29.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -646,6 +722,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.305,
       "top2_sum": 0.77
+    },
+    {
+      "ts": "2026-09-13T10:21:18.934Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.51,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.51,
+      "top2_sum": 0.745
     }
   ],
   "all_outcomes": [
@@ -660,7 +744,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 705
+      "volume": 2092
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on September 14?",
@@ -669,11 +753,11 @@
         26,
         26
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 268
+      "volume": 511
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on September 14?",
@@ -682,11 +766,11 @@
         27,
         27
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 247
+      "volume": 558
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on September 14?",
@@ -695,11 +779,11 @@
         28,
         28
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 210
+      "volume": 784
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on September 14?",
@@ -708,11 +792,11 @@
         29,
         29
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
+      "bid": 0.235,
+      "ask": 0.235,
+      "price": 0.235,
       "spread": 0,
-      "volume": 1127
+      "volume": 1972
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on September 14?",
@@ -721,11 +805,11 @@
         30,
         30
       ],
-      "bid": 0.465,
-      "ask": 0.465,
-      "price": 0.465,
+      "bid": 0.51,
+      "ask": 0.51,
+      "price": 0.51,
       "spread": 0,
-      "volume": 965
+      "volume": 1495
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on September 14?",
@@ -734,11 +818,11 @@
         31,
         31
       ],
-      "bid": 0.305,
-      "ask": 0.305,
-      "price": 0.305,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 2078
+      "volume": 3612
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C on September 14?",
@@ -747,11 +831,11 @@
         32,
         32
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 331
+      "volume": 577
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on September 14?",
@@ -764,7 +848,7 @@
       "ask": 0.02,
       "price": 0.02,
       "spread": 0,
-      "volume": 219
+      "volume": 384
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on September 14?",
@@ -777,7 +861,7 @@
       "ask": 0.004,
       "price": 0.004,
       "spread": 0,
-      "volume": 269
+      "volume": 451
     },
     {
       "question": "Will the highest temperature in Tokyo be 35°C or higher on September 14?",
@@ -790,7 +874,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 527
+      "volume": 810
     }
   ],
   "created_at": "2026-09-12T09:27:29.859Z"

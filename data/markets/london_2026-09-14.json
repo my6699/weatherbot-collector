@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.12
+      "stop_price": 0.12,
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -586,6 +587,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-13T10:21:11.291Z",
+      "horizon": "D+1",
+      "hours_left": 25.6,
+      "ecmwf": 24,
+      "hrrr": 26.1,
+      "metar": null,
+      "best": 24.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24,
+          "gfs_seamless": 26.1,
+          "icon_seamless": 24.2
+        },
+        "mean": 24.7,
+        "spread": 1.4,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          23.3,
+          23.8,
+          23.4,
+          24.1,
+          24.5,
+          23.3,
+          23,
+          23.3,
+          24.5,
+          24.3,
+          21.9,
+          23.8,
+          23.4,
+          23.1,
+          23.2,
+          23.8,
+          24.7,
+          23.6,
+          23.3,
+          24.1,
+          24.9,
+          22.7,
+          25.1,
+          22.3,
+          21.2,
+          23.7,
+          22.8,
+          22.9,
+          23.5,
+          23.7,
+          24.2,
+          22.4,
+          24.2,
+          23.8,
+          23.9,
+          23.8,
+          22.6,
+          22.5,
+          23.4,
+          25.1,
+          24.1,
+          23,
+          23,
+          23.3,
+          23.8,
+          22.8,
+          24,
+          24,
+          22.8,
+          22.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -644,6 +720,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.3,
       "top2_sum": 0.785
+    },
+    {
+      "ts": "2026-09-13T10:21:11.291Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.465,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.285,
+      "top2_sum": 0.75
     }
   ],
   "all_outcomes": [
@@ -654,9 +738,9 @@
         -999,
         17
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 143
     },
@@ -684,7 +768,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 372
+      "volume": 508
     },
     {
       "question": "Will the highest temperature in London be 20°C on September 14?",
@@ -693,11 +777,11 @@
         20,
         20
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 65
+      "volume": 83
     },
     {
       "question": "Will the highest temperature in London be 21°C on September 14?",
@@ -706,11 +790,11 @@
         21,
         21
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 427
+      "volume": 428
     },
     {
       "question": "Will the highest temperature in London be 22°C on September 14?",
@@ -719,11 +803,11 @@
         22,
         22
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 495
+      "volume": 512
     },
     {
       "question": "Will the highest temperature in London be 23°C on September 14?",
@@ -736,7 +820,7 @@
       "ask": 0.165,
       "price": 0.165,
       "spread": 0,
-      "volume": 1198
+      "volume": 1441
     },
     {
       "question": "Will the highest temperature in London be 24°C on September 14?",
@@ -745,11 +829,11 @@
         24,
         24
       ],
-      "bid": 0.485,
-      "ask": 0.485,
-      "price": 0.485,
+      "bid": 0.465,
+      "ask": 0.465,
+      "price": 0.465,
       "spread": 0,
-      "volume": 1960
+      "volume": 2883
     },
     {
       "question": "Will the highest temperature in London be 25°C on September 14?",
@@ -758,11 +842,11 @@
         25,
         25
       ],
-      "bid": 0.3,
-      "ask": 0.3,
-      "price": 0.3,
+      "bid": 0.285,
+      "ask": 0.285,
+      "price": 0.285,
       "spread": 0,
-      "volume": 900
+      "volume": 968
     },
     {
       "question": "Will the highest temperature in London be 26°C on September 14?",
@@ -771,11 +855,11 @@
         26,
         26
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 971
+      "volume": 1021
     },
     {
       "question": "Will the highest temperature in London be 27°C or higher on September 14?",
@@ -788,7 +872,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 200
+      "volume": 245
     }
   ],
   "created_at": "2026-09-12T09:26:15.132Z"
