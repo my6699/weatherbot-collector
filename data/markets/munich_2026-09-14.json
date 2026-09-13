@@ -51,13 +51,13 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-09-13T04:54:50.576Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 69.23,
+      "exit_price": 0.355,
+      "close_reason": "forecast_changed",
+      "closed_at": "2026-09-13T20:54:47.758Z",
       "stop_price": 0.13,
-      "forecast_change_streak": 1,
+      "forecast_change_streak": 2,
       "trailing_activated": true
     }
   ],
@@ -811,6 +811,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-13T20:54:47.758Z",
+      "horizon": "D+1",
+      "hours_left": 15.1,
+      "ecmwf": 18.4,
+      "hrrr": 20.4,
+      "metar": null,
+      "best": 19.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 18.4,
+          "gfs_seamless": 20.4,
+          "icon_seamless": 21.3
+        },
+        "mean": 19.6,
+        "spread": 1.7,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          18.4,
+          18.1,
+          18.2,
+          18.7,
+          17.9,
+          18,
+          18.1,
+          17.9,
+          18.5,
+          18.1,
+          19.3,
+          19,
+          16.6,
+          19,
+          18.9,
+          17.7,
+          18.8,
+          19.2,
+          17.8,
+          18.1,
+          16.2,
+          16.8,
+          17.4,
+          19.2,
+          18.5,
+          18,
+          17.7,
+          17.8,
+          18.6,
+          19.2,
+          18.8,
+          18.1,
+          17.3,
+          18.3,
+          18.4,
+          18.2,
+          19.1,
+          19.3,
+          18.8,
+          18.1,
+          17.5,
+          18.5,
+          17.2,
+          18.9,
+          18.9,
+          17.5,
+          19,
+          17.4,
+          18.5,
+          18.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -893,6 +968,14 @@
       "top2_bucket": "21-22C",
       "top2_price": 0.315,
       "top2_sum": 0.88
+    },
+    {
+      "ts": "2026-09-13T20:54:47.758Z",
+      "top_bucket": "21-21C",
+      "top_price": 0.51,
+      "top2_bucket": "21-22C",
+      "top2_price": 0.355,
+      "top2_sum": 0.865
     }
   ],
   "all_outcomes": [
@@ -907,7 +990,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 1200
+      "volume": 1246
     },
     {
       "question": "Will the highest temperature in Munich be 15°C on September 14?",
@@ -920,7 +1003,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 922
+      "volume": 961
     },
     {
       "question": "Will the highest temperature in Munich be 16°C on September 14?",
@@ -933,7 +1016,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 757
+      "volume": 796
     },
     {
       "question": "Will the highest temperature in Munich be 17°C on September 14?",
@@ -968,11 +1051,11 @@
         19,
         19
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 758
+      "volume": 797
     },
     {
       "question": "Will the highest temperature in Munich be 20°C on September 14?",
@@ -985,7 +1068,7 @@
       "ask": 0.105,
       "price": 0.105,
       "spread": 0,
-      "volume": 1714
+      "volume": 1884
     },
     {
       "question": "Will the highest temperature in Munich be 21°C on September 14?",
@@ -994,11 +1077,11 @@
         21,
         21
       ],
-      "bid": 0.565,
-      "ask": 0.565,
-      "price": 0.565,
+      "bid": 0.51,
+      "ask": 0.51,
+      "price": 0.51,
       "spread": 0,
-      "volume": 2784
+      "volume": 3933
     },
     {
       "question": "Will the highest temperature in Munich be 22°C on September 14?",
@@ -1007,11 +1090,11 @@
         22,
         22
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 6170
+      "volume": 6469
     },
     {
       "question": "Will the highest temperature in Munich be 23°C on September 14?",
@@ -1020,11 +1103,11 @@
         23,
         23
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 1402
+      "volume": 1455
     },
     {
       "question": "Will the highest temperature in Munich be 24°C or higher on September 14?",
@@ -1033,11 +1116,11 @@
         24,
         999
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 504
+      "volume": 566
     }
   ],
   "created_at": "2026-09-12T09:26:45.438Z"
