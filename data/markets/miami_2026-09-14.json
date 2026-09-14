@@ -6,10 +6,10 @@
   "station": "KMIA",
   "event_end_date": "2026-09-14T12:00:00Z",
   "hours_at_discovery": 50.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 88.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1212,6 +1212,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-14T22:32:57.769Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 91,
+      "hrrr": 87,
+      "metar": 88,
+      "best": 89.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 91,
+          "gfs_seamless": 87,
+          "icon_seamless": 90
+        },
+        "mean": 89.6,
+        "spread": 2.6,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          90,
+          90,
+          91,
+          89,
+          89,
+          90,
+          90,
+          91,
+          90,
+          91,
+          90,
+          89,
+          90,
+          91,
+          91,
+          89,
+          90,
+          89,
+          90,
+          91,
+          89,
+          89,
+          91,
+          89,
+          90,
+          90,
+          90,
+          90,
+          90,
+          90,
+          90,
+          89,
+          91,
+          91,
+          90,
+          91,
+          90,
+          89,
+          90,
+          90,
+          90,
+          90,
+          91,
+          90,
+          91,
+          90,
+          89,
+          90,
+          90,
+          90
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1342,6 +1417,14 @@
       "top2_bucket": "88-91F",
       "top2_price": 0.245,
       "top2_sum": 0.91
+    },
+    {
+      "ts": "2026-09-14T22:32:57.769Z",
+      "top_bucket": "88-89F",
+      "top_price": 0.984,
+      "top2_bucket": "88-91F",
+      "top2_price": 0.0255,
+      "top2_sum": 1.0095
     }
   ],
   "all_outcomes": [
@@ -1417,11 +1500,11 @@
         88,
         89
       ],
-      "bid": 0.665,
-      "ask": 0.665,
-      "price": 0.665,
+      "bid": 0.984,
+      "ask": 0.984,
+      "price": 0.984,
       "spread": 0,
-      "volume": 11746
+      "volume": 17844
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on September 14?",
@@ -1430,11 +1513,11 @@
         90,
         91
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.0255,
+      "ask": 0.0255,
+      "price": 0.0255,
       "spread": 0,
-      "volume": 6682
+      "volume": 11146
     },
     {
       "question": "Will the highest temperature in Miami be between 92-93°F on September 14?",
@@ -1443,11 +1526,11 @@
         92,
         93
       ],
-      "bid": 0.023,
-      "ask": 0.023,
-      "price": 0.023,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 12128
+      "volume": 15119
     },
     {
       "question": "Will the highest temperature in Miami be between 94-95°F on September 14?",
@@ -1456,11 +1539,11 @@
         94,
         95
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6659
+      "volume": 7707
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on September 14?",
@@ -1469,9 +1552,9 @@
         96,
         97
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1405
     },

@@ -6,10 +6,10 @@
   "station": "KORD",
   "event_end_date": "2026-09-14T12:00:00Z",
   "hours_at_discovery": 50.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1211,6 +1211,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-14T22:32:54.880Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 69,
+      "hrrr": 71,
+      "metar": 70,
+      "best": 70.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 69,
+          "gfs_seamless": 71,
+          "icon_seamless": 72
+        },
+        "mean": 70.2,
+        "spread": 1.8,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          71,
+          70,
+          70,
+          69,
+          69,
+          69,
+          71,
+          67,
+          70,
+          70,
+          69,
+          69,
+          69,
+          70,
+          67,
+          68,
+          67,
+          70,
+          68,
+          69,
+          68,
+          69,
+          70,
+          71,
+          69,
+          69,
+          70,
+          70,
+          71,
+          70,
+          69,
+          68,
+          70,
+          73,
+          68,
+          70,
+          67,
+          68,
+          73,
+          70,
+          68,
+          70,
+          69,
+          68,
+          70,
+          68,
+          67,
+          68,
+          67,
+          69
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1341,6 +1415,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.52,
       "top2_sum": 0.93
+    },
+    {
+      "ts": "2026-09-14T22:32:54.880Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.985,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.015,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1394,7 +1476,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7590
+      "volume": 7625
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on September 14?",
@@ -1403,11 +1485,11 @@
         70,
         71
       ],
-      "bid": 0.41,
-      "ask": 0.41,
-      "price": 0.41,
+      "bid": 0.985,
+      "ask": 0.985,
+      "price": 0.985,
       "spread": 0,
-      "volume": 3757
+      "volume": 7287
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on September 14?",
@@ -1416,11 +1498,11 @@
         72,
         73
       ],
-      "bid": 0.52,
-      "ask": 0.52,
-      "price": 0.52,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 5334
+      "volume": 7201
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on September 14?",
@@ -1429,11 +1511,11 @@
         74,
         75
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 3763
+      "volume": 5621
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on September 14?",
@@ -1442,11 +1524,11 @@
         76,
         77
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1421
+      "volume": 2535
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on September 14?",
@@ -1455,11 +1537,11 @@
         78,
         79
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 533
+      "volume": 2159
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on September 14?",
