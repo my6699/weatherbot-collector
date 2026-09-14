@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.184
+      "stop_price": 0.184,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -511,6 +512,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-14T18:40:34.969Z",
+      "horizon": "D+1",
+      "hours_left": 17.3,
+      "ecmwf": 33.3,
+      "hrrr": 31.6,
+      "metar": null,
+      "best": 32.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.3,
+          "gfs_seamless": 31.6,
+          "icon_seamless": 31.7
+        },
+        "mean": 32.5,
+        "spread": 0.9,
+        "gap": 1.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          33.9,
+          33.1,
+          32.5,
+          33.2,
+          32.8,
+          33.5,
+          33.3,
+          32.3,
+          32.6,
+          33.3,
+          32.9,
+          32.4,
+          32.5,
+          33.4,
+          32.6,
+          33,
+          33.1,
+          32.8,
+          33.2,
+          33.3,
+          32.6,
+          33.2,
+          32.1,
+          33,
+          33,
+          32.9,
+          33.3,
+          32.4,
+          33,
+          33.1,
+          32.1,
+          31.6,
+          33.2,
+          33.4,
+          33.4,
+          32.9,
+          33.5,
+          33.2,
+          33.4,
+          33.3,
+          33.4,
+          32.9,
+          33.4,
+          32.8,
+          33,
+          33.2,
+          33,
+          33.5,
+          33.3,
+          32.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -561,6 +636,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.235,
       "top2_sum": 0.77
+    },
+    {
+      "ts": "2026-09-14T18:40:34.969Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.54,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.275,
+      "top2_sum": 0.815
     }
   ],
   "all_outcomes": [
@@ -575,7 +658,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 1306
+      "volume": 1749
     },
     {
       "question": "Will the highest temperature in Paris be 27°C on September 15?",
@@ -588,7 +671,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 865
+      "volume": 1470
     },
     {
       "question": "Will the highest temperature in Paris be 28°C on September 15?",
@@ -597,11 +680,11 @@
         28,
         28
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 654
+      "volume": 1735
     },
     {
       "question": "Will the highest temperature in Paris be 29°C on September 15?",
@@ -614,7 +697,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 999
+      "volume": 1229
     },
     {
       "question": "Will the highest temperature in Paris be 30°C on September 15?",
@@ -623,11 +706,11 @@
         30,
         30
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 1881
+      "volume": 2248
     },
     {
       "question": "Will the highest temperature in Paris be 31°C on September 15?",
@@ -636,11 +719,11 @@
         31,
         31
       ],
-      "bid": 0.15,
-      "ask": 0.15,
-      "price": 0.15,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 2502
+      "volume": 4041
     },
     {
       "question": "Will the highest temperature in Paris be 32°C on September 15?",
@@ -649,11 +732,11 @@
         32,
         32
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
+      "bid": 0.54,
+      "ask": 0.54,
+      "price": 0.54,
       "spread": 0,
-      "volume": 2958
+      "volume": 4967
     },
     {
       "question": "Will the highest temperature in Paris be 33°C on September 15?",
@@ -662,11 +745,11 @@
         33,
         33
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.275,
+      "ask": 0.275,
+      "price": 0.275,
       "spread": 0,
-      "volume": 1988
+      "volume": 9423
     },
     {
       "question": "Will the highest temperature in Paris be 34°C on September 15?",
@@ -675,11 +758,11 @@
         34,
         34
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 2518
+      "volume": 3432
     },
     {
       "question": "Will the highest temperature in Paris be 35°C on September 15?",
@@ -688,11 +771,11 @@
         35,
         35
       ],
-      "bid": 0.0135,
-      "ask": 0.0135,
-      "price": 0.0135,
+      "bid": 0.0165,
+      "ask": 0.0165,
+      "price": 0.0165,
       "spread": 0,
-      "volume": 1673
+      "volume": 2210
     },
     {
       "question": "Will the highest temperature in Paris be 36°C or higher on September 15?",

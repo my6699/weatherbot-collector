@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-15T12:00:00Z",
   "hours_at_discovery": 41.7,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4529849",
+    "question": "Will the highest temperature in Miami be between 92-93°F on September 15?",
+    "bucket_low": 92,
+    "bucket_high": 93,
+    "entry_price": 0.2,
+    "bid_at_entry": 0.18,
+    "spread": 0.02,
+    "shares": 200,
+    "cost": 40,
+    "p": 0.42,
+    "ev": 1.1,
+    "edge": 0.0937,
+    "kelly": 0.071,
+    "forecast_temp": 93.7,
+    "forecast_src": "ensemble",
+    "sigma": 3.1,
+    "opened_at": "2026-09-14T18:40:26.420Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.144
+  },
+  "positions": [
+    {
+      "market_id": "4529849",
+      "question": "Will the highest temperature in Miami be between 92-93°F on September 15?",
+      "bucket_low": 92,
+      "bucket_high": 93,
+      "entry_price": 0.2,
+      "bid_at_entry": 0.18,
+      "spread": 0.02,
+      "shares": 200,
+      "cost": 40,
+      "p": 0.42,
+      "ev": 1.1,
+      "edge": 0.0937,
+      "kelly": 0.071,
+      "forecast_temp": 93.7,
+      "forecast_src": "ensemble",
+      "sigma": 3.1,
+      "opened_at": "2026-09-14T18:40:26.420Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.144
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -462,6 +512,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-14T18:40:26.420Z",
+      "horizon": "D+1",
+      "hours_left": 17.3,
+      "ecmwf": 92,
+      "hrrr": 87,
+      "metar": null,
+      "best": 90.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 92,
+          "gfs_seamless": 87,
+          "icon_seamless": 90
+        },
+        "mean": 90.1,
+        "spread": 3.1,
+        "gap": 5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          91,
+          91,
+          92,
+          90,
+          91,
+          90,
+          88,
+          91,
+          92,
+          92,
+          91,
+          90,
+          91,
+          91,
+          92,
+          91,
+          90,
+          91,
+          91,
+          87,
+          91,
+          92,
+          90,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          91,
+          91,
+          92,
+          92,
+          91,
+          92,
+          91,
+          90,
+          92,
+          92,
+          92,
+          91,
+          91,
+          92,
+          91,
+          92,
+          92,
+          91,
+          91,
+          91
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -512,6 +637,14 @@
       "top2_bucket": "88-91F",
       "top2_price": 0.655,
       "top2_sum": 0.85
+    },
+    {
+      "ts": "2026-09-14T18:40:26.420Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.645,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.19,
+      "top2_sum": 0.835
     }
   ],
   "all_outcomes": [
@@ -522,11 +655,11 @@
         -999,
         79
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 178
+      "volume": 188
     },
     {
       "question": "Will the highest temperature in Miami be between 80-81°F on September 15?",
@@ -535,11 +668,11 @@
         80,
         81
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 128
+      "volume": 133
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on September 15?",
@@ -548,11 +681,11 @@
         82,
         83
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 366
+      "volume": 457
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on September 15?",
@@ -565,7 +698,7 @@
       "ask": 0.011,
       "price": 0.011,
       "spread": 0,
-      "volume": 300
+      "volume": 375
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on September 15?",
@@ -574,11 +707,11 @@
         86,
         87
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 1019
+      "volume": 1128
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on September 15?",
@@ -587,11 +720,11 @@
         88,
         89
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 1819
+      "volume": 2410
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on September 15?",
@@ -600,11 +733,11 @@
         90,
         91
       ],
-      "bid": 0.655,
-      "ask": 0.655,
-      "price": 0.655,
+      "bid": 0.645,
+      "ask": 0.645,
+      "price": 0.645,
       "spread": 0,
-      "volume": 1582
+      "volume": 1963
     },
     {
       "question": "Will the highest temperature in Miami be between 92-93°F on September 15?",
@@ -613,11 +746,11 @@
         92,
         93
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.19,
+      "ask": 0.19,
+      "price": 0.19,
       "spread": 0,
-      "volume": 714
+      "volume": 1543
     },
     {
       "question": "Will the highest temperature in Miami be between 94-95°F on September 15?",
@@ -626,11 +759,11 @@
         94,
         95
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 1046
+      "volume": 2268
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on September 15?",
@@ -639,11 +772,11 @@
         96,
         97
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 153
+      "volume": 246
     },
     {
       "question": "Will the highest temperature in Miami be 98°F or higher on September 15?",
@@ -652,9 +785,9 @@
         98,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 228
     }
