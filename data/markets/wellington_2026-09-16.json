@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.16,
-      "forecast_change_streak": 1
+      "stop_price": 0.22,
+      "forecast_change_streak": 2,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -655,6 +656,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-15T21:26:32.869Z",
+      "horizon": "D+1",
+      "hours_left": 14.6,
+      "ecmwf": 13.7,
+      "hrrr": 14.5,
+      "metar": null,
+      "best": 14.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 13.7,
+          "gfs_seamless": 14.5,
+          "icon_seamless": 14.8
+        },
+        "mean": 14.2,
+        "spread": 0.6,
+        "gap": 0.8,
+        "llmEnhanced": false,
+        "membersMax": [
+          14.2,
+          14.1,
+          14,
+          13.9,
+          13.8,
+          14,
+          13.7,
+          13.7,
+          13.8,
+          13.6,
+          14.4,
+          14.2,
+          14.2,
+          14.8,
+          13.6,
+          14,
+          14.1,
+          14.1,
+          14.3,
+          13.6,
+          14.2,
+          13.8,
+          13.8,
+          14.3,
+          13.8,
+          14.5,
+          14,
+          14,
+          13.7,
+          13.6,
+          14.3,
+          13.6,
+          14,
+          14.3,
+          14,
+          14.2,
+          13.4,
+          14.2,
+          14.2,
+          14.1,
+          14,
+          14.2,
+          14,
+          14.5,
+          14.1,
+          13.9,
+          14.2,
+          14,
+          14,
+          13.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -721,6 +796,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.19,
       "top2_sum": 0.9
+    },
+    {
+      "ts": "2026-09-15T21:26:32.869Z",
+      "top_bucket": "15-15C",
+      "top_price": 0.575,
+      "top2_bucket": "15-16C",
+      "top2_price": 0.33,
+      "top2_sum": 0.905
     }
   ],
   "all_outcomes": [
@@ -783,11 +866,11 @@
         13,
         13
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1013
+      "volume": 1143
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on September 16?",
@@ -796,11 +879,11 @@
         14,
         14
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 1718
+      "volume": 2168
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on September 16?",
@@ -809,11 +892,11 @@
         15,
         15
       ],
-      "bid": 0.71,
-      "ask": 0.71,
-      "price": 0.71,
+      "bid": 0.575,
+      "ask": 0.575,
+      "price": 0.575,
       "spread": 0,
-      "volume": 2601
+      "volume": 3030
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on September 16?",
@@ -822,11 +905,11 @@
         16,
         16
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.33,
+      "ask": 0.33,
+      "price": 0.33,
       "spread": 0,
-      "volume": 5138
+      "volume": 5779
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on September 16?",
@@ -835,11 +918,11 @@
         17,
         17
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 981
+      "volume": 1873
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on September 16?",
