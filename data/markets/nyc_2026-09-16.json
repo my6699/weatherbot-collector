@@ -237,6 +237,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-15T01:32:02.362Z",
+      "horizon": "D+1",
+      "hours_left": 34.5,
+      "ecmwf": 77,
+      "hrrr": 81,
+      "metar": null,
+      "best": 78.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 81,
+          "icon_seamless": 79
+        },
+        "mean": 78.6,
+        "spread": 2.4,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          75,
+          76,
+          77,
+          76,
+          77,
+          77,
+          75,
+          75,
+          75,
+          77,
+          77,
+          77,
+          76,
+          77,
+          74,
+          76,
+          76,
+          75,
+          77,
+          81,
+          76,
+          78,
+          78,
+          79,
+          76,
+          76,
+          76,
+          78,
+          78,
+          77,
+          77,
+          75,
+          75,
+          76,
+          78,
+          76,
+          76,
+          77,
+          79,
+          79,
+          77,
+          76,
+          77,
+          78,
+          78,
+          77,
+          78,
+          79,
+          78,
+          77
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -263,6 +338,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.32,
       "top2_sum": 0.745
+    },
+    {
+      "ts": "2026-09-15T01:32:02.362Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.435,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.32,
+      "top2_sum": 0.755
     }
   ],
   "all_outcomes": [
@@ -299,9 +382,9 @@
         72,
         73
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
       "volume": 0
     },
@@ -312,9 +395,9 @@
         74,
         75
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
       "volume": 0
     },
@@ -325,9 +408,9 @@
         76,
         77
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
       "volume": 250
     },
@@ -338,11 +421,11 @@
         78,
         79
       ],
-      "bid": 0.425,
-      "ask": 0.425,
-      "price": 0.425,
+      "bid": 0.435,
+      "ask": 0.435,
+      "price": 0.435,
       "spread": 0,
-      "volume": 1041
+      "volume": 1071
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on September 16?",
@@ -355,7 +438,7 @@
       "ask": 0.32,
       "price": 0.32,
       "spread": 0,
-      "volume": 1687
+      "volume": 1702
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on September 16?",
@@ -381,7 +464,7 @@
       "ask": 0.025,
       "price": 0.025,
       "spread": 0,
-      "volume": 23
+      "volume": 63
     },
     {
       "question": "Will the highest temperature in New York City be between 86-87°F on September 16?",
