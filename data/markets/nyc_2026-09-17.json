@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-09-17T12:00:00Z",
   "hours_at_discovery": 52.2,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "4579750",
     "question": "Will the highest temperature in New York City be between 84-85°F on September 17?",
@@ -962,6 +962,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-17T13:32:54.589Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 83,
+      "hrrr": 83,
+      "metar": 75,
+      "best": 82.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 83,
+          "gfs_seamless": 83,
+          "icon_seamless": 81
+        },
+        "mean": 82.6,
+        "spread": 1.6,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          82,
+          83,
+          80,
+          84,
+          83,
+          83,
+          82,
+          81,
+          81,
+          83,
+          84,
+          83,
+          81,
+          83,
+          82,
+          81,
+          81,
+          84,
+          83,
+          83,
+          82,
+          83,
+          81,
+          81,
+          83,
+          84,
+          82,
+          83,
+          80,
+          82,
+          83,
+          81,
+          81,
+          83,
+          82,
+          81,
+          83,
+          82,
+          82,
+          82,
+          81,
+          83,
+          83,
+          82,
+          80,
+          81,
+          81,
+          81,
+          84,
+          80
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1060,6 +1134,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.53,
       "top2_sum": 0.77
+    },
+    {
+      "ts": "2026-09-17T13:32:54.589Z",
+      "top_bucket": "82-83F",
+      "top_price": 0.625,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.625,
+      "top2_sum": 0.8
     }
   ],
   "all_outcomes": [
@@ -1109,11 +1191,11 @@
         76,
         77
       ],
-      "bid": 0.0125,
-      "ask": 0.0125,
-      "price": 0.0125,
+      "bid": 0.011,
+      "ask": 0.011,
+      "price": 0.011,
       "spread": 0,
-      "volume": 1699
+      "volume": 2336
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on September 17?",
@@ -1126,7 +1208,7 @@
       "ask": 0.045,
       "price": 0.045,
       "spread": 0,
-      "volume": 5109
+      "volume": 6506
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on September 17?",
@@ -1135,11 +1217,11 @@
         80,
         81
       ],
-      "bid": 0.24,
-      "ask": 0.24,
-      "price": 0.24,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 7612
+      "volume": 8482
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on September 17?",
@@ -1148,11 +1230,11 @@
         82,
         83
       ],
-      "bid": 0.53,
-      "ask": 0.53,
-      "price": 0.53,
+      "bid": 0.625,
+      "ask": 0.625,
+      "price": 0.625,
       "spread": 0,
-      "volume": 6911
+      "volume": 7723
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on September 17?",
@@ -1161,11 +1243,11 @@
         84,
         85
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.16,
+      "ask": 0.16,
+      "price": 0.16,
       "spread": 0,
-      "volume": 6412
+      "volume": 7458
     },
     {
       "question": "Will the highest temperature in New York City be between 86-87°F on September 17?",
@@ -1178,7 +1260,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 1163
+      "volume": 1675
     },
     {
       "question": "Will the highest temperature in New York City be between 88-89°F on September 17?",
@@ -1187,11 +1269,11 @@
         88,
         89
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 306
+      "volume": 1283
     },
     {
       "question": "Will the highest temperature in New York City be 90°F or higher on September 17?",
@@ -1204,7 +1286,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 453
+      "volume": 995
     }
   ],
   "created_at": "2026-09-15T07:49:54.542Z"
