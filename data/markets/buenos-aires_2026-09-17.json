@@ -6,10 +6,10 @@
   "station": "SAEZ",
   "event_end_date": "2026-09-17T12:00:00Z",
   "hours_at_discovery": 46.4,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 26,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -908,6 +908,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-17T18:19:10.864Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 25.2,
+      "hrrr": 24.3,
+      "metar": 26,
+      "best": 24.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.2,
+          "gfs_seamless": 24.3,
+          "icon_seamless": 24.9
+        },
+        "mean": 24.9,
+        "spread": 0.6,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          25.3,
+          25.3,
+          25.2,
+          25.6,
+          25.1,
+          25.2,
+          25.4,
+          25.1,
+          25,
+          25.1,
+          25.1,
+          25.1,
+          25.1,
+          25.5,
+          25.6,
+          25.5,
+          25.1,
+          25,
+          25.2,
+          25.3,
+          25.3,
+          25.3,
+          25.2,
+          25.3,
+          24.9,
+          25.5,
+          25.3,
+          25.3,
+          25.3,
+          25.3,
+          25.2,
+          25.2,
+          25.4,
+          25.7,
+          25.3,
+          24.7,
+          25.1,
+          25.2,
+          25.1,
+          25,
+          24.8,
+          25.3,
+          25.2,
+          25.3,
+          25.1,
+          25.1,
+          25,
+          24.9,
+          25.5,
+          25.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1006,6 +1080,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.29,
       "top2_sum": 0.325
+    },
+    {
+      "ts": "2026-09-17T18:19:10.864Z",
+      "top_bucket": "26-999C",
+      "top_price": 0.9985,
+      "top2_bucket": "17-18C",
+      "top2_price": 0.0005,
+      "top2_sum": 0.001
     }
   ],
   "all_outcomes": [
@@ -1081,11 +1163,11 @@
         21,
         21
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 676
+      "volume": 704
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C on September 17?",
@@ -1094,11 +1176,11 @@
         22,
         22
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 579
+      "volume": 591
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on September 17?",
@@ -1107,11 +1189,11 @@
         23,
         23
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1204
+      "volume": 1330
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C on September 17?",
@@ -1120,11 +1202,11 @@
         24,
         24
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2802
+      "volume": 4794
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 25°C on September 17?",
@@ -1133,11 +1215,11 @@
         25,
         25
       ],
-      "bid": 0.29,
-      "ask": 0.29,
-      "price": 0.29,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4646
+      "volume": 6188
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 26°C or higher on September 17?",
@@ -1146,11 +1228,11 @@
         26,
         999
       ],
-      "bid": 0.7,
-      "ask": 0.7,
-      "price": 0.7,
+      "bid": 0.9985,
+      "ask": 0.9985,
+      "price": 0.9985,
       "spread": 0,
-      "volume": 5361
+      "volume": 7689
     }
   ],
   "created_at": "2026-09-15T13:38:53.969Z"

@@ -161,6 +161,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-17T18:18:49.518Z",
+      "horizon": "D+2",
+      "hours_left": 41.7,
+      "ecmwf": 21.2,
+      "hrrr": 24.9,
+      "metar": null,
+      "best": 22.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 21.2,
+          "gfs_seamless": 24.9,
+          "icon_seamless": 22.8
+        },
+        "mean": 22.6,
+        "spread": 2.3,
+        "gap": 3.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          21.2,
+          20.9,
+          21.2,
+          22.3,
+          22,
+          22.2,
+          22.1,
+          21.4,
+          21.1,
+          21.2,
+          20.7,
+          20.9,
+          22,
+          22.4,
+          21.9,
+          21.5,
+          21.8,
+          20,
+          23.6,
+          21.9,
+          23.1,
+          20.9,
+          20.8,
+          20.6,
+          22.6,
+          22.2,
+          21.8,
+          22.6,
+          23.5,
+          21.2,
+          20.7,
+          21.7,
+          22.5,
+          21.1,
+          21,
+          21.5,
+          20.9,
+          20.9,
+          20.8,
+          21,
+          22.1,
+          22,
+          21,
+          20.9,
+          22,
+          20.8,
+          22.2,
+          21,
+          21.9,
+          19.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -179,6 +254,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.475,
       "top2_sum": 0.735
+    },
+    {
+      "ts": "2026-09-17T18:18:49.518Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.45,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.45,
+      "top2_sum": 0.71
     }
   ],
   "all_outcomes": [
@@ -189,9 +272,9 @@
         -999,
         19
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 230
     },
@@ -245,7 +328,7 @@
       "ask": 0.26,
       "price": 0.26,
       "spread": 0,
-      "volume": 244
+      "volume": 261
     },
     {
       "question": "Will the highest temperature in Ankara be 24°C on September 19?",
@@ -254,11 +337,11 @@
         24,
         24
       ],
-      "bid": 0.475,
-      "ask": 0.475,
-      "price": 0.475,
+      "bid": 0.45,
+      "ask": 0.45,
+      "price": 0.45,
       "spread": 0,
-      "volume": 470
+      "volume": 620
     },
     {
       "question": "Will the highest temperature in Ankara be 25°C on September 19?",
@@ -267,9 +350,9 @@
         25,
         25
       ],
-      "bid": 0.21,
-      "ask": 0.21,
-      "price": 0.21,
+      "bid": 0.23,
+      "ask": 0.23,
+      "price": 0.23,
       "spread": 0,
       "volume": 162
     },
