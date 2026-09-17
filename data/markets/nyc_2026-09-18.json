@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.152,
-      "forecast_change_streak": 0
+      "stop_price": 0.21,
+      "forecast_change_streak": 0,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -661,6 +662,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-17T21:27:08.676Z",
+      "horizon": "D+1",
+      "hours_left": 14.5,
+      "ecmwf": 81,
+      "hrrr": 81,
+      "metar": null,
+      "best": 81,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 81,
+          "gfs_seamless": 81,
+          "icon_seamless": 81
+        },
+        "mean": 81,
+        "spread": 0,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          81,
+          81,
+          77,
+          81,
+          78,
+          82,
+          80,
+          79,
+          80,
+          83,
+          81,
+          81,
+          82,
+          83,
+          79,
+          79,
+          81,
+          80,
+          84,
+          82,
+          80,
+          79,
+          80,
+          79,
+          82,
+          82,
+          78,
+          79,
+          81,
+          82,
+          81,
+          80,
+          81,
+          81,
+          81,
+          80,
+          79,
+          80,
+          81,
+          79,
+          78,
+          81,
+          82,
+          80,
+          82,
+          78,
+          80,
+          82,
+          85,
+          78
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -727,6 +802,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.245,
       "top2_sum": 0.805
+    },
+    {
+      "ts": "2026-09-17T21:27:08.676Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.52,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.305,
+      "top2_sum": 0.825
     }
   ],
   "all_outcomes": [
@@ -776,11 +859,11 @@
         76,
         77
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 589
+      "volume": 761
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on September 18?",
@@ -789,11 +872,11 @@
         78,
         79
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 4831
+      "volume": 5105
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on September 18?",
@@ -802,11 +885,11 @@
         80,
         81
       ],
-      "bid": 0.56,
-      "ask": 0.56,
-      "price": 0.56,
+      "bid": 0.52,
+      "ask": 0.52,
+      "price": 0.52,
       "spread": 0,
-      "volume": 4825
+      "volume": 5480
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on September 18?",
@@ -815,11 +898,11 @@
         82,
         83
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.305,
+      "ask": 0.305,
+      "price": 0.305,
       "spread": 0,
-      "volume": 4204
+      "volume": 4750
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on September 18?",
@@ -828,11 +911,11 @@
         84,
         85
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 1553
+      "volume": 2702
     },
     {
       "question": "Will the highest temperature in New York City be between 86-87°F on September 18?",
@@ -841,11 +924,11 @@
         86,
         87
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1973
+      "volume": 1976
     },
     {
       "question": "Will the highest temperature in New York City be between 88-89°F on September 18?",
