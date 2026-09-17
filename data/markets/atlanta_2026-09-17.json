@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 2.2,
       "opened_at": "2026-09-16T11:44:07.448Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -7.62,
+      "exit_price": 0.17,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-09-17T01:29:47.014Z",
       "stop_price": 0.152,
       "forecast_change_streak": 0,
       "stop_pending": true
@@ -738,6 +738,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-17T01:29:47.014Z",
+      "horizon": "D+0",
+      "hours_left": 10.5,
+      "ecmwf": 91,
+      "hrrr": 93,
+      "metar": 82,
+      "best": 91.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 91,
+          "gfs_seamless": 93,
+          "icon_seamless": 89
+        },
+        "mean": 91.2,
+        "spread": 2.2,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          92,
+          93,
+          93,
+          90,
+          93,
+          89,
+          89,
+          93,
+          90,
+          93,
+          92,
+          91,
+          91,
+          93,
+          91,
+          92,
+          92,
+          92,
+          92,
+          92,
+          91,
+          92,
+          92,
+          91,
+          92,
+          91,
+          91,
+          93,
+          92,
+          91,
+          90,
+          91,
+          91,
+          90,
+          93,
+          94,
+          91,
+          90,
+          91,
+          90,
+          91,
+          92,
+          92,
+          91,
+          89,
+          91,
+          92,
+          92,
+          90,
+          92
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -812,6 +887,14 @@
       "top2_bucket": "88-91F",
       "top2_price": 0.57,
       "top2_sum": 0.865
+    },
+    {
+      "ts": "2026-09-17T01:29:47.014Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.545,
+      "top2_bucket": "88-91F",
+      "top2_price": 0.545,
+      "top2_sum": 0.815
     }
   ],
   "all_outcomes": [
@@ -874,11 +957,11 @@
         88,
         89
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.27,
+      "ask": 0.27,
+      "price": 0.27,
       "spread": 0,
-      "volume": 2833
+      "volume": 3491
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on September 17?",
@@ -887,11 +970,11 @@
         90,
         91
       ],
-      "bid": 0.57,
-      "ask": 0.57,
-      "price": 0.57,
+      "bid": 0.545,
+      "ask": 0.545,
+      "price": 0.545,
       "spread": 0,
-      "volume": 4300
+      "volume": 4360
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on September 17?",
@@ -900,11 +983,11 @@
         92,
         93
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
       "spread": 0,
-      "volume": 1892
+      "volume": 1997
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on September 17?",
@@ -917,7 +1000,7 @@
       "ask": 0.0045,
       "price": 0.0045,
       "spread": 0,
-      "volume": 1542
+      "volume": 1567
     },
     {
       "question": "Will the highest temperature in Atlanta be between 96-97°F on September 17?",
