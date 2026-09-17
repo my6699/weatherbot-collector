@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.096,
-      "forecast_change_streak": 0
+      "stop_price": 0.13,
+      "forecast_change_streak": 0,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -884,6 +885,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-17T07:45:15.669Z",
+      "horizon": "D+0",
+      "hours_left": 4.2,
+      "ecmwf": 88,
+      "hrrr": 79,
+      "metar": 76,
+      "best": 84.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 88,
+          "gfs_seamless": 79,
+          "icon_seamless": 86
+        },
+        "mean": 84.9,
+        "spread": 5.9,
+        "gap": 9,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          87,
+          87,
+          86,
+          87,
+          86,
+          87,
+          91,
+          88,
+          88,
+          88,
+          89,
+          85,
+          85,
+          88,
+          87,
+          88,
+          87,
+          87,
+          86,
+          86,
+          89,
+          88,
+          88,
+          90,
+          88,
+          87,
+          87,
+          90,
+          88,
+          90,
+          87,
+          86,
+          89,
+          89,
+          89,
+          90,
+          87,
+          91,
+          87,
+          86,
+          89,
+          89,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -974,6 +1050,14 @@
       "top2_bucket": "86-89F",
       "top2_price": 0.3,
       "top2_sum": 0.775
+    },
+    {
+      "ts": "2026-09-17T07:45:15.669Z",
+      "top_bucket": "86-87F",
+      "top_price": 0.425,
+      "top2_bucket": "84-87F",
+      "top2_price": 0.425,
+      "top2_sum": 0.66
     }
   ],
   "all_outcomes": [
@@ -1001,7 +1085,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 417
+      "volume": 435
     },
     {
       "question": "Will the highest temperature in Miami be between 80-81°F on September 17?",
@@ -1010,11 +1094,11 @@
         80,
         81
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.0175,
+      "ask": 0.0175,
+      "price": 0.0175,
       "spread": 0,
-      "volume": 904
+      "volume": 1122
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on September 17?",
@@ -1023,11 +1107,11 @@
         82,
         83
       ],
-      "bid": 0.023,
-      "ask": 0.023,
-      "price": 0.023,
+      "bid": 0.0605,
+      "ask": 0.0605,
+      "price": 0.0605,
       "spread": 0,
-      "volume": 1544
+      "volume": 1983
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on September 17?",
@@ -1036,11 +1120,11 @@
         84,
         85
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.235,
+      "ask": 0.235,
+      "price": 0.235,
       "spread": 0,
-      "volume": 4102
+      "volume": 5146
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on September 17?",
@@ -1049,11 +1133,11 @@
         86,
         87
       ],
-      "bid": 0.475,
-      "ask": 0.475,
-      "price": 0.475,
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
       "spread": 0,
-      "volume": 3954
+      "volume": 4393
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on September 17?",
@@ -1062,11 +1146,11 @@
         88,
         89
       ],
-      "bid": 0.3,
-      "ask": 0.3,
-      "price": 0.3,
+      "bid": 0.225,
+      "ask": 0.225,
+      "price": 0.225,
       "spread": 0,
-      "volume": 3879
+      "volume": 5134
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on September 17?",
@@ -1075,11 +1159,11 @@
         90,
         91
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 3340
+      "volume": 4001
     },
     {
       "question": "Will the highest temperature in Miami be between 92-93°F on September 17?",
@@ -1088,11 +1172,11 @@
         92,
         93
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 777
+      "volume": 923
     },
     {
       "question": "Will the highest temperature in Miami be between 94-95°F on September 17?",
