@@ -6,10 +6,10 @@
   "station": "SAEZ",
   "event_end_date": "2026-09-18T12:00:00Z",
   "hours_at_discovery": 42.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 24,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -907,6 +907,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-18T19:42:37.791Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 22.2,
+      "hrrr": 21.2,
+      "metar": 22,
+      "best": 22.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 22.2,
+          "gfs_seamless": 21.2,
+          "icon_seamless": 23.5
+        },
+        "mean": 22.2,
+        "spread": 1.3,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          23.2,
+          23.5,
+          21.5,
+          21.7,
+          22.9,
+          22.6,
+          24.2,
+          20.9,
+          22,
+          22.2,
+          22.9,
+          21.8,
+          21.5,
+          21.8,
+          21.7,
+          21.7,
+          20.3,
+          22.1,
+          22.3,
+          22.3,
+          23.5,
+          22.5,
+          23.5,
+          23.6,
+          23.3,
+          22.9,
+          22.1,
+          22.9,
+          22.4,
+          21.9,
+          22.9,
+          22.3,
+          22.4,
+          20.5,
+          22.8,
+          21.4,
+          22.8,
+          21.9,
+          22.9,
+          22.5,
+          21.6,
+          22.4,
+          22.8,
+          23,
+          21.9,
+          20.2,
+          21.5,
+          22.3,
+          22.5,
+          21
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1005,6 +1080,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.3515,
       "top2_sum": 0.7515
+    },
+    {
+      "ts": "2026-09-18T19:42:37.791Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.995,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.003,
+      "top2_sum": 0.998
     }
   ],
   "all_outcomes": [
@@ -1071,7 +1154,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1224
+      "volume": 1234
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on September 18?",
@@ -1084,7 +1167,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1252
+      "volume": 1294
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C on September 18?",
@@ -1097,7 +1180,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5219
+      "volume": 5229
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on September 18?",
@@ -1110,7 +1193,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4108
+      "volume": 4111
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C on September 18?",
@@ -1119,11 +1202,11 @@
         24,
         24
       ],
-      "bid": 0.4,
-      "ask": 0.4,
-      "price": 0.4,
+      "bid": 0.995,
+      "ask": 0.995,
+      "price": 0.995,
       "spread": 0,
-      "volume": 3664
+      "volume": 5079
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 25°C on September 18?",
@@ -1132,11 +1215,11 @@
         25,
         25
       ],
-      "bid": 0.3515,
-      "ask": 0.3515,
-      "price": 0.3515,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 2395
+      "volume": 3140
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 26°C or higher on September 18?",
@@ -1145,11 +1228,11 @@
         26,
         999
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 2363
+      "volume": 3432
     }
   ],
   "created_at": "2026-09-16T17:06:55.134Z"
