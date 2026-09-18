@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-09-18T12:00:00Z",
   "hours_at_discovery": 48.3,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "4609019",
     "question": "Will the highest temperature in Chicago be between 74-75°F on September 18?",
@@ -957,6 +957,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-18T16:29:36.987Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 72,
+      "hrrr": 70,
+      "metar": 71,
+      "best": 71,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 72,
+          "gfs_seamless": 70,
+          "icon_seamless": 70
+        },
+        "mean": 71,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          71,
+          71,
+          70,
+          72,
+          71,
+          71,
+          71,
+          71,
+          72,
+          72,
+          71,
+          70,
+          70,
+          71,
+          72,
+          71,
+          71,
+          70,
+          72,
+          71,
+          71,
+          70,
+          72,
+          72,
+          71,
+          72,
+          71,
+          73,
+          71,
+          70,
+          71,
+          71,
+          70,
+          71,
+          73,
+          72,
+          71,
+          70,
+          72,
+          71,
+          73,
+          71,
+          72,
+          69,
+          71,
+          72,
+          70,
+          73,
+          69,
+          69
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1055,6 +1129,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.455,
       "top2_sum": 0.9
+    },
+    {
+      "ts": "2026-09-18T16:29:36.987Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.465,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.465,
+      "top2_sum": 0.875
     }
   ],
   "all_outcomes": [
@@ -1104,11 +1186,11 @@
         68,
         69
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7048
+      "volume": 10122
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on September 18?",
@@ -1117,11 +1199,11 @@
         70,
         71
       ],
-      "bid": 0.445,
-      "ask": 0.445,
-      "price": 0.445,
+      "bid": 0.41,
+      "ask": 0.41,
+      "price": 0.41,
       "spread": 0,
-      "volume": 6596
+      "volume": 7359
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on September 18?",
@@ -1130,11 +1212,11 @@
         72,
         73
       ],
-      "bid": 0.455,
-      "ask": 0.455,
-      "price": 0.455,
+      "bid": 0.465,
+      "ask": 0.465,
+      "price": 0.465,
       "spread": 0,
-      "volume": 4423
+      "volume": 4943
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on September 18?",
@@ -1143,11 +1225,11 @@
         74,
         75
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 4000
+      "volume": 4340
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on September 18?",
@@ -1156,11 +1238,11 @@
         76,
         77
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.0135,
+      "ask": 0.0135,
+      "price": 0.0135,
       "spread": 0,
-      "volume": 1583
+      "volume": 1833
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on September 18?",
@@ -1169,9 +1251,9 @@
         78,
         79
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 1633
     },

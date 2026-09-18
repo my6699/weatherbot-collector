@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.152,
-      "forecast_change_streak": 0
+      "stop_price": 0.2,
+      "forecast_change_streak": 0,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -513,6 +514,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-18T16:29:59.064Z",
+      "horizon": "D+1",
+      "hours_left": 19.5,
+      "ecmwf": 32.8,
+      "hrrr": 35.1,
+      "metar": null,
+      "best": 33.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.8,
+          "gfs_seamless": 35.1,
+          "icon_seamless": 30.8
+        },
+        "mean": 33.1,
+        "spread": 2.3,
+        "gap": 2.3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          32.3,
+          31.6,
+          32,
+          32.9,
+          32.7,
+          32.8,
+          31.8,
+          33.1,
+          32.1,
+          32.1,
+          31.5,
+          32.1,
+          30.9,
+          32.5,
+          32.9,
+          31.4,
+          31.2,
+          31.8,
+          31.9,
+          33.1,
+          32.2,
+          32.4,
+          32.1,
+          32.8,
+          33.3,
+          32.6,
+          31.4,
+          32.4,
+          31.7,
+          32.6,
+          32.5,
+          34,
+          32.3,
+          32.6,
+          32.8,
+          32.2,
+          33.5,
+          32.9,
+          32.8,
+          33.1,
+          34.1,
+          31.3,
+          33.4,
+          33.6,
+          31.5,
+          32.1,
+          32.3,
+          31.1,
+          33,
+          31.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -563,6 +639,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.395,
       "top2_sum": 0.67
+    },
+    {
+      "ts": "2026-09-18T16:29:59.064Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.405,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.265,
+      "top2_sum": 0.67
     }
   ],
   "all_outcomes": [
@@ -603,7 +687,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 108
+      "volume": 180
     },
     {
       "question": "Will the highest temperature in Lucknow be 29°C on September 19?",
@@ -625,11 +709,11 @@
         30,
         30
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
-      "volume": 918
+      "volume": 1216
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on September 19?",
@@ -638,11 +722,11 @@
         31,
         31
       ],
-      "bid": 0.275,
-      "ask": 0.275,
-      "price": 0.275,
+      "bid": 0.22,
+      "ask": 0.22,
+      "price": 0.22,
       "spread": 0,
-      "volume": 611
+      "volume": 739
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C on September 19?",
@@ -651,11 +735,11 @@
         32,
         32
       ],
-      "bid": 0.395,
-      "ask": 0.395,
-      "price": 0.395,
+      "bid": 0.405,
+      "ask": 0.405,
+      "price": 0.405,
       "spread": 0,
-      "volume": 425
+      "volume": 832
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on September 19?",
@@ -664,11 +748,11 @@
         33,
         33
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 677
+      "volume": 952
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C on September 19?",
@@ -677,11 +761,11 @@
         34,
         34
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
       "spread": 0,
-      "volume": 275
+      "volume": 611
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on September 19?",
@@ -690,11 +774,11 @@
         35,
         35
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 197
+      "volume": 341
     },
     {
       "question": "Will the highest temperature in Lucknow be 36°C or higher on September 19?",
@@ -707,7 +791,7 @@
       "ask": 0.0045,
       "price": 0.0045,
       "spread": 0,
-      "volume": 212
+      "volume": 281
     }
   ],
   "created_at": "2026-09-17T07:45:38.281Z"
