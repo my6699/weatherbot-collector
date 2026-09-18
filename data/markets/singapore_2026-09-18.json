@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.152
+      "stop_price": 0.152,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -808,6 +809,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-18T00:26:04.402Z",
+      "horizon": "D+0",
+      "hours_left": 11.6,
+      "ecmwf": 32.3,
+      "hrrr": 30.9,
+      "metar": 29,
+      "best": 31.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.3,
+          "gfs_seamless": 30.9,
+          "icon_seamless": 32.1
+        },
+        "mean": 31.8,
+        "spread": 0.9,
+        "gap": 1.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          31.5,
+          33.1,
+          32,
+          33.6,
+          32.7,
+          32,
+          30.8,
+          31.8,
+          32.2,
+          32.4,
+          33.7,
+          31.9,
+          32.2,
+          30,
+          29.6,
+          32.4,
+          33.5,
+          32.3,
+          29.4,
+          32.5,
+          32.4,
+          31.4,
+          32.8,
+          31.3,
+          32.5,
+          32.5,
+          31.8,
+          31.7,
+          32.4,
+          32.8,
+          32.2,
+          33,
+          32,
+          33.5,
+          32,
+          33.2,
+          31.8,
+          31.3,
+          33,
+          33.5,
+          31.6,
+          31.6,
+          32.3,
+          32.5,
+          32.1,
+          31.8,
+          31.8,
+          32.8,
+          31.7,
+          32.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -890,6 +965,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.675,
       "top2_sum": 0.87
+    },
+    {
+      "ts": "2026-09-18T00:26:04.402Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.69,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.69,
+      "top2_sum": 0.91
     }
   ],
   "all_outcomes": [
@@ -939,11 +1022,11 @@
         30,
         30
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 1167
+      "volume": 1318
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on September 18?",
@@ -956,7 +1039,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 1265
+      "volume": 1422
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on September 18?",
@@ -965,11 +1048,11 @@
         32,
         32
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.22,
+      "ask": 0.22,
+      "price": 0.22,
       "spread": 0,
-      "volume": 3503
+      "volume": 3570
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on September 18?",
@@ -978,11 +1061,11 @@
         33,
         33
       ],
-      "bid": 0.675,
-      "ask": 0.675,
-      "price": 0.675,
+      "bid": 0.69,
+      "ask": 0.69,
+      "price": 0.69,
       "spread": 0,
-      "volume": 5234
+      "volume": 5290
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on September 18?",
@@ -991,11 +1074,11 @@
         34,
         34
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 4008
+      "volume": 4384
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on September 18?",
@@ -1004,11 +1087,11 @@
         35,
         35
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 920
+      "volume": 956
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C on September 18?",
@@ -1017,9 +1100,9 @@
         36,
         36
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
       "volume": 233
     },
