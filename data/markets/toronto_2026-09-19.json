@@ -758,6 +758,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-19T05:58:58.299Z",
+      "horizon": "D+0",
+      "hours_left": 6,
+      "ecmwf": 17.7,
+      "hrrr": 19.1,
+      "metar": 11,
+      "best": 18,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 17.7,
+          "gfs_seamless": 19.1,
+          "icon_seamless": 17.1
+        },
+        "mean": 18,
+        "spread": 1.1,
+        "gap": 1.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          18.5,
+          17.1,
+          17.8,
+          17.4,
+          18.2,
+          18.1,
+          17,
+          17.5,
+          18.7,
+          18,
+          16.1,
+          16.6,
+          18.2,
+          17.2,
+          17.8,
+          18.2,
+          18.3,
+          17.1,
+          17.3,
+          17.8,
+          17.6,
+          18.9,
+          17.5,
+          17.8,
+          17.4,
+          17.2,
+          17.3,
+          18.8,
+          18.6,
+          18.5,
+          17.9,
+          16.6,
+          18.4,
+          17.3,
+          18.1,
+          18.7,
+          16.7,
+          18.1,
+          18.4,
+          17.3,
+          19,
+          17.4,
+          18.2,
+          16.4,
+          18.4,
+          18.6,
+          18.4,
+          18.6,
+          17.7,
+          16.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -840,6 +915,14 @@
       "top2_bucket": "17-18C",
       "top2_price": 0.335,
       "top2_sum": 0.81
+    },
+    {
+      "ts": "2026-09-19T05:58:58.299Z",
+      "top_bucket": "18-18C",
+      "top_price": 0.365,
+      "top2_bucket": "17-18C",
+      "top2_price": 0.365,
+      "top2_sum": 0.72
     }
   ],
   "all_outcomes": [
@@ -876,11 +959,11 @@
         14,
         14
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 140
+      "volume": 334
     },
     {
       "question": "Will the highest temperature in Toronto be 15°C on September 19?",
@@ -889,11 +972,11 @@
         15,
         15
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 956
+      "volume": 971
     },
     {
       "question": "Will the highest temperature in Toronto be 16°C on September 19?",
@@ -902,11 +985,11 @@
         16,
         16
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.09,
+      "ask": 0.09,
+      "price": 0.09,
       "spread": 0,
-      "volume": 2058
+      "volume": 2957
     },
     {
       "question": "Will the highest temperature in Toronto be 17°C on September 19?",
@@ -915,11 +998,11 @@
         17,
         17
       ],
-      "bid": 0.475,
-      "ask": 0.475,
-      "price": 0.475,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 3084
+      "volume": 3732
     },
     {
       "question": "Will the highest temperature in Toronto be 18°C on September 19?",
@@ -928,11 +1011,11 @@
         18,
         18
       ],
-      "bid": 0.335,
-      "ask": 0.335,
-      "price": 0.335,
+      "bid": 0.365,
+      "ask": 0.365,
+      "price": 0.365,
       "spread": 0,
-      "volume": 4684
+      "volume": 5115
     },
     {
       "question": "Will the highest temperature in Toronto be 19°C on September 19?",
@@ -941,11 +1024,11 @@
         19,
         19
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 1083
+      "volume": 1468
     },
     {
       "question": "Will the highest temperature in Toronto be 20°C on September 19?",
@@ -954,11 +1037,11 @@
         20,
         20
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
-      "volume": 673
+      "volume": 693
     },
     {
       "question": "Will the highest temperature in Toronto be 21°C on September 19?",
@@ -971,7 +1054,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 821
+      "volume": 837
     },
     {
       "question": "Will the highest temperature in Toronto be 22°C or higher on September 19?",
@@ -984,7 +1067,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 522
+      "volume": 538
     }
   ],
   "created_at": "2026-09-17T13:33:31.110Z"
