@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-09-19T12:00:00Z",
   "hours_at_discovery": 52.2,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "4632783",
     "question": "Will the highest temperature in Wellington be 15°C on September 19?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-09-18T11:24:01.593Z",
       "stop_price": 0.176,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 15,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1025,6 +1026,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-19T14:29:14.410Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 14,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1131,6 +1143,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.002,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-09-19T14:29:14.410Z",
+      "top_bucket": "15-15C",
+      "top_price": 1,
+      "top2_bucket": "14-15C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1141,9 +1161,9 @@
         -999,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 274
     },
@@ -1154,9 +1174,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 54
     },
@@ -1167,9 +1187,9 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 924
     },
@@ -1180,9 +1200,9 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1017
     },
@@ -1193,9 +1213,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 6250
     },
@@ -1206,11 +1226,11 @@
         15,
         15
       ],
-      "bid": 0.998,
-      "ask": 0.998,
-      "price": 0.998,
-      "spread": 0,
-      "volume": 13360
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 13483
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on September 19?",
@@ -1219,11 +1239,11 @@
         16,
         16
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 14939
+      "volume": 15173
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on September 19?",
@@ -1232,9 +1252,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 7416
     },
@@ -1245,9 +1265,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3519
     },
@@ -1258,9 +1278,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2121
     },
@@ -1271,12 +1291,13 @@
         20,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 274
     }
   ],
-  "created_at": "2026-09-17T07:45:45.582Z"
+  "created_at": "2026-09-17T07:45:45.582Z",
+  "metar_max": 14
 }
