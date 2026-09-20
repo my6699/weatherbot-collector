@@ -6,10 +6,10 @@
   "station": "KORD",
   "event_end_date": "2026-09-20T12:00:00Z",
   "hours_at_discovery": 48.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1052,6 +1052,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-20T16:12:43.190Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 65,
+      "hrrr": 68,
+      "metar": 66,
+      "best": 66.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 65,
+          "gfs_seamless": 68,
+          "icon_seamless": 68
+        },
+        "mean": 66.5,
+        "spread": 1.5,
+        "gap": 3,
+        "llmEnhanced": false,
+        "membersMax": [
+          64,
+          64,
+          65,
+          66,
+          64,
+          66,
+          64,
+          65,
+          64,
+          64,
+          65,
+          66,
+          66,
+          66,
+          65,
+          65,
+          64,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65,
+          64,
+          65,
+          63,
+          65,
+          65,
+          64,
+          66,
+          65,
+          65,
+          64,
+          64,
+          65,
+          64,
+          65,
+          65,
+          64,
+          67,
+          65,
+          64,
+          65,
+          65,
+          64,
+          66,
+          65,
+          65
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1166,6 +1240,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.065,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-09-20T16:12:43.190Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.955,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.015,
+      "top2_sum": 0.97
     }
   ],
   "all_outcomes": [
@@ -1219,7 +1301,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6237
+      "volume": 6265
     },
     {
       "question": "Will the highest temperature in Chicago be between 66-67°F on September 20?",
@@ -1228,11 +1310,11 @@
         66,
         67
       ],
-      "bid": 0.0095,
-      "ask": 0.0095,
-      "price": 0.0095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 33919
+      "volume": 34514
     },
     {
       "question": "Will the highest temperature in Chicago be between 68-69°F on September 20?",
@@ -1241,11 +1323,11 @@
         68,
         69
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 12468
+      "volume": 25730
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on September 20?",
@@ -1254,11 +1336,11 @@
         70,
         71
       ],
-      "bid": 0.93,
-      "ask": 0.93,
-      "price": 0.93,
+      "bid": 0.955,
+      "ask": 0.955,
+      "price": 0.955,
       "spread": 0,
-      "volume": 5242
+      "volume": 6072
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on September 20?",
@@ -1267,11 +1349,11 @@
         72,
         73
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 3367
+      "volume": 4392
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on September 20?",
@@ -1280,11 +1362,11 @@
         74,
         75
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.008,
+      "ask": 0.008,
+      "price": 0.008,
       "spread": 0,
-      "volume": 2703
+      "volume": 4066
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on September 20?",
@@ -1293,11 +1375,11 @@
         76,
         77
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1033
+      "volume": 2405
     },
     {
       "question": "Will the highest temperature in Chicago be 78°F or higher on September 20?",
@@ -1310,8 +1392,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 121
+      "volume": 2688
     }
   ],
-  "created_at": "2026-09-18T11:23:31.618Z"
+  "created_at": "2026-09-18T11:23:31.618Z",
+  "metar_max": 69.1
 }
