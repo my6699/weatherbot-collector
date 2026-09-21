@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-09-20T12:00:00Z",
   "hours_at_discovery": 43.5,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "4683740",
     "question": "Will the highest temperature in Seattle be between 66-67°F on September 20?",
@@ -61,10 +61,11 @@
       "strategy": "interval",
       "interval_group": "seattle_2026-09-20_66-65",
       "stop_price": 0.144,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1544,5 +1545,6 @@
       "volume": 125
     }
   ],
-  "created_at": "2026-09-18T16:29:41.673Z"
+  "created_at": "2026-09-18T16:29:41.673Z",
+  "metar_max": 70
 }

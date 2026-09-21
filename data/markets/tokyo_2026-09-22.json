@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-22T12:00:00Z",
   "hours_at_discovery": 53.6,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4746186",
+    "question": "Will the highest temperature in Tokyo be 28°C on September 22?",
+    "bucket_low": 28,
+    "bucket_high": 28,
+    "entry_price": 0.16,
+    "bid_at_entry": 0.15,
+    "spread": 0.01,
+    "shares": 250,
+    "cost": 40,
+    "p": 0.48,
+    "ev": 2,
+    "edge": 0.1801,
+    "kelly": 0.0962,
+    "forecast_temp": 27.38,
+    "forecast_src": "ensemble",
+    "sigma": 2.2,
+    "opened_at": "2026-09-21T00:19:08.659Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.12
+  },
+  "positions": [
+    {
+      "market_id": "4746186",
+      "question": "Will the highest temperature in Tokyo be 28°C on September 22?",
+      "bucket_low": 28,
+      "bucket_high": 28,
+      "entry_price": 0.16,
+      "bid_at_entry": 0.15,
+      "spread": 0.01,
+      "shares": 250,
+      "cost": 40,
+      "p": 0.48,
+      "ev": 2,
+      "edge": 0.1801,
+      "kelly": 0.0962,
+      "forecast_temp": 27.38,
+      "forecast_src": "ensemble",
+      "sigma": 2.2,
+      "opened_at": "2026-09-21T00:19:08.659Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.12
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -386,6 +436,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-21T00:19:08.659Z",
+      "horizon": "D+1",
+      "hours_left": 35.7,
+      "ecmwf": 27.9,
+      "hrrr": 27.7,
+      "metar": null,
+      "best": 27.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.9,
+          "gfs_seamless": 27.7,
+          "icon_seamless": 25.1
+        },
+        "mean": 27.3,
+        "spread": 2.2,
+        "gap": 0.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          27.8,
+          29.1,
+          27.6,
+          28.8,
+          28,
+          29,
+          29.7,
+          28.5,
+          28.1,
+          27.9,
+          28.9,
+          26.6,
+          27,
+          25.7,
+          28.8,
+          27.5,
+          29.3,
+          27.3,
+          29,
+          27.9,
+          27.9,
+          28.3,
+          27.7,
+          27.7,
+          26.4,
+          28.1,
+          25.8,
+          27.9,
+          28.7,
+          30.3,
+          28.1,
+          29.9,
+          28.1,
+          28.5,
+          28.7,
+          28.1,
+          29.4,
+          29.7,
+          29.2,
+          27.7,
+          27.8,
+          29.8,
+          28.6,
+          27.9,
+          27.9,
+          28,
+          28.9,
+          29,
+          28.4,
+          29.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -428,6 +553,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.275,
       "top2_sum": 0.6
+    },
+    {
+      "ts": "2026-09-21T00:19:08.659Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.29,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.29,
+      "top2_sum": 0.56
     }
   ],
   "all_outcomes": [
@@ -442,7 +575,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 422
+      "volume": 614
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on September 22?",
@@ -455,7 +588,7 @@
       "ask": 0.02,
       "price": 0.02,
       "spread": 0,
-      "volume": 412
+      "volume": 421
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on September 22?",
@@ -468,7 +601,7 @@
       "ask": 0.03,
       "price": 0.03,
       "spread": 0,
-      "volume": 485
+      "volume": 490
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on September 22?",
@@ -477,11 +610,11 @@
         28,
         28
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.155,
+      "ask": 0.155,
+      "price": 0.155,
       "spread": 0,
-      "volume": 734
+      "volume": 840
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on September 22?",
@@ -490,11 +623,11 @@
         29,
         29
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.27,
+      "ask": 0.27,
+      "price": 0.27,
       "spread": 0,
-      "volume": 571
+      "volume": 608
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on September 22?",
@@ -503,11 +636,11 @@
         30,
         30
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.29,
+      "ask": 0.29,
+      "price": 0.29,
       "spread": 0,
-      "volume": 364
+      "volume": 503
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on September 22?",
@@ -516,11 +649,11 @@
         31,
         31
       ],
-      "bid": 0.275,
-      "ask": 0.275,
-      "price": 0.275,
+      "bid": 0.155,
+      "ask": 0.155,
+      "price": 0.155,
       "spread": 0,
-      "volume": 526
+      "volume": 583
     },
     {
       "question": "Will the highest temperature in Tokyo be 32°C on September 22?",
@@ -529,11 +662,11 @@
         32,
         32
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.085,
+      "ask": 0.085,
+      "price": 0.085,
       "spread": 0,
-      "volume": 1214
+      "volume": 1526
     },
     {
       "question": "Will the highest temperature in Tokyo be 33°C on September 22?",
@@ -546,7 +679,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 310
+      "volume": 398
     },
     {
       "question": "Will the highest temperature in Tokyo be 34°C on September 22?",
@@ -555,11 +688,11 @@
         34,
         34
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 152
+      "volume": 291
     },
     {
       "question": "Will the highest temperature in Tokyo be 35°C or higher on September 22?",
