@@ -6,10 +6,10 @@
   "station": "SAEZ",
   "event_end_date": "2026-09-22T12:00:00Z",
   "hours_at_discovery": 43.7,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 14,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -982,6 +982,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-22T22:15:59.282Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 11.9,
+      "hrrr": 13.5,
+      "metar": 9,
+      "best": 12.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 11.9,
+          "gfs_seamless": 13.5,
+          "icon_seamless": 12.2
+        },
+        "mean": 12.4,
+        "spread": 1.1,
+        "gap": 1.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          12.4,
+          12.1,
+          11.4,
+          12.8,
+          11.6,
+          11.2,
+          12.5,
+          11.7,
+          11.5,
+          13.2,
+          12.9,
+          12,
+          11.8,
+          13,
+          12.3,
+          12.9,
+          12.1,
+          12.5,
+          11.8,
+          11.2,
+          12.4,
+          12.7,
+          10.9,
+          11.7,
+          11.7,
+          12.1,
+          13.1,
+          11.4,
+          12.9,
+          11,
+          13.2,
+          12.1,
+          12.3,
+          11.2,
+          12.9,
+          12.4,
+          11.4,
+          11.6,
+          13.5,
+          12.1,
+          10.7,
+          12,
+          12.4,
+          13.3,
+          11.8,
+          11.6,
+          12.3,
+          12.2,
+          12.4,
+          12.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1088,6 +1163,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.075,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-09-22T22:15:59.282Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.9995,
+      "top2_bucket": "13-14C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1154,7 +1237,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2368
+      "volume": 2373
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 13°C on September 22?",
@@ -1167,7 +1250,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4405
+      "volume": 5316
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 14°C on September 22?",
@@ -1176,11 +1259,11 @@
         14,
         14
       ],
-      "bid": 0.915,
-      "ask": 0.915,
-      "price": 0.915,
-      "spread": 0,
-      "volume": 6071
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 8220
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 15°C on September 22?",
@@ -1189,11 +1272,11 @@
         15,
         15
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2816
+      "volume": 4492
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 16°C on September 22?",
@@ -1202,11 +1285,11 @@
         16,
         16
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3530
+      "volume": 3658
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on September 22?",
@@ -1215,11 +1298,11 @@
         17,
         17
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 546
+      "volume": 548
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 18°C or higher on September 22?",
