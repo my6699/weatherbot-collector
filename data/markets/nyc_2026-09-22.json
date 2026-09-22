@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-09-22T12:00:00Z",
   "hours_at_discovery": 48.4,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -905,6 +905,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-22T14:59:42.395Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 68,
+      "hrrr": 69,
+      "metar": 62,
+      "best": 67.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 68,
+          "gfs_seamless": 69,
+          "icon_seamless": 66
+        },
+        "mean": 67.9,
+        "spread": 1.9,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          67,
+          68,
+          69,
+          66,
+          67,
+          69,
+          67,
+          68,
+          68,
+          68,
+          68,
+          69,
+          66,
+          67,
+          68,
+          67,
+          67,
+          68,
+          67,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          68,
+          66,
+          67,
+          67,
+          68,
+          68,
+          68,
+          67,
+          68,
+          68,
+          68,
+          69,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          68,
+          68,
+          69,
+          68,
+          69,
+          69,
+          68
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1003,6 +1078,14 @@
       "top2_bucket": "64-67F",
       "top2_price": 0.485,
       "top2_sum": 0.945
+    },
+    {
+      "ts": "2026-09-22T14:59:42.395Z",
+      "top_bucket": "66-67F",
+      "top_price": 0.495,
+      "top2_bucket": "64-67F",
+      "top2_price": 0.495,
+      "top2_sum": 0.805
     }
   ],
   "all_outcomes": [
@@ -1069,7 +1152,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 10481
+      "volume": 10548
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on September 22?",
@@ -1078,11 +1161,11 @@
         64,
         65
       ],
-      "bid": 0.46,
-      "ask": 0.46,
-      "price": 0.46,
+      "bid": 0.31,
+      "ask": 0.31,
+      "price": 0.31,
       "spread": 0,
-      "volume": 9933
+      "volume": 11645
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on September 22?",
@@ -1091,11 +1174,11 @@
         66,
         67
       ],
-      "bid": 0.485,
-      "ask": 0.485,
-      "price": 0.485,
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
       "spread": 0,
-      "volume": 8826
+      "volume": 9609
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on September 22?",
@@ -1104,11 +1187,11 @@
         68,
         69
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 5320
+      "volume": 6284
     },
     {
       "question": "Will the highest temperature in New York City be between 70-71°F on September 22?",
@@ -1117,11 +1200,11 @@
         70,
         71
       ],
-      "bid": 0.014,
-      "ask": 0.014,
-      "price": 0.014,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 4271
+      "volume": 4506
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on September 22?",
@@ -1130,11 +1213,11 @@
         72,
         73
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 4132
+      "volume": 4381
     },
     {
       "question": "Will the highest temperature in New York City be 74°F or higher on September 22?",

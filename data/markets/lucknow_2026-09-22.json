@@ -6,10 +6,10 @@
   "station": "VILK",
   "event_end_date": "2026-09-22T12:00:00Z",
   "hours_at_discovery": 53.6,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -987,6 +987,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-22T15:00:14.446Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 33.1,
+      "hrrr": 35.4,
+      "metar": 30,
+      "best": 33.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.1,
+          "gfs_seamless": 35.4,
+          "icon_seamless": 33.6
+        },
+        "mean": 33.9,
+        "spread": 1.5,
+        "gap": 2.3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          31.9,
+          33.6,
+          33.7,
+          33.4,
+          33.9,
+          32.1,
+          33.7,
+          33.7,
+          33.3,
+          32.8,
+          33.3,
+          33.5,
+          33,
+          32.7,
+          32.9,
+          32.8,
+          33.7,
+          32.2,
+          33.5,
+          32.3,
+          33.2,
+          33.5,
+          32.8,
+          32.8,
+          33.2,
+          32.6,
+          33.5,
+          32.6,
+          33.2,
+          30.4,
+          33.3,
+          33.1,
+          33.6,
+          32.8,
+          33.6,
+          33.8,
+          33,
+          32.5,
+          33.2,
+          32.7,
+          33.2,
+          32.8,
+          32.5,
+          33.5,
+          33.2,
+          32.2,
+          32.3,
+          31.9,
+          32.2,
+          31.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1093,6 +1168,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.015,
       "top2_sum": 0.955
+    },
+    {
+      "ts": "2026-09-22T15:00:14.446Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1159,7 +1242,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2208
+      "volume": 2286
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on September 22?",
@@ -1168,11 +1251,11 @@
         33,
         33
       ],
-      "bid": 0.94,
-      "ask": 0.94,
-      "price": 0.94,
-      "spread": 0,
-      "volume": 5439
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 8749
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C on September 22?",
@@ -1181,11 +1264,11 @@
         34,
         34
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 12570
+      "volume": 13623
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on September 22?",
@@ -1194,11 +1277,11 @@
         35,
         35
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5005
+      "volume": 5272
     },
     {
       "question": "Will the highest temperature in Lucknow be 36°C on September 22?",
@@ -1240,5 +1323,6 @@
       "volume": 138
     }
   ],
-  "created_at": "2026-09-20T06:22:28.210Z"
+  "created_at": "2026-09-20T06:22:28.210Z",
+  "metar_max": 28
 }
