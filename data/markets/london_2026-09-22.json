@@ -6,10 +6,10 @@
   "station": "EGLC",
   "event_end_date": "2026-09-22T12:00:00Z",
   "hours_at_discovery": 53.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 25,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1059,6 +1059,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-22T18:58:44.510Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 25.3,
+      "hrrr": 24.8,
+      "metar": 22,
+      "best": 25,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.3,
+          "gfs_seamless": 24.8,
+          "icon_seamless": 24.4
+        },
+        "mean": 25,
+        "spread": 0.6,
+        "gap": 0.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          25.6,
+          25,
+          25.2,
+          23.7,
+          24.1,
+          24.7,
+          25.4,
+          25.5,
+          24,
+          24.8,
+          25.8,
+          24.8,
+          25.1,
+          25,
+          25.7,
+          26.3,
+          24.9,
+          24.8,
+          24.5,
+          25.2,
+          24.5,
+          25.5,
+          25.3,
+          25.9,
+          24.7,
+          25.5,
+          26.2,
+          23.5,
+          25.8,
+          26,
+          25.4,
+          26.2,
+          25.1,
+          25.2,
+          25.5,
+          25.3,
+          25.2,
+          25.8,
+          25.8,
+          25.5,
+          26.2,
+          24.2,
+          25,
+          24.5,
+          24.2,
+          26.1,
+          24.2,
+          24.8,
+          24.3,
+          24.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1173,6 +1247,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.82,
       "top2_sum": 0.8205
+    },
+    {
+      "ts": "2026-09-22T18:58:44.510Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.9995,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1265,7 +1347,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 20045
+      "volume": 20090
     },
     {
       "question": "Will the highest temperature in London be 23°C on September 22?",
@@ -1278,7 +1360,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 20086
+      "volume": 20164
     },
     {
       "question": "Will the highest temperature in London be 24°C on September 22?",
@@ -1291,7 +1373,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 23863
+      "volume": 23909
     },
     {
       "question": "Will the highest temperature in London be 25°C on September 22?",
@@ -1300,11 +1382,11 @@
         25,
         25
       ],
-      "bid": 0.82,
-      "ask": 0.82,
-      "price": 0.82,
-      "spread": 0,
-      "volume": 16930
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 23640
     },
     {
       "question": "Will the highest temperature in London be 26°C or higher on September 22?",
@@ -1313,12 +1395,13 @@
         26,
         999
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 12918
+      "volume": 17112
     }
   ],
-  "created_at": "2026-09-20T06:22:14.897Z"
+  "created_at": "2026-09-20T06:22:14.897Z",
+  "metar_max": 17
 }

@@ -6,10 +6,10 @@
   "station": "SBGR",
   "event_end_date": "2026-09-22T12:00:00Z",
   "hours_at_discovery": 41.1,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 25,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -611,6 +611,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-22T19:01:31.895Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 24.4,
+      "hrrr": 22.4,
+      "metar": 20,
+      "best": 23.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.4,
+          "gfs_seamless": 22.4,
+          "icon_seamless": 22.2
+        },
+        "mean": 23.4,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          22.6,
+          24.1,
+          22.6,
+          21.3,
+          21.5,
+          21.7,
+          23.4,
+          22.2,
+          24.6,
+          21.1,
+          23,
+          23.7,
+          22.7,
+          23.2,
+          23.1,
+          24.2,
+          23.2,
+          22.1,
+          22.1,
+          21.9,
+          23.7,
+          22.8,
+          24.2,
+          24.1,
+          23.4,
+          23.5,
+          24.2,
+          21.9,
+          22.7,
+          22.7,
+          22.9,
+          21.8,
+          24.4,
+          23.3,
+          22.9,
+          21.9,
+          24.1,
+          24.1,
+          23.8,
+          23.4,
+          22.4,
+          22.7,
+          23.5,
+          22.3,
+          24.1,
+          22.4,
+          22.6,
+          23.2,
+          21.9,
+          22.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -677,6 +752,14 @@
       "top2_bucket": "25-26C",
       "top2_price": 0.04,
       "top2_sum": 0.98
+    },
+    {
+      "ts": "2026-09-22T19:01:31.895Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.9975,
+      "top2_bucket": "25-26C",
+      "top2_price": 0.001,
+      "top2_sum": 0.9985
     }
   ],
   "all_outcomes": [
@@ -700,11 +783,11 @@
         25,
         25
       ],
-      "bid": 0.94,
-      "ask": 0.94,
-      "price": 0.94,
+      "bid": 0.9975,
+      "ask": 0.9975,
+      "price": 0.9975,
       "spread": 0,
-      "volume": 9743
+      "volume": 12419
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 26°C on September 22?",
@@ -713,11 +796,11 @@
         26,
         26
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 5620
+      "volume": 6428
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 27°C on September 22?",
@@ -726,11 +809,11 @@
         27,
         27
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3202
+      "volume": 3203
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 28°C on September 22?",
@@ -739,11 +822,11 @@
         28,
         28
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4160
+      "volume": 5081
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on September 22?",
