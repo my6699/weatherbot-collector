@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-09-23T12:00:00Z",
   "hours_at_discovery": 54.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 29,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -900,6 +900,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-23T11:46:11.323Z",
+      "horizon": "D+0",
+      "hours_left": 0.2,
+      "ecmwf": 28.2,
+      "hrrr": 27.2,
+      "metar": 25,
+      "best": 27.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 28.2,
+          "gfs_seamless": 27.2,
+          "icon_seamless": 27.1
+        },
+        "mean": 27.7,
+        "spread": 0.6,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          27.4,
+          27.3,
+          28.2,
+          27.5,
+          27.6,
+          27.8,
+          28.7,
+          28.1,
+          27.8,
+          28.1,
+          27.5,
+          27.6,
+          28,
+          27.5,
+          28.2,
+          27.6,
+          28.6,
+          28.2,
+          27.7,
+          28.1,
+          27.5,
+          27.1,
+          28.8,
+          27.3,
+          27.7,
+          27.8,
+          28.5,
+          27.8,
+          28.1,
+          27.9,
+          27.6,
+          27.3,
+          27.9,
+          28,
+          27.4,
+          27.3,
+          28.3,
+          28.1,
+          28.5,
+          28.5,
+          27.7,
+          27.6,
+          27.9,
+          27.9,
+          28.3,
+          27.3,
+          28,
+          28.5,
+          28.3,
+          27.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -998,6 +1072,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.0055,
       "top2_sum": 0.9955
+    },
+    {
+      "ts": "2026-09-23T11:46:11.323Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.9995,
+      "top2_bucket": "28-29C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1051,7 +1133,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4078
+      "volume": 7878
     },
     {
       "question": "Will the highest temperature in Shanghai be 27°C on September 23?",
@@ -1064,7 +1146,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 28004
+      "volume": 32498
     },
     {
       "question": "Will the highest temperature in Shanghai be 28°C on September 23?",
@@ -1077,7 +1159,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 24057
+      "volume": 27889
     },
     {
       "question": "Will the highest temperature in Shanghai be 29°C on September 23?",
@@ -1086,11 +1168,11 @@
         29,
         29
       ],
-      "bid": 0.99,
-      "ask": 0.99,
-      "price": 0.99,
-      "spread": 0,
-      "volume": 15941
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 18118
     },
     {
       "question": "Will the highest temperature in Shanghai be 30°C on September 23?",
@@ -1099,11 +1181,11 @@
         30,
         30
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 9127
+      "volume": 13896
     },
     {
       "question": "Will the highest temperature in Shanghai be 31°C on September 23?",
@@ -1116,7 +1198,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2875
+      "volume": 5914
     },
     {
       "question": "Will the highest temperature in Shanghai be 32°C on September 23?",
@@ -1129,7 +1211,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 289
+      "volume": 2832
     },
     {
       "question": "Will the highest temperature in Shanghai be 33°C or higher on September 23?",
@@ -1145,5 +1227,6 @@
       "volume": 186
     }
   ],
-  "created_at": "2026-09-21T05:04:10.078Z"
+  "created_at": "2026-09-21T05:04:10.078Z",
+  "metar_max": 27
 }
