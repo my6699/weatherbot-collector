@@ -51,13 +51,14 @@
       "forecast_src": "ensemble",
       "sigma": 0.85,
       "opened_at": "2026-09-23T11:45:58.010Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -16,
+      "exit_price": 0.09,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-09-23T23:46:07.020Z",
       "stop_price": 0.104,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "stop_pending": true
     }
   ],
   "actual_temp": null,
@@ -735,6 +736,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-23T23:45:22.835Z",
+      "horizon": "D+1",
+      "hours_left": 12.2,
+      "ecmwf": 75,
+      "hrrr": 70,
+      "metar": null,
+      "best": 73.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 75,
+          "gfs_seamless": 70,
+          "icon_seamless": 73
+        },
+        "mean": 73.1,
+        "spread": 3.1,
+        "gap": 5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          75,
+          76,
+          71,
+          78,
+          74,
+          77,
+          75,
+          76,
+          79,
+          73,
+          76,
+          71,
+          76,
+          71,
+          74,
+          76,
+          76,
+          77,
+          74,
+          77,
+          76,
+          73,
+          77,
+          78,
+          77,
+          78,
+          73,
+          74,
+          74,
+          77,
+          77,
+          75,
+          80,
+          72,
+          79,
+          73,
+          73,
+          77,
+          79,
+          75,
+          74,
+          74,
+          72,
+          70,
+          72,
+          72,
+          78,
+          76,
+          73,
+          73
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -809,6 +885,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.27,
       "top2_sum": 0.605
+    },
+    {
+      "ts": "2026-09-23T23:45:22.835Z",
+      "top_bucket": "68-69F",
+      "top_price": 0.325,
+      "top2_bucket": "68-71F",
+      "top2_price": 0.32,
+      "top2_sum": 0.645
     }
   ],
   "all_outcomes": [
@@ -819,11 +903,11 @@
         -999,
         67
       ],
-      "bid": 0.0305,
-      "ask": 0.0305,
-      "price": 0.0305,
+      "bid": 0.027,
+      "ask": 0.027,
+      "price": 0.027,
       "spread": 0,
-      "volume": 1863
+      "volume": 2131
     },
     {
       "question": "Will the highest temperature in Atlanta be between 68-69°F on September 24?",
@@ -832,11 +916,11 @@
         68,
         69
       ],
-      "bid": 0.22,
-      "ask": 0.22,
-      "price": 0.22,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 6340
+      "volume": 9768
     },
     {
       "question": "Will the highest temperature in Atlanta be between 70-71°F on September 24?",
@@ -845,11 +929,11 @@
         70,
         71
       ],
-      "bid": 0.335,
-      "ask": 0.335,
-      "price": 0.335,
+      "bid": 0.32,
+      "ask": 0.32,
+      "price": 0.32,
       "spread": 0,
-      "volume": 4366
+      "volume": 4769
     },
     {
       "question": "Will the highest temperature in Atlanta be between 72-73°F on September 24?",
@@ -858,11 +942,11 @@
         72,
         73
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.24,
+      "ask": 0.24,
+      "price": 0.24,
       "spread": 0,
-      "volume": 2225
+      "volume": 2512
     },
     {
       "question": "Will the highest temperature in Atlanta be between 74-75°F on September 24?",
@@ -871,11 +955,11 @@
         74,
         75
       ],
-      "bid": 0.15,
-      "ask": 0.15,
-      "price": 0.15,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
-      "volume": 1763
+      "volume": 2150
     },
     {
       "question": "Will the highest temperature in Atlanta be between 76-77°F on September 24?",
@@ -884,11 +968,11 @@
         76,
         77
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 1294
+      "volume": 1593
     },
     {
       "question": "Will the highest temperature in Atlanta be between 78-79°F on September 24?",
@@ -897,11 +981,11 @@
         78,
         79
       ],
-      "bid": 0.0125,
-      "ask": 0.0125,
-      "price": 0.0125,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 1388
+      "volume": 1529
     },
     {
       "question": "Will the highest temperature in Atlanta be between 80-81°F on September 24?",
@@ -910,11 +994,11 @@
         80,
         81
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 1687
+      "volume": 2659
     },
     {
       "question": "Will the highest temperature in Atlanta be between 82-83°F on September 24?",
@@ -923,9 +1007,9 @@
         82,
         83
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 1326
     },
