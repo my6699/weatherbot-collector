@@ -25,12 +25,13 @@
     "forecast_src": "ensemble",
     "sigma": 2.1,
     "opened_at": "2026-09-24T10:06:58.086Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null,
-    "stop_price": 0.112
+    "status": "closed",
+    "pnl": -21.18,
+    "exit_price": 0.08,
+    "close_reason": "stop_loss",
+    "closed_at": "2026-09-24T15:12:59.967Z",
+    "stop_price": 0.112,
+    "forecast_change_streak": 0
   },
   "positions": [
     {
@@ -58,6 +59,31 @@
       "closed_at": "2026-09-24T15:12:59.967Z",
       "stop_price": 0.112,
       "forecast_change_streak": 0
+    },
+    {
+      "market_id": "4875730",
+      "question": "Will the highest temperature in Dallas be between 92-93°F on September 25?",
+      "bucket_low": 92,
+      "bucket_high": 93,
+      "entry_price": 0.18,
+      "bid_at_entry": 0.16,
+      "spread": 0.02,
+      "shares": 222.22,
+      "cost": 40,
+      "p": 0.44,
+      "ev": 1.4444,
+      "edge": 0.1323,
+      "kelly": 0.0823,
+      "forecast_temp": 96,
+      "forecast_src": "ensemble",
+      "sigma": 1.6,
+      "opened_at": "2026-09-24T19:14:43.471Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.128
     }
   ],
   "actual_temp": null,
@@ -586,6 +612,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-24T19:14:43.471Z",
+      "horizon": "D+1",
+      "hours_left": 16.8,
+      "ecmwf": 93,
+      "hrrr": 93,
+      "metar": null,
+      "best": 92.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 93,
+          "gfs_seamless": 93,
+          "icon_seamless": 91
+        },
+        "mean": 92.6,
+        "spread": 1.6,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          93,
+          95,
+          94,
+          90,
+          93,
+          94,
+          91,
+          91,
+          94,
+          94,
+          92,
+          93,
+          91,
+          92,
+          91,
+          93,
+          92,
+          93,
+          94,
+          93,
+          93,
+          90,
+          95,
+          94,
+          90,
+          93,
+          94,
+          91,
+          95,
+          92,
+          91,
+          92,
+          94,
+          94,
+          92,
+          92,
+          93,
+          93,
+          91,
+          91,
+          91,
+          93,
+          93,
+          91,
+          93,
+          94,
+          93,
+          93,
+          89,
+          91
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -644,6 +744,14 @@
       "top2_bucket": "88-91F",
       "top2_price": 0.315,
       "top2_sum": 0.72
+    },
+    {
+      "ts": "2026-09-24T19:14:43.471Z",
+      "top_bucket": "88-89F",
+      "top_price": 0.405,
+      "top2_bucket": "88-91F",
+      "top2_price": 0.335,
+      "top2_sum": 0.74
     }
   ],
   "all_outcomes": [
@@ -654,11 +762,11 @@
         -999,
         85
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 60
+      "volume": 614
     },
     {
       "question": "Will the highest temperature in Dallas be between 86-87°F on September 25?",
@@ -667,11 +775,11 @@
         86,
         87
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.037,
+      "ask": 0.037,
+      "price": 0.037,
       "spread": 0,
-      "volume": 407
+      "volume": 562
     },
     {
       "question": "Will the highest temperature in Dallas be between 88-89°F on September 25?",
@@ -684,7 +792,7 @@
       "ask": 0.405,
       "price": 0.405,
       "spread": 0,
-      "volume": 4745
+      "volume": 5129
     },
     {
       "question": "Will the highest temperature in Dallas be between 90-91°F on September 25?",
@@ -693,11 +801,11 @@
         90,
         91
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.335,
+      "ask": 0.335,
+      "price": 0.335,
       "spread": 0,
-      "volume": 2576
+      "volume": 2708
     },
     {
       "question": "Will the highest temperature in Dallas be between 92-93°F on September 25?",
@@ -706,11 +814,11 @@
         92,
         93
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 2113
+      "volume": 2538
     },
     {
       "question": "Will the highest temperature in Dallas be between 94-95°F on September 25?",
@@ -719,11 +827,11 @@
         94,
         95
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 2980
+      "volume": 3064
     },
     {
       "question": "Will the highest temperature in Dallas be between 96-97°F on September 25?",
@@ -732,11 +840,11 @@
         96,
         97
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 1888
+      "volume": 1920
     },
     {
       "question": "Will the highest temperature in Dallas be between 98-99°F on September 25?",
@@ -749,7 +857,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 861
+      "volume": 895
     },
     {
       "question": "Will the highest temperature in Dallas be between 100-101°F on September 25?",
