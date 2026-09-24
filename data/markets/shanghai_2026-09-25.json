@@ -56,7 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.08
+      "stop_price": 0.11,
+      "trailing_activated": true,
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -512,6 +514,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-24T10:07:15.136Z",
+      "horizon": "D+1",
+      "hours_left": 25.9,
+      "ecmwf": 32.4,
+      "hrrr": 30,
+      "metar": null,
+      "best": 31.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.4,
+          "gfs_seamless": 30,
+          "icon_seamless": 29.4
+        },
+        "mean": 31.1,
+        "spread": 1.7,
+        "gap": 2.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          32.1,
+          31.4,
+          32,
+          33.2,
+          31,
+          31.1,
+          29.4,
+          33.1,
+          29.7,
+          31.3,
+          31.4,
+          29.7,
+          31.8,
+          30.6,
+          31.5,
+          31,
+          32.3,
+          31.8,
+          33.1,
+          32.8,
+          32,
+          32.4,
+          29.3,
+          30.6,
+          29.6,
+          29.6,
+          31.5,
+          32.2,
+          32,
+          33,
+          32.1,
+          29.8,
+          31.6,
+          31.5,
+          31.8,
+          30.6,
+          31.8,
+          33.7,
+          32.7,
+          32.4,
+          31.2,
+          31.8,
+          31.1,
+          29.1,
+          31.2,
+          31.3,
+          33.7,
+          32.5,
+          32.2,
+          30.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -562,6 +639,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.335,
       "top2_sum": 0.88
+    },
+    {
+      "ts": "2026-09-24T10:07:15.136Z",
+      "top_bucket": "31-31C",
+      "top_price": 0.48,
+      "top2_bucket": "30-31C",
+      "top2_price": 0.48,
+      "top2_sum": 0.705
     }
   ],
   "all_outcomes": [
@@ -572,11 +657,11 @@
         -999,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 97
+      "volume": 388
     },
     {
       "question": "Will the highest temperature in Shanghai be 28°C on September 25?",
@@ -585,11 +670,11 @@
         28,
         28
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0165,
+      "ask": 0.0165,
+      "price": 0.0165,
       "spread": 0,
-      "volume": 460
+      "volume": 789
     },
     {
       "question": "Will the highest temperature in Shanghai be 29°C on September 25?",
@@ -598,11 +683,11 @@
         29,
         29
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 597
+      "volume": 1167
     },
     {
       "question": "Will the highest temperature in Shanghai be 30°C on September 25?",
@@ -611,11 +696,11 @@
         30,
         30
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.225,
+      "ask": 0.225,
+      "price": 0.225,
       "spread": 0,
-      "volume": 685
+      "volume": 1441
     },
     {
       "question": "Will the highest temperature in Shanghai be 31°C on September 25?",
@@ -624,11 +709,11 @@
         31,
         31
       ],
-      "bid": 0.545,
-      "ask": 0.545,
-      "price": 0.545,
+      "bid": 0.48,
+      "ask": 0.48,
+      "price": 0.48,
       "spread": 0,
-      "volume": 3163
+      "volume": 3509
     },
     {
       "question": "Will the highest temperature in Shanghai be 32°C on September 25?",
@@ -637,11 +722,11 @@
         32,
         32
       ],
-      "bid": 0.335,
-      "ask": 0.335,
-      "price": 0.335,
+      "bid": 0.225,
+      "ask": 0.225,
+      "price": 0.225,
       "spread": 0,
-      "volume": 2207
+      "volume": 2792
     },
     {
       "question": "Will the highest temperature in Shanghai be 33°C on September 25?",
@@ -650,11 +735,11 @@
         33,
         33
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 1104
+      "volume": 1456
     },
     {
       "question": "Will the highest temperature in Shanghai be 34°C on September 25?",
@@ -663,11 +748,11 @@
         34,
         34
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 370
+      "volume": 514
     },
     {
       "question": "Will the highest temperature in Shanghai be 35°C on September 25?",
@@ -676,11 +761,11 @@
         35,
         35
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 313
+      "volume": 747
     },
     {
       "question": "Will the highest temperature in Shanghai be 36°C on September 25?",
