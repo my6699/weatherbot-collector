@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-25T12:00:00Z",
   "hours_at_discovery": 53.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4873090",
+    "question": "Will the highest temperature in Lucknow be 26°C on September 25?",
+    "bucket_low": 26,
+    "bucket_high": 26,
+    "entry_price": 0.13,
+    "bid_at_entry": 0.1,
+    "spread": 0.03,
+    "shares": 307.69,
+    "cost": 40,
+    "p": 0.54,
+    "ev": 3.1538,
+    "edge": 0.2799,
+    "kelly": 0.1208,
+    "forecast_temp": 24.33,
+    "forecast_src": "ensemble",
+    "sigma": 1.7,
+    "opened_at": "2026-09-24T15:12:17.632Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.08
+  },
+  "positions": [
+    {
+      "market_id": "4873090",
+      "question": "Will the highest temperature in Lucknow be 26°C on September 25?",
+      "bucket_low": 26,
+      "bucket_high": 26,
+      "entry_price": 0.13,
+      "bid_at_entry": 0.1,
+      "spread": 0.03,
+      "shares": 307.69,
+      "cost": 40,
+      "p": 0.54,
+      "ev": 3.1538,
+      "edge": 0.2799,
+      "kelly": 0.1208,
+      "forecast_temp": 24.33,
+      "forecast_src": "ensemble",
+      "sigma": 1.7,
+      "opened_at": "2026-09-24T15:12:17.632Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.08
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -536,6 +586,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-24T15:12:17.632Z",
+      "horizon": "D+1",
+      "hours_left": 20.8,
+      "ecmwf": 25.6,
+      "hrrr": 23,
+      "metar": null,
+      "best": 24.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.6,
+          "gfs_seamless": 23,
+          "icon_seamless": 24.8
+        },
+        "mean": 24.7,
+        "spread": 1.7,
+        "gap": 2.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          25.1,
+          25.3,
+          25.5,
+          24.5,
+          27.4,
+          25.4,
+          25.5,
+          25.2,
+          24.9,
+          25.7,
+          25.5,
+          24.7,
+          26.5,
+          25.3,
+          25.7,
+          25.2,
+          25.7,
+          25.5,
+          25.9,
+          25.5,
+          24.9,
+          26.1,
+          25.6,
+          24.8,
+          25.6,
+          25.3,
+          25.1,
+          25.6,
+          25.9,
+          26.4,
+          26.5,
+          25.3,
+          25.2,
+          25.8,
+          24.6,
+          26.5,
+          25,
+          25.5,
+          24.7,
+          25.5,
+          25.5,
+          26.2,
+          25.2,
+          27.4,
+          26,
+          26.1,
+          26.5,
+          25.4,
+          24.8,
+          26.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -594,6 +719,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.4,
       "top2_sum": 0.72
+    },
+    {
+      "ts": "2026-09-24T15:12:17.632Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.43,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.38,
+      "top2_sum": 0.81
     }
   ],
   "all_outcomes": [
@@ -608,7 +741,7 @@
       "ask": 0.001,
       "price": 0.001,
       "spread": 0,
-      "volume": 325
+      "volume": 326
     },
     {
       "question": "Will the highest temperature in Lucknow be 20°C on September 25?",
@@ -630,11 +763,11 @@
         21,
         21
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4
+      "volume": 95
     },
     {
       "question": "Will the highest temperature in Lucknow be 22°C on September 25?",
@@ -643,11 +776,11 @@
         22,
         22
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 136
+      "volume": 177
     },
     {
       "question": "Will the highest temperature in Lucknow be 23°C on September 25?",
@@ -656,11 +789,11 @@
         23,
         23
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.085,
+      "ask": 0.085,
+      "price": 0.085,
       "spread": 0,
-      "volume": 566
+      "volume": 632
     },
     {
       "question": "Will the highest temperature in Lucknow be 24°C on September 25?",
@@ -669,11 +802,11 @@
         24,
         24
       ],
-      "bid": 0.32,
-      "ask": 0.32,
-      "price": 0.32,
+      "bid": 0.43,
+      "ask": 0.43,
+      "price": 0.43,
       "spread": 0,
-      "volume": 2722
+      "volume": 3654
     },
     {
       "question": "Will the highest temperature in Lucknow be 25°C on September 25?",
@@ -682,11 +815,11 @@
         25,
         25
       ],
-      "bid": 0.4,
-      "ask": 0.4,
-      "price": 0.4,
+      "bid": 0.38,
+      "ask": 0.38,
+      "price": 0.38,
       "spread": 0,
-      "volume": 1876
+      "volume": 1993
     },
     {
       "question": "Will the highest temperature in Lucknow be 26°C on September 25?",
@@ -695,11 +828,11 @@
         26,
         26
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
-      "volume": 1049
+      "volume": 1206
     },
     {
       "question": "Will the highest temperature in Lucknow be 27°C on September 25?",
@@ -708,11 +841,11 @@
         27,
         27
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.025,
+      "ask": 0.025,
+      "price": 0.025,
       "spread": 0,
-      "volume": 266
+      "volume": 276
     },
     {
       "question": "Will the highest temperature in Lucknow be 28°C on September 25?",
@@ -721,11 +854,11 @@
         28,
         28
       ],
-      "bid": 0.022,
-      "ask": 0.022,
-      "price": 0.022,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 240
+      "volume": 953
     },
     {
       "question": "Will the highest temperature in Lucknow be 29°C or higher on September 25?",
@@ -734,11 +867,11 @@
         29,
         999
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 340
+      "volume": 850
     }
   ],
   "created_at": "2026-09-23T06:03:41.115Z"

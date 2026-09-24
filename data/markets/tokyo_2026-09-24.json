@@ -6,7 +6,7 @@
   "station": "RJTT",
   "event_end_date": "2026-09-24T12:00:00Z",
   "hours_at_discovery": 54.9,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "4829993",
     "question": "Will the highest temperature in Tokyo be 29°C on September 24?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-09-24T04:59:50.622Z",
       "stop_price": 0.08,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1035,6 +1036,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-24T15:12:11.021Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 24,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1141,6 +1153,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.999,
       "top2_sum": 0.9995
+    },
+    {
+      "ts": "2026-09-24T15:12:11.021Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.9995,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1181,7 +1201,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4307
+      "volume": 4338
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on September 24?",
@@ -1194,7 +1214,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 10178
+      "volume": 10184
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on September 24?",
@@ -1203,11 +1223,11 @@
         27,
         27
       ],
-      "bid": 0.999,
+      "bid": 0.9995,
       "ask": 0.999,
-      "price": 0.999,
-      "spread": 0,
-      "volume": 7890
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 9158
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on September 24?",
@@ -1220,7 +1240,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 12587
+      "volume": 13817
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on September 24?",
@@ -1233,7 +1253,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 12665
+      "volume": 12711
     },
     {
       "question": "Will the highest temperature in Tokyo be 30°C on September 24?",
@@ -1246,7 +1266,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5052
+      "volume": 5153
     },
     {
       "question": "Will the highest temperature in Tokyo be 31°C on September 24?",
@@ -1288,5 +1308,6 @@
       "volume": 15
     }
   ],
-  "created_at": "2026-09-22T05:06:03.795Z"
+  "created_at": "2026-09-22T05:06:03.795Z",
+  "metar_max": 26
 }
