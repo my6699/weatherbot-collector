@@ -6,10 +6,10 @@
   "station": "EDDM",
   "event_end_date": "2026-09-25T12:00:00Z",
   "hours_at_discovery": 53.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 19,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -979,6 +979,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-25T18:44:03.538Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 18.3,
+      "hrrr": 18,
+      "metar": 10,
+      "best": 18.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 18.3,
+          "gfs_seamless": 18,
+          "icon_seamless": 19
+        },
+        "mean": 18.4,
+        "spread": 0.6,
+        "gap": 0.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          18.3,
+          18.3,
+          18,
+          18.2,
+          18.5,
+          17.9,
+          18.2,
+          18.1,
+          17.9,
+          18.3,
+          18.3,
+          18.1,
+          18.6,
+          18.2,
+          18.3,
+          18.4,
+          18.1,
+          18.3,
+          18.1,
+          18,
+          18.4,
+          18.3,
+          18.3,
+          18.1,
+          18.2,
+          18.5,
+          18.1,
+          18.3,
+          18.2,
+          18,
+          18,
+          17.9,
+          18.5,
+          17.9,
+          18.1,
+          18.2,
+          18.2,
+          18.4,
+          18.1,
+          18.1,
+          18.3,
+          18.1,
+          18.4,
+          18.1,
+          18,
+          18.2,
+          18.1,
+          18.1,
+          18,
+          18.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1085,6 +1159,14 @@
       "top2_bucket": "19-20C",
       "top2_price": 0.16,
       "top2_sum": 0.985
+    },
+    {
+      "ts": "2026-09-25T18:44:03.538Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.9995,
+      "top2_bucket": "18-19C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1151,7 +1233,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1582
+      "volume": 1603
     },
     {
       "question": "Will the highest temperature in Munich be 17°C on September 25?",
@@ -1164,7 +1246,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2805
+      "volume": 2815
     },
     {
       "question": "Will the highest temperature in Munich be 18°C on September 25?",
@@ -1177,7 +1259,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5668
+      "volume": 5717
     },
     {
       "question": "Will the highest temperature in Munich be 19°C on September 25?",
@@ -1186,11 +1268,11 @@
         19,
         19
       ],
-      "bid": 0.825,
-      "ask": 0.825,
-      "price": 0.825,
-      "spread": 0,
-      "volume": 3900
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 6075
     },
     {
       "question": "Will the highest temperature in Munich be 20°C on September 25?",
@@ -1199,11 +1281,11 @@
         20,
         20
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2835
+      "volume": 3916
     },
     {
       "question": "Will the highest temperature in Munich be 21°C on September 25?",
@@ -1212,11 +1294,11 @@
         21,
         21
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3320
+      "volume": 4676
     },
     {
       "question": "Will the highest temperature in Munich be 22°C or higher on September 25?",
@@ -1225,12 +1307,13 @@
         22,
         999
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1615
     }
   ],
-  "created_at": "2026-09-23T06:03:14.690Z"
+  "created_at": "2026-09-23T06:03:14.690Z",
+  "metar_max": 6
 }
