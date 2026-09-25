@@ -7,8 +7,58 @@
   "event_end_date": "2026-09-26T12:00:00Z",
   "hours_at_discovery": 44.8,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "4906372",
+    "question": "Will the highest temperature in Sao Paulo be 31°C on September 26?",
+    "bucket_low": 31,
+    "bucket_high": 31,
+    "entry_price": 0.24,
+    "bid_at_entry": 0.21,
+    "spread": 0.03,
+    "shares": 166.67,
+    "cost": 40,
+    "p": 0.52,
+    "ev": 1.1667,
+    "edge": 0.1699,
+    "kelly": 0.0952,
+    "forecast_temp": 31.67,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-09-25T13:54:09.599Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.168
+  },
+  "positions": [
+    {
+      "market_id": "4906372",
+      "question": "Will the highest temperature in Sao Paulo be 31°C on September 26?",
+      "bucket_low": 31,
+      "bucket_high": 31,
+      "entry_price": 0.24,
+      "bid_at_entry": 0.21,
+      "spread": 0.03,
+      "shares": 166.67,
+      "cost": 40,
+      "p": 0.52,
+      "ev": 1.1667,
+      "edge": 0.1699,
+      "kelly": 0.0952,
+      "forecast_temp": 31.67,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-09-25T13:54:09.599Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.168
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -386,6 +436,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-25T13:54:09.599Z",
+      "horizon": "D+1",
+      "hours_left": 22.1,
+      "ecmwf": 31,
+      "hrrr": 32.1,
+      "metar": null,
+      "best": 31.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31,
+          "gfs_seamless": 32.1,
+          "icon_seamless": 30.2
+        },
+        "mean": 31.2,
+        "spread": 1,
+        "gap": 1.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          31.1,
+          30.9,
+          31.6,
+          30.8,
+          31.7,
+          31.9,
+          30.5,
+          32.1,
+          31.4,
+          31.6,
+          31.9,
+          31,
+          32.2,
+          30.3,
+          32,
+          32.2,
+          31.8,
+          30.6,
+          31.7,
+          30.5,
+          31.8,
+          31,
+          31.7,
+          32,
+          31.1,
+          31.5,
+          31.3,
+          32.8,
+          31,
+          31.6,
+          31.9,
+          31.2,
+          31.4,
+          31.3,
+          31.7,
+          31.5,
+          31.1,
+          31.4,
+          31.5,
+          31.4,
+          31.3,
+          31.7,
+          32,
+          31.7,
+          31.7,
+          31.5,
+          30.7,
+          31.5,
+          32.1,
+          31.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -428,6 +552,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.24,
       "top2_sum": 0.715
+    },
+    {
+      "ts": "2026-09-25T13:54:09.599Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.47,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.245,
+      "top2_sum": 0.715
     }
   ],
   "all_outcomes": [
@@ -438,9 +570,9 @@
         -999,
         27
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
       "volume": 0
     },
@@ -451,11 +583,11 @@
         28,
         28
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 0
+      "volume": 1
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on September 26?",
@@ -468,7 +600,7 @@
       "ask": 0.015,
       "price": 0.015,
       "spread": 0,
-      "volume": 38
+      "volume": 39
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C on September 26?",
@@ -481,7 +613,7 @@
       "ask": 0.045,
       "price": 0.045,
       "spread": 0,
-      "volume": 263
+      "volume": 266
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 31°C on September 26?",
@@ -490,11 +622,11 @@
         31,
         31
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.225,
+      "ask": 0.225,
+      "price": 0.225,
       "spread": 0,
-      "volume": 470
+      "volume": 660
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 32°C on September 26?",
@@ -503,11 +635,11 @@
         32,
         32
       ],
-      "bid": 0.475,
-      "ask": 0.475,
-      "price": 0.475,
+      "bid": 0.47,
+      "ask": 0.47,
+      "price": 0.47,
       "spread": 0,
-      "volume": 950
+      "volume": 1564
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 33°C on September 26?",
@@ -516,11 +648,11 @@
         33,
         33
       ],
-      "bid": 0.24,
-      "ask": 0.24,
-      "price": 0.24,
+      "bid": 0.245,
+      "ask": 0.245,
+      "price": 0.245,
       "spread": 0,
-      "volume": 831
+      "volume": 1032
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 34°C on September 26?",
@@ -529,11 +661,11 @@
         34,
         34
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 196
+      "volume": 210
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 35°C on September 26?",
@@ -546,7 +678,7 @@
       "ask": 0.0055,
       "price": 0.0055,
       "spread": 0,
-      "volume": 407
+      "volume": 517
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 36°C on September 26?",
@@ -555,9 +687,9 @@
         36,
         36
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
       "volume": 100
     },
@@ -568,9 +700,9 @@
         37,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
       "volume": 20
     }

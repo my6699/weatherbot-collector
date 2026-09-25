@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-09-25T12:00:00Z",
   "hours_at_discovery": 39.5,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -683,6 +683,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-25T13:53:48.374Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 62,
+      "hrrr": 59,
+      "metar": 55,
+      "best": 60.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 62,
+          "gfs_seamless": 59,
+          "icon_seamless": 59
+        },
+        "mean": 60.5,
+        "spread": 1.5,
+        "gap": 3,
+        "llmEnhanced": false,
+        "membersMax": [
+          59,
+          57,
+          59,
+          59,
+          62,
+          59,
+          60,
+          58,
+          59,
+          61,
+          60,
+          60,
+          60,
+          58,
+          60,
+          59,
+          60,
+          59,
+          60,
+          60,
+          61,
+          60,
+          60,
+          60,
+          59,
+          60,
+          61,
+          62,
+          60,
+          61,
+          59,
+          57,
+          61,
+          60,
+          60,
+          59,
+          61,
+          61,
+          58,
+          58,
+          62,
+          60,
+          58,
+          59,
+          61,
+          60,
+          61,
+          61,
+          61,
+          60
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -757,6 +831,14 @@
       "top2_bucket": "58-61F",
       "top2_price": 0.505,
       "top2_sum": 0.76
+    },
+    {
+      "ts": "2026-09-25T13:53:48.374Z",
+      "top_bucket": "60-61F",
+      "top_price": 0.465,
+      "top2_bucket": "58-61F",
+      "top2_price": 0.465,
+      "top2_sum": 0.81
     }
   ],
   "all_outcomes": [
@@ -780,11 +862,11 @@
         50,
         51
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3145
+      "volume": 3580
     },
     {
       "question": "Will the highest temperature in Seattle be between 52-53°F on September 25?",
@@ -793,11 +875,11 @@
         52,
         53
       ],
-      "bid": 0.0095,
-      "ask": 0.0095,
-      "price": 0.0095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 422
+      "volume": 16299
     },
     {
       "question": "Will the highest temperature in Seattle be between 54-55°F on September 25?",
@@ -806,11 +888,11 @@
         54,
         55
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1923
+      "volume": 16518
     },
     {
       "question": "Will the highest temperature in Seattle be between 56-57°F on September 25?",
@@ -823,7 +905,7 @@
       "ask": 0.08,
       "price": 0.08,
       "spread": 0,
-      "volume": 1502
+      "volume": 2121
     },
     {
       "question": "Will the highest temperature in Seattle be between 58-59°F on September 25?",
@@ -832,11 +914,11 @@
         58,
         59
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
-      "volume": 2765
+      "volume": 3676
     },
     {
       "question": "Will the highest temperature in Seattle be between 60-61°F on September 25?",
@@ -845,11 +927,11 @@
         60,
         61
       ],
-      "bid": 0.505,
-      "ask": 0.505,
-      "price": 0.505,
+      "bid": 0.465,
+      "ask": 0.465,
+      "price": 0.465,
       "spread": 0,
-      "volume": 1574
+      "volume": 2491
     },
     {
       "question": "Will the highest temperature in Seattle be between 62-63°F on September 25?",
@@ -858,11 +940,11 @@
         62,
         63
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.13,
+      "ask": 0.13,
+      "price": 0.13,
       "spread": 0,
-      "volume": 1424
+      "volume": 2261
     },
     {
       "question": "Will the highest temperature in Seattle be between 64-65°F on September 25?",
@@ -871,11 +953,11 @@
         64,
         65
       ],
-      "bid": 0.03,
-      "ask": 0.03,
-      "price": 0.03,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 595
+      "volume": 757
     },
     {
       "question": "Will the highest temperature in Seattle be between 66-67°F on September 25?",
@@ -884,11 +966,11 @@
         66,
         67
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 245
+      "volume": 315
     },
     {
       "question": "Will the highest temperature in Seattle be 68°F or higher on September 25?",
