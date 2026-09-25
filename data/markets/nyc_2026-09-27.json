@@ -98,6 +98,81 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-09-25T22:26:20.927Z",
+      "horizon": "D+2",
+      "hours_left": 37.6,
+      "ecmwf": 69,
+      "hrrr": 66,
+      "metar": null,
+      "best": 67.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 69,
+          "gfs_seamless": 66,
+          "icon_seamless": 64
+        },
+        "mean": 67.1,
+        "spread": 3.1,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          68,
+          66,
+          66,
+          67,
+          68,
+          70,
+          70,
+          71,
+          68,
+          69,
+          66,
+          66,
+          74,
+          67,
+          68,
+          69,
+          70,
+          69,
+          66,
+          70,
+          71,
+          67,
+          68,
+          68,
+          67,
+          64,
+          69,
+          67,
+          71,
+          69,
+          70,
+          67,
+          66,
+          68,
+          72,
+          69,
+          69,
+          68,
+          68,
+          68,
+          66,
+          69,
+          70,
+          67,
+          75,
+          69,
+          67,
+          73,
+          68,
+          67
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -116,6 +191,14 @@
       "top2_bucket": "62-65F",
       "top2_price": 0.39,
       "top2_sum": 0.665
+    },
+    {
+      "ts": "2026-09-25T22:26:20.927Z",
+      "top_bucket": "64-65F",
+      "top_price": 0.39,
+      "top2_bucket": "64-67F",
+      "top2_price": 0.28,
+      "top2_sum": 0.67
     }
   ],
   "all_outcomes": [
@@ -126,9 +209,9 @@
         -999,
         55
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
       "volume": 0
     },
@@ -139,11 +222,11 @@
         56,
         57
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0495,
+      "ask": 0.0495,
+      "price": 0.0495,
       "spread": 0,
-      "volume": 0
+      "volume": 60
     },
     {
       "question": "Will the highest temperature in New York City be between 58-59°F on September 27?",
@@ -152,9 +235,9 @@
         58,
         59
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
       "volume": 0
     },
@@ -178,11 +261,11 @@
         62,
         63
       ],
-      "bid": 0.275,
-      "ask": 0.275,
-      "price": 0.275,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
-      "volume": 0
+      "volume": 36
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on September 27?",
@@ -195,7 +278,7 @@
       "ask": 0.39,
       "price": 0.39,
       "spread": 0,
-      "volume": 216
+      "volume": 320
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on September 27?",
@@ -204,11 +287,11 @@
         66,
         67
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.28,
+      "ask": 0.28,
+      "price": 0.28,
       "spread": 0,
-      "volume": 10
+      "volume": 172
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on September 27?",
@@ -217,9 +300,9 @@
         68,
         69
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.09,
+      "ask": 0.09,
+      "price": 0.09,
       "spread": 0,
       "volume": 0
     },
@@ -230,9 +313,9 @@
         70,
         71
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
       "volume": 0
     },
@@ -243,11 +326,11 @@
         72,
         73
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0395,
+      "ask": 0.0395,
+      "price": 0.0395,
       "spread": 0,
-      "volume": 23
+      "volume": 83
     },
     {
       "question": "Will the highest temperature in New York City be 74°F or higher on September 27?",
@@ -256,11 +339,11 @@
         74,
         999
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0355,
+      "ask": 0.0355,
+      "price": 0.0355,
       "spread": 0,
-      "volume": 23
+      "volume": 123
     }
   ],
   "created_at": "2026-09-25T13:53:43.006Z"
