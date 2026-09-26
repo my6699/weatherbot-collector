@@ -6,7 +6,7 @@
   "station": "SBGR",
   "event_end_date": "2026-09-26T12:00:00Z",
   "hours_at_discovery": 44.8,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "4906372",
     "question": "Will the highest temperature in Sao Paulo be 31°C on September 26?",
@@ -809,6 +809,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-26T13:11:17.536Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 31.9,
+      "hrrr": 31.6,
+      "metar": 22,
+      "best": 31.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.9,
+          "gfs_seamless": 31.6,
+          "icon_seamless": 30.5
+        },
+        "mean": 31.5,
+        "spread": 1,
+        "gap": 0.3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          32.2,
+          31.7,
+          32,
+          31.8,
+          32,
+          31.6,
+          32.3,
+          32.2,
+          32.2,
+          31.8,
+          32.1,
+          31.5,
+          31.5,
+          31.6,
+          31.9,
+          31.8,
+          31.8,
+          31.7,
+          31.6,
+          31.7,
+          31.7,
+          31.9,
+          31.9,
+          31.8,
+          32,
+          31.6,
+          31.3,
+          32.7,
+          31.8,
+          31.4,
+          31.7,
+          32.3,
+          32.1,
+          31.5,
+          31.7,
+          31.9,
+          31.9,
+          31.4,
+          32.3,
+          31.9,
+          31.9,
+          31.1,
+          31.6,
+          31.8,
+          31.5,
+          32.3,
+          31.1,
+          31.4,
+          31.6,
+          32.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -891,6 +966,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.525,
       "top2_sum": 0.845
+    },
+    {
+      "ts": "2026-09-26T13:11:17.536Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.49,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.245,
+      "top2_sum": 0.735
     }
   ],
   "all_outcomes": [
@@ -901,11 +984,11 @@
         -999,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 231
+      "volume": 1564
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 28°C on September 26?",
@@ -914,11 +997,11 @@
         28,
         28
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 76
+      "volume": 585
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on September 26?",
@@ -927,11 +1010,11 @@
         29,
         29
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
-      "volume": 260
+      "volume": 382
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C on September 26?",
@@ -940,11 +1023,11 @@
         30,
         30
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 555
+      "volume": 680
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 31°C on September 26?",
@@ -953,11 +1036,11 @@
         31,
         31
       ],
-      "bid": 0.32,
-      "ask": 0.32,
-      "price": 0.32,
+      "bid": 0.24,
+      "ask": 0.24,
+      "price": 0.24,
       "spread": 0,
-      "volume": 1190
+      "volume": 2412
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 32°C on September 26?",
@@ -966,11 +1049,11 @@
         32,
         32
       ],
-      "bid": 0.525,
-      "ask": 0.525,
-      "price": 0.525,
+      "bid": 0.49,
+      "ask": 0.49,
+      "price": 0.49,
       "spread": 0,
-      "volume": 2117
+      "volume": 2190
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 33°C on September 26?",
@@ -979,11 +1062,11 @@
         33,
         33
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.245,
+      "ask": 0.245,
+      "price": 0.245,
       "spread": 0,
-      "volume": 2169
+      "volume": 2532
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 34°C on September 26?",
@@ -996,7 +1079,7 @@
       "ask": 0.0095,
       "price": 0.0095,
       "spread": 0,
-      "volume": 1108
+      "volume": 1121
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 35°C on September 26?",
@@ -1005,11 +1088,11 @@
         35,
         35
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 783
+      "volume": 798
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 36°C on September 26?",
@@ -1018,11 +1101,11 @@
         36,
         36
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1212
+      "volume": 1572
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 37°C or higher on September 26?",
@@ -1031,11 +1114,11 @@
         37,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1799
+      "volume": 2310
     }
   ],
   "created_at": "2026-09-24T15:12:24.141Z"

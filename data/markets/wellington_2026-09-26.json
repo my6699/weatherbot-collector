@@ -6,10 +6,10 @@
   "station": "NZWN",
   "event_end_date": "2026-09-26T12:00:00Z",
   "hours_at_discovery": 55,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 15,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -900,6 +900,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-26T13:11:21.130Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 14,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -998,6 +1009,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.9985,
       "top2_sum": 0.999
+    },
+    {
+      "ts": "2026-09-26T13:11:21.130Z",
+      "top_bucket": "15-15C",
+      "top_price": 0.9995,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1064,7 +1083,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3745
+      "volume": 3750
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on September 26?",
@@ -1077,7 +1096,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 15125
+      "volume": 16597
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on September 26?",
@@ -1086,11 +1105,11 @@
         15,
         15
       ],
-      "bid": 0.9985,
-      "ask": 0.9985,
-      "price": 0.9985,
-      "spread": 0,
-      "volume": 11960
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 13555
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on September 26?",
@@ -1103,7 +1122,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 8432
+      "volume": 9296
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on September 26?",
@@ -1145,5 +1164,6 @@
       "volume": 95
     }
   ],
-  "created_at": "2026-09-24T05:00:05.868Z"
+  "created_at": "2026-09-24T05:00:05.868Z",
+  "metar_max": 15
 }

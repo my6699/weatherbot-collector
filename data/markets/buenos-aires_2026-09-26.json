@@ -6,7 +6,7 @@
   "station": "SAEZ",
   "event_end_date": "2026-09-26T12:00:00Z",
   "hours_at_discovery": 44.8,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -762,6 +762,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-26T13:11:19.856Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 23.3,
+      "hrrr": 23.2,
+      "metar": 20,
+      "best": 22.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 23.3,
+          "gfs_seamless": 23.2,
+          "icon_seamless": 20.9
+        },
+        "mean": 22.8,
+        "spread": 1.9,
+        "gap": 0.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          22.5,
+          23.1,
+          23.2,
+          23.2,
+          22.8,
+          21.8,
+          23.7,
+          24.5,
+          22.9,
+          24.9,
+          24.3,
+          21.5,
+          22.4,
+          24.1,
+          22,
+          23.9,
+          24.3,
+          21.8,
+          22.5,
+          23,
+          22.9,
+          23.3,
+          22.2,
+          22.3,
+          23,
+          24.1,
+          23.5,
+          24.7,
+          23.6,
+          22.9,
+          23.8,
+          21.3,
+          24.8,
+          21.4,
+          22.5,
+          23,
+          23.8,
+          23.4,
+          23,
+          22.4,
+          21.9,
+          22.1,
+          23.2,
+          21.6,
+          23.5,
+          24.1,
+          22.3,
+          22.2,
+          23.2,
+          24.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -844,6 +919,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.4,
       "top2_sum": 0.805
+    },
+    {
+      "ts": "2026-09-26T13:11:19.856Z",
+      "top_bucket": "23-23C",
+      "top_price": 0.455,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.425,
+      "top2_sum": 0.88
     }
   ],
   "all_outcomes": [
@@ -867,9 +950,9 @@
         18,
         18
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 676
     },
@@ -880,9 +963,9 @@
         19,
         19
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 114
     },
@@ -893,11 +976,11 @@
         20,
         20
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 454
+      "volume": 511
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on September 26?",
@@ -906,11 +989,11 @@
         21,
         21
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.012,
+      "ask": 0.012,
+      "price": 0.012,
       "spread": 0,
-      "volume": 503
+      "volume": 546
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C on September 26?",
@@ -919,11 +1002,11 @@
         22,
         22
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.041,
+      "ask": 0.041,
+      "price": 0.041,
       "spread": 0,
-      "volume": 161
+      "volume": 183
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on September 26?",
@@ -932,11 +1015,11 @@
         23,
         23
       ],
-      "bid": 0.405,
-      "ask": 0.405,
-      "price": 0.405,
+      "bid": 0.455,
+      "ask": 0.455,
+      "price": 0.455,
       "spread": 0,
-      "volume": 1184
+      "volume": 1432
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C on September 26?",
@@ -945,11 +1028,11 @@
         24,
         24
       ],
-      "bid": 0.4,
-      "ask": 0.4,
-      "price": 0.4,
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
       "spread": 0,
-      "volume": 1017
+      "volume": 1408
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 25°C on September 26?",
@@ -958,11 +1041,11 @@
         25,
         25
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.09,
+      "ask": 0.09,
+      "price": 0.09,
       "spread": 0,
-      "volume": 1186
+      "volume": 1626
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 26°C on September 26?",
@@ -971,11 +1054,11 @@
         26,
         26
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 178
+      "volume": 239
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 27°C or higher on September 26?",
@@ -984,11 +1067,11 @@
         27,
         999
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 60
+      "volume": 105
     }
   ],
   "created_at": "2026-09-24T15:12:39.965Z"
