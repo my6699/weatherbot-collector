@@ -6,10 +6,10 @@
   "station": "KORD",
   "event_end_date": "2026-09-27T12:00:00Z",
   "hours_at_discovery": 46.1,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 72.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -918,6 +918,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-27T22:16:35.926Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 69,
+      "hrrr": 74,
+      "metar": 69,
+      "best": 70.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 69,
+          "gfs_seamless": 74,
+          "icon_seamless": 71
+        },
+        "mean": 70.9,
+        "spread": 3.1,
+        "gap": 5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          68,
+          67,
+          68,
+          67,
+          67,
+          67,
+          68,
+          67,
+          66,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          68,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          68,
+          67,
+          67,
+          67,
+          68,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          68,
+          67,
+          67,
+          67,
+          67,
+          66,
+          67,
+          68,
+          68,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1024,6 +1099,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.27,
       "top2_sum": 0.975
+    },
+    {
+      "ts": "2026-09-27T22:16:35.926Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.9985,
+      "top2_bucket": "72-75F",
+      "top2_price": 0.0015,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1099,11 +1182,11 @@
         68,
         69
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4249
+      "volume": 5896
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on September 27?",
@@ -1112,11 +1195,11 @@
         70,
         71
       ],
-      "bid": 0.705,
-      "ask": 0.705,
-      "price": 0.705,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 9781
+      "volume": 13089
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on September 27?",
@@ -1125,11 +1208,11 @@
         72,
         73
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.9985,
+      "ask": 0.9985,
+      "price": 0.9985,
       "spread": 0,
-      "volume": 5570
+      "volume": 6760
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on September 27?",
@@ -1138,11 +1221,11 @@
         74,
         75
       ],
-      "bid": 0.0155,
-      "ask": 0.0155,
-      "price": 0.0155,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 5060
+      "volume": 6011
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on September 27?",
@@ -1151,11 +1234,11 @@
         76,
         77
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1817
+      "volume": 2298
     },
     {
       "question": "Will the highest temperature in Chicago be 78°F or higher on September 27?",
