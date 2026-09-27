@@ -877,6 +877,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-27T08:17:58.812Z",
+      "horizon": "D+0",
+      "hours_left": 3.7,
+      "ecmwf": 14.8,
+      "hrrr": 14.5,
+      "metar": 10,
+      "best": 14.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14.8,
+          "gfs_seamless": 14.5,
+          "icon_seamless": 15.2
+        },
+        "mean": 14.8,
+        "spread": 0.4,
+        "gap": 0.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          15.2,
+          14.6,
+          14.9,
+          15,
+          14.6,
+          15.1,
+          14.7,
+          14.9,
+          14.8,
+          15.6,
+          14.8,
+          15,
+          14.6,
+          14.9,
+          15.1,
+          15,
+          15.1,
+          15.4,
+          14.9,
+          15.2,
+          14.7,
+          15.3,
+          15,
+          14.8,
+          15.3,
+          15,
+          15.2,
+          15.3,
+          14.8,
+          14.7,
+          14.9,
+          14.9,
+          14.6,
+          15.3,
+          15.1,
+          14.9,
+          14.7,
+          14.9,
+          14.5,
+          14.9,
+          14.8,
+          15.4,
+          15.1,
+          14.9,
+          15.4,
+          14.9,
+          14.6,
+          15.2,
+          14.6,
+          15
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -967,6 +1041,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.999,
       "top2_sum": 0.9995
+    },
+    {
+      "ts": "2026-09-27T08:17:58.812Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.9995,
+      "top2_bucket": "15-16C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1033,7 +1115,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 14476
+      "volume": 14541
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on September 27?",
@@ -1046,7 +1128,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 12241
+      "volume": 12250
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on September 27?",
@@ -1055,11 +1137,11 @@
         16,
         16
       ],
-      "bid": 0.999,
+      "bid": 0.9995,
       "ask": 0.999,
-      "price": 0.999,
-      "spread": 0,
-      "volume": 10647
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 11538
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on September 27?",
@@ -1072,7 +1154,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4979
+      "volume": 5507
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on September 27?",
@@ -1081,9 +1163,9 @@
         18,
         18
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 2430
     },
