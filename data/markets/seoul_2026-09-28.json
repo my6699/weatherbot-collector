@@ -6,10 +6,10 @@
   "station": "RKSI",
   "event_end_date": "2026-09-28T12:00:00Z",
   "hours_at_discovery": 52.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 23,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -910,6 +910,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-28T15:34:56.112Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 18,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1008,6 +1019,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.005,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-09-28T15:34:56.112Z",
+      "top_bucket": "23-23C",
+      "top_price": 1,
+      "top2_bucket": "22-23C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1018,9 +1037,9 @@
         -999,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 609
     },
@@ -1031,9 +1050,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 420
     },
@@ -1044,9 +1063,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 931
     },
@@ -1057,9 +1076,9 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 411
     },
@@ -1070,9 +1089,9 @@
         21,
         21
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1827
     },
@@ -1083,11 +1102,11 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8186
+      "volume": 8241
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 23°C on September 28?",
@@ -1096,11 +1115,11 @@
         23,
         23
       ],
-      "bid": 0.995,
-      "ask": 0.995,
-      "price": 0.995,
-      "spread": 0,
-      "volume": 14419
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 17297
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 24°C on September 28?",
@@ -1109,11 +1128,11 @@
         24,
         24
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7969
+      "volume": 9351
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 25°C on September 28?",
@@ -1122,11 +1141,11 @@
         25,
         25
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 9985
+      "volume": 10170
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 26°C on September 28?",
@@ -1135,11 +1154,11 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3767
+      "volume": 3921
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 27°C or higher on September 28?",
@@ -1148,12 +1167,13 @@
         27,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3234
+      "volume": 3344
     }
   ],
-  "created_at": "2026-09-26T07:48:28.122Z"
+  "created_at": "2026-09-26T07:48:28.122Z",
+  "metar_max": 22
 }
