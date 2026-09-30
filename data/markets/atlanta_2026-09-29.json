@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-09-29T12:00:00Z",
   "hours_at_discovery": 51.7,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5017619",
     "question": "Will the highest temperature in Atlanta be between 86-87°F on September 29?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-09-28T22:07:03.369Z",
       "stop_price": 0.136,
       "stop_pending": true,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 84.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1206,5 +1207,6 @@
       "volume": 131
     }
   ],
-  "created_at": "2026-09-27T08:17:35.596Z"
+  "created_at": "2026-09-27T08:17:35.596Z",
+  "metar_max": 84
 }
