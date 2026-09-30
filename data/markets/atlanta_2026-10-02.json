@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-02T12:00:00Z",
   "hours_at_discovery": 46.2,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "5150587",
+    "question": "Will the highest temperature in Atlanta be between 88-89°F on October 2?",
+    "bucket_low": 88,
+    "bucket_high": 89,
+    "entry_price": 0.2,
+    "bid_at_entry": 0.19,
+    "spread": 0.01,
+    "shares": 200,
+    "cost": 40,
+    "p": 0.46,
+    "ev": 1.3,
+    "edge": 0.1302,
+    "kelly": 0.0823,
+    "forecast_temp": 87.08,
+    "forecast_src": "ensemble",
+    "sigma": 1.6,
+    "opened_at": "2026-09-30T23:55:45.397Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.152
+  },
+  "positions": [
+    {
+      "market_id": "5150587",
+      "question": "Will the highest temperature in Atlanta be between 88-89°F on October 2?",
+      "bucket_low": 88,
+      "bucket_high": 89,
+      "entry_price": 0.2,
+      "bid_at_entry": 0.19,
+      "spread": 0.01,
+      "shares": 200,
+      "cost": 40,
+      "p": 0.46,
+      "ev": 1.3,
+      "edge": 0.1302,
+      "kelly": 0.0823,
+      "forecast_temp": 87.08,
+      "forecast_src": "ensemble",
+      "sigma": 1.6,
+      "opened_at": "2026-09-30T23:55:45.397Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.152
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -160,6 +210,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-09-30T23:55:45.397Z",
+      "horizon": "D+2",
+      "hours_left": 36.1,
+      "ecmwf": 88,
+      "hrrr": 88,
+      "metar": null,
+      "best": 87.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 88,
+          "gfs_seamless": 88,
+          "icon_seamless": 86
+        },
+        "mean": 87.6,
+        "spread": 1.6,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          89,
+          88,
+          89,
+          89,
+          85,
+          91,
+          85,
+          91,
+          89,
+          89,
+          91,
+          87,
+          88,
+          90,
+          89,
+          88,
+          88,
+          88,
+          88,
+          87,
+          91,
+          90,
+          90,
+          89,
+          88,
+          87,
+          86,
+          86,
+          86,
+          88,
+          79,
+          89,
+          90,
+          86,
+          88,
+          90,
+          88,
+          88,
+          90,
+          89,
+          88,
+          84,
+          86,
+          88,
+          86,
+          86,
+          87,
+          90,
+          88,
+          84
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -178,6 +302,14 @@
       "top2_bucket": "86-89F",
       "top2_price": 0.235,
       "top2_sum": 0.71
+    },
+    {
+      "ts": "2026-09-30T23:55:45.397Z",
+      "top_bucket": "86-87F",
+      "top_price": 0.425,
+      "top2_bucket": "84-87F",
+      "top2_price": 0.425,
+      "top2_sum": 0.72
     }
   ],
   "all_outcomes": [
@@ -188,11 +320,11 @@
         -999,
         79
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 232
+      "volume": 252
     },
     {
       "question": "Will the highest temperature in Atlanta be between 80-81°F on October 2?",
@@ -201,11 +333,11 @@
         80,
         81
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 79
+      "volume": 115
     },
     {
       "question": "Will the highest temperature in Atlanta be between 82-83°F on October 2?",
@@ -214,11 +346,11 @@
         82,
         83
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
-      "volume": 251
+      "volume": 433
     },
     {
       "question": "Will the highest temperature in Atlanta be between 84-85°F on October 2?",
@@ -227,11 +359,11 @@
         84,
         85
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.295,
+      "ask": 0.295,
+      "price": 0.295,
       "spread": 0,
-      "volume": 206
+      "volume": 1942
     },
     {
       "question": "Will the highest temperature in Atlanta be between 86-87°F on October 2?",
@@ -240,11 +372,11 @@
         86,
         87
       ],
-      "bid": 0.475,
-      "ask": 0.475,
-      "price": 0.475,
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
       "spread": 0,
-      "volume": 2326
+      "volume": 2790
     },
     {
       "question": "Will the highest temperature in Atlanta be between 88-89°F on October 2?",
@@ -253,11 +385,11 @@
         88,
         89
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
-      "volume": 1245
+      "volume": 1895
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on October 2?",
@@ -266,11 +398,11 @@
         90,
         91
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.0235,
+      "ask": 0.0235,
+      "price": 0.0235,
       "spread": 0,
-      "volume": 208
+      "volume": 384
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on October 2?",
@@ -279,11 +411,11 @@
         92,
         93
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 85
+      "volume": 211
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on October 2?",
@@ -292,11 +424,11 @@
         94,
         95
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 46
+      "volume": 72
     },
     {
       "question": "Will the highest temperature in Atlanta be between 96-97°F on October 2?",
@@ -309,7 +441,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 161
+      "volume": 239
     },
     {
       "question": "Will the highest temperature in Atlanta be 98°F or higher on October 2?",
