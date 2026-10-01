@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-02T12:00:00Z",
   "hours_at_discovery": 53.2,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "5148210",
+    "question": "Will the highest temperature in Shanghai be 23°C on October 2?",
+    "bucket_low": 23,
+    "bucket_high": 23,
+    "entry_price": 0.13,
+    "bid_at_entry": 0.11,
+    "spread": 0.02,
+    "shares": 307.69,
+    "cost": 40,
+    "p": 0.58,
+    "ev": 3.4615,
+    "edge": 0.3103,
+    "kelly": 0.1307,
+    "forecast_temp": 23.47,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-10-01T06:05:06.987Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.088
+  },
+  "positions": [
+    {
+      "market_id": "5148210",
+      "question": "Will the highest temperature in Shanghai be 23°C on October 2?",
+      "bucket_low": 23,
+      "bucket_high": 23,
+      "entry_price": 0.13,
+      "bid_at_entry": 0.11,
+      "spread": 0.02,
+      "shares": 307.69,
+      "cost": 40,
+      "p": 0.58,
+      "ev": 3.4615,
+      "edge": 0.3103,
+      "kelly": 0.1307,
+      "forecast_temp": 23.47,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-10-01T06:05:06.987Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.088
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -311,6 +361,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-01T06:05:06.987Z",
+      "horizon": "D+1",
+      "hours_left": 29.9,
+      "ecmwf": 23.5,
+      "hrrr": 23.6,
+      "metar": null,
+      "best": 23.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 23.5,
+          "gfs_seamless": 23.6,
+          "icon_seamless": 23.5
+        },
+        "mean": 23.5,
+        "spread": 0.1,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          23.2,
+          23.1,
+          23.5,
+          23.9,
+          24,
+          22.9,
+          23.7,
+          23.6,
+          23.7,
+          24,
+          23.7,
+          24.2,
+          23.4,
+          24,
+          22.9,
+          22.5,
+          24,
+          23.5,
+          23.6,
+          23.9,
+          22.7,
+          23.2,
+          24,
+          22.7,
+          23.1,
+          22.4,
+          23.6,
+          23,
+          23.4,
+          23.1,
+          23.1,
+          22.9,
+          23.7,
+          22.6,
+          23.6,
+          22.4,
+          24,
+          23.2,
+          23.1,
+          23.4,
+          23.5,
+          23.2,
+          23.5,
+          23.4,
+          23.4,
+          22.9,
+          24.1,
+          23.7,
+          23.5,
+          22.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -345,6 +469,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.285,
       "top2_sum": 0.805
+    },
+    {
+      "ts": "2026-10-01T06:05:06.987Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.59,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.265,
+      "top2_sum": 0.855
     }
   ],
   "all_outcomes": [
@@ -355,9 +487,9 @@
         -999,
         19
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 82
     },
@@ -368,11 +500,11 @@
         20,
         20
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 388
+      "volume": 449
     },
     {
       "question": "Will the highest temperature in Shanghai be 21°C on October 2?",
@@ -381,11 +513,11 @@
         21,
         21
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 515
+      "volume": 692
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on October 2?",
@@ -394,11 +526,11 @@
         22,
         22
       ],
-      "bid": 0.0225,
-      "ask": 0.0225,
-      "price": 0.0225,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
-      "volume": 855
+      "volume": 947
     },
     {
       "question": "Will the highest temperature in Shanghai be 23°C on October 2?",
@@ -407,11 +539,11 @@
         23,
         23
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 1214
+      "volume": 1949
     },
     {
       "question": "Will the highest temperature in Shanghai be 24°C on October 2?",
@@ -420,11 +552,11 @@
         24,
         24
       ],
-      "bid": 0.52,
-      "ask": 0.52,
-      "price": 0.52,
+      "bid": 0.59,
+      "ask": 0.59,
+      "price": 0.59,
       "spread": 0,
-      "volume": 2569
+      "volume": 3850
     },
     {
       "question": "Will the highest temperature in Shanghai be 25°C on October 2?",
@@ -433,11 +565,11 @@
         25,
         25
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 783
+      "volume": 978
     },
     {
       "question": "Will the highest temperature in Shanghai be 26°C on October 2?",
@@ -446,11 +578,11 @@
         26,
         26
       ],
-      "bid": 0.0475,
-      "ask": 0.0475,
-      "price": 0.0475,
+      "bid": 0.0375,
+      "ask": 0.0375,
+      "price": 0.0375,
       "spread": 0,
-      "volume": 518
+      "volume": 682
     },
     {
       "question": "Will the highest temperature in Shanghai be 27°C on October 2?",
@@ -459,11 +591,11 @@
         27,
         27
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 303
+      "volume": 369
     },
     {
       "question": "Will the highest temperature in Shanghai be 28°C on October 2?",
@@ -472,11 +604,11 @@
         28,
         28
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 348
+      "volume": 567
     },
     {
       "question": "Will the highest temperature in Shanghai be 29°C or higher on October 2?",
