@@ -6,7 +6,7 @@
   "station": "VILK",
   "event_end_date": "2026-10-02T12:00:00Z",
   "hours_at_discovery": 53.2,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5148156",
     "question": "Will the highest temperature in Lucknow be 32°C on October 2?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-01T13:27:21.203Z",
       "stop_price": 0.144,
       "stop_pending": true,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 1,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -731,6 +732,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-02T12:45:53.097Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 32.6,
+      "hrrr": 32.6,
+      "metar": 30,
+      "best": 32.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.6,
+          "gfs_seamless": 32.6,
+          "icon_seamless": 32.8
+        },
+        "mean": 32.6,
+        "spread": 0.2,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          32.6,
+          32.7,
+          32.4,
+          32.5,
+          32.6,
+          32.3,
+          32.5,
+          32.6,
+          32.7,
+          32.1,
+          32.4,
+          32.5,
+          32.6,
+          32.5,
+          32.6,
+          32.5,
+          32.2,
+          32.8,
+          32.5,
+          32.8,
+          32.4,
+          32.2,
+          32.8,
+          32.7,
+          32.4,
+          32.4,
+          32.3,
+          32.5,
+          32,
+          32.4,
+          32.6,
+          32.7,
+          32.4,
+          32.1,
+          32.5,
+          32.5,
+          32.6,
+          32.3,
+          32.5,
+          32.6,
+          32.7,
+          32.5,
+          32.6,
+          32.2,
+          32.7,
+          32.4,
+          32.5,
+          32.5,
+          32.4,
+          32.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -805,6 +880,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.51,
       "top2_sum": 0.9
+    },
+    {
+      "ts": "2026-10-02T12:45:53.097Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -867,11 +950,11 @@
         31,
         31
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 882
+      "volume": 4360
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C on October 2?",
@@ -880,11 +963,11 @@
         32,
         32
       ],
-      "bid": 0.39,
-      "ask": 0.39,
-      "price": 0.39,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4171
+      "volume": 6948
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on October 2?",
@@ -893,11 +976,11 @@
         33,
         33
       ],
-      "bid": 0.51,
-      "ask": 0.51,
-      "price": 0.51,
-      "spread": 0,
-      "volume": 3479
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 5395
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C on October 2?",
@@ -906,11 +989,11 @@
         34,
         34
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1396
+      "volume": 2714
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on October 2?",
@@ -919,11 +1002,11 @@
         35,
         35
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 680
+      "volume": 1098
     },
     {
       "question": "Will the highest temperature in Lucknow be 36°C on October 2?",
@@ -932,11 +1015,11 @@
         36,
         36
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 121
+      "volume": 276
     },
     {
       "question": "Will the highest temperature in Lucknow be 37°C or higher on October 2?",
@@ -952,5 +1035,6 @@
       "volume": 325
     }
   ],
-  "created_at": "2026-09-30T06:48:16.707Z"
+  "created_at": "2026-09-30T06:48:16.707Z",
+  "metar_max": 32
 }

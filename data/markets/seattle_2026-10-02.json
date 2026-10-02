@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-10-02T12:00:00Z",
   "hours_at_discovery": 46.2,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -608,6 +608,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-02T12:45:13.734Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 71,
+      "hrrr": 69,
+      "metar": 53,
+      "best": 70,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 71,
+          "gfs_seamless": 69,
+          "icon_seamless": 69
+        },
+        "mean": 70,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          72,
+          69,
+          70,
+          70,
+          73,
+          70,
+          69,
+          70,
+          71,
+          71,
+          70,
+          70,
+          68,
+          70,
+          70,
+          71,
+          70,
+          71,
+          70,
+          70,
+          71,
+          69,
+          68,
+          69,
+          70,
+          70,
+          69,
+          70,
+          71,
+          70,
+          70,
+          70,
+          71,
+          70,
+          71,
+          71,
+          71,
+          71,
+          73,
+          70,
+          71,
+          70,
+          70,
+          71,
+          71,
+          71,
+          69,
+          68,
+          71,
+          70
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -674,6 +748,14 @@
       "top2_bucket": "68-71F",
       "top2_price": 0.445,
       "top2_sum": 0.75
+    },
+    {
+      "ts": "2026-10-02T12:45:13.734Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.475,
+      "top2_bucket": "68-71F",
+      "top2_price": 0.475,
+      "top2_sum": 0.79
     }
   ],
   "all_outcomes": [
@@ -684,9 +766,9 @@
         -999,
         59
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 698
     },
@@ -697,9 +779,9 @@
         60,
         61
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
       "volume": 492
     },
@@ -710,11 +792,11 @@
         62,
         63
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 265
+      "volume": 284
     },
     {
       "question": "Will the highest temperature in Seattle be between 64-65°F on October 2?",
@@ -723,11 +805,11 @@
         64,
         65
       ],
-      "bid": 0.016,
-      "ask": 0.016,
-      "price": 0.016,
+      "bid": 0.0105,
+      "ask": 0.0105,
+      "price": 0.0105,
       "spread": 0,
-      "volume": 432
+      "volume": 925
     },
     {
       "question": "Will the highest temperature in Seattle be between 66-67°F on October 2?",
@@ -736,11 +818,11 @@
         66,
         67
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 462
+      "volume": 652
     },
     {
       "question": "Will the highest temperature in Seattle be between 68-69°F on October 2?",
@@ -749,11 +831,11 @@
         68,
         69
       ],
-      "bid": 0.305,
-      "ask": 0.305,
-      "price": 0.305,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 1564
+      "volume": 2179
     },
     {
       "question": "Will the highest temperature in Seattle be between 70-71°F on October 2?",
@@ -762,11 +844,11 @@
         70,
         71
       ],
-      "bid": 0.445,
-      "ask": 0.445,
-      "price": 0.445,
+      "bid": 0.475,
+      "ask": 0.475,
+      "price": 0.475,
       "spread": 0,
-      "volume": 1793
+      "volume": 3321
     },
     {
       "question": "Will the highest temperature in Seattle be between 72-73°F on October 2?",
@@ -775,11 +857,11 @@
         72,
         73
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 1646
+      "volume": 2461
     },
     {
       "question": "Will the highest temperature in Seattle be between 74-75°F on October 2?",
@@ -788,11 +870,11 @@
         74,
         75
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 395
+      "volume": 433
     },
     {
       "question": "Will the highest temperature in Seattle be between 76-77°F on October 2?",
@@ -801,11 +883,11 @@
         76,
         77
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 398
+      "volume": 406
     },
     {
       "question": "Will the highest temperature in Seattle be 78°F or higher on October 2?",

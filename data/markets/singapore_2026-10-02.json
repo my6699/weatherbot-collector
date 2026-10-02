@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-10-02T12:00:00Z",
   "hours_at_discovery": 53.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -685,6 +685,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-02T12:45:52.026Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 32.7,
+      "hrrr": 31.2,
+      "metar": 30,
+      "best": 32.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.7,
+          "gfs_seamless": 31.2,
+          "icon_seamless": 32.2
+        },
+        "mean": 32.2,
+        "spread": 1,
+        "gap": 1.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          32.6,
+          31.4,
+          31.9,
+          32.9,
+          33.3,
+          31.3,
+          32.4,
+          32.5,
+          29.8,
+          32.6,
+          32.6,
+          32.1,
+          32.2,
+          30.9,
+          33.1,
+          32.5,
+          31.8,
+          32.8,
+          32.1,
+          31.4,
+          31.6,
+          32.2,
+          32.8,
+          32,
+          32.4,
+          32.1,
+          32.7,
+          32.8,
+          32.4,
+          33,
+          32.3,
+          32.7,
+          31.8,
+          32.8,
+          32.7,
+          32.8,
+          31.2,
+          31.6,
+          31.9,
+          32.1,
+          32.7,
+          32.7,
+          32.6,
+          32.5,
+          32.4,
+          32.5,
+          31.8,
+          32.3,
+          31.3,
+          31.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -759,6 +833,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.42,
       "top2_sum": 0.955
+    },
+    {
+      "ts": "2026-10-02T12:45:52.026Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.9995,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -821,11 +903,11 @@
         31,
         31
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 10365
+      "volume": 10755
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on October 2?",
@@ -834,11 +916,11 @@
         32,
         32
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
-      "spread": 0,
-      "volume": 6102
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 10833
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on October 2?",
@@ -847,11 +929,11 @@
         33,
         33
       ],
-      "bid": 0.42,
-      "ask": 0.42,
-      "price": 0.42,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6626
+      "volume": 10119
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on October 2?",
@@ -860,11 +942,11 @@
         34,
         34
       ],
-      "bid": 0.0555,
-      "ask": 0.0555,
-      "price": 0.0555,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5244
+      "volume": 7449
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on October 2?",
@@ -873,11 +955,11 @@
         35,
         35
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3418
+      "volume": 4449
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C on October 2?",
@@ -886,9 +968,9 @@
         36,
         36
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 2707
     },
@@ -906,5 +988,6 @@
       "volume": 1015
     }
   ],
-  "created_at": "2026-09-30T06:48:15.922Z"
+  "created_at": "2026-09-30T06:48:15.922Z",
+  "metar_max": 32
 }
