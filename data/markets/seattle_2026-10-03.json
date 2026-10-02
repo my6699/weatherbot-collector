@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-03T12:00:00Z",
   "hours_at_discovery": 46.6,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "5174498",
+    "question": "Will the highest temperature in Seattle be between 66-67°F on October 3?",
+    "bucket_low": 66,
+    "bucket_high": 67,
+    "entry_price": 0.12,
+    "bid_at_entry": 0.09,
+    "spread": 0.03,
+    "shares": 333.33,
+    "cost": 40,
+    "p": 0.38,
+    "ev": 2.1667,
+    "edge": 0.1249,
+    "kelly": 0.0768,
+    "forecast_temp": 70.41,
+    "forecast_src": "ensemble",
+    "sigma": 1.4,
+    "opened_at": "2026-10-02T18:28:42.449Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.072
+  },
+  "positions": [
+    {
+      "market_id": "5174498",
+      "question": "Will the highest temperature in Seattle be between 66-67°F on October 3?",
+      "bucket_low": 66,
+      "bucket_high": 67,
+      "entry_price": 0.12,
+      "bid_at_entry": 0.09,
+      "spread": 0.03,
+      "shares": 333.33,
+      "cost": 40,
+      "p": 0.38,
+      "ev": 2.1667,
+      "edge": 0.1249,
+      "kelly": 0.0768,
+      "forecast_temp": 70.41,
+      "forecast_src": "ensemble",
+      "sigma": 1.4,
+      "opened_at": "2026-10-02T18:28:42.449Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.072
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -386,6 +436,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-02T18:28:42.449Z",
+      "horizon": "D+1",
+      "hours_left": 17.5,
+      "ecmwf": 67,
+      "hrrr": 69,
+      "metar": null,
+      "best": 67.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 67,
+          "gfs_seamless": 69,
+          "icon_seamless": 67
+        },
+        "mean": 67.6,
+        "spread": 1.4,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          65,
+          66,
+          67,
+          65,
+          68,
+          65,
+          67,
+          67,
+          65,
+          66,
+          68,
+          66,
+          68,
+          66,
+          67,
+          69,
+          66,
+          68,
+          66,
+          64,
+          68,
+          64,
+          66,
+          65,
+          64,
+          67,
+          67,
+          65,
+          65,
+          68,
+          65,
+          66,
+          65,
+          65,
+          66,
+          65,
+          68,
+          68,
+          68,
+          65,
+          65,
+          65,
+          64,
+          68,
+          67,
+          66,
+          67,
+          67,
+          68,
+          65
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -428,6 +552,14 @@
       "top2_bucket": "68-71F",
       "top2_price": 0.38,
       "top2_sum": 0.82
+    },
+    {
+      "ts": "2026-10-02T18:28:42.449Z",
+      "top_bucket": "68-69F",
+      "top_price": 0.44,
+      "top2_bucket": "68-71F",
+      "top2_price": 0.385,
+      "top2_sum": 0.825
     }
   ],
   "all_outcomes": [
@@ -442,7 +574,7 @@
       "ask": 0.001,
       "price": 0.001,
       "spread": 0,
-      "volume": 170
+      "volume": 176
     },
     {
       "question": "Will the highest temperature in Seattle be between 58-59°F on October 3?",
@@ -455,7 +587,7 @@
       "ask": 0.001,
       "price": 0.001,
       "spread": 0,
-      "volume": 170
+      "volume": 176
     },
     {
       "question": "Will the highest temperature in Seattle be between 60-61°F on October 3?",
@@ -468,7 +600,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 105
+      "volume": 111
     },
     {
       "question": "Will the highest temperature in Seattle be between 62-63°F on October 3?",
@@ -481,7 +613,7 @@
       "ask": 0.0095,
       "price": 0.0095,
       "spread": 0,
-      "volume": 34
+      "volume": 40
     },
     {
       "question": "Will the highest temperature in Seattle be between 64-65°F on October 3?",
@@ -490,11 +622,11 @@
         64,
         65
       ],
-      "bid": 0.027,
-      "ask": 0.027,
-      "price": 0.027,
+      "bid": 0.0195,
+      "ask": 0.0195,
+      "price": 0.0195,
       "spread": 0,
-      "volume": 112
+      "volume": 148
     },
     {
       "question": "Will the highest temperature in Seattle be between 66-67°F on October 3?",
@@ -503,11 +635,11 @@
         66,
         67
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 329
+      "volume": 539
     },
     {
       "question": "Will the highest temperature in Seattle be between 68-69°F on October 3?",
@@ -529,11 +661,11 @@
         70,
         71
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.385,
+      "ask": 0.385,
+      "price": 0.385,
       "spread": 0,
-      "volume": 253
+      "volume": 466
     },
     {
       "question": "Will the highest temperature in Seattle be between 72-73°F on October 3?",
@@ -542,11 +674,11 @@
         72,
         73
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.05,
+      "ask": 0.05,
+      "price": 0.05,
       "spread": 0,
-      "volume": 185
+      "volume": 210
     },
     {
       "question": "Will the highest temperature in Seattle be between 74-75°F on October 3?",
@@ -555,9 +687,9 @@
         74,
         75
       ],
-      "bid": 0.0205,
-      "ask": 0.0205,
-      "price": 0.0205,
+      "bid": 0.017,
+      "ask": 0.017,
+      "price": 0.017,
       "spread": 0,
       "volume": 44
     },
