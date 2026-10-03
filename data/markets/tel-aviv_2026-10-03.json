@@ -6,7 +6,7 @@
   "station": "LLBG",
   "event_end_date": "2026-10-03T12:00:00Z",
   "hours_at_discovery": 53.9,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5170415",
     "question": "Will the highest temperature in Tel Aviv be 31°C on October 3?",
@@ -51,17 +51,18 @@
       "forecast_src": "ensemble",
       "sigma": 1.2,
       "opened_at": "2026-10-01T23:56:51.842Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.92,
+      "exit_price": 0.0005,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-10-03T13:28:23.149Z",
       "stop_price": 0.24,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -810,6 +811,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-03T13:28:23.149Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 31.4,
+      "hrrr": 29.2,
+      "metar": 29,
+      "best": 30.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.4,
+          "gfs_seamless": 29.2,
+          "icon_seamless": 31.2
+        },
+        "mean": 30.7,
+        "spread": 1.5,
+        "gap": 2.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          31,
+          31.7,
+          31.3,
+          30.4,
+          30.4,
+          30.3,
+          29.6,
+          30.7,
+          31.1,
+          31.7,
+          30.8,
+          30.6,
+          31,
+          31.1,
+          29.8,
+          30.6,
+          29.8,
+          31,
+          30.7,
+          32.2,
+          30.8,
+          31,
+          29.7,
+          31.3,
+          30.8,
+          31.3,
+          31.2,
+          32.2,
+          31.5,
+          31,
+          31,
+          30.2,
+          31.5,
+          30.5,
+          30.6,
+          31.2,
+          31.1,
+          31.5,
+          31.1,
+          31.1,
+          29.9,
+          31.1,
+          30.8,
+          30.7,
+          31.4,
+          30.9,
+          31.6,
+          30.9,
+          30.8,
+          31.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -892,6 +968,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.595,
       "top2_sum": 0.955
+    },
+    {
+      "ts": "2026-10-03T13:28:23.149Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.9975,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.9975,
+      "top2_sum": 0.998
     }
   ],
   "all_outcomes": [
@@ -906,7 +990,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 65
+      "volume": 91
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 28°C on October 3?",
@@ -919,7 +1003,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 903
+      "volume": 928
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 29°C on October 3?",
@@ -928,11 +1012,11 @@
         29,
         29
       ],
-      "bid": 0.023,
-      "ask": 0.023,
-      "price": 0.023,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1957
+      "volume": 2304
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 30°C on October 3?",
@@ -941,11 +1025,11 @@
         30,
         30
       ],
-      "bid": 0.36,
-      "ask": 0.36,
-      "price": 0.36,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6999
+      "volume": 10302
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 31°C on October 3?",
@@ -954,11 +1038,11 @@
         31,
         31
       ],
-      "bid": 0.595,
-      "ask": 0.595,
-      "price": 0.595,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7544
+      "volume": 15003
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 32°C on October 3?",
@@ -967,11 +1051,11 @@
         32,
         32
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0.9975,
+      "ask": 0.9975,
+      "price": 0.9975,
       "spread": 0,
-      "volume": 1711
+      "volume": 12247
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on October 3?",
@@ -984,7 +1068,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 87
+      "volume": 1635
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 34°C on October 3?",
@@ -997,7 +1081,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1076
+      "volume": 1423
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 35°C on October 3?",
@@ -1010,7 +1094,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1595
+      "volume": 1621
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 36°C on October 3?",
@@ -1023,7 +1107,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 295
+      "volume": 321
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 37°C or higher on October 3?",
@@ -1036,8 +1120,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 15
+      "volume": 41
     }
   ],
-  "created_at": "2026-10-01T06:05:28.078Z"
+  "created_at": "2026-10-01T06:05:28.078Z",
+  "metar_max": 24
 }

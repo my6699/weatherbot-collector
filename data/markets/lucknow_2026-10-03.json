@@ -6,10 +6,10 @@
   "station": "VILK",
   "event_end_date": "2026-10-03T12:00:00Z",
   "hours_at_discovery": 53.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -752,6 +752,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-03T13:28:21.204Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 33.3,
+      "hrrr": 33.3,
+      "metar": 30,
+      "best": 33.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.3,
+          "gfs_seamless": 33.3,
+          "icon_seamless": 33.8
+        },
+        "mean": 33.4,
+        "spread": 0.4,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          33,
+          33,
+          32.8,
+          32.9,
+          33,
+          32.9,
+          32.7,
+          32.9,
+          33,
+          32.7,
+          32.7,
+          33,
+          32.7,
+          32.9,
+          32.7,
+          32.8,
+          32.8,
+          33,
+          33,
+          33,
+          33,
+          33,
+          33,
+          32.8,
+          32.9,
+          32.9,
+          32.8,
+          32.9,
+          32.8,
+          32.8,
+          32.7,
+          32.6,
+          32.5,
+          33,
+          32.8,
+          32.7,
+          32.5,
+          32.8,
+          32.7,
+          32.8,
+          33.1,
+          32.6,
+          33,
+          32.7,
+          32.8,
+          32.7,
+          32.7,
+          32.9,
+          33,
+          32.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -834,6 +908,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.045,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-10-03T13:28:21.204Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -913,7 +995,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1545
+      "volume": 1566
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on October 3?",
@@ -922,11 +1004,11 @@
         33,
         33
       ],
-      "bid": 0.945,
-      "ask": 0.945,
-      "price": 0.945,
-      "spread": 0,
-      "volume": 4705
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 7200
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C on October 3?",
@@ -935,11 +1017,11 @@
         34,
         34
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1519
+      "volume": 2779
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on October 3?",
@@ -948,11 +1030,11 @@
         35,
         35
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1030
+      "volume": 1264
     },
     {
       "question": "Will the highest temperature in Lucknow be 36°C on October 3?",
@@ -961,11 +1043,11 @@
         36,
         36
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 242
+      "volume": 317
     },
     {
       "question": "Will the highest temperature in Lucknow be 37°C or higher on October 3?",
@@ -974,12 +1056,13 @@
         37,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 713
+      "volume": 1303
     }
   ],
-  "created_at": "2026-10-01T06:05:12.320Z"
+  "created_at": "2026-10-01T06:05:12.320Z",
+  "metar_max": 27
 }
