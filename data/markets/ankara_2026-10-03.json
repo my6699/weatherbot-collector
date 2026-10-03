@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-10-02T23:01:31.971Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -25,
+      "exit_price": 0.075,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-10-03T02:03:58.294Z",
       "stop_price": 0.144
     }
   ],
@@ -655,6 +655,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-03T02:03:58.294Z",
+      "horizon": "D+0",
+      "hours_left": 9.9,
+      "ecmwf": 15.9,
+      "hrrr": 16,
+      "metar": 7,
+      "best": 15.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 15.9,
+          "gfs_seamless": 16,
+          "icon_seamless": 15.6
+        },
+        "mean": 15.9,
+        "spread": 0.3,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          15.8,
+          16,
+          16.6,
+          16.5,
+          16.4,
+          16.4,
+          16.2,
+          16.6,
+          16.6,
+          16.3,
+          16.3,
+          16.1,
+          16,
+          16.1,
+          16.1,
+          15.7,
+          16.1,
+          16.3,
+          16.3,
+          16.4,
+          16,
+          16,
+          16.2,
+          16.3,
+          16.2,
+          16.2,
+          16,
+          15.9,
+          16.4,
+          16.7,
+          15.9,
+          16,
+          16.1,
+          16.2,
+          16.6,
+          15.9,
+          16.4,
+          15.8,
+          16.1,
+          16.2,
+          15.8,
+          16.8,
+          16.3,
+          16,
+          16.9,
+          16.4,
+          16,
+          16.2,
+          16.2,
+          15.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -721,6 +795,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.645,
       "top2_sum": 0.84
+    },
+    {
+      "ts": "2026-10-03T02:03:58.294Z",
+      "top_bucket": "17-17C",
+      "top_price": 0.655,
+      "top2_bucket": "16-17C",
+      "top2_price": 0.655,
+      "top2_sum": 0.925
     }
   ],
   "all_outcomes": [
@@ -770,11 +852,11 @@
         15,
         15
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0135,
+      "ask": 0.0135,
+      "price": 0.0135,
       "spread": 0,
-      "volume": 853
+      "volume": 1418
     },
     {
       "question": "Will the highest temperature in Ankara be 16°C on October 3?",
@@ -783,11 +865,11 @@
         16,
         16
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.27,
+      "ask": 0.27,
+      "price": 0.27,
       "spread": 0,
-      "volume": 4299
+      "volume": 5408
     },
     {
       "question": "Will the highest temperature in Ankara be 17°C on October 3?",
@@ -796,11 +878,11 @@
         17,
         17
       ],
-      "bid": 0.645,
-      "ask": 0.645,
-      "price": 0.645,
+      "bid": 0.655,
+      "ask": 0.655,
+      "price": 0.655,
       "spread": 0,
-      "volume": 3562
+      "volume": 3711
     },
     {
       "question": "Will the highest temperature in Ankara be 18°C on October 3?",
@@ -809,11 +891,11 @@
         18,
         18
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 5327
+      "volume": 5525
     },
     {
       "question": "Will the highest temperature in Ankara be 19°C on October 3?",
@@ -822,11 +904,11 @@
         19,
         19
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.009,
+      "ask": 0.009,
+      "price": 0.009,
       "spread": 0,
-      "volume": 1386
+      "volume": 1440
     },
     {
       "question": "Will the highest temperature in Ankara be 20°C on October 3?",
