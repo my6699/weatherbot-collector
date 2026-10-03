@@ -6,10 +6,10 @@
   "station": "KORD",
   "event_end_date": "2026-10-03T12:00:00Z",
   "hours_at_discovery": 46.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 68.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -907,6 +907,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-03T23:55:11.246Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 67,
+      "hrrr": 68,
+      "metar": 63,
+      "best": 67.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 67,
+          "gfs_seamless": 68,
+          "icon_seamless": 69
+        },
+        "mean": 67.7,
+        "spread": 1.3,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          66,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          66,
+          67,
+          67,
+          67,
+          67,
+          66,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67,
+          67
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1005,6 +1079,14 @@
       "top2_bucket": "68-71F",
       "top2_price": 0.165,
       "top2_sum": 0.98
+    },
+    {
+      "ts": "2026-10-03T23:55:11.246Z",
+      "top_bucket": "68-69F",
+      "top_price": 0.9995,
+      "top2_bucket": "66-69F",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1097,7 +1179,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 9360
+      "volume": 9380
     },
     {
       "question": "Will the highest temperature in Chicago be between 68-69°F on October 3?",
@@ -1106,11 +1188,11 @@
         68,
         69
       ],
-      "bid": 0.815,
-      "ask": 0.815,
-      "price": 0.815,
-      "spread": 0,
-      "volume": 8250
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 12566
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on October 3?",
@@ -1119,11 +1201,11 @@
         70,
         71
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3731
+      "volume": 5196
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on October 3?",
@@ -1132,11 +1214,11 @@
         72,
         73
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4945
+      "volume": 5486
     },
     {
       "question": "Will the highest temperature in Chicago be 74°F or higher on October 3?",
@@ -1145,11 +1227,11 @@
         74,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1447
+      "volume": 2440
     }
   ],
   "created_at": "2026-10-01T13:26:49.270Z"
