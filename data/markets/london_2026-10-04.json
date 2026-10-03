@@ -51,13 +51,14 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-10-03T08:13:27.132Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -17.5,
+      "exit_price": 0.09,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-10-03T21:23:54.350Z",
       "stop_price": 0.112,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 1,
+      "stop_pending": true
     }
   ],
   "actual_temp": null,
@@ -659,6 +660,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-03T21:23:33.571Z",
+      "horizon": "D+1",
+      "hours_left": 14.6,
+      "ecmwf": 19.9,
+      "hrrr": 22,
+      "metar": null,
+      "best": 20.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.9,
+          "gfs_seamless": 22,
+          "icon_seamless": 20.9
+        },
+        "mean": 20.7,
+        "spread": 1.3,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          20.1,
+          20.3,
+          20.7,
+          20.9,
+          19.2,
+          20.9,
+          19.7,
+          20.9,
+          19.7,
+          20,
+          20.8,
+          21.5,
+          19.5,
+          18.5,
+          19.6,
+          20.6,
+          20.6,
+          20.1,
+          22.2,
+          19.5,
+          19.9,
+          19.7,
+          20.2,
+          17.6,
+          20.1,
+          20.7,
+          19.9,
+          19.2,
+          20.5,
+          20.3,
+          19.9,
+          19.3,
+          20.6,
+          19.2,
+          19.4,
+          20.5,
+          20.1,
+          21.3,
+          19,
+          20.6,
+          19.5,
+          20.4,
+          19.7,
+          20.7,
+          20.2,
+          20.5,
+          20.4,
+          20.4,
+          20.5,
+          19.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -725,6 +801,14 @@
       "top2_bucket": "21-22C",
       "top2_price": 0.515,
       "top2_sum": 0.77
+    },
+    {
+      "ts": "2026-10-03T21:23:33.571Z",
+      "top_bucket": "22-22C",
+      "top_price": 0.525,
+      "top2_bucket": "21-22C",
+      "top2_price": 0.525,
+      "top2_sum": 0.83
     }
   ],
   "all_outcomes": [
@@ -748,11 +832,11 @@
         18,
         18
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1167
+      "volume": 1258
     },
     {
       "question": "Will the highest temperature in London be 19°C on October 4?",
@@ -761,11 +845,11 @@
         19,
         19
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 1209
+      "volume": 1531
     },
     {
       "question": "Will the highest temperature in London be 20°C on October 4?",
@@ -774,11 +858,11 @@
         20,
         20
       ],
-      "bid": 0.0245,
-      "ask": 0.0245,
-      "price": 0.0245,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 1515
+      "volume": 2383
     },
     {
       "question": "Will the highest temperature in London be 21°C on October 4?",
@@ -787,11 +871,11 @@
         21,
         21
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.305,
+      "ask": 0.305,
+      "price": 0.305,
       "spread": 0,
-      "volume": 1734
+      "volume": 4910
     },
     {
       "question": "Will the highest temperature in London be 22°C on October 4?",
@@ -800,11 +884,11 @@
         22,
         22
       ],
-      "bid": 0.515,
-      "ask": 0.515,
-      "price": 0.515,
+      "bid": 0.525,
+      "ask": 0.525,
+      "price": 0.525,
       "spread": 0,
-      "volume": 3580
+      "volume": 4014
     },
     {
       "question": "Will the highest temperature in London be 23°C on October 4?",
@@ -813,11 +897,11 @@
         23,
         23
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
-      "volume": 4044
+      "volume": 5111
     },
     {
       "question": "Will the highest temperature in London be 24°C on October 4?",
@@ -826,11 +910,11 @@
         24,
         24
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 2027
+      "volume": 2669
     },
     {
       "question": "Will the highest temperature in London be 25°C on October 4?",
@@ -839,11 +923,11 @@
         25,
         25
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1317
+      "volume": 1618
     },
     {
       "question": "Will the highest temperature in London be 26°C on October 4?",

@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-10-03T12:00:00Z",
   "hours_at_discovery": 46.6,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5172383",
     "question": "Will the highest temperature in New York City be between 68-69°F on October 3?",
@@ -56,10 +56,11 @@
       "exit_price": 0.05,
       "close_reason": "stop_loss",
       "closed_at": "2026-10-02T12:45:06.689Z",
-      "stop_price": 0.136
+      "stop_price": 0.136,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -881,6 +882,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-03T21:23:21.379Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 72,
+      "hrrr": 72,
+      "metar": 71,
+      "best": 72,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 72,
+          "gfs_seamless": 72,
+          "icon_seamless": 72
+        },
+        "mean": 72,
+        "spread": 0,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          71,
+          72,
+          72,
+          72,
+          71,
+          72,
+          72,
+          72,
+          72,
+          71,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          71,
+          72,
+          71,
+          72,
+          71,
+          73,
+          72,
+          72,
+          71,
+          72,
+          71,
+          72,
+          72,
+          72,
+          71,
+          72,
+          72,
+          72,
+          72,
+          71,
+          71,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -971,6 +1046,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.365,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-10-03T21:23:21.379Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.9715,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.023,
+      "top2_sum": 0.9945
     }
   ],
   "all_outcomes": [
@@ -1046,11 +1129,11 @@
         70,
         71
       ],
-      "bid": 0.625,
-      "ask": 0.625,
-      "price": 0.625,
+      "bid": 0.9715,
+      "ask": 0.9715,
+      "price": 0.9715,
       "spread": 0,
-      "volume": 4571
+      "volume": 8140
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on October 3?",
@@ -1059,11 +1142,11 @@
         72,
         73
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.023,
+      "ask": 0.023,
+      "price": 0.023,
       "spread": 0,
-      "volume": 7103
+      "volume": 8995
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on October 3?",
@@ -1072,11 +1155,11 @@
         74,
         75
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 2345
+      "volume": 3193
     },
     {
       "question": "Will the highest temperature in New York City be between 76-77°F on October 3?",
@@ -1085,11 +1168,11 @@
         76,
         77
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 2329
+      "volume": 2680
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on October 3?",
