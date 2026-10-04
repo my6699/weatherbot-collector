@@ -6,10 +6,10 @@
   "station": "KORD",
   "event_end_date": "2026-10-04T12:00:00Z",
   "hours_at_discovery": 47.2,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 72.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -907,6 +907,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-04T21:34:39.500Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 71,
+      "hrrr": 73,
+      "metar": 72,
+      "best": 71.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 71,
+          "gfs_seamless": 73,
+          "icon_seamless": 71
+        },
+        "mean": 71.6,
+        "spread": 1.4,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          70,
+          70,
+          70,
+          71,
+          72,
+          71,
+          70,
+          70,
+          71,
+          71,
+          72,
+          71,
+          71,
+          71,
+          71,
+          70,
+          71,
+          70,
+          71,
+          71,
+          70,
+          70,
+          71,
+          70,
+          71,
+          71,
+          71,
+          70,
+          70,
+          71,
+          71,
+          71,
+          70,
+          70,
+          70,
+          70,
+          71,
+          70,
+          70,
+          70,
+          71,
+          71,
+          70,
+          71,
+          70,
+          71,
+          71,
+          70,
+          71,
+          71
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1005,6 +1079,14 @@
       "top2_bucket": "72-75F",
       "top2_price": 0.38,
       "top2_sum": 0.905
+    },
+    {
+      "ts": "2026-10-04T21:34:39.500Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.98,
+      "top2_bucket": "72-75F",
+      "top2_price": 0.022,
+      "top2_sum": 1.002
     }
   ],
   "all_outcomes": [
@@ -1071,7 +1153,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2511
+      "volume": 2513
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on October 4?",
@@ -1080,11 +1162,11 @@
         70,
         71
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7366
+      "volume": 9136
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on October 4?",
@@ -1093,11 +1175,11 @@
         72,
         73
       ],
-      "bid": 0.525,
-      "ask": 0.525,
-      "price": 0.525,
+      "bid": 0.98,
+      "ask": 0.98,
+      "price": 0.98,
       "spread": 0,
-      "volume": 3668
+      "volume": 5695
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on October 4?",
@@ -1106,11 +1188,11 @@
         74,
         75
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.022,
+      "ask": 0.022,
+      "price": 0.022,
       "spread": 0,
-      "volume": 6401
+      "volume": 7360
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on October 4?",
@@ -1119,11 +1201,11 @@
         76,
         77
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 2857
+      "volume": 4927
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on October 4?",
@@ -1132,9 +1214,9 @@
         78,
         79
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1221
     },
@@ -1149,8 +1231,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 95
+      "volume": 714
     }
   ],
-  "created_at": "2026-10-02T12:45:09.511Z"
+  "created_at": "2026-10-02T12:45:09.511Z",
+  "metar_max": 59
 }

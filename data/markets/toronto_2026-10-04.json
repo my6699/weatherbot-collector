@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-10-04T12:00:00Z",
   "hours_at_discovery": 41.5,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5203548",
     "question": "Will the highest temperature in Toronto be 19°C on October 4?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-10-04T17:38:05.551Z",
       "stop_price": 0.168,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 22,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -877,6 +878,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-04T21:35:44.345Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 19.2,
+      "hrrr": 20.9,
+      "metar": 22,
+      "best": 19.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.2,
+          "gfs_seamless": 20.9,
+          "icon_seamless": 19.8
+        },
+        "mean": 19.8,
+        "spread": 1.1,
+        "gap": 1.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          18.5,
+          18.3,
+          18.8,
+          19.2,
+          19,
+          18.7,
+          19,
+          18.7,
+          19,
+          18.8,
+          19.1,
+          18.5,
+          18.6,
+          19.2,
+          18.9,
+          18.6,
+          18.7,
+          18.7,
+          18.6,
+          18.8,
+          18.9,
+          18.2,
+          19.1,
+          18.7,
+          18.7,
+          19,
+          18.6,
+          18.5,
+          18.7,
+          18.4,
+          19,
+          19,
+          18.8,
+          18,
+          18.8,
+          18.9,
+          18.6,
+          18.9,
+          18.7,
+          18.6,
+          18.8,
+          19.1,
+          18.9,
+          19.2,
+          18.9,
+          19,
+          18.1,
+          19,
+          18.8,
+          18.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -967,6 +1043,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.23,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-10-04T21:35:44.345Z",
+      "top_bucket": "22-22C",
+      "top_price": 0.9865,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.0075,
+      "top2_sum": 0.994
     }
   ],
   "all_outcomes": [
@@ -1007,7 +1091,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1026
+      "volume": 1066
     },
     {
       "question": "Will the highest temperature in Toronto be 17°C on October 4?",
@@ -1020,7 +1104,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3280
+      "volume": 3364
     },
     {
       "question": "Will the highest temperature in Toronto be 18°C on October 4?",
@@ -1029,11 +1113,11 @@
         18,
         18
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1394
+      "volume": 1778
     },
     {
       "question": "Will the highest temperature in Toronto be 19°C on October 4?",
@@ -1042,11 +1126,11 @@
         19,
         19
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6784
+      "volume": 7982
     },
     {
       "question": "Will the highest temperature in Toronto be 20°C on October 4?",
@@ -1055,11 +1139,11 @@
         20,
         20
       ],
-      "bid": 0.63,
-      "ask": 0.63,
-      "price": 0.63,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5631
+      "volume": 10005
     },
     {
       "question": "Will the highest temperature in Toronto be 21°C on October 4?",
@@ -1068,11 +1152,11 @@
         21,
         21
       ],
-      "bid": 0.23,
-      "ask": 0.23,
-      "price": 0.23,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 5425
+      "volume": 27490
     },
     {
       "question": "Will the highest temperature in Toronto be 22°C on October 4?",
@@ -1081,11 +1165,11 @@
         22,
         22
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.9865,
+      "ask": 0.9865,
+      "price": 0.9865,
       "spread": 0,
-      "volume": 1941
+      "volume": 3699
     },
     {
       "question": "Will the highest temperature in Toronto be 23°C on October 4?",
@@ -1094,11 +1178,11 @@
         23,
         23
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 734
+      "volume": 1533
     },
     {
       "question": "Will the highest temperature in Toronto be 24°C or higher on October 4?",
@@ -1107,12 +1191,13 @@
         24,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 1131
+      "volume": 1292
     }
   ],
-  "created_at": "2026-10-02T18:29:01.355Z"
+  "created_at": "2026-10-02T18:29:01.355Z",
+  "metar_max": 12
 }
