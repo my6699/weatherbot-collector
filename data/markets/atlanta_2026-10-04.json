@@ -834,6 +834,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-04T17:37:40.148Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 75,
+      "hrrr": 82,
+      "metar": 77,
+      "best": 76.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 75,
+          "gfs_seamless": 82,
+          "icon_seamless": 74
+        },
+        "mean": 76.9,
+        "spread": 5.1,
+        "gap": 7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          76,
+          78,
+          74,
+          73,
+          74,
+          77,
+          74,
+          73,
+          75,
+          77,
+          78,
+          74,
+          77,
+          76,
+          75,
+          77,
+          76,
+          76,
+          79,
+          73,
+          75,
+          75,
+          73,
+          73,
+          79,
+          76,
+          75,
+          76,
+          78,
+          74,
+          79,
+          73,
+          72,
+          75,
+          74,
+          76,
+          74,
+          78,
+          74,
+          73,
+          79,
+          79,
+          76,
+          75,
+          75,
+          76,
+          80,
+          80,
+          72,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -924,6 +999,14 @@
       "top2_bucket": "74-77F",
       "top2_price": 0.25,
       "top2_sum": 0.615
+    },
+    {
+      "ts": "2026-10-04T17:37:40.148Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.605,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.2365,
+      "top2_sum": 0.8415
     }
   ],
   "all_outcomes": [
@@ -1012,11 +1095,11 @@
         74,
         75
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5869
+      "volume": 8195
     },
     {
       "question": "Will the highest temperature in Atlanta be between 76-77°F on October 4?",
@@ -1025,11 +1108,11 @@
         76,
         77
       ],
-      "bid": 0.25,
-      "ask": 0.25,
-      "price": 0.25,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 5591
+      "volume": 7312
     },
     {
       "question": "Will the highest temperature in Atlanta be between 78-79°F on October 4?",
@@ -1038,11 +1121,11 @@
         78,
         79
       ],
-      "bid": 0.3,
-      "ask": 0.3,
-      "price": 0.3,
+      "bid": 0.605,
+      "ask": 0.605,
+      "price": 0.605,
       "spread": 0,
-      "volume": 2264
+      "volume": 2782
     },
     {
       "question": "Will the highest temperature in Atlanta be between 80-81°F on October 4?",
@@ -1051,11 +1134,11 @@
         80,
         81
       ],
-      "bid": 0.0695,
-      "ask": 0.0695,
-      "price": 0.0695,
+      "bid": 0.2365,
+      "ask": 0.2365,
+      "price": 0.2365,
       "spread": 0,
-      "volume": 1796
+      "volume": 2401
     },
     {
       "question": "Will the highest temperature in Atlanta be 82°F or higher on October 4?",
@@ -1064,11 +1147,11 @@
         82,
         999
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 863
+      "volume": 2655
     }
   ],
   "created_at": "2026-10-02T12:45:15.698Z"
