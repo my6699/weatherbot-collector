@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-10-04T12:00:00Z",
   "hours_at_discovery": 54.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 23,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -832,6 +832,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-04T12:28:56.461Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 22,
+      "hrrr": 20.8,
+      "metar": 22,
+      "best": 21.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 22,
+          "gfs_seamless": 20.8,
+          "icon_seamless": 21.9
+        },
+        "mean": 21.6,
+        "spread": 0.8,
+        "gap": 1.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          22.7,
+          22,
+          21.8,
+          22.8,
+          21.7,
+          22,
+          23.2,
+          21.9,
+          22.5,
+          22.3,
+          22.5,
+          22.5,
+          22.2,
+          21.3,
+          23.3,
+          22.6,
+          22.8,
+          22.1,
+          22,
+          22.1,
+          21.3,
+          24.1,
+          23.2,
+          22.9,
+          22.7,
+          21.8,
+          21.8,
+          22.6,
+          22.1,
+          22.3,
+          21.6,
+          23.2,
+          23.6,
+          22.3,
+          22.3,
+          22.6,
+          23.1,
+          23.3,
+          23,
+          23.8,
+          22.3,
+          22.6,
+          22.6,
+          21.9,
+          23.2,
+          22,
+          22.8,
+          22.4,
+          22.7,
+          22.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -922,6 +996,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.0165,
       "top2_sum": 0.9935
+    },
+    {
+      "ts": "2026-10-04T12:28:56.461Z",
+      "top_bucket": "23-23C",
+      "top_price": 0.998,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.998,
+      "top2_sum": 0.9985
     }
   ],
   "all_outcomes": [
@@ -962,7 +1044,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2288
+      "volume": 2389
     },
     {
       "question": "Will the highest temperature in Shanghai be 21°C on October 4?",
@@ -975,7 +1057,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7478
+      "volume": 7488
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on October 4?",
@@ -988,7 +1070,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 8833
+      "volume": 9214
     },
     {
       "question": "Will the highest temperature in Shanghai be 23°C on October 4?",
@@ -997,11 +1079,11 @@
         23,
         23
       ],
-      "bid": 0.977,
-      "ask": 0.977,
-      "price": 0.977,
+      "bid": 0.998,
+      "ask": 0.998,
+      "price": 0.998,
       "spread": 0,
-      "volume": 11322
+      "volume": 14331
     },
     {
       "question": "Will the highest temperature in Shanghai be 24°C on October 4?",
@@ -1010,11 +1092,11 @@
         24,
         24
       ],
-      "bid": 0.0165,
-      "ask": 0.0165,
-      "price": 0.0165,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4395
+      "volume": 6083
     },
     {
       "question": "Will the highest temperature in Shanghai be 25°C on October 4?",
@@ -1023,11 +1105,11 @@
         25,
         25
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2117
+      "volume": 2368
     },
     {
       "question": "Will the highest temperature in Shanghai be 26°C on October 4?",
@@ -1069,5 +1151,6 @@
       "volume": 300
     }
   ],
-  "created_at": "2026-10-02T05:47:53.845Z"
+  "created_at": "2026-10-02T05:47:53.845Z",
+  "metar_max": 23
 }

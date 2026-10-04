@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-10-04T12:00:00Z",
   "hours_at_discovery": 54.2,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "5197843",
     "question": "Will the highest temperature in Paris be 24°C on October 4?",
@@ -810,6 +810,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-04T12:28:49.370Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 23.5,
+      "hrrr": 24.6,
+      "metar": 23,
+      "best": 23.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 23.5,
+          "gfs_seamless": 24.6,
+          "icon_seamless": 23.2
+        },
+        "mean": 23.8,
+        "spread": 0.8,
+        "gap": 1.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          23.6,
+          22.9,
+          23.3,
+          23.1,
+          24.5,
+          23.8,
+          23.5,
+          23.4,
+          23.4,
+          23.6,
+          24.5,
+          23.7,
+          23.7,
+          23.9,
+          23.5,
+          23.8,
+          23.2,
+          23.8,
+          23.9,
+          23.6,
+          23.1,
+          23.4,
+          23.5,
+          23.6,
+          23.6,
+          23.6,
+          24.6,
+          23.5,
+          23.4,
+          24,
+          23.9,
+          23,
+          24.2,
+          24.6,
+          24,
+          23.7,
+          24.1,
+          23.3,
+          23.1,
+          22.7,
+          24,
+          23.5,
+          23.6,
+          23.4,
+          24.2,
+          23.3,
+          23.5,
+          23.7,
+          24.3,
+          23.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -892,6 +966,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.585,
       "top2_sum": 0.91
+    },
+    {
+      "ts": "2026-10-04T12:28:49.370Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.585,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.585,
+      "top2_sum": 0.88
     }
   ],
   "all_outcomes": [
@@ -941,11 +1023,11 @@
         19,
         19
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2154
+      "volume": 2230
     },
     {
       "question": "Will the highest temperature in Paris be 20°C on October 4?",
@@ -954,11 +1036,11 @@
         20,
         20
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1463
+      "volume": 1653
     },
     {
       "question": "Will the highest temperature in Paris be 21°C on October 4?",
@@ -971,7 +1053,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1278
+      "volume": 1670
     },
     {
       "question": "Will the highest temperature in Paris be 22°C on October 4?",
@@ -980,11 +1062,11 @@
         22,
         22
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1825
+      "volume": 3440
     },
     {
       "question": "Will the highest temperature in Paris be 23°C on October 4?",
@@ -993,11 +1075,11 @@
         23,
         23
       ],
-      "bid": 0.026,
-      "ask": 0.026,
-      "price": 0.026,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
-      "volume": 2522
+      "volume": 4726
     },
     {
       "question": "Will the highest temperature in Paris be 24°C on October 4?",
@@ -1006,11 +1088,11 @@
         24,
         24
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.295,
+      "ask": 0.295,
+      "price": 0.295,
       "spread": 0,
-      "volume": 5434
+      "volume": 7776
     },
     {
       "question": "Will the highest temperature in Paris be 25°C on October 4?",
@@ -1023,7 +1105,7 @@
       "ask": 0.585,
       "price": 0.585,
       "spread": 0,
-      "volume": 6800
+      "volume": 9025
     },
     {
       "question": "Will the highest temperature in Paris be 26°C or higher on October 4?",
@@ -1032,11 +1114,11 @@
         26,
         999
       ],
-      "bid": 0.0805,
-      "ask": 0.0805,
-      "price": 0.0805,
+      "bid": 0.152,
+      "ask": 0.152,
+      "price": 0.152,
       "spread": 0,
-      "volume": 8983
+      "volume": 10723
     }
   ],
   "created_at": "2026-10-02T05:47:48.193Z"

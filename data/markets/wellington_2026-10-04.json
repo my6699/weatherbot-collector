@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-10-04T12:00:00Z",
   "hours_at_discovery": 54.2,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5197872",
     "question": "Will the highest temperature in Wellington be 12°C on October 4?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-10-03T18:02:08.101Z",
       "stop_price": 0.16,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 13,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -878,6 +879,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-04T12:29:09.136Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 8,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -968,6 +980,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-04T12:29:09.136Z",
+      "top_bucket": "13-13C",
+      "top_price": 1,
+      "top2_bucket": "12-13C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -978,9 +998,9 @@
         -999,
         8
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 320
     },
@@ -991,9 +1011,9 @@
         9,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 20
     },
@@ -1004,9 +1024,9 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 194
     },
@@ -1017,9 +1037,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1228
     },
@@ -1030,11 +1050,11 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 10654
+      "volume": 10660
     },
     {
       "question": "Will the highest temperature in Wellington be 13°C on October 4?",
@@ -1043,11 +1063,11 @@
         13,
         13
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 12828
+      "price": 1,
+      "spread": -0.001,
+      "volume": 12941
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on October 4?",
@@ -1056,11 +1076,11 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 11439
+      "volume": 11517
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on October 4?",
@@ -1069,9 +1089,9 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 4630
     },
@@ -1082,9 +1102,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1281
     },
@@ -1095,9 +1115,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 375
     },
@@ -1108,12 +1128,13 @@
         18,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 227
     }
   ],
-  "created_at": "2026-10-02T05:48:05.251Z"
+  "created_at": "2026-10-02T05:48:05.251Z",
+  "metar_max": 13
 }
