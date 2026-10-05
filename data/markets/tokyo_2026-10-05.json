@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-10-05T12:00:00Z",
   "hours_at_discovery": 51.8,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 22,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -832,6 +832,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-05T16:07:35.158Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 21,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -922,6 +933,14 @@
       "top2_bucket": "21-22C",
       "top2_price": 0.13,
       "top2_sum": 1.01
+    },
+    {
+      "ts": "2026-10-05T16:07:35.158Z",
+      "top_bucket": "22-22C",
+      "top_price": 0.9995,
+      "top2_bucket": "21-22C",
+      "top2_price": 0.9995,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -932,9 +951,9 @@
         -999,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1244
     },
@@ -945,11 +964,11 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8187
+      "volume": 8279
     },
     {
       "question": "Will the highest temperature in Tokyo be 21°C on October 5?",
@@ -958,11 +977,11 @@
         21,
         21
       ],
-      "bid": 0.88,
-      "ask": 0.88,
-      "price": 0.88,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4988
+      "volume": 11541
     },
     {
       "question": "Will the highest temperature in Tokyo be 22°C on October 5?",
@@ -971,11 +990,11 @@
         22,
         22
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
-      "spread": 0,
-      "volume": 4702
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 9440
     },
     {
       "question": "Will the highest temperature in Tokyo be 23°C on October 5?",
@@ -984,11 +1003,11 @@
         23,
         23
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 5691
+      "volume": 9412
     },
     {
       "question": "Will the highest temperature in Tokyo be 24°C on October 5?",
@@ -997,11 +1016,11 @@
         24,
         24
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2195
+      "volume": 2626
     },
     {
       "question": "Will the highest temperature in Tokyo be 25°C on October 5?",
@@ -1010,11 +1029,11 @@
         25,
         25
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3754
+      "volume": 4707
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on October 5?",
@@ -1023,9 +1042,9 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 769
     },
@@ -1036,9 +1055,9 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1850
     },
@@ -1049,9 +1068,9 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3009
     },
@@ -1062,12 +1081,13 @@
         29,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1424
     }
   ],
-  "created_at": "2026-10-03T08:13:35.056Z"
+  "created_at": "2026-10-03T08:13:35.056Z",
+  "metar_max": 20
 }

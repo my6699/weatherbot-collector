@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-10-05T12:00:00Z",
   "hours_at_discovery": 51.8,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 24,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -826,6 +826,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-05T16:07:36.452Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 18,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -916,6 +927,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.0155,
       "top2_sum": 0.9985
+    },
+    {
+      "ts": "2026-10-05T16:07:36.452Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.9995,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -969,7 +988,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1972
+      "volume": 2072
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on October 5?",
@@ -982,7 +1001,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3390
+      "volume": 3391
     },
     {
       "question": "Will the highest temperature in Shanghai be 23°C on October 5?",
@@ -995,7 +1014,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 17095
+      "volume": 17136
     },
     {
       "question": "Will the highest temperature in Shanghai be 24°C on October 5?",
@@ -1004,11 +1023,11 @@
         24,
         24
       ],
-      "bid": 0.983,
-      "ask": 0.983,
-      "price": 0.983,
-      "spread": 0,
-      "volume": 12593
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 15802
     },
     {
       "question": "Will the highest temperature in Shanghai be 25°C on October 5?",
@@ -1017,11 +1036,11 @@
         25,
         25
       ],
-      "bid": 0.0155,
-      "ask": 0.0155,
-      "price": 0.0155,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5100
+      "volume": 6259
     },
     {
       "question": "Will the highest temperature in Shanghai be 26°C on October 5?",
@@ -1063,5 +1082,6 @@
       "volume": 105
     }
   ],
-  "created_at": "2026-10-03T08:13:37.104Z"
+  "created_at": "2026-10-03T08:13:37.104Z",
+  "metar_max": 22
 }
