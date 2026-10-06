@@ -6,7 +6,7 @@
   "station": "WSSS",
   "event_end_date": "2026-10-06T12:00:00Z",
   "hours_at_discovery": 54,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5266705",
     "question": "Will the highest temperature in Singapore be 32°C on October 6?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-06T10:27:18.389Z",
       "stop_price": 0.088,
       "forecast_change_streak": 0,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 33,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -808,6 +809,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-06T17:15:40.409Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 29,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -890,6 +902,14 @@
       "top2_bucket": "33-34C",
       "top2_price": 0.0015,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-06T17:15:40.409Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.9995,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.9995,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -900,9 +920,9 @@
         -999,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2165
     },
@@ -913,9 +933,9 @@
         29,
         29
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 899
     },
@@ -926,9 +946,9 @@
         30,
         30
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2333
     },
@@ -939,9 +959,9 @@
         31,
         31
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3793
     },
@@ -952,11 +972,11 @@
         32,
         32
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6233
+      "volume": 6249
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on October 6?",
@@ -965,11 +985,11 @@
         33,
         33
       ],
-      "bid": 0.9985,
-      "ask": 0.9985,
-      "price": 0.9985,
-      "spread": 0,
-      "volume": 10565
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 11125
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on October 6?",
@@ -978,11 +998,11 @@
         34,
         34
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 11130
+      "volume": 11404
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on October 6?",
@@ -991,11 +1011,11 @@
         35,
         35
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3766
+      "volume": 3841
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C on October 6?",
@@ -1004,9 +1024,9 @@
         36,
         36
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 899
     },
@@ -1017,9 +1037,9 @@
         37,
         37
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1222
     },
@@ -1030,12 +1050,13 @@
         38,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1228
     }
   ],
-  "created_at": "2026-10-04T06:01:41.612Z"
+  "created_at": "2026-10-04T06:01:41.612Z",
+  "metar_max": 31
 }
