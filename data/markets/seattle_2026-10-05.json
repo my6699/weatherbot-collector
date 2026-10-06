@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-10-05T12:00:00Z",
   "hours_at_discovery": 46.5,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5229006",
     "question": "Will the highest temperature in Seattle be between 68-69°F on October 5?",
@@ -57,10 +57,11 @@
       "close_reason": "metar_diverged",
       "closed_at": "2026-10-05T07:08:45.158Z",
       "stop_price": 0.176,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 1,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 68.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1207,5 +1208,6 @@
       "volume": 173
     }
   ],
-  "created_at": "2026-10-03T13:28:08.790Z"
+  "created_at": "2026-10-03T13:28:08.790Z",
+  "metar_max": 68
 }
