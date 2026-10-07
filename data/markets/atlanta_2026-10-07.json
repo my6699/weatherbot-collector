@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-10-07T12:00:00Z",
   "hours_at_discovery": 43.9,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -607,6 +607,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-07T16:35:54.824Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 78,
+      "hrrr": 79,
+      "metar": 72,
+      "best": 78.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 78,
+          "gfs_seamless": 79,
+          "icon_seamless": 78
+        },
+        "mean": 78.3,
+        "spread": 0.7,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          78,
+          79,
+          78,
+          78,
+          77,
+          78,
+          77,
+          78,
+          79,
+          79,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          79,
+          78,
+          79,
+          79,
+          80,
+          79,
+          79,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          79,
+          79,
+          79,
+          79,
+          78,
+          79,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          79,
+          79,
+          78
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -673,6 +747,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.55,
       "top2_sum": 0.93
+    },
+    {
+      "ts": "2026-10-07T16:35:54.824Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.56,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.56,
+      "top2_sum": 0.93
     }
   ],
   "all_outcomes": [
@@ -687,7 +769,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 38
+      "volume": 5103
     },
     {
       "question": "Will the highest temperature in Atlanta be between 70-71°F on October 7?",
@@ -722,11 +804,11 @@
         74,
         75
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 947
+      "volume": 1585
     },
     {
       "question": "Will the highest temperature in Atlanta be between 76-77°F on October 7?",
@@ -735,11 +817,11 @@
         76,
         77
       ],
-      "bid": 0.0205,
-      "ask": 0.0205,
-      "price": 0.0205,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 2428
+      "volume": 2798
     },
     {
       "question": "Will the highest temperature in Atlanta be between 78-79°F on October 7?",
@@ -748,11 +830,11 @@
         78,
         79
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.37,
+      "ask": 0.37,
+      "price": 0.37,
       "spread": 0,
-      "volume": 6705
+      "volume": 8319
     },
     {
       "question": "Will the highest temperature in Atlanta be between 80-81°F on October 7?",
@@ -761,11 +843,11 @@
         80,
         81
       ],
-      "bid": 0.55,
-      "ask": 0.55,
-      "price": 0.55,
+      "bid": 0.56,
+      "ask": 0.56,
+      "price": 0.56,
       "spread": 0,
-      "volume": 7133
+      "volume": 7615
     },
     {
       "question": "Will the highest temperature in Atlanta be between 82-83°F on October 7?",
@@ -774,11 +856,11 @@
         82,
         83
       ],
-      "bid": 0.0445,
-      "ask": 0.0445,
-      "price": 0.0445,
+      "bid": 0.0535,
+      "ask": 0.0535,
+      "price": 0.0535,
       "spread": 0,
-      "volume": 1725
+      "volume": 2733
     },
     {
       "question": "Will the highest temperature in Atlanta be between 84-85°F on October 7?",
@@ -787,11 +869,11 @@
         84,
         85
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 909
+      "volume": 1183
     },
     {
       "question": "Will the highest temperature in Atlanta be between 86-87°F on October 7?",
@@ -800,11 +882,11 @@
         86,
         87
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 401
+      "volume": 912
     },
     {
       "question": "Will the highest temperature in Atlanta be 88°F or higher on October 7?",

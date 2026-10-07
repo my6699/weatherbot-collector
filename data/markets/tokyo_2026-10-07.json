@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-10-07T12:00:00Z",
   "hours_at_discovery": 52.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 25,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -681,6 +681,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-07T16:36:05.979Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 19,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -755,6 +766,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-07T16:36:05.979Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.9995,
+      "top2_bucket": "24-25C",
+      "top2_price": 0.9995,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -765,9 +784,9 @@
         -999,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1246
     },
@@ -778,9 +797,9 @@
         21,
         21
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 6931
     },
@@ -791,11 +810,11 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3721
+      "volume": 3839
     },
     {
       "question": "Will the highest temperature in Tokyo be 23°C on October 7?",
@@ -804,11 +823,11 @@
         23,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6876
+      "volume": 6890
     },
     {
       "question": "Will the highest temperature in Tokyo be 24°C on October 7?",
@@ -817,11 +836,11 @@
         24,
         24
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8174
+      "volume": 13042
     },
     {
       "question": "Will the highest temperature in Tokyo be 25°C on October 7?",
@@ -834,7 +853,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 11879
+      "volume": 14985
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on October 7?",
@@ -843,11 +862,11 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7180
+      "volume": 7383
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on October 7?",
@@ -856,9 +875,9 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1585
     },
@@ -869,9 +888,9 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 246
     },
@@ -895,12 +914,13 @@
         30,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1144
     }
   ],
-  "created_at": "2026-10-05T07:08:56.762Z"
+  "created_at": "2026-10-05T07:08:56.762Z",
+  "metar_max": 22
 }
