@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.1,
       "opened_at": "2026-10-06T17:15:14.272Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -16.67,
+      "exit_price": 0.07,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-10-07T01:37:25.979Z",
       "stop_price": 0.072,
       "forecast_change_streak": 0,
       "stop_pending": true
@@ -510,6 +510,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-07T01:37:25.979Z",
+      "horizon": "D+0",
+      "hours_left": 10.4,
+      "ecmwf": 77,
+      "hrrr": 77,
+      "metar": null,
+      "best": 76.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 77,
+          "icon_seamless": 76
+        },
+        "mean": 76.8,
+        "spread": 0.8,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          74,
+          76,
+          77,
+          76,
+          76,
+          76,
+          75,
+          76,
+          76,
+          76,
+          76,
+          73,
+          76,
+          76,
+          75,
+          75,
+          76,
+          75,
+          75,
+          76,
+          76,
+          73,
+          75,
+          74,
+          77,
+          77,
+          77,
+          77,
+          76,
+          76,
+          74,
+          75,
+          76,
+          75,
+          76,
+          75,
+          76,
+          75,
+          76,
+          75,
+          77,
+          76,
+          75,
+          76,
+          76,
+          76,
+          74,
+          76,
+          76,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -560,6 +634,14 @@
       "top2_bucket": "76-79F",
       "top2_price": 0.43,
       "top2_sum": 0.81
+    },
+    {
+      "ts": "2026-10-07T01:37:25.979Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.445,
+      "top2_bucket": "76-79F",
+      "top2_price": 0.445,
+      "top2_sum": 0.79
     }
   ],
   "all_outcomes": [
@@ -626,7 +708,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 332
+      "volume": 367
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on October 7?",
@@ -635,11 +717,11 @@
         72,
         73
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0.009,
+      "ask": 0.009,
+      "price": 0.009,
       "spread": 0,
-      "volume": 378
+      "volume": 491
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on October 7?",
@@ -648,11 +730,11 @@
         74,
         75
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
       "spread": 0,
-      "volume": 1090
+      "volume": 1213
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on October 7?",
@@ -661,11 +743,11 @@
         76,
         77
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
-      "volume": 2821
+      "volume": 3104
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on October 7?",
@@ -674,11 +756,11 @@
         78,
         79
       ],
-      "bid": 0.43,
-      "ask": 0.43,
-      "price": 0.43,
+      "bid": 0.445,
+      "ask": 0.445,
+      "price": 0.445,
       "spread": 0,
-      "volume": 1714
+      "volume": 1837
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on October 7?",
@@ -687,11 +769,11 @@
         80,
         81
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 2358
+      "volume": 3232
     },
     {
       "question": "Will the highest temperature in Chicago be 82°F or higher on October 7?",
@@ -700,11 +782,11 @@
         82,
         999
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 1206
+      "volume": 1207
     }
   ],
   "created_at": "2026-10-05T16:07:21.385Z"
