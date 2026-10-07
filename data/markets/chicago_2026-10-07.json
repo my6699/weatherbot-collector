@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-10-07T12:00:00Z",
   "hours_at_discovery": 43.9,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5317656",
     "question": "Will the highest temperature in Chicago be between 74-75°F on October 7?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-07T01:37:25.979Z",
       "stop_price": 0.072,
       "forecast_change_streak": 0,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 78.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -732,6 +733,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-07T22:02:30.329Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 77,
+      "hrrr": 79,
+      "metar": 77,
+      "best": 77.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 79,
+          "icon_seamless": 78
+        },
+        "mean": 77.8,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          77,
+          75,
+          76,
+          76,
+          76,
+          75,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          77,
+          76,
+          77,
+          77,
+          77,
+          77,
+          77,
+          76,
+          77,
+          76,
+          76,
+          77,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          77,
+          76,
+          76,
+          76,
+          75,
+          77,
+          77
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -806,6 +881,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.245,
       "top2_sum": 0.82
+    },
+    {
+      "ts": "2026-10-07T22:02:30.329Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.996,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.003,
+      "top2_sum": 0.999
     }
   ],
   "all_outcomes": [
@@ -868,9 +951,9 @@
         70,
         71
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 458
     },
@@ -881,11 +964,11 @@
         72,
         73
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 602
+      "volume": 1664
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on October 7?",
@@ -894,11 +977,11 @@
         74,
         75
       ],
-      "bid": 0.014,
-      "ask": 0.014,
-      "price": 0.014,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1886
+      "volume": 2269
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on October 7?",
@@ -907,11 +990,11 @@
         76,
         77
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4407
+      "volume": 5738
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on October 7?",
@@ -920,11 +1003,11 @@
         78,
         79
       ],
-      "bid": 0.575,
-      "ask": 0.575,
-      "price": 0.575,
+      "bid": 0.996,
+      "ask": 0.996,
+      "price": 0.996,
       "spread": 0,
-      "volume": 2241
+      "volume": 3995
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on October 7?",
@@ -933,11 +1016,11 @@
         80,
         81
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 3805
+      "volume": 5100
     },
     {
       "question": "Will the highest temperature in Chicago be 82°F or higher on October 7?",
@@ -946,11 +1029,11 @@
         82,
         999
       ],
-      "bid": 0.0185,
-      "ask": 0.0185,
-      "price": 0.0185,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 1837
+      "volume": 2607
     }
   ],
   "created_at": "2026-10-05T16:07:21.385Z"
