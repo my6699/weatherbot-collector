@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-10-08T12:00:00Z",
   "hours_at_discovery": 49.6,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5368845",
     "question": "Will the highest temperature in New York City be between 74-75°F on October 8?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-08T02:01:00.339Z",
       "stop_price": 0.23,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 76.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -807,6 +808,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-08T22:09:01.162Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 77,
+      "hrrr": 76,
+      "metar": 73,
+      "best": 76.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 76,
+          "icon_seamless": 75
+        },
+        "mean": 76.3,
+        "spread": 1.3,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          77,
+          76,
+          77,
+          77,
+          76,
+          77,
+          78,
+          77,
+          77,
+          76,
+          77,
+          77,
+          77,
+          77,
+          77,
+          78,
+          76,
+          77,
+          77,
+          77,
+          77,
+          76,
+          76,
+          77,
+          76,
+          78,
+          77,
+          77,
+          77,
+          77,
+          78,
+          78,
+          77,
+          76,
+          77,
+          77,
+          77,
+          77,
+          78,
+          77,
+          77,
+          77,
+          77,
+          77,
+          77,
+          77,
+          77,
+          76,
+          77,
+          77
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -889,6 +964,14 @@
       "top2_bucket": "74-77F",
       "top2_price": 0.425,
       "top2_sum": 0.92
+    },
+    {
+      "ts": "2026-10-08T22:09:01.162Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.995,
+      "top2_bucket": "76-79F",
+      "top2_price": 0.0045,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -942,7 +1025,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1017
+      "volume": 1027
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on October 8?",
@@ -951,11 +1034,11 @@
         72,
         73
       ],
-      "bid": 0.057,
-      "ask": 0.057,
-      "price": 0.057,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3752
+      "volume": 6400
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on October 8?",
@@ -964,11 +1047,11 @@
         74,
         75
       ],
-      "bid": 0.495,
-      "ask": 0.495,
-      "price": 0.495,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 10270
+      "volume": 24133
     },
     {
       "question": "Will the highest temperature in New York City be between 76-77°F on October 8?",
@@ -977,11 +1060,11 @@
         76,
         77
       ],
-      "bid": 0.425,
-      "ask": 0.425,
-      "price": 0.425,
+      "bid": 0.995,
+      "ask": 0.995,
+      "price": 0.995,
       "spread": 0,
-      "volume": 6856
+      "volume": 11737
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on October 8?",
@@ -990,11 +1073,11 @@
         78,
         79
       ],
-      "bid": 0.0205,
-      "ask": 0.0205,
-      "price": 0.0205,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 3620
+      "volume": 5034
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on October 8?",
@@ -1003,11 +1086,11 @@
         80,
         81
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1054
+      "volume": 1416
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on October 8?",
@@ -1029,9 +1112,9 @@
         84,
         999
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1307
     }
