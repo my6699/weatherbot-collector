@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.7,
       "opened_at": "2026-10-06T21:40:31.693Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 39.13,
+      "exit_price": 0.455,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-10-08T02:01:00.339Z",
       "stop_price": 0.23,
       "forecast_change_streak": 0,
       "trailing_activated": true
@@ -585,6 +585,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-08T02:01:00.339Z",
+      "horizon": "D+0",
+      "hours_left": 10,
+      "ecmwf": 76,
+      "hrrr": 76,
+      "metar": 61,
+      "best": 76,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 76,
+          "gfs_seamless": 76,
+          "icon_seamless": 76
+        },
+        "mean": 76,
+        "spread": 0,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          77,
+          76,
+          76,
+          77,
+          77,
+          75,
+          75,
+          77,
+          75,
+          76,
+          76,
+          76,
+          77,
+          76,
+          76,
+          76,
+          76,
+          75,
+          77,
+          76,
+          76,
+          76,
+          76,
+          77,
+          76,
+          75,
+          77,
+          76,
+          77,
+          75,
+          75,
+          76,
+          77,
+          76,
+          75,
+          76,
+          76,
+          77,
+          77,
+          75,
+          75,
+          76,
+          76,
+          76,
+          75,
+          76,
+          74,
+          77,
+          76,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -643,6 +717,14 @@
       "top2_bucket": "74-77F",
       "top2_price": 0.355,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-10-08T02:01:00.339Z",
+      "top_bucket": "74-75F",
+      "top_price": 0.455,
+      "top2_bucket": "74-77F",
+      "top2_price": 0.41,
+      "top2_sum": 0.865
     }
   ],
   "all_outcomes": [
@@ -683,7 +765,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 143
+      "volume": 156
     },
     {
       "question": "Will the highest temperature in New York City be between 70-71°F on October 8?",
@@ -696,7 +778,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 133
+      "volume": 470
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on October 8?",
@@ -705,11 +787,11 @@
         72,
         73
       ],
-      "bid": 0.0685,
-      "ask": 0.0685,
-      "price": 0.0685,
+      "bid": 0.0815,
+      "ask": 0.0815,
+      "price": 0.0815,
       "spread": 0,
-      "volume": 434
+      "volume": 944
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on October 8?",
@@ -718,11 +800,11 @@
         74,
         75
       ],
-      "bid": 0.505,
-      "ask": 0.505,
-      "price": 0.505,
+      "bid": 0.455,
+      "ask": 0.455,
+      "price": 0.455,
       "spread": 0,
-      "volume": 3407
+      "volume": 5044
     },
     {
       "question": "Will the highest temperature in New York City be between 76-77°F on October 8?",
@@ -731,11 +813,11 @@
         76,
         77
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.41,
+      "ask": 0.41,
+      "price": 0.41,
       "spread": 0,
-      "volume": 3585
+      "volume": 4384
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on October 8?",
@@ -744,11 +826,11 @@
         78,
         79
       ],
-      "bid": 0.035,
-      "ask": 0.035,
-      "price": 0.035,
+      "bid": 0.0505,
+      "ask": 0.0505,
+      "price": 0.0505,
       "spread": 0,
-      "volume": 1584
+      "volume": 2074
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on October 8?",
@@ -757,11 +839,11 @@
         80,
         81
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
-      "volume": 170
+      "volume": 507
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on October 8?",
@@ -783,11 +865,11 @@
         84,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 749
+      "volume": 1277
     }
   ],
   "created_at": "2026-10-06T10:26:58.376Z"
