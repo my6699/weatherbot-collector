@@ -6,10 +6,10 @@
   "station": "EGLC",
   "event_end_date": "2026-10-08T12:00:00Z",
   "hours_at_discovery": 49.5,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 15,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -678,6 +678,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-08T16:34:19.396Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 15.2,
+      "hrrr": 15.2,
+      "metar": 15,
+      "best": 15.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 15.2,
+          "gfs_seamless": 15.2,
+          "icon_seamless": 14.9
+        },
+        "mean": 15.1,
+        "spread": 0.2,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          15.2,
+          15.1,
+          15,
+          15.1,
+          14.9,
+          15.2,
+          15.1,
+          15.5,
+          15,
+          15,
+          15.2,
+          15.3,
+          14.9,
+          15.2,
+          15.3,
+          15,
+          15.2,
+          15.2,
+          15.5,
+          15.5,
+          15,
+          15.1,
+          15.2,
+          15,
+          15.4,
+          15.2,
+          15,
+          15.9,
+          14.8,
+          15.2,
+          15.3,
+          14.8,
+          14.9,
+          15.3,
+          15,
+          15.6,
+          15.6,
+          15.4,
+          15.4,
+          15.5,
+          15.2,
+          15.4,
+          15.6,
+          15.3,
+          15.1,
+          15.3,
+          15.8,
+          14.9,
+          15,
+          14.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -752,6 +826,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.655,
       "top2_sum": 0.91
+    },
+    {
+      "ts": "2026-10-08T16:34:19.396Z",
+      "top_bucket": "15-15C",
+      "top_price": 0.9945,
+      "top2_bucket": "15-16C",
+      "top2_price": 0.0045,
+      "top2_sum": 0.999
     }
   ],
   "all_outcomes": [
@@ -814,11 +896,11 @@
         12,
         12
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1526
+      "volume": 1598
     },
     {
       "question": "Will the highest temperature in London be 13°C on October 8?",
@@ -827,11 +909,11 @@
         13,
         13
       ],
-      "bid": 0.0155,
-      "ask": 0.0155,
-      "price": 0.0155,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3187
+      "volume": 9954
     },
     {
       "question": "Will the highest temperature in London be 14°C on October 8?",
@@ -840,11 +922,11 @@
         14,
         14
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 11281
+      "volume": 19231
     },
     {
       "question": "Will the highest temperature in London be 15°C on October 8?",
@@ -853,11 +935,11 @@
         15,
         15
       ],
-      "bid": 0.655,
-      "ask": 0.655,
-      "price": 0.655,
+      "bid": 0.9945,
+      "ask": 0.9945,
+      "price": 0.9945,
       "spread": 0,
-      "volume": 6160
+      "volume": 12198
     },
     {
       "question": "Will the highest temperature in London be 16°C on October 8?",
@@ -866,11 +948,11 @@
         16,
         16
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 9144
+      "volume": 14164
     },
     {
       "question": "Will the highest temperature in London be 17°C on October 8?",
@@ -879,11 +961,11 @@
         17,
         17
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 3219
+      "volume": 6527
     },
     {
       "question": "Will the highest temperature in London be 18°C or higher on October 8?",
@@ -892,12 +974,13 @@
         18,
         999
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2628
+      "volume": 5266
     }
   ],
-  "created_at": "2026-10-06T10:27:08.009Z"
+  "created_at": "2026-10-06T10:27:08.009Z",
+  "metar_max": 10
 }

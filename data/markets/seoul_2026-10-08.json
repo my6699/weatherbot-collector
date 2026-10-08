@@ -6,10 +6,10 @@
   "station": "RKSI",
   "event_end_date": "2026-10-08T12:00:00Z",
   "hours_at_discovery": 49.5,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 22,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -687,6 +687,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-08T16:34:27.524Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 16,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -761,6 +772,14 @@
       "top2_bucket": "21-22C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-08T16:34:27.524Z",
+      "top_bucket": "22-22C",
+      "top_price": 1,
+      "top2_bucket": "21-22C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -771,9 +790,9 @@
         -999,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 289
     },
@@ -784,9 +803,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 464
     },
@@ -797,9 +816,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 647
     },
@@ -810,9 +829,9 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2633
     },
@@ -823,9 +842,9 @@
         21,
         21
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 7006
     },
@@ -836,11 +855,11 @@
         22,
         22
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 19809
+      "price": 1,
+      "spread": -0.001,
+      "volume": 20409
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 23°C on October 8?",
@@ -849,11 +868,11 @@
         23,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 12473
+      "volume": 12771
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 24°C on October 8?",
@@ -862,11 +881,11 @@
         24,
         24
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 5529
+      "volume": 5638
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 25°C on October 8?",
@@ -875,11 +894,11 @@
         25,
         25
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6416
+      "volume": 6891
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 26°C on October 8?",
@@ -888,9 +907,9 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2553
     },
@@ -901,12 +920,13 @@
         27,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1484
     }
   ],
-  "created_at": "2026-10-06T10:27:14.822Z"
+  "created_at": "2026-10-06T10:27:14.822Z",
+  "metar_max": 20
 }

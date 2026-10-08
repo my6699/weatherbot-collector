@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-10-08T12:00:00Z",
   "hours_at_discovery": 49.5,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5364171",
     "question": "Will the highest temperature in Paris be 17°C on October 8?",
@@ -51,18 +51,19 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-10-07T08:46:45.383Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 126.59,
+      "exit_price": 0.9995,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-10-08T16:34:20.965Z",
       "stop_price": 0.24,
       "forecast_change_streak": 0,
       "stop_pending": true,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 17,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -736,6 +737,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-08T16:34:20.965Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 16.6,
+      "hrrr": 15.9,
+      "metar": 14,
+      "best": 16.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 16.6,
+          "gfs_seamless": 15.9,
+          "icon_seamless": 15.1
+        },
+        "mean": 16.1,
+        "spread": 1,
+        "gap": 0.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          16.8,
+          15.8,
+          16.2,
+          16.1,
+          16.5,
+          16.2,
+          15.9,
+          16.2,
+          16.5,
+          16.5,
+          16.7,
+          16.4,
+          16.7,
+          16.3,
+          16.3,
+          17.5,
+          16.3,
+          16.6,
+          16.3,
+          17,
+          15.9,
+          17,
+          16.4,
+          16.8,
+          16.2,
+          16.9,
+          16.9,
+          16.3,
+          16.2,
+          16.5,
+          16.5,
+          16,
+          16,
+          16.5,
+          16.4,
+          16.4,
+          16.3,
+          16.6,
+          16.7,
+          16.8,
+          16.4,
+          16.1,
+          17,
+          16.7,
+          16.8,
+          16.8,
+          16.3,
+          16.2,
+          15.9,
+          16.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -810,6 +885,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.225,
       "top2_sum": 0.905
+    },
+    {
+      "ts": "2026-10-08T16:34:20.965Z",
+      "top_bucket": "17-17C",
+      "top_price": 0.9995,
+      "top2_bucket": "16-17C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -824,7 +907,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 255
+      "volume": 260
     },
     {
       "question": "Will the highest temperature in Paris be 11°C on October 8?",
@@ -837,7 +920,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1826
+      "volume": 1831
     },
     {
       "question": "Will the highest temperature in Paris be 12°C on October 8?",
@@ -850,7 +933,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 404
+      "volume": 443
     },
     {
       "question": "Will the highest temperature in Paris be 13°C on October 8?",
@@ -863,7 +946,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2076
+      "volume": 2081
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on October 8?",
@@ -876,7 +959,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3238
+      "volume": 3243
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on October 8?",
@@ -885,11 +968,11 @@
         15,
         15
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 8523
+      "volume": 15060
     },
     {
       "question": "Will the highest temperature in Paris be 16°C on October 8?",
@@ -898,11 +981,11 @@
         16,
         16
       ],
-      "bid": 0.68,
-      "ask": 0.68,
-      "price": 0.68,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 10508
+      "volume": 16607
     },
     {
       "question": "Will the highest temperature in Paris be 17°C on October 8?",
@@ -911,11 +994,11 @@
         17,
         17
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
-      "spread": 0,
-      "volume": 7484
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 13830
     },
     {
       "question": "Will the highest temperature in Paris be 18°C on October 8?",
@@ -924,11 +1007,11 @@
         18,
         18
       ],
-      "bid": 0.0175,
-      "ask": 0.0175,
-      "price": 0.0175,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3070
+      "volume": 6298
     },
     {
       "question": "Will the highest temperature in Paris be 19°C on October 8?",
@@ -937,11 +1020,11 @@
         19,
         19
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3436
+      "volume": 4256
     },
     {
       "question": "Will the highest temperature in Paris be 20°C or higher on October 8?",
@@ -950,12 +1033,13 @@
         20,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1048
+      "volume": 1053
     }
   ],
-  "created_at": "2026-10-06T10:27:09.625Z"
+  "created_at": "2026-10-06T10:27:09.625Z",
+  "metar_max": 13
 }
