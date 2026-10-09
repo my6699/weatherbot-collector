@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.144
+      "stop_price": 0.144,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -509,6 +510,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-09T20:59:12.638Z",
+      "horizon": "D+1",
+      "hours_left": 15,
+      "ecmwf": 17.1,
+      "hrrr": 19.1,
+      "metar": null,
+      "best": 18.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 17.1,
+          "gfs_seamless": 19.1,
+          "icon_seamless": 18.9
+        },
+        "mean": 18.1,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          17,
+          16.8,
+          16.7,
+          17.2,
+          17,
+          16.8,
+          16.8,
+          16.5,
+          16.8,
+          16.6,
+          17,
+          16.8,
+          16.5,
+          16.7,
+          16.2,
+          17.1,
+          17.2,
+          16.2,
+          17.3,
+          16.9,
+          17.1,
+          16.8,
+          17.1,
+          16.6,
+          16.8,
+          16.5,
+          16.5,
+          16.6,
+          16.8,
+          16.8,
+          17,
+          16.9,
+          16.9,
+          17.2,
+          16.9,
+          17,
+          17.1,
+          16.8,
+          16.8,
+          16.9,
+          16.9,
+          16.9,
+          16.8,
+          17.1,
+          16.9,
+          16.1,
+          16.8,
+          17.1,
+          16.9,
+          16.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -559,6 +635,14 @@
       "top2_bucket": "19-20C",
       "top2_price": 0.285,
       "top2_sum": 0.775
+    },
+    {
+      "ts": "2026-10-09T20:59:12.638Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.535,
+      "top2_bucket": "18-19C",
+      "top2_price": 0.535,
+      "top2_sum": 0.745
     }
   ],
   "all_outcomes": [
@@ -569,11 +653,11 @@
         -999,
         14
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1242
+      "volume": 1651
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on October 10?",
@@ -582,11 +666,11 @@
         15,
         15
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1678
+      "volume": 1790
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on October 10?",
@@ -595,11 +679,11 @@
         16,
         16
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 919
+      "volume": 1119
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on October 10?",
@@ -608,11 +692,11 @@
         17,
         17
       ],
-      "bid": 0.0295,
-      "ask": 0.0295,
-      "price": 0.0295,
+      "bid": 0.0095,
+      "ask": 0.0095,
+      "price": 0.0095,
       "spread": 0,
-      "volume": 1281
+      "volume": 1444
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on October 10?",
@@ -621,11 +705,11 @@
         18,
         18
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.21,
+      "ask": 0.21,
+      "price": 0.21,
       "spread": 0,
-      "volume": 3961
+      "volume": 4458
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on October 10?",
@@ -634,11 +718,11 @@
         19,
         19
       ],
-      "bid": 0.49,
-      "ask": 0.49,
-      "price": 0.49,
+      "bid": 0.535,
+      "ask": 0.535,
+      "price": 0.535,
       "spread": 0,
-      "volume": 2623
+      "volume": 3098
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on October 10?",
@@ -647,11 +731,11 @@
         20,
         20
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.18,
+      "ask": 0.18,
+      "price": 0.18,
       "spread": 0,
-      "volume": 6798
+      "volume": 8151
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C on October 10?",
@@ -660,11 +744,11 @@
         21,
         21
       ],
-      "bid": 0.0165,
-      "ask": 0.0165,
-      "price": 0.0165,
+      "bid": 0.039,
+      "ask": 0.039,
+      "price": 0.039,
       "spread": 0,
-      "volume": 1416
+      "volume": 2301
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C on October 10?",
@@ -673,11 +757,11 @@
         22,
         22
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 1072
+      "volume": 1188
     },
     {
       "question": "Will the highest temperature in Wellington be 23°C on October 10?",

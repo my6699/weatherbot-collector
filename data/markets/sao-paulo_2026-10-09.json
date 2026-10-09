@@ -6,7 +6,7 @@
   "station": "SBGR",
   "event_end_date": "2026-10-09T12:00:00Z",
   "hours_at_discovery": 43.4,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5404657",
     "question": "Will the highest temperature in Sao Paulo be 32°C on October 9?",
@@ -57,10 +57,11 @@
       "close_reason": "metar_diverged",
       "closed_at": "2026-10-09T02:15:14.995Z",
       "stop_price": 0.144,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 1,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 34,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -735,6 +736,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-09T20:59:08.990Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 34.1,
+      "hrrr": 34.2,
+      "metar": 20,
+      "best": 33.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 34.1,
+          "gfs_seamless": 34.2,
+          "icon_seamless": 32.7
+        },
+        "mean": 33.9,
+        "spread": 1.1,
+        "gap": 0.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          32.7,
+          34.1,
+          32.9,
+          33.6,
+          32.9,
+          33,
+          33.2,
+          32.9,
+          33.2,
+          33.8,
+          33.8,
+          33,
+          32.4,
+          33.4,
+          33.6,
+          33.5,
+          32.4,
+          33.4,
+          33.3,
+          34.1,
+          32.6,
+          32.7,
+          33.1,
+          33.3,
+          33.5,
+          33.5,
+          31.3,
+          32.9,
+          32.8,
+          33.1,
+          32.8,
+          33,
+          33.8,
+          32.7,
+          33,
+          33.4,
+          33.8,
+          33.2,
+          30.5,
+          32.7,
+          32.7,
+          32.4,
+          33.3,
+          30.3,
+          33.5,
+          32.5,
+          33.8,
+          32.9,
+          33.4,
+          34
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -809,6 +885,14 @@
       "top2_bucket": "34-35C",
       "top2_price": 0.126,
       "top2_sum": 0.991
+    },
+    {
+      "ts": "2026-10-09T20:59:08.990Z",
+      "top_bucket": "34-34C",
+      "top_price": 0.9995,
+      "top2_bucket": "33-34C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -836,7 +920,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1382
+      "volume": 1392
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C on October 9?",
@@ -849,7 +933,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1095
+      "volume": 1107
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 31°C on October 9?",
@@ -875,7 +959,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3586
+      "volume": 4027
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 33°C on October 9?",
@@ -888,7 +972,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4251
+      "volume": 4460
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 34°C on October 9?",
@@ -897,11 +981,11 @@
         34,
         34
       ],
-      "bid": 0.865,
-      "ask": 0.865,
-      "price": 0.865,
-      "spread": 0,
-      "volume": 6037
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 11716
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 35°C on October 9?",
@@ -910,11 +994,11 @@
         35,
         35
       ],
-      "bid": 0.126,
-      "ask": 0.126,
-      "price": 0.126,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2619
+      "volume": 4398
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 36°C on October 9?",
@@ -923,11 +1007,11 @@
         36,
         36
       ],
-      "bid": 0.019,
-      "ask": 0.019,
-      "price": 0.019,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2671
+      "volume": 6615
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 37°C on October 9?",
@@ -936,11 +1020,11 @@
         37,
         37
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3633
+      "volume": 4297
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 38°C or higher on October 9?",
