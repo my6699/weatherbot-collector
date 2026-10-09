@@ -6,10 +6,10 @@
   "station": "LLBG",
   "event_end_date": "2026-10-09T12:00:00Z",
   "hours_at_discovery": 51.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 29,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -680,6 +680,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-09T16:17:59.896Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 30.3,
+      "hrrr": 28.7,
+      "metar": 26,
+      "best": 29.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.3,
+          "gfs_seamless": 28.7,
+          "icon_seamless": 29.7
+        },
+        "mean": 29.7,
+        "spread": 1,
+        "gap": 1.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          30.5,
+          30,
+          30.4,
+          31.2,
+          30.3,
+          30,
+          30.2,
+          29.9,
+          30.2,
+          30,
+          30.1,
+          30.7,
+          29.8,
+          30.6,
+          29.9,
+          30.8,
+          32.2,
+          30.7,
+          30.4,
+          30.5,
+          30.4,
+          30,
+          30.5,
+          30.3,
+          31.5,
+          30.4,
+          30.4,
+          30.2,
+          30.3,
+          30.1,
+          30.3,
+          29.9,
+          30.1,
+          30.6,
+          31,
+          30.1,
+          30.4,
+          30.9,
+          30.7,
+          30.8,
+          30.1,
+          30.1,
+          30.6,
+          30.3,
+          30.6,
+          30.1,
+          30.3,
+          30.1,
+          29.9,
+          30.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -754,6 +829,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.3,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-10-09T16:17:59.896Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.9975,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.0025,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -768,7 +851,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3785
+      "volume": 3790
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 28°C on October 9?",
@@ -781,7 +864,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2800
+      "volume": 2805
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 29°C on October 9?",
@@ -790,11 +873,11 @@
         29,
         29
       ],
-      "bid": 0.695,
-      "ask": 0.695,
-      "price": 0.695,
+      "bid": 0.9975,
+      "ask": 0.9975,
+      "price": 0.9975,
       "spread": 0,
-      "volume": 1924
+      "volume": 4186
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 30°C on October 9?",
@@ -803,11 +886,11 @@
         30,
         30
       ],
-      "bid": 0.3,
-      "ask": 0.3,
-      "price": 0.3,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 3507
+      "volume": 4697
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 31°C on October 9?",
@@ -816,11 +899,11 @@
         31,
         31
       ],
-      "bid": 0.0135,
-      "ask": 0.0135,
-      "price": 0.0135,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1637
+      "volume": 2327
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 32°C on October 9?",
@@ -829,11 +912,11 @@
         32,
         32
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 790
+      "volume": 855
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 33°C on October 9?",
@@ -872,7 +955,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 506
+      "volume": 540
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 36°C on October 9?",
@@ -901,5 +984,6 @@
       "volume": 410
     }
   ],
-  "created_at": "2026-10-07T08:47:02.014Z"
+  "created_at": "2026-10-07T08:47:02.014Z",
+  "metar_max": 24
 }

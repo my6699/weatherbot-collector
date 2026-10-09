@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-10-09T12:00:00Z",
   "hours_at_discovery": 51.2,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 24,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -680,6 +680,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-09T16:17:53.423Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 20,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -754,6 +765,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-09T16:17:53.423Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.9995,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.9995,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -764,9 +783,9 @@
         -999,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1241
     },
@@ -777,9 +796,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1225
     },
@@ -790,9 +809,9 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1716
     },
@@ -803,9 +822,9 @@
         21,
         21
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1590
     },
@@ -816,9 +835,9 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2171
     },
@@ -829,9 +848,9 @@
         23,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5467
     },
@@ -846,7 +865,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 9498
+      "volume": 11497
     },
     {
       "question": "Will the highest temperature in Tokyo be 25°C on October 9?",
@@ -855,11 +874,11 @@
         25,
         25
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 5623
+      "volume": 5636
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on October 9?",
@@ -868,11 +887,11 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2512
+      "volume": 2522
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on October 9?",
@@ -881,11 +900,11 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1591
+      "volume": 1621
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C or higher on October 9?",
@@ -894,12 +913,13 @@
         28,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 534
     }
   ],
-  "created_at": "2026-10-07T08:46:54.298Z"
+  "created_at": "2026-10-07T08:46:54.298Z",
+  "metar_max": 22
 }
