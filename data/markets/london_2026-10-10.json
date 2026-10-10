@@ -6,10 +6,10 @@
   "station": "EGLC",
   "event_end_date": "2026-10-10T12:00:00Z",
   "hours_at_discovery": 50.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 16,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -757,6 +757,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-10T18:40:45.682Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 15.3,
+      "hrrr": 14.9,
+      "metar": 14,
+      "best": 15.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 15.3,
+          "gfs_seamless": 14.9,
+          "icon_seamless": 16
+        },
+        "mean": 15.3,
+        "spread": 0.7,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          16,
+          15.6,
+          15.1,
+          15.2,
+          15.5,
+          15.5,
+          15.1,
+          15.1,
+          15,
+          15.2,
+          14.9,
+          15.5,
+          15.7,
+          15.8,
+          15.6,
+          15,
+          14.9,
+          14.9,
+          15.7,
+          15,
+          15.4,
+          15.7,
+          16,
+          15.6,
+          14.5,
+          15.7,
+          14.9,
+          15.3,
+          14.9,
+          14.7,
+          14.8,
+          15.2,
+          15.5,
+          15.3,
+          14.7,
+          15.6,
+          16.1,
+          14.9,
+          15.1,
+          15.7,
+          15.2,
+          15.2,
+          16,
+          14.9,
+          16,
+          15.2,
+          15.3,
+          15.1,
+          15.2,
+          15.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -839,6 +913,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.705,
       "top2_sum": 0.91
+    },
+    {
+      "ts": "2026-10-10T18:40:45.682Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.9995,
+      "top2_bucket": "16-17C",
+      "top2_price": 0.0025,
+      "top2_sum": 1.002
     }
   ],
   "all_outcomes": [
@@ -901,11 +983,11 @@
         15,
         15
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 9401
+      "volume": 11832
     },
     {
       "question": "Will the highest temperature in London be 16°C on October 10?",
@@ -914,11 +996,11 @@
         16,
         16
       ],
-      "bid": 0.705,
-      "ask": 0.705,
-      "price": 0.705,
-      "spread": 0,
-      "volume": 8024
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 11100
     },
     {
       "question": "Will the highest temperature in London be 17°C on October 10?",
@@ -927,11 +1009,11 @@
         17,
         17
       ],
-      "bid": 0.0705,
-      "ask": 0.0705,
-      "price": 0.0705,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 4038
+      "volume": 5811
     },
     {
       "question": "Will the highest temperature in London be 18°C on October 10?",
@@ -940,11 +1022,11 @@
         18,
         18
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3719
+      "volume": 5129
     },
     {
       "question": "Will the highest temperature in London be 19°C on October 10?",
@@ -953,11 +1035,11 @@
         19,
         19
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1382
+      "volume": 1432
     },
     {
       "question": "Will the highest temperature in London be 20°C on October 10?",
@@ -983,8 +1065,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2101
+      "volume": 2118
     }
   ],
-  "created_at": "2026-10-08T09:05:10.190Z"
+  "created_at": "2026-10-08T09:05:10.190Z",
+  "metar_max": 12
 }
