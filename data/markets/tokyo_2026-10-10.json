@@ -6,7 +6,7 @@
   "station": "RJTT",
   "event_end_date": "2026-10-10T12:00:00Z",
   "hours_at_discovery": 50.9,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5423728",
     "question": "Will the highest temperature in Tokyo be 26°C on October 10?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-10-09T20:59:16.569Z",
       "stop_price": 0.104,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 1,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 24,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -732,6 +733,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-10T13:48:10.819Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 24.3,
+      "hrrr": 24.8,
+      "metar": 21,
+      "best": 24.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.3,
+          "gfs_seamless": 24.8,
+          "icon_seamless": 23.7
+        },
+        "mean": 24.3,
+        "spread": 0.6,
+        "gap": 0.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          23.8,
+          24.2,
+          23.6,
+          24,
+          23.7,
+          24.6,
+          24.6,
+          24.2,
+          23.9,
+          24.3,
+          23.8,
+          24.4,
+          24.7,
+          24.3,
+          23.8,
+          24.8,
+          24.4,
+          23.9,
+          23.9,
+          24.4,
+          23.7,
+          23.8,
+          24.3,
+          24.1,
+          24.2,
+          24.6,
+          24.2,
+          24.2,
+          24.9,
+          24,
+          24.2,
+          23.6,
+          24.3,
+          24.2,
+          24.4,
+          24.5,
+          24.7,
+          24.2,
+          25.8,
+          24.5,
+          24.3,
+          23.6,
+          24.8,
+          24,
+          24.8,
+          23.5,
+          24.1,
+          24.8,
+          23.9,
+          24.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -806,6 +881,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.0025,
       "top2_sum": 0.999
+    },
+    {
+      "ts": "2026-10-10T13:48:10.819Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.9995,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -881,11 +964,11 @@
         24,
         24
       ],
-      "bid": 0.9965,
-      "ask": 0.9965,
-      "price": 0.9965,
-      "spread": 0,
-      "volume": 14135
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 16475
     },
     {
       "question": "Will the highest temperature in Tokyo be 25°C on October 10?",
@@ -894,11 +977,11 @@
         25,
         25
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 10822
+      "volume": 11057
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on October 10?",
@@ -907,11 +990,11 @@
         26,
         26
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6680
+      "volume": 6951
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on October 10?",
@@ -924,7 +1007,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3581
+      "volume": 3687
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on October 10?",
@@ -953,5 +1036,6 @@
       "volume": 1035
     }
   ],
-  "created_at": "2026-10-08T09:05:19.646Z"
+  "created_at": "2026-10-08T09:05:19.646Z",
+  "metar_max": 22
 }
