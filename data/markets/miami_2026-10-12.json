@@ -56,7 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.152
+      "stop_price": 0.2,
+      "trailing_activated": true,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -210,6 +212,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-10T22:37:38.202Z",
+      "horizon": "D+2",
+      "hours_left": 37.4,
+      "ecmwf": 89,
+      "hrrr": 91,
+      "metar": null,
+      "best": 89.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 89,
+          "gfs_seamless": 91,
+          "icon_seamless": 89
+        },
+        "mean": 89.6,
+        "spread": 1.4,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          91,
+          88,
+          90,
+          90,
+          91,
+          89,
+          89,
+          89,
+          90,
+          89,
+          89,
+          90,
+          89,
+          88,
+          90,
+          90,
+          90,
+          89,
+          90,
+          90,
+          89,
+          88,
+          90,
+          90,
+          90,
+          89,
+          90,
+          89,
+          90,
+          90,
+          88,
+          88,
+          90,
+          88,
+          90,
+          87,
+          90,
+          88,
+          88,
+          90,
+          89,
+          89,
+          89,
+          89,
+          88,
+          89,
+          89,
+          88,
+          87,
+          88
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -228,6 +304,14 @@
       "top2_bucket": "88-91F",
       "top2_price": 0.635,
       "top2_sum": 0.83
+    },
+    {
+      "ts": "2026-10-10T22:37:38.202Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.625,
+      "top2_bucket": "88-91F",
+      "top2_price": 0.625,
+      "top2_sum": 0.89
     }
   ],
   "all_outcomes": [
@@ -238,11 +322,11 @@
         -999,
         79
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 103
+      "volume": 145
     },
     {
       "question": "Will the highest temperature in Miami be between 80-81°F on October 12?",
@@ -251,11 +335,11 @@
         80,
         81
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 103
+      "volume": 145
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on October 12?",
@@ -277,11 +361,11 @@
         84,
         85
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 119
+      "volume": 217
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on October 12?",
@@ -290,11 +374,11 @@
         86,
         87
       ],
-      "bid": 0.0145,
-      "ask": 0.0145,
-      "price": 0.0145,
+      "bid": 0.0255,
+      "ask": 0.0255,
+      "price": 0.0255,
       "spread": 0,
-      "volume": 188
+      "volume": 323
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on October 12?",
@@ -303,11 +387,11 @@
         88,
         89
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 3675
+      "volume": 5024
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on October 12?",
@@ -316,11 +400,11 @@
         90,
         91
       ],
-      "bid": 0.635,
-      "ask": 0.635,
-      "price": 0.635,
+      "bid": 0.625,
+      "ask": 0.625,
+      "price": 0.625,
       "spread": 0,
-      "volume": 1082
+      "volume": 1181
     },
     {
       "question": "Will the highest temperature in Miami be between 92-93°F on October 12?",
@@ -329,11 +413,11 @@
         92,
         93
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.09,
+      "ask": 0.09,
+      "price": 0.09,
       "spread": 0,
-      "volume": 220
+      "volume": 306
     },
     {
       "question": "Will the highest temperature in Miami be between 94-95°F on October 12?",
@@ -342,11 +426,11 @@
         94,
         95
       ],
-      "bid": 0.0175,
-      "ask": 0.0175,
-      "price": 0.0175,
+      "bid": 0.012,
+      "ask": 0.012,
+      "price": 0.012,
       "spread": 0,
-      "volume": 94
+      "volume": 176
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on October 12?",
@@ -355,11 +439,11 @@
         96,
         97
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 103
+      "volume": 201
     },
     {
       "question": "Will the highest temperature in Miami be 98°F or higher on October 12?",

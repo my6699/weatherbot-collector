@@ -6,10 +6,10 @@
   "station": "SAEZ",
   "event_end_date": "2026-10-10T12:00:00Z",
   "hours_at_discovery": 43.4,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 16,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -759,6 +759,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-10T22:38:03.165Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 14.1,
+      "hrrr": 12,
+      "metar": 12,
+      "best": 13.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14.1,
+          "gfs_seamless": 12,
+          "icon_seamless": 13.8
+        },
+        "mean": 13.4,
+        "spread": 1.4,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          14.6,
+          13.8,
+          13.3,
+          16.5,
+          13.4,
+          15,
+          15.6,
+          13.8,
+          15.7,
+          16.3,
+          15.1,
+          15.5,
+          13.2,
+          15.3,
+          14.7,
+          12.9,
+          13.4,
+          14.3,
+          15.2,
+          14.7,
+          16.1,
+          15.6,
+          14.6,
+          15.3,
+          13.2,
+          13.5,
+          14.8,
+          14.5,
+          14.2,
+          14.9,
+          14.1,
+          15,
+          15.8,
+          16.1,
+          13.6,
+          14.4,
+          13.7,
+          14.9,
+          13.5,
+          13.6,
+          15.2,
+          14.2,
+          14.9,
+          15.5,
+          16.1,
+          16,
+          14.8,
+          15.5,
+          13,
+          14.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -841,6 +916,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.0725,
       "top2_sum": 0.9875
+    },
+    {
+      "ts": "2026-10-10T22:38:03.165Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.9995,
+      "top2_bucket": "15-16C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -907,7 +990,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4377
+      "volume": 4547
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 15°C on October 10?",
@@ -920,7 +1003,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 10537
+      "volume": 10708
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 16°C on October 10?",
@@ -929,11 +1012,11 @@
         16,
         16
       ],
-      "bid": 0.915,
-      "ask": 0.915,
-      "price": 0.915,
-      "spread": 0,
-      "volume": 4039
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 5443
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on October 10?",
@@ -942,11 +1025,11 @@
         17,
         17
       ],
-      "bid": 0.0725,
-      "ask": 0.0725,
-      "price": 0.0725,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2000
+      "volume": 2522
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 18°C on October 10?",
@@ -955,11 +1038,11 @@
         18,
         18
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 828
+      "volume": 1011
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 19°C on October 10?",
@@ -968,9 +1051,9 @@
         19,
         19
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 375
     },
