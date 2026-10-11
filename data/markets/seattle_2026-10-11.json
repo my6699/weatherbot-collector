@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.4,
       "opened_at": "2026-10-10T13:47:58.681Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 6.67,
+      "exit_price": 0.21,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-10-11T01:58:03.826Z",
       "stop_price": 0.12,
       "forecast_change_streak": 0
     }
@@ -581,6 +581,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-11T01:58:03.826Z",
+      "horizon": "D+0",
+      "hours_left": 10,
+      "ecmwf": 57,
+      "hrrr": 60,
+      "metar": 50,
+      "best": 58.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 57,
+          "gfs_seamless": 60,
+          "icon_seamless": 59
+        },
+        "mean": 58.3,
+        "spread": 1.7,
+        "gap": 3,
+        "llmEnhanced": false,
+        "membersMax": [
+          57,
+          57,
+          57,
+          57,
+          55,
+          57,
+          56,
+          57,
+          57,
+          58,
+          57,
+          56,
+          56,
+          57,
+          56,
+          57,
+          56,
+          57,
+          57,
+          56,
+          57,
+          57,
+          56,
+          57,
+          57,
+          57,
+          58,
+          57,
+          57,
+          56,
+          57,
+          56,
+          57,
+          57,
+          57,
+          56,
+          57,
+          56,
+          58,
+          56,
+          56,
+          56,
+          57,
+          56,
+          56,
+          57,
+          56,
+          57,
+          56,
+          56
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -639,6 +713,14 @@
       "top2_bucket": "58-61F",
       "top2_price": 0.69,
       "top2_sum": 0.905
+    },
+    {
+      "ts": "2026-10-11T01:58:03.826Z",
+      "top_bucket": "60-61F",
+      "top_price": 0.7,
+      "top2_bucket": "58-61F",
+      "top2_price": 0.7,
+      "top2_sum": 0.91
     }
   ],
   "all_outcomes": [
@@ -653,7 +735,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 594
+      "volume": 661
     },
     {
       "question": "Will the highest temperature in Seattle be between 50-51°F on October 11?",
@@ -701,9 +783,9 @@
         56,
         57
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
       "volume": 367
     },
@@ -714,11 +796,11 @@
         58,
         59
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.21,
+      "ask": 0.21,
+      "price": 0.21,
       "spread": 0,
-      "volume": 1262
+      "volume": 1279
     },
     {
       "question": "Will the highest temperature in Seattle be between 60-61°F on October 11?",
@@ -727,11 +809,11 @@
         60,
         61
       ],
-      "bid": 0.69,
-      "ask": 0.69,
-      "price": 0.69,
+      "bid": 0.7,
+      "ask": 0.7,
+      "price": 0.7,
       "spread": 0,
-      "volume": 2143
+      "volume": 2447
     },
     {
       "question": "Will the highest temperature in Seattle be between 62-63°F on October 11?",
@@ -740,9 +822,9 @@
         62,
         63
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
       "volume": 640
     },
