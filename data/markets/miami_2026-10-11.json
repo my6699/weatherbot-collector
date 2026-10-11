@@ -6,7 +6,7 @@
   "station": "KMIA",
   "event_end_date": "2026-10-11T12:00:00Z",
   "hours_at_discovery": 50.8,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5451732",
     "question": "Will the highest temperature in Miami be between 88-89°F on October 11?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-11T01:58:00.982Z",
       "stop_price": 0.13,
       "trailing_activated": true,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 90.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -879,6 +880,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-11T20:21:43.893Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 90,
+      "hrrr": 90,
+      "metar": 88,
+      "best": 89.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 90,
+          "gfs_seamless": 90,
+          "icon_seamless": 89
+        },
+        "mean": 89.8,
+        "spread": 0.8,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          89,
+          88,
+          90,
+          88,
+          89,
+          90,
+          90,
+          89,
+          90,
+          89,
+          90,
+          89,
+          89,
+          89,
+          90,
+          90,
+          91,
+          90,
+          88,
+          89,
+          90,
+          88,
+          88,
+          89,
+          89,
+          88,
+          90,
+          89,
+          90,
+          89,
+          89,
+          89,
+          89,
+          89,
+          90,
+          89,
+          89,
+          90,
+          90,
+          89,
+          89,
+          89,
+          88,
+          90,
+          89,
+          90,
+          89,
+          88,
+          90,
+          88
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -969,6 +1044,14 @@
       "top2_bucket": "88-91F",
       "top2_price": 0.74,
       "top2_sum": 0.915
+    },
+    {
+      "ts": "2026-10-11T20:21:43.893Z",
+      "top_bucket": "90-91F",
+      "top_price": 0.9985,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.0015,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1018,11 +1101,11 @@
         86,
         87
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 652
+      "volume": 933
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on October 11?",
@@ -1031,11 +1114,11 @@
         88,
         89
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 8311
+      "volume": 12257
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on October 11?",
@@ -1044,11 +1127,11 @@
         90,
         91
       ],
-      "bid": 0.74,
-      "ask": 0.74,
-      "price": 0.74,
+      "bid": 0.9985,
+      "ask": 0.9985,
+      "price": 0.9985,
       "spread": 0,
-      "volume": 3556
+      "volume": 5457
     },
     {
       "question": "Will the highest temperature in Miami be between 92-93°F on October 11?",
@@ -1057,11 +1140,11 @@
         92,
         93
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 5117
+      "volume": 5662
     },
     {
       "question": "Will the highest temperature in Miami be between 94-95°F on October 11?",
@@ -1070,11 +1153,11 @@
         94,
         95
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 654
+      "volume": 1660
     },
     {
       "question": "Will the highest temperature in Miami be between 96-97°F on October 11?",
@@ -1083,11 +1166,11 @@
         96,
         97
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 521
+      "volume": 536
     },
     {
       "question": "Will the highest temperature in Miami be between 98-99°F on October 11?",

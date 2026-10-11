@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-12T12:00:00Z",
   "hours_at_discovery": 52.8,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "5482422",
+    "question": "Will the highest temperature in New York City be between 70-71°F on October 12?",
+    "bucket_low": 70,
+    "bucket_high": 71,
+    "entry_price": 0.19,
+    "bid_at_entry": 0.16,
+    "spread": 0.03,
+    "shares": 210.53,
+    "cost": 40,
+    "p": 0.44,
+    "ev": 1.3158,
+    "edge": 0.1247,
+    "kelly": 0.0803,
+    "forecast_temp": 71.15,
+    "forecast_src": "ensemble",
+    "sigma": 3,
+    "opened_at": "2026-10-11T20:21:40.325Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.128
+  },
+  "positions": [
+    {
+      "market_id": "5482422",
+      "question": "Will the highest temperature in New York City be between 70-71°F on October 12?",
+      "bucket_low": 70,
+      "bucket_high": 71,
+      "entry_price": 0.19,
+      "bid_at_entry": 0.16,
+      "spread": 0.03,
+      "shares": 210.53,
+      "cost": 40,
+      "p": 0.44,
+      "ev": 1.3158,
+      "edge": 0.1247,
+      "kelly": 0.0803,
+      "forecast_temp": 71.15,
+      "forecast_src": "ensemble",
+      "sigma": 3,
+      "opened_at": "2026-10-11T20:21:40.325Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.128
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -534,6 +584,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-11T20:21:40.325Z",
+      "horizon": "D+1",
+      "hours_left": 15.6,
+      "ecmwf": 71,
+      "hrrr": 69,
+      "metar": null,
+      "best": 71,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 71,
+          "gfs_seamless": 69,
+          "icon_seamless": 74
+        },
+        "mean": 71,
+        "spread": 3,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          72,
+          71,
+          71,
+          72,
+          72,
+          72,
+          72,
+          72,
+          71,
+          70,
+          67,
+          72,
+          69,
+          73,
+          70,
+          71,
+          71,
+          72,
+          72,
+          72,
+          70,
+          71,
+          73,
+          73,
+          71,
+          72,
+          71,
+          70,
+          71,
+          70,
+          69,
+          72,
+          72,
+          71,
+          72,
+          71,
+          68,
+          72,
+          73,
+          72,
+          70,
+          72,
+          70,
+          71,
+          71,
+          72,
+          71,
+          69,
+          70,
+          72
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -592,6 +717,14 @@
       "top2_bucket": "72-75F",
       "top2_price": 0.26,
       "top2_sum": 0.705
+    },
+    {
+      "ts": "2026-10-11T20:21:40.325Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.365,
+      "top2_bucket": "72-75F",
+      "top2_price": 0.325,
+      "top2_sum": 0.69
     }
   ],
   "all_outcomes": [
@@ -628,11 +761,11 @@
         64,
         65
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 274
+      "volume": 430
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on October 12?",
@@ -641,11 +774,11 @@
         66,
         67
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 62
+      "volume": 67
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on October 12?",
@@ -654,11 +787,11 @@
         68,
         69
       ],
-      "bid": 0.041,
-      "ask": 0.041,
-      "price": 0.041,
+      "bid": 0.0235,
+      "ask": 0.0235,
+      "price": 0.0235,
       "spread": 0,
-      "volume": 79
+      "volume": 154
     },
     {
       "question": "Will the highest temperature in New York City be between 70-71°F on October 12?",
@@ -667,11 +800,11 @@
         70,
         71
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 1588
+      "volume": 3105
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on October 12?",
@@ -680,11 +813,11 @@
         72,
         73
       ],
-      "bid": 0.445,
-      "ask": 0.445,
-      "price": 0.445,
+      "bid": 0.365,
+      "ask": 0.365,
+      "price": 0.365,
       "spread": 0,
-      "volume": 1960
+      "volume": 2849
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on October 12?",
@@ -693,11 +826,11 @@
         74,
         75
       ],
-      "bid": 0.26,
-      "ask": 0.26,
-      "price": 0.26,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 2926
+      "volume": 3474
     },
     {
       "question": "Will the highest temperature in New York City be between 76-77°F on October 12?",
@@ -706,11 +839,11 @@
         76,
         77
       ],
-      "bid": 0.0145,
-      "ask": 0.0145,
-      "price": 0.0145,
+      "bid": 0.0395,
+      "ask": 0.0395,
+      "price": 0.0395,
       "spread": 0,
-      "volume": 255
+      "volume": 427
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on October 12?",
@@ -719,11 +852,11 @@
         78,
         79
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 125
+      "volume": 130
     },
     {
       "question": "Will the highest temperature in New York City be 80°F or higher on October 12?",

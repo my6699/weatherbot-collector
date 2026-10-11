@@ -6,10 +6,10 @@
   "station": "SBGR",
   "event_end_date": "2026-10-11T12:00:00Z",
   "hours_at_discovery": 43.7,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 25,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -687,6 +687,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-11T20:22:07.283Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 28.2,
+      "hrrr": 25.1,
+      "metar": 19,
+      "best": 26.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 28.2,
+          "gfs_seamless": 25.1,
+          "icon_seamless": 25.4
+        },
+        "mean": 26.7,
+        "spread": 1.6,
+        "gap": 3.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          29.7,
+          29.4,
+          28,
+          29.4,
+          28.9,
+          26.8,
+          30,
+          28.9,
+          29.1,
+          30.1,
+          30.1,
+          27.7,
+          28.9,
+          30.2,
+          26.2,
+          25.8,
+          27.6,
+          28.8,
+          28.8,
+          27.9,
+          29.4,
+          26.9,
+          27.5,
+          28.3,
+          29.2,
+          30.8,
+          30.5,
+          25.6,
+          29.8,
+          28.6,
+          27.4,
+          28.5,
+          28.8,
+          29,
+          27.4,
+          27,
+          28.1,
+          28,
+          29.1,
+          29.1,
+          28.5,
+          25.4,
+          28.8,
+          27.2,
+          29.6,
+          27.8,
+          29.2,
+          29,
+          28.5,
+          28.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -761,6 +836,14 @@
       "top2_bucket": "25-26C",
       "top2_price": 0.195,
       "top2_sum": 0.9725
+    },
+    {
+      "ts": "2026-10-11T20:22:07.283Z",
+      "top_bucket": "25-25C",
+      "top_price": 0.9995,
+      "top2_bucket": "25-26C",
+      "top2_price": 0.0005,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -775,7 +858,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4284
+      "volume": 4294
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 25°C on October 11?",
@@ -784,11 +867,11 @@
         25,
         25
       ],
-      "bid": 0.7775,
-      "ask": 0.7775,
-      "price": 0.7775,
-      "spread": 0,
-      "volume": 2896
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 6210
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 26°C on October 11?",
@@ -797,11 +880,11 @@
         26,
         26
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2661
+      "volume": 4323
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 27°C on October 11?",
@@ -810,11 +893,11 @@
         27,
         27
       ],
-      "bid": 0.0245,
-      "ask": 0.0245,
-      "price": 0.0245,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3306
+      "volume": 4422
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 28°C on October 11?",
@@ -823,11 +906,11 @@
         28,
         28
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4545
+      "volume": 5732
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on October 11?",
@@ -836,11 +919,11 @@
         29,
         29
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4044
+      "volume": 4732
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C on October 11?",
@@ -849,11 +932,11 @@
         30,
         30
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3362
+      "volume": 4066
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 31°C on October 11?",
@@ -862,11 +945,11 @@
         31,
         31
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3272
+      "volume": 3674
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 32°C on October 11?",
@@ -888,9 +971,9 @@
         33,
         33
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 3257
     },
