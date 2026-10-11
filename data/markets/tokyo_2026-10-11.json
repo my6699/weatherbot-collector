@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-10-11T12:00:00Z",
   "hours_at_discovery": 50.8,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 26,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -754,6 +754,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-11T15:46:39.068Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 20,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -836,6 +847,14 @@
       "top2_bucket": "25-26C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-11T15:46:39.068Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.9995,
+      "top2_bucket": "25-26C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -902,7 +921,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5508
+      "volume": 5519
     },
     {
       "question": "Will the highest temperature in Tokyo be 25°C on October 11?",
@@ -915,7 +934,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 11451
+      "volume": 11492
     },
     {
       "question": "Will the highest temperature in Tokyo be 26°C on October 11?",
@@ -928,7 +947,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 18630
+      "volume": 18856
     },
     {
       "question": "Will the highest temperature in Tokyo be 27°C on October 11?",
@@ -941,7 +960,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3957
+      "volume": 3969
     },
     {
       "question": "Will the highest temperature in Tokyo be 28°C on October 11?",
@@ -954,7 +973,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1799
+      "volume": 1809
     },
     {
       "question": "Will the highest temperature in Tokyo be 29°C on October 11?",
@@ -983,5 +1002,6 @@
       "volume": 2831
     }
   ],
-  "created_at": "2026-10-09T09:12:05.078Z"
+  "created_at": "2026-10-09T09:12:05.078Z",
+  "metar_max": 24
 }

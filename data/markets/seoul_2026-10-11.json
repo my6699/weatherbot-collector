@@ -6,7 +6,7 @@
   "station": "RKSI",
   "event_end_date": "2026-10-11T12:00:00Z",
   "hours_at_discovery": 50.8,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5449063",
     "question": "Will the highest temperature in Seoul (Incheon) be 24°C on October 11?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-11T08:59:52.451Z",
       "stop_price": 0.12,
       "trailing_activated": true,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 26,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -664,6 +665,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-11T15:46:38.213Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 21,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -730,6 +742,14 @@
       "top2_bucket": "25-26C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-11T15:46:38.213Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.9995,
+      "top2_bucket": "25-26C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -770,7 +790,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4054
+      "volume": 4103
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 23°C on October 11?",
@@ -783,7 +803,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4711
+      "volume": 4763
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 24°C on October 11?",
@@ -809,7 +829,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 9488
+      "volume": 9533
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 26°C on October 11?",
@@ -822,7 +842,7 @@
       "ask": 0.999,
       "price": 0.9995,
       "spread": -0.0005,
-      "volume": 17819
+      "volume": 18160
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 27°C on October 11?",
@@ -848,7 +868,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6691
+      "volume": 6786
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 29°C on October 11?",
@@ -877,5 +897,6 @@
       "volume": 5504
     }
   ],
-  "created_at": "2026-10-09T09:12:01.925Z"
+  "created_at": "2026-10-09T09:12:01.925Z",
+  "metar_max": 22
 }
