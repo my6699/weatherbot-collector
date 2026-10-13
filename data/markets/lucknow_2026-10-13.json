@@ -6,10 +6,10 @@
   "station": "VILK",
   "event_end_date": "2026-10-13T12:00:00Z",
   "hours_at_discovery": 51,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -682,6 +682,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-13T19:20:37.141Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 25,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -756,6 +767,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.103,
       "top2_sum": 1.0045
+    },
+    {
+      "ts": "2026-10-13T19:20:37.141Z",
+      "top_bucket": "32-32C",
+      "top_price": 1,
+      "top2_bucket": "31-32C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -766,9 +785,9 @@
         -999,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 171
     },
@@ -779,9 +798,9 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 349
     },
@@ -805,11 +824,11 @@
         30,
         30
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 684
+      "volume": 928
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on October 13?",
@@ -818,9 +837,9 @@
         31,
         31
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3763
     },
@@ -831,11 +850,11 @@
         32,
         32
       ],
-      "bid": 0.9015,
-      "ask": 0.9015,
-      "price": 0.9015,
-      "spread": 0,
-      "volume": 21596
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 29824
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on October 13?",
@@ -844,11 +863,11 @@
         33,
         33
       ],
-      "bid": 0.103,
-      "ask": 0.103,
-      "price": 0.103,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 13436
+      "volume": 18390
     },
     {
       "question": "Will the highest temperature in Lucknow be 34°C on October 13?",
@@ -857,11 +876,11 @@
         34,
         34
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1930
+      "volume": 2693
     },
     {
       "question": "Will the highest temperature in Lucknow be 35°C on October 13?",
@@ -870,9 +889,9 @@
         35,
         35
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 803
     },
@@ -883,9 +902,9 @@
         36,
         36
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 106
     },
@@ -896,12 +915,13 @@
         37,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 180
     }
   ],
-  "created_at": "2026-10-11T08:59:58.359Z"
+  "created_at": "2026-10-11T08:59:58.359Z",
+  "metar_max": 29
 }
