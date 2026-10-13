@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.104,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 1
     }
   ],
   "actual_temp": null,
@@ -582,6 +582,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-13T03:36:52.217Z",
+      "horizon": "D+0",
+      "hours_left": 8.4,
+      "ecmwf": 20.5,
+      "hrrr": 20.8,
+      "metar": 17,
+      "best": 20.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 20.5,
+          "gfs_seamless": 20.8,
+          "icon_seamless": 20.3
+        },
+        "mean": 20.6,
+        "spread": 0.3,
+        "gap": 0.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          20.3,
+          20.8,
+          20.8,
+          20.5,
+          21,
+          20.2,
+          20.3,
+          21.7,
+          20.7,
+          21,
+          21,
+          21.1,
+          21.1,
+          21,
+          19.2,
+          20,
+          21.6,
+          21.7,
+          20.6,
+          20.4,
+          21.4,
+          21.7,
+          21.1,
+          19.9,
+          21.5,
+          21.1,
+          21.1,
+          20.8,
+          21,
+          20.1,
+          21.8,
+          21.2,
+          20.8,
+          20.6,
+          20.5,
+          20.6,
+          21.6,
+          20,
+          21.5,
+          20.4,
+          20,
+          21.2,
+          20.2,
+          22.2,
+          20.8,
+          21.7,
+          20.3,
+          20.7,
+          19.6,
+          20.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -640,6 +714,14 @@
       "top2_bucket": "21-22C",
       "top2_price": 0.18,
       "top2_sum": 0.79
+    },
+    {
+      "ts": "2026-10-13T03:36:52.217Z",
+      "top_bucket": "21-21C",
+      "top_price": 0.605,
+      "top2_bucket": "20-21C",
+      "top2_price": 0.605,
+      "top2_sum": 0.83
     }
   ],
   "all_outcomes": [
@@ -650,9 +732,9 @@
         -999,
         13
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 839
     },
@@ -715,11 +797,11 @@
         18,
         18
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 1590
+      "volume": 1838
     },
     {
       "question": "Will the highest temperature in London be 19°C on October 13?",
@@ -728,11 +810,11 @@
         19,
         19
       ],
-      "bid": 0.0555,
-      "ask": 0.0555,
-      "price": 0.0555,
+      "bid": 0.013,
+      "ask": 0.013,
+      "price": 0.013,
       "spread": 0,
-      "volume": 2131
+      "volume": 2372
     },
     {
       "question": "Will the highest temperature in London be 20°C on October 13?",
@@ -741,11 +823,11 @@
         20,
         20
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
+      "bid": 0.225,
+      "ask": 0.225,
+      "price": 0.225,
       "spread": 0,
-      "volume": 6540
+      "volume": 6923
     },
     {
       "question": "Will the highest temperature in London be 21°C on October 13?",
@@ -754,11 +836,11 @@
         21,
         21
       ],
-      "bid": 0.61,
-      "ask": 0.61,
-      "price": 0.61,
+      "bid": 0.605,
+      "ask": 0.605,
+      "price": 0.605,
       "spread": 0,
-      "volume": 3362
+      "volume": 3754
     },
     {
       "question": "Will the highest temperature in London be 22°C on October 13?",
@@ -767,11 +849,11 @@
         22,
         22
       ],
-      "bid": 0.18,
-      "ask": 0.18,
-      "price": 0.18,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 2911
+      "volume": 3347
     },
     {
       "question": "Will the highest temperature in London be 23°C or higher on October 13?",
@@ -780,11 +862,11 @@
         23,
         999
       ],
-      "bid": 0.0125,
-      "ask": 0.0125,
-      "price": 0.0125,
+      "bid": 0.0115,
+      "ask": 0.0115,
+      "price": 0.0115,
       "spread": 0,
-      "volume": 1288
+      "volume": 1859
     }
   ],
   "created_at": "2026-10-11T08:59:47.728Z"
