@@ -6,7 +6,7 @@
   "station": "LTAC",
   "event_end_date": "2026-10-13T12:00:00Z",
   "hours_at_discovery": 51,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "5536294",
     "question": "Will the highest temperature in Ankara be 22°C on October 13?",
@@ -663,6 +663,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-13T11:52:56.954Z",
+      "horizon": "D+0",
+      "hours_left": 0.1,
+      "ecmwf": 21.2,
+      "hrrr": 20.3,
+      "metar": 19,
+      "best": 20.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 21.2,
+          "gfs_seamless": 20.3,
+          "icon_seamless": 19.7
+        },
+        "mean": 20.6,
+        "spread": 0.9,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          21,
+          20.8,
+          21,
+          20.5,
+          21.3,
+          21.5,
+          20.8,
+          21.4,
+          20.9,
+          21.2,
+          21.4,
+          21.4,
+          20.7,
+          21,
+          21.4,
+          21.1,
+          21.7,
+          21.2,
+          20.7,
+          21.5,
+          20.7,
+          21.2,
+          20.7,
+          20.8,
+          22.1,
+          20.9,
+          21.3,
+          21.6,
+          20.8,
+          21.3,
+          20.8,
+          21.7,
+          20.3,
+          20.7,
+          20.9,
+          20.8,
+          20.2,
+          21,
+          21.6,
+          20.9,
+          20.6,
+          20.9,
+          21,
+          21.6,
+          20.4,
+          20.8,
+          21.4,
+          20.9,
+          21.1,
+          21.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -729,6 +803,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.42,
       "top2_sum": 0.87
+    },
+    {
+      "ts": "2026-10-13T11:52:56.954Z",
+      "top_bucket": "20-20C",
+      "top_price": 0.885,
+      "top2_bucket": "20-21C",
+      "top2_price": 0.11,
+      "top2_sum": 0.995
     }
   ],
   "all_outcomes": [
@@ -765,11 +847,11 @@
         18,
         18
       ],
-      "bid": 0.022,
-      "ask": 0.022,
-      "price": 0.022,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 494
+      "volume": 1551
     },
     {
       "question": "Will the highest temperature in Ankara be 19°C on October 13?",
@@ -778,11 +860,11 @@
         19,
         19
       ],
-      "bid": 0.077,
-      "ask": 0.077,
-      "price": 0.077,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 657
+      "volume": 1865
     },
     {
       "question": "Will the highest temperature in Ankara be 20°C on October 13?",
@@ -791,11 +873,11 @@
         20,
         20
       ],
-      "bid": 0.45,
-      "ask": 0.45,
-      "price": 0.45,
+      "bid": 0.885,
+      "ask": 0.885,
+      "price": 0.885,
       "spread": 0,
-      "volume": 2065
+      "volume": 4178
     },
     {
       "question": "Will the highest temperature in Ankara be 21°C on October 13?",
@@ -804,11 +886,11 @@
         21,
         21
       ],
-      "bid": 0.42,
-      "ask": 0.42,
-      "price": 0.42,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
-      "volume": 887
+      "volume": 1637
     },
     {
       "question": "Will the highest temperature in Ankara be 22°C on October 13?",
@@ -817,11 +899,11 @@
         22,
         22
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 1475
+      "volume": 3063
     },
     {
       "question": "Will the highest temperature in Ankara be 23°C on October 13?",
@@ -830,11 +912,11 @@
         23,
         23
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 417
+      "volume": 878
     },
     {
       "question": "Will the highest temperature in Ankara be 24°C on October 13?",
@@ -843,11 +925,11 @@
         24,
         24
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 69
+      "volume": 226
     },
     {
       "question": "Will the highest temperature in Ankara be 25°C on October 13?",
@@ -856,11 +938,11 @@
         25,
         25
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 632
+      "volume": 1018
     },
     {
       "question": "Will the highest temperature in Ankara be 26°C or higher on October 13?",
