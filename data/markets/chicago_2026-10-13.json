@@ -6,10 +6,10 @@
   "station": "KORD",
   "event_end_date": "2026-10-13T12:00:00Z",
   "hours_at_discovery": 51,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 78.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -759,6 +759,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-13T23:18:47.174Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 81,
+      "hrrr": 80,
+      "metar": 77,
+      "best": 80.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 81,
+          "gfs_seamless": 80,
+          "icon_seamless": 79
+        },
+        "mean": 80.3,
+        "spread": 1.3,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          79,
+          82,
+          81,
+          82,
+          79,
+          80,
+          80,
+          81,
+          81,
+          82,
+          80,
+          79,
+          79,
+          80,
+          80,
+          79,
+          80,
+          78,
+          79,
+          80,
+          79,
+          79,
+          79,
+          80,
+          80,
+          81,
+          80,
+          79,
+          80,
+          79,
+          81,
+          80,
+          79,
+          80,
+          79,
+          82,
+          79,
+          79,
+          81,
+          79,
+          80,
+          79,
+          81,
+          79,
+          79,
+          79,
+          79,
+          80,
+          80,
+          80
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -841,6 +915,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.19,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-10-13T23:18:47.174Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.9995,
+      "top2_bucket": "76-79F",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -855,7 +937,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5530
+      "volume": 5557
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on October 13?",
@@ -890,11 +972,11 @@
         76,
         77
       ],
-      "bid": 0.1535,
-      "ask": 0.1535,
-      "price": 0.1535,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3265
+      "volume": 4025
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on October 13?",
@@ -903,11 +985,11 @@
         78,
         79
       ],
-      "bid": 0.67,
-      "ask": 0.67,
-      "price": 0.67,
-      "spread": 0,
-      "volume": 5704
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 7883
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on October 13?",
@@ -916,11 +998,11 @@
         80,
         81
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5431
+      "volume": 6895
     },
     {
       "question": "Will the highest temperature in Chicago be between 82-83°F on October 13?",
@@ -929,11 +1011,11 @@
         82,
         83
       ],
-      "bid": 0.0355,
-      "ask": 0.0355,
-      "price": 0.0355,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3068
+      "volume": 4334
     },
     {
       "question": "Will the highest temperature in Chicago be between 84-85°F on October 13?",
@@ -942,11 +1024,11 @@
         84,
         85
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2206
+      "volume": 2706
     },
     {
       "question": "Will the highest temperature in Chicago be between 86-87°F on October 13?",
@@ -955,11 +1037,11 @@
         86,
         87
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1700
+      "volume": 1716
     },
     {
       "question": "Will the highest temperature in Chicago be between 88-89°F on October 13?",
