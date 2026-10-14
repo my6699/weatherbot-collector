@@ -6,7 +6,7 @@
   "station": "WSSS",
   "event_end_date": "2026-10-14T12:00:00Z",
   "hours_at_discovery": 53.9,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5595827",
     "question": "Will the highest temperature in Singapore be 33°C on October 14?",
@@ -51,15 +51,16 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-10-14T07:43:57.499Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
-      "stop_price": 0.08
+      "status": "closed",
+      "pnl": -59.31,
+      "exit_price": 0.0015,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-10-14T13:48:17.065Z",
+      "stop_price": 0.08,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -731,6 +732,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-14T13:48:17.065Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 33.9,
+      "hrrr": 31.5,
+      "metar": 29,
+      "best": 32.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 33.9,
+          "gfs_seamless": 31.5,
+          "icon_seamless": 31.9
+        },
+        "mean": 32.8,
+        "spread": 1.3,
+        "gap": 2.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          32.5,
+          31.4,
+          33.1,
+          31.8,
+          33.1,
+          32.7,
+          31.8,
+          31.7,
+          32.6,
+          33.7,
+          30.8,
+          31.9,
+          32.1,
+          31.2,
+          32.5,
+          31.8,
+          33.1,
+          33,
+          33.3,
+          31,
+          33,
+          32,
+          33,
+          33.1,
+          31.6,
+          32.2,
+          32.3,
+          32.2,
+          31.5,
+          31.9,
+          32.4,
+          32.8,
+          33,
+          32.3,
+          32.7,
+          31.9,
+          31.3,
+          32.6,
+          33.4,
+          31.3,
+          32.4,
+          30.7,
+          31.7,
+          29.9,
+          31.6,
+          32.9,
+          31.9,
+          32.7,
+          31.8,
+          31.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -805,6 +881,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.115,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-10-14T13:48:17.065Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.999,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.0015,
+      "top2_sum": 1.0005
     }
   ],
   "all_outcomes": [
@@ -858,7 +942,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3011
+      "volume": 4012
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on October 14?",
@@ -880,11 +964,11 @@
         32,
         32
       ],
-      "bid": 0.88,
-      "ask": 0.88,
-      "price": 0.88,
+      "bid": 0.999,
+      "ask": 0.999,
+      "price": 0.999,
       "spread": 0,
-      "volume": 5110
+      "volume": 7993
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on October 14?",
@@ -893,11 +977,11 @@
         33,
         33
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 6653
+      "volume": 9579
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on October 14?",
@@ -906,11 +990,11 @@
         34,
         34
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2812
+      "volume": 3725
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on October 14?",
@@ -919,11 +1003,11 @@
         35,
         35
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1454
+      "volume": 1604
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C on October 14?",
@@ -952,5 +1036,6 @@
       "volume": 1274
     }
   ],
-  "created_at": "2026-10-12T06:06:52.843Z"
+  "created_at": "2026-10-12T06:06:52.843Z",
+  "metar_max": 29
 }

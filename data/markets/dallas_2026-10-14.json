@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-10-14T12:00:00Z",
   "hours_at_discovery": 44.4,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -609,6 +609,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-14T13:47:57.684Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 92,
+      "hrrr": 92,
+      "metar": 80,
+      "best": 92.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 92,
+          "gfs_seamless": 92,
+          "icon_seamless": 93
+        },
+        "mean": 92.2,
+        "spread": 0.8,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          92,
+          92,
+          90,
+          93,
+          91,
+          92,
+          90,
+          92,
+          93,
+          91,
+          90,
+          91,
+          90,
+          90,
+          90,
+          94,
+          89,
+          92,
+          93,
+          92,
+          93,
+          92,
+          92,
+          96,
+          91,
+          94,
+          94,
+          92,
+          92,
+          93,
+          91,
+          92,
+          94,
+          90,
+          89,
+          93,
+          94,
+          90,
+          95,
+          89,
+          92,
+          89,
+          93,
+          90,
+          92,
+          92,
+          93,
+          92,
+          92,
+          91
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -675,6 +749,14 @@
       "top2_bucket": "90-93F",
       "top2_price": 0.41,
       "top2_sum": 0.795
+    },
+    {
+      "ts": "2026-10-14T13:47:57.684Z",
+      "top_bucket": "92-93F",
+      "top_price": 0.39,
+      "top2_bucket": "90-93F",
+      "top2_price": 0.39,
+      "top2_sum": 0.75
     }
   ],
   "all_outcomes": [
@@ -698,9 +780,9 @@
         82,
         83
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
       "volume": 215
     },
@@ -724,11 +806,11 @@
         86,
         87
       ],
-      "bid": 0.0125,
-      "ask": 0.0125,
-      "price": 0.0125,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 769
+      "volume": 772
     },
     {
       "question": "Will the highest temperature in Dallas be between 88-89°F on October 14?",
@@ -737,11 +819,11 @@
         88,
         89
       ],
-      "bid": 0.0925,
-      "ask": 0.0925,
-      "price": 0.0925,
+      "bid": 0.0795,
+      "ask": 0.0795,
+      "price": 0.0795,
       "spread": 0,
-      "volume": 1888
+      "volume": 1943
     },
     {
       "question": "Will the highest temperature in Dallas be between 90-91°F on October 14?",
@@ -750,11 +832,11 @@
         90,
         91
       ],
-      "bid": 0.385,
-      "ask": 0.385,
-      "price": 0.385,
+      "bid": 0.36,
+      "ask": 0.36,
+      "price": 0.36,
       "spread": 0,
-      "volume": 6222
+      "volume": 6493
     },
     {
       "question": "Will the highest temperature in Dallas be between 92-93°F on October 14?",
@@ -763,11 +845,11 @@
         92,
         93
       ],
-      "bid": 0.41,
-      "ask": 0.41,
-      "price": 0.41,
+      "bid": 0.39,
+      "ask": 0.39,
+      "price": 0.39,
       "spread": 0,
-      "volume": 2065
+      "volume": 2409
     },
     {
       "question": "Will the highest temperature in Dallas be between 94-95°F on October 14?",
@@ -776,11 +858,11 @@
         94,
         95
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.155,
+      "ask": 0.155,
+      "price": 0.155,
       "spread": 0,
-      "volume": 3363
+      "volume": 3395
     },
     {
       "question": "Will the highest temperature in Dallas be between 96-97°F on October 14?",
@@ -789,11 +871,11 @@
         96,
         97
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 959
+      "volume": 1218
     },
     {
       "question": "Will the highest temperature in Dallas be between 98-99°F on October 14?",

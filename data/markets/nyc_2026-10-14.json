@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-10-14T12:00:00Z",
   "hours_at_discovery": 44.4,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "5600348",
     "question": "Will the highest temperature in New York City be between 76-77°F on October 14?",
@@ -659,6 +659,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-14T13:47:24.985Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 78,
+      "hrrr": 79,
+      "metar": 71,
+      "best": 78.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 78,
+          "gfs_seamless": 79,
+          "icon_seamless": 81
+        },
+        "mean": 78.9,
+        "spread": 2.1,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          75,
+          79,
+          77,
+          78,
+          76,
+          80,
+          78,
+          78,
+          78,
+          80,
+          82,
+          78,
+          76,
+          79,
+          78,
+          78,
+          79,
+          77,
+          80,
+          75,
+          78,
+          78,
+          76,
+          76,
+          80,
+          80,
+          79,
+          77,
+          76,
+          76,
+          80,
+          76,
+          77,
+          76,
+          78,
+          76,
+          79,
+          79,
+          76,
+          80,
+          78,
+          78,
+          80,
+          77,
+          77,
+          78,
+          79,
+          76,
+          78,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -725,6 +800,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.38,
       "top2_sum": 0.675
+    },
+    {
+      "ts": "2026-10-14T13:47:24.985Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.475,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.475,
+      "top2_sum": 0.83
     }
   ],
   "all_outcomes": [
@@ -778,7 +861,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 253
+      "volume": 350
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on October 14?",
@@ -787,11 +870,11 @@
         74,
         75
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 344
+      "volume": 422
     },
     {
       "question": "Will the highest temperature in New York City be between 76-77°F on October 14?",
@@ -800,11 +883,11 @@
         76,
         77
       ],
-      "bid": 0.1185,
-      "ask": 0.1185,
-      "price": 0.1185,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 2116
+      "volume": 3499
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on October 14?",
@@ -813,11 +896,11 @@
         78,
         79
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 6414
+      "volume": 8854
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on October 14?",
@@ -826,11 +909,11 @@
         80,
         81
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.475,
+      "ask": 0.475,
+      "price": 0.475,
       "spread": 0,
-      "volume": 3705
+      "volume": 5583
     },
     {
       "question": "Will the highest temperature in New York City be between 82-83°F on October 14?",
@@ -839,11 +922,11 @@
         82,
         83
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 1617
+      "volume": 2536
     },
     {
       "question": "Will the highest temperature in New York City be between 84-85°F on October 14?",
@@ -852,11 +935,11 @@
         84,
         85
       ],
-      "bid": 0.018,
-      "ask": 0.018,
-      "price": 0.018,
+      "bid": 0.0145,
+      "ask": 0.0145,
+      "price": 0.0145,
       "spread": 0,
-      "volume": 1940
+      "volume": 2393
     },
     {
       "question": "Will the highest temperature in New York City be 86°F or higher on October 14?",
@@ -865,11 +948,11 @@
         86,
         999
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 455
+      "volume": 458
     }
   ],
   "created_at": "2026-10-12T15:37:28.650Z"
