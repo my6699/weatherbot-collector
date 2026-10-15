@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-10-15T12:00:00Z",
   "hours_at_discovery": 48.1,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -756,6 +756,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-15T11:38:19.011Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 22,
+      "hrrr": 22.9,
+      "metar": 20,
+      "best": 22.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 22,
+          "gfs_seamless": 22.9,
+          "icon_seamless": 21.6
+        },
+        "mean": 22.2,
+        "spread": 0.7,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          22.6,
+          22.9,
+          22.4,
+          22.5,
+          23.1,
+          23.2,
+          23.3,
+          22.4,
+          22.2,
+          22.6,
+          22.9,
+          23.2,
+          22.3,
+          23.2,
+          23.1,
+          22.3,
+          22.7,
+          22.5,
+          22.7,
+          23.2,
+          22.4,
+          22.9,
+          22.7,
+          22.5,
+          22.9,
+          22.7,
+          23.1,
+          22.5,
+          22.7,
+          23,
+          23,
+          22.3,
+          23.1,
+          23.1,
+          23.2,
+          23,
+          22.8,
+          22.3,
+          23.2,
+          22.5,
+          23,
+          22.9,
+          22.9,
+          23.4,
+          22.6,
+          21.2,
+          23.3,
+          22,
+          22.5,
+          23
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -838,6 +912,14 @@
       "top2_bucket": "24-25C",
       "top2_price": 0.175,
       "top2_sum": 0.78
+    },
+    {
+      "ts": "2026-10-15T11:38:19.011Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.535,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.535,
+      "top2_sum": 0.855
     }
   ],
   "all_outcomes": [
@@ -848,11 +930,11 @@
         -999,
         17
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1150
+      "volume": 12238
     },
     {
       "question": "Will the highest temperature in Paris be 18°C on October 15?",
@@ -865,7 +947,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1325
+      "volume": 4680
     },
     {
       "question": "Will the highest temperature in Paris be 19°C on October 15?",
@@ -878,7 +960,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 244
+      "volume": 3278
     },
     {
       "question": "Will the highest temperature in Paris be 20°C on October 15?",
@@ -887,11 +969,11 @@
         20,
         20
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 1546
+      "volume": 3188
     },
     {
       "question": "Will the highest temperature in Paris be 21°C on October 15?",
@@ -900,11 +982,11 @@
         21,
         21
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 1254
+      "volume": 2979
     },
     {
       "question": "Will the highest temperature in Paris be 22°C on October 15?",
@@ -913,11 +995,11 @@
         22,
         22
       ],
-      "bid": 0.033,
-      "ask": 0.033,
-      "price": 0.033,
+      "bid": 0.1015,
+      "ask": 0.1015,
+      "price": 0.1015,
       "spread": 0,
-      "volume": 2800
+      "volume": 4616
     },
     {
       "question": "Will the highest temperature in Paris be 23°C on October 15?",
@@ -926,11 +1008,11 @@
         23,
         23
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.32,
+      "ask": 0.32,
+      "price": 0.32,
       "spread": 0,
-      "volume": 3127
+      "volume": 4175
     },
     {
       "question": "Will the highest temperature in Paris be 24°C on October 15?",
@@ -939,11 +1021,11 @@
         24,
         24
       ],
-      "bid": 0.605,
-      "ask": 0.605,
-      "price": 0.605,
+      "bid": 0.535,
+      "ask": 0.535,
+      "price": 0.535,
       "spread": 0,
-      "volume": 4511
+      "volume": 6179
     },
     {
       "question": "Will the highest temperature in Paris be 25°C on October 15?",
@@ -952,11 +1034,11 @@
         25,
         25
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
-      "volume": 3613
+      "volume": 6291
     },
     {
       "question": "Will the highest temperature in Paris be 26°C on October 15?",
@@ -965,11 +1047,11 @@
         26,
         26
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 399
+      "volume": 1552
     },
     {
       "question": "Will the highest temperature in Paris be 27°C or higher on October 15?",
@@ -982,7 +1064,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 1073
+      "volume": 1187
     }
   ],
   "created_at": "2026-10-13T11:52:54.246Z"

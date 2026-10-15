@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-10-15T12:00:00Z",
   "hours_at_discovery": 48.1,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -755,6 +755,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-15T11:38:15.610Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 87,
+      "hrrr": 86,
+      "metar": 66,
+      "best": 86.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 87,
+          "gfs_seamless": 86,
+          "icon_seamless": 86
+        },
+        "mean": 86.5,
+        "spread": 0.5,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          87,
+          87,
+          87,
+          87,
+          87,
+          88,
+          87,
+          88,
+          87,
+          87,
+          87,
+          87,
+          87,
+          87,
+          87,
+          87,
+          87,
+          87,
+          87,
+          88,
+          87,
+          87,
+          87,
+          87,
+          88,
+          88,
+          87,
+          87,
+          87,
+          87,
+          87,
+          87,
+          87,
+          88,
+          88,
+          87,
+          87,
+          87,
+          87,
+          87,
+          88,
+          87,
+          87,
+          87,
+          87,
+          87,
+          87,
+          88,
+          88,
+          87
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -837,6 +911,14 @@
       "top2_bucket": "86-89F",
       "top2_price": 0.38,
       "top2_sum": 0.925
+    },
+    {
+      "ts": "2026-10-15T11:38:15.610Z",
+      "top_bucket": "86-87F",
+      "top_price": 0.64,
+      "top2_bucket": "84-87F",
+      "top2_price": 0.64,
+      "top2_sum": 0.8155
     }
   ],
   "all_outcomes": [
@@ -886,11 +968,11 @@
         82,
         83
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 1030
+      "volume": 1366
     },
     {
       "question": "Will the highest temperature in Atlanta be between 84-85°F on October 15?",
@@ -899,11 +981,11 @@
         84,
         85
       ],
-      "bid": 0.0465,
-      "ask": 0.0465,
-      "price": 0.0465,
+      "bid": 0.1755,
+      "ask": 0.1755,
+      "price": 0.1755,
       "spread": 0,
-      "volume": 3029
+      "volume": 3922
     },
     {
       "question": "Will the highest temperature in Atlanta be between 86-87°F on October 15?",
@@ -912,11 +994,11 @@
         86,
         87
       ],
-      "bid": 0.545,
-      "ask": 0.545,
-      "price": 0.545,
+      "bid": 0.64,
+      "ask": 0.64,
+      "price": 0.64,
       "spread": 0,
-      "volume": 5415
+      "volume": 7664
     },
     {
       "question": "Will the highest temperature in Atlanta be between 88-89°F on October 15?",
@@ -925,11 +1007,11 @@
         88,
         89
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.14,
+      "ask": 0.14,
+      "price": 0.14,
       "spread": 0,
-      "volume": 6476
+      "volume": 7912
     },
     {
       "question": "Will the highest temperature in Atlanta be between 90-91°F on October 15?",
@@ -938,11 +1020,11 @@
         90,
         91
       ],
-      "bid": 0.028,
-      "ask": 0.028,
-      "price": 0.028,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
-      "volume": 1777
+      "volume": 2173
     },
     {
       "question": "Will the highest temperature in Atlanta be between 92-93°F on October 15?",
@@ -951,11 +1033,11 @@
         92,
         93
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1081
+      "volume": 1134
     },
     {
       "question": "Will the highest temperature in Atlanta be between 94-95°F on October 15?",

@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-10-15T12:00:00Z",
   "hours_at_discovery": 40.7,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "5648230",
     "question": "Will the highest temperature in Toronto be 11°C on October 15?",
@@ -730,6 +730,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-15T11:38:33.441Z",
+      "horizon": "D+0",
+      "hours_left": 0.4,
+      "ecmwf": 12.1,
+      "hrrr": 12,
+      "metar": 10,
+      "best": 12.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 12.1,
+          "gfs_seamless": 12,
+          "icon_seamless": 12.4
+        },
+        "mean": 12.1,
+        "spread": 0.3,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          11.9,
+          11.8,
+          12.2,
+          12.7,
+          12.6,
+          12.2,
+          11.9,
+          12.2,
+          11.8,
+          12.7,
+          12.1,
+          12.5,
+          11.6,
+          12.1,
+          12.7,
+          12.5,
+          12.1,
+          11.4,
+          11.4,
+          12.4,
+          12,
+          11.6,
+          12.4,
+          12.3,
+          11.8,
+          12.4,
+          12.5,
+          11.8,
+          11.8,
+          11.9,
+          12.2,
+          12.1,
+          11.4,
+          11.9,
+          11.8,
+          11.5,
+          11.8,
+          12.8,
+          11.6,
+          12.3,
+          12.6,
+          12.3,
+          11.9,
+          12,
+          12.8,
+          12.1,
+          11.9,
+          12.9,
+          11.8,
+          12.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -804,6 +878,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.255,
       "top2_sum": 0.78
+    },
+    {
+      "ts": "2026-10-15T11:38:33.441Z",
+      "top_bucket": "12-12C",
+      "top_price": 0.495,
+      "top2_bucket": "11-12C",
+      "top2_price": 0.495,
+      "top2_sum": 0.895
     }
   ],
   "all_outcomes": [
@@ -866,11 +948,11 @@
         11,
         11
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.4,
+      "ask": 0.4,
+      "price": 0.4,
       "spread": 0,
-      "volume": 1683
+      "volume": 2362
     },
     {
       "question": "Will the highest temperature in Toronto be 12°C on October 15?",
@@ -879,11 +961,11 @@
         12,
         12
       ],
-      "bid": 0.525,
-      "ask": 0.525,
-      "price": 0.525,
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
       "spread": 0,
-      "volume": 893
+      "volume": 3201
     },
     {
       "question": "Will the highest temperature in Toronto be 13°C on October 15?",
@@ -892,11 +974,11 @@
         13,
         13
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 2187
+      "volume": 3196
     },
     {
       "question": "Will the highest temperature in Toronto be 14°C on October 15?",
@@ -905,11 +987,11 @@
         14,
         14
       ],
-      "bid": 0.0545,
-      "ask": 0.0545,
-      "price": 0.0545,
+      "bid": 0.0185,
+      "ask": 0.0185,
+      "price": 0.0185,
       "spread": 0,
-      "volume": 478
+      "volume": 827
     },
     {
       "question": "Will the highest temperature in Toronto be 15°C on October 15?",
@@ -918,11 +1000,11 @@
         15,
         15
       ],
-      "bid": 0.0135,
-      "ask": 0.0135,
-      "price": 0.0135,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 864
+      "volume": 2390
     },
     {
       "question": "Will the highest temperature in Toronto be 16°C on October 15?",
@@ -931,11 +1013,11 @@
         16,
         16
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 419
+      "volume": 1572
     },
     {
       "question": "Will the highest temperature in Toronto be 17°C or higher on October 15?",
