@@ -309,6 +309,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-15T23:07:36.024Z",
+      "horizon": "D+1",
+      "hours_left": 12.9,
+      "ecmwf": 18,
+      "hrrr": 17.6,
+      "metar": null,
+      "best": 17.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 18,
+          "gfs_seamless": 17.6,
+          "icon_seamless": 18.2
+        },
+        "mean": 17.9,
+        "spread": 0.3,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          19.2,
+          19.4,
+          19.6,
+          14.2,
+          19.2,
+          18.3,
+          18.9,
+          17.9,
+          18.4,
+          16.9,
+          18.5,
+          20.8,
+          19.6,
+          19,
+          17,
+          18.1,
+          18.2,
+          18.7,
+          18.8,
+          18.8,
+          17,
+          17,
+          18.7,
+          19.6,
+          18.8,
+          17.5,
+          19.6,
+          18.6,
+          12,
+          17,
+          16,
+          18,
+          17.6,
+          18,
+          16.3,
+          16.3,
+          17.9,
+          18.8,
+          18.4,
+          19.3,
+          19.3,
+          19.5,
+          18.9,
+          16.8,
+          16.8,
+          17.1,
+          17.9,
+          18.5,
+          20,
+          18.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -340,6 +414,14 @@
       "ts": "2026-10-15T20:22:56.450Z",
       "top_bucket": "16-999C",
       "top_price": 0.92,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.075,
+      "top2_sum": 0.081
+    },
+    {
+      "ts": "2026-10-15T23:07:36.024Z",
+      "top_bucket": "16-999C",
+      "top_price": 0.93,
       "top2_bucket": "14-15C",
       "top2_price": 0.075,
       "top2_sum": 0.081
@@ -474,7 +556,7 @@
       "ask": 0.075,
       "price": 0.075,
       "spread": 0,
-      "volume": 1008
+      "volume": 1018
     },
     {
       "question": "Will the highest temperature in Toronto be 16°C or higher on October 16?",
@@ -483,11 +565,11 @@
         16,
         999
       ],
-      "bid": 0.92,
-      "ask": 0.92,
-      "price": 0.92,
+      "bid": 0.93,
+      "ask": 0.93,
+      "price": 0.93,
       "spread": 0,
-      "volume": 7262
+      "volume": 7283
     }
   ],
   "created_at": "2026-10-15T00:36:44.619Z"

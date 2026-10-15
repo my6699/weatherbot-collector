@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.08
+      "stop_price": 0.08,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -285,6 +286,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-15T23:07:04.826Z",
+      "horizon": "D+2",
+      "hours_left": 36.9,
+      "ecmwf": 54,
+      "hrrr": 57,
+      "metar": null,
+      "best": 55.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 54,
+          "gfs_seamless": 57,
+          "icon_seamless": 55
+        },
+        "mean": 55.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          54,
+          54,
+          55,
+          55,
+          53,
+          54,
+          54,
+          56,
+          56,
+          55,
+          55,
+          55,
+          54,
+          55,
+          54,
+          55,
+          56,
+          53,
+          54,
+          54,
+          54,
+          54,
+          55,
+          55,
+          53,
+          53,
+          55,
+          53,
+          54,
+          55,
+          57,
+          55,
+          53,
+          55,
+          53,
+          53,
+          54,
+          53,
+          54,
+          53,
+          55,
+          53,
+          55,
+          54,
+          53,
+          56,
+          54,
+          56,
+          55,
+          56
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -311,6 +387,14 @@
       "top2_bucket": "56-59F",
       "top2_price": 0.225,
       "top2_sum": 0.81
+    },
+    {
+      "ts": "2026-10-15T23:07:04.826Z",
+      "top_bucket": "56-57F",
+      "top_price": 0.585,
+      "top2_bucket": "56-59F",
+      "top2_price": 0.3,
+      "top2_sum": 0.885
     }
   ],
   "all_outcomes": [
@@ -360,9 +444,9 @@
         52,
         53
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
       "volume": 391
     },
@@ -373,11 +457,11 @@
         54,
         55
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 763
+      "volume": 772
     },
     {
       "question": "Will the highest temperature in Chicago be between 56-57°F on October 17?",
@@ -390,7 +474,7 @@
       "ask": 0.585,
       "price": 0.585,
       "spread": 0,
-      "volume": 1392
+      "volume": 1406
     },
     {
       "question": "Will the highest temperature in Chicago be between 58-59°F on October 17?",
@@ -399,11 +483,11 @@
         58,
         59
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.3,
+      "ask": 0.3,
+      "price": 0.3,
       "spread": 0,
-      "volume": 1524
+      "volume": 1721
     },
     {
       "question": "Will the highest temperature in Chicago be between 60-61°F on October 17?",
@@ -412,11 +496,11 @@
         60,
         61
       ],
-      "bid": 0.0385,
-      "ask": 0.0385,
-      "price": 0.0385,
+      "bid": 0.0275,
+      "ask": 0.0275,
+      "price": 0.0275,
       "spread": 0,
-      "volume": 1217
+      "volume": 1239
     },
     {
       "question": "Will the highest temperature in Chicago be between 62-63°F on October 17?",
