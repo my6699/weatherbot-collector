@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-18T12:00:00Z",
   "hours_at_discovery": 52.7,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "5766850",
+    "question": "Will the highest temperature in Paris be 13°C on October 18?",
+    "bucket_low": 13,
+    "bucket_high": 13,
+    "entry_price": 0.14,
+    "bid_at_entry": 0.12,
+    "spread": 0.02,
+    "shares": 285.71,
+    "cost": 40,
+    "p": 0.5,
+    "ev": 2.5714,
+    "edge": 0.2212,
+    "kelly": 0.1063,
+    "forecast_temp": 12.4,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-10-16T21:17:39.563Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.096
+  },
+  "positions": [
+    {
+      "market_id": "5766850",
+      "question": "Will the highest temperature in Paris be 13°C on October 18?",
+      "bucket_low": 13,
+      "bucket_high": 13,
+      "entry_price": 0.14,
+      "bid_at_entry": 0.12,
+      "spread": 0.02,
+      "shares": 285.71,
+      "cost": 40,
+      "p": 0.5,
+      "ev": 2.5714,
+      "edge": 0.2212,
+      "kelly": 0.1063,
+      "forecast_temp": 12.4,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-10-16T21:17:39.563Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.096
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -237,6 +287,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-16T21:17:39.563Z",
+      "horizon": "D+2",
+      "hours_left": 38.7,
+      "ecmwf": 12.9,
+      "hrrr": 13.9,
+      "metar": null,
+      "best": 13.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 12.9,
+          "gfs_seamless": 13.9,
+          "icon_seamless": 13
+        },
+        "mean": 13.2,
+        "spread": 0.7,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          11.9,
+          13,
+          13.5,
+          12.6,
+          12.6,
+          13.5,
+          10.8,
+          11.5,
+          13.6,
+          13.1,
+          12.3,
+          13.7,
+          13.5,
+          12.8,
+          13.6,
+          12.7,
+          13.1,
+          12.6,
+          11.4,
+          13.6,
+          13,
+          13.6,
+          12.3,
+          12.7,
+          12.5,
+          10.5,
+          13.2,
+          13.1,
+          12,
+          13,
+          12.5,
+          14,
+          12.4,
+          13.8,
+          12.1,
+          13.3,
+          13.2,
+          12.7,
+          14.1,
+          13.2,
+          11.9,
+          12.2,
+          13.1,
+          11.5,
+          11.8,
+          11.9,
+          12.8,
+          10.6,
+          12,
+          12.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -263,6 +387,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.355,
       "top2_sum": 0.85
+    },
+    {
+      "ts": "2026-10-16T21:17:39.563Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.475,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.315,
+      "top2_sum": 0.79
     }
   ],
   "all_outcomes": [
@@ -277,7 +409,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 164
+      "volume": 208
     },
     {
       "question": "Will the highest temperature in Paris be 8°C on October 18?",
@@ -325,11 +457,11 @@
         11,
         11
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 110
+      "volume": 154
     },
     {
       "question": "Will the highest temperature in Paris be 12°C on October 18?",
@@ -338,11 +470,11 @@
         12,
         12
       ],
-      "bid": 0.016,
-      "ask": 0.016,
-      "price": 0.016,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
-      "volume": 32
+      "volume": 76
     },
     {
       "question": "Will the highest temperature in Paris be 13°C on October 18?",
@@ -351,11 +483,11 @@
         13,
         13
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.13,
+      "ask": 0.13,
+      "price": 0.13,
       "spread": 0,
-      "volume": 510
+      "volume": 1402
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on October 18?",
@@ -364,11 +496,11 @@
         14,
         14
       ],
-      "bid": 0.495,
-      "ask": 0.495,
-      "price": 0.495,
+      "bid": 0.475,
+      "ask": 0.475,
+      "price": 0.475,
       "spread": 0,
-      "volume": 479
+      "volume": 572
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on October 18?",
@@ -377,11 +509,11 @@
         15,
         15
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 2424
+      "volume": 2851
     },
     {
       "question": "Will the highest temperature in Paris be 16°C on October 18?",
@@ -390,11 +522,11 @@
         16,
         16
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 169
+      "volume": 213
     },
     {
       "question": "Will the highest temperature in Paris be 17°C or higher on October 18?",
@@ -403,11 +535,11 @@
         17,
         999
       ],
-      "bid": 0.0095,
-      "ask": 0.0095,
-      "price": 0.0095,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 234
+      "volume": 279
     }
   ],
   "created_at": "2026-10-16T07:16:46.878Z"
