@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 5.5,
       "opened_at": "2026-10-15T20:22:32.747Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -23,
+      "exit_price": 0.051,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-10-16T01:26:52.105Z",
       "stop_price": 0.073,
       "forecast_change_streak": 0
     }
@@ -738,6 +738,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-16T01:26:52.105Z",
+      "horizon": "D+0",
+      "hours_left": 10.6,
+      "ecmwf": 77,
+      "hrrr": 69,
+      "metar": 81,
+      "best": 73.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 69,
+          "icon_seamless": 70
+        },
+        "mean": 73.2,
+        "spread": 4.2,
+        "gap": 8,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          71,
+          71,
+          69,
+          72,
+          73,
+          75,
+          72,
+          71,
+          72,
+          70,
+          73,
+          73,
+          72,
+          70,
+          72,
+          76,
+          72,
+          74,
+          71,
+          71,
+          76,
+          68,
+          73,
+          75,
+          70,
+          71,
+          71,
+          72,
+          71,
+          71,
+          70,
+          73,
+          71,
+          73,
+          72,
+          73,
+          76,
+          72,
+          67,
+          76,
+          73,
+          73,
+          76,
+          72,
+          71,
+          72,
+          71,
+          71,
+          74,
+          70
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -812,6 +887,14 @@
       "top2_bucket": "68-71F",
       "top2_price": 0.245,
       "top2_sum": 0.59
+    },
+    {
+      "ts": "2026-10-16T01:26:52.105Z",
+      "top_bucket": "68-69F",
+      "top_price": 0.375,
+      "top2_bucket": "66-69F",
+      "top2_price": 0.375,
+      "top2_sum": 0.685
     }
   ],
   "all_outcomes": [
@@ -822,11 +905,11 @@
         -999,
         65
       ],
-      "bid": 0.076,
-      "ask": 0.076,
-      "price": 0.076,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 2419
+      "volume": 2618
     },
     {
       "question": "Will the highest temperature in Dallas be between 66-67°F on October 16?",
@@ -835,11 +918,11 @@
         66,
         67
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.31,
+      "ask": 0.31,
+      "price": 0.31,
       "spread": 0,
-      "volume": 3379
+      "volume": 4157
     },
     {
       "question": "Will the highest temperature in Dallas be between 68-69°F on October 16?",
@@ -848,11 +931,11 @@
         68,
         69
       ],
-      "bid": 0.345,
-      "ask": 0.345,
-      "price": 0.345,
+      "bid": 0.375,
+      "ask": 0.375,
+      "price": 0.375,
       "spread": 0,
-      "volume": 1768
+      "volume": 2228
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on October 16?",
@@ -861,11 +944,11 @@
         70,
         71
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 4127
+      "volume": 4491
     },
     {
       "question": "Will the highest temperature in Dallas be between 72-73°F on October 16?",
@@ -874,11 +957,11 @@
         72,
         73
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.051,
+      "ask": 0.051,
+      "price": 0.051,
       "spread": 0,
-      "volume": 3442
+      "volume": 4088
     },
     {
       "question": "Will the highest temperature in Dallas be between 74-75°F on October 16?",
@@ -887,11 +970,11 @@
         74,
         75
       ],
-      "bid": 0.033,
-      "ask": 0.033,
-      "price": 0.033,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
-      "volume": 2015
+      "volume": 2160
     },
     {
       "question": "Will the highest temperature in Dallas be between 76-77°F on October 16?",
@@ -900,11 +983,11 @@
         76,
         77
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1668
+      "volume": 2111
     },
     {
       "question": "Will the highest temperature in Dallas be between 78-79°F on October 16?",
