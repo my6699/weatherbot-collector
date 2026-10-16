@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-10-16T12:00:00Z",
   "hours_at_discovery": 52.3,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -910,6 +910,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-16T12:29:39.774Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 77,
+      "hrrr": 72,
+      "metar": 64,
+      "best": 75.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 77,
+          "gfs_seamless": 72,
+          "icon_seamless": 76
+        },
+        "mean": 75.3,
+        "spread": 3.3,
+        "gap": 5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          72,
+          75,
+          76,
+          73,
+          76,
+          74,
+          73,
+          74,
+          75,
+          74,
+          76,
+          75,
+          75,
+          75,
+          73,
+          75,
+          74,
+          76,
+          72,
+          73,
+          74,
+          75,
+          75,
+          73,
+          76,
+          73,
+          75,
+          75,
+          72,
+          74,
+          76,
+          74,
+          75,
+          73,
+          73,
+          76,
+          74,
+          74,
+          74,
+          72,
+          74,
+          76,
+          73,
+          76,
+          74,
+          76,
+          75,
+          72,
+          75,
+          74
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1008,6 +1083,14 @@
       "top2_bucket": "72-75F",
       "top2_price": 0.43,
       "top2_sum": 0.725
+    },
+    {
+      "ts": "2026-10-16T12:29:39.774Z",
+      "top_bucket": "74-75F",
+      "top_price": 0.435,
+      "top2_bucket": "72-75F",
+      "top2_price": 0.435,
+      "top2_sum": 0.68
     }
   ],
   "all_outcomes": [
@@ -1018,11 +1101,11 @@
         -999,
         63
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 345
+      "volume": 359
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on October 16?",
@@ -1035,7 +1118,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 260
+      "volume": 460
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on October 16?",
@@ -1044,11 +1127,11 @@
         66,
         67
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 498
+      "volume": 741
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on October 16?",
@@ -1057,11 +1140,11 @@
         68,
         69
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 1554
+      "volume": 2280
     },
     {
       "question": "Will the highest temperature in New York City be between 70-71°F on October 16?",
@@ -1070,11 +1153,11 @@
         70,
         71
       ],
-      "bid": 0.0655,
-      "ask": 0.0655,
-      "price": 0.0655,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 3642
+      "volume": 4172
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on October 16?",
@@ -1083,11 +1166,11 @@
         72,
         73
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.245,
+      "ask": 0.245,
+      "price": 0.245,
       "spread": 0,
-      "volume": 3566
+      "volume": 5241
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on October 16?",
@@ -1096,11 +1179,11 @@
         74,
         75
       ],
-      "bid": 0.43,
-      "ask": 0.43,
-      "price": 0.43,
+      "bid": 0.435,
+      "ask": 0.435,
+      "price": 0.435,
       "spread": 0,
-      "volume": 4113
+      "volume": 6051
     },
     {
       "question": "Will the highest temperature in New York City be between 76-77°F on October 16?",
@@ -1109,11 +1192,11 @@
         76,
         77
       ],
-      "bid": 0.1525,
-      "ask": 0.1525,
-      "price": 0.1525,
+      "bid": 0.204,
+      "ask": 0.204,
+      "price": 0.204,
       "spread": 0,
-      "volume": 1546
+      "volume": 3620
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on October 16?",
@@ -1122,11 +1205,11 @@
         78,
         79
       ],
-      "bid": 0.028,
-      "ask": 0.028,
-      "price": 0.028,
+      "bid": 0.0245,
+      "ask": 0.0245,
+      "price": 0.0245,
       "spread": 0,
-      "volume": 711
+      "volume": 1208
     },
     {
       "question": "Will the highest temperature in New York City be between 80-81°F on October 16?",
@@ -1135,11 +1218,11 @@
         80,
         81
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 401
+      "volume": 661
     },
     {
       "question": "Will the highest temperature in New York City be 82°F or higher on October 16?",
