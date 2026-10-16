@@ -160,6 +160,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-16T17:29:29.769Z",
+      "horizon": "D+2",
+      "hours_left": 42.5,
+      "ecmwf": 68,
+      "hrrr": 71,
+      "metar": null,
+      "best": 69.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 68,
+          "gfs_seamless": 71,
+          "icon_seamless": 69
+        },
+        "mean": 69.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          68,
+          71,
+          68,
+          71,
+          70,
+          71,
+          70,
+          69,
+          70,
+          69,
+          71,
+          68,
+          69,
+          69,
+          71,
+          71,
+          70,
+          71,
+          68,
+          70,
+          68,
+          71,
+          66,
+          70,
+          70,
+          69,
+          70,
+          70,
+          70,
+          69,
+          69,
+          71,
+          71,
+          67,
+          69,
+          72,
+          69,
+          70,
+          69,
+          69,
+          70,
+          70,
+          70,
+          69,
+          71,
+          70,
+          70,
+          67,
+          69,
+          68
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -178,6 +253,14 @@
       "top2_bucket": "68-71F",
       "top2_price": 0.38,
       "top2_sum": 0.795
+    },
+    {
+      "ts": "2026-10-16T17:29:29.769Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.48,
+      "top2_bucket": "68-71F",
+      "top2_price": 0.48,
+      "top2_sum": 0.905
     }
   ],
   "all_outcomes": [
@@ -192,7 +275,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 0
+      "volume": 40
     },
     {
       "question": "Will the highest temperature in Dallas be between 60-61°F on October 18?",
@@ -201,11 +284,11 @@
         60,
         61
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 6
+      "volume": 30
     },
     {
       "question": "Will the highest temperature in Dallas be between 62-63°F on October 18?",
@@ -227,9 +310,9 @@
         64,
         65
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
       "volume": 0
     },
@@ -240,9 +323,9 @@
         66,
         67
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.115,
+      "ask": 0.115,
+      "price": 0.115,
       "spread": 0,
       "volume": 0
     },
@@ -253,11 +336,11 @@
         68,
         69
       ],
-      "bid": 0.415,
-      "ask": 0.415,
-      "price": 0.415,
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
       "spread": 0,
-      "volume": 179
+      "volume": 202
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on October 18?",
@@ -266,9 +349,9 @@
         70,
         71
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.48,
+      "ask": 0.48,
+      "price": 0.48,
       "spread": 0,
       "volume": 0
     },
@@ -279,11 +362,11 @@
         72,
         73
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 64
+      "volume": 72
     },
     {
       "question": "Will the highest temperature in Dallas be between 74-75°F on October 18?",
@@ -292,9 +375,9 @@
         74,
         75
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.14,
+      "ask": 0.14,
+      "price": 0.14,
       "spread": 0,
       "volume": 0
     },
@@ -318,9 +401,9 @@
         78,
         999
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.115,
+      "ask": 0.115,
+      "price": 0.115,
       "spread": 0,
       "volume": 0
     }
