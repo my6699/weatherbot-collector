@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-10-17T12:00:00Z",
   "hours_at_discovery": 48.4,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "5724286",
     "question": "Will the highest temperature in Chicago be between 54-55°F on October 17?",
@@ -955,6 +955,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-17T13:46:56.493Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 52,
+      "hrrr": 54,
+      "metar": 39,
+      "best": 53.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 52,
+          "gfs_seamless": 54,
+          "icon_seamless": 55
+        },
+        "mean": 53.2,
+        "spread": 1.8,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          53,
+          53,
+          52,
+          52,
+          52,
+          51,
+          51,
+          52,
+          51,
+          51,
+          52,
+          52,
+          52,
+          51,
+          52,
+          52,
+          51,
+          51,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          51,
+          52,
+          52,
+          52,
+          52,
+          53,
+          52,
+          52,
+          52,
+          52,
+          51,
+          52,
+          51
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1053,6 +1127,14 @@
       "top2_bucket": "56-59F",
       "top2_price": 0.175,
       "top2_sum": 0.885
+    },
+    {
+      "ts": "2026-10-17T13:46:56.493Z",
+      "top_bucket": "56-57F",
+      "top_price": 0.715,
+      "top2_bucket": "54-57F",
+      "top2_price": 0.715,
+      "top2_sum": 0.875
     }
   ],
   "all_outcomes": [
@@ -1102,11 +1184,11 @@
         52,
         53
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 959
+      "volume": 1536
     },
     {
       "question": "Will the highest temperature in Chicago be between 54-55°F on October 17?",
@@ -1115,11 +1197,11 @@
         54,
         55
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.16,
+      "ask": 0.16,
+      "price": 0.16,
       "spread": 0,
-      "volume": 3031
+      "volume": 3743
     },
     {
       "question": "Will the highest temperature in Chicago be between 56-57°F on October 17?",
@@ -1128,11 +1210,11 @@
         56,
         57
       ],
-      "bid": 0.71,
-      "ask": 0.71,
-      "price": 0.71,
+      "bid": 0.715,
+      "ask": 0.715,
+      "price": 0.715,
       "spread": 0,
-      "volume": 5286
+      "volume": 5430
     },
     {
       "question": "Will the highest temperature in Chicago be between 58-59°F on October 17?",
@@ -1141,11 +1223,11 @@
         58,
         59
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 8643
+      "volume": 8669
     },
     {
       "question": "Will the highest temperature in Chicago be between 60-61°F on October 17?",
@@ -1154,11 +1236,11 @@
         60,
         61
       ],
-      "bid": 0.0195,
-      "ask": 0.0195,
-      "price": 0.0195,
+      "bid": 0.0165,
+      "ask": 0.0165,
+      "price": 0.0165,
       "spread": 0,
-      "volume": 2978
+      "volume": 3016
     },
     {
       "question": "Will the highest temperature in Chicago be between 62-63°F on October 17?",
@@ -1171,7 +1253,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 1913
+      "volume": 1916
     },
     {
       "question": "Will the highest temperature in Chicago be between 64-65°F on October 17?",

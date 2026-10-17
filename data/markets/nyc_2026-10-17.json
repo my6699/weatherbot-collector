@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-10-17T12:00:00Z",
   "hours_at_discovery": 48.4,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5724255",
     "question": "Will the highest temperature in New York City be between 64-65°F on October 17?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-17T09:27:30.871Z",
       "stop_price": 0.12,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 62.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -962,6 +963,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-17T13:46:54.551Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 65,
+      "hrrr": 63,
+      "metar": 52,
+      "best": 64.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 65,
+          "gfs_seamless": 63,
+          "icon_seamless": 64
+        },
+        "mean": 64.2,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          61,
+          61,
+          62,
+          61,
+          63,
+          63,
+          62,
+          62,
+          62,
+          62,
+          61,
+          63,
+          63,
+          60,
+          62,
+          63,
+          63,
+          62,
+          63,
+          62,
+          63,
+          62,
+          63,
+          62,
+          61,
+          63,
+          61,
+          62,
+          60,
+          62,
+          61,
+          61,
+          61,
+          61,
+          61,
+          60,
+          60,
+          64,
+          62,
+          63,
+          63,
+          62,
+          62,
+          62,
+          62,
+          62,
+          62,
+          61,
+          62,
+          62
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1060,6 +1135,14 @@
       "top2_bucket": "62-65F",
       "top2_price": 0.0105,
       "top2_sum": 0.997
+    },
+    {
+      "ts": "2026-10-17T13:46:54.551Z",
+      "top_bucket": "62-63F",
+      "top_price": 0.9895,
+      "top2_bucket": "62-65F",
+      "top2_price": 0.01,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -1126,7 +1209,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 11452
+      "volume": 11455
     },
     {
       "question": "Will the highest temperature in New York City be between 62-63°F on October 17?",
@@ -1135,11 +1218,11 @@
         62,
         63
       ],
-      "bid": 0.9865,
-      "ask": 0.9865,
-      "price": 0.9865,
+      "bid": 0.9895,
+      "ask": 0.9895,
+      "price": 0.9895,
       "spread": 0,
-      "volume": 17702
+      "volume": 19797
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on October 17?",
@@ -1148,11 +1231,11 @@
         64,
         65
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 12347
+      "volume": 12653
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on October 17?",
@@ -1161,11 +1244,11 @@
         66,
         67
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4576
+      "volume": 5459
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on October 17?",

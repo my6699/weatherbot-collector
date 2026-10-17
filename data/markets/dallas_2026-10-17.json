@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-10-17T12:00:00Z",
   "hours_at_discovery": 48.4,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "5723182",
     "question": "Will the highest temperature in Dallas be between 64-65°F on October 17?",
@@ -962,6 +962,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-17T13:46:59.659Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 61,
+      "hrrr": 67,
+      "metar": 47,
+      "best": 63.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 61,
+          "gfs_seamless": 67,
+          "icon_seamless": 65
+        },
+        "mean": 63.6,
+        "spread": 3.4,
+        "gap": 6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          61,
+          64,
+          61,
+          62,
+          62,
+          63,
+          63,
+          63,
+          63,
+          62,
+          64,
+          61,
+          64,
+          62,
+          63,
+          64,
+          64,
+          62,
+          60,
+          62,
+          64,
+          63,
+          59,
+          64,
+          63,
+          63,
+          64,
+          63,
+          62,
+          61,
+          62,
+          64,
+          64,
+          60,
+          63,
+          63,
+          64,
+          63,
+          63,
+          60,
+          61,
+          61,
+          64,
+          63,
+          64,
+          63,
+          62,
+          60,
+          61,
+          64
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1060,6 +1135,14 @@
       "top2_bucket": "66-69F",
       "top2_price": 0.29,
       "top2_sum": 0.91
+    },
+    {
+      "ts": "2026-10-17T13:46:59.659Z",
+      "top_bucket": "66-67F",
+      "top_price": 0.6,
+      "top2_bucket": "66-69F",
+      "top2_price": 0.34,
+      "top2_sum": 0.94
     }
   ],
   "all_outcomes": [
@@ -1122,11 +1205,11 @@
         62,
         63
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 931
+      "volume": 1007
     },
     {
       "question": "Will the highest temperature in Dallas be between 64-65°F on October 17?",
@@ -1135,11 +1218,11 @@
         64,
         65
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
       "spread": 0,
-      "volume": 6608
+      "volume": 6969
     },
     {
       "question": "Will the highest temperature in Dallas be between 66-67°F on October 17?",
@@ -1148,11 +1231,11 @@
         66,
         67
       ],
-      "bid": 0.62,
-      "ask": 0.62,
-      "price": 0.62,
+      "bid": 0.6,
+      "ask": 0.6,
+      "price": 0.6,
       "spread": 0,
-      "volume": 5193
+      "volume": 5389
     },
     {
       "question": "Will the highest temperature in Dallas be between 68-69°F on October 17?",
@@ -1161,11 +1244,11 @@
         68,
         69
       ],
-      "bid": 0.29,
-      "ask": 0.29,
-      "price": 0.29,
+      "bid": 0.34,
+      "ask": 0.34,
+      "price": 0.34,
       "spread": 0,
-      "volume": 6901
+      "volume": 7440
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on October 17?",
@@ -1174,11 +1257,11 @@
         70,
         71
       ],
-      "bid": 0.0135,
-      "ask": 0.0135,
-      "price": 0.0135,
+      "bid": 0.008,
+      "ask": 0.008,
+      "price": 0.008,
       "spread": 0,
-      "volume": 1934
+      "volume": 2012
     },
     {
       "question": "Will the highest temperature in Dallas be between 72-73°F on October 17?",
@@ -1187,11 +1270,11 @@
         72,
         73
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 1649
+      "volume": 1891
     },
     {
       "question": "Will the highest temperature in Dallas be 74°F or higher on October 17?",
