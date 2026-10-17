@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-10-17T12:00:00Z",
   "hours_at_discovery": 48.4,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5724286",
     "question": "Will the highest temperature in Chicago be between 54-55°F on October 17?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-16T17:29:26.230Z",
       "stop_price": 0.12,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 56.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1177,6 +1178,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-17T22:24:25.607Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 51,
+      "hrrr": 57,
+      "metar": 56,
+      "best": 53.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 51,
+          "gfs_seamless": 57,
+          "icon_seamless": 54
+        },
+        "mean": 53.4,
+        "spread": 3.6,
+        "gap": 6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          52,
+          52,
+          52,
+          52,
+          52,
+          51,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          51,
+          51,
+          52,
+          51,
+          52,
+          52,
+          52,
+          52,
+          51,
+          52,
+          51,
+          51,
+          51,
+          51,
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          51,
+          52,
+          52,
+          52,
+          51,
+          52,
+          51,
+          51,
+          52,
+          52,
+          52,
+          53,
+          52,
+          52,
+          51,
+          51,
+          52
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1299,6 +1375,14 @@
       "top2_bucket": "54-57F",
       "top2_price": 0.785,
       "top2_sum": 0.96
+    },
+    {
+      "ts": "2026-10-17T22:24:25.607Z",
+      "top_bucket": "56-57F",
+      "top_price": 0.989,
+      "top2_bucket": "56-59F",
+      "top2_price": 0.0125,
+      "top2_sum": 1.0015
     }
   ],
   "all_outcomes": [
@@ -1352,7 +1436,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2507
+      "volume": 2686
     },
     {
       "question": "Will the highest temperature in Chicago be between 54-55°F on October 17?",
@@ -1361,11 +1445,11 @@
         54,
         55
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4851
+      "volume": 6010
     },
     {
       "question": "Will the highest temperature in Chicago be between 56-57°F on October 17?",
@@ -1374,11 +1458,11 @@
         56,
         57
       ],
-      "bid": 0.785,
-      "ask": 0.785,
-      "price": 0.785,
+      "bid": 0.989,
+      "ask": 0.989,
+      "price": 0.989,
       "spread": 0,
-      "volume": 5804
+      "volume": 7071
     },
     {
       "question": "Will the highest temperature in Chicago be between 58-59°F on October 17?",
@@ -1387,11 +1471,11 @@
         58,
         59
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
-      "volume": 9118
+      "volume": 9840
     },
     {
       "question": "Will the highest temperature in Chicago be between 60-61°F on October 17?",
@@ -1400,11 +1484,11 @@
         60,
         61
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 4098
+      "volume": 4365
     },
     {
       "question": "Will the highest temperature in Chicago be between 62-63°F on October 17?",
@@ -1413,11 +1497,11 @@
         62,
         63
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2533
+      "volume": 2595
     },
     {
       "question": "Will the highest temperature in Chicago be between 64-65°F on October 17?",
