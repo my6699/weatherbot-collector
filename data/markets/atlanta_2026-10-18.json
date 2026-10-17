@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1,
       "opened_at": "2026-10-17T09:27:42.074Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -23,
+      "exit_price": 0.085,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-10-17T17:16:31.963Z",
       "stop_price": 0.144,
       "forecast_change_streak": 0
     }
@@ -660,6 +660,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-17T17:16:31.963Z",
+      "horizon": "D+1",
+      "hours_left": 18.7,
+      "ecmwf": 62,
+      "hrrr": 65,
+      "metar": null,
+      "best": 63.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 62,
+          "gfs_seamless": 65,
+          "icon_seamless": 65
+        },
+        "mean": 63.5,
+        "spread": 1.5,
+        "gap": 3,
+        "llmEnhanced": false,
+        "membersMax": [
+          63,
+          63,
+          62,
+          62,
+          63,
+          62,
+          61,
+          64,
+          63,
+          63,
+          63,
+          64,
+          63,
+          62,
+          62,
+          62,
+          63,
+          63,
+          62,
+          64,
+          63,
+          62,
+          63,
+          65,
+          63,
+          64,
+          62,
+          61,
+          62,
+          62,
+          61,
+          63,
+          64,
+          63,
+          62,
+          62,
+          63,
+          63,
+          63,
+          62,
+          63,
+          63,
+          62,
+          62,
+          63,
+          62,
+          62,
+          63,
+          62,
+          63
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -726,6 +800,14 @@
       "top2_bucket": "64-67F",
       "top2_price": 0.315,
       "top2_sum": 0.8
+    },
+    {
+      "ts": "2026-10-17T17:16:31.963Z",
+      "top_bucket": "64-65F",
+      "top_price": 0.495,
+      "top2_bucket": "64-67F",
+      "top2_price": 0.38,
+      "top2_sum": 0.875
     }
   ],
   "all_outcomes": [
@@ -736,11 +818,11 @@
         -999,
         55
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 68
+      "volume": 115
     },
     {
       "question": "Will the highest temperature in Atlanta be between 56-57°F on October 18?",
@@ -753,7 +835,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 148
+      "volume": 203
     },
     {
       "question": "Will the highest temperature in Atlanta be between 58-59°F on October 18?",
@@ -762,11 +844,11 @@
         58,
         59
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 383
+      "volume": 403
     },
     {
       "question": "Will the highest temperature in Atlanta be between 60-61°F on October 18?",
@@ -775,11 +857,11 @@
         60,
         61
       ],
-      "bid": 0.0365,
-      "ask": 0.0365,
-      "price": 0.0365,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
-      "volume": 86
+      "volume": 236
     },
     {
       "question": "Will the highest temperature in Atlanta be between 62-63°F on October 18?",
@@ -788,11 +870,11 @@
         62,
         63
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.085,
+      "ask": 0.085,
+      "price": 0.085,
       "spread": 0,
-      "volume": 2926
+      "volume": 3251
     },
     {
       "question": "Will the highest temperature in Atlanta be between 64-65°F on October 18?",
@@ -801,11 +883,11 @@
         64,
         65
       ],
-      "bid": 0.485,
-      "ask": 0.485,
-      "price": 0.485,
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
       "spread": 0,
-      "volume": 5707
+      "volume": 5821
     },
     {
       "question": "Will the highest temperature in Atlanta be between 66-67°F on October 18?",
@@ -814,11 +896,11 @@
         66,
         67
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.38,
+      "ask": 0.38,
+      "price": 0.38,
       "spread": 0,
-      "volume": 1578
+      "volume": 2256
     },
     {
       "question": "Will the highest temperature in Atlanta be between 68-69°F on October 18?",
@@ -827,11 +909,11 @@
         68,
         69
       ],
-      "bid": 0.037,
-      "ask": 0.037,
-      "price": 0.037,
+      "bid": 0.029,
+      "ask": 0.029,
+      "price": 0.029,
       "spread": 0,
-      "volume": 236
+      "volume": 472
     },
     {
       "question": "Will the highest temperature in Atlanta be between 70-71°F on October 18?",
@@ -844,7 +926,7 @@
       "ask": 0.007,
       "price": 0.007,
       "spread": 0,
-      "volume": 87
+      "volume": 116
     },
     {
       "question": "Will the highest temperature in Atlanta be between 72-73°F on October 18?",
@@ -857,7 +939,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 183
+      "volume": 233
     },
     {
       "question": "Will the highest temperature in Atlanta be 74°F or higher on October 18?",
