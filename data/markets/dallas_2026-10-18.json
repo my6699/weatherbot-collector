@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.128
+      "stop_price": 0.128,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -508,6 +509,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-17T09:27:40.017Z",
+      "horizon": "D+1",
+      "hours_left": 26.5,
+      "ecmwf": 67,
+      "hrrr": 70,
+      "metar": null,
+      "best": 68.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 67,
+          "gfs_seamless": 70,
+          "icon_seamless": 70
+        },
+        "mean": 68.5,
+        "spread": 1.5,
+        "gap": 3,
+        "llmEnhanced": false,
+        "membersMax": [
+          66,
+          67,
+          66,
+          66,
+          66,
+          67,
+          67,
+          68,
+          67,
+          68,
+          68,
+          66,
+          68,
+          66,
+          69,
+          69,
+          68,
+          67,
+          65,
+          68,
+          67,
+          68,
+          63,
+          68,
+          68,
+          68,
+          68,
+          68,
+          66,
+          67,
+          67,
+          68,
+          69,
+          62,
+          69,
+          68,
+          68,
+          66,
+          68,
+          65,
+          67,
+          66,
+          69,
+          66,
+          69,
+          68,
+          67,
+          65,
+          67,
+          67
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -558,6 +633,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.235,
       "top2_sum": 0.815
+    },
+    {
+      "ts": "2026-10-17T09:27:40.017Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.6,
+      "top2_bucket": "68-71F",
+      "top2_price": 0.6,
+      "top2_sum": 0.78
     }
   ],
   "all_outcomes": [
@@ -607,9 +690,9 @@
         64,
         65
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
       "volume": 57
     },
@@ -620,11 +703,11 @@
         66,
         67
       ],
-      "bid": 0.018,
-      "ask": 0.018,
-      "price": 0.018,
+      "bid": 0.0225,
+      "ask": 0.0225,
+      "price": 0.0225,
       "spread": 0,
-      "volume": 120
+      "volume": 170
     },
     {
       "question": "Will the highest temperature in Dallas be between 68-69°F on October 18?",
@@ -633,11 +716,11 @@
         68,
         69
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
+      "bid": 0.18,
+      "ask": 0.18,
+      "price": 0.18,
       "spread": 0,
-      "volume": 2596
+      "volume": 2806
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on October 18?",
@@ -646,11 +729,11 @@
         70,
         71
       ],
-      "bid": 0.58,
-      "ask": 0.58,
-      "price": 0.58,
+      "bid": 0.6,
+      "ask": 0.6,
+      "price": 0.6,
       "spread": 0,
-      "volume": 985
+      "volume": 2025
     },
     {
       "question": "Will the highest temperature in Dallas be between 72-73°F on October 18?",
@@ -659,11 +742,11 @@
         72,
         73
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.18,
+      "ask": 0.18,
+      "price": 0.18,
       "spread": 0,
-      "volume": 796
+      "volume": 1264
     },
     {
       "question": "Will the highest temperature in Dallas be between 74-75°F on October 18?",
@@ -672,9 +755,9 @@
         74,
         75
       ],
-      "bid": 0.0135,
-      "ask": 0.0135,
-      "price": 0.0135,
+      "bid": 0.0175,
+      "ask": 0.0175,
+      "price": 0.0175,
       "spread": 0,
       "volume": 63
     },
