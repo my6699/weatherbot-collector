@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-10-18T12:00:00Z",
   "hours_at_discovery": 52.7,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5766881",
     "question": "Will the highest temperature in Wellington be 14°C on October 18?",
@@ -56,10 +56,11 @@
       "exit_price": 0.09,
       "close_reason": "stop_loss",
       "closed_at": "2026-10-16T23:39:36.056Z",
-      "stop_price": 0.128
+      "stop_price": 0.128,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 15,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1035,6 +1036,17 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-10-18T14:39:16.402Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 11,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1149,6 +1161,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-18T14:39:16.402Z",
+      "top_bucket": "15-15C",
+      "top_price": 1,
+      "top2_bucket": "14-15C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1159,9 +1179,9 @@
         -999,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 135
     },
@@ -1172,9 +1192,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 175
     },
@@ -1185,9 +1205,9 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 401
     },
@@ -1198,9 +1218,9 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5775
     },
@@ -1211,9 +1231,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 10187
     },
@@ -1224,11 +1244,11 @@
         15,
         15
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 13313
+      "price": 1,
+      "spread": -0.001,
+      "volume": 13322
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on October 18?",
@@ -1237,9 +1257,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 17144
     },
@@ -1250,9 +1270,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 14027
     },
@@ -1263,9 +1283,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3872
     },
@@ -1276,9 +1296,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 465
     },
@@ -1289,12 +1309,13 @@
         20,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 185
     }
   ],
-  "created_at": "2026-10-16T07:17:06.350Z"
+  "created_at": "2026-10-16T07:17:06.350Z",
+  "metar_max": 14
 }

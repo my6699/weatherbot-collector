@@ -25,12 +25,15 @@
     "forecast_src": "ensemble",
     "sigma": 2.4,
     "opened_at": "2026-10-18T01:09:00.028Z",
-    "status": "open",
-    "pnl": null,
-    "exit_price": null,
-    "close_reason": null,
-    "closed_at": null,
-    "stop_price": 0.144
+    "status": "closed",
+    "pnl": -10.53,
+    "exit_price": 0.14,
+    "close_reason": "forecast_changed",
+    "closed_at": "2026-10-18T14:38:56.156Z",
+    "stop_price": 0.19,
+    "forecast_change_streak": 3,
+    "trailing_activated": true,
+    "stop_pending": true
   },
   "positions": [
     {
@@ -51,14 +54,40 @@
       "forecast_src": "ensemble",
       "sigma": 2.4,
       "opened_at": "2026-10-18T01:09:00.028Z",
+      "status": "closed",
+      "pnl": -10.53,
+      "exit_price": 0.14,
+      "close_reason": "forecast_changed",
+      "closed_at": "2026-10-18T14:38:56.156Z",
+      "stop_price": 0.19,
+      "forecast_change_streak": 3,
+      "trailing_activated": true,
+      "stop_pending": true
+    },
+    {
+      "market_id": "5795678",
+      "question": "Will the highest temperature in Munich be 16°C on October 19?",
+      "bucket_low": 16,
+      "bucket_high": 16,
+      "entry_price": 0.12,
+      "bid_at_entry": 0.09,
+      "spread": 0.03,
+      "shares": 333.33,
+      "cost": 40,
+      "p": 0.42,
+      "ev": 2.5,
+      "edge": 0.1649,
+      "kelly": 0.088,
+      "forecast_temp": 16.19,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-10-18T14:38:56.156Z",
       "status": "open",
       "pnl": null,
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.19,
-      "forecast_change_streak": 2,
-      "trailing_activated": true
+      "stop_price": 0.072
     }
   ],
   "actual_temp": null,
@@ -659,6 +688,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-18T14:38:56.156Z",
+      "horizon": "D+1",
+      "hours_left": 21.4,
+      "ecmwf": 15.4,
+      "hrrr": 14.7,
+      "metar": null,
+      "best": 15.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 15.4,
+          "gfs_seamless": 14.7,
+          "icon_seamless": 15.6
+        },
+        "mean": 15.2,
+        "spread": 0.5,
+        "gap": 0.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          15.3,
+          15.9,
+          15.8,
+          15.4,
+          15.5,
+          15.5,
+          15.7,
+          15.2,
+          15.5,
+          15.3,
+          15.5,
+          14.9,
+          15.7,
+          15.5,
+          15.4,
+          15.6,
+          15.1,
+          16,
+          15.5,
+          15.6,
+          15.6,
+          15.7,
+          15,
+          15.3,
+          16.4,
+          15.4,
+          14.8,
+          15.4,
+          15.4,
+          15.9,
+          15,
+          15.5,
+          15.7,
+          15.4,
+          15.4,
+          15.4,
+          15.3,
+          15,
+          15.1,
+          15.4,
+          15.1,
+          15.1,
+          15.7,
+          15.6,
+          15.4,
+          15.1,
+          15.1,
+          15.3,
+          15,
+          15.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -725,6 +828,14 @@
       "top2_bucket": "13-14C",
       "top2_price": 0.38,
       "top2_sum": 0.63
+    },
+    {
+      "ts": "2026-10-18T14:38:56.156Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.425,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.325,
+      "top2_sum": 0.75
     }
   ],
   "all_outcomes": [
@@ -748,9 +859,9 @@
         11,
         11
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
       "volume": 91
     },
@@ -761,11 +872,11 @@
         12,
         12
       ],
-      "bid": 0.0435,
-      "ask": 0.0435,
-      "price": 0.0435,
+      "bid": 0.023,
+      "ask": 0.023,
+      "price": 0.023,
       "spread": 0,
-      "volume": 392
+      "volume": 472
     },
     {
       "question": "Will the highest temperature in Munich be 13°C on October 19?",
@@ -774,11 +885,11 @@
         13,
         13
       ],
-      "bid": 0.25,
-      "ask": 0.25,
-      "price": 0.25,
+      "bid": 0.14,
+      "ask": 0.14,
+      "price": 0.14,
       "spread": 0,
-      "volume": 1312
+      "volume": 1408
     },
     {
       "question": "Will the highest temperature in Munich be 14°C on October 19?",
@@ -787,11 +898,11 @@
         14,
         14
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.425,
+      "ask": 0.425,
+      "price": 0.425,
       "spread": 0,
-      "volume": 1274
+      "volume": 1400
     },
     {
       "question": "Will the highest temperature in Munich be 15°C on October 19?",
@@ -800,11 +911,11 @@
         15,
         15
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 2227
+      "volume": 2866
     },
     {
       "question": "Will the highest temperature in Munich be 16°C on October 19?",
@@ -813,11 +924,11 @@
         16,
         16
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 1627
+      "volume": 1768
     },
     {
       "question": "Will the highest temperature in Munich be 17°C on October 19?",
@@ -826,11 +937,11 @@
         17,
         17
       ],
-      "bid": 0.0325,
-      "ask": 0.0325,
-      "price": 0.0325,
+      "bid": 0.0265,
+      "ask": 0.0265,
+      "price": 0.0265,
       "spread": 0,
-      "volume": 145
+      "volume": 195
     },
     {
       "question": "Will the highest temperature in Munich be 18°C on October 19?",
@@ -852,9 +963,9 @@
         19,
         19
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
       "volume": 0
     },
@@ -865,9 +976,9 @@
         20,
         999
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
       "volume": 5
     }
