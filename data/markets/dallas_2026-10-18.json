@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-10-18T12:00:00Z",
   "hours_at_discovery": 52.7,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5769260",
     "question": "Will the highest temperature in Dallas be between 68-69°F on October 18?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-10-17T19:28:11.066Z",
       "stop_price": 0.128,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1329,6 +1330,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-18T23:19:21.418Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 68,
+      "hrrr": 72,
+      "metar": 70,
+      "best": 69.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 68,
+          "gfs_seamless": 72,
+          "icon_seamless": 71
+        },
+        "mean": 69.8,
+        "spread": 2.2,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          67,
+          69,
+          67,
+          67,
+          69,
+          67,
+          68,
+          69,
+          68,
+          69,
+          67,
+          67,
+          69,
+          67,
+          68,
+          70,
+          69,
+          68,
+          67,
+          68,
+          69,
+          69,
+          65,
+          70,
+          69,
+          69,
+          69,
+          69,
+          67,
+          67,
+          66,
+          68,
+          70,
+          65,
+          69,
+          69,
+          69,
+          69,
+          70,
+          67,
+          68,
+          68,
+          69,
+          67,
+          70,
+          69,
+          67,
+          66,
+          68,
+          69
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1467,6 +1543,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.215,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-18T23:19:21.418Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.996,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.0015,
+      "top2_sum": 0.9975
     }
   ],
   "all_outcomes": [
@@ -1546,7 +1630,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 17273
+      "volume": 17278
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on October 18?",
@@ -1555,11 +1639,11 @@
         70,
         71
       ],
-      "bid": 0.785,
-      "ask": 0.785,
-      "price": 0.785,
+      "bid": 0.996,
+      "ask": 0.996,
+      "price": 0.996,
       "spread": 0,
-      "volume": 7415
+      "volume": 8846
     },
     {
       "question": "Will the highest temperature in Dallas be between 72-73°F on October 18?",
@@ -1568,11 +1652,11 @@
         72,
         73
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 6286
+      "volume": 7199
     },
     {
       "question": "Will the highest temperature in Dallas be between 74-75°F on October 18?",
@@ -1581,11 +1665,11 @@
         74,
         75
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2390
+      "volume": 3151
     },
     {
       "question": "Will the highest temperature in Dallas be between 76-77°F on October 18?",
@@ -1594,9 +1678,9 @@
         76,
         77
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 2184
     },
@@ -1611,7 +1695,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2511
+      "volume": 2529
     }
   ],
   "created_at": "2026-10-16T07:16:40.534Z"

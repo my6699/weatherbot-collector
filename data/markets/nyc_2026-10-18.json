@@ -6,10 +6,10 @@
   "station": "KLGA",
   "event_end_date": "2026-10-18T12:00:00Z",
   "hours_at_discovery": 52.7,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 58.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1281,6 +1281,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-18T23:19:17.261Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 54,
+      "hrrr": 60,
+      "metar": 59,
+      "best": 56.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 54,
+          "gfs_seamless": 60,
+          "icon_seamless": 59
+        },
+        "mean": 56.8,
+        "spread": 3.2,
+        "gap": 6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          55,
+          54,
+          54,
+          54,
+          55,
+          55,
+          54,
+          54,
+          54,
+          54,
+          54,
+          54,
+          55,
+          54,
+          55,
+          54,
+          54,
+          54,
+          54,
+          55,
+          54,
+          54,
+          55,
+          54,
+          55,
+          55,
+          54,
+          54,
+          54,
+          53,
+          54,
+          53,
+          55,
+          54,
+          55,
+          54,
+          55,
+          54,
+          54,
+          54,
+          54,
+          54,
+          54,
+          55,
+          54,
+          55,
+          55,
+          54,
+          54,
+          55
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1419,6 +1494,14 @@
       "top2_bucket": "58-61F",
       "top2_price": 0.0965,
       "top2_sum": 0.996
+    },
+    {
+      "ts": "2026-10-18T23:19:17.261Z",
+      "top_bucket": "58-59F",
+      "top_price": 0.9885,
+      "top2_bucket": "58-61F",
+      "top2_price": 0.0085,
+      "top2_sum": 0.997
     }
   ],
   "all_outcomes": [
@@ -1507,11 +1590,11 @@
         58,
         59
       ],
-      "bid": 0.8995,
-      "ask": 0.8995,
-      "price": 0.8995,
+      "bid": 0.9885,
+      "ask": 0.9885,
+      "price": 0.9885,
       "spread": 0,
-      "volume": 7783
+      "volume": 9032
     },
     {
       "question": "Will the highest temperature in New York City be between 60-61°F on October 18?",
@@ -1520,11 +1603,11 @@
         60,
         61
       ],
-      "bid": 0.0965,
-      "ask": 0.0965,
-      "price": 0.0965,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
-      "volume": 7311
+      "volume": 8204
     },
     {
       "question": "Will the highest temperature in New York City be between 62-63°F on October 18?",
@@ -1533,11 +1616,11 @@
         62,
         63
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3735
+      "volume": 3974
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on October 18?",

@@ -6,10 +6,10 @@
   "station": "KSEA",
   "event_end_date": "2026-10-18T12:00:00Z",
   "hours_at_discovery": 47.5,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 58.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1196,6 +1196,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-18T23:19:22.276Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 58,
+      "hrrr": 58,
+      "metar": 59,
+      "best": 57.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 58,
+          "gfs_seamless": 58,
+          "icon_seamless": 56
+        },
+        "mean": 57.6,
+        "spread": 1.6,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          57,
+          58,
+          57,
+          58,
+          57,
+          57,
+          57,
+          58,
+          58,
+          59,
+          57,
+          57,
+          57,
+          58,
+          58,
+          56,
+          57,
+          57,
+          58,
+          57,
+          58,
+          58,
+          57,
+          57,
+          57,
+          58,
+          58,
+          57,
+          57,
+          57,
+          58,
+          57,
+          58,
+          58,
+          58,
+          56,
+          57,
+          58,
+          58,
+          58,
+          57,
+          58,
+          57,
+          57,
+          57,
+          58,
+          58,
+          58,
+          57,
+          57
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1326,6 +1400,14 @@
       "top2_bucket": "58-61F",
       "top2_price": 0.23,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-10-18T23:19:22.276Z",
+      "top_bucket": "58-59F",
+      "top_price": 0.96,
+      "top2_bucket": "58-61F",
+      "top2_price": 0.027,
+      "top2_sum": 0.987
     }
   ],
   "all_outcomes": [
@@ -1392,7 +1474,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1942
+      "volume": 1943
     },
     {
       "question": "Will the highest temperature in Seattle be between 56-57°F on October 18?",
@@ -1401,11 +1483,11 @@
         56,
         57
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2624
+      "volume": 3670
     },
     {
       "question": "Will the highest temperature in Seattle be between 58-59°F on October 18?",
@@ -1414,11 +1496,11 @@
         58,
         59
       ],
-      "bid": 0.63,
-      "ask": 0.63,
-      "price": 0.63,
+      "bid": 0.96,
+      "ask": 0.96,
+      "price": 0.96,
       "spread": 0,
-      "volume": 2191
+      "volume": 4155
     },
     {
       "question": "Will the highest temperature in Seattle be between 60-61°F on October 18?",
@@ -1427,11 +1509,11 @@
         60,
         61
       ],
-      "bid": 0.23,
-      "ask": 0.23,
-      "price": 0.23,
+      "bid": 0.027,
+      "ask": 0.027,
+      "price": 0.027,
       "spread": 0,
-      "volume": 3616
+      "volume": 4596
     },
     {
       "question": "Will the highest temperature in Seattle be between 62-63°F on October 18?",
@@ -1440,11 +1522,11 @@
         62,
         63
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 506
+      "volume": 1119
     },
     {
       "question": "Will the highest temperature in Seattle be between 64-65°F on October 18?",
@@ -1453,11 +1535,11 @@
         64,
         65
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 204
+      "volume": 251
     },
     {
       "question": "Will the highest temperature in Seattle be 66°F or higher on October 18?",

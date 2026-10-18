@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-19T12:00:00Z",
   "hours_at_discovery": 46.2,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "5803668",
+    "question": "Will the highest temperature in Seattle be between 58-59°F on October 19?",
+    "bucket_low": 58,
+    "bucket_high": 59,
+    "entry_price": 0.24,
+    "bid_at_entry": 0.22,
+    "spread": 0.02,
+    "shares": 166.67,
+    "cost": 40,
+    "p": 0.44,
+    "ev": 0.8333,
+    "edge": 0.0866,
+    "kelly": 0.0682,
+    "forecast_temp": 61.29,
+    "forecast_src": "ensemble",
+    "sigma": 1.3,
+    "opened_at": "2026-10-18T23:19:22.276Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.176
+  },
+  "positions": [
+    {
+      "market_id": "5803668",
+      "question": "Will the highest temperature in Seattle be between 58-59°F on October 19?",
+      "bucket_low": 58,
+      "bucket_high": 59,
+      "entry_price": 0.24,
+      "bid_at_entry": 0.22,
+      "spread": 0.02,
+      "shares": 166.67,
+      "cost": 40,
+      "p": 0.44,
+      "ev": 0.8333,
+      "edge": 0.0866,
+      "kelly": 0.0682,
+      "forecast_temp": 61.29,
+      "forecast_src": "ensemble",
+      "sigma": 1.3,
+      "opened_at": "2026-10-18T23:19:22.276Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.176
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -753,6 +803,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-18T23:19:22.276Z",
+      "horizon": "D+1",
+      "hours_left": 12.7,
+      "ecmwf": 61,
+      "hrrr": 60,
+      "metar": null,
+      "best": 60.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 61,
+          "gfs_seamless": 60,
+          "icon_seamless": 59
+        },
+        "mean": 60.3,
+        "spread": 1.3,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          60,
+          61,
+          60,
+          61,
+          59,
+          58,
+          58,
+          58,
+          60,
+          61,
+          61,
+          60,
+          60,
+          60,
+          60,
+          58,
+          59,
+          59,
+          58,
+          60,
+          61,
+          60,
+          59,
+          59,
+          59,
+          58,
+          60,
+          58,
+          57,
+          57,
+          60,
+          60,
+          60,
+          59,
+          60,
+          59,
+          58,
+          60,
+          59,
+          59,
+          60,
+          59,
+          58,
+          60,
+          59,
+          61,
+          59,
+          61,
+          60,
+          60
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -835,6 +959,14 @@
       "top2_bucket": "58-61F",
       "top2_price": 0.525,
       "top2_sum": 0.82
+    },
+    {
+      "ts": "2026-10-18T23:19:22.276Z",
+      "top_bucket": "60-61F",
+      "top_price": 0.5,
+      "top2_bucket": "58-61F",
+      "top2_price": 0.5,
+      "top2_sum": 0.73
     }
   ],
   "all_outcomes": [
@@ -845,11 +977,11 @@
         -999,
         47
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 1258
+      "volume": 1310
     },
     {
       "question": "Will the highest temperature in Seattle be between 48-49°F on October 19?",
@@ -858,11 +990,11 @@
         48,
         49
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 15
+      "volume": 60
     },
     {
       "question": "Will the highest temperature in Seattle be between 50-51°F on October 19?",
@@ -871,11 +1003,11 @@
         50,
         51
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 5
+      "volume": 53
     },
     {
       "question": "Will the highest temperature in Seattle be between 52-53°F on October 19?",
@@ -884,11 +1016,11 @@
         52,
         53
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 0
+      "volume": 38
     },
     {
       "question": "Will the highest temperature in Seattle be between 54-55°F on October 19?",
@@ -897,11 +1029,11 @@
         54,
         55
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 87
+      "volume": 131
     },
     {
       "question": "Will the highest temperature in Seattle be between 56-57°F on October 19?",
@@ -910,11 +1042,11 @@
         56,
         57
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.0265,
+      "ask": 0.0265,
+      "price": 0.0265,
       "spread": 0,
-      "volume": 235
+      "volume": 341
     },
     {
       "question": "Will the highest temperature in Seattle be between 58-59°F on October 19?",
@@ -923,11 +1055,11 @@
         58,
         59
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.23,
+      "ask": 0.23,
+      "price": 0.23,
       "spread": 0,
-      "volume": 893
+      "volume": 925
     },
     {
       "question": "Will the highest temperature in Seattle be between 60-61°F on October 19?",
@@ -936,11 +1068,11 @@
         60,
         61
       ],
-      "bid": 0.525,
-      "ask": 0.525,
-      "price": 0.525,
+      "bid": 0.5,
+      "ask": 0.5,
+      "price": 0.5,
       "spread": 0,
-      "volume": 969
+      "volume": 995
     },
     {
       "question": "Will the highest temperature in Seattle be between 62-63°F on October 19?",
@@ -949,11 +1081,11 @@
         62,
         63
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 278
+      "volume": 758
     },
     {
       "question": "Will the highest temperature in Seattle be between 64-65°F on October 19?",
@@ -966,7 +1098,7 @@
       "ask": 0.0095,
       "price": 0.0095,
       "spread": 0,
-      "volume": 22
+      "volume": 27
     },
     {
       "question": "Will the highest temperature in Seattle be 66°F or higher on October 19?",
@@ -979,7 +1111,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 85
+      "volume": 90
     }
   ],
   "created_at": "2026-10-17T13:47:01.047Z"
