@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.112
+      "stop_price": 0.112,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -360,6 +361,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-18T01:09:22.220Z",
+      "horizon": "D+1",
+      "hours_left": 34.8,
+      "ecmwf": 15.1,
+      "hrrr": 18.7,
+      "metar": null,
+      "best": 16.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 15.1,
+          "gfs_seamless": 18.7,
+          "icon_seamless": 16.8
+        },
+        "mean": 16.5,
+        "spread": 2.2,
+        "gap": 3.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          14.3,
+          14.5,
+          15.1,
+          13.3,
+          15.2,
+          15,
+          13.1,
+          14.6,
+          17,
+          14.6,
+          13.9,
+          16,
+          14.9,
+          14.6,
+          14.6,
+          15.5,
+          13.6,
+          14.2,
+          14,
+          14.7,
+          14,
+          14.7,
+          13.9,
+          15.6,
+          16.1,
+          15.6,
+          15.4,
+          15,
+          15,
+          13.4,
+          15,
+          16,
+          15.1,
+          14.1,
+          14.7,
+          15.2,
+          15,
+          15.2,
+          14.2,
+          14,
+          15.3,
+          15,
+          15.5,
+          15.7,
+          14.5,
+          14.4,
+          13.5,
+          14.2,
+          15.1,
+          16
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -394,6 +470,14 @@
       "top2_bucket": "18-19C",
       "top2_price": 0.365,
       "top2_sum": 0.775
+    },
+    {
+      "ts": "2026-10-18T01:09:22.220Z",
+      "top_bucket": "18-18C",
+      "top_price": 0.4,
+      "top2_bucket": "18-19C",
+      "top2_price": 0.395,
+      "top2_sum": 0.795
     }
   ],
   "all_outcomes": [
@@ -443,11 +527,11 @@
         16,
         16
       ],
-      "bid": 0.0125,
-      "ask": 0.0125,
-      "price": 0.0125,
+      "bid": 0.0235,
+      "ask": 0.0235,
+      "price": 0.0235,
       "spread": 0,
-      "volume": 246
+      "volume": 390
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on October 19?",
@@ -460,7 +544,7 @@
       "ask": 0.155,
       "price": 0.155,
       "spread": 0,
-      "volume": 1740
+      "volume": 1754
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 18°C on October 19?",
@@ -469,9 +553,9 @@
         18,
         18
       ],
-      "bid": 0.41,
-      "ask": 0.41,
-      "price": 0.41,
+      "bid": 0.4,
+      "ask": 0.4,
+      "price": 0.4,
       "spread": 0,
       "volume": 1551
     },
@@ -482,11 +566,11 @@
         19,
         19
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.395,
+      "ask": 0.395,
+      "price": 0.395,
       "spread": 0,
-      "volume": 901
+      "volume": 1007
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on October 19?",
@@ -495,9 +579,9 @@
         20,
         20
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
       "spread": 0,
       "volume": 173
     },
@@ -508,9 +592,9 @@
         21,
         21
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
       "volume": 99
     },
