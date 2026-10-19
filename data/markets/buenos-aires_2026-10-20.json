@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.136,
-      "forecast_change_streak": 0
+      "stop_price": 0.18,
+      "forecast_change_streak": 0,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -434,6 +435,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-19T06:19:02.223Z",
+      "horizon": "D+1",
+      "hours_left": 29.7,
+      "ecmwf": 20,
+      "hrrr": 19.6,
+      "metar": null,
+      "best": 19.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 20,
+          "gfs_seamless": 19.6,
+          "icon_seamless": 19.4
+        },
+        "mean": 19.8,
+        "spread": 0.4,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          20.2,
+          19.7,
+          18.9,
+          19.7,
+          19.1,
+          19.9,
+          19.7,
+          19.9,
+          20,
+          20.4,
+          20,
+          20.3,
+          19.9,
+          19.9,
+          20,
+          19.3,
+          19.3,
+          18.7,
+          19.7,
+          19.6,
+          19.7,
+          19.5,
+          19.6,
+          19.4,
+          19.5,
+          20.3,
+          20.4,
+          19.7,
+          19.5,
+          19.8,
+          20.4,
+          19.7,
+          19.4,
+          20.1,
+          19.7,
+          19.4,
+          19.5,
+          20.1,
+          19.1,
+          20,
+          20,
+          19.6,
+          18.4,
+          20.3,
+          20,
+          20.4,
+          19.9,
+          19.8,
+          19.4,
+          19.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -476,6 +551,14 @@
       "top2_bucket": "21-22C",
       "top2_price": 0.205,
       "top2_sum": 0.74
+    },
+    {
+      "ts": "2026-10-19T06:19:02.223Z",
+      "top_bucket": "21-21C",
+      "top_price": 0.515,
+      "top2_bucket": "20-21C",
+      "top2_price": 0.515,
+      "top2_sum": 0.755
     }
   ],
   "all_outcomes": [
@@ -486,9 +569,9 @@
         -999,
         15
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
       "volume": 145
     },
@@ -503,7 +586,7 @@
       "ask": 0.0075,
       "price": 0.0075,
       "spread": 0,
-      "volume": 173
+      "volume": 186
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 17°C on October 20?",
@@ -516,7 +599,7 @@
       "ask": 0.005,
       "price": 0.005,
       "spread": 0,
-      "volume": 243
+      "volume": 291
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 18°C on October 20?",
@@ -525,11 +608,11 @@
         18,
         18
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 273
+      "volume": 432
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 19°C on October 20?",
@@ -538,11 +621,11 @@
         19,
         19
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.032,
+      "ask": 0.032,
+      "price": 0.032,
       "spread": 0,
-      "volume": 400
+      "volume": 1259
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on October 20?",
@@ -551,11 +634,11 @@
         20,
         20
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.24,
+      "ask": 0.24,
+      "price": 0.24,
       "spread": 0,
-      "volume": 948
+      "volume": 1870
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on October 20?",
@@ -564,11 +647,11 @@
         21,
         21
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
+      "bid": 0.515,
+      "ask": 0.515,
+      "price": 0.515,
       "spread": 0,
-      "volume": 6179
+      "volume": 6679
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C on October 20?",
@@ -577,11 +660,11 @@
         22,
         22
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 1236
+      "volume": 1400
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on October 20?",
@@ -590,11 +673,11 @@
         23,
         23
       ],
-      "bid": 0.0575,
-      "ask": 0.0575,
-      "price": 0.0575,
+      "bid": 0.0525,
+      "ask": 0.0525,
+      "price": 0.0525,
       "spread": 0,
-      "volume": 1056
+      "volume": 1692
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C on October 20?",
@@ -603,11 +686,11 @@
         24,
         24
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 1009
+      "volume": 1167
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 25°C or higher on October 20?",
@@ -616,11 +699,11 @@
         25,
         999
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 207
+      "volume": 220
     }
   ],
   "created_at": "2026-10-18T14:39:15.503Z"
