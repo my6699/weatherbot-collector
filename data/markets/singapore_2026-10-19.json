@@ -57,7 +57,7 @@
       "close_reason": null,
       "closed_at": null,
       "stop_price": 0.08,
-      "forecast_change_streak": 3
+      "forecast_change_streak": 4
     }
   ],
   "actual_temp": null,
@@ -963,6 +963,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-19T01:21:37.594Z",
+      "horizon": "D+0",
+      "hours_left": 10.6,
+      "ecmwf": 31.3,
+      "hrrr": 31.3,
+      "metar": 30,
+      "best": 31.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.3,
+          "gfs_seamless": 31.3,
+          "icon_seamless": 32.9
+        },
+        "mean": 31.6,
+        "spread": 1.3,
+        "gap": 0,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          29.4,
+          29.7,
+          30,
+          30.2,
+          28.2,
+          30.6,
+          30.7,
+          31,
+          31.5,
+          30.8,
+          30.7,
+          30.3,
+          30.9,
+          31.4,
+          31,
+          31.1,
+          29.8,
+          30.9,
+          30,
+          30.3,
+          29.5,
+          29,
+          29.8,
+          31.5,
+          31,
+          29.3,
+          29.4,
+          30.9,
+          30.3,
+          30.5,
+          32.1,
+          31.9,
+          29.3,
+          32.2,
+          30.1,
+          29,
+          30,
+          29.7,
+          30.5,
+          32,
+          30.7,
+          28.5,
+          31.7,
+          29.8,
+          28.3,
+          30.1,
+          29.8,
+          30.8,
+          30.4,
+          30
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1061,6 +1136,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.48,
       "top2_sum": 0.83
+    },
+    {
+      "ts": "2026-10-19T01:21:37.594Z",
+      "top_bucket": "33-33C",
+      "top_price": 0.565,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.565,
+      "top2_sum": 0.865
     }
   ],
   "all_outcomes": [
@@ -1123,11 +1206,11 @@
         30,
         30
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 510
+      "volume": 634
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on October 19?",
@@ -1136,11 +1219,11 @@
         31,
         31
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.034,
+      "ask": 0.034,
+      "price": 0.034,
       "spread": 0,
-      "volume": 1286
+      "volume": 1488
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on October 19?",
@@ -1149,11 +1232,11 @@
         32,
         32
       ],
-      "bid": 0.35,
-      "ask": 0.35,
-      "price": 0.35,
+      "bid": 0.3,
+      "ask": 0.3,
+      "price": 0.3,
       "spread": 0,
-      "volume": 8558
+      "volume": 9166
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on October 19?",
@@ -1162,11 +1245,11 @@
         33,
         33
       ],
-      "bid": 0.48,
-      "ask": 0.48,
-      "price": 0.48,
+      "bid": 0.565,
+      "ask": 0.565,
+      "price": 0.565,
       "spread": 0,
-      "volume": 5040
+      "volume": 5092
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on October 19?",
@@ -1175,11 +1258,11 @@
         34,
         34
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
-      "volume": 1035
+      "volume": 1036
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on October 19?",
@@ -1188,11 +1271,11 @@
         35,
         35
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 451
+      "volume": 480
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C or higher on October 19?",
@@ -1201,9 +1284,9 @@
         36,
         999
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
       "volume": 1460
     }
