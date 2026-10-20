@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-10-20T12:00:00Z",
   "hours_at_discovery": 48.7,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "5863877",
     "question": "Will the highest temperature in Dallas be between 80-81°F on October 20?",
@@ -955,6 +955,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-20T15:09:13.597Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 79,
+      "hrrr": 78,
+      "metar": 66,
+      "best": 78.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 79,
+          "gfs_seamless": 78,
+          "icon_seamless": 79
+        },
+        "mean": 78.7,
+        "spread": 0.7,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          78,
+          80,
+          77,
+          79,
+          80,
+          81,
+          79,
+          80,
+          79,
+          80,
+          80,
+          78,
+          80,
+          78,
+          80,
+          81,
+          79,
+          79,
+          77,
+          79,
+          80,
+          80,
+          76,
+          81,
+          80,
+          80,
+          80,
+          79,
+          79,
+          80,
+          78,
+          80,
+          80,
+          76,
+          80,
+          80,
+          80,
+          79,
+          81,
+          77,
+          79,
+          79,
+          81,
+          78,
+          81,
+          80,
+          80,
+          78,
+          79,
+          79
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1053,6 +1127,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.545,
       "top2_sum": 0.78
+    },
+    {
+      "ts": "2026-10-20T15:09:13.597Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.55,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.55,
+      "top2_sum": 0.86
     }
   ],
   "all_outcomes": [
@@ -1089,11 +1171,11 @@
         74,
         75
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 886
+      "volume": 981
     },
     {
       "question": "Will the highest temperature in Dallas be between 76-77°F on October 20?",
@@ -1102,11 +1184,11 @@
         76,
         77
       ],
-      "bid": 0.0695,
-      "ask": 0.0695,
-      "price": 0.0695,
+      "bid": 0.0205,
+      "ask": 0.0205,
+      "price": 0.0205,
       "spread": 0,
-      "volume": 5314
+      "volume": 6088
     },
     {
       "question": "Will the highest temperature in Dallas be between 78-79°F on October 20?",
@@ -1115,11 +1197,11 @@
         78,
         79
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.31,
+      "ask": 0.31,
+      "price": 0.31,
       "spread": 0,
-      "volume": 5957
+      "volume": 7271
     },
     {
       "question": "Will the highest temperature in Dallas be between 80-81°F on October 20?",
@@ -1128,11 +1210,11 @@
         80,
         81
       ],
-      "bid": 0.545,
-      "ask": 0.545,
-      "price": 0.545,
+      "bid": 0.55,
+      "ask": 0.55,
+      "price": 0.55,
       "spread": 0,
-      "volume": 6621
+      "volume": 7259
     },
     {
       "question": "Will the highest temperature in Dallas be between 82-83°F on October 20?",
@@ -1141,11 +1223,11 @@
         82,
         83
       ],
-      "bid": 0.102,
-      "ask": 0.102,
-      "price": 0.102,
+      "bid": 0.099,
+      "ask": 0.099,
+      "price": 0.099,
       "spread": 0,
-      "volume": 1737
+      "volume": 2360
     },
     {
       "question": "Will the highest temperature in Dallas be between 84-85°F on October 20?",
@@ -1154,11 +1236,11 @@
         84,
         85
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
-      "volume": 1216
+      "volume": 1528
     },
     {
       "question": "Will the highest temperature in Dallas be between 86-87°F on October 20?",
@@ -1171,7 +1253,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 881
+      "volume": 976
     },
     {
       "question": "Will the highest temperature in Dallas be between 88-89°F on October 20?",
@@ -1184,7 +1266,7 @@
       "ask": 0.002,
       "price": 0.002,
       "spread": 0,
-      "volume": 777
+      "volume": 782
     },
     {
       "question": "Will the highest temperature in Dallas be 90°F or higher on October 20?",

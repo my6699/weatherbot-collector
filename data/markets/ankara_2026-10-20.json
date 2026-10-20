@@ -6,7 +6,7 @@
   "station": "LTAC",
   "event_end_date": "2026-10-20T12:00:00Z",
   "hours_at_discovery": 54,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5855303",
     "question": "Will the highest temperature in Ankara be 16°C on October 20?",
@@ -57,10 +57,11 @@
       "close_reason": "forecast_changed",
       "closed_at": "2026-10-18T20:51:20.328Z",
       "stop_price": 0.144,
-      "forecast_change_streak": 2
+      "forecast_change_streak": 2,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 17,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1026,6 +1027,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-20T15:09:23.205Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 15.7,
+      "hrrr": 15.3,
+      "metar": 14,
+      "best": 15.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 15.7,
+          "gfs_seamless": 15.3,
+          "icon_seamless": 15.1
+        },
+        "mean": 15.5,
+        "spread": 0.4,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          16.1,
+          15.5,
+          15.7,
+          15.8,
+          16,
+          16,
+          15.9,
+          15.6,
+          16.1,
+          15.7,
+          15.7,
+          15.8,
+          15.7,
+          16.1,
+          15.7,
+          15.7,
+          15.3,
+          16.4,
+          15.6,
+          15.7,
+          16,
+          15.4,
+          16.3,
+          15.9,
+          16.2,
+          15.7,
+          15.7,
+          15.5,
+          15.9,
+          15.7,
+          16.1,
+          15.8,
+          15.6,
+          15.8,
+          15.8,
+          16,
+          15.8,
+          15.9,
+          16.2,
+          15.7,
+          15.8,
+          15.8,
+          15.7,
+          16,
+          16.1,
+          15.8,
+          15.7,
+          16.1,
+          15.7,
+          15.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1132,6 +1207,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.59,
       "top2_sum": 0.865
+    },
+    {
+      "ts": "2026-10-20T15:09:23.205Z",
+      "top_bucket": "17-17C",
+      "top_price": 0.9835,
+      "top2_bucket": "17-18C",
+      "top2_price": 0.0155,
+      "top2_sum": 0.999
     }
   ],
   "all_outcomes": [
@@ -1142,11 +1225,11 @@
         -999,
         10
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
-      "volume": 2404
+      "volume": 2840
     },
     {
       "question": "Will the highest temperature in Ankara be 11°C on October 20?",
@@ -1155,11 +1238,11 @@
         11,
         11
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 2467
+      "volume": 2716
     },
     {
       "question": "Will the highest temperature in Ankara be 12°C on October 20?",
@@ -1172,7 +1255,7 @@
       "ask": 0.0065,
       "price": 0.0065,
       "spread": 0,
-      "volume": 1835
+      "volume": 2144
     },
     {
       "question": "Will the highest temperature in Ankara be 13°C on October 20?",
@@ -1181,11 +1264,11 @@
         13,
         13
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 1469
+      "volume": 1778
     },
     {
       "question": "Will the highest temperature in Ankara be 14°C on October 20?",
@@ -1194,11 +1277,11 @@
         14,
         14
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 2091
+      "volume": 2378
     },
     {
       "question": "Will the highest temperature in Ankara be 15°C on October 20?",
@@ -1207,11 +1290,11 @@
         15,
         15
       ],
-      "bid": 0.0475,
-      "ask": 0.0475,
-      "price": 0.0475,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 1685
+      "volume": 2212
     },
     {
       "question": "Will the highest temperature in Ankara be 16°C on October 20?",
@@ -1220,11 +1303,11 @@
         16,
         16
       ],
-      "bid": 0.275,
-      "ask": 0.275,
-      "price": 0.275,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 5224
+      "volume": 7329
     },
     {
       "question": "Will the highest temperature in Ankara be 17°C on October 20?",
@@ -1233,11 +1316,11 @@
         17,
         17
       ],
-      "bid": 0.59,
-      "ask": 0.59,
-      "price": 0.59,
+      "bid": 0.9835,
+      "ask": 0.9835,
+      "price": 0.9835,
       "spread": 0,
-      "volume": 3325
+      "volume": 4188
     },
     {
       "question": "Will the highest temperature in Ankara be 18°C on October 20?",
@@ -1246,11 +1329,11 @@
         18,
         18
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
-      "volume": 2518
+      "volume": 3292
     },
     {
       "question": "Will the highest temperature in Ankara be 19°C on October 20?",
@@ -1259,11 +1342,11 @@
         19,
         19
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 1524
+      "volume": 1687
     },
     {
       "question": "Will the highest temperature in Ankara be 20°C or higher on October 20?",
@@ -1276,8 +1359,9 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 1004
+      "volume": 1135
     }
   ],
-  "created_at": "2026-10-18T05:59:57.929Z"
+  "created_at": "2026-10-18T05:59:57.929Z",
+  "metar_max": 3
 }
