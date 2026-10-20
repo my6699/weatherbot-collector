@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-21T12:00:00Z",
   "hours_at_discovery": 46.5,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "5916852",
+    "question": "Will the highest temperature in Chicago be between 70-71°F on October 21?",
+    "bucket_low": 70,
+    "bucket_high": 71,
+    "entry_price": 0.23,
+    "bid_at_entry": 0.22,
+    "spread": 0.01,
+    "shares": 173.91,
+    "cost": 40,
+    "p": 0.88,
+    "ev": 2.8261,
+    "edge": 0.5299,
+    "kelly": 0.2113,
+    "forecast_temp": 74.4,
+    "forecast_src": "ensemble",
+    "sigma": 0.85,
+    "opened_at": "2026-10-20T19:20:05.001Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.176
+  },
+  "positions": [
+    {
+      "market_id": "5916852",
+      "question": "Will the highest temperature in Chicago be between 70-71°F on October 21?",
+      "bucket_low": 70,
+      "bucket_high": 71,
+      "entry_price": 0.23,
+      "bid_at_entry": 0.22,
+      "spread": 0.01,
+      "shares": 173.91,
+      "cost": 40,
+      "p": 0.88,
+      "ev": 2.8261,
+      "edge": 0.5299,
+      "kelly": 0.2113,
+      "forecast_temp": 74.4,
+      "forecast_src": "ensemble",
+      "sigma": 0.85,
+      "opened_at": "2026-10-20T19:20:05.001Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.176
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -459,6 +509,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-20T19:20:05.001Z",
+      "horizon": "D+1",
+      "hours_left": 16.7,
+      "ecmwf": 71,
+      "hrrr": 71,
+      "metar": null,
+      "best": 70.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 71,
+          "gfs_seamless": 71,
+          "icon_seamless": 70
+        },
+        "mean": 70.8,
+        "spread": 0.8,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          71,
+          71,
+          71,
+          71,
+          70,
+          71,
+          71,
+          71,
+          70,
+          71,
+          72,
+          70,
+          70,
+          71,
+          71,
+          72,
+          71,
+          71,
+          72,
+          71,
+          71,
+          71,
+          71,
+          71,
+          70,
+          71,
+          71,
+          70,
+          71,
+          71,
+          70,
+          71,
+          71,
+          70,
+          70,
+          71,
+          72,
+          71,
+          71,
+          72,
+          71,
+          71,
+          72,
+          71,
+          71,
+          71,
+          71,
+          71,
+          71,
+          71
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -509,6 +633,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.555,
       "top2_sum": 0.84
+    },
+    {
+      "ts": "2026-10-20T19:20:05.001Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.615,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.615,
+      "top2_sum": 0.84
     }
   ],
   "all_outcomes": [
@@ -532,9 +664,9 @@
         60,
         61
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 100
     },
@@ -545,11 +677,11 @@
         62,
         63
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 226
+      "volume": 318
     },
     {
       "question": "Will the highest temperature in Chicago be between 64-65°F on October 21?",
@@ -558,11 +690,11 @@
         64,
         65
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 357
+      "volume": 397
     },
     {
       "question": "Will the highest temperature in Chicago be between 66-67°F on October 21?",
@@ -571,11 +703,11 @@
         66,
         67
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0.009,
+      "ask": 0.009,
+      "price": 0.009,
       "spread": 0,
-      "volume": 401
+      "volume": 758
     },
     {
       "question": "Will the highest temperature in Chicago be between 68-69°F on October 21?",
@@ -584,11 +716,11 @@
         68,
         69
       ],
-      "bid": 0.0405,
-      "ask": 0.0405,
-      "price": 0.0405,
+      "bid": 0.037,
+      "ask": 0.037,
+      "price": 0.037,
       "spread": 0,
-      "volume": 1195
+      "volume": 1550
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on October 21?",
@@ -597,11 +729,11 @@
         70,
         71
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.225,
+      "ask": 0.225,
+      "price": 0.225,
       "spread": 0,
-      "volume": 4343
+      "volume": 4953
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on October 21?",
@@ -610,11 +742,11 @@
         72,
         73
       ],
-      "bid": 0.555,
-      "ask": 0.555,
-      "price": 0.555,
+      "bid": 0.615,
+      "ask": 0.615,
+      "price": 0.615,
       "spread": 0,
-      "volume": 1679
+      "volume": 1847
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on October 21?",
@@ -623,11 +755,11 @@
         74,
         75
       ],
-      "bid": 0.0935,
-      "ask": 0.0935,
-      "price": 0.0935,
+      "bid": 0.108,
+      "ask": 0.108,
+      "price": 0.108,
       "spread": 0,
-      "volume": 1271
+      "volume": 1366
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on October 21?",
@@ -636,9 +768,9 @@
         76,
         77
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 350
     },
