@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-21T12:00:00Z",
   "hours_at_discovery": 53.7,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "5914021",
+    "question": "Will the highest temperature in London be 14°C on October 21?",
+    "bucket_low": 14,
+    "bucket_high": 14,
+    "entry_price": 0.19,
+    "bid_at_entry": 0.17,
+    "spread": 0.02,
+    "shares": 210.53,
+    "cost": 40,
+    "p": 0.42,
+    "ev": 1.2105,
+    "edge": 0.101,
+    "kelly": 0.0732,
+    "forecast_temp": 13.32,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-10-20T22:23:23.770Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.136
+  },
+  "positions": [
+    {
+      "market_id": "5914021",
+      "question": "Will the highest temperature in London be 14°C on October 21?",
+      "bucket_low": 14,
+      "bucket_high": 14,
+      "entry_price": 0.19,
+      "bid_at_entry": 0.17,
+      "spread": 0.02,
+      "shares": 210.53,
+      "cost": 40,
+      "p": 0.42,
+      "ev": 1.2105,
+      "edge": 0.101,
+      "kelly": 0.0732,
+      "forecast_temp": 13.32,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-10-20T22:23:23.770Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.136
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -609,6 +659,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-20T22:23:23.770Z",
+      "horizon": "D+1",
+      "hours_left": 13.6,
+      "ecmwf": 13.2,
+      "hrrr": 11.6,
+      "metar": null,
+      "best": 12.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 13.2,
+          "gfs_seamless": 11.6,
+          "icon_seamless": 12.7
+        },
+        "mean": 12.6,
+        "spread": 1,
+        "gap": 1.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          13.5,
+          13.1,
+          12.4,
+          14.5,
+          13.7,
+          13.3,
+          13.3,
+          13.2,
+          13.8,
+          15.4,
+          15.7,
+          14.5,
+          13,
+          13,
+          13.5,
+          15.1,
+          14.7,
+          12.8,
+          13.3,
+          13.5,
+          13.5,
+          13.8,
+          13.8,
+          12.8,
+          14.8,
+          14.5,
+          12.8,
+          13.2,
+          14.5,
+          14,
+          13.5,
+          12.7,
+          13.5,
+          13.5,
+          14.7,
+          13.2,
+          13.4,
+          13.3,
+          12.7,
+          12,
+          14,
+          12.6,
+          14.5,
+          14.9,
+          12.7,
+          14.5,
+          14,
+          12.7,
+          14.5,
+          12.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -675,6 +800,14 @@
       "top2_bucket": "13-14C",
       "top2_price": 0.35,
       "top2_sum": 0.79
+    },
+    {
+      "ts": "2026-10-20T22:23:23.770Z",
+      "top_bucket": "13-13C",
+      "top_price": 0.495,
+      "top2_bucket": "12-13C",
+      "top2_price": 0.495,
+      "top2_sum": 0.76
     }
   ],
   "all_outcomes": [
@@ -711,11 +844,11 @@
         11,
         11
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 700
+      "volume": 1050
     },
     {
       "question": "Will the highest temperature in London be 12°C on October 21?",
@@ -724,11 +857,11 @@
         12,
         12
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 2180
+      "volume": 2664
     },
     {
       "question": "Will the highest temperature in London be 13°C on October 21?",
@@ -737,11 +870,11 @@
         13,
         13
       ],
-      "bid": 0.44,
-      "ask": 0.44,
-      "price": 0.44,
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
       "spread": 0,
-      "volume": 4565
+      "volume": 4732
     },
     {
       "question": "Will the highest temperature in London be 14°C on October 21?",
@@ -750,11 +883,11 @@
         14,
         14
       ],
-      "bid": 0.35,
-      "ask": 0.35,
-      "price": 0.35,
+      "bid": 0.18,
+      "ask": 0.18,
+      "price": 0.18,
       "spread": 0,
-      "volume": 4270
+      "volume": 5252
     },
     {
       "question": "Will the highest temperature in London be 15°C on October 21?",
@@ -763,11 +896,11 @@
         15,
         15
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.035,
+      "ask": 0.035,
+      "price": 0.035,
       "spread": 0,
-      "volume": 3073
+      "volume": 3145
     },
     {
       "question": "Will the highest temperature in London be 16°C on October 21?",
@@ -776,9 +909,9 @@
         16,
         16
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
       "volume": 1011
     },
