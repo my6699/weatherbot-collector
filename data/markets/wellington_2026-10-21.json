@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-10-21T12:00:00Z",
   "hours_at_discovery": 53.7,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "5914064",
     "question": "Will the highest temperature in Wellington be 17°C on October 21?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-21T00:42:03.076Z",
       "stop_price": 0.12,
       "trailing_activated": true,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 18,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -887,6 +888,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-21T11:59:24.789Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": null,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -977,6 +989,14 @@
       "top2_bucket": "17-18C",
       "top2_price": 0.955,
       "top2_sum": 0.963
+    },
+    {
+      "ts": "2026-10-21T11:59:24.789Z",
+      "top_bucket": "18-18C",
+      "top_price": 0.9895,
+      "top2_bucket": "17-18C",
+      "top2_price": 0.9895,
+      "top2_sum": 0.9955
     }
   ],
   "all_outcomes": [
@@ -987,11 +1007,11 @@
         -999,
         13
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1971
+      "volume": 1987
     },
     {
       "question": "Will the highest temperature in Wellington be 14°C on October 21?",
@@ -1000,11 +1020,11 @@
         14,
         14
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 868
+      "volume": 1397
     },
     {
       "question": "Will the highest temperature in Wellington be 15°C on October 21?",
@@ -1013,11 +1033,11 @@
         15,
         15
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1568
+      "volume": 1605
     },
     {
       "question": "Will the highest temperature in Wellington be 16°C on October 21?",
@@ -1026,11 +1046,11 @@
         16,
         16
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0105,
+      "ask": 0.0105,
+      "price": 0.0105,
       "spread": 0,
-      "volume": 1472
+      "volume": 1979
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on October 21?",
@@ -1039,11 +1059,11 @@
         17,
         17
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 4284
+      "volume": 5086
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on October 21?",
@@ -1052,11 +1072,11 @@
         18,
         18
       ],
-      "bid": 0.955,
-      "ask": 0.955,
-      "price": 0.955,
+      "bid": 0.9895,
+      "ask": 0.9895,
+      "price": 0.9895,
       "spread": 0,
-      "volume": 7509
+      "volume": 8273
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on October 21?",
@@ -1065,11 +1085,11 @@
         19,
         19
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 3908
+      "volume": 4338
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on October 21?",
@@ -1082,7 +1102,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3537
+      "volume": 3738
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C on October 21?",
@@ -1091,11 +1111,11 @@
         21,
         21
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 961
+      "volume": 1180
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C on October 21?",
@@ -1124,5 +1144,6 @@
       "volume": 1375
     }
   ],
-  "created_at": "2026-10-19T06:19:04.148Z"
+  "created_at": "2026-10-19T06:19:04.148Z",
+  "metar_max": 18
 }
