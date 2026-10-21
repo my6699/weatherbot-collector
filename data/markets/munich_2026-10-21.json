@@ -6,7 +6,7 @@
   "station": "EDDM",
   "event_end_date": "2026-10-21T12:00:00Z",
   "hours_at_discovery": 53.7,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "5914089",
     "question": "Will the highest temperature in Munich be 13°C on October 21?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-21T11:58:53.120Z",
       "stop_price": 0.12,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 11,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -962,6 +963,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-21T17:18:36.435Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 10.5,
+      "hrrr": 13.6,
+      "metar": null,
+      "best": 11.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.5,
+          "gfs_seamless": 13.6,
+          "icon_seamless": 10.6
+        },
+        "mean": 11.5,
+        "spread": 2.2,
+        "gap": 3.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          10,
+          9.6,
+          9.2,
+          10.2,
+          10.4,
+          10.5,
+          9.1,
+          10.2,
+          9.7,
+          10.4,
+          10.3,
+          9.7,
+          10,
+          10.3,
+          10.7,
+          9.9,
+          10.5,
+          9.7,
+          9.7,
+          9.7,
+          10.3,
+          10.8,
+          9.2,
+          9.1,
+          9.8,
+          9.5,
+          9.8,
+          10.6,
+          9.4,
+          10.1,
+          9.9,
+          8.9,
+          10.2,
+          9.9,
+          9.8,
+          10.7,
+          12.2,
+          10.2,
+          10.2,
+          9.3,
+          11,
+          10.7,
+          10.8,
+          9.2,
+          9.1,
+          8.8,
+          10.2,
+          9.2,
+          9.5,
+          10.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1060,6 +1136,14 @@
       "top2_bucket": "11-12C",
       "top2_price": 0.135,
       "top2_sum": 0.975
+    },
+    {
+      "ts": "2026-10-21T17:18:36.435Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.966,
+      "top2_bucket": "11-12C",
+      "top2_price": 0.0285,
+      "top2_sum": 0.9945
     }
   ],
   "all_outcomes": [
@@ -1070,11 +1154,11 @@
         -999,
         6
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1409
+      "volume": 1472
     },
     {
       "question": "Will the highest temperature in Munich be 7°C on October 21?",
@@ -1083,11 +1167,11 @@
         7,
         7
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1118
+      "volume": 1289
     },
     {
       "question": "Will the highest temperature in Munich be 8°C on October 21?",
@@ -1096,11 +1180,11 @@
         8,
         8
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1771
+      "volume": 1773
     },
     {
       "question": "Will the highest temperature in Munich be 9°C on October 21?",
@@ -1109,11 +1193,11 @@
         9,
         9
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 3786
+      "volume": 4073
     },
     {
       "question": "Will the highest temperature in Munich be 10°C on October 21?",
@@ -1122,11 +1206,11 @@
         10,
         10
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 7317
+      "volume": 7846
     },
     {
       "question": "Will the highest temperature in Munich be 11°C on October 21?",
@@ -1135,11 +1219,11 @@
         11,
         11
       ],
-      "bid": 0.84,
-      "ask": 0.84,
-      "price": 0.84,
+      "bid": 0.966,
+      "ask": 0.966,
+      "price": 0.966,
       "spread": 0,
-      "volume": 4892
+      "volume": 6225
     },
     {
       "question": "Will the highest temperature in Munich be 12°C on October 21?",
@@ -1148,11 +1232,11 @@
         12,
         12
       ],
-      "bid": 0.135,
-      "ask": 0.135,
-      "price": 0.135,
+      "bid": 0.0285,
+      "ask": 0.0285,
+      "price": 0.0285,
       "spread": 0,
-      "volume": 5200
+      "volume": 5940
     },
     {
       "question": "Will the highest temperature in Munich be 13°C on October 21?",
@@ -1161,11 +1245,11 @@
         13,
         13
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
-      "volume": 4422
+      "volume": 5423
     },
     {
       "question": "Will the highest temperature in Munich be 14°C on October 21?",
@@ -1174,11 +1258,11 @@
         14,
         14
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 1504
+      "volume": 1860
     },
     {
       "question": "Will the highest temperature in Munich be 15°C on October 21?",
@@ -1187,11 +1271,11 @@
         15,
         15
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 1260
+      "volume": 1279
     },
     {
       "question": "Will the highest temperature in Munich be 16°C or higher on October 21?",
@@ -1200,12 +1284,13 @@
         16,
         999
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1514
     }
   ],
-  "created_at": "2026-10-19T06:18:47.389Z"
+  "created_at": "2026-10-19T06:18:47.389Z",
+  "metar_max": 7
 }

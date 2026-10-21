@@ -51,12 +51,13 @@
       "forecast_src": "ensemble",
       "sigma": 2.9,
       "opened_at": "2026-10-21T11:58:44.917Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
-      "stop_price": 0.104
+      "status": "closed",
+      "pnl": -21.33,
+      "exit_price": 0.07,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-10-21T17:19:34.340Z",
+      "stop_price": 0.104,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -584,6 +585,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-21T17:18:14.046Z",
+      "horizon": "D+1",
+      "hours_left": 18.7,
+      "ecmwf": 85,
+      "hrrr": 83,
+      "metar": null,
+      "best": 84.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 85,
+          "gfs_seamless": 83,
+          "icon_seamless": 84
+        },
+        "mean": 84.2,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          83,
+          85,
+          84,
+          84,
+          85,
+          86,
+          84,
+          85,
+          84,
+          85,
+          85,
+          83,
+          84,
+          84,
+          86,
+          86,
+          85,
+          84,
+          84,
+          85,
+          85,
+          85,
+          81,
+          86,
+          85,
+          84,
+          85,
+          85,
+          85,
+          85,
+          83,
+          85,
+          85,
+          81,
+          84,
+          86,
+          85,
+          85,
+          86,
+          83,
+          84,
+          84,
+          86,
+          83,
+          86,
+          85,
+          85,
+          82,
+          85,
+          84
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -642,6 +717,14 @@
       "top2_bucket": "82-85F",
       "top2_price": 0.595,
       "top2_sum": 0.81
+    },
+    {
+      "ts": "2026-10-21T17:18:14.046Z",
+      "top_bucket": "82-83F",
+      "top_price": 0.39,
+      "top2_bucket": "82-85F",
+      "top2_price": 0.36,
+      "top2_sum": 0.75
     }
   ],
   "all_outcomes": [
@@ -669,7 +752,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 170
+      "volume": 195
     },
     {
       "question": "Will the highest temperature in Dallas be between 76-77°F on October 22?",
@@ -691,11 +774,11 @@
         78,
         79
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.008,
+      "ask": 0.008,
+      "price": 0.008,
       "spread": 0,
-      "volume": 289
+      "volume": 464
     },
     {
       "question": "Will the highest temperature in Dallas be between 80-81°F on October 22?",
@@ -704,11 +787,11 @@
         80,
         81
       ],
-      "bid": 0.0205,
-      "ask": 0.0205,
-      "price": 0.0205,
+      "bid": 0.129,
+      "ask": 0.129,
+      "price": 0.129,
       "spread": 0,
-      "volume": 578
+      "volume": 794
     },
     {
       "question": "Will the highest temperature in Dallas be between 82-83°F on October 22?",
@@ -717,11 +800,11 @@
         82,
         83
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.39,
+      "ask": 0.39,
+      "price": 0.39,
       "spread": 0,
-      "volume": 2064
+      "volume": 2789
     },
     {
       "question": "Will the highest temperature in Dallas be between 84-85°F on October 22?",
@@ -730,11 +813,11 @@
         84,
         85
       ],
-      "bid": 0.595,
-      "ask": 0.595,
-      "price": 0.595,
+      "bid": 0.36,
+      "ask": 0.36,
+      "price": 0.36,
       "spread": 0,
-      "volume": 2063
+      "volume": 4504
     },
     {
       "question": "Will the highest temperature in Dallas be between 86-87°F on October 22?",
@@ -743,11 +826,11 @@
         86,
         87
       ],
-      "bid": 0.14,
-      "ask": 0.14,
-      "price": 0.14,
+      "bid": 0.09,
+      "ask": 0.09,
+      "price": 0.09,
       "spread": 0,
-      "volume": 980
+      "volume": 1462
     },
     {
       "question": "Will the highest temperature in Dallas be between 88-89°F on October 22?",
@@ -756,11 +839,11 @@
         88,
         89
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 359
+      "volume": 535
     },
     {
       "question": "Will the highest temperature in Dallas be between 90-91°F on October 22?",
@@ -773,7 +856,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 342
+      "volume": 459
     },
     {
       "question": "Will the highest temperature in Dallas be 92°F or higher on October 22?",
