@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-24T12:00:00Z",
   "hours_at_discovery": 49.7,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6035875",
+    "question": "Will the highest temperature in Paris be 13°C on October 24?",
+    "bucket_low": 13,
+    "bucket_high": 13,
+    "entry_price": 0.22,
+    "bid_at_entry": 0.19,
+    "spread": 0.03,
+    "shares": 181.82,
+    "cost": 40,
+    "p": 0.68,
+    "ev": 2.0909,
+    "edge": 0.3502,
+    "kelly": 0.1506,
+    "forecast_temp": 14.08,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-10-22T19:16:52.835Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.152
+  },
+  "positions": [
+    {
+      "market_id": "6035875",
+      "question": "Will the highest temperature in Paris be 13°C on October 24?",
+      "bucket_low": 13,
+      "bucket_high": 13,
+      "entry_price": 0.22,
+      "bid_at_entry": 0.19,
+      "spread": 0.03,
+      "shares": 181.82,
+      "cost": 40,
+      "p": 0.68,
+      "ev": 2.0909,
+      "edge": 0.3502,
+      "kelly": 0.1506,
+      "forecast_temp": 14.08,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-10-22T19:16:52.835Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.152
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -161,6 +211,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-22T19:16:52.835Z",
+      "horizon": "D+2",
+      "hours_left": 40.7,
+      "ecmwf": 13,
+      "hrrr": 12.8,
+      "metar": null,
+      "best": 13.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 13,
+          "gfs_seamless": 12.8,
+          "icon_seamless": 13.7
+        },
+        "mean": 13.1,
+        "spread": 0.6,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          12.5,
+          12.7,
+          14.3,
+          12.7,
+          13.3,
+          13.8,
+          13.2,
+          13.6,
+          12.8,
+          13.2,
+          12.8,
+          13,
+          13.2,
+          13.6,
+          13.9,
+          14.5,
+          14.2,
+          12.9,
+          13,
+          13.7,
+          12.7,
+          13.6,
+          13.3,
+          14,
+          12.9,
+          13.6,
+          13.4,
+          13,
+          12.8,
+          13,
+          12.8,
+          13.3,
+          13,
+          13.8,
+          13.1,
+          13.1,
+          13.4,
+          14.5,
+          13.7,
+          13.5,
+          13.5,
+          13.5,
+          12.8,
+          14.7,
+          13.1,
+          12.3,
+          13.3,
+          13,
+          12.7,
+          12.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -179,6 +303,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.275,
       "top2_sum": 0.66
+    },
+    {
+      "ts": "2026-10-22T19:16:52.835Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.39,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.275,
+      "top2_sum": 0.665
     }
   ],
   "all_outcomes": [
@@ -206,7 +338,7 @@
       "ask": 0.004,
       "price": 0.004,
       "spread": 0,
-      "volume": 273
+      "volume": 274
     },
     {
       "question": "Will the highest temperature in Paris be 9°C on October 24?",
@@ -228,9 +360,9 @@
         10,
         10
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
       "volume": 23
     },
@@ -241,9 +373,9 @@
         11,
         11
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
       "volume": 180
     },
@@ -254,11 +386,11 @@
         12,
         12
       ],
-      "bid": 0.052,
-      "ask": 0.052,
-      "price": 0.052,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 129
+      "volume": 167
     },
     {
       "question": "Will the highest temperature in Paris be 13°C on October 24?",
@@ -267,11 +399,11 @@
         13,
         13
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
-      "volume": 1388
+      "volume": 1393
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on October 24?",
@@ -280,11 +412,11 @@
         14,
         14
       ],
-      "bid": 0.385,
-      "ask": 0.385,
-      "price": 0.385,
+      "bid": 0.39,
+      "ask": 0.39,
+      "price": 0.39,
       "spread": 0,
-      "volume": 624
+      "volume": 632
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on October 24?",
@@ -306,9 +438,9 @@
         16,
         16
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
       "volume": 102
     },
