@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-10-22T12:00:00Z",
   "hours_at_discovery": 55,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -983,6 +983,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-22T15:21:12.288Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 32.2,
+      "hrrr": 31.6,
+      "metar": 29,
+      "best": 32.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 32.2,
+          "gfs_seamless": 31.6,
+          "icon_seamless": 32.8
+        },
+        "mean": 32.1,
+        "spread": 0.7,
+        "gap": 0.6,
+        "llmEnhanced": false,
+        "membersMax": [
+          32.8,
+          32.6,
+          33.2,
+          33.4,
+          32.5,
+          32.1,
+          31.4,
+          32.8,
+          31.4,
+          32.4,
+          32,
+          31.5,
+          33.5,
+          32.5,
+          30.9,
+          31.8,
+          33.7,
+          32.5,
+          32.9,
+          33.7,
+          31.7,
+          32.3,
+          33.1,
+          32,
+          30.1,
+          32.6,
+          32.6,
+          33.1,
+          32.4,
+          33.1,
+          32,
+          32.8,
+          32.5,
+          33.4,
+          32,
+          32.3,
+          32,
+          32.7,
+          32.9,
+          33.1,
+          30.5,
+          32.2,
+          32.3,
+          32.8,
+          32.5,
+          32.1,
+          32.7,
+          32.4,
+          32.7,
+          32.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1089,6 +1163,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.997,
       "top2_sum": 0.998
+    },
+    {
+      "ts": "2026-10-22T15:21:12.288Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.999,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.0025,
+      "top2_sum": 1.0015
     }
   ],
   "all_outcomes": [
@@ -1099,9 +1181,9 @@
         -999,
         28
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 756
     },
@@ -1112,9 +1194,9 @@
         29,
         29
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1088
     },
@@ -1129,7 +1211,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5658
+      "volume": 5664
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on October 22?",
@@ -1138,11 +1220,11 @@
         31,
         31
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5841
+      "volume": 5915
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on October 22?",
@@ -1151,11 +1233,11 @@
         32,
         32
       ],
-      "bid": 0.997,
-      "ask": 0.997,
-      "price": 0.997,
+      "bid": 0.999,
+      "ask": 0.999,
+      "price": 0.999,
       "spread": 0,
-      "volume": 7517
+      "volume": 7543
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on October 22?",
@@ -1164,11 +1246,11 @@
         33,
         33
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 7411
+      "volume": 7594
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on October 22?",
@@ -1181,7 +1263,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4375
+      "volume": 4433
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on October 22?",
@@ -1194,7 +1276,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1411
+      "volume": 1445
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C on October 22?",
@@ -1236,5 +1318,6 @@
       "volume": 15
     }
   ],
-  "created_at": "2026-10-20T04:58:40.345Z"
+  "created_at": "2026-10-20T04:58:40.345Z",
+  "metar_max": 28
 }
