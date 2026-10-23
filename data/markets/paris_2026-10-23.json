@@ -6,10 +6,10 @@
   "station": "LFPG",
   "event_end_date": "2026-10-23T12:00:00Z",
   "hours_at_discovery": 53.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 14,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -904,6 +904,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-23T13:32:17.834Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 14.2,
+      "hrrr": 13.4,
+      "metar": 12,
+      "best": 13.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14.2,
+          "gfs_seamless": 13.4,
+          "icon_seamless": 13.6
+        },
+        "mean": 13.8,
+        "spread": 0.4,
+        "gap": 0.8,
+        "llmEnhanced": false,
+        "membersMax": [
+          14.5,
+          14.4,
+          14.9,
+          14.1,
+          13.6,
+          14.6,
+          14.2,
+          15.4,
+          14.7,
+          15.1,
+          13.6,
+          14.1,
+          13.8,
+          13.9,
+          14.4,
+          15.5,
+          14.6,
+          14.5,
+          13.1,
+          13.9,
+          14.2,
+          14.3,
+          14,
+          13.4,
+          13.9,
+          14.6,
+          14.8,
+          14.2,
+          13.3,
+          15,
+          14,
+          14.3,
+          14.1,
+          14,
+          13.6,
+          14.4,
+          14.1,
+          13.8,
+          14.8,
+          13,
+          13.8,
+          15.6,
+          14.1,
+          13.9,
+          14.3,
+          13.5,
+          13.8,
+          15,
+          13.9,
+          14.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1002,6 +1076,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.0245,
       "top2_sum": 0.9795
+    },
+    {
+      "ts": "2026-10-23T13:32:17.834Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.9885,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.0105,
+      "top2_sum": 0.999
     }
   ],
   "all_outcomes": [
@@ -1077,11 +1159,11 @@
         13,
         13
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 10106
+      "volume": 17333
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on October 23?",
@@ -1090,11 +1172,11 @@
         14,
         14
       ],
-      "bid": 0.955,
-      "ask": 0.955,
-      "price": 0.955,
+      "bid": 0.9885,
+      "ask": 0.9885,
+      "price": 0.9885,
       "spread": 0,
-      "volume": 7217
+      "volume": 9450
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on October 23?",
@@ -1103,11 +1185,11 @@
         15,
         15
       ],
-      "bid": 0.0245,
-      "ask": 0.0245,
-      "price": 0.0245,
+      "bid": 0.0105,
+      "ask": 0.0105,
+      "price": 0.0105,
       "spread": 0,
-      "volume": 12621
+      "volume": 14673
     },
     {
       "question": "Will the highest temperature in Paris be 16°C on October 23?",
@@ -1116,11 +1198,11 @@
         16,
         16
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 3018
+      "volume": 3560
     },
     {
       "question": "Will the highest temperature in Paris be 17°C on October 23?",
@@ -1149,5 +1231,6 @@
       "volume": 1277
     }
   ],
-  "created_at": "2026-10-21T06:05:51.323Z"
+  "created_at": "2026-10-21T06:05:51.323Z",
+  "metar_max": 13
 }
