@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-24T12:00:00Z",
   "hours_at_discovery": 49.7,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6037175",
+    "question": "Will the highest temperature in New York City be between 60-61°F on October 24?",
+    "bucket_low": 60,
+    "bucket_high": 61,
+    "entry_price": 0.12,
+    "bid_at_entry": 0.09,
+    "spread": 0.03,
+    "shares": 333.33,
+    "cost": 40,
+    "p": 0.38,
+    "ev": 2.1667,
+    "edge": 0.1249,
+    "kelly": 0.0768,
+    "forecast_temp": 62.01,
+    "forecast_src": "ensemble",
+    "sigma": 1.7,
+    "opened_at": "2026-10-23T07:37:55.279Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.072
+  },
+  "positions": [
+    {
+      "market_id": "6037175",
+      "question": "Will the highest temperature in New York City be between 60-61°F on October 24?",
+      "bucket_low": 60,
+      "bucket_high": 61,
+      "entry_price": 0.12,
+      "bid_at_entry": 0.09,
+      "spread": 0.03,
+      "shares": 333.33,
+      "cost": 40,
+      "p": 0.38,
+      "ev": 2.1667,
+      "edge": 0.1249,
+      "kelly": 0.0768,
+      "forecast_temp": 62.01,
+      "forecast_src": "ensemble",
+      "sigma": 1.7,
+      "opened_at": "2026-10-23T07:37:55.279Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.072
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -384,6 +434,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-23T07:37:55.279Z",
+      "horizon": "D+1",
+      "hours_left": 28.4,
+      "ecmwf": 60,
+      "hrrr": 63,
+      "metar": null,
+      "best": 61.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 60,
+          "gfs_seamless": 63,
+          "icon_seamless": 62
+        },
+        "mean": 61.3,
+        "spread": 1.7,
+        "gap": 3,
+        "llmEnhanced": false,
+        "membersMax": [
+          59,
+          60,
+          59,
+          59,
+          58,
+          59,
+          60,
+          59,
+          60,
+          58,
+          58,
+          59,
+          61,
+          60,
+          59,
+          59,
+          59,
+          59,
+          60,
+          60,
+          58,
+          60,
+          59,
+          60,
+          59,
+          59,
+          60,
+          59,
+          60,
+          58,
+          59,
+          59,
+          60,
+          60,
+          60,
+          59,
+          59,
+          60,
+          60,
+          59,
+          59,
+          59,
+          60,
+          59,
+          59,
+          60,
+          59,
+          59,
+          58,
+          60
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -426,6 +550,14 @@
       "top2_bucket": "62-65F",
       "top2_price": 0.195,
       "top2_sum": 0.8
+    },
+    {
+      "ts": "2026-10-23T07:37:55.279Z",
+      "top_bucket": "62-63F",
+      "top_price": 0.625,
+      "top2_bucket": "62-65F",
+      "top2_price": 0.27,
+      "top2_sum": 0.895
     }
   ],
   "all_outcomes": [
@@ -436,9 +568,9 @@
         -999,
         51
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
       "volume": 115
     },
@@ -449,9 +581,9 @@
         52,
         53
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
       "volume": 115
     },
@@ -462,11 +594,11 @@
         54,
         55
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 75
+      "volume": 170
     },
     {
       "question": "Will the highest temperature in New York City be between 56-57°F on October 24?",
@@ -475,11 +607,11 @@
         56,
         57
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 84
+      "volume": 179
     },
     {
       "question": "Will the highest temperature in New York City be between 58-59°F on October 24?",
@@ -488,11 +620,11 @@
         58,
         59
       ],
-      "bid": 0.014,
-      "ask": 0.014,
-      "price": 0.014,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 177
+      "volume": 341
     },
     {
       "question": "Will the highest temperature in New York City be between 60-61°F on October 24?",
@@ -501,11 +633,11 @@
         60,
         61
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 1730
+      "volume": 1969
     },
     {
       "question": "Will the highest temperature in New York City be between 62-63°F on October 24?",
@@ -514,11 +646,11 @@
         62,
         63
       ],
-      "bid": 0.605,
-      "ask": 0.605,
-      "price": 0.605,
+      "bid": 0.625,
+      "ask": 0.625,
+      "price": 0.625,
       "spread": 0,
-      "volume": 1141
+      "volume": 1447
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on October 24?",
@@ -527,11 +659,11 @@
         64,
         65
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.27,
+      "ask": 0.27,
+      "price": 0.27,
       "spread": 0,
-      "volume": 289
+      "volume": 921
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on October 24?",
@@ -544,7 +676,7 @@
       "ask": 0.0105,
       "price": 0.0105,
       "spread": 0,
-      "volume": 140
+      "volume": 312
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on October 24?",
@@ -553,11 +685,11 @@
         68,
         69
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 271
+      "volume": 396
     },
     {
       "question": "Will the highest temperature in New York City be 70°F or higher on October 24?",
@@ -570,7 +702,7 @@
       "ask": 0.004,
       "price": 0.004,
       "spread": 0,
-      "volume": 448
+      "volume": 624
     }
   ],
   "created_at": "2026-10-22T10:16:42.285Z"

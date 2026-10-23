@@ -686,6 +686,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-23T07:39:45.137Z",
+      "horizon": "D+0",
+      "hours_left": 4.3,
+      "ecmwf": 24.8,
+      "hrrr": 22.7,
+      "metar": 18,
+      "best": 24,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.8,
+          "gfs_seamless": 22.7,
+          "icon_seamless": 24.1
+        },
+        "mean": 24,
+        "spread": 1.3,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          24,
+          24.2,
+          21.6,
+          24,
+          24.1,
+          24.4,
+          22.9,
+          23.4,
+          24.6,
+          21.9,
+          23.6,
+          24.5,
+          22.5,
+          23.7,
+          24.1,
+          24.2,
+          23.5,
+          23.6,
+          23.7,
+          24.5,
+          24.9,
+          23.9,
+          22,
+          23.6,
+          21.9,
+          24.6,
+          23.4,
+          24.2,
+          24.2,
+          24.1,
+          23.7,
+          23.4,
+          24.4,
+          23.9,
+          23.7,
+          23.8,
+          23.5,
+          24,
+          21,
+          25.1,
+          22.5,
+          22.9,
+          24.1,
+          22,
+          24.4,
+          22.8,
+          24.6,
+          24.2,
+          23.6,
+          23.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -760,6 +835,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.265,
       "top2_sum": 0.625
+    },
+    {
+      "ts": "2026-10-23T07:39:45.137Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.355,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.355,
+      "top2_sum": 0.585
     }
   ],
   "all_outcomes": [
@@ -809,9 +892,9 @@
         18,
         18
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
       "volume": 190
     },
@@ -826,7 +909,7 @@
       "ask": 0.0045,
       "price": 0.0045,
       "spread": 0,
-      "volume": 435
+      "volume": 573
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 20°C on October 23?",
@@ -835,11 +918,11 @@
         20,
         20
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 224
+      "volume": 340
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 21°C on October 23?",
@@ -848,11 +931,11 @@
         21,
         21
       ],
-      "bid": 0.0555,
-      "ask": 0.0555,
-      "price": 0.0555,
+      "bid": 0.0305,
+      "ask": 0.0305,
+      "price": 0.0305,
       "spread": 0,
-      "volume": 345
+      "volume": 753
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 22°C on October 23?",
@@ -861,11 +944,11 @@
         22,
         22
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 2392
+      "volume": 2914
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on October 23?",
@@ -874,11 +957,11 @@
         23,
         23
       ],
-      "bid": 0.36,
-      "ask": 0.36,
-      "price": 0.36,
+      "bid": 0.23,
+      "ask": 0.23,
+      "price": 0.23,
       "spread": 0,
-      "volume": 792
+      "volume": 1519
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 24°C on October 23?",
@@ -887,11 +970,11 @@
         24,
         24
       ],
-      "bid": 0.265,
-      "ask": 0.265,
-      "price": 0.265,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 1378
+      "volume": 1909
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 25°C or higher on October 23?",
@@ -900,11 +983,11 @@
         25,
         999
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.31,
+      "ask": 0.31,
+      "price": 0.31,
       "spread": 0,
-      "volume": 1514
+      "volume": 2119
     }
   ],
   "created_at": "2026-10-21T17:19:30.900Z"
