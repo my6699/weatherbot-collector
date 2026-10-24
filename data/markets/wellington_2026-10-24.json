@@ -828,6 +828,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-24T11:13:33.316Z",
+      "horizon": "D+0",
+      "hours_left": 0.8,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 15,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -918,6 +929,14 @@
       "top2_bucket": "17-18C",
       "top2_price": 0.999,
       "top2_sum": 0.9995
+    },
+    {
+      "ts": "2026-10-24T11:13:33.316Z",
+      "top_bucket": "18-18C",
+      "top_price": 0.9995,
+      "top2_bucket": "17-18C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1006,11 +1025,11 @@
         18,
         18
       ],
-      "bid": 0.999,
+      "bid": 0.9995,
       "ask": 0.999,
-      "price": 0.999,
-      "spread": 0,
-      "volume": 8129
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 8881
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on October 24?",
@@ -1023,7 +1042,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2804
+      "volume": 2845
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on October 24?",
