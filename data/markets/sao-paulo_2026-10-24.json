@@ -6,10 +6,10 @@
   "station": "SBGR",
   "event_end_date": "2026-10-24T12:00:00Z",
   "hours_at_discovery": 44.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 26,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -985,6 +985,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-24T20:55:48.193Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 25.1,
+      "hrrr": 26.4,
+      "metar": 26,
+      "best": 25.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 25.1,
+          "gfs_seamless": 26.4,
+          "icon_seamless": 26.8
+        },
+        "mean": 25.8,
+        "spread": 1,
+        "gap": 1.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          26,
+          25.8,
+          23.7,
+          23,
+          23,
+          24.8,
+          24.9,
+          25,
+          24.3,
+          23.7,
+          24.8,
+          26.3,
+          24.9,
+          23.8,
+          26,
+          21.1,
+          25.9,
+          22.6,
+          27.6,
+          23.4,
+          23.9,
+          25.6,
+          24.5,
+          25.2,
+          24,
+          23.5,
+          26,
+          24.7,
+          23.4,
+          24.2,
+          26.3,
+          23.8,
+          26.1,
+          24.4,
+          26.6,
+          23.6,
+          24.8,
+          22.8,
+          23.6,
+          26.7,
+          23.6,
+          25.8,
+          24.8,
+          25.6,
+          25.1,
+          23.5,
+          25.7,
+          23.6,
+          24.1,
+          23.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1091,6 +1165,14 @@
       "top2_bucket": "26-27C",
       "top2_price": 0.095,
       "top2_sum": 1.005
+    },
+    {
+      "ts": "2026-10-24T20:55:48.193Z",
+      "top_bucket": "26-26C",
+      "top_price": 0.995,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.0045,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -1157,7 +1239,7 @@
       "ask": 0.001,
       "price": 0.001,
       "spread": 0,
-      "volume": 1587
+      "volume": 1662
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 24°C on October 24?",
@@ -1170,7 +1252,7 @@
       "ask": 0.001,
       "price": 0.001,
       "spread": 0,
-      "volume": 6408
+      "volume": 6508
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 25°C on October 24?",
@@ -1183,7 +1265,7 @@
       "ask": 0.001,
       "price": 0.001,
       "spread": 0,
-      "volume": 4281
+      "volume": 4834
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 26°C on October 24?",
@@ -1192,11 +1274,11 @@
         26,
         26
       ],
-      "bid": 0.91,
-      "ask": 0.91,
-      "price": 0.91,
+      "bid": 0.995,
+      "ask": 0.995,
+      "price": 0.995,
       "spread": 0,
-      "volume": 2118
+      "volume": 2983
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 27°C on October 24?",
@@ -1205,11 +1287,11 @@
         27,
         27
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 2611
+      "volume": 3224
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 28°C on October 24?",
@@ -1218,11 +1300,11 @@
         28,
         28
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1757
+      "volume": 2664
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C or higher on October 24?",
@@ -1235,7 +1317,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2109
+      "volume": 2119
     }
   ],
   "created_at": "2026-10-22T15:21:20.262Z"

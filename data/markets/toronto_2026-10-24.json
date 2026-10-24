@@ -6,10 +6,10 @@
   "station": "CYYZ",
   "event_end_date": "2026-10-24T12:00:00Z",
   "hours_at_discovery": 44.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 16,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -979,6 +979,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-24T20:55:46.339Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 14.7,
+      "hrrr": 15.5,
+      "metar": 16,
+      "best": 14.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14.7,
+          "gfs_seamless": 15.5,
+          "icon_seamless": 13.9
+        },
+        "mean": 14.8,
+        "spread": 0.9,
+        "gap": 0.8,
+        "llmEnhanced": false,
+        "membersMax": [
+          15,
+          14.7,
+          14.7,
+          15.1,
+          14.5,
+          14.5,
+          15.3,
+          14.9,
+          14.9,
+          14.9,
+          15.2,
+          15.1,
+          14.5,
+          14.5,
+          14.6,
+          15,
+          14.3,
+          14.9,
+          14.3,
+          14.4,
+          14.6,
+          15.2,
+          14.7,
+          15,
+          14.7,
+          14.7,
+          14.8,
+          14.9,
+          14.9,
+          14.7,
+          13.9,
+          14.9,
+          15,
+          14.3,
+          14.7,
+          14.5,
+          15.2,
+          14.9,
+          14.7,
+          14.7,
+          14.9,
+          14.2,
+          15.1,
+          15.3,
+          15.3,
+          14.8,
+          14.7,
+          14.7,
+          14.6,
+          14.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1085,6 +1159,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.1715,
       "top2_sum": 0.8815
+    },
+    {
+      "ts": "2026-10-24T20:55:46.339Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.967,
+      "top2_bucket": "16-17C",
+      "top2_price": 0.0215,
+      "top2_sum": 0.9885
     }
   ],
   "all_outcomes": [
@@ -1160,11 +1242,11 @@
         14,
         14
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 10965
+      "volume": 12414
     },
     {
       "question": "Will the highest temperature in Toronto be 15°C on October 24?",
@@ -1173,11 +1255,11 @@
         15,
         15
       ],
-      "bid": 0.71,
-      "ask": 0.71,
-      "price": 0.71,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 3866
+      "volume": 7628
     },
     {
       "question": "Will the highest temperature in Toronto be 16°C on October 24?",
@@ -1186,11 +1268,11 @@
         16,
         16
       ],
-      "bid": 0.1715,
-      "ask": 0.1715,
-      "price": 0.1715,
+      "bid": 0.967,
+      "ask": 0.967,
+      "price": 0.967,
       "spread": 0,
-      "volume": 6516
+      "volume": 8597
     },
     {
       "question": "Will the highest temperature in Toronto be 17°C on October 24?",
@@ -1199,11 +1281,11 @@
         17,
         17
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.0215,
+      "ask": 0.0215,
+      "price": 0.0215,
       "spread": 0,
-      "volume": 3187
+      "volume": 4606
     },
     {
       "question": "Will the highest temperature in Toronto be 18°C on October 24?",
@@ -1212,11 +1294,11 @@
         18,
         18
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 1191
+      "volume": 1539
     },
     {
       "question": "Will the highest temperature in Toronto be 19°C or higher on October 24?",

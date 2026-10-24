@@ -162,6 +162,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-24T20:55:48.193Z",
+      "horizon": "D+2",
+      "hours_left": 39.1,
+      "ecmwf": 20.2,
+      "hrrr": 18.9,
+      "metar": null,
+      "best": 19.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 20.2,
+          "gfs_seamless": 18.9,
+          "icon_seamless": 17.9
+        },
+        "mean": 19.4,
+        "spread": 1.5,
+        "gap": 1.3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          19.4,
+          18.3,
+          18.9,
+          21,
+          18.1,
+          20,
+          19.6,
+          19.8,
+          19.9,
+          20.5,
+          18.9,
+          19.4,
+          20.4,
+          20.7,
+          19.8,
+          20.1,
+          20.6,
+          19.4,
+          20.6,
+          20.5,
+          18.7,
+          20.6,
+          20.4,
+          17.9,
+          20.1,
+          19.8,
+          20.9,
+          19.9,
+          19.6,
+          19.7,
+          20.1,
+          19.5,
+          19.8,
+          20,
+          19.8,
+          18.7,
+          18.7,
+          20.6,
+          19.2,
+          20,
+          19.5,
+          18,
+          19,
+          17.8,
+          19,
+          20.2,
+          17.9,
+          20.2,
+          18.8,
+          18.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -180,6 +255,14 @@
       "top2_bucket": "19-20C",
       "top2_price": 0.315,
       "top2_sum": 0.685
+    },
+    {
+      "ts": "2026-10-24T20:55:48.193Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.37,
+      "top2_bucket": "19-20C",
+      "top2_price": 0.25,
+      "top2_sum": 0.62
     }
   ],
   "all_outcomes": [
@@ -272,7 +355,7 @@
       "ask": 0.37,
       "price": 0.37,
       "spread": 0,
-      "volume": 12
+      "volume": 18
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 20°C on October 26?",
@@ -281,9 +364,9 @@
         20,
         20
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.25,
+      "ask": 0.25,
+      "price": 0.25,
       "spread": 0,
       "volume": 18
     },
@@ -320,9 +403,9 @@
         23,
         999
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
       "volume": 96
     }
