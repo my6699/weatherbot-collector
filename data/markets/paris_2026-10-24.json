@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-10-24T12:00:00Z",
   "hours_at_discovery": 49.7,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6035875",
     "question": "Will the highest temperature in Paris be 13°C on October 24?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-24T18:12:54.155Z",
       "stop_price": 0.22,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 13,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1175,6 +1176,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-24T23:20:45.443Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 13,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1297,6 +1309,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.62,
       "top2_sum": 0.984
+    },
+    {
+      "ts": "2026-10-24T23:20:45.443Z",
+      "top_bucket": "13-13C",
+      "top_price": 1,
+      "top2_bucket": "12-13C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1307,9 +1327,9 @@
         -999,
         7
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1050
     },
@@ -1320,9 +1340,9 @@
         8,
         8
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1083
     },
@@ -1333,9 +1353,9 @@
         9,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 90
     },
@@ -1346,9 +1366,9 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 263
     },
@@ -1359,9 +1379,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5733
     },
@@ -1372,11 +1392,11 @@
         12,
         12
       ],
-      "bid": 0.364,
-      "ask": 0.364,
-      "price": 0.364,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7396
+      "volume": 9891
     },
     {
       "question": "Will the highest temperature in Paris be 13°C on October 24?",
@@ -1385,11 +1405,11 @@
         13,
         13
       ],
-      "bid": 0.62,
-      "ask": 0.62,
-      "price": 0.62,
-      "spread": 0,
-      "volume": 10458
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 13387
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on October 24?",
@@ -1398,11 +1418,11 @@
         14,
         14
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 10801
+      "volume": 12924
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on October 24?",
@@ -1411,11 +1431,11 @@
         15,
         15
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8688
+      "volume": 9717
     },
     {
       "question": "Will the highest temperature in Paris be 16°C on October 24?",
@@ -1424,9 +1444,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1937
     },
@@ -1437,12 +1457,13 @@
         17,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2086
     }
   ],
-  "created_at": "2026-10-22T10:16:53.128Z"
+  "created_at": "2026-10-22T10:16:53.128Z",
+  "metar_max": 8
 }
