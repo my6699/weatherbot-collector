@@ -51,13 +51,13 @@
       "forecast_src": "ensemble",
       "sigma": 1.6,
       "opened_at": "2026-10-24T05:58:25.554Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -5.26,
+      "exit_price": 0.165,
+      "close_reason": "forecast_changed",
+      "closed_at": "2026-10-24T14:37:15.424Z",
       "stop_price": 0.136,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 2
     }
   ],
   "actual_temp": null,
@@ -588,6 +588,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-24T14:37:15.424Z",
+      "horizon": "D+1",
+      "hours_left": 21.4,
+      "ecmwf": 22.6,
+      "hrrr": 20.9,
+      "metar": null,
+      "best": 22.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 22.6,
+          "gfs_seamless": 20.9,
+          "icon_seamless": 22.4
+        },
+        "mean": 22.1,
+        "spread": 1.2,
+        "gap": 1.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          22.8,
+          24.3,
+          23.5,
+          24,
+          22.3,
+          23.5,
+          22.3,
+          24,
+          21.5,
+          22.7,
+          23.4,
+          23.4,
+          23.4,
+          23.3,
+          23.8,
+          21.7,
+          23.3,
+          22.9,
+          22.7,
+          21.4,
+          23.5,
+          22.9,
+          23.2,
+          23.7,
+          23.6,
+          22.8,
+          23.6,
+          23.5,
+          22.1,
+          24.2,
+          23.6,
+          23.9,
+          23.8,
+          21.8,
+          22.5,
+          23.7,
+          23.6,
+          23.5,
+          23,
+          23.5,
+          23.8,
+          22.1,
+          23.6,
+          22.2,
+          21.4,
+          24.5,
+          23.9,
+          23.8,
+          24.4,
+          23.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -646,6 +721,14 @@
       "top2_bucket": "22-23C",
       "top2_price": 0.38,
       "top2_sum": 0.72
+    },
+    {
+      "ts": "2026-10-24T14:37:15.424Z",
+      "top_bucket": "23-23C",
+      "top_price": 0.38,
+      "top2_bucket": "22-23C",
+      "top2_price": 0.38,
+      "top2_sum": 0.725
     }
   ],
   "all_outcomes": [
@@ -669,11 +752,11 @@
         19,
         19
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 1551
+      "volume": 1668
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 20°C on October 25?",
@@ -682,11 +765,11 @@
         20,
         20
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.0095,
+      "ask": 0.0095,
+      "price": 0.0095,
       "spread": 0,
-      "volume": 176
+      "volume": 320
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 21°C on October 25?",
@@ -695,11 +778,11 @@
         21,
         21
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.0695,
+      "ask": 0.0695,
+      "price": 0.0695,
       "spread": 0,
-      "volume": 590
+      "volume": 766
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 22°C on October 25?",
@@ -708,11 +791,11 @@
         22,
         22
       ],
-      "bid": 0.34,
-      "ask": 0.34,
-      "price": 0.34,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
-      "volume": 1102
+      "volume": 1438
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 23°C on October 25?",
@@ -725,7 +808,7 @@
       "ask": 0.38,
       "price": 0.38,
       "spread": 0,
-      "volume": 1587
+      "volume": 1820
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 24°C on October 25?",
@@ -734,11 +817,11 @@
         24,
         24
       ],
-      "bid": 0.16,
-      "ask": 0.16,
-      "price": 0.16,
+      "bid": 0.165,
+      "ask": 0.165,
+      "price": 0.165,
       "spread": 0,
-      "volume": 1499
+      "volume": 1515
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 25°C on October 25?",
@@ -747,9 +830,9 @@
         25,
         25
       ],
-      "bid": 0.031,
-      "ask": 0.031,
-      "price": 0.031,
+      "bid": 0.029,
+      "ask": 0.029,
+      "price": 0.029,
       "spread": 0,
       "volume": 319
     },
@@ -760,11 +843,11 @@
         26,
         26
       ],
-      "bid": 0.0115,
-      "ask": 0.0115,
-      "price": 0.0115,
+      "bid": 0.011,
+      "ask": 0.011,
+      "price": 0.011,
       "spread": 0,
-      "volume": 169
+      "volume": 411
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 27°C on October 25?",

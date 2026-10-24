@@ -6,7 +6,7 @@
   "station": "KMIA",
   "event_end_date": "2026-10-24T12:00:00Z",
   "hours_at_discovery": 49.7,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -900,6 +900,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-24T14:37:00.406Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 82,
+      "hrrr": 83,
+      "metar": 76,
+      "best": 82.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 82,
+          "gfs_seamless": 83,
+          "icon_seamless": 81
+        },
+        "mean": 82.1,
+        "spread": 1.1,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          82,
+          81,
+          84,
+          81,
+          81,
+          83,
+          81,
+          82,
+          81,
+          82,
+          81,
+          83,
+          82,
+          81,
+          81,
+          82,
+          83,
+          82,
+          81,
+          82,
+          82,
+          81,
+          82,
+          81,
+          83,
+          82,
+          83,
+          81,
+          82,
+          83,
+          81,
+          82,
+          81,
+          83,
+          81,
+          83,
+          80,
+          82,
+          82,
+          81,
+          82,
+          81,
+          82,
+          83,
+          81,
+          82,
+          82,
+          81,
+          82,
+          80
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -998,6 +1072,14 @@
       "top2_bucket": "82-85F",
       "top2_price": 0.6,
       "top2_sum": 0.96
+    },
+    {
+      "ts": "2026-10-24T14:37:00.406Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.525,
+      "top2_bucket": "82-85F",
+      "top2_price": 0.525,
+      "top2_sum": 0.985
     }
   ],
   "all_outcomes": [
@@ -1073,11 +1155,11 @@
         80,
         81
       ],
-      "bid": 0.0375,
-      "ask": 0.0375,
-      "price": 0.0375,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 1862
+      "volume": 1972
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on October 24?",
@@ -1086,11 +1168,11 @@
         82,
         83
       ],
-      "bid": 0.36,
-      "ask": 0.36,
-      "price": 0.36,
+      "bid": 0.46,
+      "ask": 0.46,
+      "price": 0.46,
       "spread": 0,
-      "volume": 2175
+      "volume": 2343
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on October 24?",
@@ -1099,11 +1181,11 @@
         84,
         85
       ],
-      "bid": 0.6,
-      "ask": 0.6,
-      "price": 0.6,
+      "bid": 0.525,
+      "ask": 0.525,
+      "price": 0.525,
       "spread": 0,
-      "volume": 6066
+      "volume": 6658
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on October 24?",
@@ -1112,11 +1194,11 @@
         86,
         87
       ],
-      "bid": 0.0205,
-      "ask": 0.0205,
-      "price": 0.0205,
+      "bid": 0.009,
+      "ask": 0.009,
+      "price": 0.009,
       "spread": 0,
-      "volume": 3110
+      "volume": 3246
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on October 24?",

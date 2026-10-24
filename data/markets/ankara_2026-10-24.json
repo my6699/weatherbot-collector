@@ -6,10 +6,10 @@
   "station": "LTAC",
   "event_end_date": "2026-10-24T12:00:00Z",
   "hours_at_discovery": 49.7,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 20,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -908,6 +908,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-24T14:37:13.768Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 20.2,
+      "hrrr": 19.3,
+      "metar": 18,
+      "best": 19.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 20.2,
+          "gfs_seamless": 19.3,
+          "icon_seamless": 18.4
+        },
+        "mean": 19.6,
+        "spread": 1.2,
+        "gap": 0.9,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          21.1,
+          20,
+          20.4,
+          21,
+          21.4,
+          20.3,
+          21.1,
+          20.8,
+          20.9,
+          21.5,
+          21,
+          20.7,
+          21.1,
+          20.8,
+          20.7,
+          20.6,
+          20.6,
+          20.1,
+          21.2,
+          20.7,
+          21,
+          20.1,
+          20.9,
+          20.9,
+          20.7,
+          21.1,
+          21.3,
+          20.7,
+          20.7,
+          20.8,
+          21,
+          20.6,
+          19.8,
+          20.6,
+          20.5,
+          20.1,
+          20.9,
+          21.2,
+          21.2,
+          20.6,
+          20.3,
+          20.8,
+          21.1,
+          21.2,
+          20.4,
+          20.7,
+          20,
+          21,
+          21,
+          21.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1006,6 +1081,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.53,
       "top2_sum": 0.96
+    },
+    {
+      "ts": "2026-10-24T14:37:13.768Z",
+      "top_bucket": "20-20C",
+      "top_price": 0.996,
+      "top2_bucket": "20-21C",
+      "top2_price": 0.0025,
+      "top2_sum": 0.9985
     }
   ],
   "all_outcomes": [
@@ -1072,7 +1155,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1127
+      "volume": 1800
     },
     {
       "question": "Will the highest temperature in Ankara be 19°C on October 24?",
@@ -1085,7 +1168,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2368
+      "volume": 3108
     },
     {
       "question": "Will the highest temperature in Ankara be 20°C on October 24?",
@@ -1094,11 +1177,11 @@
         20,
         20
       ],
-      "bid": 0.43,
-      "ask": 0.43,
-      "price": 0.43,
+      "bid": 0.996,
+      "ask": 0.996,
+      "price": 0.996,
       "spread": 0,
-      "volume": 7607
+      "volume": 9016
     },
     {
       "question": "Will the highest temperature in Ankara be 21°C on October 24?",
@@ -1107,11 +1190,11 @@
         21,
         21
       ],
-      "bid": 0.53,
-      "ask": 0.53,
-      "price": 0.53,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 5376
+      "volume": 5928
     },
     {
       "question": "Will the highest temperature in Ankara be 22°C on October 24?",
@@ -1120,11 +1203,11 @@
         22,
         22
       ],
-      "bid": 0.054,
-      "ask": 0.054,
-      "price": 0.054,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1766
+      "volume": 2691
     },
     {
       "question": "Will the highest temperature in Ankara be 23°C on October 24?",
@@ -1133,11 +1216,11 @@
         23,
         23
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 852
+      "volume": 979
     },
     {
       "question": "Will the highest temperature in Ankara be 24°C or higher on October 24?",
@@ -1153,5 +1236,6 @@
       "volume": 644
     }
   ],
-  "created_at": "2026-10-22T10:16:57.356Z"
+  "created_at": "2026-10-22T10:16:57.356Z",
+  "metar_max": 10
 }

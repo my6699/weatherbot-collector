@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-10-24T12:00:00Z",
   "hours_at_discovery": 49.7,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -906,6 +906,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-24T14:36:59.268Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 67,
+      "hrrr": 71,
+      "metar": 54,
+      "best": 68.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 67,
+          "gfs_seamless": 71,
+          "icon_seamless": 69
+        },
+        "mean": 68.6,
+        "spread": 2.4,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          67,
+          68,
+          69,
+          68,
+          67,
+          67,
+          68,
+          68,
+          67,
+          68,
+          69,
+          68,
+          68,
+          68,
+          69,
+          69,
+          69,
+          68,
+          68,
+          69,
+          69,
+          66,
+          67,
+          67,
+          69,
+          68,
+          68,
+          69,
+          68,
+          69,
+          67,
+          68,
+          68,
+          67,
+          69,
+          68,
+          67,
+          68,
+          68,
+          65,
+          69,
+          68,
+          69,
+          68,
+          68,
+          69,
+          68,
+          69,
+          67,
+          68
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1004,6 +1079,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.27,
       "top2_sum": 0.895
+    },
+    {
+      "ts": "2026-10-24T14:36:59.268Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.68,
+      "top2_bucket": "68-71F",
+      "top2_price": 0.68,
+      "top2_sum": 0.94
     }
   ],
   "all_outcomes": [
@@ -1044,7 +1127,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 475
+      "volume": 1023
     },
     {
       "question": "Will the highest temperature in Chicago be between 66-67°F on October 24?",
@@ -1053,11 +1136,11 @@
         66,
         67
       ],
-      "bid": 0.014,
-      "ask": 0.014,
-      "price": 0.014,
+      "bid": 0.0115,
+      "ask": 0.0115,
+      "price": 0.0115,
       "spread": 0,
-      "volume": 904
+      "volume": 912
     },
     {
       "question": "Will the highest temperature in Chicago be between 68-69°F on October 24?",
@@ -1066,11 +1149,11 @@
         68,
         69
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.26,
+      "ask": 0.26,
+      "price": 0.26,
       "spread": 0,
-      "volume": 2127
+      "volume": 2212
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on October 24?",
@@ -1079,11 +1162,11 @@
         70,
         71
       ],
-      "bid": 0.625,
-      "ask": 0.625,
-      "price": 0.625,
+      "bid": 0.68,
+      "ask": 0.68,
+      "price": 0.68,
       "spread": 0,
-      "volume": 4354
+      "volume": 4389
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on October 24?",
@@ -1092,11 +1175,11 @@
         72,
         73
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 2149
+      "volume": 2212
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on October 24?",
@@ -1105,11 +1188,11 @@
         74,
         75
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 886
+      "volume": 894
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on October 24?",
@@ -1118,11 +1201,11 @@
         76,
         77
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 911
+      "volume": 1261
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on October 24?",
