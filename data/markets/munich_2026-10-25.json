@@ -6,10 +6,10 @@
   "station": "EDDM",
   "event_end_date": "2026-10-25T12:00:00Z",
   "hours_at_discovery": 52.3,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 14,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1054,6 +1054,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-25T16:30:57.927Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 12.5,
+      "hrrr": 12.5,
+      "metar": 8,
+      "best": 12.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 12.5,
+          "gfs_seamless": 12.5,
+          "icon_seamless": 13.2
+        },
+        "mean": 12.6,
+        "spread": 0.6,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          11.5,
+          12.1,
+          11.1,
+          12.2,
+          10.5,
+          12,
+          12.1,
+          12.7,
+          12.5,
+          12.4,
+          11.9,
+          12.4,
+          12,
+          12.4,
+          13.1,
+          12.3,
+          12.2,
+          12.8,
+          12.1,
+          13,
+          13.7,
+          11.9,
+          12.1,
+          12.4,
+          12.3,
+          11.8,
+          12.3,
+          12.3,
+          12.1,
+          12.9,
+          13.1,
+          12.7,
+          11.4,
+          12.6,
+          11.4,
+          12.2,
+          12.4,
+          11.7,
+          12.6,
+          12.1,
+          13.6,
+          12.1,
+          12.2,
+          11.6,
+          12.8,
+          12.1,
+          13.2,
+          12.4,
+          12.7,
+          13.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1168,6 +1242,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.605,
       "top2_sum": 0.855
+    },
+    {
+      "ts": "2026-10-25T16:30:57.927Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.9995,
+      "top2_bucket": "13-14C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1208,7 +1290,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1790
+      "volume": 1793
     },
     {
       "question": "Will the highest temperature in Munich be 10°C on October 25?",
@@ -1217,11 +1299,11 @@
         10,
         10
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2737
+      "volume": 4372
     },
     {
       "question": "Will the highest temperature in Munich be 11°C on October 25?",
@@ -1230,11 +1312,11 @@
         11,
         11
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4044
+      "volume": 5157
     },
     {
       "question": "Will the highest temperature in Munich be 12°C on October 25?",
@@ -1243,11 +1325,11 @@
         12,
         12
       ],
-      "bid": 0.25,
-      "ask": 0.25,
-      "price": 0.25,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6180
+      "volume": 7909
     },
     {
       "question": "Will the highest temperature in Munich be 13°C on October 25?",
@@ -1256,11 +1338,11 @@
         13,
         13
       ],
-      "bid": 0.605,
-      "ask": 0.605,
-      "price": 0.605,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5970
+      "volume": 8942
     },
     {
       "question": "Will the highest temperature in Munich be 14°C on October 25?",
@@ -1269,11 +1351,11 @@
         14,
         14
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
-      "spread": 0,
-      "volume": 6579
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 10289
     },
     {
       "question": "Will the highest temperature in Munich be 15°C on October 25?",
@@ -1282,11 +1364,11 @@
         15,
         15
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4336
+      "volume": 6723
     },
     {
       "question": "Will the highest temperature in Munich be 16°C on October 25?",
@@ -1295,11 +1377,11 @@
         16,
         16
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2841
+      "volume": 4214
     },
     {
       "question": "Will the highest temperature in Munich be 17°C or higher on October 25?",
@@ -1315,5 +1397,6 @@
       "volume": 682
     }
   ],
-  "created_at": "2026-10-23T07:39:16.721Z"
+  "created_at": "2026-10-23T07:39:16.721Z",
+  "metar_max": 5
 }
