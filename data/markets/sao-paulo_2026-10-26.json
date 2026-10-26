@@ -6,10 +6,10 @@
   "station": "SBGR",
   "event_end_date": "2026-10-26T12:00:00Z",
   "hours_at_discovery": 45.4,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 18,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -980,6 +980,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-26T19:22:59.627Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 17.5,
+      "hrrr": 16.5,
+      "metar": 16,
+      "best": 17.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 17.5,
+          "gfs_seamless": 16.5,
+          "icon_seamless": 18.9
+        },
+        "mean": 17.5,
+        "spread": 1.4,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          17,
+          18.1,
+          17.6,
+          18.9,
+          17.7,
+          17.5,
+          17.7,
+          17.5,
+          17.3,
+          18.1,
+          17.1,
+          18.2,
+          18.1,
+          17.4,
+          17.4,
+          17.9,
+          16.8,
+          17.1,
+          16.8,
+          16.4,
+          18.8,
+          20.5,
+          17.2,
+          17.1,
+          17.5,
+          17.3,
+          17.3,
+          18.7,
+          18.4,
+          16.5,
+          17.7,
+          17.9,
+          18.1,
+          17.2,
+          18.8,
+          17.8,
+          15.8,
+          19.8,
+          16.2,
+          17.9,
+          18.3,
+          17.2,
+          19.1,
+          16.6,
+          17.7,
+          17.3,
+          18.9,
+          17.5,
+          16.6,
+          16.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1086,6 +1161,14 @@
       "top2_bucket": "18-19C",
       "top2_price": 0.325,
       "top2_sum": 0.76
+    },
+    {
+      "ts": "2026-10-26T19:22:59.627Z",
+      "top_bucket": "18-18C",
+      "top_price": 0.9965,
+      "top2_bucket": "18-19C",
+      "top2_price": 0.0015,
+      "top2_sum": 0.998
     }
   ],
   "all_outcomes": [
@@ -1148,11 +1231,11 @@
         17,
         17
       ],
-      "bid": 0.1665,
-      "ask": 0.1665,
-      "price": 0.1665,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1297
+      "volume": 2152
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 18°C on October 26?",
@@ -1161,11 +1244,11 @@
         18,
         18
       ],
-      "bid": 0.435,
-      "ask": 0.435,
-      "price": 0.435,
+      "bid": 0.9965,
+      "ask": 0.9965,
+      "price": 0.9965,
       "spread": 0,
-      "volume": 2877
+      "volume": 5846
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 19°C on October 26?",
@@ -1174,11 +1257,11 @@
         19,
         19
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 3045
+      "volume": 4683
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 20°C on October 26?",
@@ -1187,11 +1270,11 @@
         20,
         20
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2137
+      "volume": 4013
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 21°C on October 26?",
@@ -1200,11 +1283,11 @@
         21,
         21
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 830
+      "volume": 1934
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 22°C on October 26?",
