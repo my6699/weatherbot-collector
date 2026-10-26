@@ -6,10 +6,10 @@
   "station": "LFPG",
   "event_end_date": "2026-10-26T12:00:00Z",
   "hours_at_discovery": 54,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 14,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1209,6 +1209,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-26T23:11:24.754Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 14,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -1339,6 +1350,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.35,
       "top2_sum": 0.95
+    },
+    {
+      "ts": "2026-10-26T23:11:24.754Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.9995,
+      "top2_bucket": "13-14C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1427,11 +1446,11 @@
         13,
         13
       ],
-      "bid": 0.056,
-      "ask": 0.056,
-      "price": 0.056,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 8668
+      "volume": 10191
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on October 26?",
@@ -1440,11 +1459,11 @@
         14,
         14
       ],
-      "bid": 0.6,
-      "ask": 0.6,
-      "price": 0.6,
-      "spread": 0,
-      "volume": 8894
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 13506
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on October 26?",
@@ -1453,11 +1472,11 @@
         15,
         15
       ],
-      "bid": 0.35,
-      "ask": 0.35,
-      "price": 0.35,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 9589
+      "volume": 13116
     },
     {
       "question": "Will the highest temperature in Paris be 16°C on October 26?",
@@ -1466,11 +1485,11 @@
         16,
         16
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 8504
+      "volume": 9725
     },
     {
       "question": "Will the highest temperature in Paris be 17°C or higher on October 26?",
@@ -1486,5 +1505,6 @@
       "volume": 5306
     }
   ],
-  "created_at": "2026-10-24T05:58:21.446Z"
+  "created_at": "2026-10-24T05:58:21.446Z",
+  "metar_max": 10
 }

@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-10-26T12:00:00Z",
   "hours_at_discovery": 48.8,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6111401",
     "question": "Will the highest temperature in New York City be between 68-69°F on October 26?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-26T01:16:32.987Z",
       "stop_price": 0.15,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1175,6 +1176,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-26T23:11:06.169Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 70,
+      "hrrr": 73,
+      "metar": 70,
+      "best": 71.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 70,
+          "gfs_seamless": 73,
+          "icon_seamless": 71
+        },
+        "mean": 71.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          67,
+          70,
+          70,
+          68,
+          68,
+          70,
+          69,
+          69,
+          70,
+          69,
+          69,
+          71,
+          70,
+          71,
+          70,
+          68,
+          71,
+          70,
+          69,
+          70,
+          67,
+          70,
+          70,
+          70,
+          69,
+          70,
+          70,
+          71,
+          70,
+          69,
+          70,
+          70,
+          71,
+          69,
+          70,
+          69,
+          69,
+          69,
+          70,
+          70,
+          71,
+          69,
+          71,
+          69,
+          68,
+          70,
+          68,
+          71,
+          69,
+          71
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1297,6 +1373,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.665,
       "top2_sum": 0.96
+    },
+    {
+      "ts": "2026-10-26T23:11:06.169Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.9945,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.002,
+      "top2_sum": 0.9965
     }
   ],
   "all_outcomes": [
@@ -1372,11 +1456,11 @@
         68,
         69
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 8530
+      "volume": 9624
     },
     {
       "question": "Will the highest temperature in New York City be between 70-71°F on October 26?",
@@ -1385,11 +1469,11 @@
         70,
         71
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.9945,
+      "ask": 0.9945,
+      "price": 0.9945,
       "spread": 0,
-      "volume": 6800
+      "volume": 9044
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on October 26?",
@@ -1398,11 +1482,11 @@
         72,
         73
       ],
-      "bid": 0.665,
-      "ask": 0.665,
-      "price": 0.665,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 6046
+      "volume": 7792
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on October 26?",
@@ -1411,11 +1495,11 @@
         74,
         75
       ],
-      "bid": 0.0165,
-      "ask": 0.0165,
-      "price": 0.0165,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 2274
+      "volume": 4224
     },
     {
       "question": "Will the highest temperature in New York City be between 76-77°F on October 26?",
@@ -1424,11 +1508,11 @@
         76,
         77
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1012
+      "volume": 1022
     },
     {
       "question": "Will the highest temperature in New York City be 78°F or higher on October 26?",
