@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.096
+      "stop_price": 0.096,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -434,6 +435,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-27T07:58:02.933Z",
+      "horizon": "D+1",
+      "hours_left": 28,
+      "ecmwf": 11.2,
+      "hrrr": 11.4,
+      "metar": null,
+      "best": 11.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 11.2,
+          "gfs_seamless": 11.4,
+          "icon_seamless": 11.8
+        },
+        "mean": 11.4,
+        "spread": 0.4,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          11.8,
+          11.3,
+          11.8,
+          10.9,
+          11.4,
+          11.2,
+          11.3,
+          10.8,
+          11.2,
+          11.1,
+          11.4,
+          11.5,
+          11.7,
+          11.8,
+          10.3,
+          10.5,
+          11.1,
+          11.1,
+          11.3,
+          11.6,
+          11.4,
+          11.4,
+          11.9,
+          11.5,
+          11.7,
+          10.8,
+          11,
+          11.5,
+          10.7,
+          11.6,
+          11.2,
+          10.7,
+          11.1,
+          11.5,
+          10.1,
+          12.3,
+          10.9,
+          11.2,
+          11.6,
+          11.8,
+          11.9,
+          12.2,
+          11.1,
+          11.9,
+          12.3,
+          11.5,
+          11.2,
+          10.9,
+          11.1,
+          11.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -476,6 +551,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.245,
       "top2_sum": 0.84
+    },
+    {
+      "ts": "2026-10-27T07:58:02.933Z",
+      "top_bucket": "12-12C",
+      "top_price": 0.59,
+      "top2_bucket": "12-13C",
+      "top2_price": 0.255,
+      "top2_sum": 0.845
     }
   ],
   "all_outcomes": [
@@ -529,7 +612,7 @@
       "ask": 0.0045,
       "price": 0.0045,
       "spread": 0,
-      "volume": 133
+      "volume": 276
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 9°C on October 28?",
@@ -538,11 +621,11 @@
         9,
         9
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 313
+      "volume": 502
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 10°C on October 28?",
@@ -551,11 +634,11 @@
         10,
         10
       ],
-      "bid": 0.016,
-      "ask": 0.016,
-      "price": 0.016,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 46
+      "volume": 617
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 11°C on October 28?",
@@ -564,11 +647,11 @@
         11,
         11
       ],
-      "bid": 0.13,
-      "ask": 0.13,
-      "price": 0.13,
+      "bid": 0.14,
+      "ask": 0.14,
+      "price": 0.14,
       "spread": 0,
-      "volume": 585
+      "volume": 1719
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 12°C on October 28?",
@@ -577,11 +660,11 @@
         12,
         12
       ],
-      "bid": 0.595,
-      "ask": 0.595,
-      "price": 0.595,
+      "bid": 0.59,
+      "ask": 0.59,
+      "price": 0.59,
       "spread": 0,
-      "volume": 444
+      "volume": 1293
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 13°C on October 28?",
@@ -590,11 +673,11 @@
         13,
         13
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.255,
+      "ask": 0.255,
+      "price": 0.255,
       "spread": 0,
-      "volume": 1591
+      "volume": 2962
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 14°C on October 28?",
@@ -603,11 +686,11 @@
         14,
         14
       ],
-      "bid": 0.022,
-      "ask": 0.022,
-      "price": 0.022,
+      "bid": 0.0095,
+      "ask": 0.0095,
+      "price": 0.0095,
       "spread": 0,
-      "volume": 23
+      "volume": 481
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 15°C or higher on October 28?",
@@ -616,11 +699,11 @@
         15,
         999
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 38
+      "volume": 654
     }
   ],
   "created_at": "2026-10-26T06:21:09.659Z"
