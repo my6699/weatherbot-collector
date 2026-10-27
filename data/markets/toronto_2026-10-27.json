@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-10-27T12:00:00Z",
   "hours_at_discovery": 43.5,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -756,6 +756,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-27T14:36:18.295Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 9.9,
+      "hrrr": 10.3,
+      "metar": 7,
+      "best": 9.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 9.9,
+          "gfs_seamless": 10.3,
+          "icon_seamless": 9.3
+        },
+        "mean": 9.9,
+        "spread": 0.6,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          9.4,
+          9.9,
+          9.2,
+          10,
+          9.8,
+          9.7,
+          9.8,
+          10.4,
+          9.8,
+          10.1,
+          10.1,
+          10.1,
+          9.8,
+          9.9,
+          9.6,
+          10.3,
+          9.7,
+          9.5,
+          9.7,
+          9.3,
+          9.5,
+          10.9,
+          10.1,
+          9.5,
+          9.7,
+          9.9,
+          9.9,
+          9.6,
+          9.6,
+          10.4,
+          9,
+          10,
+          10.1,
+          9.8,
+          10.6,
+          9.9,
+          10.2,
+          10.1,
+          9.9,
+          9.9,
+          10.4,
+          9.7,
+          10.2,
+          10.6,
+          9.9,
+          9.6,
+          9.4,
+          10,
+          9.9,
+          9.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -838,6 +912,14 @@
       "top2_bucket": "9-10C",
       "top2_price": 0.55,
       "top2_sum": 0.915
+    },
+    {
+      "ts": "2026-10-27T14:36:18.295Z",
+      "top_bucket": "10-10C",
+      "top_price": 0.685,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.186,
+      "top2_sum": 0.871
     }
   ],
   "all_outcomes": [
@@ -900,11 +982,11 @@
         8,
         8
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 793
+      "volume": 916
     },
     {
       "question": "Will the highest temperature in Toronto be 9°C on October 27?",
@@ -913,11 +995,11 @@
         9,
         9
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.125,
+      "ask": 0.125,
+      "price": 0.125,
       "spread": 0,
-      "volume": 2376
+      "volume": 2495
     },
     {
       "question": "Will the highest temperature in Toronto be 10°C on October 27?",
@@ -926,11 +1008,11 @@
         10,
         10
       ],
-      "bid": 0.55,
-      "ask": 0.55,
-      "price": 0.55,
+      "bid": 0.685,
+      "ask": 0.685,
+      "price": 0.685,
       "spread": 0,
-      "volume": 2198
+      "volume": 2399
     },
     {
       "question": "Will the highest temperature in Toronto be 11°C on October 27?",
@@ -939,11 +1021,11 @@
         11,
         11
       ],
-      "bid": 0.086,
-      "ask": 0.086,
-      "price": 0.086,
+      "bid": 0.186,
+      "ask": 0.186,
+      "price": 0.186,
       "spread": 0,
-      "volume": 1268
+      "volume": 1680
     },
     {
       "question": "Will the highest temperature in Toronto be 12°C on October 27?",
@@ -952,11 +1034,11 @@
         12,
         12
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
-      "volume": 733
+      "volume": 930
     },
     {
       "question": "Will the highest temperature in Toronto be 13°C on October 27?",
@@ -965,11 +1047,11 @@
         13,
         13
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 727
+      "volume": 972
     },
     {
       "question": "Will the highest temperature in Toronto be 14°C or higher on October 27?",
@@ -978,11 +1060,11 @@
         14,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 333
+      "volume": 619
     }
   ],
   "created_at": "2026-10-25T16:32:48.419Z"

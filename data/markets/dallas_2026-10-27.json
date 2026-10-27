@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-10-27T12:00:00Z",
   "hours_at_discovery": 48.3,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -832,6 +832,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-27T14:35:53.380Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 83,
+      "hrrr": 83,
+      "metar": 69,
+      "best": 82.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 83,
+          "gfs_seamless": 83,
+          "icon_seamless": 82
+        },
+        "mean": 82.8,
+        "spread": 0.8,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          83,
+          83,
+          82,
+          83,
+          83,
+          83,
+          84,
+          83,
+          83,
+          83,
+          81,
+          82,
+          81,
+          83,
+          84,
+          84,
+          82,
+          84,
+          83,
+          82,
+          83,
+          82,
+          80,
+          84,
+          83,
+          84,
+          83,
+          84,
+          82,
+          82,
+          81,
+          81,
+          82,
+          81,
+          83,
+          84,
+          83,
+          83,
+          84,
+          82,
+          84,
+          81,
+          83,
+          83,
+          84,
+          83,
+          84,
+          82,
+          83,
+          83
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -922,6 +996,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.465,
       "top2_sum": 0.84
+    },
+    {
+      "ts": "2026-10-27T14:35:53.380Z",
+      "top_bucket": "82-83F",
+      "top_price": 0.685,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.685,
+      "top2_sum": 0.915
     }
   ],
   "all_outcomes": [
@@ -971,11 +1053,11 @@
         76,
         77
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 2912
+      "volume": 2973
     },
     {
       "question": "Will the highest temperature in Dallas be between 78-79°F on October 27?",
@@ -984,11 +1066,11 @@
         78,
         79
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.0115,
+      "ask": 0.0115,
+      "price": 0.0115,
       "spread": 0,
-      "volume": 6312
+      "volume": 6884
     },
     {
       "question": "Will the highest temperature in Dallas be between 80-81°F on October 27?",
@@ -997,11 +1079,11 @@
         80,
         81
       ],
-      "bid": 0.375,
-      "ask": 0.375,
-      "price": 0.375,
+      "bid": 0.23,
+      "ask": 0.23,
+      "price": 0.23,
       "spread": 0,
-      "volume": 5350
+      "volume": 6087
     },
     {
       "question": "Will the highest temperature in Dallas be between 82-83°F on October 27?",
@@ -1010,11 +1092,11 @@
         82,
         83
       ],
-      "bid": 0.465,
-      "ask": 0.465,
-      "price": 0.465,
+      "bid": 0.685,
+      "ask": 0.685,
+      "price": 0.685,
       "spread": 0,
-      "volume": 5858
+      "volume": 6407
     },
     {
       "question": "Will the highest temperature in Dallas be between 84-85°F on October 27?",
@@ -1023,11 +1105,11 @@
         84,
         85
       ],
-      "bid": 0.0835,
-      "ask": 0.0835,
-      "price": 0.0835,
+      "bid": 0.0725,
+      "ask": 0.0725,
+      "price": 0.0725,
       "spread": 0,
-      "volume": 4887
+      "volume": 5486
     },
     {
       "question": "Will the highest temperature in Dallas be between 86-87°F on October 27?",
@@ -1036,11 +1118,11 @@
         86,
         87
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 640
+      "volume": 2189
     },
     {
       "question": "Will the highest temperature in Dallas be between 88-89°F on October 27?",

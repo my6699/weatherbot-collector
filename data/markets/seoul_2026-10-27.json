@@ -6,10 +6,10 @@
   "station": "RKSI",
   "event_end_date": "2026-10-27T12:00:00Z",
   "hours_at_discovery": 53.8,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 16,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -906,6 +906,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-27T14:36:02.744Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 15.8,
+      "hrrr": 16.4,
+      "metar": 9,
+      "best": 16,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 15.8,
+          "gfs_seamless": 16.4,
+          "icon_seamless": 16
+        },
+        "mean": 16,
+        "spread": 0.4,
+        "gap": 0.6,
+        "llmEnhanced": false,
+        "membersMax": [
+          15.4,
+          15.9,
+          15.7,
+          15.1,
+          15.4,
+          15.6,
+          15.4,
+          15.6,
+          15.8,
+          15.7,
+          15.8,
+          15.6,
+          15.9,
+          15.5,
+          15.8,
+          15.8,
+          15.5,
+          15.9,
+          15.3,
+          15.5,
+          15.6,
+          15.5,
+          15.6,
+          15.7,
+          15.9,
+          15.7,
+          15.7,
+          15.7,
+          15.6,
+          15.9,
+          15.7,
+          15.7,
+          16,
+          15.8,
+          15.7,
+          15.7,
+          15.4,
+          15.5,
+          15.7,
+          15.5,
+          15.7,
+          15.5,
+          15.7,
+          15.8,
+          15.3,
+          15.8,
+          15.5,
+          15.6,
+          15.5,
+          15.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1004,6 +1078,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.0015,
       "top2_sum": 0.999
+    },
+    {
+      "ts": "2026-10-27T14:36:02.744Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.9995,
+      "top2_bucket": "15-16C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -1083,7 +1165,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 24619
+      "volume": 25181
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 16°C on October 27?",
@@ -1092,11 +1174,11 @@
         16,
         16
       ],
-      "bid": 0.9975,
-      "ask": 0.9975,
-      "price": 0.9975,
-      "spread": 0,
-      "volume": 18594
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 21268
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 17°C on October 27?",
@@ -1105,11 +1187,11 @@
         17,
         17
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 17279
+      "volume": 17574
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 18°C on October 27?",
@@ -1122,7 +1204,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7921
+      "volume": 7936
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 19°C on October 27?",
@@ -1151,5 +1233,6 @@
       "volume": 1877
     }
   ],
-  "created_at": "2026-10-25T06:13:24.420Z"
+  "created_at": "2026-10-25T06:13:24.420Z",
+  "metar_max": 15
 }
