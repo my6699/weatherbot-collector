@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-10-27T12:00:00Z",
   "hours_at_discovery": 48.3,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6181518",
     "question": "Will the highest temperature in New York City be between 58-59°F on October 27?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-10-26T13:18:09.564Z",
       "stop_price": 0.168,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 62.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -956,6 +957,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-27T20:07:06.860Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 63,
+      "hrrr": 62,
+      "metar": 61,
+      "best": 62.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 63,
+          "gfs_seamless": 62,
+          "icon_seamless": 62
+        },
+        "mean": 62.5,
+        "spread": 0.5,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          60,
+          63,
+          61,
+          61,
+          61,
+          62,
+          62,
+          61,
+          61,
+          61,
+          61,
+          63,
+          62,
+          62,
+          62,
+          60,
+          61,
+          62,
+          61,
+          62,
+          61,
+          62,
+          62,
+          62,
+          61,
+          61,
+          63,
+          62,
+          61,
+          61,
+          62,
+          63,
+          62,
+          61,
+          62,
+          61,
+          62,
+          62,
+          62,
+          61,
+          62,
+          62,
+          62,
+          61,
+          61,
+          62,
+          62,
+          62,
+          62,
+          62
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -1054,6 +1129,14 @@
       "top2_bucket": "62-65F",
       "top2_price": 0.069,
       "top2_sum": 0.999
+    },
+    {
+      "ts": "2026-10-27T20:07:06.860Z",
+      "top_bucket": "62-63F",
+      "top_price": 0.985,
+      "top2_bucket": "62-65F",
+      "top2_price": 0.014,
+      "top2_sum": 0.999
     }
   ],
   "all_outcomes": [
@@ -1120,7 +1203,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3478
+      "volume": 3480
     },
     {
       "question": "Will the highest temperature in New York City be between 60-61°F on October 27?",
@@ -1129,11 +1212,11 @@
         60,
         61
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 10370
+      "volume": 11816
     },
     {
       "question": "Will the highest temperature in New York City be between 62-63°F on October 27?",
@@ -1142,11 +1225,11 @@
         62,
         63
       ],
-      "bid": 0.93,
-      "ask": 0.93,
-      "price": 0.93,
+      "bid": 0.985,
+      "ask": 0.985,
+      "price": 0.985,
       "spread": 0,
-      "volume": 10617
+      "volume": 12863
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on October 27?",
@@ -1155,11 +1238,11 @@
         64,
         65
       ],
-      "bid": 0.069,
-      "ask": 0.069,
-      "price": 0.069,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
-      "volume": 7606
+      "volume": 8638
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on October 27?",
@@ -1168,11 +1251,11 @@
         66,
         67
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1231
+      "volume": 2535
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on October 27?",
