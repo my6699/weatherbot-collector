@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-10-28T12:00:00Z",
   "hours_at_discovery": 46.7,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6247265",
     "question": "Will the highest temperature in Seattle be between 50-51°F on October 28?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-10-28T13:07:46.102Z",
       "stop_price": 0.072,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 54.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -886,6 +887,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-28T23:16:37.577Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 53,
+      "hrrr": 51,
+      "metar": 54,
+      "best": 52.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 53,
+          "gfs_seamless": 51,
+          "icon_seamless": 53
+        },
+        "mean": 52.4,
+        "spread": 1.4,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          52,
+          54,
+          53,
+          53,
+          52,
+          50,
+          51,
+          51,
+          52,
+          55,
+          52,
+          51,
+          52,
+          54,
+          53,
+          54,
+          53,
+          54,
+          53,
+          53,
+          53,
+          54,
+          52,
+          52,
+          52,
+          51,
+          51,
+          52,
+          53,
+          53,
+          53,
+          53,
+          53,
+          51,
+          54,
+          52,
+          53,
+          53,
+          52,
+          53,
+          53,
+          52,
+          54,
+          53,
+          51,
+          53,
+          53,
+          52,
+          53,
+          53
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -976,6 +1051,14 @@
       "top2_bucket": "52-55F",
       "top2_price": 0.32,
       "top2_sum": 0.88
+    },
+    {
+      "ts": "2026-10-28T23:16:37.577Z",
+      "top_bucket": "54-55F",
+      "top_price": 0.9815,
+      "top2_bucket": "54-57F",
+      "top2_price": 0.013,
+      "top2_sum": 0.9945
     }
   ],
   "all_outcomes": [
@@ -1025,11 +1108,11 @@
         48,
         49
       ],
-      "bid": 0.014,
-      "ask": 0.014,
-      "price": 0.014,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 624
+      "volume": 901
     },
     {
       "question": "Will the highest temperature in Seattle be between 50-51°F on October 28?",
@@ -1038,11 +1121,11 @@
         50,
         51
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2030
+      "volume": 2381
     },
     {
       "question": "Will the highest temperature in Seattle be between 52-53°F on October 28?",
@@ -1051,11 +1134,11 @@
         52,
         53
       ],
-      "bid": 0.56,
-      "ask": 0.56,
-      "price": 0.56,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2760
+      "volume": 5091
     },
     {
       "question": "Will the highest temperature in Seattle be between 54-55°F on October 28?",
@@ -1064,11 +1147,11 @@
         54,
         55
       ],
-      "bid": 0.32,
-      "ask": 0.32,
-      "price": 0.32,
+      "bid": 0.9815,
+      "ask": 0.9815,
+      "price": 0.9815,
       "spread": 0,
-      "volume": 3135
+      "volume": 5501
     },
     {
       "question": "Will the highest temperature in Seattle be between 56-57°F on October 28?",
@@ -1077,11 +1160,11 @@
         56,
         57
       ],
-      "bid": 0.034,
-      "ask": 0.034,
-      "price": 0.034,
+      "bid": 0.013,
+      "ask": 0.013,
+      "price": 0.013,
       "spread": 0,
-      "volume": 1216
+      "volume": 2437
     },
     {
       "question": "Will the highest temperature in Seattle be between 58-59°F on October 28?",
@@ -1090,11 +1173,11 @@
         58,
         59
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1109
+      "volume": 1272
     },
     {
       "question": "Will the highest temperature in Seattle be between 60-61°F on October 28?",
