@@ -6,7 +6,7 @@
   "station": "RKSI",
   "event_end_date": "2026-10-28T12:00:00Z",
   "hours_at_discovery": 53.6,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "6238752",
     "question": "Will the highest temperature in Seoul (Incheon) be 11°C on October 28?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-27T14:37:23.766Z",
       "stop_price": 0.096,
       "forecast_change_streak": 0,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 12,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -806,6 +807,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-28T13:05:44.027Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 11.4,
+      "hrrr": 11.2,
+      "metar": 7,
+      "best": 11.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 11.4,
+          "gfs_seamless": 11.2,
+          "icon_seamless": 12.5
+        },
+        "mean": 11.6,
+        "spread": 0.9,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          11.5,
+          11.2,
+          11.3,
+          10.7,
+          11.1,
+          11,
+          11.1,
+          10.9,
+          11.3,
+          11.7,
+          11.3,
+          11.6,
+          11.4,
+          10.6,
+          11.2,
+          11.1,
+          11,
+          11.1,
+          11.4,
+          11.1,
+          11.6,
+          11.3,
+          11.1,
+          11.3,
+          11.5,
+          11.3,
+          11.6,
+          11.3,
+          10.9,
+          11.4,
+          11.2,
+          11.3,
+          11.1,
+          11.3,
+          11.5,
+          11.5,
+          11.1,
+          11.3,
+          10.9,
+          10.9,
+          11.2,
+          11.2,
+          11.2,
+          11.5,
+          11.3,
+          11,
+          11.6,
+          11.3,
+          11.4,
+          11.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -888,6 +963,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.105,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-10-28T13:05:44.027Z",
+      "top_bucket": "12-12C",
+      "top_price": 0.9995,
+      "top2_bucket": "11-12C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -967,7 +1050,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5524
+      "volume": 5544
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 11°C on October 28?",
@@ -980,7 +1063,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 15073
+      "volume": 15187
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 12°C on October 28?",
@@ -989,11 +1072,11 @@
         12,
         12
       ],
-      "bid": 0.895,
-      "ask": 0.895,
-      "price": 0.895,
-      "spread": 0,
-      "volume": 8209
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 13898
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 13°C on October 28?",
@@ -1002,11 +1085,11 @@
         13,
         13
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 8607
+      "volume": 11189
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 14°C on October 28?",
@@ -1015,11 +1098,11 @@
         14,
         14
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3857
+      "volume": 4506
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 15°C or higher on October 28?",
@@ -1032,8 +1115,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2936
+      "volume": 2949
     }
   ],
-  "created_at": "2026-10-26T06:21:09.659Z"
+  "created_at": "2026-10-26T06:21:09.659Z",
+  "metar_max": 12
 }
