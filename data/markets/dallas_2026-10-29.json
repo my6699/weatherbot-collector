@@ -6,10 +6,10 @@
   "station": "KDAL",
   "event_end_date": "2026-10-29T12:00:00Z",
   "hours_at_discovery": 45.4,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 78.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -757,6 +757,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-29T21:51:10.393Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 79,
+      "hrrr": 80,
+      "metar": 77,
+      "best": 78.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 79,
+          "gfs_seamless": 80,
+          "icon_seamless": 77
+        },
+        "mean": 78.9,
+        "spread": 1.9,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          78,
+          78,
+          75,
+          78,
+          78,
+          75,
+          77,
+          75,
+          72,
+          77,
+          76,
+          78,
+          80,
+          75,
+          77,
+          79,
+          76,
+          79,
+          78,
+          78,
+          77,
+          78,
+          81,
+          74,
+          78,
+          78,
+          79,
+          75,
+          77,
+          78,
+          80,
+          76,
+          81,
+          75,
+          78,
+          77,
+          76,
+          76,
+          73,
+          81,
+          78,
+          82,
+          81,
+          78,
+          77,
+          76,
+          75,
+          77,
+          77,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -839,6 +914,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.315,
       "top2_sum": 0.77
+    },
+    {
+      "ts": "2026-10-29T21:51:10.393Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.9925,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.008,
+      "top2_sum": 1.0005
     }
   ],
   "all_outcomes": [
@@ -862,11 +945,11 @@
         74,
         75
       ],
-      "bid": 0.0095,
-      "ask": 0.0095,
-      "price": 0.0095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1697
+      "volume": 2533
     },
     {
       "question": "Will the highest temperature in Dallas be between 76-77°F on October 29?",
@@ -875,11 +958,11 @@
         76,
         77
       ],
-      "bid": 0.166,
-      "ask": 0.166,
-      "price": 0.166,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3320
+      "volume": 4933
     },
     {
       "question": "Will the highest temperature in Dallas be between 78-79°F on October 29?",
@@ -888,11 +971,11 @@
         78,
         79
       ],
-      "bid": 0.455,
-      "ask": 0.455,
-      "price": 0.455,
+      "bid": 0.9925,
+      "ask": 0.9925,
+      "price": 0.9925,
       "spread": 0,
-      "volume": 8149
+      "volume": 9871
     },
     {
       "question": "Will the highest temperature in Dallas be between 80-81°F on October 29?",
@@ -901,11 +984,11 @@
         80,
         81
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.008,
+      "ask": 0.008,
+      "price": 0.008,
       "spread": 0,
-      "volume": 4684
+      "volume": 5720
     },
     {
       "question": "Will the highest temperature in Dallas be between 82-83°F on October 29?",
@@ -914,11 +997,11 @@
         82,
         83
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 3268
+      "volume": 4017
     },
     {
       "question": "Will the highest temperature in Dallas be between 84-85°F on October 29?",
@@ -927,11 +1010,11 @@
         84,
         85
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 819
+      "volume": 1662
     },
     {
       "question": "Will the highest temperature in Dallas be between 86-87°F on October 29?",
@@ -940,9 +1023,9 @@
         86,
         87
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1049
     },
