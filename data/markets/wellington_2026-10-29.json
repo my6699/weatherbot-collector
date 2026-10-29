@@ -6,10 +6,10 @@
   "station": "NZWN",
   "event_end_date": "2026-10-29T12:00:00Z",
   "hours_at_discovery": 52,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 19,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -755,6 +755,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-29T17:00:39.458Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": null,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -837,6 +848,14 @@
       "top2_bucket": "19-20C",
       "top2_price": 0.0015,
       "top2_sum": 1.001
+    },
+    {
+      "ts": "2026-10-29T17:00:39.458Z",
+      "top_bucket": "19-19C",
+      "top_price": 1,
+      "top2_bucket": "18-19C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -847,9 +866,9 @@
         -999,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 74
     },
@@ -860,9 +879,9 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 74
     },
@@ -873,9 +892,9 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 147
     },
@@ -886,9 +905,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 223
     },
@@ -899,9 +918,9 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1313
     },
@@ -912,9 +931,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3213
     },
@@ -925,11 +944,11 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 11618
+      "volume": 11619
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on October 29?",
@@ -938,9 +957,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 10796
     },
@@ -951,10 +970,10 @@
         19,
         19
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
+      "price": 1,
+      "spread": -0.001,
       "volume": 14602
     },
     {
@@ -964,11 +983,11 @@
         20,
         20
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 10638
+      "volume": 11036
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C or higher on October 29?",
@@ -977,12 +996,13 @@
         21,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1709
     }
   ],
-  "created_at": "2026-10-27T07:58:17.477Z"
+  "created_at": "2026-10-27T07:58:17.477Z",
+  "metar_max": 18
 }
