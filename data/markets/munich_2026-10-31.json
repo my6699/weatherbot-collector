@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-31T12:00:00Z",
   "hours_at_discovery": 49.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6378775",
+    "question": "Will the highest temperature in Munich be 8°C on October 31?",
+    "bucket_low": 8,
+    "bucket_high": 8,
+    "entry_price": 0.19,
+    "bid_at_entry": 0.18,
+    "spread": 0.01,
+    "shares": 210.53,
+    "cost": 40,
+    "p": 0.54,
+    "ev": 1.8421,
+    "edge": 0.2173,
+    "kelly": 0.1089,
+    "forecast_temp": 8.26,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-10-30T02:00:41.291Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.144
+  },
+  "positions": [
+    {
+      "market_id": "6378775",
+      "question": "Will the highest temperature in Munich be 8°C on October 31?",
+      "bucket_low": 8,
+      "bucket_high": 8,
+      "entry_price": 0.19,
+      "bid_at_entry": 0.18,
+      "spread": 0.01,
+      "shares": 210.53,
+      "cost": 40,
+      "p": 0.54,
+      "ev": 1.8421,
+      "edge": 0.2173,
+      "kelly": 0.1089,
+      "forecast_temp": 8.26,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-10-30T02:00:41.291Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.144
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -237,6 +287,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-30T02:00:41.291Z",
+      "horizon": "D+1",
+      "hours_left": 34,
+      "ecmwf": 8.6,
+      "hrrr": 10.5,
+      "metar": null,
+      "best": 9.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 8.6,
+          "gfs_seamless": 10.5,
+          "icon_seamless": 10.2
+        },
+        "mean": 9.5,
+        "spread": 1,
+        "gap": 1.9,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          9.3,
+          7.5,
+          7.9,
+          8.1,
+          7.7,
+          8.8,
+          7.2,
+          8.6,
+          8.1,
+          8.3,
+          8.2,
+          8.9,
+          8.4,
+          6.7,
+          7.9,
+          8.8,
+          8.2,
+          6.5,
+          7.6,
+          8.7,
+          8.2,
+          8.4,
+          8.3,
+          8.7,
+          9.5,
+          8.9,
+          8.5,
+          8,
+          7.2,
+          8.1,
+          8.6,
+          8.4,
+          8.4,
+          8.4,
+          7.4,
+          8.7,
+          8.4,
+          8.8,
+          7.8,
+          9,
+          7.1,
+          8.3,
+          7.9,
+          8,
+          9.2,
+          8.6,
+          7.7,
+          5.8,
+          7.1,
+          8.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -263,6 +388,14 @@
       "top2_bucket": "9-10C",
       "top2_price": 0.245,
       "top2_sum": 0.665
+    },
+    {
+      "ts": "2026-10-30T02:00:41.291Z",
+      "top_bucket": "9-9C",
+      "top_price": 0.42,
+      "top2_bucket": "9-10C",
+      "top2_price": 0.315,
+      "top2_sum": 0.735
     }
   ],
   "all_outcomes": [
@@ -277,7 +410,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 325
+      "volume": 335
     },
     {
       "question": "Will the highest temperature in Munich be 5°C on October 31?",
@@ -286,11 +419,11 @@
         5,
         5
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 293
+      "volume": 318
     },
     {
       "question": "Will the highest temperature in Munich be 6°C on October 31?",
@@ -303,7 +436,7 @@
       "ask": 0.0045,
       "price": 0.0045,
       "spread": 0,
-      "volume": 305
+      "volume": 325
     },
     {
       "question": "Will the highest temperature in Munich be 7°C on October 31?",
@@ -312,9 +445,9 @@
         7,
         7
       ],
-      "bid": 0.047,
-      "ask": 0.047,
-      "price": 0.047,
+      "bid": 0.0295,
+      "ask": 0.0295,
+      "price": 0.0295,
       "spread": 0,
       "volume": 584
     },
@@ -325,11 +458,11 @@
         8,
         8
       ],
-      "bid": 0.23,
-      "ask": 0.23,
-      "price": 0.23,
+      "bid": 0.185,
+      "ask": 0.185,
+      "price": 0.185,
       "spread": 0,
-      "volume": 1342
+      "volume": 1363
     },
     {
       "question": "Will the highest temperature in Munich be 9°C on October 31?",
@@ -342,7 +475,7 @@
       "ask": 0.42,
       "price": 0.42,
       "spread": 0,
-      "volume": 663
+      "volume": 724
     },
     {
       "question": "Will the highest temperature in Munich be 10°C on October 31?",
@@ -351,11 +484,11 @@
         10,
         10
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 1475
+      "volume": 1565
     },
     {
       "question": "Will the highest temperature in Munich be 11°C on October 31?",
@@ -364,11 +497,11 @@
         11,
         11
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 409
+      "volume": 435
     },
     {
       "question": "Will the highest temperature in Munich be 12°C on October 31?",
@@ -377,11 +510,11 @@
         12,
         12
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 338
+      "volume": 486
     },
     {
       "question": "Will the highest temperature in Munich be 13°C on October 31?",
@@ -394,7 +527,7 @@
       "ask": 0.0035,
       "price": 0.0035,
       "spread": 0,
-      "volume": 301
+      "volume": 451
     },
     {
       "question": "Will the highest temperature in Munich be 14°C or higher on October 31?",
