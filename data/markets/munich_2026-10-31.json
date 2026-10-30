@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.144,
-      "forecast_change_streak": 1
+      "stop_price": 0.19,
+      "forecast_change_streak": 1,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -437,6 +438,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-30T16:00:57.685Z",
+      "horizon": "D+1",
+      "hours_left": 20,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": null,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -479,6 +491,14 @@
       "top2_bucket": "9-10C",
       "top2_price": 0.295,
       "top2_sum": 0.735
+    },
+    {
+      "ts": "2026-10-30T16:00:57.685Z",
+      "top_bucket": "9-9C",
+      "top_price": 0.465,
+      "top2_bucket": "8-9C",
+      "top2_price": 0.465,
+      "top2_sum": 0.705
     }
   ],
   "all_outcomes": [
@@ -489,11 +509,11 @@
         -999,
         4
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 394
+      "volume": 1319
     },
     {
       "question": "Will the highest temperature in Munich be 5°C on October 31?",
@@ -502,11 +522,11 @@
         5,
         5
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 318
+      "volume": 365
     },
     {
       "question": "Will the highest temperature in Munich be 6°C on October 31?",
@@ -515,11 +535,11 @@
         6,
         6
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 556
+      "volume": 578
     },
     {
       "question": "Will the highest temperature in Munich be 7°C on October 31?",
@@ -528,11 +548,11 @@
         7,
         7
       ],
-      "bid": 0.034,
-      "ask": 0.034,
-      "price": 0.034,
+      "bid": 0.0115,
+      "ask": 0.0115,
+      "price": 0.0115,
       "spread": 0,
-      "volume": 703
+      "volume": 786
     },
     {
       "question": "Will the highest temperature in Munich be 8°C on October 31?",
@@ -541,11 +561,11 @@
         8,
         8
       ],
-      "bid": 0.21,
-      "ask": 0.21,
-      "price": 0.21,
+      "bid": 0.24,
+      "ask": 0.24,
+      "price": 0.24,
       "spread": 0,
-      "volume": 2110
+      "volume": 2630
     },
     {
       "question": "Will the highest temperature in Munich be 9°C on October 31?",
@@ -554,11 +574,11 @@
         9,
         9
       ],
-      "bid": 0.44,
-      "ask": 0.44,
-      "price": 0.44,
+      "bid": 0.465,
+      "ask": 0.465,
+      "price": 0.465,
       "spread": 0,
-      "volume": 1226
+      "volume": 1350
     },
     {
       "question": "Will the highest temperature in Munich be 10°C on October 31?",
@@ -567,11 +587,11 @@
         10,
         10
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.235,
+      "ask": 0.235,
+      "price": 0.235,
       "spread": 0,
-      "volume": 1666
+      "volume": 3059
     },
     {
       "question": "Will the highest temperature in Munich be 11°C on October 31?",
@@ -580,11 +600,11 @@
         11,
         11
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 560
+      "volume": 607
     },
     {
       "question": "Will the highest temperature in Munich be 12°C on October 31?",
@@ -593,11 +613,11 @@
         12,
         12
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 546
+      "volume": 573
     },
     {
       "question": "Will the highest temperature in Munich be 13°C on October 31?",
@@ -610,7 +630,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 511
+      "volume": 528
     },
     {
       "question": "Will the highest temperature in Munich be 14°C or higher on October 31?",
@@ -623,7 +643,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 383
+      "volume": 449
     }
   ],
   "created_at": "2026-10-29T10:06:56.498Z"

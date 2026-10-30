@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-10-30T12:00:00Z",
   "hours_at_discovery": 46.9,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -683,6 +683,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-30T15:59:40.331Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 49,
+      "hrrr": 50,
+      "metar": 45,
+      "best": 48.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 49,
+          "gfs_seamless": 50,
+          "icon_seamless": 47
+        },
+        "mean": 48.9,
+        "spread": 1.9,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          49,
+          48,
+          49,
+          48,
+          50,
+          47,
+          49,
+          50,
+          46,
+          50,
+          49,
+          48,
+          48,
+          48,
+          47,
+          47,
+          47,
+          49,
+          49,
+          48,
+          50,
+          49,
+          47,
+          50,
+          50,
+          50,
+          48,
+          48,
+          50,
+          49,
+          49,
+          48,
+          50,
+          49,
+          47,
+          49,
+          49,
+          47,
+          49,
+          48,
+          47,
+          47,
+          49,
+          48,
+          49,
+          49,
+          51,
+          51,
+          48,
+          48
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -757,6 +832,14 @@
       "top2_bucket": "48-51F",
       "top2_price": 0.32,
       "top2_sum": 0.7655
+    },
+    {
+      "ts": "2026-10-30T15:59:40.331Z",
+      "top_bucket": "48-49F",
+      "top_price": 0.437,
+      "top2_bucket": "48-51F",
+      "top2_price": 0.355,
+      "top2_sum": 0.792
     }
   ],
   "all_outcomes": [
@@ -780,11 +863,11 @@
         44,
         45
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 969
+      "volume": 1452
     },
     {
       "question": "Will the highest temperature in Seattle be between 46-47°F on October 30?",
@@ -797,7 +880,7 @@
       "ask": 0.129,
       "price": 0.129,
       "spread": 0,
-      "volume": 1576
+      "volume": 2241
     },
     {
       "question": "Will the highest temperature in Seattle be between 48-49°F on October 30?",
@@ -806,11 +889,11 @@
         48,
         49
       ],
-      "bid": 0.4455,
-      "ask": 0.4455,
-      "price": 0.4455,
+      "bid": 0.437,
+      "ask": 0.437,
+      "price": 0.437,
       "spread": 0,
-      "volume": 2662
+      "volume": 3428
     },
     {
       "question": "Will the highest temperature in Seattle be between 50-51°F on October 30?",
@@ -819,11 +902,11 @@
         50,
         51
       ],
-      "bid": 0.32,
-      "ask": 0.32,
-      "price": 0.32,
+      "bid": 0.355,
+      "ask": 0.355,
+      "price": 0.355,
       "spread": 0,
-      "volume": 3449
+      "volume": 4464
     },
     {
       "question": "Will the highest temperature in Seattle be between 52-53°F on October 30?",
@@ -832,11 +915,11 @@
         52,
         53
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.085,
+      "ask": 0.085,
+      "price": 0.085,
       "spread": 0,
-      "volume": 2660
+      "volume": 3522
     },
     {
       "question": "Will the highest temperature in Seattle be between 54-55°F on October 30?",
@@ -845,11 +928,11 @@
         54,
         55
       ],
-      "bid": 0.0165,
-      "ask": 0.0165,
-      "price": 0.0165,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 1335
+      "volume": 1611
     },
     {
       "question": "Will the highest temperature in Seattle be between 56-57°F on October 30?",
@@ -858,11 +941,11 @@
         56,
         57
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 629
+      "volume": 822
     },
     {
       "question": "Will the highest temperature in Seattle be between 58-59°F on October 30?",
