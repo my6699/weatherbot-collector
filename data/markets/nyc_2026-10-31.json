@@ -7,8 +7,58 @@
   "event_end_date": "2026-10-31T12:00:00Z",
   "hours_at_discovery": 49.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6381741",
+    "question": "Will the highest temperature in New York City be between 56-57°F on October 31?",
+    "bucket_low": 56,
+    "bucket_high": 57,
+    "entry_price": 0.23,
+    "bid_at_entry": 0.2,
+    "spread": 0.03,
+    "shares": 173.91,
+    "cost": 40,
+    "p": 0.5,
+    "ev": 1.1739,
+    "edge": 0.1565,
+    "kelly": 0.0908,
+    "forecast_temp": 58.48,
+    "forecast_src": "ensemble",
+    "sigma": 0.85,
+    "opened_at": "2026-10-30T08:43:31.040Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.16
+  },
+  "positions": [
+    {
+      "market_id": "6381741",
+      "question": "Will the highest temperature in New York City be between 56-57°F on October 31?",
+      "bucket_low": 56,
+      "bucket_high": 57,
+      "entry_price": 0.23,
+      "bid_at_entry": 0.2,
+      "spread": 0.03,
+      "shares": 173.91,
+      "cost": 40,
+      "p": 0.5,
+      "ev": 1.1739,
+      "edge": 0.1565,
+      "kelly": 0.0908,
+      "forecast_temp": 58.48,
+      "forecast_src": "ensemble",
+      "sigma": 0.85,
+      "opened_at": "2026-10-30T08:43:31.040Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.16
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -308,6 +358,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-30T08:43:31.040Z",
+      "horizon": "D+1",
+      "hours_left": 27.3,
+      "ecmwf": 58,
+      "hrrr": 57,
+      "metar": null,
+      "best": 57.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 58,
+          "gfs_seamless": 57,
+          "icon_seamless": 57
+        },
+        "mean": 57.5,
+        "spread": 0.5,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          59,
+          59,
+          56,
+          55,
+          54,
+          58,
+          59,
+          56,
+          56,
+          56,
+          57,
+          55,
+          57,
+          57,
+          57,
+          55,
+          58,
+          58,
+          56,
+          59,
+          56,
+          59,
+          55,
+          56,
+          57,
+          56,
+          59,
+          58,
+          57,
+          56,
+          58,
+          56,
+          58,
+          58,
+          58,
+          56,
+          57,
+          56,
+          58,
+          56,
+          57,
+          56,
+          59,
+          56,
+          55,
+          58,
+          58,
+          56,
+          59,
+          57
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -342,6 +466,14 @@
       "top2_bucket": "56-59F",
       "top2_price": 0.58,
       "top2_sum": 0.815
+    },
+    {
+      "ts": "2026-10-30T08:43:31.040Z",
+      "top_bucket": "58-59F",
+      "top_price": 0.61,
+      "top2_bucket": "56-59F",
+      "top2_price": 0.61,
+      "top2_sum": 0.825
     }
   ],
   "all_outcomes": [
@@ -356,7 +488,7 @@
       "ask": 0.0075,
       "price": 0.0075,
       "spread": 0,
-      "volume": 153
+      "volume": 328
     },
     {
       "question": "Will the highest temperature in New York City be between 54-55°F on October 31?",
@@ -365,11 +497,11 @@
         54,
         55
       ],
-      "bid": 0.0135,
-      "ask": 0.0135,
-      "price": 0.0135,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 270
+      "volume": 444
     },
     {
       "question": "Will the highest temperature in New York City be between 56-57°F on October 31?",
@@ -378,11 +510,11 @@
         56,
         57
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.215,
+      "ask": 0.215,
+      "price": 0.215,
       "spread": 0,
-      "volume": 484
+      "volume": 2324
     },
     {
       "question": "Will the highest temperature in New York City be between 58-59°F on October 31?",
@@ -391,11 +523,11 @@
         58,
         59
       ],
-      "bid": 0.58,
-      "ask": 0.58,
-      "price": 0.58,
+      "bid": 0.61,
+      "ask": 0.61,
+      "price": 0.61,
       "spread": 0,
-      "volume": 1498
+      "volume": 2737
     },
     {
       "question": "Will the highest temperature in New York City be between 60-61°F on October 31?",
@@ -404,11 +536,11 @@
         60,
         61
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.13,
+      "ask": 0.13,
+      "price": 0.13,
       "spread": 0,
-      "volume": 671
+      "volume": 969
     },
     {
       "question": "Will the highest temperature in New York City be between 62-63°F on October 31?",
@@ -417,11 +549,11 @@
         62,
         63
       ],
-      "bid": 0.0265,
-      "ask": 0.0265,
-      "price": 0.0265,
+      "bid": 0.013,
+      "ask": 0.013,
+      "price": 0.013,
       "spread": 0,
-      "volume": 205
+      "volume": 358
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on October 31?",
@@ -430,11 +562,11 @@
         64,
         65
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 163
+      "volume": 439
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on October 31?",
@@ -443,11 +575,11 @@
         66,
         67
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 112
+      "volume": 232
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on October 31?",

@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.9,
       "opened_at": "2026-10-29T10:07:04.572Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -21.82,
+      "exit_price": 0.05,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-10-30T08:44:06.861Z",
       "stop_price": 0.072,
       "forecast_change_streak": 0
     }
@@ -363,6 +363,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-30T08:43:53.053Z",
+      "horizon": "D+1",
+      "hours_left": 27.3,
+      "ecmwf": 29.8,
+      "hrrr": 31.6,
+      "metar": null,
+      "best": 30.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 29.8,
+          "gfs_seamless": 31.6,
+          "icon_seamless": 31.7
+        },
+        "mean": 30.7,
+        "spread": 1,
+        "gap": 1.8,
+        "llmEnhanced": false,
+        "membersMax": [
+          30.3,
+          32.2,
+          30.3,
+          29.2,
+          28.6,
+          29.5,
+          29.7,
+          28.5,
+          30.3,
+          30.5,
+          31.6,
+          29.3,
+          30.3,
+          31.6,
+          31.8,
+          28.9,
+          28.3,
+          29.4,
+          30.9,
+          28.3,
+          29.8,
+          30.4,
+          29.9,
+          27.9,
+          29.4,
+          29.5,
+          29.8,
+          30.2,
+          30.3,
+          31.6,
+          29.4,
+          29.6,
+          30.1,
+          30.9,
+          29.5,
+          28.5,
+          29,
+          29.9,
+          30.3,
+          28.4,
+          28.6,
+          29.9,
+          30.3,
+          29.6,
+          29.3,
+          30.7,
+          29.7,
+          28.4,
+          29.5,
+          27.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -397,6 +471,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.365,
       "top2_sum": 0.81
+    },
+    {
+      "ts": "2026-10-30T08:43:53.053Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.535,
+      "top2_bucket": "32-33C",
+      "top2_price": 0.35,
+      "top2_sum": 0.885
     }
   ],
   "all_outcomes": [
@@ -407,11 +489,11 @@
         -999,
         25
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1069
+      "volume": 1268
     },
     {
       "question": "Will the highest temperature in Singapore be 26°C on October 31?",
@@ -446,11 +528,11 @@
         28,
         28
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 191
+      "volume": 435
     },
     {
       "question": "Will the highest temperature in Singapore be 29°C on October 31?",
@@ -459,11 +541,11 @@
         29,
         29
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 109
+      "volume": 803
     },
     {
       "question": "Will the highest temperature in Singapore be 30°C on October 31?",
@@ -472,11 +554,11 @@
         30,
         30
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.008,
+      "ask": 0.008,
+      "price": 0.008,
       "spread": 0,
-      "volume": 160
+      "volume": 611
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on October 31?",
@@ -485,11 +567,11 @@
         31,
         31
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
-      "volume": 895
+      "volume": 1447
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on October 31?",
@@ -498,11 +580,11 @@
         32,
         32
       ],
-      "bid": 0.445,
-      "ask": 0.445,
-      "price": 0.445,
+      "bid": 0.535,
+      "ask": 0.535,
+      "price": 0.535,
       "spread": 0,
-      "volume": 882
+      "volume": 1826
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on October 31?",
@@ -511,11 +593,11 @@
         33,
         33
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.35,
+      "ask": 0.35,
+      "price": 0.35,
       "spread": 0,
-      "volume": 1423
+      "volume": 3520
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on October 31?",
@@ -524,11 +606,11 @@
         34,
         34
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.045,
+      "ask": 0.045,
+      "price": 0.045,
       "spread": 0,
-      "volume": 414
+      "volume": 1046
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C or higher on October 31?",
@@ -537,11 +619,11 @@
         35,
         999
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 350
+      "volume": 677
     }
   ],
   "created_at": "2026-10-29T10:07:05.118Z"
