@@ -6,7 +6,7 @@
   "station": "KMIA",
   "event_end_date": "2026-10-31T12:00:00Z",
   "hours_at_discovery": 49.9,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6381777",
     "question": "Will the highest temperature in Miami be between 82-83°F on October 31?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-10-31T00:52:46.615Z",
       "stop_price": 0.112,
       "forecast_change_streak": 0,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 84.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -810,6 +811,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-31T18:37:07.362Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 85,
+      "hrrr": 84,
+      "metar": 84,
+      "best": 84.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 85,
+          "gfs_seamless": 84,
+          "icon_seamless": 83
+        },
+        "mean": 84.3,
+        "spread": 1.3,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          85,
+          84,
+          85,
+          84,
+          84,
+          86,
+          85,
+          83,
+          86,
+          85,
+          85,
+          84,
+          87,
+          85,
+          85,
+          84,
+          85,
+          85,
+          85,
+          83,
+          85,
+          84,
+          86,
+          84,
+          83,
+          85,
+          85,
+          84,
+          84,
+          84,
+          85,
+          86,
+          84,
+          84,
+          86,
+          86,
+          83,
+          84,
+          85,
+          84,
+          85,
+          85,
+          84,
+          85,
+          84,
+          84,
+          86,
+          84,
+          86,
+          85
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -892,6 +967,14 @@
       "top2_bucket": "84-87F",
       "top2_price": 0.345,
       "top2_sum": 0.965
+    },
+    {
+      "ts": "2026-10-31T18:37:07.362Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.955,
+      "top2_bucket": "84-87F",
+      "top2_price": 0.031,
+      "top2_sum": 0.986
     }
   ],
   "all_outcomes": [
@@ -954,9 +1037,9 @@
         80,
         81
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1500
     },
@@ -967,11 +1050,11 @@
         82,
         83
       ],
-      "bid": 0.029,
-      "ask": 0.029,
-      "price": 0.029,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 3623
+      "volume": 8869
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on October 31?",
@@ -980,11 +1063,11 @@
         84,
         85
       ],
-      "bid": 0.62,
-      "ask": 0.62,
-      "price": 0.62,
+      "bid": 0.955,
+      "ask": 0.955,
+      "price": 0.955,
       "spread": 0,
-      "volume": 6928
+      "volume": 7991
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on October 31?",
@@ -993,11 +1076,11 @@
         86,
         87
       ],
-      "bid": 0.345,
-      "ask": 0.345,
-      "price": 0.345,
+      "bid": 0.031,
+      "ask": 0.031,
+      "price": 0.031,
       "spread": 0,
-      "volume": 8497
+      "volume": 9445
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on October 31?",
@@ -1006,11 +1089,11 @@
         88,
         89
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 2106
+      "volume": 2713
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on October 31?",
@@ -1019,11 +1102,11 @@
         90,
         91
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 1938
+      "volume": 2368
     },
     {
       "question": "Will the highest temperature in Miami be 92°F or higher on October 31?",
