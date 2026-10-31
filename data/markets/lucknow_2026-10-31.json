@@ -51,13 +51,13 @@
       "forecast_src": "ensemble",
       "sigma": 1.7,
       "opened_at": "2026-10-30T20:51:46.283Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -26.34,
+      "exit_price": 0.042,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-10-31T07:03:47.606Z",
       "stop_price": 0.074,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -663,6 +663,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-31T07:03:39.161Z",
+      "horizon": "D+0",
+      "hours_left": 4.9,
+      "ecmwf": 24.8,
+      "hrrr": 24,
+      "metar": 23,
+      "best": 24.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 24.8,
+          "gfs_seamless": 24,
+          "icon_seamless": 23.7
+        },
+        "mean": 24.3,
+        "spread": 0.6,
+        "gap": 0.8,
+        "llmEnhanced": false,
+        "membersMax": [
+          26.9,
+          25.8,
+          25.5,
+          24.8,
+          25.7,
+          24.7,
+          24.2,
+          26.1,
+          24.7,
+          23.7,
+          26.4,
+          26,
+          25.2,
+          25.6,
+          24.3,
+          25.6,
+          25.9,
+          24.6,
+          26,
+          25.9,
+          24.9,
+          24.7,
+          25.1,
+          26,
+          26.1,
+          24.9,
+          25.9,
+          24.7,
+          25,
+          25.5,
+          26,
+          25.7,
+          25.2,
+          26.2,
+          26.2,
+          25,
+          25.2,
+          24.1,
+          27.1,
+          26,
+          24.7,
+          25.2,
+          25,
+          26.5,
+          24.6,
+          24.9,
+          25.4,
+          24.3,
+          24.9,
+          25.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -729,6 +803,14 @@
       "top2_bucket": "23-24C",
       "top2_price": 0.38,
       "top2_sum": 0.825
+    },
+    {
+      "ts": "2026-10-31T07:03:39.161Z",
+      "top_bucket": "24-24C",
+      "top_price": 0.655,
+      "top2_bucket": "23-24C",
+      "top2_price": 0.655,
+      "top2_sum": 0.9
     }
   ],
   "all_outcomes": [
@@ -765,11 +847,11 @@
         21,
         21
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3820
+      "volume": 3940
     },
     {
       "question": "Will the highest temperature in Lucknow be 22°C on October 31?",
@@ -778,11 +860,11 @@
         22,
         22
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4909
+      "volume": 6466
     },
     {
       "question": "Will the highest temperature in Lucknow be 23°C on October 31?",
@@ -791,11 +873,11 @@
         23,
         23
       ],
-      "bid": 0.445,
-      "ask": 0.445,
-      "price": 0.445,
+      "bid": 0.245,
+      "ask": 0.245,
+      "price": 0.245,
       "spread": 0,
-      "volume": 3826
+      "volume": 4315
     },
     {
       "question": "Will the highest temperature in Lucknow be 24°C on October 31?",
@@ -804,11 +886,11 @@
         24,
         24
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.655,
+      "ask": 0.655,
+      "price": 0.655,
       "spread": 0,
-      "volume": 3324
+      "volume": 4139
     },
     {
       "question": "Will the highest temperature in Lucknow be 25°C on October 31?",
@@ -817,11 +899,11 @@
         25,
         25
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.073,
+      "ask": 0.073,
+      "price": 0.073,
       "spread": 0,
-      "volume": 2201
+      "volume": 3182
     },
     {
       "question": "Will the highest temperature in Lucknow be 26°C on October 31?",
@@ -830,11 +912,11 @@
         26,
         26
       ],
-      "bid": 0.017,
-      "ask": 0.017,
-      "price": 0.017,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 1477
+      "volume": 1950
     },
     {
       "question": "Will the highest temperature in Lucknow be 27°C on October 31?",
@@ -843,11 +925,11 @@
         27,
         27
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 1279
+      "volume": 1684
     },
     {
       "question": "Will the highest temperature in Lucknow be 28°C on October 31?",
@@ -856,11 +938,11 @@
         28,
         28
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1559
+      "volume": 1774
     },
     {
       "question": "Will the highest temperature in Lucknow be 29°C or higher on October 31?",
@@ -869,11 +951,11 @@
         29,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1481
+      "volume": 1543
     }
   ],
   "created_at": "2026-10-29T10:07:07.328Z"
