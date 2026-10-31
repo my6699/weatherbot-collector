@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-10-31T12:00:00Z",
   "hours_at_discovery": 43,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -608,6 +608,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-10-31T13:44:09.423Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 14.7,
+      "hrrr": 15.2,
+      "metar": 6,
+      "best": 14.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14.7,
+          "gfs_seamless": 15.2,
+          "icon_seamless": 14.9
+        },
+        "mean": 14.9,
+        "spread": 0.3,
+        "gap": 0.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          14.4,
+          14.2,
+          14.1,
+          14.6,
+          14.5,
+          14.3,
+          14.8,
+          14.8,
+          14.9,
+          14.4,
+          14.4,
+          14.2,
+          14.1,
+          15.2,
+          14.6,
+          14.8,
+          14.7,
+          14.3,
+          14.8,
+          14.2,
+          14.6,
+          15,
+          15.4,
+          14.6,
+          14.8,
+          14.3,
+          14.7,
+          14.7,
+          14.1,
+          14.7,
+          14.1,
+          13.8,
+          14.2,
+          14.5,
+          14.4,
+          14.7,
+          14,
+          14.9,
+          14.2,
+          14.9,
+          14.6,
+          14.1,
+          14.5,
+          14.7,
+          14.7,
+          15,
+          14.3,
+          14.7,
+          14.5,
+          14.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -674,6 +748,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.525,
       "top2_sum": 0.885
+    },
+    {
+      "ts": "2026-10-31T13:44:09.423Z",
+      "top_bucket": "15-15C",
+      "top_price": 0.575,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.575,
+      "top2_sum": 0.92
     }
   ],
   "all_outcomes": [
@@ -727,7 +809,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 717
+      "volume": 1051
     },
     {
       "question": "Will the highest temperature in Toronto be 11°C on October 31?",
@@ -740,7 +822,7 @@
       "ask": 0.005,
       "price": 0.005,
       "spread": 0,
-      "volume": 708
+      "volume": 961
     },
     {
       "question": "Will the highest temperature in Toronto be 12°C on October 31?",
@@ -749,11 +831,11 @@
         12,
         12
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 838
+      "volume": 1104
     },
     {
       "question": "Will the highest temperature in Toronto be 13°C on October 31?",
@@ -762,11 +844,11 @@
         13,
         13
       ],
-      "bid": 0.0415,
-      "ask": 0.0415,
-      "price": 0.0415,
+      "bid": 0.022,
+      "ask": 0.022,
+      "price": 0.022,
       "spread": 0,
-      "volume": 1288
+      "volume": 1760
     },
     {
       "question": "Will the highest temperature in Toronto be 14°C on October 31?",
@@ -775,11 +857,11 @@
         14,
         14
       ],
-      "bid": 0.36,
-      "ask": 0.36,
-      "price": 0.36,
+      "bid": 0.345,
+      "ask": 0.345,
+      "price": 0.345,
       "spread": 0,
-      "volume": 5068
+      "volume": 5643
     },
     {
       "question": "Will the highest temperature in Toronto be 15°C on October 31?",
@@ -788,11 +870,11 @@
         15,
         15
       ],
-      "bid": 0.525,
-      "ask": 0.525,
-      "price": 0.525,
+      "bid": 0.575,
+      "ask": 0.575,
+      "price": 0.575,
       "spread": 0,
-      "volume": 2868
+      "volume": 3794
     },
     {
       "question": "Will the highest temperature in Toronto be 16°C on October 31?",
@@ -801,11 +883,11 @@
         16,
         16
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 1275
+      "volume": 1534
     },
     {
       "question": "Will the highest temperature in Toronto be 17°C or higher on October 31?",
@@ -814,11 +896,11 @@
         17,
         999
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.009,
+      "ask": 0.009,
+      "price": 0.009,
       "spread": 0,
-      "volume": 973
+      "volume": 1154
     }
   ],
   "created_at": "2026-10-29T17:00:28.681Z"
