@@ -6,10 +6,10 @@
   "station": "VILK",
   "event_end_date": "2026-11-01T12:00:00Z",
   "hours_at_discovery": 51.3,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -754,6 +754,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-01T16:10:39.745Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 27.3,
+      "hrrr": 27.2,
+      "metar": 23,
+      "best": 27.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.3,
+          "gfs_seamless": 27.2,
+          "icon_seamless": 26.7
+        },
+        "mean": 27.2,
+        "spread": 0.5,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          26.3,
+          26.5,
+          27.2,
+          26.6,
+          26.9,
+          26.6,
+          26.7,
+          27,
+          26.8,
+          27.5,
+          27.4,
+          27.2,
+          27.2,
+          26.3,
+          26.8,
+          26.3,
+          27.1,
+          25.9,
+          26.9,
+          27.2,
+          25.7,
+          26.5,
+          26.7,
+          27.5,
+          26.8,
+          27.3,
+          26.1,
+          26.9,
+          27.2,
+          26.6,
+          25.7,
+          27,
+          27.3,
+          25.8,
+          26.3,
+          27.1,
+          27.2,
+          27.2,
+          26.6,
+          27.7,
+          27.1,
+          26.1,
+          27.5,
+          26.8,
+          27.1,
+          27.3,
+          26.5,
+          26.6,
+          26.5,
+          27.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -836,6 +910,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.021,
       "top2_sum": 1.0005
+    },
+    {
+      "ts": "2026-11-01T16:10:39.745Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.9995,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -902,7 +984,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2563
+      "volume": 2583
     },
     {
       "question": "Will the highest temperature in Lucknow be 26°C on November 1?",
@@ -915,7 +997,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2188
+      "volume": 2228
     },
     {
       "question": "Will the highest temperature in Lucknow be 27°C on November 1?",
@@ -924,11 +1006,11 @@
         27,
         27
       ],
-      "bid": 0.9795,
-      "ask": 0.9795,
-      "price": 0.9795,
-      "spread": 0,
-      "volume": 3677
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 5070
     },
     {
       "question": "Will the highest temperature in Lucknow be 28°C on November 1?",
@@ -937,11 +1019,11 @@
         28,
         28
       ],
-      "bid": 0.021,
-      "ask": 0.021,
-      "price": 0.021,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2538
+      "volume": 3213
     },
     {
       "question": "Will the highest temperature in Lucknow be 29°C on November 1?",
@@ -950,11 +1032,11 @@
         29,
         29
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1879
+      "volume": 1978
     },
     {
       "question": "Will the highest temperature in Lucknow be 30°C on November 1?",
@@ -983,5 +1065,6 @@
       "volume": 612
     }
   ],
-  "created_at": "2026-10-30T08:43:55.664Z"
+  "created_at": "2026-10-30T08:43:55.664Z",
+  "metar_max": 22
 }

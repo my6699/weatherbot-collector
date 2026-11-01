@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-11-01T12:00:00Z",
   "hours_at_discovery": 51.3,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -757,6 +757,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-01T16:08:49.313Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 61,
+      "hrrr": 64,
+      "metar": 61,
+      "best": 61.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 61,
+          "gfs_seamless": 64,
+          "icon_seamless": 61
+        },
+        "mean": 61.9,
+        "spread": 2.1,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          61,
+          63,
+          62,
+          62,
+          58,
+          61,
+          60,
+          60,
+          60,
+          58,
+          65,
+          60,
+          59,
+          60,
+          59,
+          64,
+          59,
+          57,
+          58,
+          60,
+          59,
+          61,
+          63,
+          66,
+          64,
+          59,
+          62,
+          58,
+          58,
+          65,
+          60,
+          61,
+          59,
+          58,
+          57,
+          62,
+          59,
+          60,
+          59,
+          57,
+          62,
+          58,
+          61,
+          59,
+          62,
+          60,
+          60,
+          58,
+          61,
+          63
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -839,6 +914,14 @@
       "top2_bucket": "60-63F",
       "top2_price": 0.245,
       "top2_sum": 0.925
+    },
+    {
+      "ts": "2026-11-01T16:08:49.313Z",
+      "top_bucket": "62-63F",
+      "top_price": 0.55,
+      "top2_bucket": "60-63F",
+      "top2_price": 0.55,
+      "top2_sum": 0.795
     }
   ],
   "all_outcomes": [
@@ -866,7 +949,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 7521
+      "volume": 10256
     },
     {
       "question": "Will the highest temperature in Atlanta be between 60-61°F on November 1?",
@@ -875,11 +958,11 @@
         60,
         61
       ],
-      "bid": 0.68,
-      "ask": 0.68,
-      "price": 0.68,
+      "bid": 0.245,
+      "ask": 0.245,
+      "price": 0.245,
       "spread": 0,
-      "volume": 6595
+      "volume": 9253
     },
     {
       "question": "Will the highest temperature in Atlanta be between 62-63°F on November 1?",
@@ -888,11 +971,11 @@
         62,
         63
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.55,
+      "ask": 0.55,
+      "price": 0.55,
       "spread": 0,
-      "volume": 5103
+      "volume": 5671
     },
     {
       "question": "Will the highest temperature in Atlanta be between 64-65°F on November 1?",
@@ -901,11 +984,11 @@
         64,
         65
       ],
-      "bid": 0.052,
-      "ask": 0.052,
-      "price": 0.052,
+      "bid": 0.137,
+      "ask": 0.137,
+      "price": 0.137,
       "spread": 0,
-      "volume": 4951
+      "volume": 5467
     },
     {
       "question": "Will the highest temperature in Atlanta be between 66-67°F on November 1?",
@@ -914,11 +997,11 @@
         66,
         67
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.0195,
+      "ask": 0.0195,
+      "price": 0.0195,
       "spread": 0,
-      "volume": 2556
+      "volume": 3914
     },
     {
       "question": "Will the highest temperature in Atlanta be between 68-69°F on November 1?",
@@ -927,11 +1010,11 @@
         68,
         69
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 1371
+      "volume": 2106
     },
     {
       "question": "Will the highest temperature in Atlanta be between 70-71°F on November 1?",

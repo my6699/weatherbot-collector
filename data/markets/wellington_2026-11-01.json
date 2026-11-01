@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-11-01T12:00:00Z",
   "hours_at_discovery": 51.3,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "6407272",
     "question": "Will the highest temperature in Wellington be 15°C on November 1?",
@@ -56,10 +56,11 @@
       "exit_price": 0.062,
       "close_reason": "stop_loss",
       "closed_at": "2026-10-31T22:33:05.104Z",
-      "stop_price": 0.087
+      "stop_price": 0.087,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 16,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -802,6 +803,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-01T16:12:00.582Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 14,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -884,6 +896,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-11-01T16:12:00.582Z",
+      "top_bucket": "16-16C",
+      "top_price": 1,
+      "top2_bucket": "15-16C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -894,9 +914,9 @@
         -999,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 391
     },
@@ -907,9 +927,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 185
     },
@@ -920,9 +940,9 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 433
     },
@@ -933,9 +953,9 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 385
     },
@@ -946,9 +966,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1570
     },
@@ -959,9 +979,9 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5745
     },
@@ -972,11 +992,11 @@
         16,
         16
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 11268
+      "price": 1,
+      "spread": -0.001,
+      "volume": 11419
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on November 1?",
@@ -985,9 +1005,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 8443
     },
@@ -998,9 +1018,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 4610
     },
@@ -1011,9 +1031,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2866
     },
@@ -1024,12 +1044,13 @@
         20,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1377
     }
   ],
-  "created_at": "2026-10-30T08:44:04.676Z"
+  "created_at": "2026-10-30T08:44:04.676Z",
+  "metar_max": 16
 }
