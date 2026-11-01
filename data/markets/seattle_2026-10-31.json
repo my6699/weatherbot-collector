@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-10-31T12:00:00Z",
   "hours_at_discovery": 43,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6383434",
     "question": "Will the highest temperature in Seattle be between 50-51°F on October 31?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-10-30T08:44:06.825Z",
       "stop_price": 0.104,
-      "forecast_change_streak": 1
+      "forecast_change_streak": 1,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 54.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1115,5 +1116,6 @@
       "volume": 105
     }
   ],
-  "created_at": "2026-10-29T16:58:06.841Z"
+  "created_at": "2026-10-29T16:58:06.841Z",
+  "metar_max": 54
 }
