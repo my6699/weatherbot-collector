@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-11-02T12:00:00Z",
   "hours_at_discovery": 52.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -693,6 +693,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-02T18:31:14.831Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 26,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -775,6 +786,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.9955,
       "top2_sum": 0.996
+    },
+    {
+      "ts": "2026-11-02T18:31:14.831Z",
+      "top_bucket": "32-32C",
+      "top_price": 1,
+      "top2_bucket": "31-32C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -785,9 +804,9 @@
         -999,
         25
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 235
     },
@@ -798,9 +817,9 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 155
     },
@@ -811,9 +830,9 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1720
     },
@@ -824,9 +843,9 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2004
     },
@@ -837,9 +856,9 @@
         29,
         29
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2203
     },
@@ -850,9 +869,9 @@
         30,
         30
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2216
     },
@@ -863,11 +882,11 @@
         31,
         31
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7068
+      "volume": 7075
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on November 2?",
@@ -876,11 +895,11 @@
         32,
         32
       ],
-      "bid": 0.9955,
-      "ask": 0.9955,
-      "price": 0.9955,
-      "spread": 0,
-      "volume": 6483
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 7819
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on November 2?",
@@ -889,11 +908,11 @@
         33,
         33
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7093
+      "volume": 7101
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on November 2?",
@@ -902,11 +921,11 @@
         34,
         34
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4314
+      "volume": 4385
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C or higher on November 2?",
@@ -915,12 +934,13 @@
         35,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2832
+      "volume": 2837
     }
   ],
-  "created_at": "2026-10-31T07:03:38.359Z"
+  "created_at": "2026-10-31T07:03:38.359Z",
+  "metar_max": 29
 }

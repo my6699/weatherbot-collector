@@ -6,7 +6,7 @@
   "station": "KSEA",
   "event_end_date": "2026-11-02T12:00:00Z",
   "hours_at_discovery": 46.3,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "6453759",
     "question": "Will the highest temperature in Seattle be between 50-51°F on November 2?",
@@ -738,6 +738,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-02T18:29:34.952Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 49,
+      "hrrr": 49,
+      "metar": null,
+      "best": 49,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 49,
+          "gfs_seamless": 49,
+          "icon_seamless": 49
+        },
+        "mean": 49,
+        "spread": 0,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          48,
+          48,
+          51,
+          51,
+          49,
+          50,
+          49,
+          50,
+          47,
+          49,
+          48,
+          47,
+          52,
+          45,
+          50,
+          50,
+          49,
+          51,
+          50,
+          51,
+          48,
+          48,
+          48,
+          49,
+          48,
+          49,
+          49,
+          50,
+          49,
+          51,
+          49,
+          50,
+          50,
+          50,
+          48,
+          50,
+          51,
+          48,
+          50,
+          50,
+          46,
+          44,
+          49,
+          51,
+          49,
+          50,
+          51,
+          51,
+          46,
+          48
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -812,6 +886,14 @@
       "top2_bucket": "50-53F",
       "top2_price": 0.485,
       "top2_sum": 0.73
+    },
+    {
+      "ts": "2026-11-02T18:29:34.952Z",
+      "top_bucket": "52-53F",
+      "top_price": 0.435,
+      "top2_bucket": "50-53F",
+      "top2_price": 0.435,
+      "top2_sum": 0.77
     }
   ],
   "all_outcomes": [
@@ -822,11 +904,11 @@
         -999,
         45
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 165
+      "volume": 345
     },
     {
       "question": "Will the highest temperature in Seattle be between 46-47°F on November 2?",
@@ -835,11 +917,11 @@
         46,
         47
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.032,
+      "ask": 0.032,
+      "price": 0.032,
       "spread": 0,
-      "volume": 130
+      "volume": 1192
     },
     {
       "question": "Will the highest temperature in Seattle be between 48-49°F on November 2?",
@@ -848,11 +930,11 @@
         48,
         49
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.069,
+      "ask": 0.069,
+      "price": 0.069,
       "spread": 0,
-      "volume": 208
+      "volume": 1032
     },
     {
       "question": "Will the highest temperature in Seattle be between 50-51°F on November 2?",
@@ -861,11 +943,11 @@
         50,
         51
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.335,
+      "ask": 0.335,
+      "price": 0.335,
       "spread": 0,
-      "volume": 1970
+      "volume": 2728
     },
     {
       "question": "Will the highest temperature in Seattle be between 52-53°F on November 2?",
@@ -874,11 +956,11 @@
         52,
         53
       ],
-      "bid": 0.485,
-      "ask": 0.485,
-      "price": 0.485,
+      "bid": 0.435,
+      "ask": 0.435,
+      "price": 0.435,
       "spread": 0,
-      "volume": 1266
+      "volume": 2373
     },
     {
       "question": "Will the highest temperature in Seattle be between 54-55°F on November 2?",
@@ -887,11 +969,11 @@
         54,
         55
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.12,
+      "ask": 0.12,
+      "price": 0.12,
       "spread": 0,
-      "volume": 3304
+      "volume": 4532
     },
     {
       "question": "Will the highest temperature in Seattle be between 56-57°F on November 2?",
@@ -900,11 +982,11 @@
         56,
         57
       ],
-      "bid": 0.026,
-      "ask": 0.026,
-      "price": 0.026,
+      "bid": 0.0205,
+      "ask": 0.0205,
+      "price": 0.0205,
       "spread": 0,
-      "volume": 367
+      "volume": 720
     },
     {
       "question": "Will the highest temperature in Seattle be between 58-59°F on November 2?",
@@ -913,11 +995,11 @@
         58,
         59
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 228
+      "volume": 721
     },
     {
       "question": "Will the highest temperature in Seattle be between 60-61°F on November 2?",
@@ -926,11 +1008,11 @@
         60,
         61
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 447
+      "volume": 881
     },
     {
       "question": "Will the highest temperature in Seattle be between 62-63°F on November 2?",

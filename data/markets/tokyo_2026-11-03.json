@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.096,
-      "forecast_change_streak": 0
+      "stop_price": 0.14,
+      "forecast_change_streak": 0,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -435,6 +436,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-02T18:30:59.805Z",
+      "horizon": "D+1",
+      "hours_left": 17.5,
+      "ecmwf": 19.2,
+      "hrrr": 16.8,
+      "metar": null,
+      "best": 18,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.2,
+          "gfs_seamless": 16.8,
+          "icon_seamless": 17
+        },
+        "mean": 18,
+        "spread": 1.2,
+        "gap": 2.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          19.3,
+          19.4,
+          19.3,
+          19,
+          19.1,
+          18,
+          19.2,
+          19,
+          19.4,
+          19.2,
+          19.9,
+          19.2,
+          18.3,
+          17.7,
+          18.1,
+          18.7,
+          19,
+          19,
+          19,
+          19.8,
+          19.1,
+          19.5,
+          19.5,
+          18.4,
+          19.1,
+          18.5,
+          19,
+          19.9,
+          18.3,
+          19.6,
+          19,
+          18.4,
+          19.8,
+          18.8,
+          19.8,
+          19,
+          19.2,
+          19.6,
+          20.1,
+          19.5,
+          19.6,
+          18.3,
+          19.9,
+          18,
+          19.4,
+          19,
+          19,
+          18.9,
+          18.7,
+          19.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -477,6 +553,14 @@
       "top2_bucket": "19-20C",
       "top2_price": 0.325,
       "top2_sum": 0.87
+    },
+    {
+      "ts": "2026-11-02T18:30:59.805Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.47,
+      "top2_bucket": "18-19C",
+      "top2_price": 0.47,
+      "top2_sum": 0.89
     }
   ],
   "all_outcomes": [
@@ -487,9 +571,9 @@
         -999,
         14
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1755
     },
@@ -500,9 +584,9 @@
         15,
         15
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 135
     },
@@ -513,11 +597,11 @@
         16,
         16
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 979
+      "volume": 1487
     },
     {
       "question": "Will the highest temperature in Tokyo be 17°C on November 3?",
@@ -526,11 +610,11 @@
         17,
         17
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
-      "volume": 597
+      "volume": 1001
     },
     {
       "question": "Will the highest temperature in Tokyo be 18°C on November 3?",
@@ -539,11 +623,11 @@
         18,
         18
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.42,
+      "ask": 0.42,
+      "price": 0.42,
       "spread": 0,
-      "volume": 876
+      "volume": 2495
     },
     {
       "question": "Will the highest temperature in Tokyo be 19°C on November 3?",
@@ -552,11 +636,11 @@
         19,
         19
       ],
-      "bid": 0.545,
-      "ask": 0.545,
-      "price": 0.545,
+      "bid": 0.47,
+      "ask": 0.47,
+      "price": 0.47,
       "spread": 0,
-      "volume": 1956
+      "volume": 2632
     },
     {
       "question": "Will the highest temperature in Tokyo be 20°C on November 3?",
@@ -565,11 +649,11 @@
         20,
         20
       ],
-      "bid": 0.325,
-      "ask": 0.325,
-      "price": 0.325,
+      "bid": 0.095,
+      "ask": 0.095,
+      "price": 0.095,
       "spread": 0,
-      "volume": 3131
+      "volume": 4238
     },
     {
       "question": "Will the highest temperature in Tokyo be 21°C on November 3?",
@@ -578,11 +662,11 @@
         21,
         21
       ],
-      "bid": 0.0175,
-      "ask": 0.0175,
-      "price": 0.0175,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 686
+      "volume": 1420
     },
     {
       "question": "Will the highest temperature in Tokyo be 22°C on November 3?",
@@ -595,7 +679,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 764
+      "volume": 1303
     },
     {
       "question": "Will the highest temperature in Tokyo be 23°C on November 3?",
@@ -604,9 +688,9 @@
         23,
         23
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1197
     },
@@ -617,11 +701,11 @@
         24,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1335
+      "volume": 2248
     }
   ],
   "created_at": "2026-11-01T09:21:28.882Z"
