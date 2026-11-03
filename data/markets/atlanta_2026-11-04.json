@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-04T12:00:00Z",
   "hours_at_discovery": 41.5,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6569619",
+    "question": "Will the highest temperature in Atlanta be between 68-69°F on November 4?",
+    "bucket_low": 68,
+    "bucket_high": 69,
+    "entry_price": 0.21,
+    "bid_at_entry": 0.19,
+    "spread": 0.02,
+    "shares": 190.48,
+    "cost": 40,
+    "p": 0.54,
+    "ev": 1.5714,
+    "edge": 0.2032,
+    "kelly": 0.1053,
+    "forecast_temp": 69.46,
+    "forecast_src": "ensemble",
+    "sigma": 1.9,
+    "opened_at": "2026-11-03T09:39:41.305Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.152
+  },
+  "positions": [
+    {
+      "market_id": "6569619",
+      "question": "Will the highest temperature in Atlanta be between 68-69°F on November 4?",
+      "bucket_low": 68,
+      "bucket_high": 69,
+      "entry_price": 0.21,
+      "bid_at_entry": 0.19,
+      "spread": 0.02,
+      "shares": 190.48,
+      "cost": 40,
+      "p": 0.54,
+      "ev": 1.5714,
+      "edge": 0.2032,
+      "kelly": 0.1053,
+      "forecast_temp": 69.46,
+      "forecast_src": "ensemble",
+      "sigma": 1.9,
+      "opened_at": "2026-11-03T09:39:41.305Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.152
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -161,6 +211,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-03T09:39:41.305Z",
+      "horizon": "D+1",
+      "hours_left": 26.3,
+      "ecmwf": 70,
+      "hrrr": 71,
+      "metar": null,
+      "best": 69.9,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 70,
+          "gfs_seamless": 71,
+          "icon_seamless": 68
+        },
+        "mean": 69.9,
+        "spread": 1.9,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          73,
+          68,
+          68,
+          70,
+          68,
+          69,
+          68,
+          68,
+          69,
+          68,
+          69,
+          67,
+          67,
+          68,
+          68,
+          67,
+          68,
+          67,
+          68,
+          67,
+          69,
+          69,
+          69,
+          67,
+          69,
+          68,
+          67,
+          69,
+          65,
+          70,
+          69,
+          71,
+          70,
+          67,
+          68,
+          71,
+          69,
+          67,
+          69,
+          70,
+          66,
+          66,
+          67,
+          68,
+          68,
+          70,
+          69,
+          73,
+          70,
+          68
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -179,6 +304,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.18,
       "top2_sum": 0.595
+    },
+    {
+      "ts": "2026-11-03T09:39:41.305Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.44,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.27,
+      "top2_sum": 0.71
     }
   ],
   "all_outcomes": [
@@ -189,9 +322,9 @@
         -999,
         63
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0105,
+      "ask": 0.0105,
+      "price": 0.0105,
       "spread": 0,
       "volume": 0
     },
@@ -202,11 +335,11 @@
         64,
         65
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 0
+      "volume": 251
     },
     {
       "question": "Will the highest temperature in Atlanta be between 66-67°F on November 4?",
@@ -215,11 +348,11 @@
         66,
         67
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.041,
+      "ask": 0.041,
+      "price": 0.041,
       "spread": 0,
-      "volume": 0
+      "volume": 63
     },
     {
       "question": "Will the highest temperature in Atlanta be between 68-69°F on November 4?",
@@ -228,11 +361,11 @@
         68,
         69
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 661
+      "volume": 902
     },
     {
       "question": "Will the highest temperature in Atlanta be between 70-71°F on November 4?",
@@ -241,11 +374,11 @@
         70,
         71
       ],
-      "bid": 0.415,
-      "ask": 0.415,
-      "price": 0.415,
+      "bid": 0.44,
+      "ask": 0.44,
+      "price": 0.44,
       "spread": 0,
-      "volume": 23
+      "volume": 276
     },
     {
       "question": "Will the highest temperature in Atlanta be between 72-73°F on November 4?",
@@ -254,11 +387,11 @@
         72,
         73
       ],
-      "bid": 0.18,
-      "ask": 0.18,
-      "price": 0.18,
+      "bid": 0.27,
+      "ask": 0.27,
+      "price": 0.27,
       "spread": 0,
-      "volume": 756
+      "volume": 1087
     },
     {
       "question": "Will the highest temperature in Atlanta be between 74-75°F on November 4?",
@@ -267,11 +400,11 @@
         74,
         75
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.06,
+      "ask": 0.06,
+      "price": 0.06,
       "spread": 0,
-      "volume": 318
+      "volume": 350
     },
     {
       "question": "Will the highest temperature in Atlanta be between 76-77°F on November 4?",
@@ -280,9 +413,9 @@
         76,
         77
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.0365,
+      "ask": 0.0365,
+      "price": 0.0365,
       "spread": 0,
       "volume": 0
     },
@@ -293,9 +426,9 @@
         78,
         79
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
       "volume": 0
     },
@@ -319,9 +452,9 @@
         82,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
       "volume": 265
     }
