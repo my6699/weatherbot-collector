@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-05T12:00:00Z",
   "hours_at_discovery": 50.3,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6626662",
+    "question": "Will the highest temperature in Munich be 8°C on November 5?",
+    "bucket_low": 8,
+    "bucket_high": 8,
+    "entry_price": 0.19,
+    "bid_at_entry": 0.17,
+    "spread": 0.02,
+    "shares": 210.53,
+    "cost": 40,
+    "p": 0.52,
+    "ev": 1.7368,
+    "edge": 0.201,
+    "kelly": 0.1037,
+    "forecast_temp": 8.35,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-11-03T23:29:01.384Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.136
+  },
+  "positions": [
+    {
+      "market_id": "6626662",
+      "question": "Will the highest temperature in Munich be 8°C on November 5?",
+      "bucket_low": 8,
+      "bucket_high": 8,
+      "entry_price": 0.19,
+      "bid_at_entry": 0.17,
+      "spread": 0.02,
+      "shares": 210.53,
+      "cost": 40,
+      "p": 0.52,
+      "ev": 1.7368,
+      "edge": 0.201,
+      "kelly": 0.1037,
+      "forecast_temp": 8.35,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-11-03T23:29:01.384Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.136
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -161,6 +211,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-03T23:29:01.384Z",
+      "horizon": "D+2",
+      "hours_left": 36.5,
+      "ecmwf": 8.5,
+      "hrrr": 9.8,
+      "metar": null,
+      "best": 9.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 8.5,
+          "gfs_seamless": 9.8,
+          "icon_seamless": 9.8
+        },
+        "mean": 9.2,
+        "spread": 0.7,
+        "gap": 1.3,
+        "llmEnhanced": false,
+        "membersMax": [
+          8.5,
+          6.5,
+          7.4,
+          8.7,
+          8.3,
+          7.8,
+          8.7,
+          7.7,
+          7,
+          7.3,
+          8.9,
+          9.4,
+          7.6,
+          7.9,
+          8.8,
+          7.8,
+          8.9,
+          8.6,
+          8.9,
+          7.4,
+          8.9,
+          8.1,
+          8.5,
+          8.2,
+          8.2,
+          7.8,
+          7.9,
+          8.7,
+          7.5,
+          8,
+          8.2,
+          7.6,
+          6.8,
+          8.6,
+          8.4,
+          8.5,
+          8.4,
+          7.1,
+          7.7,
+          7.4,
+          8.2,
+          7.1,
+          7.4,
+          7.9,
+          8.6,
+          7.8,
+          7.7,
+          7.8,
+          8.6,
+          8.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -179,6 +303,14 @@
       "top2_bucket": "8-9C",
       "top2_price": 0.38,
       "top2_sum": 0.605
+    },
+    {
+      "ts": "2026-11-03T23:29:01.384Z",
+      "top_bucket": "9-9C",
+      "top_price": 0.395,
+      "top2_bucket": "9-10C",
+      "top2_price": 0.265,
+      "top2_sum": 0.66
     }
   ],
   "all_outcomes": [
@@ -189,9 +321,9 @@
         -999,
         4
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.0095,
+      "ask": 0.0095,
+      "price": 0.0095,
       "spread": 0,
       "volume": 0
     },
@@ -202,9 +334,9 @@
         5,
         5
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.0095,
+      "ask": 0.0095,
+      "price": 0.0095,
       "spread": 0,
       "volume": 0
     },
@@ -215,11 +347,11 @@
         6,
         6
       ],
-      "bid": 0.0385,
-      "ask": 0.0385,
-      "price": 0.0385,
+      "bid": 0.0365,
+      "ask": 0.0365,
+      "price": 0.0365,
       "spread": 0,
-      "volume": 0
+      "volume": 78
     },
     {
       "question": "Will the highest temperature in Munich be 7°C on November 5?",
@@ -228,11 +360,11 @@
         7,
         7
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.0465,
+      "ask": 0.0465,
+      "price": 0.0465,
       "spread": 0,
-      "volume": 131
+      "volume": 188
     },
     {
       "question": "Will the highest temperature in Munich be 8°C on November 5?",
@@ -241,11 +373,11 @@
         8,
         8
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.18,
+      "ask": 0.18,
+      "price": 0.18,
       "spread": 0,
-      "volume": 356
+      "volume": 853
     },
     {
       "question": "Will the highest temperature in Munich be 9°C on November 5?",
@@ -254,11 +386,11 @@
         9,
         9
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.395,
+      "ask": 0.395,
+      "price": 0.395,
       "spread": 0,
-      "volume": 107
+      "volume": 518
     },
     {
       "question": "Will the highest temperature in Munich be 10°C on November 5?",
@@ -267,11 +399,11 @@
         10,
         10
       ],
-      "bid": 0.215,
-      "ask": 0.215,
-      "price": 0.215,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 655
+      "volume": 1618
     },
     {
       "question": "Will the highest temperature in Munich be 11°C on November 5?",
@@ -280,11 +412,11 @@
         11,
         11
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.115,
+      "ask": 0.115,
+      "price": 0.115,
       "spread": 0,
-      "volume": 0
+      "volume": 117
     },
     {
       "question": "Will the highest temperature in Munich be 12°C on November 5?",
@@ -293,9 +425,9 @@
         12,
         12
       ],
-      "bid": 0.08,
-      "ask": 0.08,
-      "price": 0.08,
+      "bid": 0.039,
+      "ask": 0.039,
+      "price": 0.039,
       "spread": 0,
       "volume": 0
     },
@@ -306,9 +438,9 @@
         13,
         13
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0.0115,
+      "ask": 0.0115,
+      "price": 0.0115,
       "spread": 0,
       "volume": 0
     },

@@ -6,10 +6,10 @@
   "station": "KSEA",
   "event_end_date": "2026-11-03T12:00:00Z",
   "hours_at_discovery": 43.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 56.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -606,6 +606,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-03T23:28:55.685Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 54,
+      "hrrr": 55,
+      "metar": 56,
+      "best": 54.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 54,
+          "gfs_seamless": 55,
+          "icon_seamless": 54
+        },
+        "mean": 54.3,
+        "spread": 0.7,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          54,
+          51,
+          52,
+          56,
+          53,
+          53,
+          53,
+          54,
+          54,
+          54,
+          54,
+          52,
+          55,
+          52,
+          55,
+          55,
+          56,
+          53,
+          54,
+          54,
+          55,
+          56,
+          53,
+          53,
+          53,
+          53,
+          54,
+          55,
+          52,
+          51,
+          53,
+          52,
+          53,
+          53,
+          53,
+          51,
+          53,
+          55,
+          54,
+          51,
+          53,
+          54,
+          54,
+          54,
+          54,
+          53,
+          53,
+          55,
+          53,
+          53
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -672,6 +746,14 @@
       "top2_bucket": "56-59F",
       "top2_price": 0.295,
       "top2_sum": 0.845
+    },
+    {
+      "ts": "2026-11-03T23:28:55.685Z",
+      "top_bucket": "56-57F",
+      "top_price": 0.978,
+      "top2_bucket": "56-59F",
+      "top2_price": 0.012,
+      "top2_sum": 0.99
     }
   ],
   "all_outcomes": [
@@ -708,11 +790,11 @@
         50,
         51
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1165
+      "volume": 2301
     },
     {
       "question": "Will the highest temperature in Seattle be between 52-53°F on November 3?",
@@ -721,11 +803,11 @@
         52,
         53
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1277
+      "volume": 3635
     },
     {
       "question": "Will the highest temperature in Seattle be between 54-55°F on November 3?",
@@ -734,11 +816,11 @@
         54,
         55
       ],
-      "bid": 0.15,
-      "ask": 0.15,
-      "price": 0.15,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4287
+      "volume": 6620
     },
     {
       "question": "Will the highest temperature in Seattle be between 56-57°F on November 3?",
@@ -747,11 +829,11 @@
         56,
         57
       ],
-      "bid": 0.55,
-      "ask": 0.55,
-      "price": 0.55,
+      "bid": 0.978,
+      "ask": 0.978,
+      "price": 0.978,
       "spread": 0,
-      "volume": 2147
+      "volume": 5465
     },
     {
       "question": "Will the highest temperature in Seattle be between 58-59°F on November 3?",
@@ -760,11 +842,11 @@
         58,
         59
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.012,
+      "ask": 0.012,
+      "price": 0.012,
       "spread": 0,
-      "volume": 2598
+      "volume": 4334
     },
     {
       "question": "Will the highest temperature in Seattle be between 60-61°F on November 3?",
@@ -773,11 +855,11 @@
         60,
         61
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 942
+      "volume": 2821
     },
     {
       "question": "Will the highest temperature in Seattle be between 62-63°F on November 3?",
@@ -786,11 +868,11 @@
         62,
         63
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 785
+      "volume": 2443
     },
     {
       "question": "Will the highest temperature in Seattle be between 64-65°F on November 3?",

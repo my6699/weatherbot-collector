@@ -6,10 +6,10 @@
   "station": "KLGA",
   "event_end_date": "2026-11-03T12:00:00Z",
   "hours_at_discovery": 50.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -679,6 +679,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-03T23:28:19.589Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 69,
+      "hrrr": 70,
+      "metar": 62,
+      "best": 69.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 69,
+          "gfs_seamless": 70,
+          "icon_seamless": 68
+        },
+        "mean": 69.1,
+        "spread": 1.1,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          66,
+          68,
+          67,
+          67,
+          68,
+          68,
+          67,
+          66,
+          68,
+          67,
+          68,
+          68,
+          68,
+          69,
+          68,
+          67,
+          68,
+          68,
+          68,
+          68,
+          66,
+          69,
+          67,
+          68,
+          68,
+          67,
+          67,
+          68,
+          67,
+          67,
+          67,
+          67,
+          69,
+          67,
+          67,
+          67,
+          68,
+          67,
+          68,
+          67,
+          69,
+          67,
+          68,
+          68,
+          68,
+          68,
+          67,
+          68,
+          68,
+          68
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -753,6 +827,14 @@
       "top2_bucket": "68-71F",
       "top2_price": 0.17,
       "top2_sum": 0.91
+    },
+    {
+      "ts": "2026-11-03T23:28:19.589Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.9995,
+      "top2_bucket": "68-71F",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -802,9 +884,9 @@
         64,
         65
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1496
     },
@@ -815,11 +897,11 @@
         66,
         67
       ],
-      "bid": 0.122,
-      "ask": 0.122,
-      "price": 0.122,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4213
+      "volume": 5650
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on November 3?",
@@ -828,11 +910,11 @@
         68,
         69
       ],
-      "bid": 0.74,
-      "ask": 0.74,
-      "price": 0.74,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6191
+      "volume": 11020
     },
     {
       "question": "Will the highest temperature in New York City be between 70-71°F on November 3?",
@@ -841,11 +923,11 @@
         70,
         71
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
-      "spread": 0,
-      "volume": 8455
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 11405
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on November 3?",
@@ -854,11 +936,11 @@
         72,
         73
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2450
+      "volume": 3811
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on November 3?",
@@ -867,9 +949,9 @@
         74,
         75
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 947
     },

@@ -6,7 +6,7 @@
   "station": "KORD",
   "event_end_date": "2026-11-03T12:00:00Z",
   "hours_at_discovery": 50.6,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6511641",
     "question": "Will the highest temperature in Chicago be between 68-69°F on November 3?",
@@ -56,10 +56,11 @@
       "exit_price": 0.095,
       "close_reason": "metar_diverged",
       "closed_at": "2026-11-03T01:38:46.992Z",
-      "stop_price": 0.072
+      "stop_price": 0.072,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -732,6 +733,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-03T23:28:35.290Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 71,
+      "hrrr": 71,
+      "metar": null,
+      "best": 71,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 71,
+          "gfs_seamless": 71,
+          "icon_seamless": 71
+        },
+        "mean": 71,
+        "spread": 0,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          69,
+          69,
+          71,
+          69,
+          70,
+          69,
+          69,
+          71,
+          70,
+          69,
+          72,
+          70,
+          70,
+          70,
+          71,
+          71,
+          70,
+          69,
+          70,
+          71,
+          70,
+          69,
+          70,
+          69,
+          70,
+          69,
+          69,
+          69,
+          71,
+          71,
+          69,
+          71,
+          71,
+          70,
+          70,
+          71,
+          70,
+          69,
+          70,
+          70,
+          71,
+          70,
+          69,
+          70,
+          69,
+          70,
+          71,
+          70,
+          70,
+          69
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -806,6 +881,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.455,
       "top2_sum": 0.85
+    },
+    {
+      "ts": "2026-11-03T23:28:35.290Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.993,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.006,
+      "top2_sum": 0.999
     }
   ],
   "all_outcomes": [
@@ -855,11 +938,11 @@
         68,
         69
       ],
-      "bid": 0.066,
-      "ask": 0.066,
-      "price": 0.066,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1928
+      "volume": 12148
     },
     {
       "question": "Will the highest temperature in Chicago be between 70-71°F on November 3?",
@@ -868,11 +951,11 @@
         70,
         71
       ],
-      "bid": 0.395,
-      "ask": 0.395,
-      "price": 0.395,
+      "bid": 0.993,
+      "ask": 0.993,
+      "price": 0.993,
       "spread": 0,
-      "volume": 2110
+      "volume": 5448
     },
     {
       "question": "Will the highest temperature in Chicago be between 72-73°F on November 3?",
@@ -881,11 +964,11 @@
         72,
         73
       ],
-      "bid": 0.455,
-      "ask": 0.455,
-      "price": 0.455,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 2373
+      "volume": 3526
     },
     {
       "question": "Will the highest temperature in Chicago be between 74-75°F on November 3?",
@@ -894,11 +977,11 @@
         74,
         75
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2037
+      "volume": 3461
     },
     {
       "question": "Will the highest temperature in Chicago be between 76-77°F on November 3?",
@@ -907,11 +990,11 @@
         76,
         77
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 367
+      "volume": 4304
     },
     {
       "question": "Will the highest temperature in Chicago be between 78-79°F on November 3?",
@@ -920,11 +1003,11 @@
         78,
         79
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 866
+      "volume": 1174
     },
     {
       "question": "Will the highest temperature in Chicago be between 80-81°F on November 3?",

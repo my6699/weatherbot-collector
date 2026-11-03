@@ -6,10 +6,10 @@
   "station": "KMIA",
   "event_end_date": "2026-11-03T12:00:00Z",
   "hours_at_discovery": 50.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 86.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -682,6 +682,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-03T23:28:49.825Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 85,
+      "hrrr": 84,
+      "metar": 77,
+      "best": 84.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 85,
+          "gfs_seamless": 84,
+          "icon_seamless": 83
+        },
+        "mean": 84.3,
+        "spread": 1.3,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          82,
+          84,
+          86,
+          84,
+          83,
+          81,
+          85,
+          83,
+          84,
+          85,
+          83,
+          82,
+          85,
+          84,
+          81,
+          84,
+          81,
+          82,
+          85,
+          86,
+          82,
+          82,
+          83,
+          82,
+          83,
+          85,
+          84,
+          85,
+          84,
+          80,
+          84,
+          83,
+          83,
+          85,
+          85,
+          82,
+          84,
+          84,
+          82,
+          85,
+          84,
+          84,
+          84,
+          81,
+          82,
+          84,
+          84,
+          83,
+          83,
+          83
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -756,6 +830,14 @@
       "top2_bucket": "84-87F",
       "top2_price": 0.545,
       "top2_sum": 0.945
+    },
+    {
+      "ts": "2026-11-03T23:28:49.825Z",
+      "top_bucket": "86-87F",
+      "top_price": 0.9995,
+      "top2_bucket": "84-87F",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -818,11 +900,11 @@
         80,
         81
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3549
+      "volume": 3552
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on November 3?",
@@ -831,11 +913,11 @@
         82,
         83
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 15295
+      "volume": 15568
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on November 3?",
@@ -844,11 +926,11 @@
         84,
         85
       ],
-      "bid": 0.4,
-      "ask": 0.4,
-      "price": 0.4,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7178
+      "volume": 9187
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on November 3?",
@@ -857,11 +939,11 @@
         86,
         87
       ],
-      "bid": 0.545,
-      "ask": 0.545,
-      "price": 0.545,
-      "spread": 0,
-      "volume": 7313
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 10184
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on November 3?",
@@ -870,11 +952,11 @@
         88,
         89
       ],
-      "bid": 0.0425,
-      "ask": 0.0425,
-      "price": 0.0425,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2588
+      "volume": 3730
     },
     {
       "question": "Will the highest temperature in Miami be between 90-91°F on November 3?",
@@ -883,11 +965,11 @@
         90,
         91
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1199
+      "volume": 1243
     },
     {
       "question": "Will the highest temperature in Miami be 92°F or higher on November 3?",
@@ -903,5 +985,6 @@
       "volume": 335
     }
   ],
-  "created_at": "2026-11-01T09:21:11.549Z"
+  "created_at": "2026-11-01T09:21:11.549Z",
+  "metar_max": 79
 }
