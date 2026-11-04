@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-11-04T12:00:00Z",
   "hours_at_discovery": 52.3,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "6565779",
     "question": "Will the highest temperature in Wellington be 19°C on November 4?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-11-03T17:55:13.394Z",
       "stop_price": 0.072,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 21,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -582,6 +583,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-04T15:30:37.675Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 14,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -640,6 +652,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-11-04T15:30:37.675Z",
+      "top_bucket": "21-21C",
+      "top_price": 1,
+      "top2_bucket": "20-21C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -650,9 +670,9 @@
         -999,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 175
     },
@@ -663,9 +683,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 245
     },
@@ -676,9 +696,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 436
     },
@@ -689,9 +709,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 994
     },
@@ -702,9 +722,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5591
     },
@@ -715,9 +735,9 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 8003
     },
@@ -728,11 +748,11 @@
         21,
         21
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 6839
+      "price": 1,
+      "spread": -0.001,
+      "volume": 8027
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C on November 4?",
@@ -741,11 +761,11 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7423
+      "volume": 7531
     },
     {
       "question": "Will the highest temperature in Wellington be 23°C on November 4?",
@@ -754,9 +774,9 @@
         23,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2703
     },
@@ -767,9 +787,9 @@
         24,
         24
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 449
     },
@@ -780,12 +800,13 @@
         25,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 185
     }
   ],
-  "created_at": "2026-11-02T07:44:19.845Z"
+  "created_at": "2026-11-02T07:44:19.845Z",
+  "metar_max": 21
 }
