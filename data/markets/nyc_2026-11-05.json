@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-11-05T12:00:00Z",
   "hours_at_discovery": 50.3,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -608,6 +608,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-05T18:47:55.397Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 74,
+      "hrrr": 73,
+      "metar": 69,
+      "best": 73.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 74,
+          "gfs_seamless": 73,
+          "icon_seamless": 71
+        },
+        "mean": 73.1,
+        "spread": 2.1,
+        "gap": 1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          75,
+          75,
+          72,
+          72,
+          73,
+          74,
+          75,
+          71,
+          73,
+          74,
+          74,
+          74,
+          74,
+          72,
+          72,
+          72,
+          73,
+          75,
+          74,
+          73,
+          73,
+          74,
+          72,
+          74,
+          75,
+          74,
+          73,
+          73,
+          74,
+          70,
+          73,
+          74,
+          74,
+          73,
+          71,
+          73,
+          74,
+          74,
+          70,
+          71,
+          74,
+          75,
+          73,
+          75,
+          74,
+          74,
+          70,
+          74,
+          74,
+          73
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -674,6 +749,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.335,
       "top2_sum": 0.79
+    },
+    {
+      "ts": "2026-11-05T18:47:55.397Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.84,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.15,
+      "top2_sum": 0.99
     }
   ],
   "all_outcomes": [
@@ -688,7 +771,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 265
+      "volume": 1265
     },
     {
       "question": "Will the highest temperature in New York City be between 62-63°F on November 5?",
@@ -701,7 +784,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 239
+      "volume": 1239
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on November 5?",
@@ -710,11 +793,11 @@
         64,
         65
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 627
+      "volume": 1753
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on November 5?",
@@ -723,11 +806,11 @@
         66,
         67
       ],
-      "bid": 0.026,
-      "ask": 0.026,
-      "price": 0.026,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1855
+      "volume": 3506
     },
     {
       "question": "Will the highest temperature in New York City be between 68-69°F on November 5?",
@@ -736,11 +819,11 @@
         68,
         69
       ],
-      "bid": 0.165,
-      "ask": 0.165,
-      "price": 0.165,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4750
+      "volume": 7585
     },
     {
       "question": "Will the highest temperature in New York City be between 70-71°F on November 5?",
@@ -749,11 +832,11 @@
         70,
         71
       ],
-      "bid": 0.455,
-      "ask": 0.455,
-      "price": 0.455,
+      "bid": 0.84,
+      "ask": 0.84,
+      "price": 0.84,
       "spread": 0,
-      "volume": 3486
+      "volume": 6838
     },
     {
       "question": "Will the highest temperature in New York City be between 72-73°F on November 5?",
@@ -762,11 +845,11 @@
         72,
         73
       ],
-      "bid": 0.335,
-      "ask": 0.335,
-      "price": 0.335,
+      "bid": 0.15,
+      "ask": 0.15,
+      "price": 0.15,
       "spread": 0,
-      "volume": 4522
+      "volume": 6637
     },
     {
       "question": "Will the highest temperature in New York City be between 74-75°F on November 5?",
@@ -775,11 +858,11 @@
         74,
         75
       ],
-      "bid": 0.053,
-      "ask": 0.053,
-      "price": 0.053,
+      "bid": 0.0175,
+      "ask": 0.0175,
+      "price": 0.0175,
       "spread": 0,
-      "volume": 1533
+      "volume": 4104
     },
     {
       "question": "Will the highest temperature in New York City be between 76-77°F on November 5?",
@@ -788,11 +871,11 @@
         76,
         77
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.009,
+      "ask": 0.009,
+      "price": 0.009,
       "spread": 0,
-      "volume": 1887
+      "volume": 3999
     },
     {
       "question": "Will the highest temperature in New York City be between 78-79°F on November 5?",
@@ -801,11 +884,11 @@
         78,
         79
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 215
+      "volume": 2772
     },
     {
       "question": "Will the highest temperature in New York City be 80°F or higher on November 5?",

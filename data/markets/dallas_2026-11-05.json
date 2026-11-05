@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-11-05T12:00:00Z",
   "hours_at_discovery": 50.3,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "6629230",
     "question": "Will the highest temperature in Dallas be between 76-77°F on November 5?",
@@ -660,6 +660,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-05T18:48:00.723Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 78,
+      "hrrr": 80,
+      "metar": 77,
+      "best": 78.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 78,
+          "gfs_seamless": 80,
+          "icon_seamless": 79
+        },
+        "mean": 78.8,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          77,
+          80,
+          79,
+          78,
+          79,
+          79,
+          79,
+          78,
+          78,
+          78,
+          78,
+          79,
+          78,
+          78,
+          79,
+          79,
+          77,
+          79,
+          79,
+          80,
+          78,
+          80,
+          78,
+          79,
+          79,
+          78,
+          79,
+          79,
+          78,
+          78,
+          78,
+          79,
+          80,
+          77,
+          79,
+          78,
+          80,
+          77,
+          78,
+          79,
+          79,
+          78,
+          79,
+          77,
+          80,
+          79,
+          79,
+          78,
+          79,
+          79
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -726,6 +800,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.315,
       "top2_sum": 0.855
+    },
+    {
+      "ts": "2026-11-05T18:48:00.723Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.525,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.445,
+      "top2_sum": 0.97
     }
   ],
   "all_outcomes": [
@@ -736,9 +818,9 @@
         -999,
         67
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1265
     },
@@ -762,9 +844,9 @@
         70,
         71
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 606
     },
@@ -775,11 +857,11 @@
         72,
         73
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 716
+      "volume": 851
     },
     {
       "question": "Will the highest temperature in Dallas be between 74-75°F on November 5?",
@@ -788,11 +870,11 @@
         74,
         75
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1356
+      "volume": 1594
     },
     {
       "question": "Will the highest temperature in Dallas be between 76-77°F on November 5?",
@@ -801,11 +883,11 @@
         76,
         77
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
-      "volume": 2923
+      "volume": 3735
     },
     {
       "question": "Will the highest temperature in Dallas be between 78-79°F on November 5?",
@@ -814,11 +896,11 @@
         78,
         79
       ],
-      "bid": 0.54,
-      "ask": 0.54,
-      "price": 0.54,
+      "bid": 0.525,
+      "ask": 0.525,
+      "price": 0.525,
       "spread": 0,
-      "volume": 3398
+      "volume": 4207
     },
     {
       "question": "Will the highest temperature in Dallas be between 80-81°F on November 5?",
@@ -827,11 +909,11 @@
         80,
         81
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.445,
+      "ask": 0.445,
+      "price": 0.445,
       "spread": 0,
-      "volume": 4503
+      "volume": 4793
     },
     {
       "question": "Will the highest temperature in Dallas be between 82-83°F on November 5?",
@@ -840,11 +922,11 @@
         82,
         83
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0135,
+      "ask": 0.0135,
+      "price": 0.0135,
       "spread": 0,
-      "volume": 784
+      "volume": 1112
     },
     {
       "question": "Will the highest temperature in Dallas be between 84-85°F on November 5?",
@@ -857,7 +939,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 612
+      "volume": 845
     },
     {
       "question": "Will the highest temperature in Dallas be 86°F or higher on November 5?",
@@ -866,11 +948,11 @@
         86,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1330
+      "volume": 1466
     }
   ],
   "created_at": "2026-11-03T09:39:39.409Z"

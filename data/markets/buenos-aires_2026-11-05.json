@@ -6,10 +6,10 @@
   "station": "SAEZ",
   "event_end_date": "2026-11-05T12:00:00Z",
   "hours_at_discovery": 42.1,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -531,6 +531,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-05T18:49:00.690Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 26.7,
+      "hrrr": 24.5,
+      "metar": 27,
+      "best": 26,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.7,
+          "gfs_seamless": 24.5,
+          "icon_seamless": 26.3
+        },
+        "mean": 26,
+        "spread": 1.5,
+        "gap": 2.2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          26.9,
+          26.8,
+          26.3,
+          26,
+          26.5,
+          26.6,
+          26.6,
+          26.4,
+          26.8,
+          26.7,
+          26.7,
+          26.3,
+          26.6,
+          26.5,
+          26.7,
+          26.7,
+          26.4,
+          26.8,
+          26.8,
+          26.1,
+          26.4,
+          26.7,
+          26.6,
+          26.4,
+          26.2,
+          26.7,
+          26.8,
+          26.4,
+          26.5,
+          26.2,
+          26.3,
+          26.2,
+          26.3,
+          26.3,
+          26.5,
+          26.6,
+          26.7,
+          26.2,
+          26.1,
+          25.7,
+          26.2,
+          26.1,
+          26.4,
+          26.3,
+          26.6,
+          26.9,
+          26.7,
+          26.7,
+          26.8,
+          26.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -589,6 +664,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.33,
       "top2_sum": 0.945
+    },
+    {
+      "ts": "2026-11-05T18:49:00.690Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.9535,
+      "top2_bucket": "27-28C",
+      "top2_price": 0.049,
+      "top2_sum": 1.0025
     }
   ],
   "all_outcomes": [
@@ -603,7 +686,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 286
+      "volume": 1226
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 23°C on November 5?",
@@ -629,7 +712,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 635
+      "volume": 1124
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 25°C on November 5?",
@@ -638,11 +721,11 @@
         25,
         25
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 992
+      "volume": 1364
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 26°C on November 5?",
@@ -651,11 +734,11 @@
         26,
         26
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2835
+      "volume": 4467
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 27°C on November 5?",
@@ -664,11 +747,11 @@
         27,
         27
       ],
-      "bid": 0.615,
-      "ask": 0.615,
-      "price": 0.615,
+      "bid": 0.9535,
+      "ask": 0.9535,
+      "price": 0.9535,
       "spread": 0,
-      "volume": 2733
+      "volume": 4457
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 28°C on November 5?",
@@ -677,11 +760,11 @@
         28,
         28
       ],
-      "bid": 0.33,
-      "ask": 0.33,
-      "price": 0.33,
+      "bid": 0.049,
+      "ask": 0.049,
+      "price": 0.049,
       "spread": 0,
-      "volume": 4847
+      "volume": 6533
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 29°C on November 5?",
@@ -690,11 +773,11 @@
         29,
         29
       ],
-      "bid": 0.032,
-      "ask": 0.032,
-      "price": 0.032,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 2169
+      "volume": 4357
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 30°C on November 5?",
@@ -703,11 +786,11 @@
         30,
         30
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 2082
+      "volume": 4548
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 31°C on November 5?",

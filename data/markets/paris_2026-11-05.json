@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-11-05T12:00:00Z",
   "hours_at_discovery": 50.3,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "6626606",
     "question": "Will the highest temperature in Paris be 10°C on November 5?",
@@ -51,17 +51,18 @@
       "forecast_src": "ensemble",
       "sigma": 1.8,
       "opened_at": "2026-11-04T06:36:16.216Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.87,
+      "exit_price": 0.0005,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-11-05T18:48:17.442Z",
       "stop_price": 0.15,
       "forecast_change_streak": 1,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 11,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -664,6 +665,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-05T18:48:17.442Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 10.9,
+      "hrrr": 12.4,
+      "metar": 9,
+      "best": 11.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.9,
+          "gfs_seamless": 12.4,
+          "icon_seamless": 10.9
+        },
+        "mean": 11.4,
+        "spread": 1.1,
+        "gap": 1.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          9.2,
+          10.6,
+          9,
+          10.4,
+          9.8,
+          10.2,
+          11.2,
+          9.4,
+          10.4,
+          10.4,
+          10.2,
+          10,
+          9.9,
+          10.4,
+          10.9,
+          10.2,
+          10.4,
+          11.2,
+          10.1,
+          10.3,
+          8.5,
+          9.7,
+          9.7,
+          10.5,
+          10.1,
+          9.7,
+          10.6,
+          9.1,
+          10.1,
+          9.9,
+          10.4,
+          10.5,
+          11.1,
+          9.9,
+          9.9,
+          10.5,
+          10,
+          9.6,
+          10.4,
+          10.1,
+          10.8,
+          10.4,
+          10,
+          10.1,
+          9.4,
+          10.2,
+          9.9,
+          10.3,
+          9.7,
+          10.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -730,6 +806,14 @@
       "top2_bucket": "11-12C",
       "top2_price": 0.195,
       "top2_sum": 0.73
+    },
+    {
+      "ts": "2026-11-05T18:48:17.442Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.999,
+      "top2_bucket": "11-12C",
+      "top2_price": 0.001,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -753,11 +837,11 @@
         8,
         8
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 711
+      "volume": 742
     },
     {
       "question": "Will the highest temperature in Paris be 9°C on November 5?",
@@ -766,11 +850,11 @@
         9,
         9
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2477
+      "volume": 5929
     },
     {
       "question": "Will the highest temperature in Paris be 10°C on November 5?",
@@ -779,11 +863,11 @@
         10,
         10
       ],
-      "bid": 0.145,
-      "ask": 0.145,
-      "price": 0.145,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3932
+      "volume": 7699
     },
     {
       "question": "Will the highest temperature in Paris be 11°C on November 5?",
@@ -792,11 +876,11 @@
         11,
         11
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
+      "bid": 0.999,
+      "ask": 0.999,
+      "price": 0.999,
       "spread": 0,
-      "volume": 2395
+      "volume": 5054
     },
     {
       "question": "Will the highest temperature in Paris be 12°C on November 5?",
@@ -805,11 +889,11 @@
         12,
         12
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 4994
+      "volume": 8693
     },
     {
       "question": "Will the highest temperature in Paris be 13°C on November 5?",
@@ -818,11 +902,11 @@
         13,
         13
       ],
-      "bid": 0.0795,
-      "ask": 0.0795,
-      "price": 0.0795,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5618
+      "volume": 9809
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on November 5?",
@@ -831,11 +915,11 @@
         14,
         14
       ],
-      "bid": 0.0225,
-      "ask": 0.0225,
-      "price": 0.0225,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3120
+      "volume": 5166
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on November 5?",
@@ -844,11 +928,11 @@
         15,
         15
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1639
+      "volume": 2543
     },
     {
       "question": "Will the highest temperature in Paris be 16°C on November 5?",
@@ -861,7 +945,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1294
+      "volume": 1369
     },
     {
       "question": "Will the highest temperature in Paris be 17°C or higher on November 5?",
@@ -877,5 +961,6 @@
       "volume": 1254
     }
   ],
-  "created_at": "2026-11-03T09:39:45.940Z"
+  "created_at": "2026-11-03T09:39:45.940Z",
+  "metar_max": 6
 }
