@@ -6,10 +6,10 @@
   "station": "NZWN",
   "event_end_date": "2026-11-06T12:00:00Z",
   "hours_at_discovery": 53.4,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 19,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -612,6 +612,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-06T15:09:02.915Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 17,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -678,6 +689,14 @@
       "top2_bucket": "19-20C",
       "top2_price": 0.002,
       "top2_sum": 0.998
+    },
+    {
+      "ts": "2026-11-06T15:09:02.915Z",
+      "top_bucket": "19-19C",
+      "top_price": 1,
+      "top2_bucket": "18-19C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -688,9 +707,9 @@
         -999,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 155
     },
@@ -701,9 +720,9 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 495
     },
@@ -714,9 +733,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1040
     },
@@ -727,9 +746,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2535
     },
@@ -740,11 +759,11 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 5246
+      "volume": 5296
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on November 6?",
@@ -753,11 +772,11 @@
         19,
         19
       ],
-      "bid": 0.996,
-      "ask": 0.996,
-      "price": 0.996,
-      "spread": 0,
-      "volume": 11974
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 12479
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on November 6?",
@@ -766,11 +785,11 @@
         20,
         20
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8329
+      "volume": 8671
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C on November 6?",
@@ -779,11 +798,11 @@
         21,
         21
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7616
+      "volume": 7737
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C on November 6?",
@@ -792,9 +811,9 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2309
     },
@@ -805,9 +824,9 @@
         23,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 244
     },
@@ -818,12 +837,13 @@
         24,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 185
     }
   ],
-  "created_at": "2026-11-04T06:36:35.198Z"
+  "created_at": "2026-11-04T06:36:35.198Z",
+  "metar_max": 19
 }

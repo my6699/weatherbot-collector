@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-11-06T12:00:00Z",
   "hours_at_discovery": 44.5,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -533,6 +533,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-06T15:08:38.047Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 74,
+      "hrrr": 73,
+      "metar": 68,
+      "best": 73.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 74,
+          "gfs_seamless": 73,
+          "icon_seamless": 73
+        },
+        "mean": 73.5,
+        "spread": 0.5,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          74,
+          74,
+          75,
+          74,
+          74,
+          73,
+          73,
+          75,
+          74,
+          73,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          73,
+          74,
+          74,
+          74,
+          73,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          73,
+          74,
+          74,
+          74,
+          74,
+          74,
+          73,
+          74,
+          74,
+          74,
+          75,
+          74,
+          74,
+          75,
+          74,
+          74,
+          74
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -591,6 +665,14 @@
       "top2_bucket": "74-77F",
       "top2_price": 0.235,
       "top2_sum": 0.78
+    },
+    {
+      "ts": "2026-11-06T15:08:38.047Z",
+      "top_bucket": "74-75F",
+      "top_price": 0.51,
+      "top2_bucket": "74-77F",
+      "top2_price": 0.315,
+      "top2_sum": 0.825
     }
   ],
   "all_outcomes": [
@@ -640,11 +722,11 @@
         66,
         67
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 320
+      "volume": 600
     },
     {
       "question": "Will the highest temperature in Atlanta be between 68-69°F on November 6?",
@@ -653,11 +735,11 @@
         68,
         69
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 168
+      "volume": 255
     },
     {
       "question": "Will the highest temperature in Atlanta be between 70-71°F on November 6?",
@@ -666,11 +748,11 @@
         70,
         71
       ],
-      "bid": 0.021,
-      "ask": 0.021,
-      "price": 0.021,
+      "bid": 0.0185,
+      "ask": 0.0185,
+      "price": 0.0185,
       "spread": 0,
-      "volume": 1629
+      "volume": 1700
     },
     {
       "question": "Will the highest temperature in Atlanta be between 72-73°F on November 6?",
@@ -679,11 +761,11 @@
         72,
         73
       ],
-      "bid": 0.17,
-      "ask": 0.17,
-      "price": 0.17,
+      "bid": 0.135,
+      "ask": 0.135,
+      "price": 0.135,
       "spread": 0,
-      "volume": 3046
+      "volume": 3608
     },
     {
       "question": "Will the highest temperature in Atlanta be between 74-75°F on November 6?",
@@ -692,11 +774,11 @@
         74,
         75
       ],
-      "bid": 0.545,
-      "ask": 0.545,
-      "price": 0.545,
+      "bid": 0.51,
+      "ask": 0.51,
+      "price": 0.51,
       "spread": 0,
-      "volume": 4820
+      "volume": 5627
     },
     {
       "question": "Will the highest temperature in Atlanta be between 76-77°F on November 6?",
@@ -705,11 +787,11 @@
         76,
         77
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.315,
+      "ask": 0.315,
+      "price": 0.315,
       "spread": 0,
-      "volume": 2709
+      "volume": 3677
     },
     {
       "question": "Will the highest temperature in Atlanta be between 78-79°F on November 6?",
@@ -718,11 +800,11 @@
         78,
         79
       ],
-      "bid": 0.017,
-      "ask": 0.017,
-      "price": 0.017,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 622
+      "volume": 1337
     },
     {
       "question": "Will the highest temperature in Atlanta be 80°F or higher on November 6?",
@@ -731,11 +813,11 @@
         80,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 217
+      "volume": 386
     }
   ],
   "created_at": "2026-11-04T15:29:41.927Z"
