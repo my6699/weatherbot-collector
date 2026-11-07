@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.128,
-      "forecast_change_streak": 0
+      "stop_price": 0.18,
+      "forecast_change_streak": 0,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -359,6 +360,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-07T07:16:14.586Z",
+      "horizon": "D+1",
+      "hours_left": 28.7,
+      "ecmwf": 6.4,
+      "hrrr": 4.9,
+      "metar": null,
+      "best": 5.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 6.4,
+          "gfs_seamless": 4.9,
+          "icon_seamless": 5.4
+        },
+        "mean": 5.8,
+        "spread": 0.8,
+        "gap": 1.5,
+        "llmEnhanced": false,
+        "membersMax": [
+          6.5,
+          6.2,
+          6.3,
+          8.5,
+          6.3,
+          7.5,
+          6.7,
+          7.4,
+          6.4,
+          6.7,
+          6.2,
+          8,
+          6.6,
+          7.4,
+          6.6,
+          4.9,
+          6.3,
+          5.1,
+          7.3,
+          7.2,
+          7.7,
+          6.4,
+          5.9,
+          7.5,
+          7.1,
+          7.1,
+          6.8,
+          6.9,
+          6.9,
+          6.2,
+          5.3,
+          6.2,
+          6.5,
+          7.3,
+          7.8,
+          7.3,
+          7.3,
+          7.3,
+          6.5,
+          6.3,
+          7.7,
+          5.6,
+          6.8,
+          5.3,
+          6.8,
+          5.8,
+          7.1,
+          6.6,
+          7,
+          5.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -393,6 +468,14 @@
       "top2_bucket": "5-6C",
       "top2_price": 0.58,
       "top2_sum": 0.785
+    },
+    {
+      "ts": "2026-11-07T07:16:14.586Z",
+      "top_bucket": "6-6C",
+      "top_price": 0.56,
+      "top2_bucket": "5-6C",
+      "top2_price": 0.56,
+      "top2_sum": 0.82
     }
   ],
   "all_outcomes": [
@@ -403,9 +486,9 @@
         -999,
         2
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.008,
+      "ask": 0.008,
+      "price": 0.008,
       "spread": 0,
       "volume": 7
     },
@@ -416,11 +499,11 @@
         3,
         3
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 17
+      "volume": 32
     },
     {
       "question": "Will the highest temperature in Ankara be 4°C on November 8?",
@@ -429,11 +512,11 @@
         4,
         4
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0.027,
+      "ask": 0.027,
+      "price": 0.027,
       "spread": 0,
-      "volume": 89
+      "volume": 115
     },
     {
       "question": "Will the highest temperature in Ankara be 5°C on November 8?",
@@ -442,11 +525,11 @@
         5,
         5
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.26,
+      "ask": 0.26,
+      "price": 0.26,
       "spread": 0,
-      "volume": 1524
+      "volume": 1597
     },
     {
       "question": "Will the highest temperature in Ankara be 6°C on November 8?",
@@ -455,11 +538,11 @@
         6,
         6
       ],
-      "bid": 0.58,
-      "ask": 0.58,
-      "price": 0.58,
+      "bid": 0.56,
+      "ask": 0.56,
+      "price": 0.56,
       "spread": 0,
-      "volume": 495
+      "volume": 524
     },
     {
       "question": "Will the highest temperature in Ankara be 7°C on November 8?",
@@ -468,11 +551,11 @@
         7,
         7
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
-      "volume": 1299
+      "volume": 1611
     },
     {
       "question": "Will the highest temperature in Ankara be 8°C on November 8?",
@@ -481,9 +564,9 @@
         8,
         8
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.038,
+      "ask": 0.038,
+      "price": 0.038,
       "spread": 0,
       "volume": 131
     },
