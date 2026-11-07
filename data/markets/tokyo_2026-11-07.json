@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-11-07T12:00:00Z",
   "hours_at_discovery": 48.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 20,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -606,6 +606,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-07T14:07:17.504Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 19.2,
+      "hrrr": 19.6,
+      "metar": 14,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.2,
+          "gfs_seamless": 19.6,
+          "icon_seamless": 19
+        },
+        "mean": 19.3,
+        "spread": 0.3,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          18.8,
+          18.8,
+          18.6,
+          18.8,
+          18.1,
+          18.5,
+          19.3,
+          19,
+          19.5,
+          18.8,
+          18.9,
+          18.5,
+          19.3,
+          18.8,
+          18.7,
+          18.2,
+          19.3,
+          19.4,
+          18.3,
+          18.4,
+          19.3,
+          18.1,
+          18.9,
+          18.4,
+          18.6,
+          18.6,
+          19.4,
+          18.8,
+          19,
+          18.6,
+          18.5,
+          18,
+          18.7,
+          18.9,
+          19.4,
+          19,
+          19.4,
+          18.7,
+          18.5,
+          18.6,
+          19,
+          18.5,
+          19.3,
+          18.5,
+          19,
+          18.6,
+          18.8,
+          18.6,
+          19.1,
+          18.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -672,6 +746,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.0025,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-11-07T14:07:17.504Z",
+      "top_bucket": "20-20C",
+      "top_price": 0.9995,
+      "top2_bucket": "19-20C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -686,7 +768,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1343
+      "volume": 2343
     },
     {
       "question": "Will the highest temperature in Tokyo be 15°C on November 7?",
@@ -751,7 +833,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 8497
+      "volume": 8671
     },
     {
       "question": "Will the highest temperature in Tokyo be 20°C on November 7?",
@@ -760,11 +842,11 @@
         20,
         20
       ],
-      "bid": 0.9925,
-      "ask": 0.9925,
-      "price": 0.9925,
-      "spread": 0,
-      "volume": 5875
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 7707
     },
     {
       "question": "Will the highest temperature in Tokyo be 21°C on November 7?",
@@ -773,11 +855,11 @@
         21,
         21
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7690
+      "volume": 9442
     },
     {
       "question": "Will the highest temperature in Tokyo be 22°C on November 7?",
@@ -790,7 +872,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 3369
+      "volume": 3906
     },
     {
       "question": "Will the highest temperature in Tokyo be 23°C on November 7?",
@@ -819,5 +901,6 @@
       "volume": 3789
     }
   ],
-  "created_at": "2026-11-05T11:05:58.094Z"
+  "created_at": "2026-11-05T11:05:58.094Z",
+  "metar_max": 19
 }

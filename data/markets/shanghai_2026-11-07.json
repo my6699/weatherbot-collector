@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-11-07T12:00:00Z",
   "hours_at_discovery": 48.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 20,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -604,6 +604,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-07T14:07:19.189Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 18.4,
+      "hrrr": 18.8,
+      "metar": 18,
+      "best": 18.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 18.4,
+          "gfs_seamless": 18.8,
+          "icon_seamless": 18.9
+        },
+        "mean": 18.6,
+        "spread": 0.3,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          18,
+          18.4,
+          18.5,
+          18,
+          18.3,
+          17.9,
+          19,
+          18.6,
+          18.4,
+          18.3,
+          18.2,
+          18.3,
+          18.7,
+          18.2,
+          18.3,
+          17.9,
+          18.2,
+          18.6,
+          18.6,
+          18,
+          18.1,
+          18.3,
+          17.8,
+          18.2,
+          18.3,
+          18.3,
+          18.3,
+          18.7,
+          18.2,
+          18.1,
+          18.3,
+          18.2,
+          18.2,
+          17.8,
+          18.3,
+          18,
+          19.1,
+          17.8,
+          17.9,
+          18.2,
+          18.5,
+          18.2,
+          18.2,
+          18.2,
+          18.4,
+          18,
+          18.2,
+          18.3,
+          18.1,
+          18.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -670,6 +744,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.003,
       "top2_sum": 0.999
+    },
+    {
+      "ts": "2026-11-07T14:07:19.189Z",
+      "top_bucket": "20-20C",
+      "top_price": 0.9995,
+      "top2_bucket": "19-20C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -736,7 +818,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1689
+      "volume": 1830
     },
     {
       "question": "Will the highest temperature in Shanghai be 18°C on November 7?",
@@ -749,7 +831,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5503
+      "volume": 5562
     },
     {
       "question": "Will the highest temperature in Shanghai be 19°C on November 7?",
@@ -762,7 +844,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 12010
+      "volume": 12015
     },
     {
       "question": "Will the highest temperature in Shanghai be 20°C on November 7?",
@@ -771,11 +853,11 @@
         20,
         20
       ],
-      "bid": 0.996,
-      "ask": 0.996,
-      "price": 0.996,
-      "spread": 0,
-      "volume": 6902
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 8205
     },
     {
       "question": "Will the highest temperature in Shanghai be 21°C on November 7?",
@@ -784,11 +866,11 @@
         21,
         21
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5323
+      "volume": 5792
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on November 7?",
@@ -797,9 +879,9 @@
         22,
         22
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 2388
     },
@@ -817,5 +899,6 @@
       "volume": 362
     }
   ],
-  "created_at": "2026-11-05T11:05:59.454Z"
+  "created_at": "2026-11-05T11:05:59.454Z",
+  "metar_max": 18
 }
