@@ -6,7 +6,7 @@
   "station": "EDDM",
   "event_end_date": "2026-11-07T12:00:00Z",
   "hours_at_discovery": 48.9,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6706186",
     "question": "Will the highest temperature in Munich be 9°C on November 7?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-11-07T14:07:14.084Z",
       "stop_price": 0.12,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 7,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -738,6 +739,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-07T18:50:15.705Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 9.2,
+      "hrrr": 7.2,
+      "metar": 6,
+      "best": 8.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 9.2,
+          "gfs_seamless": 7.2,
+          "icon_seamless": 7.2
+        },
+        "mean": 8.2,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          9.5,
+          8.7,
+          9.5,
+          9.2,
+          9.5,
+          9.1,
+          8.9,
+          9.2,
+          9.6,
+          9.5,
+          9.3,
+          9.4,
+          9.4,
+          8.3,
+          9.7,
+          9.8,
+          9.4,
+          9,
+          9.6,
+          8.9,
+          9.1,
+          9,
+          9.1,
+          9.7,
+          9.7,
+          9.1,
+          9.7,
+          8.9,
+          9.6,
+          8.7,
+          9,
+          9.2,
+          9.3,
+          9.8,
+          9.7,
+          8.9,
+          8.7,
+          9.6,
+          9.5,
+          9.8,
+          9.4,
+          9.2,
+          10,
+          9.6,
+          9.2,
+          9,
+          9.6,
+          9.5,
+          9.2,
+          8.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -812,6 +888,14 @@
       "top2_bucket": "7-8C",
       "top2_price": 0.05,
       "top2_sum": 0.985
+    },
+    {
+      "ts": "2026-11-07T18:50:15.705Z",
+      "top_bucket": "7-7C",
+      "top_price": 0.9985,
+      "top2_bucket": "7-8C",
+      "top2_price": 0.002,
+      "top2_sum": 1.0005
     }
   ],
   "all_outcomes": [
@@ -839,7 +923,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6412
+      "volume": 6425
     },
     {
       "question": "Will the highest temperature in Munich be 5°C on November 7?",
@@ -852,7 +936,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7373
+      "volume": 7454
     },
     {
       "question": "Will the highest temperature in Munich be 6°C on November 7?",
@@ -865,7 +949,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7698
+      "volume": 7728
     },
     {
       "question": "Will the highest temperature in Munich be 7°C on November 7?",
@@ -874,11 +958,11 @@
         7,
         7
       ],
-      "bid": 0.935,
-      "ask": 0.935,
-      "price": 0.935,
+      "bid": 0.9985,
+      "ask": 0.9985,
+      "price": 0.9985,
       "spread": 0,
-      "volume": 7114
+      "volume": 8920
     },
     {
       "question": "Will the highest temperature in Munich be 8°C on November 7?",
@@ -887,11 +971,11 @@
         8,
         8
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 7959
+      "volume": 9363
     },
     {
       "question": "Will the highest temperature in Munich be 9°C on November 7?",
@@ -900,11 +984,11 @@
         9,
         9
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6121
+      "volume": 7519
     },
     {
       "question": "Will the highest temperature in Munich be 10°C on November 7?",
@@ -913,11 +997,11 @@
         10,
         10
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2995
+      "volume": 3896
     },
     {
       "question": "Will the highest temperature in Munich be 11°C on November 7?",
@@ -943,7 +1027,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2009
+      "volume": 2110
     },
     {
       "question": "Will the highest temperature in Munich be 13°C or higher on November 7?",
@@ -959,5 +1043,6 @@
       "volume": 1101
     }
   ],
-  "created_at": "2026-11-05T11:05:52.637Z"
+  "created_at": "2026-11-05T11:05:52.637Z",
+  "metar_max": 3
 }
