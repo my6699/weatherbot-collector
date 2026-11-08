@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-09T12:00:00Z",
   "hours_at_discovery": 45.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6779002",
+    "question": "Will the highest temperature in Toronto be 9°C on November 9?",
+    "bucket_low": 9,
+    "bucket_high": 9,
+    "entry_price": 0.22,
+    "bid_at_entry": 0.19,
+    "spread": 0.03,
+    "shares": 181.82,
+    "cost": 40,
+    "p": 0.58,
+    "ev": 1.6364,
+    "edge": 0.2432,
+    "kelly": 0.1179,
+    "forecast_temp": 8.2,
+    "forecast_src": "ensemble",
+    "sigma": 1.4,
+    "opened_at": "2026-11-08T21:13:44.609Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.152
+  },
+  "positions": [
+    {
+      "market_id": "6779002",
+      "question": "Will the highest temperature in Toronto be 9°C on November 9?",
+      "bucket_low": 9,
+      "bucket_high": 9,
+      "entry_price": 0.22,
+      "bid_at_entry": 0.19,
+      "spread": 0.03,
+      "shares": 181.82,
+      "cost": 40,
+      "p": 0.58,
+      "ev": 1.6364,
+      "edge": 0.2432,
+      "kelly": 0.1179,
+      "forecast_temp": 8.2,
+      "forecast_src": "ensemble",
+      "sigma": 1.4,
+      "opened_at": "2026-11-08T21:13:44.609Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.152
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -459,6 +509,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-08T21:13:44.609Z",
+      "horizon": "D+1",
+      "hours_left": 14.8,
+      "ecmwf": 8.4,
+      "hrrr": 8.1,
+      "metar": null,
+      "best": 8.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 8.4,
+          "gfs_seamless": 8.1,
+          "icon_seamless": 10
+        },
+        "mean": 8.6,
+        "spread": 1.4,
+        "gap": 0.3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          8.4,
+          8.2,
+          9.7,
+          9.1,
+          9.1,
+          8.2,
+          8.2,
+          9,
+          8.8,
+          8.9,
+          8.9,
+          9.2,
+          8.5,
+          8.1,
+          8.2,
+          8.5,
+          10,
+          8.8,
+          8.5,
+          8,
+          8.1,
+          8.5,
+          8.8,
+          9,
+          8.6,
+          8.3,
+          8.8,
+          8.6,
+          7.7,
+          8.8,
+          8.7,
+          8.9,
+          8,
+          8.4,
+          9,
+          8.2,
+          8.8,
+          8.4,
+          9.3,
+          9.9,
+          8.1,
+          8.2,
+          9.4,
+          8.6,
+          9.4,
+          8.2,
+          8.7,
+          10,
+          8.9,
+          8.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -509,6 +634,14 @@
       "top2_bucket": "10-11C",
       "top2_price": 0.285,
       "top2_sum": 0.76
+    },
+    {
+      "ts": "2026-11-08T21:13:44.609Z",
+      "top_bucket": "10-10C",
+      "top_price": 0.485,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.255,
+      "top2_sum": 0.74
     }
   ],
   "all_outcomes": [
@@ -519,9 +652,9 @@
         -999,
         4
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 100
     },
@@ -562,7 +695,7 @@
       "ask": 0.0055,
       "price": 0.0055,
       "spread": 0,
-      "volume": 92
+      "volume": 102
     },
     {
       "question": "Will the highest temperature in Toronto be 8°C on November 9?",
@@ -571,11 +704,11 @@
         8,
         8
       ],
-      "bid": 0.0275,
-      "ask": 0.0275,
-      "price": 0.0275,
+      "bid": 0.0285,
+      "ask": 0.0285,
+      "price": 0.0285,
       "spread": 0,
-      "volume": 348
+      "volume": 403
     },
     {
       "question": "Will the highest temperature in Toronto be 9°C on November 9?",
@@ -584,11 +717,11 @@
         9,
         9
       ],
-      "bid": 0.18,
-      "ask": 0.18,
-      "price": 0.18,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 738
+      "volume": 878
     },
     {
       "question": "Will the highest temperature in Toronto be 10°C on November 9?",
@@ -597,11 +730,11 @@
         10,
         10
       ],
-      "bid": 0.475,
-      "ask": 0.475,
-      "price": 0.475,
+      "bid": 0.485,
+      "ask": 0.485,
+      "price": 0.485,
       "spread": 0,
-      "volume": 364
+      "volume": 586
     },
     {
       "question": "Will the highest temperature in Toronto be 11°C on November 9?",
@@ -610,11 +743,11 @@
         11,
         11
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.255,
+      "ask": 0.255,
+      "price": 0.255,
       "spread": 0,
-      "volume": 2082
+      "volume": 2384
     },
     {
       "question": "Will the highest temperature in Toronto be 12°C on November 9?",
@@ -623,11 +756,11 @@
         12,
         12
       ],
-      "bid": 0.0295,
-      "ask": 0.0295,
-      "price": 0.0295,
+      "bid": 0.029,
+      "ask": 0.029,
+      "price": 0.029,
       "spread": 0,
-      "volume": 551
+      "volume": 607
     },
     {
       "question": "Will the highest temperature in Toronto be 13°C on November 9?",
@@ -649,11 +782,11 @@
         14,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 92
+      "volume": 157
     }
   ],
   "created_at": "2026-11-07T14:07:32.791Z"
