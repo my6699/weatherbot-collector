@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-11-08T12:00:00Z",
   "hours_at_discovery": 44.9,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "6746253",
     "question": "Will the highest temperature in Toronto be 9°C on November 8?",
@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-11-08T02:33:09.090Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -44.31,
+      "exit_price": 0.034,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-11-08T17:08:29.563Z",
       "stop_price": 0.08,
       "forecast_change_streak": 1
     }
@@ -734,6 +734,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-08T17:08:29.563Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 9.4,
+      "hrrr": 11.1,
+      "metar": 9,
+      "best": 10.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 9.4,
+          "gfs_seamless": 11.1,
+          "icon_seamless": 11.3
+        },
+        "mean": 10.3,
+        "spread": 1,
+        "gap": 1.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          8.5,
+          8.8,
+          9.9,
+          8.4,
+          8.4,
+          8.9,
+          9.3,
+          9.4,
+          9.4,
+          8.1,
+          8.9,
+          9.2,
+          8.9,
+          8.9,
+          9.3,
+          9.4,
+          9.4,
+          9.2,
+          8.9,
+          8.9,
+          8.7,
+          8.6,
+          9.5,
+          8.6,
+          9.7,
+          8.5,
+          8.4,
+          9.1,
+          8.8,
+          10.3,
+          9.8,
+          9,
+          8.8,
+          8.7,
+          9,
+          9,
+          8.8,
+          9.2,
+          9.1,
+          9.7,
+          8.4,
+          8.5,
+          9,
+          8.7,
+          8.9,
+          8.3,
+          8.8,
+          9,
+          8.5,
+          9.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -808,6 +883,14 @@
       "top2_bucket": "10-11C",
       "top2_price": 0.415,
       "top2_sum": 0.805
+    },
+    {
+      "ts": "2026-11-08T17:08:29.563Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.495,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.495,
+      "top2_sum": 0.725
     }
   ],
   "all_outcomes": [
@@ -844,11 +927,11 @@
         8,
         8
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 747
+      "volume": 931
     },
     {
       "question": "Will the highest temperature in Toronto be 9°C on November 8?",
@@ -857,11 +940,11 @@
         9,
         9
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.034,
+      "ask": 0.034,
+      "price": 0.034,
       "spread": 0,
-      "volume": 873
+      "volume": 985
     },
     {
       "question": "Will the highest temperature in Toronto be 10°C on November 8?",
@@ -870,11 +953,11 @@
         10,
         10
       ],
-      "bid": 0.39,
-      "ask": 0.39,
-      "price": 0.39,
+      "bid": 0.23,
+      "ask": 0.23,
+      "price": 0.23,
       "spread": 0,
-      "volume": 2060
+      "volume": 2429
     },
     {
       "question": "Will the highest temperature in Toronto be 11°C on November 8?",
@@ -883,11 +966,11 @@
         11,
         11
       ],
-      "bid": 0.415,
-      "ask": 0.415,
-      "price": 0.415,
+      "bid": 0.495,
+      "ask": 0.495,
+      "price": 0.495,
       "spread": 0,
-      "volume": 2342
+      "volume": 2573
     },
     {
       "question": "Will the highest temperature in Toronto be 12°C on November 8?",
@@ -896,11 +979,11 @@
         12,
         12
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.18,
+      "ask": 0.18,
+      "price": 0.18,
       "spread": 0,
-      "volume": 2932
+      "volume": 3270
     },
     {
       "question": "Will the highest temperature in Toronto be 13°C on November 8?",
@@ -909,11 +992,11 @@
         13,
         13
       ],
-      "bid": 0.0205,
-      "ask": 0.0205,
-      "price": 0.0205,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
-      "volume": 456
+      "volume": 579
     },
     {
       "question": "Will the highest temperature in Toronto be 14°C on November 8?",
@@ -922,11 +1005,11 @@
         14,
         14
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 648
+      "volume": 752
     },
     {
       "question": "Will the highest temperature in Toronto be 15°C on November 8?",
@@ -935,11 +1018,11 @@
         15,
         15
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 918
+      "volume": 1230
     },
     {
       "question": "Will the highest temperature in Toronto be 16°C or higher on November 8?",

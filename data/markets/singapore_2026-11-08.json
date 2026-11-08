@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-11-08T12:00:00Z",
   "hours_at_discovery": 53,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 30,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -759,6 +759,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-08T17:08:25.307Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": null,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -841,6 +852,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.003,
       "top2_sum": 1.001
+    },
+    {
+      "ts": "2026-11-08T17:08:25.307Z",
+      "top_bucket": "30-30C",
+      "top_price": 1,
+      "top2_bucket": "29-30C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -851,9 +870,9 @@
         -999,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1476
     },
@@ -864,9 +883,9 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1513
     },
@@ -877,9 +896,9 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5952
     },
@@ -890,9 +909,9 @@
         29,
         29
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2805
     },
@@ -903,11 +922,11 @@
         30,
         30
       ],
-      "bid": 0.998,
-      "ask": 0.998,
-      "price": 0.998,
-      "spread": 0,
-      "volume": 4764
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 5189
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on November 8?",
@@ -916,11 +935,11 @@
         31,
         31
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4283
+      "volume": 4657
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on November 8?",
@@ -929,11 +948,11 @@
         32,
         32
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2705
+      "volume": 2808
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on November 8?",
@@ -942,11 +961,11 @@
         33,
         33
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3477
+      "volume": 3487
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on November 8?",
@@ -955,11 +974,11 @@
         34,
         34
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1648
+      "volume": 1706
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on November 8?",
@@ -968,9 +987,9 @@
         35,
         35
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 362
     },
@@ -981,12 +1000,13 @@
         36,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1770
     }
   ],
-  "created_at": "2026-11-06T07:01:25.335Z"
+  "created_at": "2026-11-06T07:01:25.335Z",
+  "metar_max": 30
 }

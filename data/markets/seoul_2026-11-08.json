@@ -6,10 +6,10 @@
   "station": "RKSI",
   "event_end_date": "2026-11-08T12:00:00Z",
   "hours_at_discovery": 53,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 7,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -762,6 +762,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-08T17:07:28.551Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 6,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -844,6 +855,14 @@
       "top2_bucket": "7-8C",
       "top2_price": 0.04,
       "top2_sum": 0.985
+    },
+    {
+      "ts": "2026-11-08T17:07:28.551Z",
+      "top_bucket": "7-7C",
+      "top_price": 1,
+      "top2_bucket": "6-7C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -854,9 +873,9 @@
         -999,
         2
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 160
     },
@@ -867,9 +886,9 @@
         3,
         3
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 130
     },
@@ -880,9 +899,9 @@
         4,
         4
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 260
     },
@@ -893,9 +912,9 @@
         5,
         5
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1070
     },
@@ -906,11 +925,11 @@
         6,
         6
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7123
+      "volume": 7243
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 7°C on November 8?",
@@ -919,11 +938,11 @@
         7,
         7
       ],
-      "bid": 0.945,
-      "ask": 0.945,
-      "price": 0.945,
-      "spread": 0,
-      "volume": 9380
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 11209
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 8°C on November 8?",
@@ -932,11 +951,11 @@
         8,
         8
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 9881
+      "volume": 11966
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 9°C on November 8?",
@@ -945,11 +964,11 @@
         9,
         9
       ],
-      "bid": 0.011,
-      "ask": 0.011,
-      "price": 0.011,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 9873
+      "volume": 10374
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 10°C on November 8?",
@@ -958,11 +977,11 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6229
+      "volume": 6671
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 11°C on November 8?",
@@ -971,9 +990,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1998
     },
@@ -984,12 +1003,13 @@
         12,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1324
     }
   ],
-  "created_at": "2026-11-06T07:01:18.956Z"
+  "created_at": "2026-11-06T07:01:18.956Z",
+  "metar_max": 6
 }
