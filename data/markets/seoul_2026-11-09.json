@@ -6,10 +6,10 @@
   "station": "RKSI",
   "event_end_date": "2026-11-09T12:00:00Z",
   "hours_at_discovery": 52.7,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 11,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -753,6 +753,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-09T18:52:54.969Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 5,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -835,6 +846,14 @@
       "top2_bucket": "11-12C",
       "top2_price": 0.012,
       "top2_sum": 1.006
+    },
+    {
+      "ts": "2026-11-09T18:52:54.969Z",
+      "top_bucket": "11-11C",
+      "top_price": 1,
+      "top2_bucket": "10-11C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -845,9 +864,9 @@
         -999,
         5
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 225
     },
@@ -858,9 +877,9 @@
         6,
         6
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1741
     },
@@ -871,9 +890,9 @@
         7,
         7
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3816
     },
@@ -884,11 +903,11 @@
         8,
         8
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3874
+      "volume": 4015
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 9°C on November 9?",
@@ -897,11 +916,11 @@
         9,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 10155
+      "volume": 10210
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 10°C on November 9?",
@@ -910,11 +929,11 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 9325
+      "volume": 9485
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 11°C on November 9?",
@@ -923,11 +942,11 @@
         11,
         11
       ],
-      "bid": 0.994,
-      "ask": 0.994,
-      "price": 0.994,
-      "spread": 0,
-      "volume": 7124
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 8752
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 12°C on November 9?",
@@ -936,11 +955,11 @@
         12,
         12
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 5424
+      "volume": 6625
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 13°C on November 9?",
@@ -949,11 +968,11 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2325
+      "volume": 2483
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 14°C on November 9?",
@@ -962,9 +981,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1288
     },
@@ -975,12 +994,13 @@
         15,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 330
     }
   ],
-  "created_at": "2026-11-07T07:16:31.228Z"
+  "created_at": "2026-11-07T07:16:31.228Z",
+  "metar_max": 6
 }

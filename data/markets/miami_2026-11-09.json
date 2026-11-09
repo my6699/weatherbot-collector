@@ -6,7 +6,7 @@
   "station": "KMIA",
   "event_end_date": "2026-11-09T12:00:00Z",
   "hours_at_discovery": 45.9,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "6775298",
     "question": "Will the highest temperature in Miami be between 82-83°F on November 9?",
@@ -57,10 +57,11 @@
       "close_reason": "metar_diverged",
       "closed_at": "2026-11-09T00:58:12.240Z",
       "stop_price": 0.136,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 84.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -729,6 +730,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-09T18:52:42.805Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 82,
+      "hrrr": 85,
+      "metar": 85,
+      "best": 83.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 82,
+          "gfs_seamless": 85,
+          "icon_seamless": 83
+        },
+        "mean": 83.1,
+        "spread": 1.9,
+        "gap": 3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          83,
+          83,
+          82,
+          83,
+          83,
+          83,
+          82,
+          83,
+          82,
+          84,
+          83,
+          84,
+          82,
+          84,
+          82,
+          83,
+          83,
+          83,
+          83,
+          82,
+          83,
+          83,
+          82,
+          82,
+          84,
+          82,
+          83,
+          82,
+          84,
+          84,
+          83,
+          83,
+          83,
+          82,
+          83,
+          83,
+          84,
+          84,
+          82,
+          83,
+          82,
+          82,
+          82,
+          83,
+          83,
+          83,
+          83,
+          84,
+          83,
+          83
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -803,6 +879,14 @@
       "top2_bucket": "82-85F",
       "top2_price": 0.71,
       "top2_sum": 0.905
+    },
+    {
+      "ts": "2026-11-09T18:52:42.805Z",
+      "top_bucket": "84-85F",
+      "top_price": 0.9655,
+      "top2_bucket": "84-87F",
+      "top2_price": 0.04,
+      "top2_sum": 1.0055
     }
   ],
   "all_outcomes": [
@@ -865,11 +949,11 @@
         78,
         79
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 52
+      "volume": 360
     },
     {
       "question": "Will the highest temperature in Miami be between 80-81°F on November 9?",
@@ -878,11 +962,11 @@
         80,
         81
       ],
-      "bid": 0.0195,
-      "ask": 0.0195,
-      "price": 0.0195,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 128
+      "volume": 814
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on November 9?",
@@ -891,11 +975,11 @@
         82,
         83
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1415
+      "volume": 2646
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on November 9?",
@@ -904,11 +988,11 @@
         84,
         85
       ],
-      "bid": 0.71,
-      "ask": 0.71,
-      "price": 0.71,
+      "bid": 0.9655,
+      "ask": 0.9655,
+      "price": 0.9655,
       "spread": 0,
-      "volume": 1848
+      "volume": 3213
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on November 9?",
@@ -917,11 +1001,11 @@
         86,
         87
       ],
-      "bid": 0.11,
-      "ask": 0.11,
-      "price": 0.11,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 2812
+      "volume": 3401
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on November 9?",
@@ -930,11 +1014,11 @@
         88,
         89
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 741
+      "volume": 1195
     },
     {
       "question": "Will the highest temperature in Miami be 90°F or higher on November 9?",
