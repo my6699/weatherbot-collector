@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-11-09T12:00:00Z",
   "hours_at_discovery": 45.9,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6775277",
     "question": "Will the highest temperature in Dallas be between 74-75°F on November 9?",
@@ -57,10 +57,11 @@
       "close_reason": "metar_diverged",
       "closed_at": "2026-11-09T00:58:13.697Z",
       "stop_price": 0.128,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -1041,5 +1042,6 @@
       "volume": 1145
     }
   ],
-  "created_at": "2026-11-07T14:07:05.393Z"
+  "created_at": "2026-11-07T14:07:05.393Z",
+  "metar_max": 71.1
 }

@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-11-09T12:00:00Z",
   "hours_at_discovery": 45.9,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6779002",
     "question": "Will the highest temperature in Toronto be 9°C on November 9?",
@@ -51,19 +51,20 @@
       "forecast_src": "ensemble",
       "sigma": 1.4,
       "opened_at": "2026-11-08T21:13:44.609Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -40,
+      "exit_price": 0,
+      "close_reason": "resolved",
+      "closed_at": "2026-11-10T02:12:11.859Z",
       "stop_price": 0.22,
       "trailing_activated": true,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
-  "resolved_outcome": null,
-  "pnl": null,
+  "actual_temp": 8,
+  "resolved_outcome": "loss",
+  "pnl": -40,
   "forecast_snapshots": [
     {
       "ts": "2026-11-07T14:07:32.233Z",
@@ -1037,5 +1038,6 @@
       "volume": 746
     }
   ],
-  "created_at": "2026-11-07T14:07:32.791Z"
+  "created_at": "2026-11-07T14:07:32.791Z",
+  "metar_max": 8
 }

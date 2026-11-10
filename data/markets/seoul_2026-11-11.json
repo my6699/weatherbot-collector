@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.136
+      "stop_price": 0.136,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -210,6 +211,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-10T02:12:47.825Z",
+      "horizon": "D+1",
+      "hours_left": 33.8,
+      "ecmwf": 12.2,
+      "hrrr": 13.8,
+      "metar": null,
+      "best": 13.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 12.2,
+          "gfs_seamless": 13.8,
+          "icon_seamless": 14.3
+        },
+        "mean": 13.1,
+        "spread": 1.2,
+        "gap": 1.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          9.8,
+          11.2,
+          12.3,
+          12.7,
+          13,
+          11.8,
+          11.9,
+          12.9,
+          12.1,
+          12.3,
+          12.1,
+          12.3,
+          12.1,
+          12,
+          12.2,
+          11.8,
+          12.1,
+          12.7,
+          12.7,
+          12.5,
+          11.8,
+          12.2,
+          12.4,
+          12.1,
+          12.3,
+          11.7,
+          12.4,
+          12.2,
+          12.2,
+          12.4,
+          12.2,
+          12,
+          12.2,
+          12.5,
+          12.6,
+          12.7,
+          11.7,
+          12.3,
+          13.1,
+          12.5,
+          12,
+          12.5,
+          11.7,
+          12.2,
+          11,
+          11.4,
+          11.5,
+          10.1,
+          11.6,
+          12.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -228,6 +304,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.255,
       "top2_sum": 0.79
+    },
+    {
+      "ts": "2026-11-10T02:12:47.825Z",
+      "top_bucket": "15-15C",
+      "top_price": 0.565,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.565,
+      "top2_sum": 0.785
     }
   ],
   "all_outcomes": [
@@ -277,9 +361,9 @@
         12,
         12
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
       "volume": 11
     },
@@ -290,11 +374,11 @@
         13,
         13
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.0295,
+      "ask": 0.0295,
+      "price": 0.0295,
       "spread": 0,
-      "volume": 173
+      "volume": 174
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 14°C on November 11?",
@@ -303,11 +387,11 @@
         14,
         14
       ],
-      "bid": 0.185,
-      "ask": 0.185,
-      "price": 0.185,
+      "bid": 0.22,
+      "ask": 0.22,
+      "price": 0.22,
       "spread": 0,
-      "volume": 539
+      "volume": 599
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 15°C on November 11?",
@@ -316,11 +400,11 @@
         15,
         15
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
+      "bid": 0.565,
+      "ask": 0.565,
+      "price": 0.565,
       "spread": 0,
-      "volume": 90
+      "volume": 105
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 16°C on November 11?",
@@ -329,9 +413,9 @@
         16,
         16
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.19,
+      "ask": 0.19,
+      "price": 0.19,
       "spread": 0,
       "volume": 88
     },
@@ -342,11 +426,11 @@
         17,
         17
       ],
-      "bid": 0.041,
-      "ask": 0.041,
-      "price": 0.041,
+      "bid": 0.033,
+      "ask": 0.033,
+      "price": 0.033,
       "spread": 0,
-      "volume": 155
+      "volume": 175
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 18°C on November 11?",
@@ -355,9 +439,9 @@
         18,
         18
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
       "volume": 11
     },
@@ -368,9 +452,9 @@
         19,
         999
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
       "volume": 1
     }
