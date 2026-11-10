@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-11T12:00:00Z",
   "hours_at_discovery": 51.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6893034",
+    "question": "Will the highest temperature in Ankara be 10°C on November 11?",
+    "bucket_low": 10,
+    "bucket_high": 10,
+    "entry_price": 0.21,
+    "bid_at_entry": 0.18,
+    "spread": 0.03,
+    "shares": 190.48,
+    "cost": 40,
+    "p": 0.56,
+    "ev": 1.6667,
+    "edge": 0.2302,
+    "kelly": 0.1134,
+    "forecast_temp": 10.29,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-11-10T09:57:56.617Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.144
+  },
+  "positions": [
+    {
+      "market_id": "6893034",
+      "question": "Will the highest temperature in Ankara be 10°C on November 11?",
+      "bucket_low": 10,
+      "bucket_high": 10,
+      "entry_price": 0.21,
+      "bid_at_entry": 0.18,
+      "spread": 0.03,
+      "shares": 190.48,
+      "cost": 40,
+      "p": 0.56,
+      "ev": 1.6667,
+      "edge": 0.2302,
+      "kelly": 0.1134,
+      "forecast_temp": 10.29,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-11-10T09:57:56.617Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.144
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -235,6 +285,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-10T09:57:56.617Z",
+      "horizon": "D+1",
+      "hours_left": 26,
+      "ecmwf": 10.3,
+      "hrrr": 10.4,
+      "metar": null,
+      "best": 10.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.3,
+          "gfs_seamless": 10.4,
+          "icon_seamless": 9.1
+        },
+        "mean": 10.1,
+        "spread": 1,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          11.3,
+          9.5,
+          9.1,
+          9.8,
+          9.9,
+          9.8,
+          11.2,
+          10.5,
+          10.4,
+          9,
+          10.1,
+          9.9,
+          9.6,
+          9.9,
+          10.9,
+          10.4,
+          10.4,
+          10.8,
+          11.1,
+          9.9,
+          8.3,
+          10.4,
+          11.4,
+          10.5,
+          11.4,
+          10.7,
+          9.4,
+          11.1,
+          9.6,
+          10.3,
+          10.6,
+          9.6,
+          10.2,
+          10.6,
+          10.8,
+          10.4,
+          10.3,
+          7.8,
+          9.8,
+          9.2,
+          11.1,
+          9.7,
+          11.2,
+          10.5,
+          9.2,
+          10.4,
+          10.6,
+          10.2,
+          9.5,
+          9.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -261,6 +385,14 @@
       "top2_bucket": "9-10C",
       "top2_price": 0.36,
       "top2_sum": 0.645
+    },
+    {
+      "ts": "2026-11-10T09:57:56.617Z",
+      "top_bucket": "9-9C",
+      "top_price": 0.39,
+      "top2_bucket": "8-9C",
+      "top2_price": 0.39,
+      "top2_sum": 0.64
     }
   ],
   "all_outcomes": [
@@ -271,11 +403,11 @@
         -999,
         3
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 110
+      "volume": 165
     },
     {
       "question": "Will the highest temperature in Ankara be 4°C on November 11?",
@@ -297,11 +429,11 @@
         5,
         5
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 10
+      "volume": 165
     },
     {
       "question": "Will the highest temperature in Ankara be 6°C on November 11?",
@@ -310,11 +442,11 @@
         6,
         6
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 20
+      "volume": 70
     },
     {
       "question": "Will the highest temperature in Ankara be 7°C on November 11?",
@@ -323,9 +455,9 @@
         7,
         7
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.0625,
+      "ask": 0.0625,
+      "price": 0.0625,
       "spread": 0,
       "volume": 0
     },
@@ -336,11 +468,11 @@
         8,
         8
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.25,
+      "ask": 0.25,
+      "price": 0.25,
       "spread": 0,
-      "volume": 326
+      "volume": 1036
     },
     {
       "question": "Will the highest temperature in Ankara be 9°C on November 11?",
@@ -349,11 +481,11 @@
         9,
         9
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.39,
+      "ask": 0.39,
+      "price": 0.39,
       "spread": 0,
-      "volume": 172
+      "volume": 261
     },
     {
       "question": "Will the highest temperature in Ankara be 10°C on November 11?",
@@ -362,11 +494,11 @@
         10,
         10
       ],
-      "bid": 0.36,
-      "ask": 0.36,
-      "price": 0.36,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
-      "volume": 171
+      "volume": 760
     },
     {
       "question": "Will the highest temperature in Ankara be 11°C on November 11?",
@@ -375,11 +507,11 @@
         11,
         11
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.042,
+      "ask": 0.042,
+      "price": 0.042,
       "spread": 0,
-      "volume": 243
+      "volume": 607
     },
     {
       "question": "Will the highest temperature in Ankara be 12°C on November 11?",
@@ -388,11 +520,11 @@
         12,
         12
       ],
-      "bid": 0.0405,
-      "ask": 0.0405,
-      "price": 0.0405,
+      "bid": 0.0235,
+      "ask": 0.0235,
+      "price": 0.0235,
       "spread": 0,
-      "volume": 32
+      "volume": 33
     },
     {
       "question": "Will the highest temperature in Ankara be 13°C or higher on November 11?",
@@ -401,9 +533,9 @@
         13,
         999
       ],
-      "bid": 0.014,
-      "ask": 0.014,
-      "price": 0.014,
+      "bid": 0.0095,
+      "ask": 0.0095,
+      "price": 0.0095,
       "spread": 0,
       "volume": 0
     }
