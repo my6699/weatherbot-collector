@@ -6,10 +6,10 @@
   "station": "CYYZ",
   "event_end_date": "2026-11-10T12:00:00Z",
   "hours_at_discovery": 42.9,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 16,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -608,6 +608,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-10T23:28:15.416Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 13.8,
+      "hrrr": 16.1,
+      "metar": 11,
+      "best": 14.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 13.8,
+          "gfs_seamless": 16.1,
+          "icon_seamless": 15.5
+        },
+        "mean": 14.8,
+        "spread": 1.3,
+        "gap": 2.3,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          13.4,
+          13.6,
+          13.4,
+          14.3,
+          14.1,
+          13.5,
+          13.6,
+          13.7,
+          14.1,
+          13.5,
+          13.7,
+          14.1,
+          13.6,
+          13.9,
+          13.6,
+          14,
+          13.8,
+          13.6,
+          13.8,
+          14.3,
+          13.3,
+          13.1,
+          13.8,
+          14.2,
+          13.5,
+          13.9,
+          14.3,
+          13.5,
+          13,
+          13.3,
+          14,
+          13.8,
+          13.6,
+          14.3,
+          13.6,
+          13.6,
+          14.1,
+          13.6,
+          14.2,
+          13.3,
+          14.2,
+          14.3,
+          13.4,
+          14.1,
+          13.6,
+          13.8,
+          14.1,
+          13.7,
+          14.1,
+          14
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -674,6 +749,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.1,
       "top2_sum": 0.93
+    },
+    {
+      "ts": "2026-11-10T23:28:15.416Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.9995,
+      "top2_bucket": "15-16C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -766,7 +849,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5639
+      "volume": 5897
     },
     {
       "question": "Will the highest temperature in Toronto be 15°C on November 10?",
@@ -775,11 +858,11 @@
         15,
         15
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3145
+      "volume": 3965
     },
     {
       "question": "Will the highest temperature in Toronto be 16°C on November 10?",
@@ -788,11 +871,11 @@
         16,
         16
       ],
-      "bid": 0.83,
-      "ask": 0.83,
-      "price": 0.83,
-      "spread": 0,
-      "volume": 2606
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 4068
     },
     {
       "question": "Will the highest temperature in Toronto be 17°C on November 10?",
@@ -801,11 +884,11 @@
         17,
         17
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2274
+      "volume": 3391
     },
     {
       "question": "Will the highest temperature in Toronto be 18°C or higher on November 10?",
@@ -814,11 +897,11 @@
         18,
         999
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 767
+      "volume": 1593
     }
   ],
   "created_at": "2026-11-08T17:08:30.536Z"

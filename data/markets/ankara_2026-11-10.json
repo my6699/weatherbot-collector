@@ -6,10 +6,10 @@
   "station": "LTAC",
   "event_end_date": "2026-11-10T12:00:00Z",
   "hours_at_discovery": 49.5,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 2,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -612,6 +612,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-10T23:28:04.404Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 2,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -678,6 +689,14 @@
       "top2_bucket": "2-3C",
       "top2_price": 0.06,
       "top2_sum": 0.991
+    },
+    {
+      "ts": "2026-11-10T23:28:04.404Z",
+      "top_bucket": "2-2C",
+      "top_price": 1,
+      "top2_bucket": "1-2C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -688,9 +707,9 @@
         -999,
         0
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 715
     },
@@ -701,9 +720,9 @@
         1,
         1
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1552
     },
@@ -714,11 +733,11 @@
         2,
         2
       ],
-      "bid": 0.931,
-      "ask": 0.931,
-      "price": 0.931,
-      "spread": 0,
-      "volume": 3499
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 4647
     },
     {
       "question": "Will the highest temperature in Ankara be 3°C on November 10?",
@@ -727,11 +746,11 @@
         3,
         3
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2341
+      "volume": 2941
     },
     {
       "question": "Will the highest temperature in Ankara be 4°C on November 10?",
@@ -740,11 +759,11 @@
         4,
         4
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2962
+      "volume": 3195
     },
     {
       "question": "Will the highest temperature in Ankara be 5°C on November 10?",
@@ -753,11 +772,11 @@
         5,
         5
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3267
+      "volume": 3460
     },
     {
       "question": "Will the highest temperature in Ankara be 6°C on November 10?",
@@ -766,11 +785,11 @@
         6,
         6
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1775
+      "volume": 2063
     },
     {
       "question": "Will the highest temperature in Ankara be 7°C on November 10?",
@@ -779,9 +798,9 @@
         7,
         7
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1802
     },
@@ -792,9 +811,9 @@
         8,
         8
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1058
     },
@@ -805,9 +824,9 @@
         9,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 322
     },
@@ -818,12 +837,13 @@
         10,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 262
     }
   ],
-  "created_at": "2026-11-08T10:30:26.007Z"
+  "created_at": "2026-11-08T10:30:26.007Z",
+  "metar_max": -2
 }

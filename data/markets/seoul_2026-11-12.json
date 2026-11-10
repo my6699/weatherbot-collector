@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.16
+      "stop_price": 0.16,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -210,6 +211,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-10T23:28:05.463Z",
+      "horizon": "D+2",
+      "hours_left": 36.5,
+      "ecmwf": 14.8,
+      "hrrr": 15.6,
+      "metar": null,
+      "best": 15.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14.8,
+          "gfs_seamless": 15.6,
+          "icon_seamless": 15.8
+        },
+        "mean": 15.2,
+        "spread": 0.6,
+        "gap": 0.8,
+        "llmEnhanced": false,
+        "membersMax": [
+          15,
+          14,
+          14.2,
+          14.3,
+          14.3,
+          14.7,
+          14.5,
+          14.4,
+          14.5,
+          14.9,
+          14.5,
+          14.5,
+          14.9,
+          15.2,
+          14.3,
+          13.9,
+          15.3,
+          14.3,
+          14.5,
+          14.7,
+          14.2,
+          14.6,
+          14.7,
+          14.2,
+          14.2,
+          14.5,
+          14.7,
+          14.8,
+          14.8,
+          14.8,
+          15,
+          14.9,
+          14.9,
+          14.7,
+          15.1,
+          14.5,
+          14.6,
+          15.1,
+          14.7,
+          14.8,
+          15,
+          15.6,
+          15,
+          14.8,
+          15.2,
+          14.7,
+          15,
+          13.8,
+          14.2,
+          14.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -228,6 +303,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.555,
       "top2_sum": 0.76
+    },
+    {
+      "ts": "2026-11-10T23:28:05.463Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.545,
+      "top2_bucket": "16-17C",
+      "top2_price": 0.215,
+      "top2_sum": 0.76
     }
   ],
   "all_outcomes": [
@@ -238,9 +321,9 @@
         -999,
         10
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
       "volume": 103
     },
@@ -251,9 +334,9 @@
         11,
         11
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
       "volume": 83
     },
@@ -264,9 +347,9 @@
         12,
         12
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
       "volume": 3
     },
@@ -277,11 +360,11 @@
         13,
         13
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.01,
+      "ask": 0.01,
+      "price": 0.01,
       "spread": 0,
-      "volume": 3
+      "volume": 241
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 14°C on November 12?",
@@ -290,11 +373,11 @@
         14,
         14
       ],
-      "bid": 0.0345,
-      "ask": 0.0345,
-      "price": 0.0345,
+      "bid": 0.0245,
+      "ask": 0.0245,
+      "price": 0.0245,
       "spread": 0,
-      "volume": 213
+      "volume": 227
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 15°C on November 12?",
@@ -307,7 +390,7 @@
       "ask": 0.205,
       "price": 0.205,
       "spread": 0,
-      "volume": 628
+      "volume": 1429
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 16°C on November 12?",
@@ -316,11 +399,11 @@
         16,
         16
       ],
-      "bid": 0.555,
-      "ask": 0.555,
-      "price": 0.555,
+      "bid": 0.545,
+      "ask": 0.545,
+      "price": 0.545,
       "spread": 0,
-      "volume": 264
+      "volume": 314
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 17°C on November 12?",
@@ -329,11 +412,11 @@
         17,
         17
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.215,
+      "ask": 0.215,
+      "price": 0.215,
       "spread": 0,
-      "volume": 33
+      "volume": 296
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 18°C on November 12?",
@@ -342,11 +425,11 @@
         18,
         18
       ],
-      "bid": 0.0185,
-      "ask": 0.0185,
-      "price": 0.0185,
+      "bid": 0.022,
+      "ask": 0.022,
+      "price": 0.022,
       "spread": 0,
-      "volume": 48
+      "volume": 63
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 19°C on November 12?",
@@ -355,11 +438,11 @@
         19,
         19
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 103
+      "volume": 118
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 20°C or higher on November 12?",

@@ -6,10 +6,10 @@
   "station": "LFPG",
   "event_end_date": "2026-11-10T12:00:00Z",
   "hours_at_discovery": 49.5,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 12,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -683,6 +683,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-10T23:28:01.411Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 12,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -757,6 +768,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.59,
       "top2_sum": 0.945
+    },
+    {
+      "ts": "2026-11-10T23:28:01.411Z",
+      "top_bucket": "12-12C",
+      "top_price": 1,
+      "top2_bucket": "11-12C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -767,9 +786,9 @@
         -999,
         8
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2306
     },
@@ -780,9 +799,9 @@
         9,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2119
     },
@@ -793,11 +812,11 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4427
+      "volume": 4595
     },
     {
       "question": "Will the highest temperature in Paris be 11°C on November 10?",
@@ -806,9 +825,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 6557
     },
@@ -819,11 +838,11 @@
         12,
         12
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
-      "spread": 0,
-      "volume": 7176
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 13902
     },
     {
       "question": "Will the highest temperature in Paris be 13°C on November 10?",
@@ -832,11 +851,11 @@
         13,
         13
       ],
-      "bid": 0.59,
-      "ask": 0.59,
-      "price": 0.59,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4907
+      "volume": 8075
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on November 10?",
@@ -845,11 +864,11 @@
         14,
         14
       ],
-      "bid": 0.058,
-      "ask": 0.058,
-      "price": 0.058,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7228
+      "volume": 9308
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on November 10?",
@@ -858,11 +877,11 @@
         15,
         15
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3434
+      "volume": 3916
     },
     {
       "question": "Will the highest temperature in Paris be 16°C on November 10?",
@@ -871,11 +890,11 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 731
+      "volume": 762
     },
     {
       "question": "Will the highest temperature in Paris be 17°C on November 10?",
@@ -884,9 +903,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 902
     },
@@ -897,12 +916,13 @@
         18,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2217
     }
   ],
-  "created_at": "2026-11-08T10:30:22.049Z"
+  "created_at": "2026-11-08T10:30:22.049Z",
+  "metar_max": 7
 }
