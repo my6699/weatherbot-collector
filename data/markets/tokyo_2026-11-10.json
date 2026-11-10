@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-11-10T12:00:00Z",
   "hours_at_discovery": 49.5,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 12,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -609,6 +609,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-10T17:55:24.582Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 10,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -675,6 +686,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.0155,
       "top2_sum": 0.99
+    },
+    {
+      "ts": "2026-11-10T17:55:24.582Z",
+      "top_bucket": "12-12C",
+      "top_price": 1,
+      "top2_bucket": "11-12C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -685,9 +704,9 @@
         -999,
         8
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1986
     },
@@ -698,9 +717,9 @@
         9,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1321
     },
@@ -711,9 +730,9 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 4468
     },
@@ -724,11 +743,11 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 9200
+      "volume": 9205
     },
     {
       "question": "Will the highest temperature in Tokyo be 12°C on November 10?",
@@ -737,11 +756,11 @@
         12,
         12
       ],
-      "bid": 0.9745,
-      "ask": 0.9745,
-      "price": 0.9745,
-      "spread": 0,
-      "volume": 6243
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 8427
     },
     {
       "question": "Will the highest temperature in Tokyo be 13°C on November 10?",
@@ -750,11 +769,11 @@
         13,
         13
       ],
-      "bid": 0.0155,
-      "ask": 0.0155,
-      "price": 0.0155,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6279
+      "volume": 7079
     },
     {
       "question": "Will the highest temperature in Tokyo be 14°C on November 10?",
@@ -763,11 +782,11 @@
         14,
         14
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8364
+      "volume": 8676
     },
     {
       "question": "Will the highest temperature in Tokyo be 15°C on November 10?",
@@ -776,11 +795,11 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4640
+      "volume": 4948
     },
     {
       "question": "Will the highest temperature in Tokyo be 16°C on November 10?",
@@ -789,11 +808,11 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2161
+      "volume": 2163
     },
     {
       "question": "Will the highest temperature in Tokyo be 17°C on November 10?",
@@ -802,9 +821,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1257
     },
@@ -815,12 +834,13 @@
         18,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 992
     }
   ],
-  "created_at": "2026-11-08T10:30:29.067Z"
+  "created_at": "2026-11-08T10:30:29.067Z",
+  "metar_max": 12
 }

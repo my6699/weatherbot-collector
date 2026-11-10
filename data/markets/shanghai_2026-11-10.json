@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-11-10T12:00:00Z",
   "hours_at_discovery": 49.5,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 15,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -610,6 +610,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-10T17:55:26.046Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 9,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -676,6 +687,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-11-10T17:55:26.046Z",
+      "top_bucket": "15-15C",
+      "top_price": 1,
+      "top2_bucket": "14-15C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -686,9 +705,9 @@
         -999,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 800
     },
@@ -699,11 +718,11 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2254
+      "volume": 2256
     },
     {
       "question": "Will the highest temperature in Shanghai be 13°C on November 10?",
@@ -712,11 +731,11 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 7247
+      "volume": 7248
     },
     {
       "question": "Will the highest temperature in Shanghai be 14°C on November 10?",
@@ -725,11 +744,11 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6303
+      "volume": 6305
     },
     {
       "question": "Will the highest temperature in Shanghai be 15°C on November 10?",
@@ -738,11 +757,11 @@
         15,
         15
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 7878
+      "price": 1,
+      "spread": -0.001,
+      "volume": 8250
     },
     {
       "question": "Will the highest temperature in Shanghai be 16°C on November 10?",
@@ -751,11 +770,11 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 8128
+      "volume": 8346
     },
     {
       "question": "Will the highest temperature in Shanghai be 17°C on November 10?",
@@ -764,11 +783,11 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6398
+      "volume": 6554
     },
     {
       "question": "Will the highest temperature in Shanghai be 18°C on November 10?",
@@ -777,11 +796,11 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1928
+      "volume": 2080
     },
     {
       "question": "Will the highest temperature in Shanghai be 19°C on November 10?",
@@ -790,9 +809,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 498
     },
@@ -803,9 +822,9 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 391
     },
@@ -816,12 +835,13 @@
         21,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 755
     }
   ],
-  "created_at": "2026-11-08T10:30:30.355Z"
+  "created_at": "2026-11-08T10:30:30.355Z",
+  "metar_max": 11
 }
