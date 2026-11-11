@@ -6,10 +6,10 @@
   "station": "SBGR",
   "event_end_date": "2026-11-11T12:00:00Z",
   "hours_at_discovery": 41.1,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 30,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -532,6 +532,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-11T22:01:58.777Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 27.1,
+      "hrrr": 25.5,
+      "metar": 20,
+      "best": 26.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.1,
+          "gfs_seamless": 25.5,
+          "icon_seamless": 27.1
+        },
+        "mean": 26.6,
+        "spread": 1.1,
+        "gap": 1.6,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          26.8,
+          26.6,
+          27,
+          27.1,
+          27.6,
+          25.7,
+          26.5,
+          28.3,
+          27.2,
+          28.2,
+          26,
+          26.1,
+          26.5,
+          24.9,
+          27,
+          26.6,
+          26.6,
+          26.2,
+          26.6,
+          26.3,
+          26,
+          25.7,
+          26.1,
+          27,
+          26.4,
+          27.3,
+          26.7,
+          27.6,
+          26.1,
+          27.4,
+          27.2,
+          26.9,
+          26.5,
+          25.6,
+          27.1,
+          26.4,
+          26.1,
+          26.7,
+          27.4,
+          27.7,
+          25.9,
+          26.4,
+          26.9,
+          27.5,
+          25,
+          26.3,
+          26.7,
+          25.5,
+          27,
+          26.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -590,6 +665,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.44,
       "top2_sum": 0.83
+    },
+    {
+      "ts": "2026-11-11T22:01:58.777Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.9995,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -652,11 +735,11 @@
         25,
         25
       ],
-      "bid": 0.019,
-      "ask": 0.019,
-      "price": 0.019,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 359
+      "volume": 903
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 26°C on November 11?",
@@ -665,11 +748,11 @@
         26,
         26
       ],
-      "bid": 0.086,
-      "ask": 0.086,
-      "price": 0.086,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2978
+      "volume": 6000
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 27°C on November 11?",
@@ -678,11 +761,11 @@
         27,
         27
       ],
-      "bid": 0.39,
-      "ask": 0.39,
-      "price": 0.39,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1682
+      "volume": 2782
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 28°C on November 11?",
@@ -691,11 +774,11 @@
         28,
         28
       ],
-      "bid": 0.44,
-      "ask": 0.44,
-      "price": 0.44,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2973
+      "volume": 6817
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 29°C on November 11?",
@@ -704,11 +787,11 @@
         29,
         29
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1493
+      "volume": 10152
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 30°C on November 11?",
@@ -717,11 +800,11 @@
         30,
         30
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
-      "spread": 0,
-      "volume": 2092
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 6492
     },
     {
       "question": "Will the highest temperature in Sao Paulo be 31°C or higher on November 11?",
@@ -730,12 +813,13 @@
         31,
         999
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1342
+      "volume": 3860
     }
   ],
-  "created_at": "2026-11-09T18:53:10.250Z"
+  "created_at": "2026-11-09T18:53:10.250Z",
+  "metar_max": 17
 }
