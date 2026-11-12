@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-13T12:00:00Z",
   "hours_at_discovery": 53.4,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6955030",
+    "question": "Will the highest temperature in Lucknow be 31°C on November 13?",
+    "bucket_low": 31,
+    "bucket_high": 31,
+    "entry_price": 0.14,
+    "bid_at_entry": 0.12,
+    "spread": 0.02,
+    "shares": 285.71,
+    "cost": 40,
+    "p": 0.76,
+    "ev": 4.4286,
+    "edge": 0.4812,
+    "kelly": 0.181,
+    "forecast_temp": 30.99,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-11-12T20:02:54.720Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.096
+  },
+  "positions": [
+    {
+      "market_id": "6955030",
+      "question": "Will the highest temperature in Lucknow be 31°C on November 13?",
+      "bucket_low": 31,
+      "bucket_high": 31,
+      "entry_price": 0.14,
+      "bid_at_entry": 0.12,
+      "spread": 0.02,
+      "shares": 285.71,
+      "cost": 40,
+      "p": 0.76,
+      "ev": 4.4286,
+      "edge": 0.4812,
+      "kelly": 0.181,
+      "forecast_temp": 30.99,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-11-12T20:02:54.720Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.096
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -384,6 +434,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-12T20:02:54.720Z",
+      "horizon": "D+1",
+      "hours_left": 16,
+      "ecmwf": 30.7,
+      "hrrr": 29.7,
+      "metar": null,
+      "best": 30.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 30.7,
+          "gfs_seamless": 29.7,
+          "icon_seamless": 29.4
+        },
+        "mean": 30.1,
+        "spread": 0.7,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          30.5,
+          30.4,
+          30.4,
+          30.9,
+          30.3,
+          30.5,
+          30.5,
+          30.7,
+          30.7,
+          30.6,
+          30.6,
+          30.3,
+          30.8,
+          30.2,
+          30.4,
+          30.8,
+          30.6,
+          30.7,
+          30.4,
+          30.7,
+          30.4,
+          30.5,
+          30.6,
+          30.5,
+          30.7,
+          30.7,
+          30.7,
+          30.6,
+          30.6,
+          30.6,
+          30.6,
+          30.3,
+          30.6,
+          31,
+          30.8,
+          30.5,
+          30.6,
+          30.8,
+          30.6,
+          30.3,
+          30.6,
+          30.6,
+          30.6,
+          30.7,
+          30.4,
+          30.8,
+          30.4,
+          30.8,
+          30.6,
+          30.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -426,6 +550,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.615,
       "top2_sum": 0.905
+    },
+    {
+      "ts": "2026-11-12T20:02:54.720Z",
+      "top_bucket": "30-30C",
+      "top_price": 0.665,
+      "top2_bucket": "29-30C",
+      "top2_price": 0.665,
+      "top2_sum": 0.9
     }
   ],
   "all_outcomes": [
@@ -475,9 +607,9 @@
         27,
         27
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
       "volume": 400
     },
@@ -488,11 +620,11 @@
         28,
         28
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.017,
+      "ask": 0.017,
+      "price": 0.017,
       "spread": 0,
-      "volume": 740
+      "volume": 1023
     },
     {
       "question": "Will the highest temperature in Lucknow be 29°C on November 13?",
@@ -501,11 +633,11 @@
         29,
         29
       ],
-      "bid": 0.29,
-      "ask": 0.29,
-      "price": 0.29,
+      "bid": 0.235,
+      "ask": 0.235,
+      "price": 0.235,
       "spread": 0,
-      "volume": 4465
+      "volume": 4772
     },
     {
       "question": "Will the highest temperature in Lucknow be 30°C on November 13?",
@@ -514,11 +646,11 @@
         30,
         30
       ],
-      "bid": 0.615,
-      "ask": 0.615,
-      "price": 0.615,
+      "bid": 0.665,
+      "ask": 0.665,
+      "price": 0.665,
       "spread": 0,
-      "volume": 2525
+      "volume": 2753
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on November 13?",
@@ -527,11 +659,11 @@
         31,
         31
       ],
-      "bid": 0.085,
-      "ask": 0.085,
-      "price": 0.085,
+      "bid": 0.13,
+      "ask": 0.13,
+      "price": 0.13,
       "spread": 0,
-      "volume": 738
+      "volume": 1044
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C on November 13?",
@@ -540,11 +672,11 @@
         32,
         32
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0165,
+      "ask": 0.0165,
+      "price": 0.0165,
       "spread": 0,
-      "volume": 458
+      "volume": 537
     },
     {
       "question": "Will the highest temperature in Lucknow be 33°C on November 13?",

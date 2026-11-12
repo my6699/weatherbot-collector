@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-13T12:00:00Z",
   "hours_at_discovery": 53.4,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "6955051",
+    "question": "Will the highest temperature in Tel Aviv be 27°C on November 13?",
+    "bucket_low": 27,
+    "bucket_high": 27,
+    "entry_price": 0.12,
+    "bid_at_entry": 0.09,
+    "spread": 0.03,
+    "shares": 333.33,
+    "cost": 40,
+    "p": 0.4,
+    "ev": 2.3333,
+    "edge": 0.1449,
+    "kelly": 0.0824,
+    "forecast_temp": 27.53,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-11-12T20:02:57.046Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.072
+  },
+  "positions": [
+    {
+      "market_id": "6955051",
+      "question": "Will the highest temperature in Tel Aviv be 27°C on November 13?",
+      "bucket_low": 27,
+      "bucket_high": 27,
+      "entry_price": 0.12,
+      "bid_at_entry": 0.09,
+      "spread": 0.03,
+      "shares": 333.33,
+      "cost": 40,
+      "p": 0.4,
+      "ev": 2.3333,
+      "edge": 0.1449,
+      "kelly": 0.0824,
+      "forecast_temp": 27.53,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-11-12T20:02:57.046Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.072
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -385,6 +435,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-12T20:02:57.046Z",
+      "horizon": "D+1",
+      "hours_left": 16,
+      "ecmwf": 27.3,
+      "hrrr": 26.7,
+      "metar": null,
+      "best": 27.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.3,
+          "gfs_seamless": 26.7,
+          "icon_seamless": 28.1
+        },
+        "mean": 27.3,
+        "spread": 0.8,
+        "gap": 0.6,
+        "llmEnhanced": false,
+        "membersMax": [
+          27.5,
+          27.8,
+          27.3,
+          27.4,
+          28.2,
+          28.1,
+          27.4,
+          27.3,
+          28,
+          28.3,
+          27.4,
+          27.4,
+          27.1,
+          28,
+          27.8,
+          27.5,
+          27.7,
+          27.8,
+          27.8,
+          28.5,
+          28,
+          27.9,
+          27,
+          28,
+          27.3,
+          28,
+          27.1,
+          27.8,
+          27.9,
+          27.7,
+          28,
+          27.8,
+          27.5,
+          27.9,
+          28.6,
+          27.3,
+          27.5,
+          28.2,
+          27.9,
+          27.1,
+          28.1,
+          27.5,
+          27.2,
+          28.1,
+          28.2,
+          28.3,
+          27.5,
+          27.7,
+          27.3,
+          28.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -427,6 +551,14 @@
       "top2_bucket": "28-29C",
       "top2_price": 0.335,
       "top2_sum": 0.815
+    },
+    {
+      "ts": "2026-11-12T20:02:57.046Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.47,
+      "top2_bucket": "28-29C",
+      "top2_price": 0.38,
+      "top2_sum": 0.85
     }
   ],
   "all_outcomes": [
@@ -437,11 +569,11 @@
         -999,
         21
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 235
+      "volume": 240
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 22°C on November 13?",
@@ -489,11 +621,11 @@
         25,
         25
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 84
+      "volume": 311
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 26°C on November 13?",
@@ -502,11 +634,11 @@
         26,
         26
       ],
-      "bid": 0.0315,
-      "ask": 0.0315,
-      "price": 0.0315,
+      "bid": 0.0175,
+      "ask": 0.0175,
+      "price": 0.0175,
       "spread": 0,
-      "volume": 340
+      "volume": 1049
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 27°C on November 13?",
@@ -515,11 +647,11 @@
         27,
         27
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.105,
+      "ask": 0.105,
+      "price": 0.105,
       "spread": 0,
-      "volume": 296
+      "volume": 1459
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 28°C on November 13?",
@@ -528,11 +660,11 @@
         28,
         28
       ],
-      "bid": 0.48,
-      "ask": 0.48,
-      "price": 0.48,
+      "bid": 0.47,
+      "ask": 0.47,
+      "price": 0.47,
       "spread": 0,
-      "volume": 607
+      "volume": 1922
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 29°C on November 13?",
@@ -541,11 +673,11 @@
         29,
         29
       ],
-      "bid": 0.335,
-      "ask": 0.335,
-      "price": 0.335,
+      "bid": 0.38,
+      "ask": 0.38,
+      "price": 0.38,
       "spread": 0,
-      "volume": 718
+      "volume": 1601
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 30°C on November 13?",
@@ -554,11 +686,11 @@
         30,
         30
       ],
-      "bid": 0.049,
-      "ask": 0.049,
-      "price": 0.049,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 394
+      "volume": 1331
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 31°C or higher on November 13?",
@@ -567,11 +699,11 @@
         31,
         999
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 129
+      "volume": 429
     }
   ],
   "created_at": "2026-11-11T06:37:17.823Z"
