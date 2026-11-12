@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.104
+      "stop_price": 0.104,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -284,6 +285,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-12T03:06:11.807Z",
+      "horizon": "D+1",
+      "hours_left": 32.9,
+      "ecmwf": 6.8,
+      "hrrr": 7.5,
+      "metar": null,
+      "best": 7.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 6.8,
+          "gfs_seamless": 7.5,
+          "icon_seamless": 7.6
+        },
+        "mean": 7.2,
+        "spread": 0.4,
+        "gap": 0.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          7.3,
+          6.5,
+          6.7,
+          6.6,
+          6.8,
+          6.7,
+          6.4,
+          6.8,
+          6.3,
+          6.6,
+          6.7,
+          6.4,
+          6.8,
+          6.3,
+          7,
+          6.8,
+          6.4,
+          6.8,
+          6.8,
+          6.6,
+          6.9,
+          6.6,
+          7,
+          6.3,
+          6.6,
+          6.4,
+          6.4,
+          6.7,
+          6.5,
+          6.1,
+          6.6,
+          6.8,
+          6.8,
+          6.8,
+          6.7,
+          7,
+          6.1,
+          6.9,
+          6.7,
+          6.8,
+          6.6,
+          6.4,
+          6.8,
+          7.2,
+          6.5,
+          6.8,
+          6.4,
+          6.6,
+          6.4,
+          6.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -310,6 +385,14 @@
       "top2_bucket": "8-9C",
       "top2_price": 0.32,
       "top2_sum": 0.83
+    },
+    {
+      "ts": "2026-11-12T03:06:11.807Z",
+      "top_bucket": "8-8C",
+      "top_price": 0.58,
+      "top2_bucket": "8-9C",
+      "top2_price": 0.265,
+      "top2_sum": 0.845
     }
   ],
   "all_outcomes": [
@@ -350,7 +433,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 45
+      "volume": 46
     },
     {
       "question": "Will the highest temperature in London be 4°C on November 13?",
@@ -359,11 +442,11 @@
         4,
         4
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 135
+      "volume": 162
     },
     {
       "question": "Will the highest temperature in London be 5°C on November 13?",
@@ -372,11 +455,11 @@
         5,
         5
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 5
+      "volume": 125
     },
     {
       "question": "Will the highest temperature in London be 6°C on November 13?",
@@ -385,11 +468,11 @@
         6,
         6
       ],
-      "bid": 0.0165,
-      "ask": 0.0165,
-      "price": 0.0165,
+      "bid": 0.0175,
+      "ask": 0.0175,
+      "price": 0.0175,
       "spread": 0,
-      "volume": 226
+      "volume": 263
     },
     {
       "question": "Will the highest temperature in London be 7°C on November 13?",
@@ -398,11 +481,11 @@
         7,
         7
       ],
-      "bid": 0.14,
-      "ask": 0.14,
-      "price": 0.14,
+      "bid": 0.155,
+      "ask": 0.155,
+      "price": 0.155,
       "spread": 0,
-      "volume": 738
+      "volume": 871
     },
     {
       "question": "Will the highest temperature in London be 8°C on November 13?",
@@ -411,11 +494,11 @@
         8,
         8
       ],
-      "bid": 0.51,
-      "ask": 0.51,
-      "price": 0.51,
+      "bid": 0.58,
+      "ask": 0.58,
+      "price": 0.58,
       "spread": 0,
-      "volume": 1412
+      "volume": 1542
     },
     {
       "question": "Will the highest temperature in London be 9°C on November 13?",
@@ -424,11 +507,11 @@
         9,
         9
       ],
-      "bid": 0.32,
-      "ask": 0.32,
-      "price": 0.32,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 766
+      "volume": 1044
     },
     {
       "question": "Will the highest temperature in London be 10°C on November 13?",
@@ -437,11 +520,11 @@
         10,
         10
       ],
-      "bid": 0.0125,
-      "ask": 0.0125,
-      "price": 0.0125,
+      "bid": 0.0115,
+      "ask": 0.0115,
+      "price": 0.0115,
       "spread": 0,
-      "volume": 513
+      "volume": 523
     },
     {
       "question": "Will the highest temperature in London be 11°C or higher on November 13?",
@@ -450,9 +533,9 @@
         11,
         999
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 175
     }
