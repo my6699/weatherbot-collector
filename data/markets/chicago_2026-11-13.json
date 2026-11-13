@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 3.1,
       "opened_at": "2026-11-12T20:01:37.433Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 10,
+      "exit_price": 0.15,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-11-13T01:09:46.849Z",
       "stop_price": 0.072
     }
   ],
@@ -435,6 +435,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-13T01:09:46.849Z",
+      "horizon": "D+0",
+      "hours_left": 10.8,
+      "ecmwf": 43,
+      "hrrr": 42,
+      "metar": 40,
+      "best": 42.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 43,
+          "gfs_seamless": 42,
+          "icon_seamless": 43
+        },
+        "mean": 42.7,
+        "spread": 0.7,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          44,
+          44,
+          43,
+          43,
+          43,
+          44,
+          43,
+          43,
+          44,
+          43,
+          43,
+          43,
+          43,
+          43,
+          42,
+          43,
+          42,
+          43,
+          43,
+          43,
+          44,
+          44,
+          42,
+          43,
+          44,
+          43,
+          44,
+          43,
+          44,
+          43,
+          44,
+          43,
+          44,
+          43,
+          43,
+          43,
+          42,
+          44,
+          43,
+          44,
+          45,
+          43,
+          44,
+          43,
+          44,
+          44,
+          42,
+          43,
+          44,
+          44
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -477,6 +551,14 @@
       "top2_bucket": "40-43F",
       "top2_price": 0.5835,
       "top2_sum": 0.8685
+    },
+    {
+      "ts": "2026-11-13T01:09:46.849Z",
+      "top_bucket": "42-43F",
+      "top_price": 0.5945,
+      "top2_bucket": "40-43F",
+      "top2_price": 0.5945,
+      "top2_sum": 0.8395
     }
   ],
   "all_outcomes": [
@@ -487,9 +569,9 @@
         -999,
         33
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 250
     },
@@ -500,11 +582,11 @@
         34,
         35
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 336
+      "volume": 551
     },
     {
       "question": "Will the highest temperature in Chicago be between 36-37°F on November 13?",
@@ -513,11 +595,11 @@
         36,
         37
       ],
-      "bid": 0.006,
-      "ask": 0.006,
-      "price": 0.006,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 430
+      "volume": 449
     },
     {
       "question": "Will the highest temperature in Chicago be between 38-39°F on November 13?",
@@ -526,11 +608,11 @@
         38,
         39
       ],
-      "bid": 0.0425,
-      "ask": 0.0425,
-      "price": 0.0425,
+      "bid": 0.0295,
+      "ask": 0.0295,
+      "price": 0.0295,
       "spread": 0,
-      "volume": 925
+      "volume": 944
     },
     {
       "question": "Will the highest temperature in Chicago be between 40-41°F on November 13?",
@@ -539,11 +621,11 @@
         40,
         41
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.245,
+      "ask": 0.245,
+      "price": 0.245,
       "spread": 0,
-      "volume": 1876
+      "volume": 2242
     },
     {
       "question": "Will the highest temperature in Chicago be between 42-43°F on November 13?",
@@ -552,11 +634,11 @@
         42,
         43
       ],
-      "bid": 0.5835,
-      "ask": 0.5835,
-      "price": 0.5835,
+      "bid": 0.5945,
+      "ask": 0.5945,
+      "price": 0.5945,
       "spread": 0,
-      "volume": 1651
+      "volume": 1724
     },
     {
       "question": "Will the highest temperature in Chicago be between 44-45°F on November 13?",
@@ -565,11 +647,11 @@
         44,
         45
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.15,
+      "ask": 0.15,
+      "price": 0.15,
       "spread": 0,
-      "volume": 1919
+      "volume": 2143
     },
     {
       "question": "Will the highest temperature in Chicago be between 46-47°F on November 13?",
@@ -578,11 +660,11 @@
         46,
         47
       ],
-      "bid": 0.0145,
-      "ask": 0.0145,
-      "price": 0.0145,
+      "bid": 0.016,
+      "ask": 0.016,
+      "price": 0.016,
       "spread": 0,
-      "volume": 180
+      "volume": 199
     },
     {
       "question": "Will the highest temperature in Chicago be between 48-49°F on November 13?",
@@ -591,11 +673,11 @@
         48,
         49
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 426
+      "volume": 464
     },
     {
       "question": "Will the highest temperature in Chicago be between 50-51°F on November 13?",
@@ -604,11 +686,11 @@
         50,
         51
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 819
+      "volume": 1253
     },
     {
       "question": "Will the highest temperature in Chicago be 52°F or higher on November 13?",
