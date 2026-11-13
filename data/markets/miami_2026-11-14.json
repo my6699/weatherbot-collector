@@ -56,7 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.136
+      "stop_price": 0.18,
+      "trailing_activated": true,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -436,6 +438,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-13T22:41:26.212Z",
+      "horizon": "D+1",
+      "hours_left": 13.3,
+      "ecmwf": 70,
+      "hrrr": 70,
+      "metar": null,
+      "best": 70.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 70,
+          "gfs_seamless": 70,
+          "icon_seamless": 71
+        },
+        "mean": 70.2,
+        "spread": 0.8,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          69,
+          71,
+          71,
+          70,
+          71,
+          72,
+          70,
+          69,
+          72,
+          70,
+          71,
+          71,
+          72,
+          72,
+          71,
+          69,
+          71,
+          70,
+          71,
+          70,
+          70,
+          69,
+          70,
+          69,
+          72,
+          72,
+          71,
+          70,
+          69,
+          70,
+          70,
+          69,
+          70,
+          72,
+          71,
+          70,
+          70,
+          70,
+          71,
+          69,
+          71,
+          70,
+          69,
+          70,
+          69,
+          71,
+          71,
+          71,
+          69,
+          71
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -478,6 +554,14 @@
       "top2_bucket": "72-75F",
       "top2_price": 0.275,
       "top2_sum": 0.81
+    },
+    {
+      "ts": "2026-11-13T22:41:26.212Z",
+      "top_bucket": "72-73F",
+      "top_price": 0.57,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.57,
+      "top2_sum": 0.835
     }
   ],
   "all_outcomes": [
@@ -540,11 +624,11 @@
         68,
         69
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
-      "volume": 1316
+      "volume": 1389
     },
     {
       "question": "Will the highest temperature in Miami be between 70-71°F on November 14?",
@@ -553,11 +637,11 @@
         70,
         71
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.265,
+      "ask": 0.265,
+      "price": 0.265,
       "spread": 0,
-      "volume": 2451
+      "volume": 3107
     },
     {
       "question": "Will the highest temperature in Miami be between 72-73°F on November 14?",
@@ -566,11 +650,11 @@
         72,
         73
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
+      "bid": 0.57,
+      "ask": 0.57,
+      "price": 0.57,
       "spread": 0,
-      "volume": 3318
+      "volume": 3606
     },
     {
       "question": "Will the highest temperature in Miami be between 74-75°F on November 14?",
@@ -579,11 +663,11 @@
         74,
         75
       ],
-      "bid": 0.275,
-      "ask": 0.275,
-      "price": 0.275,
+      "bid": 0.17,
+      "ask": 0.17,
+      "price": 0.17,
       "spread": 0,
-      "volume": 4708
+      "volume": 5116
     },
     {
       "question": "Will the highest temperature in Miami be between 76-77°F on November 14?",
@@ -592,11 +676,11 @@
         76,
         77
       ],
-      "bid": 0.017,
-      "ask": 0.017,
-      "price": 0.017,
+      "bid": 0.011,
+      "ask": 0.011,
+      "price": 0.011,
       "spread": 0,
-      "volume": 1004
+      "volume": 1161
     },
     {
       "question": "Will the highest temperature in Miami be between 78-79°F on November 14?",

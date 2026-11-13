@@ -6,10 +6,10 @@
   "station": "KDAL",
   "event_end_date": "2026-11-13T12:00:00Z",
   "hours_at_discovery": 44.7,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 68.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -608,6 +608,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-13T22:41:27.892Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 68,
+      "hrrr": 69,
+      "metar": 67,
+      "best": 68.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 68,
+          "gfs_seamless": 69,
+          "icon_seamless": 68
+        },
+        "mean": 68.3,
+        "spread": 0.7,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          67,
+          69,
+          67,
+          67,
+          68,
+          68,
+          69,
+          68,
+          67,
+          70,
+          67,
+          68,
+          67,
+          67,
+          68,
+          68,
+          66,
+          69,
+          69,
+          68,
+          66,
+          68,
+          67,
+          70,
+          70,
+          68,
+          67,
+          66,
+          67,
+          69,
+          68,
+          67,
+          69,
+          67,
+          68,
+          68,
+          68,
+          67,
+          68,
+          69,
+          68,
+          68,
+          68,
+          67,
+          67,
+          68,
+          66,
+          67,
+          67,
+          69
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -674,6 +748,14 @@
       "top2_bucket": "68-71F",
       "top2_price": 0.24,
       "top2_sum": 0.865
+    },
+    {
+      "ts": "2026-11-13T22:41:27.892Z",
+      "top_bucket": "68-69F",
+      "top_price": 0.993,
+      "top2_bucket": "68-71F",
+      "top2_price": 0.0025,
+      "top2_sum": 0.9955
     }
   ],
   "all_outcomes": [
@@ -684,9 +766,9 @@
         -999,
         61
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 307
     },
@@ -697,11 +779,11 @@
         62,
         63
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 945
+      "volume": 1240
     },
     {
       "question": "Will the highest temperature in Dallas be between 64-65°F on November 13?",
@@ -710,11 +792,11 @@
         64,
         65
       ],
-      "bid": 0.0345,
-      "ask": 0.0345,
-      "price": 0.0345,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2539
+      "volume": 3568
     },
     {
       "question": "Will the highest temperature in Dallas be between 66-67°F on November 13?",
@@ -723,11 +805,11 @@
         66,
         67
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4455
+      "volume": 6368
     },
     {
       "question": "Will the highest temperature in Dallas be between 68-69°F on November 13?",
@@ -736,11 +818,11 @@
         68,
         69
       ],
-      "bid": 0.625,
-      "ask": 0.625,
-      "price": 0.625,
+      "bid": 0.993,
+      "ask": 0.993,
+      "price": 0.993,
       "spread": 0,
-      "volume": 7329
+      "volume": 8561
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on November 13?",
@@ -749,11 +831,11 @@
         70,
         71
       ],
-      "bid": 0.24,
-      "ask": 0.24,
-      "price": 0.24,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 6883
+      "volume": 8009
     },
     {
       "question": "Will the highest temperature in Dallas be between 72-73°F on November 13?",
@@ -762,11 +844,11 @@
         72,
         73
       ],
-      "bid": 0.0185,
-      "ask": 0.0185,
-      "price": 0.0185,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1924
+      "volume": 2742
     },
     {
       "question": "Will the highest temperature in Dallas be between 74-75°F on November 13?",
@@ -775,11 +857,11 @@
         74,
         75
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 727
+      "volume": 1173
     },
     {
       "question": "Will the highest temperature in Dallas be between 76-77°F on November 13?",
