@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-11-13T12:00:00Z",
   "hours_at_discovery": 53.4,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 20,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -610,6 +610,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-13T16:31:08.846Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 18,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -676,6 +687,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.0045,
       "top2_sum": 0.9975
+    },
+    {
+      "ts": "2026-11-13T16:31:08.846Z",
+      "top_bucket": "20-20C",
+      "top_price": 1,
+      "top2_bucket": "19-20C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -686,9 +705,9 @@
         -999,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 174
     },
@@ -699,9 +718,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 185
     },
@@ -712,9 +731,9 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 233
     },
@@ -725,9 +744,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 374
     },
@@ -738,9 +757,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1041
     },
@@ -751,11 +770,11 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6900
+      "volume": 7081
     },
     {
       "question": "Will the highest temperature in Shanghai be 19°C on November 13?",
@@ -764,11 +783,11 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 11926
+      "volume": 21926
     },
     {
       "question": "Will the highest temperature in Shanghai be 20°C on November 13?",
@@ -777,11 +796,11 @@
         20,
         20
       ],
-      "bid": 0.993,
-      "ask": 0.993,
-      "price": 0.993,
-      "spread": 0,
-      "volume": 9895
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 12494
     },
     {
       "question": "Will the highest temperature in Shanghai be 21°C on November 13?",
@@ -790,11 +809,11 @@
         21,
         21
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6667
+      "volume": 8798
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on November 13?",
@@ -803,11 +822,11 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2154
+      "volume": 2904
     },
     {
       "question": "Will the highest temperature in Shanghai be 23°C or higher on November 13?",
@@ -816,12 +835,13 @@
         23,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1328
+      "volume": 1435
     }
   ],
-  "created_at": "2026-11-11T06:37:12.006Z"
+  "created_at": "2026-11-11T06:37:12.006Z",
+  "metar_max": 18
 }
