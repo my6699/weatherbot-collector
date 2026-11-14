@@ -6,7 +6,7 @@
   "station": "KMIA",
   "event_end_date": "2026-11-14T12:00:00Z",
   "hours_at_discovery": 48.6,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6983049",
     "question": "Will the highest temperature in Miami be between 70-71°F on November 14?",
@@ -59,10 +59,11 @@
       "stop_price": 0.18,
       "trailing_activated": true,
       "forecast_change_streak": 0,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 70.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -736,6 +737,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-14T21:32:30.567Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 71,
+      "hrrr": 73,
+      "metar": 70,
+      "best": 71.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 71,
+          "gfs_seamless": 73,
+          "icon_seamless": 72
+        },
+        "mean": 71.8,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          69,
+          70,
+          71,
+          69,
+          71,
+          72,
+          69,
+          68,
+          71,
+          70,
+          71,
+          70,
+          72,
+          72,
+          71,
+          68,
+          71,
+          69,
+          70,
+          70,
+          70,
+          69,
+          70,
+          68,
+          71,
+          72,
+          71,
+          69,
+          68,
+          69,
+          69,
+          69,
+          69,
+          72,
+          71,
+          69,
+          70,
+          69,
+          70,
+          69,
+          70,
+          70,
+          69,
+          70,
+          69,
+          70,
+          71,
+          71,
+          68,
+          70
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -810,6 +885,14 @@
       "top2_bucket": "70-73F",
       "top2_price": 0.54,
       "top2_sum": 0.92
+    },
+    {
+      "ts": "2026-11-14T21:32:30.567Z",
+      "top_bucket": "70-71F",
+      "top_price": 0.993,
+      "top2_bucket": "70-73F",
+      "top2_price": 0.0055,
+      "top2_sum": 0.9985
     }
   ],
   "all_outcomes": [
@@ -872,11 +955,11 @@
         68,
         69
       ],
-      "bid": 0.032,
-      "ask": 0.032,
-      "price": 0.032,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2349
+      "volume": 4175
     },
     {
       "question": "Will the highest temperature in Miami be between 70-71°F on November 14?",
@@ -885,11 +968,11 @@
         70,
         71
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.993,
+      "ask": 0.993,
+      "price": 0.993,
       "spread": 0,
-      "volume": 6185
+      "volume": 7508
     },
     {
       "question": "Will the highest temperature in Miami be between 72-73°F on November 14?",
@@ -898,11 +981,11 @@
         72,
         73
       ],
-      "bid": 0.54,
-      "ask": 0.54,
-      "price": 0.54,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 5231
+      "volume": 6438
     },
     {
       "question": "Will the highest temperature in Miami be between 74-75°F on November 14?",
@@ -911,11 +994,11 @@
         74,
         75
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 6638
+      "volume": 7366
     },
     {
       "question": "Will the highest temperature in Miami be between 76-77°F on November 14?",
@@ -924,11 +1007,11 @@
         76,
         77
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1775
+      "volume": 1848
     },
     {
       "question": "Will the highest temperature in Miami be between 78-79°F on November 14?",

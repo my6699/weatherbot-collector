@@ -6,10 +6,10 @@
   "station": "KORD",
   "event_end_date": "2026-11-14T12:00:00Z",
   "hours_at_discovery": 48.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 46.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -678,6 +678,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-14T21:32:29.729Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 45,
+      "hrrr": 47,
+      "metar": 46,
+      "best": 46,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 45,
+          "gfs_seamless": 47,
+          "icon_seamless": 47
+        },
+        "mean": 46,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          45,
+          44,
+          46,
+          45,
+          45,
+          46,
+          45,
+          46,
+          45,
+          46,
+          45,
+          45,
+          46,
+          46,
+          46,
+          46,
+          45,
+          46,
+          46,
+          47,
+          45,
+          46,
+          46,
+          46,
+          46,
+          46,
+          45,
+          47,
+          45,
+          46,
+          45,
+          46,
+          45,
+          45,
+          45,
+          46,
+          45,
+          45,
+          46,
+          46,
+          46,
+          45,
+          45,
+          45,
+          46,
+          46,
+          47,
+          45,
+          46,
+          46
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -752,6 +826,14 @@
       "top2_bucket": "46-49F",
       "top2_price": 0.27,
       "top2_sum": 0.95
+    },
+    {
+      "ts": "2026-11-14T21:32:29.729Z",
+      "top_bucket": "46-47F",
+      "top_price": 0.9725,
+      "top2_bucket": "46-49F",
+      "top2_price": 0.021,
+      "top2_sum": 0.9935
     }
   ],
   "all_outcomes": [
@@ -801,11 +883,11 @@
         42,
         43
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 895
+      "volume": 907
     },
     {
       "question": "Will the highest temperature in Chicago be between 44-45°F on November 14?",
@@ -814,11 +896,11 @@
         44,
         45
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2083
+      "volume": 2662
     },
     {
       "question": "Will the highest temperature in Chicago be between 46-47°F on November 14?",
@@ -827,11 +909,11 @@
         46,
         47
       ],
-      "bid": 0.68,
-      "ask": 0.68,
-      "price": 0.68,
+      "bid": 0.9725,
+      "ask": 0.9725,
+      "price": 0.9725,
       "spread": 0,
-      "volume": 5993
+      "volume": 6249
     },
     {
       "question": "Will the highest temperature in Chicago be between 48-49°F on November 14?",
@@ -840,11 +922,11 @@
         48,
         49
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.021,
+      "ask": 0.021,
+      "price": 0.021,
       "spread": 0,
-      "volume": 4098
+      "volume": 4423
     },
     {
       "question": "Will the highest temperature in Chicago be between 50-51°F on November 14?",
@@ -853,11 +935,11 @@
         50,
         51
       ],
-      "bid": 0.015,
-      "ask": 0.015,
-      "price": 0.015,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 4357
+      "volume": 4691
     },
     {
       "question": "Will the highest temperature in Chicago be between 52-53°F on November 14?",
@@ -866,9 +948,9 @@
         52,
         53
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 703
     },

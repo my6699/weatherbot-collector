@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-15T12:00:00Z",
   "hours_at_discovery": 51.9,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "7009925",
+    "question": "Will the highest temperature in New York City be between 48-49°F on November 15?",
+    "bucket_low": 48,
+    "bucket_high": 49,
+    "entry_price": 0.22,
+    "bid_at_entry": 0.19,
+    "spread": 0.03,
+    "shares": 181.82,
+    "cost": 40,
+    "p": 0.56,
+    "ev": 1.5455,
+    "edge": 0.2198,
+    "kelly": 0.1108,
+    "forecast_temp": 50.68,
+    "forecast_src": "ensemble",
+    "sigma": 2.8,
+    "opened_at": "2026-11-14T21:32:28.098Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.152
+  },
+  "positions": [
+    {
+      "market_id": "7009925",
+      "question": "Will the highest temperature in New York City be between 48-49°F on November 15?",
+      "bucket_low": 48,
+      "bucket_high": 49,
+      "entry_price": 0.22,
+      "bid_at_entry": 0.19,
+      "spread": 0.03,
+      "shares": 181.82,
+      "cost": 40,
+      "p": 0.56,
+      "ev": 1.5455,
+      "edge": 0.2198,
+      "kelly": 0.1108,
+      "forecast_temp": 50.68,
+      "forecast_src": "ensemble",
+      "sigma": 2.8,
+      "opened_at": "2026-11-14T21:32:28.098Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.152
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -459,6 +509,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-14T21:32:28.098Z",
+      "horizon": "D+1",
+      "hours_left": 14.5,
+      "ecmwf": 50,
+      "hrrr": 46,
+      "metar": null,
+      "best": 48.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 50,
+          "gfs_seamless": 46,
+          "icon_seamless": 50
+        },
+        "mean": 48.8,
+        "spread": 2.8,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          48,
+          49,
+          49,
+          48,
+          48,
+          49,
+          48,
+          49,
+          48,
+          49,
+          50,
+          48,
+          50,
+          50,
+          50,
+          49,
+          50,
+          48,
+          50,
+          50,
+          50,
+          51,
+          49,
+          49,
+          49,
+          50,
+          49,
+          49,
+          51,
+          50,
+          49,
+          50,
+          48,
+          50,
+          50,
+          48,
+          49,
+          50,
+          48,
+          50,
+          50,
+          50,
+          49,
+          49,
+          49,
+          50,
+          51,
+          49,
+          49,
+          50
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -509,6 +634,14 @@
       "top2_bucket": "48-51F",
       "top2_price": 0.69,
       "top2_sum": 0.87
+    },
+    {
+      "ts": "2026-11-14T21:32:28.098Z",
+      "top_bucket": "50-51F",
+      "top_price": 0.715,
+      "top2_bucket": "48-51F",
+      "top2_price": 0.715,
+      "top2_sum": 0.925
     }
   ],
   "all_outcomes": [
@@ -558,9 +691,9 @@
         44,
         45
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0105,
+      "ask": 0.0105,
+      "price": 0.0105,
       "spread": 0,
       "volume": 694
     },
@@ -571,9 +704,9 @@
         46,
         47
       ],
-      "bid": 0.014,
-      "ask": 0.014,
-      "price": 0.014,
+      "bid": 0.0205,
+      "ask": 0.0205,
+      "price": 0.0205,
       "spread": 0,
       "volume": 505
     },
@@ -584,11 +717,11 @@
         48,
         49
       ],
-      "bid": 0.18,
-      "ask": 0.18,
-      "price": 0.18,
+      "bid": 0.21,
+      "ask": 0.21,
+      "price": 0.21,
       "spread": 0,
-      "volume": 2775
+      "volume": 2966
     },
     {
       "question": "Will the highest temperature in New York City be between 50-51°F on November 15?",
@@ -597,11 +730,11 @@
         50,
         51
       ],
-      "bid": 0.69,
-      "ask": 0.69,
-      "price": 0.69,
+      "bid": 0.715,
+      "ask": 0.715,
+      "price": 0.715,
       "spread": 0,
-      "volume": 3659
+      "volume": 3937
     },
     {
       "question": "Will the highest temperature in New York City be between 52-53°F on November 15?",
@@ -610,11 +743,11 @@
         52,
         53
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.07,
+      "ask": 0.07,
+      "price": 0.07,
       "spread": 0,
-      "volume": 1869
+      "volume": 1977
     },
     {
       "question": "Will the highest temperature in New York City be between 54-55°F on November 15?",
@@ -623,9 +756,9 @@
         54,
         55
       ],
-      "bid": 0.0095,
-      "ask": 0.0095,
-      "price": 0.0095,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
       "volume": 474
     },
@@ -636,11 +769,11 @@
         56,
         57
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 165
+      "volume": 203
     },
     {
       "question": "Will the highest temperature in New York City be 58°F or higher on November 15?",

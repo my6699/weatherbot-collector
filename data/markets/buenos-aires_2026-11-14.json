@@ -6,10 +6,10 @@
   "station": "SAEZ",
   "event_end_date": "2026-11-14T12:00:00Z",
   "hours_at_discovery": 48.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 29,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -682,6 +682,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-14T21:33:16.754Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 26.1,
+      "hrrr": 28.8,
+      "metar": 27,
+      "best": 27.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.1,
+          "gfs_seamless": 28.8,
+          "icon_seamless": 27.5
+        },
+        "mean": 27.2,
+        "spread": 1.6,
+        "gap": 2.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          25.9,
+          25.4,
+          25.5,
+          25.4,
+          26.1,
+          25.9,
+          23.6,
+          25,
+          25.2,
+          27.4,
+          24.8,
+          23.9,
+          25.4,
+          25.4,
+          25.4,
+          27.2,
+          26.2,
+          24.9,
+          26.5,
+          25.9,
+          26.5,
+          26.1,
+          25.6,
+          23.9,
+          27.7,
+          24.6,
+          26.9,
+          23.9,
+          25.8,
+          23.7,
+          24.6,
+          25.4,
+          25.5,
+          25.9,
+          25.1,
+          24.4,
+          25.6,
+          27.3,
+          25.8,
+          24.5,
+          23.8,
+          24.7,
+          24.6,
+          25,
+          25.7,
+          26.4,
+          25.6,
+          26.7,
+          23.9,
+          24.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -756,6 +831,14 @@
       "top2_bucket": "28-29C",
       "top2_price": 0.418,
       "top2_sum": 0.918
+    },
+    {
+      "ts": "2026-11-14T21:33:16.754Z",
+      "top_bucket": "29-29C",
+      "top_price": 0.9995,
+      "top2_bucket": "28-29C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -848,7 +931,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1656
+      "volume": 2608
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 28°C on November 14?",
@@ -857,11 +940,11 @@
         28,
         28
       ],
-      "bid": 0.5,
-      "ask": 0.5,
-      "price": 0.5,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1450
+      "volume": 2779
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 29°C on November 14?",
@@ -870,11 +953,11 @@
         29,
         29
       ],
-      "bid": 0.418,
-      "ask": 0.418,
-      "price": 0.418,
-      "spread": 0,
-      "volume": 1438
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 4241
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 30°C on November 14?",
@@ -883,11 +966,11 @@
         30,
         30
       ],
-      "bid": 0.058,
-      "ask": 0.058,
-      "price": 0.058,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2075
+      "volume": 2750
     },
     {
       "question": "Will the highest temperature in Buenos Aires be 31°C or higher on November 14?",
@@ -896,11 +979,11 @@
         31,
         999
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1063
+      "volume": 1367
     }
   ],
   "created_at": "2026-11-12T11:26:11.020Z"

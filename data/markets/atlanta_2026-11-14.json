@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-11-14T12:00:00Z",
   "hours_at_discovery": 48.6,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "6983038",
     "question": "Will the highest temperature in Atlanta be between 52-53°F on November 14?",
@@ -58,10 +58,11 @@
       "closed_at": "2026-11-14T03:21:55.229Z",
       "stop_price": 0.104,
       "forecast_change_streak": 0,
-      "stop_pending": true
+      "stop_pending": true,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 54.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -730,6 +731,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-14T21:32:33.857Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 53,
+      "hrrr": 55,
+      "metar": 53,
+      "best": 53.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 53,
+          "gfs_seamless": 55,
+          "icon_seamless": 54
+        },
+        "mean": 53.8,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          52,
+          52,
+          52,
+          52,
+          52,
+          52,
+          53,
+          52,
+          53,
+          53,
+          53,
+          51,
+          53,
+          53,
+          52,
+          52,
+          53,
+          52,
+          53,
+          53,
+          52,
+          53,
+          52,
+          51,
+          54,
+          52,
+          52,
+          52,
+          53,
+          51,
+          51,
+          52,
+          51,
+          52,
+          52,
+          52,
+          52,
+          51,
+          51,
+          52,
+          52,
+          52,
+          52,
+          51,
+          53,
+          53,
+          53,
+          52,
+          52,
+          51
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -804,6 +879,14 @@
       "top2_bucket": "54-57F",
       "top2_price": 0.285,
       "top2_sum": 0.975
+    },
+    {
+      "ts": "2026-11-14T21:32:33.857Z",
+      "top_bucket": "54-55F",
+      "top_price": 0.994,
+      "top2_bucket": "54-57F",
+      "top2_price": 0.006,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -866,11 +949,11 @@
         50,
         51
       ],
-      "bid": 0.0095,
-      "ask": 0.0095,
-      "price": 0.0095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2027
+      "volume": 2292
     },
     {
       "question": "Will the highest temperature in Atlanta be between 52-53°F on November 14?",
@@ -879,11 +962,11 @@
         52,
         53
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5771
+      "volume": 7288
     },
     {
       "question": "Will the highest temperature in Atlanta be between 54-55°F on November 14?",
@@ -892,11 +975,11 @@
         54,
         55
       ],
-      "bid": 0.69,
-      "ask": 0.69,
-      "price": 0.69,
+      "bid": 0.994,
+      "ask": 0.994,
+      "price": 0.994,
       "spread": 0,
-      "volume": 4579
+      "volume": 6178
     },
     {
       "question": "Will the highest temperature in Atlanta be between 56-57°F on November 14?",
@@ -905,11 +988,11 @@
         56,
         57
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 7035
+      "volume": 8445
     },
     {
       "question": "Will the highest temperature in Atlanta be between 58-59°F on November 14?",
@@ -918,11 +1001,11 @@
         58,
         59
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2103
+      "volume": 2531
     },
     {
       "question": "Will the highest temperature in Atlanta be between 60-61°F on November 14?",
