@@ -6,10 +6,10 @@
   "station": "RKSI",
   "event_end_date": "2026-11-14T12:00:00Z",
   "hours_at_discovery": 48.6,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 13,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -609,6 +609,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-14T17:11:17.329Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 11,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -675,6 +686,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.9975,
       "top2_sum": 0.998
+    },
+    {
+      "ts": "2026-11-14T17:11:17.329Z",
+      "top_bucket": "13-13C",
+      "top_price": 1,
+      "top2_bucket": "12-13C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -685,9 +704,9 @@
         -999,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 205
     },
@@ -698,9 +717,9 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 931
     },
@@ -711,11 +730,11 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1340
+      "volume": 1441
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 12°C on November 14?",
@@ -724,11 +743,11 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 13876
+      "volume": 13930
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 13°C on November 14?",
@@ -737,10 +756,10 @@
         13,
         13
       ],
-      "bid": 0.9975,
-      "ask": 0.9975,
-      "price": 0.9975,
-      "spread": 0,
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
       "volume": 7060
     },
     {
@@ -750,9 +769,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 4573
     },
@@ -763,11 +782,11 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2842
+      "volume": 2971
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 16°C on November 14?",
@@ -776,9 +795,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 751
     },
@@ -789,9 +808,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 677
     },
@@ -802,9 +821,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 158
     },
@@ -815,12 +834,13 @@
         19,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 309
     }
   ],
-  "created_at": "2026-11-12T11:26:00.775Z"
+  "created_at": "2026-11-12T11:26:00.775Z",
+  "metar_max": 13
 }
