@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-16T12:00:00Z",
   "hours_at_discovery": 49.3,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "7030869",
+    "question": "Will the highest temperature in Wellington be 20°C on November 16?",
+    "bucket_low": 20,
+    "bucket_high": 20,
+    "entry_price": 0.24,
+    "bid_at_entry": 0.21,
+    "spread": 0.03,
+    "shares": 166.67,
+    "cost": 40,
+    "p": 0.52,
+    "ev": 1.1667,
+    "edge": 0.1699,
+    "kelly": 0.0952,
+    "forecast_temp": 20.86,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-11-15T17:15:04.190Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.168
+  },
+  "positions": [
+    {
+      "market_id": "7030869",
+      "question": "Will the highest temperature in Wellington be 20°C on November 16?",
+      "bucket_low": 20,
+      "bucket_high": 20,
+      "entry_price": 0.24,
+      "bid_at_entry": 0.21,
+      "spread": 0.03,
+      "shares": 166.67,
+      "cost": 40,
+      "p": 0.52,
+      "ev": 1.1667,
+      "edge": 0.1699,
+      "kelly": 0.0952,
+      "forecast_temp": 20.86,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-11-15T17:15:04.190Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.168
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -385,6 +435,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-15T17:15:04.190Z",
+      "horizon": "D+1",
+      "hours_left": 18.7,
+      "ecmwf": 20,
+      "hrrr": 17.9,
+      "metar": null,
+      "best": 19,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 20,
+          "gfs_seamless": 17.9,
+          "icon_seamless": 18
+        },
+        "mean": 19,
+        "spread": 1.1,
+        "gap": 2.1,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          19.9,
+          19.5,
+          19.4,
+          20,
+          19.6,
+          19.4,
+          19.7,
+          19.7,
+          19,
+          19.1,
+          19.8,
+          19.3,
+          19.5,
+          19.1,
+          18.6,
+          19.4,
+          19.6,
+          18.8,
+          19.5,
+          19.9,
+          19.5,
+          18.7,
+          19.1,
+          19.7,
+          19.9,
+          19.4,
+          20,
+          19.6,
+          19.9,
+          19.5,
+          19.8,
+          19.8,
+          19.9,
+          19.2,
+          19.9,
+          18.8,
+          20,
+          19.3,
+          19.8,
+          18.5,
+          19.4,
+          19.4,
+          19,
+          18.5,
+          19.3,
+          18.8,
+          19.7,
+          19.8,
+          19.4,
+          19.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -427,6 +552,14 @@
       "top2_bucket": "19-20C",
       "top2_price": 0.255,
       "top2_sum": 0.805
+    },
+    {
+      "ts": "2026-11-15T17:15:04.190Z",
+      "top_bucket": "19-19C",
+      "top_price": 0.57,
+      "top2_bucket": "19-20C",
+      "top2_price": 0.225,
+      "top2_sum": 0.795
     }
   ],
   "all_outcomes": [
@@ -476,11 +609,11 @@
         16,
         16
       ],
-      "bid": 0.0095,
-      "ask": 0.0095,
-      "price": 0.0095,
+      "bid": 0.005,
+      "ask": 0.005,
+      "price": 0.005,
       "spread": 0,
-      "volume": 72
+      "volume": 323
     },
     {
       "question": "Will the highest temperature in Wellington be 17°C on November 16?",
@@ -489,11 +622,11 @@
         17,
         17
       ],
-      "bid": 0.023,
-      "ask": 0.023,
-      "price": 0.023,
+      "bid": 0.021,
+      "ask": 0.021,
+      "price": 0.021,
       "spread": 0,
-      "volume": 179
+      "volume": 535
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on November 16?",
@@ -502,11 +635,11 @@
         18,
         18
       ],
-      "bid": 0.1735,
-      "ask": 0.1735,
-      "price": 0.1735,
+      "bid": 0.194,
+      "ask": 0.194,
+      "price": 0.194,
       "spread": 0,
-      "volume": 796
+      "volume": 1490
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on November 16?",
@@ -515,11 +648,11 @@
         19,
         19
       ],
-      "bid": 0.55,
-      "ask": 0.55,
-      "price": 0.55,
+      "bid": 0.57,
+      "ask": 0.57,
+      "price": 0.57,
       "spread": 0,
-      "volume": 334
+      "volume": 936
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on November 16?",
@@ -528,11 +661,11 @@
         20,
         20
       ],
-      "bid": 0.255,
-      "ask": 0.255,
-      "price": 0.255,
+      "bid": 0.225,
+      "ask": 0.225,
+      "price": 0.225,
       "spread": 0,
-      "volume": 261
+      "volume": 1414
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C on November 16?",
@@ -541,11 +674,11 @@
         21,
         21
       ],
-      "bid": 0.0205,
-      "ask": 0.0205,
-      "price": 0.0205,
+      "bid": 0.014,
+      "ask": 0.014,
+      "price": 0.014,
       "spread": 0,
-      "volume": 84
+      "volume": 417
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C on November 16?",
@@ -554,11 +687,11 @@
         22,
         22
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 59
+      "volume": 285
     },
     {
       "question": "Will the highest temperature in Wellington be 23°C or higher on November 16?",

@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-11-15T12:00:00Z",
   "hours_at_discovery": 51.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 19,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -678,6 +678,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-15T17:14:48.657Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 15,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -752,6 +763,14 @@
       "top2_bucket": "19-20C",
       "top2_price": 0.0015,
       "top2_sum": 1.001
+    },
+    {
+      "ts": "2026-11-15T17:14:48.657Z",
+      "top_bucket": "19-19C",
+      "top_price": 1,
+      "top2_bucket": "18-19C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -762,9 +781,9 @@
         -999,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 85
     },
@@ -775,9 +794,9 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 149
     },
@@ -788,9 +807,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 296
     },
@@ -801,11 +820,11 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1640
+      "volume": 1811
     },
     {
       "question": "Will the highest temperature in Shanghai be 18°C on November 15?",
@@ -814,9 +833,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5922
     },
@@ -827,11 +846,11 @@
         19,
         19
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 5215
+      "price": 1,
+      "spread": -0.001,
+      "volume": 5257
     },
     {
       "question": "Will the highest temperature in Shanghai be 20°C on November 15?",
@@ -840,11 +859,11 @@
         20,
         20
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 10218
+      "volume": 11451
     },
     {
       "question": "Will the highest temperature in Shanghai be 21°C on November 15?",
@@ -853,11 +872,11 @@
         21,
         21
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4963
+      "volume": 5078
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on November 15?",
@@ -866,9 +885,9 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 686
     },
@@ -879,9 +898,9 @@
         23,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 87
     },
@@ -892,12 +911,13 @@
         24,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 65
     }
   ],
-  "created_at": "2026-11-13T08:05:52.024Z"
+  "created_at": "2026-11-13T08:05:52.024Z",
+  "metar_max": 17
 }
