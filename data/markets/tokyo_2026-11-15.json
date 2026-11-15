@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.3,
       "opened_at": "2026-11-14T21:33:04.628Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.83,
+      "exit_price": 0.0005,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-11-15T09:33:21.461Z",
       "stop_price": 0.072,
       "forecast_change_streak": 1
     }
@@ -661,6 +661,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-15T09:33:21.461Z",
+      "horizon": "D+0",
+      "hours_left": 2.4,
+      "ecmwf": 15,
+      "hrrr": 16.4,
+      "metar": 14,
+      "best": 15.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 15,
+          "gfs_seamless": 16.4,
+          "icon_seamless": 14.4
+        },
+        "mean": 15.3,
+        "spread": 1.1,
+        "gap": 1.4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          15.7,
+          17.8,
+          17.9,
+          16.4,
+          16.7,
+          15.6,
+          16.2,
+          17.4,
+          17.3,
+          18.5,
+          16.1,
+          17,
+          18.7,
+          16.3,
+          15.5,
+          17.4,
+          16.7,
+          16.2,
+          16.9,
+          16.4,
+          15.4,
+          17.5,
+          17.2,
+          17.5,
+          16.5,
+          15.7,
+          15.8,
+          16.2,
+          17.7,
+          16.6,
+          18.3,
+          19.1,
+          14.7,
+          16.1,
+          16,
+          16.5,
+          15.8,
+          16.6,
+          16.1,
+          16.8,
+          17.3,
+          15.5,
+          16.6,
+          18.2,
+          15.5,
+          17.3,
+          15.3,
+          16.7,
+          17.4,
+          15.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -727,6 +802,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.1,
       "top2_sum": 1.01
+    },
+    {
+      "ts": "2026-11-15T09:33:21.461Z",
+      "top_bucket": "16-16C",
+      "top_price": 0.997,
+      "top2_bucket": "15-16C",
+      "top2_price": 0.997,
+      "top2_sum": 0.9975
     }
   ],
   "all_outcomes": [
@@ -754,7 +837,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6143
+      "volume": 6155
     },
     {
       "question": "Will the highest temperature in Tokyo be 12°C on November 15?",
@@ -815,11 +898,11 @@
         16,
         16
       ],
-      "bid": 0.91,
-      "ask": 0.91,
-      "price": 0.91,
+      "bid": 0.997,
+      "ask": 0.997,
+      "price": 0.997,
       "spread": 0,
-      "volume": 6888
+      "volume": 10000
     },
     {
       "question": "Will the highest temperature in Tokyo be 17°C on November 15?",
@@ -828,11 +911,11 @@
         17,
         17
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6878
+      "volume": 8598
     },
     {
       "question": "Will the highest temperature in Tokyo be 18°C on November 15?",
@@ -841,11 +924,11 @@
         18,
         18
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2051
+      "volume": 2492
     },
     {
       "question": "Will the highest temperature in Tokyo be 19°C on November 15?",
