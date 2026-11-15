@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-11-15T12:00:00Z",
   "hours_at_discovery": 51.9,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "7009925",
     "question": "Will the highest temperature in New York City be between 48-49°F on November 15?",
@@ -56,10 +56,11 @@
       "exit_price": 0.205,
       "close_reason": "metar_diverged",
       "closed_at": "2026-11-15T01:58:19.122Z",
-      "stop_price": 0.152
+      "stop_price": 0.152,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 50.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -807,6 +808,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-15T21:52:04.756Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 51,
+      "hrrr": 52,
+      "metar": 50,
+      "best": 51.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 51,
+          "gfs_seamless": 52,
+          "icon_seamless": 50
+        },
+        "mean": 51.1,
+        "spread": 1.1,
+        "gap": 1,
+        "llmEnhanced": false,
+        "membersMax": [
+          47,
+          47,
+          47,
+          47,
+          47,
+          48,
+          47,
+          48,
+          47,
+          48,
+          49,
+          47,
+          49,
+          49,
+          49,
+          47,
+          48,
+          47,
+          49,
+          48,
+          48,
+          49,
+          47,
+          47,
+          48,
+          49,
+          47,
+          47,
+          50,
+          48,
+          47,
+          49,
+          47,
+          49,
+          49,
+          47,
+          47,
+          48,
+          47,
+          49,
+          48,
+          48,
+          48,
+          47,
+          47,
+          49,
+          50,
+          48,
+          48,
+          48
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -889,6 +964,14 @@
       "top2_bucket": "48-51F",
       "top2_price": 0.775,
       "top2_sum": 0.9
+    },
+    {
+      "ts": "2026-11-15T21:52:04.756Z",
+      "top_bucket": "50-51F",
+      "top_price": 0.9925,
+      "top2_bucket": "50-53F",
+      "top2_price": 0.0065,
+      "top2_sum": 0.999
     }
   ],
   "all_outcomes": [
@@ -955,7 +1038,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 4101
+      "volume": 4151
     },
     {
       "question": "Will the highest temperature in New York City be between 48-49°F on November 15?",
@@ -964,11 +1047,11 @@
         48,
         49
       ],
-      "bid": 0.125,
-      "ask": 0.125,
-      "price": 0.125,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7748
+      "volume": 9747
     },
     {
       "question": "Will the highest temperature in New York City be between 50-51°F on November 15?",
@@ -977,11 +1060,11 @@
         50,
         51
       ],
-      "bid": 0.775,
-      "ask": 0.775,
-      "price": 0.775,
+      "bid": 0.9925,
+      "ask": 0.9925,
+      "price": 0.9925,
       "spread": 0,
-      "volume": 6452
+      "volume": 8045
     },
     {
       "question": "Will the highest temperature in New York City be between 52-53°F on November 15?",
@@ -990,11 +1073,11 @@
         52,
         53
       ],
-      "bid": 0.1115,
-      "ask": 0.1115,
-      "price": 0.1115,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 6470
+      "volume": 8686
     },
     {
       "question": "Will the highest temperature in New York City be between 54-55°F on November 15?",
@@ -1003,11 +1086,11 @@
         54,
         55
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2319
+      "volume": 2537
     },
     {
       "question": "Will the highest temperature in New York City be between 56-57°F on November 15?",
