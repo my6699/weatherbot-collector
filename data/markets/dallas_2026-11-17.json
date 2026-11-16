@@ -56,7 +56,8 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.176
+      "stop_price": 0.176,
+      "forecast_change_streak": 0
     }
   ],
   "actual_temp": null,
@@ -284,6 +285,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-16T02:12:58.713Z",
+      "horizon": "D+1",
+      "hours_left": 33.8,
+      "ecmwf": 60,
+      "hrrr": 62,
+      "metar": null,
+      "best": 61.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 60,
+          "gfs_seamless": 62,
+          "icon_seamless": 63
+        },
+        "mean": 61.2,
+        "spread": 1.8,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          61,
+          60,
+          61,
+          61,
+          61,
+          61,
+          61,
+          63,
+          58,
+          60,
+          61,
+          59,
+          59,
+          60,
+          60,
+          60,
+          61,
+          62,
+          59,
+          59,
+          60,
+          59,
+          60,
+          61,
+          60,
+          61,
+          61,
+          61,
+          58,
+          60,
+          63,
+          59,
+          62,
+          62,
+          56,
+          59,
+          61,
+          58,
+          59,
+          61,
+          62,
+          62,
+          57,
+          61,
+          60,
+          59,
+          59,
+          59,
+          60,
+          60
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -310,6 +386,14 @@
       "top2_bucket": "64-67F",
       "top2_price": 0.235,
       "top2_sum": 0.78
+    },
+    {
+      "ts": "2026-11-16T02:12:58.713Z",
+      "top_bucket": "64-65F",
+      "top_price": 0.565,
+      "top2_bucket": "62-65F",
+      "top2_price": 0.565,
+      "top2_sum": 0.775
     }
   ],
   "all_outcomes": [
@@ -359,11 +443,11 @@
         60,
         61
       ],
-      "bid": 0.0135,
-      "ask": 0.0135,
-      "price": 0.0135,
+      "bid": 0.015,
+      "ask": 0.015,
+      "price": 0.015,
       "spread": 0,
-      "volume": 126
+      "volume": 141
     },
     {
       "question": "Will the highest temperature in Dallas be between 62-63°F on November 17?",
@@ -372,11 +456,11 @@
         62,
         63
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.21,
+      "ask": 0.21,
+      "price": 0.21,
       "spread": 0,
-      "volume": 681
+      "volume": 717
     },
     {
       "question": "Will the highest temperature in Dallas be between 64-65°F on November 17?",
@@ -385,11 +469,11 @@
         64,
         65
       ],
-      "bid": 0.545,
-      "ask": 0.545,
-      "price": 0.545,
+      "bid": 0.565,
+      "ask": 0.565,
+      "price": 0.565,
       "spread": 0,
-      "volume": 2634
+      "volume": 2707
     },
     {
       "question": "Will the highest temperature in Dallas be between 66-67°F on November 17?",
@@ -398,11 +482,11 @@
         66,
         67
       ],
-      "bid": 0.235,
-      "ask": 0.235,
-      "price": 0.235,
+      "bid": 0.2,
+      "ask": 0.2,
+      "price": 0.2,
       "spread": 0,
-      "volume": 696
+      "volume": 728
     },
     {
       "question": "Will the highest temperature in Dallas be between 68-69°F on November 17?",
@@ -411,11 +495,11 @@
         68,
         69
       ],
-      "bid": 0.025,
-      "ask": 0.025,
-      "price": 0.025,
+      "bid": 0.0245,
+      "ask": 0.0245,
+      "price": 0.0245,
       "spread": 0,
-      "volume": 172
+      "volume": 188
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on November 17?",
