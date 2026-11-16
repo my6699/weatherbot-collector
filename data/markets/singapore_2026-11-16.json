@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-11-16T12:00:00Z",
   "hours_at_discovery": 49.3,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 31,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -681,6 +681,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-16T20:32:08.049Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 26,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -755,6 +766,14 @@
       "top2_bucket": "30-31C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-11-16T20:32:08.049Z",
+      "top_bucket": "31-31C",
+      "top_price": 1,
+      "top2_bucket": "30-31C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -765,9 +784,9 @@
         -999,
         24
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 43
     },
@@ -778,9 +797,9 @@
         25,
         25
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 113
     },
@@ -791,9 +810,9 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 233
     },
@@ -804,9 +823,9 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 794
     },
@@ -817,9 +836,9 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 941
     },
@@ -830,9 +849,9 @@
         29,
         29
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1710
     },
@@ -843,11 +862,11 @@
         30,
         30
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4460
+      "volume": 4465
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on November 16?",
@@ -856,11 +875,11 @@
         31,
         31
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 4181
+      "price": 1,
+      "spread": -0.001,
+      "volume": 4429
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on November 16?",
@@ -869,11 +888,11 @@
         32,
         32
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3353
+      "volume": 3394
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on November 16?",
@@ -882,11 +901,11 @@
         33,
         33
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2529
+      "volume": 2736
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C or higher on November 16?",
@@ -895,12 +914,13 @@
         34,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1064
     }
   ],
-  "created_at": "2026-11-14T10:40:26.269Z"
+  "created_at": "2026-11-14T10:40:26.269Z",
+  "metar_max": 30
 }

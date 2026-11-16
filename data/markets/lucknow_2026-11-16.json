@@ -6,10 +6,10 @@
   "station": "VILK",
   "event_end_date": "2026-11-16T12:00:00Z",
   "hours_at_discovery": 49.3,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 29,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -686,6 +686,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-16T20:32:09.119Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 16,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -760,6 +771,14 @@
       "top2_bucket": "29-30C",
       "top2_price": 0.007,
       "top2_sum": 1.0015
+    },
+    {
+      "ts": "2026-11-16T20:32:09.119Z",
+      "top_bucket": "29-29C",
+      "top_price": 1,
+      "top2_bucket": "28-29C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -770,9 +789,9 @@
         -999,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 65
     },
@@ -783,9 +802,9 @@
         24,
         24
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 15
     },
@@ -796,9 +815,9 @@
         25,
         25
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 153
     },
@@ -809,11 +828,11 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 642
+      "volume": 649
     },
     {
       "question": "Will the highest temperature in Lucknow be 27°C on November 16?",
@@ -822,11 +841,11 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 953
+      "volume": 963
     },
     {
       "question": "Will the highest temperature in Lucknow be 28°C on November 16?",
@@ -835,9 +854,9 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 4046
     },
@@ -848,11 +867,11 @@
         29,
         29
       ],
-      "bid": 0.9945,
-      "ask": 0.9945,
-      "price": 0.9945,
-      "spread": 0,
-      "volume": 2842
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 4993
     },
     {
       "question": "Will the highest temperature in Lucknow be 30°C on November 16?",
@@ -861,11 +880,11 @@
         30,
         30
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2187
+      "volume": 2766
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on November 16?",
@@ -874,11 +893,11 @@
         31,
         31
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1286
+      "volume": 3457
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C on November 16?",
@@ -887,9 +906,9 @@
         32,
         32
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 271
     },
@@ -900,12 +919,13 @@
         33,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 35
     }
   ],
-  "created_at": "2026-11-14T10:40:27.890Z"
+  "created_at": "2026-11-14T10:40:27.890Z",
+  "metar_max": 22
 }
