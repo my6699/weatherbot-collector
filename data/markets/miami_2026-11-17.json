@@ -6,10 +6,10 @@
   "station": "KMIA",
   "event_end_date": "2026-11-17T12:00:00Z",
   "hours_at_discovery": 50.4,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 80.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -607,6 +607,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-17T22:27:35.942Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 79,
+      "hrrr": 81,
+      "metar": 78,
+      "best": 79.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 79,
+          "gfs_seamless": 81,
+          "icon_seamless": 79
+        },
+        "mean": 79.6,
+        "spread": 1.4,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          78,
+          79,
+          79,
+          79,
+          78,
+          80,
+          78,
+          77,
+          79,
+          79,
+          77,
+          76,
+          79,
+          79,
+          78,
+          78,
+          77,
+          78,
+          79,
+          78,
+          79,
+          78,
+          78,
+          79,
+          77,
+          80,
+          78,
+          79,
+          80,
+          81,
+          79,
+          80,
+          78,
+          77,
+          80,
+          78,
+          77,
+          78,
+          78,
+          80,
+          78,
+          79,
+          80,
+          80,
+          80,
+          79,
+          79,
+          79,
+          78,
+          80
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -673,6 +747,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.305,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-11-17T22:27:35.942Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.997,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.0035,
+      "top2_sum": 1.0005
     }
   ],
   "all_outcomes": [
@@ -735,11 +817,11 @@
         76,
         77
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3346
+      "volume": 4824
     },
     {
       "question": "Will the highest temperature in Miami be between 78-79°F on November 17?",
@@ -748,11 +830,11 @@
         78,
         79
       ],
-      "bid": 0.555,
-      "ask": 0.555,
-      "price": 0.555,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3969
+      "volume": 6153
     },
     {
       "question": "Will the highest temperature in Miami be between 80-81°F on November 17?",
@@ -761,11 +843,11 @@
         80,
         81
       ],
-      "bid": 0.305,
-      "ask": 0.305,
-      "price": 0.305,
+      "bid": 0.997,
+      "ask": 0.997,
+      "price": 0.997,
       "spread": 0,
-      "volume": 4019
+      "volume": 7567
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on November 17?",
@@ -774,11 +856,11 @@
         82,
         83
       ],
-      "bid": 0.0305,
-      "ask": 0.0305,
-      "price": 0.0305,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 877
+      "volume": 2516
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on November 17?",
@@ -787,11 +869,11 @@
         84,
         85
       ],
-      "bid": 0.009,
-      "ask": 0.009,
-      "price": 0.009,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 739
+      "volume": 2387
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on November 17?",
@@ -804,7 +886,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 165
+      "volume": 1375
     },
     {
       "question": "Will the highest temperature in Miami be 88°F or higher on November 17?",
