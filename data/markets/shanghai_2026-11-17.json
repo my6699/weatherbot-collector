@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-11-16T09:51:47.257Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -33.45,
+      "exit_price": 0.036,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-11-17T03:58:00.147Z",
       "stop_price": 0.152,
       "forecast_change_streak": 0
     }
@@ -507,6 +507,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-17T03:58:00.147Z",
+      "horizon": "D+0",
+      "hours_left": 8,
+      "ecmwf": 17.9,
+      "hrrr": 16.2,
+      "metar": 17,
+      "best": 17.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 17.9,
+          "gfs_seamless": 16.2,
+          "icon_seamless": 17.4
+        },
+        "mean": 17.3,
+        "spread": 1.1,
+        "gap": 1.7,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          17.6,
+          17.8,
+          17.5,
+          18.2,
+          17.9,
+          17.8,
+          17,
+          17.6,
+          17.5,
+          17.6,
+          18.2,
+          17.3,
+          18.2,
+          17.4,
+          17.7,
+          17.6,
+          17.5,
+          17.4,
+          17.2,
+          17.1,
+          16.5,
+          18.1,
+          16.8,
+          17.1,
+          18.1,
+          17.4,
+          17.4,
+          18.6,
+          16.9,
+          17.6,
+          17.5,
+          17.6,
+          18,
+          17.1,
+          18.4,
+          17.3,
+          17.1,
+          18.3,
+          16.9,
+          17.8,
+          17.2,
+          17.5,
+          17.6,
+          17.7,
+          17.6,
+          17.6,
+          18.2,
+          17.9,
+          17.3,
+          17.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -557,6 +632,14 @@
       "top2_bucket": "17-18C",
       "top2_price": 0.645,
       "top2_sum": 0.835
+    },
+    {
+      "ts": "2026-11-17T03:58:00.147Z",
+      "top_bucket": "18-18C",
+      "top_price": 0.775,
+      "top2_bucket": "18-19C",
+      "top2_price": 0.175,
+      "top2_sum": 0.95
     }
   ],
   "all_outcomes": [
@@ -593,9 +676,9 @@
         15,
         15
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 1066
     },
@@ -606,11 +689,11 @@
         16,
         16
       ],
-      "bid": 0.022,
-      "ask": 0.022,
-      "price": 0.022,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1109
+      "volume": 2431
     },
     {
       "question": "Will the highest temperature in Shanghai be 17°C on November 17?",
@@ -619,11 +702,11 @@
         17,
         17
       ],
-      "bid": 0.19,
-      "ask": 0.19,
-      "price": 0.19,
+      "bid": 0.036,
+      "ask": 0.036,
+      "price": 0.036,
       "spread": 0,
-      "volume": 3051
+      "volume": 5028
     },
     {
       "question": "Will the highest temperature in Shanghai be 18°C on November 17?",
@@ -632,11 +715,11 @@
         18,
         18
       ],
-      "bid": 0.645,
-      "ask": 0.645,
-      "price": 0.645,
+      "bid": 0.775,
+      "ask": 0.775,
+      "price": 0.775,
       "spread": 0,
-      "volume": 1917
+      "volume": 2802
     },
     {
       "question": "Will the highest temperature in Shanghai be 19°C on November 17?",
@@ -645,11 +728,11 @@
         19,
         19
       ],
-      "bid": 0.14,
-      "ask": 0.14,
-      "price": 0.14,
+      "bid": 0.175,
+      "ask": 0.175,
+      "price": 0.175,
       "spread": 0,
-      "volume": 1265
+      "volume": 2838
     },
     {
       "question": "Will the highest temperature in Shanghai be 20°C on November 17?",
@@ -658,11 +741,11 @@
         20,
         20
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.013,
+      "ask": 0.013,
+      "price": 0.013,
       "spread": 0,
-      "volume": 951
+      "volume": 1167
     },
     {
       "question": "Will the highest temperature in Shanghai be 21°C on November 17?",
@@ -671,11 +754,11 @@
         21,
         21
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 1062
+      "volume": 1234
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on November 17?",
