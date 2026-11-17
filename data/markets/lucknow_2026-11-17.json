@@ -6,7 +6,7 @@
   "station": "VILK",
   "event_end_date": "2026-11-17T12:00:00Z",
   "hours_at_discovery": 50.4,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "7058199",
     "question": "Will the highest temperature in Lucknow be 27°C on November 17?",
@@ -51,17 +51,18 @@
       "forecast_src": "ensemble",
       "sigma": 1.6,
       "opened_at": "2026-11-16T09:51:50.114Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.91,
+      "exit_price": 0.0005,
+      "close_reason": "metar_diverged",
+      "closed_at": "2026-11-17T13:34:01.741Z",
       "stop_price": 0.21,
       "trailing_activated": true,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 28,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -588,6 +589,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-17T13:34:01.741Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 27.4,
+      "hrrr": 27.8,
+      "metar": 19,
+      "best": 27.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 27.4,
+          "gfs_seamless": 27.8,
+          "icon_seamless": 27.4
+        },
+        "mean": 27.5,
+        "spread": 0.3,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          27,
+          27.1,
+          27.1,
+          27,
+          27,
+          27.1,
+          27.1,
+          27,
+          27.2,
+          26.9,
+          27.2,
+          27.1,
+          27.2,
+          27,
+          27.1,
+          27.1,
+          26.9,
+          27.3,
+          27.3,
+          27.1,
+          27.1,
+          26.9,
+          27.1,
+          27.1,
+          27.1,
+          27.1,
+          27.2,
+          27.1,
+          27,
+          26.9,
+          27,
+          27,
+          27,
+          27.3,
+          27,
+          26.7,
+          26.8,
+          26.9,
+          26.9,
+          27,
+          27.1,
+          27,
+          27.1,
+          27.2,
+          27.2,
+          27,
+          27.2,
+          27,
+          27.1,
+          26.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -646,6 +721,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.54,
       "top2_sum": 0.925
+    },
+    {
+      "ts": "2026-11-17T13:34:01.741Z",
+      "top_bucket": "28-28C",
+      "top_price": 0.9995,
+      "top2_bucket": "27-28C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -656,11 +739,11 @@
         -999,
         22
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 252
+      "volume": 1279
     },
     {
       "question": "Will the highest temperature in Lucknow be 23°C on November 17?",
@@ -669,11 +752,11 @@
         23,
         23
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 459
+      "volume": 486
     },
     {
       "question": "Will the highest temperature in Lucknow be 24°C on November 17?",
@@ -682,11 +765,11 @@
         24,
         24
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 740
+      "volume": 1956
     },
     {
       "question": "Will the highest temperature in Lucknow be 25°C on November 17?",
@@ -695,11 +778,11 @@
         25,
         25
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 656
+      "volume": 1791
     },
     {
       "question": "Will the highest temperature in Lucknow be 26°C on November 17?",
@@ -708,11 +791,11 @@
         26,
         26
       ],
-      "bid": 0.044,
-      "ask": 0.044,
-      "price": 0.044,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1374
+      "volume": 1968
     },
     {
       "question": "Will the highest temperature in Lucknow be 27°C on November 17?",
@@ -721,11 +804,11 @@
         27,
         27
       ],
-      "bid": 0.385,
-      "ask": 0.385,
-      "price": 0.385,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2929
+      "volume": 5622
     },
     {
       "question": "Will the highest temperature in Lucknow be 28°C on November 17?",
@@ -734,11 +817,11 @@
         28,
         28
       ],
-      "bid": 0.54,
-      "ask": 0.54,
-      "price": 0.54,
-      "spread": 0,
-      "volume": 1713
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 4941
     },
     {
       "question": "Will the highest temperature in Lucknow be 29°C on November 17?",
@@ -747,11 +830,11 @@
         29,
         29
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3018
+      "volume": 5282
     },
     {
       "question": "Will the highest temperature in Lucknow be 30°C on November 17?",
@@ -760,11 +843,11 @@
         30,
         30
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 643
+      "volume": 1326
     },
     {
       "question": "Will the highest temperature in Lucknow be 31°C on November 17?",
@@ -777,7 +860,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 29
+      "volume": 417
     },
     {
       "question": "Will the highest temperature in Lucknow be 32°C or higher on November 17?",
@@ -790,8 +873,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 15
+      "volume": 706
     }
   ],
-  "created_at": "2026-11-15T09:33:25.597Z"
+  "created_at": "2026-11-15T09:33:25.597Z",
+  "metar_max": 19
 }

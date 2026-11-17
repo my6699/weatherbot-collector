@@ -6,7 +6,7 @@
   "station": "LFPG",
   "event_end_date": "2026-11-17T12:00:00Z",
   "hours_at_discovery": 50.4,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "7058149",
     "question": "Will the highest temperature in Paris be 16°C on November 17?",
@@ -51,16 +51,17 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-11-16T20:31:58.851Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -39.89,
+      "exit_price": 0.0005,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-11-17T13:33:36.889Z",
       "stop_price": 0.122,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 17,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -583,6 +584,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-17T13:33:36.889Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 16.2,
+      "hrrr": 16.6,
+      "metar": 16,
+      "best": 16.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 16.2,
+          "gfs_seamless": 16.6,
+          "icon_seamless": 16.1
+        },
+        "mean": 16.3,
+        "spread": 0.3,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          15.9,
+          15.9,
+          15.6,
+          15.4,
+          15.8,
+          16,
+          15.2,
+          16,
+          16,
+          15.5,
+          15.6,
+          16.4,
+          15.6,
+          15.8,
+          15.3,
+          16.3,
+          15.7,
+          16.1,
+          15.4,
+          15.9,
+          15.6,
+          16.3,
+          15.8,
+          15.8,
+          15.7,
+          15.9,
+          15.7,
+          15.9,
+          16.1,
+          16.1,
+          16.3,
+          15.6,
+          16.3,
+          16.2,
+          15.7,
+          16,
+          15.8,
+          16.1,
+          15.6,
+          15.7,
+          16.5,
+          15.7,
+          16.1,
+          16.1,
+          16.4,
+          15.9,
+          16,
+          16.5,
+          15.8,
+          15.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -641,6 +716,14 @@
       "top2_bucket": "16-17C",
       "top2_price": 0.685,
       "top2_sum": 0.8715
+    },
+    {
+      "ts": "2026-11-17T13:33:36.889Z",
+      "top_bucket": "17-17C",
+      "top_price": 0.993,
+      "top2_bucket": "17-18C",
+      "top2_price": 0.007,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -655,7 +738,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 444
+      "volume": 459
     },
     {
       "question": "Will the highest temperature in Paris be 12°C on November 17?",
@@ -668,7 +751,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 28
+      "volume": 43
     },
     {
       "question": "Will the highest temperature in Paris be 13°C on November 17?",
@@ -681,7 +764,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 261
+      "volume": 276
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on November 17?",
@@ -694,7 +777,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2973
+      "volume": 2995
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on November 17?",
@@ -703,11 +786,11 @@
         15,
         15
       ],
-      "bid": 0.018,
-      "ask": 0.018,
-      "price": 0.018,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 717
+      "volume": 3860
     },
     {
       "question": "Will the highest temperature in Paris be 16°C on November 17?",
@@ -716,11 +799,11 @@
         16,
         16
       ],
-      "bid": 0.1865,
-      "ask": 0.1865,
-      "price": 0.1865,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4158
+      "volume": 10741
     },
     {
       "question": "Will the highest temperature in Paris be 17°C on November 17?",
@@ -729,11 +812,11 @@
         17,
         17
       ],
-      "bid": 0.685,
-      "ask": 0.685,
-      "price": 0.685,
+      "bid": 0.993,
+      "ask": 0.993,
+      "price": 0.993,
       "spread": 0,
-      "volume": 4096
+      "volume": 8156
     },
     {
       "question": "Will the highest temperature in Paris be 18°C on November 17?",
@@ -742,11 +825,11 @@
         18,
         18
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.007,
+      "ask": 0.007,
+      "price": 0.007,
       "spread": 0,
-      "volume": 4110
+      "volume": 7281
     },
     {
       "question": "Will the highest temperature in Paris be 19°C on November 17?",
@@ -755,11 +838,11 @@
         19,
         19
       ],
-      "bid": 0.0095,
-      "ask": 0.0095,
-      "price": 0.0095,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 1334
+      "volume": 2167
     },
     {
       "question": "Will the highest temperature in Paris be 20°C on November 17?",
@@ -768,11 +851,11 @@
         20,
         20
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 1075
+      "volume": 1648
     },
     {
       "question": "Will the highest temperature in Paris be 21°C or higher on November 17?",
@@ -781,12 +864,13 @@
         21,
         999
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 570
+      "volume": 1025
     }
   ],
-  "created_at": "2026-11-15T09:33:16.571Z"
+  "created_at": "2026-11-15T09:33:16.571Z",
+  "metar_max": 14
 }

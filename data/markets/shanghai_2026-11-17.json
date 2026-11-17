@@ -6,7 +6,7 @@
   "station": "ZSPD",
   "event_end_date": "2026-11-17T12:00:00Z",
   "hours_at_discovery": 50.4,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "7058253",
     "question": "Will the highest temperature in Shanghai be 17°C on November 17?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-11-17T03:58:00.147Z",
       "stop_price": 0.152,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 18,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -582,6 +583,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-17T13:33:58.889Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 18.1,
+      "hrrr": 16.9,
+      "metar": null,
+      "best": 17.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 18.1,
+          "gfs_seamless": 16.9,
+          "icon_seamless": 17.4
+        },
+        "mean": 17.6,
+        "spread": 0.7,
+        "gap": 1.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          18.1,
+          18.6,
+          17.9,
+          18.5,
+          18.1,
+          18.2,
+          17.1,
+          17.3,
+          18,
+          17.3,
+          17.8,
+          17.6,
+          18.4,
+          17.9,
+          18,
+          17.5,
+          17.8,
+          17.9,
+          16.7,
+          17.6,
+          18,
+          18,
+          17.2,
+          17.6,
+          17.1,
+          18,
+          17.1,
+          18.5,
+          18.2,
+          18,
+          17.5,
+          17.2,
+          18.3,
+          17.5,
+          18.4,
+          17.2,
+          17.4,
+          18.2,
+          17.1,
+          16.9,
+          17.1,
+          17.5,
+          18.2,
+          16.9,
+          18.7,
+          17.7,
+          17.6,
+          17.3,
+          17.7,
+          17.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -640,6 +715,14 @@
       "top2_bucket": "18-19C",
       "top2_price": 0.175,
       "top2_sum": 0.95
+    },
+    {
+      "ts": "2026-11-17T13:33:58.889Z",
+      "top_bucket": "18-18C",
+      "top_price": 0.9995,
+      "top2_bucket": "17-18C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -654,7 +737,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 35
+      "volume": 1081
     },
     {
       "question": "Will the highest temperature in Shanghai be 14°C on November 17?",
@@ -667,7 +750,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1345
+      "volume": 1481
     },
     {
       "question": "Will the highest temperature in Shanghai be 15°C on November 17?",
@@ -680,7 +763,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1066
+      "volume": 1112
     },
     {
       "question": "Will the highest temperature in Shanghai be 16°C on November 17?",
@@ -693,7 +776,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 2431
+      "volume": 2585
     },
     {
       "question": "Will the highest temperature in Shanghai be 17°C on November 17?",
@@ -702,11 +785,11 @@
         17,
         17
       ],
-      "bid": 0.036,
-      "ask": 0.036,
-      "price": 0.036,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5028
+      "volume": 11869
     },
     {
       "question": "Will the highest temperature in Shanghai be 18°C on November 17?",
@@ -715,11 +798,11 @@
         18,
         18
       ],
-      "bid": 0.775,
-      "ask": 0.775,
-      "price": 0.775,
-      "spread": 0,
-      "volume": 2802
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 7236
     },
     {
       "question": "Will the highest temperature in Shanghai be 19°C on November 17?",
@@ -728,11 +811,11 @@
         19,
         19
       ],
-      "bid": 0.175,
-      "ask": 0.175,
-      "price": 0.175,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2838
+      "volume": 8264
     },
     {
       "question": "Will the highest temperature in Shanghai be 20°C on November 17?",
@@ -741,11 +824,11 @@
         20,
         20
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1167
+      "volume": 4483
     },
     {
       "question": "Will the highest temperature in Shanghai be 21°C on November 17?",
@@ -754,11 +837,11 @@
         21,
         21
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1234
+      "volume": 1527
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on November 17?",
@@ -771,7 +854,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 85
+      "volume": 131
     },
     {
       "question": "Will the highest temperature in Shanghai be 23°C or higher on November 17?",
@@ -784,8 +867,9 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 15
+      "volume": 1061
     }
   ],
-  "created_at": "2026-11-15T09:33:23.113Z"
+  "created_at": "2026-11-15T09:33:23.113Z",
+  "metar_max": 17
 }

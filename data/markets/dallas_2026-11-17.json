@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-11-17T12:00:00Z",
   "hours_at_discovery": 50.4,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "7062048",
     "question": "Will the highest temperature in Dallas be between 62-63°F on November 17?",
@@ -583,6 +583,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-17T13:33:32.190Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 62,
+      "hrrr": 64,
+      "metar": 45,
+      "best": 63,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 62,
+          "gfs_seamless": 64,
+          "icon_seamless": 64
+        },
+        "mean": 63,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          62,
+          63,
+          63,
+          62,
+          62,
+          62,
+          62,
+          63,
+          62,
+          63,
+          62,
+          63,
+          62,
+          62,
+          62,
+          63,
+          62,
+          62,
+          62,
+          63,
+          62,
+          62,
+          63,
+          62,
+          62,
+          63,
+          63,
+          63,
+          62,
+          63,
+          62,
+          62,
+          63,
+          62,
+          63,
+          62,
+          62,
+          62,
+          62,
+          62,
+          62,
+          62,
+          63,
+          62,
+          62,
+          62,
+          63,
+          62,
+          62,
+          63
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -641,6 +715,14 @@
       "top2_bucket": "64-67F",
       "top2_price": 0.445,
       "top2_sum": 0.905
+    },
+    {
+      "ts": "2026-11-17T13:33:32.190Z",
+      "top_bucket": "66-67F",
+      "top_price": 0.595,
+      "top2_bucket": "64-67F",
+      "top2_price": 0.595,
+      "top2_sum": 0.92
     }
   ],
   "all_outcomes": [
@@ -690,11 +772,11 @@
         60,
         61
       ],
-      "bid": 0.018,
-      "ask": 0.018,
-      "price": 0.018,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 361
+      "volume": 733
     },
     {
       "question": "Will the highest temperature in Dallas be between 62-63°F on November 17?",
@@ -703,11 +785,11 @@
         62,
         63
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.026,
+      "ask": 0.026,
+      "price": 0.026,
       "spread": 0,
-      "volume": 1514
+      "volume": 1704
     },
     {
       "question": "Will the highest temperature in Dallas be between 64-65°F on November 17?",
@@ -716,11 +798,11 @@
         64,
         65
       ],
-      "bid": 0.46,
-      "ask": 0.46,
-      "price": 0.46,
+      "bid": 0.325,
+      "ask": 0.325,
+      "price": 0.325,
       "spread": 0,
-      "volume": 5294
+      "volume": 8013
     },
     {
       "question": "Will the highest temperature in Dallas be between 66-67°F on November 17?",
@@ -729,11 +811,11 @@
         66,
         67
       ],
-      "bid": 0.445,
-      "ask": 0.445,
-      "price": 0.445,
+      "bid": 0.595,
+      "ask": 0.595,
+      "price": 0.595,
       "spread": 0,
-      "volume": 3619
+      "volume": 4384
     },
     {
       "question": "Will the highest temperature in Dallas be between 68-69°F on November 17?",
@@ -742,11 +824,11 @@
         68,
         69
       ],
-      "bid": 0.059,
-      "ask": 0.059,
-      "price": 0.059,
+      "bid": 0.074,
+      "ask": 0.074,
+      "price": 0.074,
       "spread": 0,
-      "volume": 633
+      "volume": 1924
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on November 17?",
@@ -755,11 +837,11 @@
         70,
         71
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 343
+      "volume": 1199
     },
     {
       "question": "Will the highest temperature in Dallas be between 72-73°F on November 17?",
