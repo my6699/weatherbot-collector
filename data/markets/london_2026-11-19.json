@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-19T12:00:00Z",
   "hours_at_discovery": 46.4,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "7110461",
+    "question": "Will the highest temperature in London be 10°C on November 19?",
+    "bucket_low": 10,
+    "bucket_high": 10,
+    "entry_price": 0.24,
+    "bid_at_entry": 0.22,
+    "spread": 0.02,
+    "shares": 166.67,
+    "cost": 40,
+    "p": 0.44,
+    "ev": 0.8333,
+    "edge": 0.0866,
+    "kelly": 0.0682,
+    "forecast_temp": 9.54,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-11-18T04:29:25.337Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.176
+  },
+  "positions": [
+    {
+      "market_id": "7110461",
+      "question": "Will the highest temperature in London be 10°C on November 19?",
+      "bucket_low": 10,
+      "bucket_high": 10,
+      "entry_price": 0.24,
+      "bid_at_entry": 0.22,
+      "spread": 0.02,
+      "shares": 166.67,
+      "cost": 40,
+      "p": 0.44,
+      "ev": 0.8333,
+      "edge": 0.0866,
+      "kelly": 0.0682,
+      "forecast_temp": 9.54,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-11-18T04:29:25.337Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.176
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -161,6 +211,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-18T04:29:25.337Z",
+      "horizon": "D+1",
+      "hours_left": 31.5,
+      "ecmwf": 10.2,
+      "hrrr": 10.2,
+      "metar": null,
+      "best": 10.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.2,
+          "gfs_seamless": 10.2,
+          "icon_seamless": 11.1
+        },
+        "mean": 10.4,
+        "spread": 0.7,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          8.9,
+          8.9,
+          8.8,
+          9.1,
+          10.5,
+          10.5,
+          9.3,
+          9.5,
+          9.4,
+          9.6,
+          9.7,
+          10.8,
+          10.4,
+          10.9,
+          10.6,
+          9.6,
+          9.6,
+          10.1,
+          10,
+          9.6,
+          9.2,
+          8.7,
+          9.3,
+          8.6,
+          9,
+          9.4,
+          10.1,
+          9.8,
+          8.8,
+          9.1,
+          9,
+          8.8,
+          8.1,
+          9.4,
+          10,
+          9.4,
+          9.1,
+          9.4,
+          10.1,
+          8.9,
+          10.4,
+          10,
+          8.7,
+          10.1,
+          9.7,
+          9.6,
+          8.5,
+          10,
+          10.2,
+          9.2
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -179,6 +303,14 @@
       "top2_bucket": "10-11C",
       "top2_price": 0.5,
       "top2_sum": 0.745
+    },
+    {
+      "ts": "2026-11-18T04:29:25.337Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.535,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.535,
+      "top2_sum": 0.765
     }
   ],
   "all_outcomes": [
@@ -189,11 +321,11 @@
         -999,
         5
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 122
+      "volume": 124
     },
     {
       "question": "Will the highest temperature in London be 6°C on November 19?",
@@ -206,7 +338,7 @@
       "ask": 0.003,
       "price": 0.003,
       "spread": 0,
-      "volume": 22
+      "volume": 24
     },
     {
       "question": "Will the highest temperature in London be 7°C on November 19?",
@@ -219,7 +351,7 @@
       "ask": 0.007,
       "price": 0.007,
       "spread": 0,
-      "volume": 22
+      "volume": 24
     },
     {
       "question": "Will the highest temperature in London be 8°C on November 19?",
@@ -228,11 +360,11 @@
         8,
         8
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 43
+      "volume": 45
     },
     {
       "question": "Will the highest temperature in London be 9°C on November 19?",
@@ -241,11 +373,11 @@
         9,
         9
       ],
-      "bid": 0.026,
-      "ask": 0.026,
-      "price": 0.026,
+      "bid": 0.028,
+      "ask": 0.028,
+      "price": 0.028,
       "spread": 0,
-      "volume": 67
+      "volume": 68
     },
     {
       "question": "Will the highest temperature in London be 10°C on November 19?",
@@ -254,11 +386,11 @@
         10,
         10
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.23,
+      "ask": 0.23,
+      "price": 0.23,
       "spread": 0,
-      "volume": 1313
+      "volume": 1416
     },
     {
       "question": "Will the highest temperature in London be 11°C on November 19?",
@@ -267,11 +399,11 @@
         11,
         11
       ],
-      "bid": 0.5,
-      "ask": 0.5,
-      "price": 0.5,
+      "bid": 0.535,
+      "ask": 0.535,
+      "price": 0.535,
       "spread": 0,
-      "volume": 460
+      "volume": 963
     },
     {
       "question": "Will the highest temperature in London be 12°C on November 19?",
@@ -280,11 +412,11 @@
         12,
         12
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.205,
+      "ask": 0.205,
+      "price": 0.205,
       "spread": 0,
-      "volume": 295
+      "volume": 547
     },
     {
       "question": "Will the highest temperature in London be 13°C on November 19?",
@@ -293,11 +425,11 @@
         13,
         13
       ],
-      "bid": 0.018,
-      "ask": 0.018,
-      "price": 0.018,
+      "bid": 0.027,
+      "ask": 0.027,
+      "price": 0.027,
       "spread": 0,
-      "volume": 73
+      "volume": 74
     },
     {
       "question": "Will the highest temperature in London be 14°C on November 19?",
