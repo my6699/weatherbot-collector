@@ -6,7 +6,7 @@
   "station": "KLGA",
   "event_end_date": "2026-11-18T12:00:00Z",
   "hours_at_discovery": 50.1,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -456,6 +456,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-18T14:09:58.975Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 52,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -506,6 +517,14 @@
       "top2_bucket": "62-65F",
       "top2_price": 0.377,
       "top2_sum": 0.876
+    },
+    {
+      "ts": "2026-11-18T14:09:58.975Z",
+      "top_bucket": "62-63F",
+      "top_price": 0.489,
+      "top2_bucket": "62-65F",
+      "top2_price": 0.443,
+      "top2_sum": 0.932
     }
   ],
   "all_outcomes": [
@@ -568,11 +587,11 @@
         56,
         57
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 636
+      "volume": 781
     },
     {
       "question": "Will the highest temperature in New York City be between 58-59°F on November 18?",
@@ -581,11 +600,11 @@
         58,
         59
       ],
-      "bid": 0.0145,
-      "ask": 0.0145,
-      "price": 0.0145,
+      "bid": 0.0085,
+      "ask": 0.0085,
+      "price": 0.0085,
       "spread": 0,
-      "volume": 259
+      "volume": 1351
     },
     {
       "question": "Will the highest temperature in New York City be between 60-61°F on November 18?",
@@ -594,11 +613,11 @@
         60,
         61
       ],
-      "bid": 0.0895,
-      "ask": 0.0895,
-      "price": 0.0895,
+      "bid": 0.0315,
+      "ask": 0.0315,
+      "price": 0.0315,
       "spread": 0,
-      "volume": 1213
+      "volume": 1582
     },
     {
       "question": "Will the highest temperature in New York City be between 62-63°F on November 18?",
@@ -607,11 +626,11 @@
         62,
         63
       ],
-      "bid": 0.499,
-      "ask": 0.499,
-      "price": 0.499,
+      "bid": 0.489,
+      "ask": 0.489,
+      "price": 0.489,
       "spread": 0,
-      "volume": 2710
+      "volume": 4973
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on November 18?",
@@ -620,11 +639,11 @@
         64,
         65
       ],
-      "bid": 0.377,
-      "ask": 0.377,
-      "price": 0.377,
+      "bid": 0.443,
+      "ask": 0.443,
+      "price": 0.443,
       "spread": 0,
-      "volume": 1968
+      "volume": 2882
     },
     {
       "question": "Will the highest temperature in New York City be between 66-67°F on November 18?",
@@ -633,11 +652,11 @@
         66,
         67
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.03,
+      "ask": 0.03,
+      "price": 0.03,
       "spread": 0,
-      "volume": 735
+      "volume": 1529
     },
     {
       "question": "Will the highest temperature in New York City be 68°F or higher on November 18?",
@@ -650,7 +669,7 @@
       "ask": 0.0025,
       "price": 0.0025,
       "spread": 0,
-      "volume": 351
+      "volume": 623
     }
   ],
   "created_at": "2026-11-16T09:51:33.607Z"

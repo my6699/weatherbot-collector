@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-11-18T12:00:00Z",
   "hours_at_discovery": 50.1,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -456,6 +456,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-18T14:11:42.046Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": null,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -506,6 +517,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.256,
       "top2_sum": 0.878
+    },
+    {
+      "ts": "2026-11-18T14:11:42.046Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.9995,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -585,7 +604,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1733
+      "volume": 1739
     },
     {
       "question": "Will the highest temperature in Singapore be 30°C on November 18?",
@@ -607,11 +626,11 @@
         31,
         31
       ],
-      "bid": 0.622,
-      "ask": 0.622,
-      "price": 0.622,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4449
+      "volume": 6517
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on November 18?",
@@ -620,11 +639,11 @@
         32,
         32
       ],
-      "bid": 0.256,
-      "ask": 0.256,
-      "price": 0.256,
-      "spread": 0,
-      "volume": 1721
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 4210
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on November 18?",
@@ -633,11 +652,11 @@
         33,
         33
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3290
+      "volume": 5367
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C or higher on November 18?",
@@ -646,12 +665,13 @@
         34,
         999
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2260
+      "volume": 2372
     }
   ],
-  "created_at": "2026-11-16T09:51:49.442Z"
+  "created_at": "2026-11-16T09:51:49.442Z",
+  "metar_max": 31
 }

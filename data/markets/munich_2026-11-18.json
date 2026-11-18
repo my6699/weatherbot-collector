@@ -6,10 +6,10 @@
   "station": "EDDM",
   "event_end_date": "2026-11-18T12:00:00Z",
   "hours_at_discovery": 50.1,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 13,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -458,6 +458,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-18T14:11:01.249Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 12,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -508,6 +519,14 @@
       "top2_bucket": "13-14C",
       "top2_price": 0.2715,
       "top2_sum": 0.8465
+    },
+    {
+      "ts": "2026-11-18T14:11:01.249Z",
+      "top_bucket": "13-13C",
+      "top_price": 0.994,
+      "top2_bucket": "13-14C",
+      "top2_price": 0.004,
+      "top2_sum": 0.998
     }
   ],
   "all_outcomes": [
@@ -583,11 +602,11 @@
         12,
         12
       ],
-      "bid": 0.1095,
-      "ask": 0.1095,
-      "price": 0.1095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2215
+      "volume": 7279
     },
     {
       "question": "Will the highest temperature in Munich be 13°C on November 18?",
@@ -596,11 +615,11 @@
         13,
         13
       ],
-      "bid": 0.575,
-      "ask": 0.575,
-      "price": 0.575,
+      "bid": 0.994,
+      "ask": 0.994,
+      "price": 0.994,
       "spread": 0,
-      "volume": 1958
+      "volume": 4888
     },
     {
       "question": "Will the highest temperature in Munich be 14°C on November 18?",
@@ -609,11 +628,11 @@
         14,
         14
       ],
-      "bid": 0.2715,
-      "ask": 0.2715,
-      "price": 0.2715,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 3864
+      "volume": 7187
     },
     {
       "question": "Will the highest temperature in Munich be 15°C on November 18?",
@@ -622,11 +641,11 @@
         15,
         15
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.001,
+      "ask": 0.001,
+      "price": 0.001,
       "spread": 0,
-      "volume": 964
+      "volume": 2456
     },
     {
       "question": "Will the highest temperature in Munich be 16°C on November 18?",
@@ -635,11 +654,11 @@
         16,
         16
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 198
+      "volume": 268
     },
     {
       "question": "Will the highest temperature in Munich be 17°C or higher on November 18?",
@@ -655,5 +674,6 @@
       "volume": 35
     }
   ],
-  "created_at": "2026-11-16T09:51:42.454Z"
+  "created_at": "2026-11-16T09:51:42.454Z",
+  "metar_max": 12
 }
