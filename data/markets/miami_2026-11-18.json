@@ -6,10 +6,10 @@
   "station": "KMIA",
   "event_end_date": "2026-11-18T12:00:00Z",
   "hours_at_discovery": 50.1,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 76.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -471,6 +471,81 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-11-18T22:03:19.003Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 78,
+      "hrrr": 74,
+      "metar": 74,
+      "best": 76.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 78,
+          "gfs_seamless": 74,
+          "icon_seamless": 76
+        },
+        "mean": 76.4,
+        "spread": 2.4,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          76,
+          78,
+          75,
+          78,
+          79,
+          78,
+          78,
+          76,
+          79,
+          78,
+          78,
+          78,
+          76,
+          80,
+          79,
+          75,
+          77,
+          76,
+          78,
+          78,
+          79,
+          78,
+          78,
+          78,
+          77,
+          80,
+          80,
+          77,
+          77,
+          78,
+          78,
+          78,
+          79,
+          79,
+          78,
+          78,
+          78,
+          77,
+          79,
+          77,
+          77,
+          78,
+          76,
+          78,
+          80,
+          78,
+          77,
+          77,
+          76,
+          76
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -529,6 +604,14 @@
       "top2_bucket": "76-79F",
       "top2_price": 0.1645,
       "top2_sum": 0.9595
+    },
+    {
+      "ts": "2026-11-18T22:03:19.003Z",
+      "top_bucket": "76-77F",
+      "top_price": 0.992,
+      "top2_bucket": "76-79F",
+      "top2_price": 0.0065,
+      "top2_sum": 0.9985
     }
   ],
   "all_outcomes": [
@@ -569,7 +652,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 571
+      "volume": 578
     },
     {
       "question": "Will the highest temperature in Miami be between 74-75°F on November 18?",
@@ -582,7 +665,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 14190
+      "volume": 18881
     },
     {
       "question": "Will the highest temperature in Miami be between 76-77°F on November 18?",
@@ -591,11 +674,11 @@
         76,
         77
       ],
-      "bid": 0.795,
-      "ask": 0.795,
-      "price": 0.795,
+      "bid": 0.992,
+      "ask": 0.992,
+      "price": 0.992,
       "spread": 0,
-      "volume": 5760
+      "volume": 8634
     },
     {
       "question": "Will the highest temperature in Miami be between 78-79°F on November 18?",
@@ -604,11 +687,11 @@
         78,
         79
       ],
-      "bid": 0.1645,
-      "ask": 0.1645,
-      "price": 0.1645,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 5195
+      "volume": 6494
     },
     {
       "question": "Will the highest temperature in Miami be between 80-81°F on November 18?",
@@ -617,11 +700,11 @@
         80,
         81
       ],
-      "bid": 0.036,
-      "ask": 0.036,
-      "price": 0.036,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 3051
+      "volume": 4723
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on November 18?",
@@ -630,11 +713,11 @@
         82,
         83
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1111
+      "volume": 2142
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on November 18?",
@@ -647,7 +730,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 649
+      "volume": 656
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on November 18?",
