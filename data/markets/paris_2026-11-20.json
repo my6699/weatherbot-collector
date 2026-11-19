@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-20T12:00:00Z",
   "hours_at_discovery": 45.8,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "7136261",
+    "question": "Will the highest temperature in Paris be 12°C on November 20?",
+    "bucket_low": 12,
+    "bucket_high": 12,
+    "entry_price": 0.16,
+    "bid_at_entry": 0.13,
+    "spread": 0.03,
+    "shares": 250,
+    "cost": 40,
+    "p": 0.56,
+    "ev": 2.5,
+    "edge": 0.2683,
+    "kelly": 0.1213,
+    "forecast_temp": 12.18,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-11-19T03:36:45.011Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.104
+  },
+  "positions": [
+    {
+      "market_id": "7136261",
+      "question": "Will the highest temperature in Paris be 12°C on November 20?",
+      "bucket_low": 12,
+      "bucket_high": 12,
+      "entry_price": 0.16,
+      "bid_at_entry": 0.13,
+      "spread": 0.03,
+      "shares": 250,
+      "cost": 40,
+      "p": 0.56,
+      "ev": 2.5,
+      "edge": 0.2683,
+      "kelly": 0.1213,
+      "forecast_temp": 12.18,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-11-19T03:36:45.011Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.104
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -97,6 +147,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-19T03:36:45.011Z",
+      "horizon": "D+1",
+      "hours_left": 32.4,
+      "ecmwf": 12.3,
+      "hrrr": 11.8,
+      "metar": null,
+      "best": 12.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 12.3,
+          "gfs_seamless": 11.8,
+          "icon_seamless": 13.5
+        },
+        "mean": 12.4,
+        "spread": 1.1,
+        "gap": 0.5,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          10.2,
+          11.5,
+          11.7,
+          12.6,
+          11.9,
+          11,
+          10.6,
+          10.9,
+          11.3,
+          12.4,
+          12,
+          11.7,
+          11.8,
+          12.8,
+          11.7,
+          11.1,
+          12.6,
+          11.4,
+          12.3,
+          11.9,
+          12.5,
+          10.7,
+          11.2,
+          11.5,
+          11.6,
+          10.7,
+          12.2,
+          11.6,
+          11.2,
+          12.3,
+          11.4,
+          11.2,
+          12.2,
+          11.5,
+          12.5,
+          11.5,
+          10.5,
+          9.6,
+          12.2,
+          12.4,
+          10.4,
+          12,
+          11.6,
+          11.3,
+          11.7,
+          10,
+          12.7,
+          12,
+          12.2,
+          12.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -115,6 +240,14 @@
       "top2_bucket": "13-14C",
       "top2_price": 0.275,
       "top2_sum": 0.805
+    },
+    {
+      "ts": "2026-11-19T03:36:45.011Z",
+      "top_bucket": "13-13C",
+      "top_price": 0.56,
+      "top2_bucket": "13-14C",
+      "top2_price": 0.235,
+      "top2_sum": 0.795
     }
   ],
   "all_outcomes": [
@@ -164,11 +297,11 @@
         9,
         9
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 0
+      "volume": 59
     },
     {
       "question": "Will the highest temperature in Paris be 10°C on November 20?",
@@ -177,11 +310,11 @@
         10,
         10
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 10
+      "volume": 82
     },
     {
       "question": "Will the highest temperature in Paris be 11°C on November 20?",
@@ -190,11 +323,11 @@
         11,
         11
       ],
-      "bid": 0.034,
-      "ask": 0.034,
-      "price": 0.034,
+      "bid": 0.0185,
+      "ask": 0.0185,
+      "price": 0.0185,
       "spread": 0,
-      "volume": 92
+      "volume": 281
     },
     {
       "question": "Will the highest temperature in Paris be 12°C on November 20?",
@@ -203,11 +336,11 @@
         12,
         12
       ],
-      "bid": 0.155,
-      "ask": 0.155,
-      "price": 0.155,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 320
+      "volume": 578
     },
     {
       "question": "Will the highest temperature in Paris be 13°C on November 20?",
@@ -216,11 +349,11 @@
         13,
         13
       ],
-      "bid": 0.53,
-      "ask": 0.53,
-      "price": 0.53,
+      "bid": 0.56,
+      "ask": 0.56,
+      "price": 0.56,
       "spread": 0,
-      "volume": 727
+      "volume": 936
     },
     {
       "question": "Will the highest temperature in Paris be 14°C on November 20?",
@@ -229,11 +362,11 @@
         14,
         14
       ],
-      "bid": 0.275,
-      "ask": 0.275,
-      "price": 0.275,
+      "bid": 0.235,
+      "ask": 0.235,
+      "price": 0.235,
       "spread": 0,
-      "volume": 91
+      "volume": 183
     },
     {
       "question": "Will the highest temperature in Paris be 15°C on November 20?",
@@ -242,11 +375,11 @@
         15,
         15
       ],
-      "bid": 0.0495,
-      "ask": 0.0495,
-      "price": 0.0495,
+      "bid": 0.031,
+      "ask": 0.031,
+      "price": 0.031,
       "spread": 0,
-      "volume": 54
+      "volume": 170
     },
     {
       "question": "Will the highest temperature in Paris be 16°C or higher on November 20?",
@@ -255,11 +388,11 @@
         16,
         999
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.013,
+      "ask": 0.013,
+      "price": 0.013,
       "spread": 0,
-      "volume": 15
+      "volume": 69
     }
   ],
   "created_at": "2026-11-18T14:10:53.889Z"
