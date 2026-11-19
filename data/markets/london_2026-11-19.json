@@ -6,7 +6,7 @@
   "station": "EGLC",
   "event_end_date": "2026-11-19T12:00:00Z",
   "hours_at_discovery": 46.4,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "7110461",
     "question": "Will the highest temperature in London be 10°C on November 19?",
@@ -56,10 +56,11 @@
       "exit_price": 0.06,
       "close_reason": "stop_loss",
       "closed_at": "2026-11-18T22:03:52.749Z",
-      "stop_price": 0.176
+      "stop_price": 0.176,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 11,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -519,6 +520,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-19T21:41:56.777Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 10.6,
+      "hrrr": 9.7,
+      "metar": 7,
+      "best": 10.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.6,
+          "gfs_seamless": 9.7,
+          "icon_seamless": 9.7
+        },
+        "mean": 10.1,
+        "spread": 0.5,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          10.2,
+          9.6,
+          9.4,
+          10.2,
+          9.9,
+          10.6,
+          10.3,
+          10.3,
+          10.9,
+          10.1,
+          9.9,
+          10.1,
+          10.4,
+          10.3,
+          10.5,
+          10.2,
+          10.4,
+          10,
+          10.6,
+          9.7,
+          10,
+          10.3,
+          9.4,
+          9.6,
+          9.6,
+          11.5,
+          9.9,
+          10.6,
+          9.8,
+          10.1,
+          10.3,
+          10.5,
+          9.8,
+          9.5,
+          10.4,
+          10,
+          9.8,
+          10.3,
+          10.5,
+          10.6,
+          11.1,
+          10.6,
+          10.3,
+          10.4,
+          10.5,
+          10.1,
+          9.2,
+          9.9,
+          9.9,
+          9.6
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -577,6 +652,14 @@
       "top2_bucket": "11-12C",
       "top2_price": 0.0585,
       "top2_sum": 1.0035
+    },
+    {
+      "ts": "2026-11-19T21:41:56.777Z",
+      "top_bucket": "11-11C",
+      "top_price": 0.9995,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -630,7 +713,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 409
+      "volume": 449
     },
     {
       "question": "Will the highest temperature in London be 9°C on November 19?",
@@ -656,7 +739,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 6774
+      "volume": 8713
     },
     {
       "question": "Will the highest temperature in London be 11°C on November 19?",
@@ -665,11 +748,11 @@
         11,
         11
       ],
-      "bid": 0.945,
-      "ask": 0.945,
-      "price": 0.945,
-      "spread": 0,
-      "volume": 5134
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 6493
     },
     {
       "question": "Will the highest temperature in London be 12°C on November 19?",
@@ -678,11 +761,11 @@
         12,
         12
       ],
-      "bid": 0.0585,
-      "ask": 0.0585,
-      "price": 0.0585,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7236
+      "volume": 10596
     },
     {
       "question": "Will the highest temperature in London be 13°C on November 19?",
@@ -691,11 +774,11 @@
         13,
         13
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3293
+      "volume": 6585
     },
     {
       "question": "Will the highest temperature in London be 14°C on November 19?",
@@ -704,11 +787,11 @@
         14,
         14
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1708
+      "volume": 1898
     },
     {
       "question": "Will the highest temperature in London be 15°C or higher on November 19?",
@@ -724,5 +807,6 @@
       "volume": 630
     }
   ],
-  "created_at": "2026-11-17T13:33:36.448Z"
+  "created_at": "2026-11-17T13:33:36.448Z",
+  "metar_max": 10
 }

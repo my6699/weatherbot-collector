@@ -6,10 +6,10 @@
   "station": "KMIA",
   "event_end_date": "2026-11-19T12:00:00Z",
   "hours_at_discovery": 46.4,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 80.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -471,6 +471,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-19T21:41:51.833Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 81,
+      "hrrr": 79,
+      "metar": 80,
+      "best": 80.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 81,
+          "gfs_seamless": 79,
+          "icon_seamless": 80
+        },
+        "mean": 80.2,
+        "spread": 1.2,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          80,
+          81,
+          78,
+          80,
+          78,
+          81,
+          79,
+          80,
+          81,
+          78,
+          81,
+          78,
+          82,
+          79,
+          77,
+          79,
+          81,
+          83,
+          80,
+          83,
+          82,
+          77,
+          81,
+          78,
+          82,
+          78,
+          78,
+          81,
+          82,
+          78,
+          80,
+          76,
+          81,
+          81,
+          80,
+          79,
+          79,
+          83,
+          82,
+          79,
+          81,
+          79,
+          80,
+          81,
+          81,
+          79,
+          80,
+          82,
+          80,
+          80
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -529,6 +603,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.254,
       "top2_sum": 0.784
+    },
+    {
+      "ts": "2026-11-19T21:41:51.833Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.996,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.0045,
+      "top2_sum": 1.0005
     }
   ],
   "all_outcomes": [
@@ -569,7 +651,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 478
+      "volume": 485
     },
     {
       "question": "Will the highest temperature in Miami be between 76-77°F on November 19?",
@@ -578,11 +660,11 @@
         76,
         77
       ],
-      "bid": 0.0195,
-      "ask": 0.0195,
-      "price": 0.0195,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1109
+      "volume": 1884
     },
     {
       "question": "Will the highest temperature in Miami be between 78-79°F on November 19?",
@@ -591,11 +673,11 @@
         78,
         79
       ],
-      "bid": 0.2,
-      "ask": 0.2,
-      "price": 0.2,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2518
+      "volume": 5905
     },
     {
       "question": "Will the highest temperature in Miami be between 80-81°F on November 19?",
@@ -604,11 +686,11 @@
         80,
         81
       ],
-      "bid": 0.53,
-      "ask": 0.53,
-      "price": 0.53,
+      "bid": 0.996,
+      "ask": 0.996,
+      "price": 0.996,
       "spread": 0,
-      "volume": 5681
+      "volume": 8637
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on November 19?",
@@ -617,11 +699,11 @@
         82,
         83
       ],
-      "bid": 0.254,
-      "ask": 0.254,
-      "price": 0.254,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 2618
+      "volume": 4249
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on November 19?",
@@ -630,11 +712,11 @@
         84,
         85
       ],
-      "bid": 0.017,
-      "ask": 0.017,
-      "price": 0.017,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 1161
+      "volume": 2090
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on November 19?",
@@ -643,11 +725,11 @@
         86,
         87
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 324
+      "volume": 531
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on November 19?",
