@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-11-19T12:00:00Z",
   "hours_at_discovery": 46.4,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -395,6 +395,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-19T13:23:01.397Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 73,
+      "hrrr": 71,
+      "metar": 51,
+      "best": 72.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 73,
+          "gfs_seamless": 71,
+          "icon_seamless": 73
+        },
+        "mean": 72.4,
+        "spread": 1.4,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          73,
+          74,
+          73,
+          73,
+          74,
+          75,
+          74,
+          74,
+          74,
+          73,
+          74,
+          75,
+          74,
+          74,
+          74,
+          73,
+          73,
+          74,
+          73,
+          74,
+          74,
+          74,
+          75,
+          74,
+          74,
+          74,
+          73,
+          73,
+          74,
+          74,
+          74,
+          74,
+          74,
+          72,
+          76,
+          74,
+          75,
+          73,
+          73,
+          73,
+          73,
+          74,
+          75,
+          72,
+          73,
+          74,
+          74,
+          73,
+          75,
+          73
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -445,6 +519,14 @@
       "top2_bucket": "72-75F",
       "top2_price": 0.38,
       "top2_sum": 0.865
+    },
+    {
+      "ts": "2026-11-19T13:23:01.397Z",
+      "top_bucket": "74-75F",
+      "top_price": 0.52,
+      "top2_bucket": "72-75F",
+      "top2_price": 0.52,
+      "top2_sum": 0.955
     }
   ],
   "all_outcomes": [
@@ -494,11 +576,11 @@
         66,
         67
       ],
-      "bid": 0.01,
-      "ask": 0.01,
-      "price": 0.01,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 521
+      "volume": 576
     },
     {
       "question": "Will the highest temperature in Dallas be between 68-69°F on November 19?",
@@ -507,11 +589,11 @@
         68,
         69
       ],
-      "bid": 0.0135,
-      "ask": 0.0135,
-      "price": 0.0135,
+      "bid": 0.008,
+      "ask": 0.008,
+      "price": 0.008,
       "spread": 0,
-      "volume": 243
+      "volume": 297
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on November 19?",
@@ -520,11 +602,11 @@
         70,
         71
       ],
-      "bid": 0.0935,
-      "ask": 0.0935,
-      "price": 0.0935,
+      "bid": 0.0365,
+      "ask": 0.0365,
+      "price": 0.0365,
       "spread": 0,
-      "volume": 662
+      "volume": 1178
     },
     {
       "question": "Will the highest temperature in Dallas be between 72-73°F on November 19?",
@@ -533,11 +615,11 @@
         72,
         73
       ],
-      "bid": 0.485,
-      "ask": 0.485,
-      "price": 0.485,
+      "bid": 0.435,
+      "ask": 0.435,
+      "price": 0.435,
       "spread": 0,
-      "volume": 1759
+      "volume": 5087
     },
     {
       "question": "Will the highest temperature in Dallas be between 74-75°F on November 19?",
@@ -546,11 +628,11 @@
         74,
         75
       ],
-      "bid": 0.38,
-      "ask": 0.38,
-      "price": 0.38,
+      "bid": 0.52,
+      "ask": 0.52,
+      "price": 0.52,
       "spread": 0,
-      "volume": 1850
+      "volume": 2652
     },
     {
       "question": "Will the highest temperature in Dallas be between 76-77°F on November 19?",
@@ -559,11 +641,11 @@
         76,
         77
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
-      "volume": 550
+      "volume": 814
     },
     {
       "question": "Will the highest temperature in Dallas be between 78-79°F on November 19?",
@@ -572,11 +654,11 @@
         78,
         79
       ],
-      "bid": 0.0065,
-      "ask": 0.0065,
-      "price": 0.0065,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 271
+      "volume": 447
     },
     {
       "question": "Will the highest temperature in Dallas be 80°F or higher on November 19?",

@@ -6,7 +6,7 @@
   "station": "EDDM",
   "event_end_date": "2026-11-19T12:00:00Z",
   "hours_at_discovery": 46.4,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -394,6 +394,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-19T13:23:31.231Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 9.7,
+      "hrrr": 8.5,
+      "metar": 9,
+      "best": 9.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 9.7,
+          "gfs_seamless": 8.5,
+          "icon_seamless": 9
+        },
+        "mean": 9.2,
+        "spread": 0.7,
+        "gap": 1.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          9.3,
+          9.6,
+          9.5,
+          9.6,
+          10.8,
+          9.4,
+          9.4,
+          9.8,
+          11.2,
+          10.2,
+          9.9,
+          9.5,
+          9.5,
+          9.7,
+          9.1,
+          10.4,
+          9.9,
+          9.4,
+          10.6,
+          10.8,
+          10.1,
+          9.1,
+          9.4,
+          9.7,
+          9.5,
+          10.5,
+          9.3,
+          9.8,
+          10.2,
+          10,
+          9,
+          9.5,
+          9.5,
+          9.2,
+          10.1,
+          9.2,
+          9.6,
+          10.6,
+          9.7,
+          10.4,
+          10.1,
+          9.7,
+          10.3,
+          9.6,
+          9.1,
+          10.5,
+          9.1,
+          9.3,
+          10.2,
+          9.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -444,6 +518,14 @@
       "top2_bucket": "9-10C",
       "top2_price": 0.625,
       "top2_sum": 0.91
+    },
+    {
+      "ts": "2026-11-19T13:23:31.231Z",
+      "top_bucket": "9-9C",
+      "top_price": 0.66,
+      "top2_bucket": "9-10C",
+      "top2_price": 0.31,
+      "top2_sum": 0.97
     }
   ],
   "all_outcomes": [
@@ -493,11 +575,11 @@
         8,
         8
       ],
-      "bid": 0.0215,
-      "ask": 0.0215,
-      "price": 0.0215,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1439
+      "volume": 4102
     },
     {
       "question": "Will the highest temperature in Munich be 9°C on November 19?",
@@ -506,11 +588,11 @@
         9,
         9
       ],
-      "bid": 0.285,
-      "ask": 0.285,
-      "price": 0.285,
-      "spread": 0,
-      "volume": 4331
+      "bid": 0.66,
+      "ask": 0.725,
+      "price": 0.66,
+      "spread": 0.065,
+      "volume": 5669
     },
     {
       "question": "Will the highest temperature in Munich be 10°C on November 19?",
@@ -519,11 +601,11 @@
         10,
         10
       ],
-      "bid": 0.625,
-      "ask": 0.625,
-      "price": 0.625,
+      "bid": 0.31,
+      "ask": 0.31,
+      "price": 0.31,
       "spread": 0,
-      "volume": 2074
+      "volume": 3663
     },
     {
       "question": "Will the highest temperature in Munich be 11°C on November 19?",
@@ -532,11 +614,11 @@
         11,
         11
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
-      "volume": 3274
+      "volume": 4919
     },
     {
       "question": "Will the highest temperature in Munich be 12°C on November 19?",
@@ -545,11 +627,11 @@
         12,
         12
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.004,
+      "ask": 0.004,
+      "price": 0.004,
       "spread": 0,
-      "volume": 922
+      "volume": 1383
     },
     {
       "question": "Will the highest temperature in Munich be 13°C on November 19?",
@@ -558,11 +640,11 @@
         13,
         13
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 218
+      "volume": 259
     },
     {
       "question": "Will the highest temperature in Munich be 14°C on November 19?",
