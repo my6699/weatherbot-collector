@@ -6,7 +6,7 @@
   "station": "EDDM",
   "event_end_date": "2026-11-20T12:00:00Z",
   "hours_at_discovery": 45.8,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -398,6 +398,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-20T13:03:12.492Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 10.1,
+      "hrrr": 8.7,
+      "metar": 9,
+      "best": 9.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.1,
+          "gfs_seamless": 8.7,
+          "icon_seamless": 9.5
+        },
+        "mean": 9.6,
+        "spread": 0.9,
+        "gap": 1.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          10.1,
+          9.3,
+          9.3,
+          10,
+          8.9,
+          10.7,
+          10.6,
+          8.3,
+          9.1,
+          8.8,
+          10.4,
+          10,
+          8.9,
+          10.1,
+          10.5,
+          9.2,
+          8.9,
+          9.2,
+          9.9,
+          9,
+          9.9,
+          9.6,
+          9.6,
+          10.6,
+          10.4,
+          10.2,
+          10.2,
+          9.8,
+          10,
+          10.4,
+          10.4,
+          8.5,
+          10.3,
+          9,
+          10.7,
+          9.8,
+          9.5,
+          9,
+          9.1,
+          10.3,
+          10.2,
+          9.2,
+          10.3,
+          9.6,
+          10.1,
+          8.9,
+          9.1,
+          8.7,
+          8.9,
+          10.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -448,6 +522,14 @@
       "top2_bucket": "10-11C",
       "top2_price": 0.29,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-11-20T13:03:12.492Z",
+      "top_bucket": "10-10C",
+      "top_price": 0.9475,
+      "top2_bucket": "10-11C",
+      "top2_price": 0.0375,
+      "top2_sum": 0.985
     }
   ],
   "all_outcomes": [
@@ -488,7 +570,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 525
+      "volume": 533
     },
     {
       "question": "Will the highest temperature in Munich be 8°C on November 20?",
@@ -514,7 +596,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7347
+      "volume": 9870
     },
     {
       "question": "Will the highest temperature in Munich be 10°C on November 20?",
@@ -523,11 +605,11 @@
         10,
         10
       ],
-      "bid": 0.705,
-      "ask": 0.705,
-      "price": 0.705,
+      "bid": 0.9475,
+      "ask": 0.9475,
+      "price": 0.9475,
       "spread": 0,
-      "volume": 1963
+      "volume": 6210
     },
     {
       "question": "Will the highest temperature in Munich be 11°C on November 20?",
@@ -536,11 +618,11 @@
         11,
         11
       ],
-      "bid": 0.29,
-      "ask": 0.29,
-      "price": 0.29,
+      "bid": 0.0375,
+      "ask": 0.0375,
+      "price": 0.0375,
       "spread": 0,
-      "volume": 2481
+      "volume": 6321
     },
     {
       "question": "Will the highest temperature in Munich be 12°C on November 20?",
@@ -549,11 +631,11 @@
         12,
         12
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 1206
+      "volume": 5346
     },
     {
       "question": "Will the highest temperature in Munich be 13°C on November 20?",
@@ -562,11 +644,11 @@
         13,
         13
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 467
+      "volume": 1225
     },
     {
       "question": "Will the highest temperature in Munich be 14°C on November 20?",
@@ -588,9 +670,9 @@
         15,
         999
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 182
     }

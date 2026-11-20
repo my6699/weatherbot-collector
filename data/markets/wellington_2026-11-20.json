@@ -6,10 +6,10 @@
   "station": "NZWN",
   "event_end_date": "2026-11-20T12:00:00Z",
   "hours_at_discovery": 45.8,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 20,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -394,6 +394,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-20T13:04:01.097Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 13,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -444,6 +455,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.0085,
       "top2_sum": 1.0025
+    },
+    {
+      "ts": "2026-11-20T13:04:01.097Z",
+      "top_bucket": "20-20C",
+      "top_price": 1,
+      "top2_bucket": "19-20C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -454,9 +473,9 @@
         -999,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 35
     },
@@ -467,9 +486,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 35
     },
@@ -480,9 +499,9 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 448
     },
@@ -493,9 +512,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 674
     },
@@ -506,11 +525,11 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1959
+      "volume": 1970
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on November 20?",
@@ -519,9 +538,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5227
     },
@@ -532,11 +551,11 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6500
+      "volume": 6520
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on November 20?",
@@ -545,11 +564,11 @@
         20,
         20
       ],
-      "bid": 0.994,
-      "ask": 0.994,
-      "price": 0.994,
-      "spread": 0,
-      "volume": 7850
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 14472
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C on November 20?",
@@ -558,11 +577,11 @@
         21,
         21
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4832
+      "volume": 5698
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C on November 20?",
@@ -571,9 +590,9 @@
         22,
         22
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3681
     },
@@ -584,12 +603,13 @@
         23,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3454
     }
   ],
-  "created_at": "2026-11-18T14:12:37.777Z"
+  "created_at": "2026-11-18T14:12:37.777Z",
+  "metar_max": 20
 }
