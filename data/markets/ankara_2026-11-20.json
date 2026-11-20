@@ -6,10 +6,10 @@
   "station": "LTAC",
   "event_end_date": "2026-11-20T12:00:00Z",
   "hours_at_discovery": 45.8,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 17,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -468,6 +468,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-20T21:13:44.247Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 15,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -526,6 +537,14 @@
       "top2_bucket": "17-18C",
       "top2_price": 0.084,
       "top2_sum": 0.982
+    },
+    {
+      "ts": "2026-11-20T21:13:44.247Z",
+      "top_bucket": "17-17C",
+      "top_price": 0.9995,
+      "top2_bucket": "16-17C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -588,11 +607,11 @@
         17,
         17
       ],
-      "bid": 0.898,
-      "ask": 0.898,
-      "price": 0.898,
-      "spread": 0,
-      "volume": 2157
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 6279
     },
     {
       "question": "Will the highest temperature in Ankara be 18°C on November 20?",
@@ -601,11 +620,11 @@
         18,
         18
       ],
-      "bid": 0.084,
-      "ask": 0.084,
-      "price": 0.084,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1057
+      "volume": 2793
     },
     {
       "question": "Will the highest temperature in Ankara be 19°C on November 20?",
@@ -614,11 +633,11 @@
         19,
         19
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1110
+      "volume": 2646
     },
     {
       "question": "Will the highest temperature in Ankara be 20°C on November 20?",
@@ -627,11 +646,11 @@
         20,
         20
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3860
+      "volume": 4694
     },
     {
       "question": "Will the highest temperature in Ankara be 21°C on November 20?",
@@ -640,11 +659,11 @@
         21,
         21
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5368
+      "volume": 5549
     },
     {
       "question": "Will the highest temperature in Ankara be 22°C on November 20?",
@@ -657,7 +676,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1708
+      "volume": 1728
     },
     {
       "question": "Will the highest temperature in Ankara be 23°C or higher on November 20?",
@@ -673,5 +692,6 @@
       "volume": 125
     }
   ],
-  "created_at": "2026-11-18T14:11:09.819Z"
+  "created_at": "2026-11-18T14:11:09.819Z",
+  "metar_max": 8
 }
