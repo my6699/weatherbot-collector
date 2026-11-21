@@ -6,10 +6,10 @@
   "station": "LLBG",
   "event_end_date": "2026-11-21T12:00:00Z",
   "hours_at_discovery": 46.6,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 27,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -533,6 +533,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-21T18:02:03.707Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 26.7,
+      "hrrr": 26,
+      "metar": 21,
+      "best": 26.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 26.7,
+          "gfs_seamless": 26,
+          "icon_seamless": 27.2
+        },
+        "mean": 26.6,
+        "spread": 0.6,
+        "gap": 0.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          27.1,
+          27,
+          27.2,
+          27.8,
+          27.1,
+          27.7,
+          27.5,
+          27.4,
+          27.5,
+          28,
+          27.1,
+          27,
+          26.7,
+          27.5,
+          27,
+          27,
+          27.1,
+          27.4,
+          27,
+          27.8,
+          27.3,
+          27.3,
+          26.8,
+          27.2,
+          27.4,
+          27.6,
+          27.3,
+          26.5,
+          27.3,
+          27.8,
+          28,
+          27.4,
+          26.6,
+          27.6,
+          27.8,
+          26.9,
+          26.8,
+          27.6,
+          27.6,
+          26.7,
+          27.4,
+          27.3,
+          26.8,
+          27.4,
+          27,
+          27.1,
+          28.2,
+          27,
+          27.8,
+          27
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -591,6 +665,14 @@
       "top2_bucket": "27-28C",
       "top2_price": 0.008,
       "top2_sum": 1.001
+    },
+    {
+      "ts": "2026-11-21T18:02:03.707Z",
+      "top_bucket": "27-27C",
+      "top_price": 0.9995,
+      "top2_bucket": "26-27C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -666,11 +748,11 @@
         27,
         27
       ],
-      "bid": 0.993,
-      "ask": 0.993,
-      "price": 0.993,
-      "spread": 0,
-      "volume": 2838
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 4339
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 28°C on November 21?",
@@ -679,11 +761,11 @@
         28,
         28
       ],
-      "bid": 0.008,
-      "ask": 0.008,
-      "price": 0.008,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4393
+      "volume": 6442
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 29°C on November 21?",
@@ -692,11 +774,11 @@
         29,
         29
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1172
+      "volume": 1252
     },
     {
       "question": "Will the highest temperature in Tel Aviv be 30°C on November 21?",
@@ -738,5 +820,6 @@
       "volume": 250
     }
   ],
-  "created_at": "2026-11-19T13:24:18.732Z"
+  "created_at": "2026-11-19T13:24:18.732Z",
+  "metar_max": 18
 }
