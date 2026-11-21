@@ -6,10 +6,10 @@
   "station": "KMIA",
   "event_end_date": "2026-11-21T12:00:00Z",
   "hours_at_discovery": 46.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 80.5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -607,6 +607,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-21T23:25:54.678Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 80,
+      "hrrr": 80,
+      "metar": 79,
+      "best": 79.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 80,
+          "gfs_seamless": 80,
+          "icon_seamless": 79
+        },
+        "mean": 79.8,
+        "spread": 0.8,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          77,
+          79,
+          80,
+          79,
+          79,
+          79,
+          76,
+          77,
+          81,
+          77,
+          80,
+          80,
+          79,
+          82,
+          80,
+          82,
+          78,
+          81,
+          77,
+          81,
+          77,
+          79,
+          77,
+          79,
+          79,
+          79,
+          79,
+          81,
+          81,
+          78,
+          77,
+          81,
+          77,
+          79,
+          79,
+          77,
+          79,
+          81,
+          77,
+          80,
+          79,
+          82,
+          80,
+          80,
+          78,
+          78,
+          77,
+          80,
+          75,
+          79
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -673,6 +747,14 @@
       "top2_bucket": "80-83F",
       "top2_price": 0.21,
       "top2_sum": 0.8515
+    },
+    {
+      "ts": "2026-11-21T23:25:54.678Z",
+      "top_bucket": "80-81F",
+      "top_price": 0.996,
+      "top2_bucket": "80-83F",
+      "top2_price": 0.0025,
+      "top2_sum": 0.9985
     }
   ],
   "all_outcomes": [
@@ -713,7 +795,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7605
+      "volume": 7608
     },
     {
       "question": "Will the highest temperature in Miami be between 78-79°F on November 21?",
@@ -722,11 +804,11 @@
         78,
         79
       ],
-      "bid": 0.1495,
-      "ask": 0.1495,
-      "price": 0.1495,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5563
+      "volume": 9969
     },
     {
       "question": "Will the highest temperature in Miami be between 80-81°F on November 21?",
@@ -735,11 +817,11 @@
         80,
         81
       ],
-      "bid": 0.6415,
-      "ask": 0.6415,
-      "price": 0.6415,
+      "bid": 0.996,
+      "ask": 0.996,
+      "price": 0.996,
       "spread": 0,
-      "volume": 2224
+      "volume": 8142
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on November 21?",
@@ -748,11 +830,11 @@
         82,
         83
       ],
-      "bid": 0.21,
-      "ask": 0.21,
-      "price": 0.21,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 4537
+      "volume": 9456
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on November 21?",
@@ -761,11 +843,11 @@
         84,
         85
       ],
-      "bid": 0.021,
-      "ask": 0.021,
-      "price": 0.021,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 5838
+      "volume": 9107
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on November 21?",
@@ -774,11 +856,11 @@
         86,
         87
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1605
+      "volume": 1784
     },
     {
       "question": "Will the highest temperature in Miami be between 88-89°F on November 21?",

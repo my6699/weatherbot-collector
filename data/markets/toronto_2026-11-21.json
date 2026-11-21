@@ -6,10 +6,10 @@
   "station": "CYYZ",
   "event_end_date": "2026-11-21T12:00:00Z",
   "hours_at_discovery": 46.6,
-  "status": "closed",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 12,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -608,6 +608,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-21T23:26:13.121Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 13.9,
+      "hrrr": 12.5,
+      "metar": 4,
+      "best": 13.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 13.9,
+          "gfs_seamless": 12.5,
+          "icon_seamless": 13.1
+        },
+        "mean": 13.3,
+        "spread": 0.8,
+        "gap": 1.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          14.3,
+          13,
+          13.8,
+          13.3,
+          14,
+          14.3,
+          12.8,
+          13.2,
+          13.6,
+          13.3,
+          13.3,
+          12.9,
+          14.3,
+          13.3,
+          14.4,
+          13.7,
+          13.4,
+          14.2,
+          13.9,
+          13.6,
+          13.9,
+          14.5,
+          13.8,
+          13.8,
+          14.1,
+          13.5,
+          14.3,
+          13.8,
+          13.6,
+          14.1,
+          14.5,
+          13.9,
+          13,
+          12.6,
+          14.1,
+          13.5,
+          13.1,
+          12.9,
+          13.5,
+          13.2,
+          14.7,
+          13.2,
+          14.1,
+          14,
+          13.9,
+          14.2,
+          13.3,
+          13.3,
+          13.2,
+          13.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -674,6 +748,14 @@
       "top2_bucket": "12-13C",
       "top2_price": 0.2695,
       "top2_sum": 0.7115
+    },
+    {
+      "ts": "2026-11-21T23:26:13.121Z",
+      "top_bucket": "12-12C",
+      "top_price": 0.9985,
+      "top2_bucket": "11-12C",
+      "top2_price": 0.9985,
+      "top2_sum": 0.999
     }
   ],
   "all_outcomes": [
@@ -684,11 +766,11 @@
         -999,
         9
       ],
-      "bid": 0.036,
-      "ask": 0.036,
-      "price": 0.036,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2774
+      "volume": 3009
     },
     {
       "question": "Will the highest temperature in Toronto be 10°C on November 21?",
@@ -697,11 +779,11 @@
         10,
         10
       ],
-      "bid": 0.036,
-      "ask": 0.036,
-      "price": 0.036,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1277
+      "volume": 2390
     },
     {
       "question": "Will the highest temperature in Toronto be 11°C on November 21?",
@@ -710,11 +792,11 @@
         11,
         11
       ],
-      "bid": 0.199,
-      "ask": 0.199,
-      "price": 0.199,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1298
+      "volume": 3366
     },
     {
       "question": "Will the highest temperature in Toronto be 12°C on November 21?",
@@ -723,11 +805,11 @@
         12,
         12
       ],
-      "bid": 0.442,
-      "ask": 0.442,
-      "price": 0.442,
+      "bid": 0.9985,
+      "ask": 0.9985,
+      "price": 0.9985,
       "spread": 0,
-      "volume": 1483
+      "volume": 3862
     },
     {
       "question": "Will the highest temperature in Toronto be 13°C on November 21?",
@@ -736,11 +818,11 @@
         13,
         13
       ],
-      "bid": 0.2695,
-      "ask": 0.2695,
-      "price": 0.2695,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1848
+      "volume": 3601
     },
     {
       "question": "Will the highest temperature in Toronto be 14°C on November 21?",
@@ -749,11 +831,11 @@
         14,
         14
       ],
-      "bid": 0.103,
-      "ask": 0.103,
-      "price": 0.103,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1634
+      "volume": 3970
     },
     {
       "question": "Will the highest temperature in Toronto be 15°C on November 21?",
@@ -762,11 +844,11 @@
         15,
         15
       ],
-      "bid": 0.0195,
-      "ask": 0.0195,
-      "price": 0.0195,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1145
+      "volume": 1713
     },
     {
       "question": "Will the highest temperature in Toronto be 16°C on November 21?",
@@ -775,11 +857,11 @@
         16,
         16
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2183
+      "volume": 2667
     },
     {
       "question": "Will the highest temperature in Toronto be 17°C on November 21?",
@@ -788,11 +870,11 @@
         17,
         17
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1554
+      "volume": 2098
     },
     {
       "question": "Will the highest temperature in Toronto be 18°C on November 21?",
