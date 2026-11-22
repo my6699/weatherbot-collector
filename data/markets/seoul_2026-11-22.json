@@ -6,7 +6,7 @@
   "station": "RKSI",
   "event_end_date": "2026-11-22T12:00:00Z",
   "hours_at_discovery": 46.9,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "7190275",
     "question": "Will the highest temperature in Seoul (Incheon) be 4°C on November 22?",
@@ -56,10 +56,11 @@
       "exit_price": 0.0005,
       "close_reason": "stop_loss",
       "closed_at": "2026-11-22T06:59:58.157Z",
-      "stop_price": 0.072
+      "stop_price": 0.072,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -587,6 +588,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-22T15:27:39.384Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 4,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -645,6 +657,14 @@
       "top2_bucket": "5-6C",
       "top2_price": 0.075,
       "top2_sum": 0.995
+    },
+    {
+      "ts": "2026-11-22T15:27:39.384Z",
+      "top_bucket": "5-5C",
+      "top_price": 1,
+      "top2_bucket": "4-5C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -655,9 +675,9 @@
         -999,
         -1
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 95
     },
@@ -668,9 +688,9 @@
         0,
         0
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 95
     },
@@ -681,9 +701,9 @@
         1,
         1
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 275
     },
@@ -694,9 +714,9 @@
         2,
         2
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1966
     },
@@ -707,9 +727,9 @@
         3,
         3
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2786
     },
@@ -720,11 +740,11 @@
         4,
         4
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3721
+      "volume": 3926
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 5°C on November 22?",
@@ -733,11 +753,11 @@
         5,
         5
       ],
-      "bid": 0.92,
-      "ask": 0.92,
-      "price": 0.92,
-      "spread": 0,
-      "volume": 2443
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 8958
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 6°C on November 22?",
@@ -746,11 +766,11 @@
         6,
         6
       ],
-      "bid": 0.075,
-      "ask": 0.075,
-      "price": 0.075,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3161
+      "volume": 6800
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 7°C on November 22?",
@@ -759,11 +779,11 @@
         7,
         7
       ],
-      "bid": 0.0185,
-      "ask": 0.0185,
-      "price": 0.0185,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3778
+      "volume": 16508
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 8°C on November 22?",
@@ -772,11 +792,11 @@
         8,
         8
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3056
+      "volume": 6791
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 9°C or higher on November 22?",
@@ -785,12 +805,13 @@
         9,
         999
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3261
+      "volume": 4822
     }
   ],
-  "created_at": "2026-11-20T13:03:18.267Z"
+  "created_at": "2026-11-20T13:03:18.267Z",
+  "metar_max": 5
 }
