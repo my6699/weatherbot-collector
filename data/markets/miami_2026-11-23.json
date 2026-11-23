@@ -56,8 +56,9 @@
       "exit_price": null,
       "close_reason": null,
       "closed_at": null,
-      "stop_price": 0.072,
-      "forecast_change_streak": 0
+      "stop_price": 0.11,
+      "forecast_change_streak": 0,
+      "trailing_activated": true
     }
   ],
   "actual_temp": null,
@@ -512,6 +513,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-23T02:53:07.585Z",
+      "horizon": "D+0",
+      "hours_left": 9.1,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 76,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -562,6 +574,14 @@
       "top2_bucket": "78-81F",
       "top2_price": 0.315,
       "top2_sum": 0.875
+    },
+    {
+      "ts": "2026-11-23T02:53:07.585Z",
+      "top_bucket": "78-79F",
+      "top_price": 0.525,
+      "top2_bucket": "78-81F",
+      "top2_price": 0.295,
+      "top2_sum": 0.82
     }
   ],
   "all_outcomes": [
@@ -585,11 +605,11 @@
         72,
         73
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 218
+      "volume": 226
     },
     {
       "question": "Will the highest temperature in Miami be between 74-75°F on November 23?",
@@ -598,9 +618,9 @@
         74,
         75
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
       "volume": 258
     },
@@ -611,11 +631,11 @@
         76,
         77
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.141,
+      "ask": 0.141,
+      "price": 0.141,
       "spread": 0,
-      "volume": 1296
+      "volume": 1327
     },
     {
       "question": "Will the highest temperature in Miami be between 78-79°F on November 23?",
@@ -624,11 +644,11 @@
         78,
         79
       ],
-      "bid": 0.56,
-      "ask": 0.56,
-      "price": 0.56,
+      "bid": 0.525,
+      "ask": 0.525,
+      "price": 0.525,
       "spread": 0,
-      "volume": 1392
+      "volume": 1783
     },
     {
       "question": "Will the highest temperature in Miami be between 80-81°F on November 23?",
@@ -637,11 +657,11 @@
         80,
         81
       ],
-      "bid": 0.315,
-      "ask": 0.315,
-      "price": 0.315,
+      "bid": 0.295,
+      "ask": 0.295,
+      "price": 0.295,
       "spread": 0,
-      "volume": 1727
+      "volume": 1888
     },
     {
       "question": "Will the highest temperature in Miami be between 82-83°F on November 23?",
@@ -650,11 +670,11 @@
         82,
         83
       ],
-      "bid": 0.038,
-      "ask": 0.038,
-      "price": 0.038,
+      "bid": 0.0395,
+      "ask": 0.0395,
+      "price": 0.0395,
       "spread": 0,
-      "volume": 1256
+      "volume": 1260
     },
     {
       "question": "Will the highest temperature in Miami be between 84-85°F on November 23?",
@@ -667,7 +687,7 @@
       "ask": 0.0015,
       "price": 0.0015,
       "spread": 0,
-      "volume": 332
+      "volume": 337
     },
     {
       "question": "Will the highest temperature in Miami be between 86-87°F on November 23?",
