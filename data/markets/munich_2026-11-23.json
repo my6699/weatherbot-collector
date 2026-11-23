@@ -6,10 +6,10 @@
   "station": "EDDM",
   "event_end_date": "2026-11-23T12:00:00Z",
   "hours_at_discovery": 48.7,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 3,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -471,6 +471,80 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-11-23T13:06:08.842Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 2.3,
+      "hrrr": 3.2,
+      "metar": 2,
+      "best": 2.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 2.3,
+          "gfs_seamless": 3.2,
+          "icon_seamless": 2.4
+        },
+        "mean": 2.6,
+        "spread": 0.6,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          2,
+          2.1,
+          2.3,
+          2.1,
+          1.8,
+          1.8,
+          2.6,
+          2.3,
+          1.8,
+          3.3,
+          2.6,
+          2.2,
+          1.9,
+          2.8,
+          2,
+          3,
+          2.3,
+          1.8,
+          2,
+          2.9,
+          1.8,
+          2.1,
+          2.5,
+          2,
+          1.6,
+          2.5,
+          2.1,
+          3,
+          3.1,
+          2.4,
+          2.6,
+          2.2,
+          1.7,
+          2.4,
+          2.8,
+          2.1,
+          2.2,
+          2.3,
+          2.3,
+          2.4,
+          2.3,
+          1.9,
+          2,
+          1.6,
+          2.6,
+          1.9,
+          1.8,
+          3,
+          2.8,
+          1.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -529,6 +603,14 @@
       "top2_bucket": "2-3C",
       "top2_price": 0.286,
       "top2_sum": 0.8665
+    },
+    {
+      "ts": "2026-11-23T13:06:08.842Z",
+      "top_bucket": "3-3C",
+      "top_price": 0.9855,
+      "top2_bucket": "3-4C",
+      "top2_price": 0.0125,
+      "top2_sum": 0.998
     }
   ],
   "all_outcomes": [
@@ -556,7 +638,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 400
+      "volume": 420
     },
     {
       "question": "Will the highest temperature in Munich be 0°C on November 23?",
@@ -565,11 +647,11 @@
         0,
         0
       ],
-      "bid": 0.017,
-      "ask": 0.017,
-      "price": 0.017,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 833
+      "volume": 1536
     },
     {
       "question": "Will the highest temperature in Munich be 1°C on November 23?",
@@ -578,11 +660,11 @@
         1,
         1
       ],
-      "bid": 0.1315,
-      "ask": 0.1315,
-      "price": 0.1315,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1011
+      "volume": 3296
     },
     {
       "question": "Will the highest temperature in Munich be 2°C on November 23?",
@@ -591,11 +673,11 @@
         2,
         2
       ],
-      "bid": 0.5805,
-      "ask": 0.5805,
-      "price": 0.5805,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1351
+      "volume": 5439
     },
     {
       "question": "Will the highest temperature in Munich be 3°C on November 23?",
@@ -604,11 +686,11 @@
         3,
         3
       ],
-      "bid": 0.286,
-      "ask": 0.286,
-      "price": 0.286,
+      "bid": 0.9855,
+      "ask": 0.9855,
+      "price": 0.9855,
       "spread": 0,
-      "volume": 1310
+      "volume": 2590
     },
     {
       "question": "Will the highest temperature in Munich be 4°C on November 23?",
@@ -617,11 +699,11 @@
         4,
         4
       ],
-      "bid": 0.0215,
-      "ask": 0.0215,
-      "price": 0.0215,
+      "bid": 0.0125,
+      "ask": 0.0125,
+      "price": 0.0125,
       "spread": 0,
-      "volume": 1012
+      "volume": 1925
     },
     {
       "question": "Will the highest temperature in Munich be 5°C on November 23?",
@@ -630,11 +712,11 @@
         5,
         5
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 334
+      "volume": 923
     },
     {
       "question": "Will the highest temperature in Munich be 6°C on November 23?",
@@ -676,5 +758,6 @@
       "volume": 15
     }
   ],
-  "created_at": "2026-11-21T11:16:42.417Z"
+  "created_at": "2026-11-21T11:16:42.417Z",
+  "metar_max": 0
 }

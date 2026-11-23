@@ -6,7 +6,7 @@
   "station": "LTAC",
   "event_end_date": "2026-11-23T12:00:00Z",
   "hours_at_discovery": 48.7,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -473,6 +473,81 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-11-23T13:06:24.540Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 14.4,
+      "hrrr": 14.4,
+      "metar": null,
+      "best": 14.1,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 14.4,
+          "gfs_seamless": 14.4,
+          "icon_seamless": 13.1
+        },
+        "mean": 14.1,
+        "spread": 1,
+        "gap": 0,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          14.7,
+          14,
+          14.9,
+          14,
+          14.7,
+          14.2,
+          14.5,
+          14.6,
+          14.9,
+          14.2,
+          14.2,
+          14.6,
+          14,
+          14.9,
+          14.9,
+          14.8,
+          14,
+          14.4,
+          14.6,
+          13.8,
+          14.7,
+          14.4,
+          14.3,
+          14.1,
+          14.8,
+          13.5,
+          14.5,
+          15.1,
+          14.2,
+          14.3,
+          14.2,
+          15.4,
+          14.3,
+          14.3,
+          14.4,
+          14,
+          15.4,
+          14,
+          14,
+          15.2,
+          14.3,
+          14.8,
+          14.4,
+          14.8,
+          15,
+          14.8,
+          14.7,
+          14.2,
+          14.2,
+          14.1
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -531,6 +606,14 @@
       "top2_bucket": "14-15C",
       "top2_price": 0.5045,
       "top2_sum": 0.7295
+    },
+    {
+      "ts": "2026-11-23T13:06:24.540Z",
+      "top_bucket": "14-14C",
+      "top_price": 0.91,
+      "top2_bucket": "14-15C",
+      "top2_price": 0.075,
+      "top2_sum": 0.985
     }
   ],
   "all_outcomes": [
@@ -545,7 +628,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 348
+      "volume": 547
     },
     {
       "question": "Will the highest temperature in Ankara be 11°C on November 23?",
@@ -554,11 +637,11 @@
         11,
         11
       ],
-      "bid": 0.001,
-      "ask": 0.001,
-      "price": 0.001,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 550
+      "volume": 1021
     },
     {
       "question": "Will the highest temperature in Ankara be 12°C on November 23?",
@@ -567,11 +650,11 @@
         12,
         12
       ],
-      "bid": 0.0075,
-      "ask": 0.0075,
-      "price": 0.0075,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 566
+      "volume": 1285
     },
     {
       "question": "Will the highest temperature in Ankara be 13°C on November 23?",
@@ -580,11 +663,11 @@
         13,
         13
       ],
-      "bid": 0.037,
-      "ask": 0.037,
-      "price": 0.037,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 909
+      "volume": 2393
     },
     {
       "question": "Will the highest temperature in Ankara be 14°C on November 23?",
@@ -593,11 +676,11 @@
         14,
         14
       ],
-      "bid": 0.225,
-      "ask": 0.225,
-      "price": 0.225,
+      "bid": 0.91,
+      "ask": 0.91,
+      "price": 0.91,
       "spread": 0,
-      "volume": 1606
+      "volume": 2914
     },
     {
       "question": "Will the highest temperature in Ankara be 15°C on November 23?",
@@ -606,11 +689,11 @@
         15,
         15
       ],
-      "bid": 0.5045,
-      "ask": 0.5045,
-      "price": 0.5045,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 549
+      "volume": 1475
     },
     {
       "question": "Will the highest temperature in Ankara be 16°C on November 23?",
@@ -619,11 +702,11 @@
         16,
         16
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.006,
+      "ask": 0.006,
+      "price": 0.006,
       "spread": 0,
-      "volume": 1099
+      "volume": 2008
     },
     {
       "question": "Will the highest temperature in Ankara be 17°C on November 23?",
@@ -632,11 +715,11 @@
         17,
         17
       ],
-      "bid": 0.032,
-      "ask": 0.032,
-      "price": 0.032,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 1033
+      "volume": 1624
     },
     {
       "question": "Will the highest temperature in Ankara be 18°C on November 23?",
@@ -645,11 +728,11 @@
         18,
         18
       ],
-      "bid": 0.0025,
-      "ask": 0.0025,
-      "price": 0.0025,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 450
+      "volume": 649
     },
     {
       "question": "Will the highest temperature in Ankara be 19°C on November 23?",

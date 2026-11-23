@@ -248,6 +248,80 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-11-23T13:07:12.531Z",
+      "horizon": "D+1",
+      "hours_left": 22.9,
+      "ecmwf": 31.3,
+      "hrrr": 31.7,
+      "metar": null,
+      "best": 31.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 31.3,
+          "gfs_seamless": 31.7,
+          "icon_seamless": 32.5
+        },
+        "mean": 31.7,
+        "spread": 0.8,
+        "gap": 0.4,
+        "llmEnhanced": false,
+        "membersMax": [
+          28.4,
+          30.4,
+          30,
+          32,
+          29.3,
+          30,
+          28.1,
+          29.3,
+          30.8,
+          29,
+          30.6,
+          28.9,
+          30.1,
+          30.6,
+          28.7,
+          27.4,
+          28.5,
+          28.9,
+          27.3,
+          28.8,
+          30.3,
+          30.1,
+          30.1,
+          30.1,
+          29.4,
+          27.4,
+          29.9,
+          30.5,
+          31.2,
+          30,
+          29.9,
+          30.2,
+          27.3,
+          29.9,
+          29.9,
+          29.9,
+          30.4,
+          29.3,
+          29.2,
+          29.6,
+          28.5,
+          28.9,
+          29.3,
+          30.5,
+          29.8,
+          29.3,
+          29.8,
+          30.2,
+          29.8,
+          31.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -282,6 +356,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.266,
       "top2_sum": 0.681
+    },
+    {
+      "ts": "2026-11-23T13:07:12.531Z",
+      "top_bucket": "32-32C",
+      "top_price": 0.446,
+      "top2_bucket": "31-32C",
+      "top2_price": 0.446,
+      "top2_sum": 0.731
     }
   ],
   "all_outcomes": [
@@ -305,11 +387,11 @@
         27,
         27
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 254
+      "volume": 275
     },
     {
       "question": "Will the highest temperature in Singapore be 28°C on November 24?",
@@ -318,11 +400,11 @@
         28,
         28
       ],
-      "bid": 0.013,
-      "ask": 0.013,
-      "price": 0.013,
+      "bid": 0.0095,
+      "ask": 0.0095,
+      "price": 0.0095,
       "spread": 0,
-      "volume": 10
+      "volume": 146
     },
     {
       "question": "Will the highest temperature in Singapore be 29°C on November 24?",
@@ -331,9 +413,9 @@
         29,
         29
       ],
-      "bid": 0.0445,
-      "ask": 0.0445,
-      "price": 0.0445,
+      "bid": 0.018,
+      "ask": 0.018,
+      "price": 0.018,
       "spread": 0,
       "volume": 10
     },
@@ -344,11 +426,11 @@
         30,
         30
       ],
-      "bid": 0.23,
-      "ask": 0.23,
-      "price": 0.23,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 268
+      "volume": 504
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on November 24?",
@@ -357,11 +439,11 @@
         31,
         31
       ],
-      "bid": 0.415,
-      "ask": 0.415,
-      "price": 0.415,
+      "bid": 0.285,
+      "ask": 0.285,
+      "price": 0.285,
       "spread": 0,
-      "volume": 462
+      "volume": 771
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on November 24?",
@@ -370,11 +452,11 @@
         32,
         32
       ],
-      "bid": 0.266,
-      "ask": 0.266,
-      "price": 0.266,
+      "bid": 0.446,
+      "ask": 0.446,
+      "price": 0.446,
       "spread": 0,
-      "volume": 459
+      "volume": 580
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on November 24?",
@@ -383,11 +465,11 @@
         33,
         33
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.145,
+      "ask": 0.145,
+      "price": 0.145,
       "spread": 0,
-      "volume": 160
+      "volume": 285
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on November 24?",
@@ -396,11 +478,11 @@
         34,
         34
       ],
-      "bid": 0.0105,
-      "ask": 0.0105,
-      "price": 0.0105,
+      "bid": 0.022,
+      "ask": 0.022,
+      "price": 0.022,
       "spread": 0,
-      "volume": 58
+      "volume": 93
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on November 24?",
@@ -409,11 +491,11 @@
         35,
         35
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 249
+      "volume": 274
     },
     {
       "question": "Will the highest temperature in Singapore be 36°C or higher on November 24?",
