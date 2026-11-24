@@ -6,7 +6,7 @@
   "station": "KMIA",
   "event_end_date": "2026-11-23T12:00:00Z",
   "hours_at_discovery": 48.7,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "7219905",
     "question": "Will the highest temperature in Miami be between 76-77°F on November 23?",
@@ -51,19 +51,20 @@
       "forecast_src": "ensemble",
       "sigma": 2.1,
       "opened_at": "2026-11-22T15:27:25.055Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": 323.64,
+      "exit_price": 1,
+      "close_reason": "resolved",
+      "closed_at": "2026-11-24T00:58:47.241Z",
       "stop_price": 0.11,
       "forecast_change_streak": 0,
-      "trailing_activated": true
+      "trailing_activated": true,
+      "resolved_hit": true
     }
   ],
-  "actual_temp": null,
-  "resolved_outcome": null,
-  "pnl": null,
+  "actual_temp": 76.5,
+  "resolved_outcome": "win",
+  "pnl": 323.64,
   "forecast_snapshots": [
     {
       "ts": "2026-11-21T11:16:32.014Z",
@@ -748,5 +749,6 @@
       "volume": 35
     }
   ],
-  "created_at": "2026-11-21T11:16:32.905Z"
+  "created_at": "2026-11-21T11:16:32.905Z",
+  "metar_max": 77
 }
