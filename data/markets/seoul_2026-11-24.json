@@ -395,6 +395,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-24T11:04:16.189Z",
+      "horizon": "D+0",
+      "hours_left": 0.9,
+      "ecmwf": 5.5,
+      "hrrr": 6.4,
+      "metar": 0,
+      "best": 5.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 5.5,
+          "gfs_seamless": 6.4,
+          "icon_seamless": 5.4
+        },
+        "mean": 5.8,
+        "spread": 0.7,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          5.5,
+          5.8,
+          4.5,
+          5.9,
+          5.1,
+          3.7,
+          5.3,
+          5.7,
+          5.8,
+          5.7,
+          6.2,
+          5.3,
+          6.1,
+          5.5,
+          5.5,
+          4.9,
+          5.5,
+          5.1,
+          5.4,
+          5.6,
+          5,
+          4.7,
+          5.3,
+          5.8,
+          6.1,
+          5.6,
+          6.2,
+          5.3,
+          5.6,
+          4.8,
+          5.1,
+          6.1,
+          5.4,
+          5.6,
+          5,
+          6.1,
+          5.4,
+          5.7,
+          4.8,
+          4.9,
+          5.2,
+          5.1,
+          4.8,
+          5.1,
+          6.6,
+          5.2,
+          5.6,
+          5.4,
+          6.4,
+          5.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -445,6 +519,14 @@
       "top2_bucket": "5-6C",
       "top2_price": 0.065,
       "top2_sum": 0.985
+    },
+    {
+      "ts": "2026-11-24T11:04:16.189Z",
+      "top_bucket": "5-5C",
+      "top_price": 0.9995,
+      "top2_bucket": "4-5C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -520,11 +602,11 @@
         5,
         5
       ],
-      "bid": 0.92,
-      "ask": 0.92,
-      "price": 0.92,
-      "spread": 0,
-      "volume": 13006
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 16716
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 6°C on November 24?",
@@ -533,11 +615,11 @@
         6,
         6
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 11452
+      "volume": 13342
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 7°C on November 24?",
@@ -546,11 +628,11 @@
         7,
         7
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 10463
+      "volume": 10940
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 8°C on November 24?",
@@ -563,7 +645,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 7216
+      "volume": 7318
     },
     {
       "question": "Will the highest temperature in Seoul (Incheon) be 9°C on November 24?",
