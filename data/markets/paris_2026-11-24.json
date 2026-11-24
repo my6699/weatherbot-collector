@@ -6,10 +6,10 @@
   "station": "LFPG",
   "event_end_date": "2026-11-24T12:00:00Z",
   "hours_at_discovery": 53,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 7,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -471,6 +471,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-24T21:19:54.797Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 6.7,
+      "hrrr": 6.9,
+      "metar": 4,
+      "best": 6.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 6.7,
+          "gfs_seamless": 6.9,
+          "icon_seamless": 6.4
+        },
+        "mean": 6.7,
+        "spread": 0.3,
+        "gap": 0.2,
+        "llmEnhanced": false,
+        "membersMax": [
+          7.5,
+          7.6,
+          7.9,
+          7.7,
+          7.1,
+          6.7,
+          7.4,
+          7.5,
+          7.7,
+          7.5,
+          7.7,
+          7.3,
+          7.6,
+          7.8,
+          7.6,
+          7.5,
+          7.7,
+          7.6,
+          7.5,
+          7.2,
+          7.3,
+          7.5,
+          8.4,
+          8.2,
+          7.4,
+          7.2,
+          7.5,
+          8.2,
+          7.6,
+          7.8,
+          7.5,
+          8.1,
+          7.4,
+          7.9,
+          8,
+          8.1,
+          7.4,
+          7,
+          8.1,
+          7.7,
+          8.1,
+          7.4,
+          7.7,
+          6.9,
+          7.7,
+          7.9,
+          7,
+          7.8,
+          8.1,
+          7.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -529,6 +603,14 @@
       "top2_bucket": "7-8C",
       "top2_price": 0.3785,
       "top2_sum": 0.8935
+    },
+    {
+      "ts": "2026-11-24T21:19:54.797Z",
+      "top_bucket": "7-7C",
+      "top_price": 0.9995,
+      "top2_bucket": "6-7C",
+      "top2_price": 0.9995,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -582,7 +664,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1419
+      "volume": 1429
     },
     {
       "question": "Will the highest temperature in Paris be 5°C on November 24?",
@@ -591,11 +673,11 @@
         5,
         5
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3782
+      "volume": 4880
     },
     {
       "question": "Will the highest temperature in Paris be 6°C on November 24?",
@@ -604,11 +686,11 @@
         6,
         6
       ],
-      "bid": 0.09,
-      "ask": 0.09,
-      "price": 0.09,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 6708
+      "volume": 10029
     },
     {
       "question": "Will the highest temperature in Paris be 7°C on November 24?",
@@ -617,11 +699,11 @@
         7,
         7
       ],
-      "bid": 0.515,
-      "ask": 0.515,
-      "price": 0.515,
-      "spread": 0,
-      "volume": 5201
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 9820
     },
     {
       "question": "Will the highest temperature in Paris be 8°C on November 24?",
@@ -630,11 +712,11 @@
         8,
         8
       ],
-      "bid": 0.3785,
-      "ask": 0.3785,
-      "price": 0.3785,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 3352
+      "volume": 5588
     },
     {
       "question": "Will the highest temperature in Paris be 9°C on November 24?",
@@ -643,11 +725,11 @@
         9,
         9
       ],
-      "bid": 0.033,
-      "ask": 0.033,
-      "price": 0.033,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1524
+      "volume": 2575
     },
     {
       "question": "Will the highest temperature in Paris be 10°C on November 24?",
@@ -656,11 +738,11 @@
         10,
         10
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 1321
+      "volume": 1642
     },
     {
       "question": "Will the highest temperature in Paris be 11°C or higher on November 24?",
@@ -669,12 +751,13 @@
         11,
         999
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 650
     }
   ],
-  "created_at": "2026-11-22T06:59:53.300Z"
+  "created_at": "2026-11-22T06:59:53.300Z",
+  "metar_max": 1
 }

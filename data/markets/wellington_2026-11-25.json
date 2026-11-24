@@ -51,11 +51,11 @@
       "forecast_src": "ensemble",
       "sigma": 1.15,
       "opened_at": "2026-11-23T13:07:48.106Z",
-      "status": "open",
-      "pnl": null,
-      "exit_price": null,
-      "close_reason": null,
-      "closed_at": null,
+      "status": "closed",
+      "pnl": -22.22,
+      "exit_price": 0.08,
+      "close_reason": "stop_loss",
+      "closed_at": "2026-11-24T21:20:46.433Z",
       "stop_price": 0.136,
       "forecast_change_streak": 0
     }
@@ -287,6 +287,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-24T21:20:46.433Z",
+      "horizon": "D+1",
+      "hours_left": 14.7,
+      "ecmwf": 19.8,
+      "hrrr": 18.7,
+      "metar": null,
+      "best": 19.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 19.8,
+          "gfs_seamless": 18.7,
+          "icon_seamless": 18.8
+        },
+        "mean": 19.3,
+        "spread": 0.6,
+        "gap": 1.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          19.9,
+          20.2,
+          19.7,
+          19.1,
+          20.1,
+          19.7,
+          20.1,
+          20.2,
+          19.5,
+          19.3,
+          20.2,
+          19.6,
+          20,
+          19.7,
+          20.2,
+          19.6,
+          20.1,
+          19.9,
+          19.6,
+          19.6,
+          20,
+          20.2,
+          19.7,
+          19.6,
+          19.5,
+          19.7,
+          19.7,
+          19.8,
+          19.3,
+          19.7,
+          19.8,
+          19.7,
+          20.1,
+          19.8,
+          20,
+          19.8,
+          19.8,
+          20.3,
+          19.8,
+          19.7,
+          20.2,
+          19.7,
+          19.9,
+          19.7,
+          20,
+          19.7,
+          20.3,
+          20.1,
+          19.5,
+          19.9
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -312,6 +386,14 @@
       "top_price": 0.59,
       "top2_bucket": "20-21C",
       "top2_price": 0.295,
+      "top2_sum": 0.885
+    },
+    {
+      "ts": "2026-11-24T21:20:46.433Z",
+      "top_bucket": "20-20C",
+      "top_price": 0.565,
+      "top2_bucket": "20-21C",
+      "top2_price": 0.32,
       "top2_sum": 0.885
     }
   ],
@@ -375,11 +457,11 @@
         18,
         18
       ],
-      "bid": 0.021,
-      "ask": 0.021,
-      "price": 0.021,
+      "bid": 0.013,
+      "ask": 0.013,
+      "price": 0.013,
       "spread": 0,
-      "volume": 759
+      "volume": 1060
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on November 25?",
@@ -388,11 +470,11 @@
         19,
         19
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.08,
+      "ask": 0.08,
+      "price": 0.08,
       "spread": 0,
-      "volume": 1326
+      "volume": 1912
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on November 25?",
@@ -401,11 +483,11 @@
         20,
         20
       ],
-      "bid": 0.59,
-      "ask": 0.59,
-      "price": 0.59,
+      "bid": 0.565,
+      "ask": 0.565,
+      "price": 0.565,
       "spread": 0,
-      "volume": 614
+      "volume": 1228
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C on November 25?",
@@ -414,11 +496,11 @@
         21,
         21
       ],
-      "bid": 0.295,
-      "ask": 0.295,
-      "price": 0.295,
+      "bid": 0.32,
+      "ask": 0.32,
+      "price": 0.32,
       "spread": 0,
-      "volume": 1060
+      "volume": 2047
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C on November 25?",
@@ -427,11 +509,11 @@
         22,
         22
       ],
-      "bid": 0.012,
-      "ask": 0.012,
-      "price": 0.012,
+      "bid": 0.0245,
+      "ask": 0.0245,
+      "price": 0.0245,
       "spread": 0,
-      "volume": 392
+      "volume": 1101
     },
     {
       "question": "Will the highest temperature in Wellington be 23°C on November 25?",
@@ -444,7 +526,7 @@
       "ask": 0.004,
       "price": 0.004,
       "spread": 0,
-      "volume": 317
+      "volume": 699
     },
     {
       "question": "Will the highest temperature in Wellington be 24°C or higher on November 25?",
@@ -457,7 +539,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 388
+      "volume": 1432
     }
   ],
   "created_at": "2026-11-23T13:07:48.665Z"
