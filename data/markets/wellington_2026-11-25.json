@@ -6,7 +6,7 @@
   "station": "NZWN",
   "event_end_date": "2026-11-25T12:00:00Z",
   "hours_at_discovery": 46.9,
-  "status": "open",
+  "status": "resolved",
   "position": {
     "market_id": "7279946",
     "question": "Will the highest temperature in Wellington be 19°C on November 25?",
@@ -57,10 +57,11 @@
       "close_reason": "stop_loss",
       "closed_at": "2026-11-24T21:20:46.433Z",
       "stop_price": 0.136,
-      "forecast_change_streak": 0
+      "forecast_change_streak": 0,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 20,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -435,6 +436,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-25T14:32:11.892Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 17,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -477,6 +489,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.0495,
       "top2_sum": 0.9895
+    },
+    {
+      "ts": "2026-11-25T14:32:11.892Z",
+      "top_bucket": "20-20C",
+      "top_price": 1,
+      "top2_bucket": "19-20C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -487,9 +507,9 @@
         -999,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 205
     },
@@ -500,9 +520,9 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 235
     },
@@ -513,9 +533,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 35
     },
@@ -526,9 +546,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 575
     },
@@ -539,9 +559,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1261
     },
@@ -552,11 +572,11 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3192
+      "volume": 3204
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on November 25?",
@@ -565,11 +585,11 @@
         20,
         20
       ],
-      "bid": 0.94,
-      "ask": 0.94,
-      "price": 0.94,
-      "spread": 0,
-      "volume": 4670
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 7491
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C on November 25?",
@@ -578,11 +598,11 @@
         21,
         21
       ],
-      "bid": 0.0495,
-      "ask": 0.0495,
-      "price": 0.0495,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 5397
+      "volume": 6511
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C on November 25?",
@@ -591,9 +611,9 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 2356
     },
@@ -604,9 +624,9 @@
         23,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1936
     },
@@ -617,12 +637,13 @@
         24,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1625
+      "volume": 1635
     }
   ],
-  "created_at": "2026-11-23T13:07:48.665Z"
+  "created_at": "2026-11-23T13:07:48.665Z",
+  "metar_max": 20
 }

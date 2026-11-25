@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-11-25T12:00:00Z",
   "hours_at_discovery": 46.9,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -320,6 +320,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-25T14:31:10.362Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 50,
+      "hrrr": 52,
+      "metar": 36,
+      "best": 51,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 50,
+          "gfs_seamless": 52,
+          "icon_seamless": 52
+        },
+        "mean": 51,
+        "spread": 1,
+        "gap": 2,
+        "llmEnhanced": false,
+        "membersMax": [
+          51,
+          51,
+          51,
+          51,
+          51,
+          51,
+          51,
+          51,
+          51,
+          51,
+          50,
+          51,
+          51,
+          51,
+          51,
+          51,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          51,
+          51,
+          51,
+          50,
+          51,
+          51,
+          51,
+          51,
+          50,
+          52,
+          50,
+          51,
+          51,
+          51,
+          50,
+          51,
+          50,
+          50,
+          51,
+          50,
+          50,
+          51,
+          51,
+          51,
+          50,
+          51,
+          50
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -362,6 +436,14 @@
       "top2_bucket": "52-55F",
       "top2_price": 0.49,
       "top2_sum": 0.93
+    },
+    {
+      "ts": "2026-11-25T14:31:10.362Z",
+      "top_bucket": "52-53F",
+      "top_price": 0.5,
+      "top2_bucket": "52-55F",
+      "top2_price": 0.47,
+      "top2_sum": 0.97
     }
   ],
   "all_outcomes": [
@@ -398,11 +480,11 @@
         48,
         49
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 731
+      "volume": 803
     },
     {
       "question": "Will the highest temperature in Dallas be between 50-51°F on November 25?",
@@ -411,11 +493,11 @@
         50,
         51
       ],
-      "bid": 0.0265,
-      "ask": 0.0265,
-      "price": 0.0265,
+      "bid": 0.02,
+      "ask": 0.02,
+      "price": 0.02,
       "spread": 0,
-      "volume": 859
+      "volume": 1573
     },
     {
       "question": "Will the highest temperature in Dallas be between 52-53°F on November 25?",
@@ -424,11 +506,11 @@
         52,
         53
       ],
-      "bid": 0.44,
-      "ask": 0.44,
-      "price": 0.44,
+      "bid": 0.5,
+      "ask": 0.5,
+      "price": 0.5,
       "spread": 0,
-      "volume": 2382
+      "volume": 3328
     },
     {
       "question": "Will the highest temperature in Dallas be between 54-55°F on November 25?",
@@ -437,11 +519,11 @@
         54,
         55
       ],
-      "bid": 0.49,
-      "ask": 0.49,
-      "price": 0.49,
+      "bid": 0.47,
+      "ask": 0.47,
+      "price": 0.47,
       "spread": 0,
-      "volume": 1505
+      "volume": 3037
     },
     {
       "question": "Will the highest temperature in Dallas be between 56-57°F on November 25?",
@@ -450,11 +532,11 @@
         56,
         57
       ],
-      "bid": 0.06,
-      "ask": 0.06,
-      "price": 0.06,
+      "bid": 0.033,
+      "ask": 0.033,
+      "price": 0.033,
       "spread": 0,
-      "volume": 2784
+      "volume": 3246
     },
     {
       "question": "Will the highest temperature in Dallas be between 58-59°F on November 25?",
@@ -463,11 +545,11 @@
         58,
         59
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0025,
+      "ask": 0.0025,
+      "price": 0.0025,
       "spread": 0,
-      "volume": 1032
+      "volume": 1219
     },
     {
       "question": "Will the highest temperature in Dallas be between 60-61°F on November 25?",
@@ -476,9 +558,9 @@
         60,
         61
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 524
     },

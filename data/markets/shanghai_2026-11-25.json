@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-11-25T12:00:00Z",
   "hours_at_discovery": 46.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 13,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -383,6 +383,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-25T14:31:29.066Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 13,
+      "hrrr": 12.9,
+      "metar": 8,
+      "best": 12.7,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 13,
+          "gfs_seamless": 12.9,
+          "icon_seamless": 11.8
+        },
+        "mean": 12.7,
+        "spread": 0.9,
+        "gap": 0.1,
+        "llmEnhanced": false,
+        "membersMax": [
+          12.4,
+          12.1,
+          12.2,
+          12.3,
+          12.5,
+          12.4,
+          12.8,
+          12.4,
+          12,
+          12.5,
+          12.5,
+          12.5,
+          13,
+          11.8,
+          12.4,
+          12.3,
+          12.6,
+          12.6,
+          12.2,
+          12.1,
+          12.8,
+          12.5,
+          12.3,
+          12.9,
+          12.2,
+          12.7,
+          12.2,
+          12.8,
+          12.1,
+          12.5,
+          12.7,
+          12.2,
+          12.2,
+          12.6,
+          12.6,
+          12.8,
+          12.3,
+          12.1,
+          12.4,
+          12.4,
+          12.2,
+          12.5,
+          12.4,
+          12.2,
+          12.5,
+          12.4,
+          12.2,
+          12.7,
+          12.6,
+          12.5
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -424,6 +498,14 @@
       "top_price": 0.805,
       "top2_bucket": "13-14C",
       "top2_price": 0.195,
+      "top2_sum": 1
+    },
+    {
+      "ts": "2026-11-25T14:31:29.066Z",
+      "top_bucket": "13-13C",
+      "top_price": 0.9995,
+      "top2_bucket": "12-13C",
+      "top2_price": 0.9995,
       "top2_sum": 1
     }
   ],
@@ -491,7 +573,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1700
+      "volume": 1720
     },
     {
       "question": "Will the highest temperature in Shanghai be 12°C on November 25?",
@@ -504,7 +586,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 5862
+      "volume": 7364
     },
     {
       "question": "Will the highest temperature in Shanghai be 13°C on November 25?",
@@ -513,11 +595,11 @@
         13,
         13
       ],
-      "bid": 0.805,
-      "ask": 0.805,
-      "price": 0.805,
-      "spread": 0,
-      "volume": 6796
+      "bid": 0.9995,
+      "ask": 0.999,
+      "price": 0.9995,
+      "spread": -0.0005,
+      "volume": 9665
     },
     {
       "question": "Will the highest temperature in Shanghai be 14°C on November 25?",
@@ -526,11 +608,11 @@
         14,
         14
       ],
-      "bid": 0.195,
-      "ask": 0.195,
-      "price": 0.195,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 7706
+      "volume": 12324
     },
     {
       "question": "Will the highest temperature in Shanghai be 15°C on November 25?",
@@ -539,11 +621,11 @@
         15,
         15
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4066
+      "volume": 5106
     },
     {
       "question": "Will the highest temperature in Shanghai be 16°C on November 25?",
@@ -572,5 +654,6 @@
       "volume": 1593
     }
   ],
-  "created_at": "2026-11-23T13:06:58.727Z"
+  "created_at": "2026-11-23T13:06:58.727Z",
+  "metar_max": 13
 }
