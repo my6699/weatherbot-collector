@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-27T12:00:00Z",
   "hours_at_discovery": 45.5,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "7341337",
+    "question": "Will the highest temperature in Toronto be 3°C on November 27?",
+    "bucket_low": 3,
+    "bucket_high": 3,
+    "entry_price": 0.21,
+    "bid_at_entry": 0.18,
+    "spread": 0.03,
+    "shares": 190.48,
+    "cost": 40,
+    "p": 0.64,
+    "ev": 2.0476,
+    "edge": 0.3102,
+    "kelly": 0.1382,
+    "forecast_temp": 3.53,
+    "forecast_src": "ensemble",
+    "sigma": 1.6,
+    "opened_at": "2026-11-26T08:32:04.778Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.144
+  },
+  "positions": [
+    {
+      "market_id": "7341337",
+      "question": "Will the highest temperature in Toronto be 3°C on November 27?",
+      "bucket_low": 3,
+      "bucket_high": 3,
+      "entry_price": 0.21,
+      "bid_at_entry": 0.18,
+      "spread": 0.03,
+      "shares": 190.48,
+      "cost": 40,
+      "p": 0.64,
+      "ev": 2.0476,
+      "edge": 0.3102,
+      "kelly": 0.1382,
+      "forecast_temp": 3.53,
+      "forecast_src": "ensemble",
+      "sigma": 1.6,
+      "opened_at": "2026-11-26T08:32:04.778Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.144
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -161,6 +211,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-26T08:32:04.778Z",
+      "horizon": "D+1",
+      "hours_left": 27.5,
+      "ecmwf": 2.1,
+      "hrrr": 4.9,
+      "metar": null,
+      "best": 3.3,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 2.1,
+          "gfs_seamless": 4.9,
+          "icon_seamless": 3.8
+        },
+        "mean": 3.3,
+        "spread": 1.6,
+        "gap": 2.8,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          3.5,
+          2.8,
+          2.5,
+          3.2,
+          2.4,
+          2.8,
+          1.7,
+          3.3,
+          2.1,
+          2.5,
+          5.5,
+          2.9,
+          2.6,
+          2.9,
+          1.9,
+          2.4,
+          2.8,
+          4.7,
+          2.9,
+          2.8,
+          3.7,
+          5.3,
+          2.6,
+          2,
+          2.8,
+          5.7,
+          4.5,
+          2.4,
+          4.3,
+          5,
+          2.5,
+          2.7,
+          3,
+          2.7,
+          3.4,
+          2.5,
+          3.6,
+          3.5,
+          3.3,
+          2.9,
+          2.4,
+          2.5,
+          2.5,
+          3.5,
+          3,
+          2.8,
+          3.1,
+          3,
+          3.1,
+          2.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -179,6 +304,14 @@
       "top2_bucket": "3-4C",
       "top2_price": 0.435,
       "top2_sum": 0.68
+    },
+    {
+      "ts": "2026-11-26T08:32:04.778Z",
+      "top_bucket": "4-4C",
+      "top_price": 0.44,
+      "top2_bucket": "4-5C",
+      "top2_price": 0.25,
+      "top2_sum": 0.69
     }
   ],
   "all_outcomes": [
@@ -241,9 +374,9 @@
         1,
         1
       ],
-      "bid": 0.1,
-      "ask": 0.1,
-      "price": 0.1,
+      "bid": 0.012,
+      "ask": 0.012,
+      "price": 0.012,
       "spread": 0,
       "volume": 0
     },
@@ -254,9 +387,9 @@
         2,
         2
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.036,
+      "ask": 0.036,
+      "price": 0.036,
       "spread": 0,
       "volume": 0
     },
@@ -267,11 +400,11 @@
         3,
         3
       ],
-      "bid": 0.245,
-      "ask": 0.245,
-      "price": 0.245,
+      "bid": 0.195,
+      "ask": 0.195,
+      "price": 0.195,
       "spread": 0,
-      "volume": 293
+      "volume": 1073
     },
     {
       "question": "Will the highest temperature in Toronto be 4°C on November 27?",
@@ -280,11 +413,11 @@
         4,
         4
       ],
-      "bid": 0.435,
-      "ask": 0.435,
-      "price": 0.435,
+      "bid": 0.44,
+      "ask": 0.44,
+      "price": 0.44,
       "spread": 0,
-      "volume": 58
+      "volume": 708
     },
     {
       "question": "Will the highest temperature in Toronto be 5°C on November 27?",
@@ -293,11 +426,11 @@
         5,
         5
       ],
-      "bid": 0.21,
-      "ask": 0.21,
-      "price": 0.21,
+      "bid": 0.25,
+      "ask": 0.25,
+      "price": 0.25,
       "spread": 0,
-      "volume": 40
+      "volume": 712
     },
     {
       "question": "Will the highest temperature in Toronto be 6°C on November 27?",
@@ -306,11 +439,11 @@
         6,
         6
       ],
-      "bid": 0.105,
-      "ask": 0.105,
-      "price": 0.105,
+      "bid": 0.055,
+      "ask": 0.055,
+      "price": 0.055,
       "spread": 0,
-      "volume": 0
+      "volume": 267
     },
     {
       "question": "Will the highest temperature in Toronto be 7°C or higher on November 27?",
@@ -319,9 +452,9 @@
         7,
         999
       ],
-      "bid": 0.115,
-      "ask": 0.115,
-      "price": 0.115,
+      "bid": 0.0265,
+      "ask": 0.0265,
+      "price": 0.0265,
       "spread": 0,
       "volume": 0
     }
