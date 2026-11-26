@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-11-26T12:00:00Z",
   "hours_at_discovery": 38.7,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -385,6 +385,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-26T19:06:06.794Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 27,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -427,6 +438,14 @@
       "top2_bucket": "32-33C",
       "top2_price": 0.007,
       "top2_sum": 0.972
+    },
+    {
+      "ts": "2026-11-26T19:06:06.794Z",
+      "top_bucket": "32-32C",
+      "top_price": 1,
+      "top2_bucket": "31-32C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -437,9 +456,9 @@
         -999,
         25
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 285
     },
@@ -450,9 +469,9 @@
         26,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 320
     },
@@ -463,9 +482,9 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1907
     },
@@ -476,11 +495,11 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3182
+      "volume": 3193
     },
     {
       "question": "Will the highest temperature in Singapore be 29°C on November 26?",
@@ -489,11 +508,11 @@
         29,
         29
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 4169
+      "volume": 4179
     },
     {
       "question": "Will the highest temperature in Singapore be 30°C on November 26?",
@@ -502,11 +521,11 @@
         30,
         30
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3189
+      "volume": 3205
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on November 26?",
@@ -515,11 +534,11 @@
         31,
         31
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3120
+      "volume": 3163
     },
     {
       "question": "Will the highest temperature in Singapore be 32°C on November 26?",
@@ -528,11 +547,11 @@
         32,
         32
       ],
-      "bid": 0.965,
-      "ask": 0.965,
-      "price": 0.965,
-      "spread": 0,
-      "volume": 3703
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 6186
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on November 26?",
@@ -541,11 +560,11 @@
         33,
         33
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1744
+      "volume": 2989
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on November 26?",
@@ -554,11 +573,11 @@
         34,
         34
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 613
+      "volume": 622
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C or higher on November 26?",
@@ -567,12 +586,13 @@
         35,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 287
     }
   ],
-  "created_at": "2026-11-24T21:20:08.012Z"
+  "created_at": "2026-11-24T21:20:08.012Z",
+  "metar_max": 32
 }

@@ -6,10 +6,10 @@
   "station": "EGLC",
   "event_end_date": "2026-11-26T12:00:00Z",
   "hours_at_discovery": 48.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 6,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -456,6 +456,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-26T19:05:56.011Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 5.9,
+      "hrrr": 6.5,
+      "metar": 4,
+      "best": 6.2,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 5.9,
+          "gfs_seamless": 6.5,
+          "icon_seamless": 6.3
+        },
+        "mean": 6.2,
+        "spread": 0.3,
+        "gap": 0.6,
+        "llmEnhanced": false,
+        "membersMax": [
+          5.9,
+          5.7,
+          5.9,
+          5.7,
+          5.6,
+          6,
+          5.9,
+          6,
+          5.9,
+          5.7,
+          5.9,
+          6,
+          6,
+          5.9,
+          5.8,
+          5.6,
+          5.6,
+          5.5,
+          6.2,
+          5.9,
+          5.9,
+          5.3,
+          5.8,
+          5.9,
+          5.7,
+          5.7,
+          5.8,
+          5.8,
+          6.1,
+          6,
+          6,
+          5.6,
+          5.7,
+          6.2,
+          6,
+          5.7,
+          5.9,
+          5.9,
+          5.9,
+          5.8,
+          5.9,
+          5.8,
+          5.9,
+          5.9,
+          5.8,
+          5.9,
+          6,
+          5.7,
+          6,
+          5.4
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -506,6 +580,14 @@
       "top2_bucket": "6-7C",
       "top2_price": 0.095,
       "top2_sum": 1.005
+    },
+    {
+      "ts": "2026-11-26T19:05:56.011Z",
+      "top_bucket": "6-6C",
+      "top_price": 0.999,
+      "top2_bucket": "5-6C",
+      "top2_price": 0.999,
+      "top2_sum": 0.9995
     }
   ],
   "all_outcomes": [
@@ -546,7 +628,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 460
+      "volume": 465
     },
     {
       "question": "Will the highest temperature in London be 4°C on November 26?",
@@ -572,7 +654,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 9279
+      "volume": 9302
     },
     {
       "question": "Will the highest temperature in London be 6°C on November 26?",
@@ -581,11 +663,11 @@
         6,
         6
       ],
-      "bid": 0.91,
-      "ask": 0.91,
-      "price": 0.91,
+      "bid": 0.999,
+      "ask": 0.999,
+      "price": 0.999,
       "spread": 0,
-      "volume": 4124
+      "volume": 7489
     },
     {
       "question": "Will the highest temperature in London be 7°C on November 26?",
@@ -594,11 +676,11 @@
         7,
         7
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 4136
+      "volume": 6831
     },
     {
       "question": "Will the highest temperature in London be 8°C on November 26?",
@@ -611,7 +693,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 1054
+      "volume": 1808
     },
     {
       "question": "Will the highest temperature in London be 9°C on November 26?",
@@ -624,7 +706,7 @@
       "ask": 0.0005,
       "price": 0.0005,
       "spread": 0,
-      "volume": 497
+      "volume": 502
     },
     {
       "question": "Will the highest temperature in London be 10°C on November 26?",
@@ -653,5 +735,6 @@
       "volume": 241
     }
   ],
-  "created_at": "2026-11-24T11:03:54.091Z"
+  "created_at": "2026-11-24T11:03:54.091Z",
+  "metar_max": 6
 }

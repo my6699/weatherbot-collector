@@ -6,10 +6,10 @@
   "station": "RJTT",
   "event_end_date": "2026-11-26T12:00:00Z",
   "hours_at_discovery": 48.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 15,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -456,6 +456,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-26T19:06:03.900Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 10,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -506,6 +517,14 @@
       "top2_bucket": "15-16C",
       "top2_price": 0.004,
       "top2_sum": 0.999
+    },
+    {
+      "ts": "2026-11-26T19:06:03.900Z",
+      "top_bucket": "15-15C",
+      "top_price": 1,
+      "top2_bucket": "14-15C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -516,9 +535,9 @@
         -999,
         9
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 138
     },
@@ -529,9 +548,9 @@
         10,
         10
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 477
     },
@@ -542,9 +561,9 @@
         11,
         11
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 734
     },
@@ -555,11 +574,11 @@
         12,
         12
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1406
+      "volume": 1408
     },
     {
       "question": "Will the highest temperature in Tokyo be 13°C on November 26?",
@@ -568,9 +587,9 @@
         13,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5540
     },
@@ -581,11 +600,11 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 9221
+      "volume": 9231
     },
     {
       "question": "Will the highest temperature in Tokyo be 15°C on November 26?",
@@ -594,11 +613,11 @@
         15,
         15
       ],
-      "bid": 0.995,
-      "ask": 0.995,
-      "price": 0.995,
-      "spread": 0,
-      "volume": 10061
+      "bid": 1,
+      "ask": 0.999,
+      "price": 1,
+      "spread": -0.001,
+      "volume": 11631
     },
     {
       "question": "Will the highest temperature in Tokyo be 16°C on November 26?",
@@ -607,11 +626,11 @@
         16,
         16
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 6025
+      "volume": 7309
     },
     {
       "question": "Will the highest temperature in Tokyo be 17°C on November 26?",
@@ -620,11 +639,11 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3209
+      "volume": 3220
     },
     {
       "question": "Will the highest temperature in Tokyo be 18°C on November 26?",
@@ -633,9 +652,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 871
     },
@@ -646,12 +665,13 @@
         19,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 497
     }
   ],
-  "created_at": "2026-11-24T11:04:18.345Z"
+  "created_at": "2026-11-24T11:04:18.345Z",
+  "metar_max": 15
 }

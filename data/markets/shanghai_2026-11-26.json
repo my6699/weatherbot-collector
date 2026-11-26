@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-11-26T12:00:00Z",
   "hours_at_discovery": 48.9,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 19,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -459,6 +459,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-26T19:06:05.359Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 9,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -509,6 +520,14 @@
       "top2_bucket": "18-19C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-11-26T19:06:05.359Z",
+      "top_bucket": "19-19C",
+      "top_price": 1,
+      "top2_bucket": "18-19C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -519,9 +538,9 @@
         -999,
         13
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 979
     },
@@ -532,9 +551,9 @@
         14,
         14
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 35
     },
@@ -545,9 +564,9 @@
         15,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 345
     },
@@ -558,11 +577,11 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 742
+      "volume": 752
     },
     {
       "question": "Will the highest temperature in Shanghai be 17°C on November 26?",
@@ -571,11 +590,11 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2427
+      "volume": 2548
     },
     {
       "question": "Will the highest temperature in Shanghai be 18°C on November 26?",
@@ -584,9 +603,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 5514
     },
@@ -597,11 +616,11 @@
         19,
         19
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 7915
+      "price": 1,
+      "spread": -0.001,
+      "volume": 8031
     },
     {
       "question": "Will the highest temperature in Shanghai be 20°C on November 26?",
@@ -610,11 +629,11 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 9587
+      "volume": 11699
     },
     {
       "question": "Will the highest temperature in Shanghai be 21°C on November 26?",
@@ -623,11 +642,11 @@
         21,
         21
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2555
+      "volume": 2557
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on November 26?",
@@ -636,9 +655,9 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1227
     },
@@ -649,12 +668,13 @@
         23,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 15
     }
   ],
-  "created_at": "2026-11-24T11:04:19.842Z"
+  "created_at": "2026-11-24T11:04:19.842Z",
+  "metar_max": 19
 }
