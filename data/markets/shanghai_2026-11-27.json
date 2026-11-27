@@ -6,10 +6,10 @@
   "station": "ZSPD",
   "event_end_date": "2026-11-27T12:00:00Z",
   "hours_at_discovery": 45.5,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 21,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -456,6 +456,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-27T20:01:01.158Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 12,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -506,6 +517,14 @@
       "top2_bucket": "20-21C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-11-27T20:01:01.158Z",
+      "top_bucket": "21-21C",
+      "top_price": 1,
+      "top2_bucket": "20-21C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -516,9 +535,9 @@
         -999,
         15
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 35
     },
@@ -529,9 +548,9 @@
         16,
         16
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 380
     },
@@ -542,9 +561,9 @@
         17,
         17
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 543
     },
@@ -555,9 +574,9 @@
         18,
         18
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1336
     },
@@ -568,9 +587,9 @@
         19,
         19
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 3388
     },
@@ -581,11 +600,11 @@
         20,
         20
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 5221
+      "volume": 5381
     },
     {
       "question": "Will the highest temperature in Shanghai be 21°C on November 27?",
@@ -594,11 +613,11 @@
         21,
         21
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 6995
+      "price": 1,
+      "spread": -0.001,
+      "volume": 7465
     },
     {
       "question": "Will the highest temperature in Shanghai be 22°C on November 27?",
@@ -607,11 +626,11 @@
         22,
         22
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 9831
+      "volume": 10010
     },
     {
       "question": "Will the highest temperature in Shanghai be 23°C on November 27?",
@@ -620,11 +639,11 @@
         23,
         23
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 3524
+      "volume": 3530
     },
     {
       "question": "Will the highest temperature in Shanghai be 24°C on November 27?",
@@ -633,9 +652,9 @@
         24,
         24
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 466
     },
@@ -646,12 +665,13 @@
         25,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 35
     }
   ],
-  "created_at": "2026-11-25T14:31:29.620Z"
+  "created_at": "2026-11-25T14:31:29.620Z",
+  "metar_max": 17
 }

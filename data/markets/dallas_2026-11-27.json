@@ -6,7 +6,7 @@
   "station": "KDAL",
   "event_end_date": "2026-11-27T12:00:00Z",
   "hours_at_discovery": 45.5,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -457,6 +457,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-27T20:00:40.336Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": 68,
+      "hrrr": 68,
+      "metar": 68,
+      "best": 67.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 68,
+          "gfs_seamless": 68,
+          "icon_seamless": 67
+        },
+        "mean": 67.8,
+        "spread": 0.8,
+        "gap": 0,
+        "llmEnhanced": false,
+        "membersMax": [
+          67,
+          69,
+          67,
+          67,
+          67,
+          68,
+          68,
+          68,
+          68,
+          68,
+          67,
+          69,
+          68,
+          69,
+          68,
+          68,
+          67,
+          68,
+          66,
+          67,
+          66,
+          67,
+          68,
+          69,
+          68,
+          68,
+          67,
+          69,
+          68,
+          69,
+          67,
+          68,
+          67,
+          66,
+          69,
+          68,
+          69,
+          68,
+          68,
+          66,
+          67,
+          68,
+          68,
+          67,
+          67,
+          68,
+          68,
+          67,
+          68,
+          68
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -507,6 +581,14 @@
       "top2_bucket": "68-71F",
       "top2_price": 0.276,
       "top2_sum": 0.876
+    },
+    {
+      "ts": "2026-11-27T20:00:40.336Z",
+      "top_bucket": "68-69F",
+      "top_price": 0.645,
+      "top2_bucket": "68-71F",
+      "top2_price": 0.2725,
+      "top2_sum": 0.9175
     }
   ],
   "all_outcomes": [
@@ -569,11 +651,11 @@
         62,
         63
       ],
-      "bid": 0.002,
-      "ask": 0.002,
-      "price": 0.002,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 462
+      "volume": 474
     },
     {
       "question": "Will the highest temperature in Dallas be between 64-65°F on November 27?",
@@ -582,11 +664,11 @@
         64,
         65
       ],
-      "bid": 0.016,
-      "ask": 0.016,
-      "price": 0.016,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 2204
+      "volume": 2938
     },
     {
       "question": "Will the highest temperature in Dallas be between 66-67°F on November 27?",
@@ -595,11 +677,11 @@
         66,
         67
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 5041
+      "volume": 7031
     },
     {
       "question": "Will the highest temperature in Dallas be between 68-69°F on November 27?",
@@ -608,11 +690,11 @@
         68,
         69
       ],
-      "bid": 0.6,
-      "ask": 0.6,
-      "price": 0.6,
+      "bid": 0.645,
+      "ask": 0.645,
+      "price": 0.645,
       "spread": 0,
-      "volume": 4317
+      "volume": 5869
     },
     {
       "question": "Will the highest temperature in Dallas be between 70-71°F on November 27?",
@@ -621,11 +703,11 @@
         70,
         71
       ],
-      "bid": 0.276,
-      "ask": 0.276,
-      "price": 0.276,
+      "bid": 0.2725,
+      "ask": 0.2725,
+      "price": 0.2725,
       "spread": 0,
-      "volume": 5476
+      "volume": 7400
     },
     {
       "question": "Will the highest temperature in Dallas be between 72-73°F on November 27?",
@@ -634,11 +716,11 @@
         72,
         73
       ],
-      "bid": 0.02,
-      "ask": 0.02,
-      "price": 0.02,
+      "bid": 0.0045,
+      "ask": 0.0045,
+      "price": 0.0045,
       "spread": 0,
-      "volume": 1598
+      "volume": 1902
     },
     {
       "question": "Will the highest temperature in Dallas be 74°F or higher on November 27?",
@@ -647,9 +729,9 @@
         74,
         999
       ],
-      "bid": 0.0015,
-      "ask": 0.0015,
-      "price": 0.0015,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 402
     }

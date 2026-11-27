@@ -23,6 +23,81 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-11-27T20:00:36.689Z",
+      "horizon": "D+2",
+      "hours_left": 40,
+      "ecmwf": 52,
+      "hrrr": 56,
+      "metar": null,
+      "best": 53.4,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 52,
+          "gfs_seamless": 56,
+          "icon_seamless": 53
+        },
+        "mean": 53.4,
+        "spread": 2.6,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          53,
+          56,
+          56,
+          54,
+          53,
+          58,
+          54,
+          53,
+          53,
+          53,
+          55,
+          53,
+          55,
+          57,
+          57,
+          54,
+          53,
+          55,
+          54,
+          53,
+          56,
+          57,
+          55,
+          54,
+          54,
+          56,
+          56,
+          56,
+          56,
+          53,
+          56,
+          55,
+          54,
+          52,
+          51,
+          57,
+          54,
+          52,
+          54,
+          54,
+          52,
+          55,
+          54,
+          55,
+          56,
+          54,
+          54,
+          54,
+          55,
+          53
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -33,6 +108,14 @@
       "top2_bucket": "54-57F",
       "top2_price": 0.27,
       "top2_sum": 0.675
+    },
+    {
+      "ts": "2026-11-27T20:00:36.689Z",
+      "top_bucket": "56-57F",
+      "top_price": 0.47,
+      "top2_bucket": "54-57F",
+      "top2_price": 0.47,
+      "top2_sum": 0.685
     }
   ],
   "all_outcomes": [
@@ -43,9 +126,9 @@
         -999,
         47
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 0
     },
@@ -56,9 +139,9 @@
         48,
         49
       ],
-      "bid": 0.065,
-      "ask": 0.065,
-      "price": 0.065,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
       "volume": 0
     },
@@ -69,9 +152,9 @@
         50,
         51
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.1,
+      "ask": 0.1,
+      "price": 0.1,
       "spread": 0,
       "volume": 0
     },
@@ -95,11 +178,11 @@
         54,
         55
       ],
-      "bid": 0.405,
-      "ask": 0.405,
-      "price": 0.405,
+      "bid": 0.215,
+      "ask": 0.215,
+      "price": 0.215,
       "spread": 0,
-      "volume": 10
+      "volume": 173
     },
     {
       "question": "Will the highest temperature in New York City be between 56-57°F on November 29?",
@@ -108,11 +191,11 @@
         56,
         57
       ],
-      "bid": 0.27,
-      "ask": 0.27,
-      "price": 0.27,
+      "bid": 0.47,
+      "ask": 0.47,
+      "price": 0.47,
       "spread": 0,
-      "volume": 0
+      "volume": 119
     },
     {
       "question": "Will the highest temperature in New York City be between 58-59°F on November 29?",
@@ -121,11 +204,11 @@
         58,
         59
       ],
-      "bid": 0.12,
-      "ask": 0.12,
-      "price": 0.12,
+      "bid": 0.185,
+      "ask": 0.185,
+      "price": 0.185,
       "spread": 0,
-      "volume": 0
+      "volume": 30
     },
     {
       "question": "Will the highest temperature in New York City be between 60-61°F on November 29?",
@@ -147,11 +230,11 @@
         62,
         63
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 0
+      "volume": 75
     },
     {
       "question": "Will the highest temperature in New York City be between 64-65°F on November 29?",
@@ -160,9 +243,9 @@
         64,
         65
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 0
     },
@@ -173,9 +256,9 @@
         66,
         999
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 0
     }

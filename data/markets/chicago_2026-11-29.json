@@ -23,6 +23,81 @@
       "best": null,
       "best_source": null,
       "ens": null
+    },
+    {
+      "ts": "2026-11-27T20:00:38.276Z",
+      "horizon": "D+2",
+      "hours_left": 40,
+      "ecmwf": 41,
+      "hrrr": 45,
+      "metar": null,
+      "best": 42.6,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 41,
+          "gfs_seamless": 45,
+          "icon_seamless": 43
+        },
+        "mean": 42.6,
+        "spread": 2.4,
+        "gap": 4,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          43,
+          41,
+          41,
+          41,
+          42,
+          40,
+          43,
+          42,
+          42,
+          41,
+          41,
+          41,
+          40,
+          41,
+          42,
+          42,
+          40,
+          41,
+          42,
+          42,
+          42,
+          40,
+          40,
+          39,
+          40,
+          41,
+          42,
+          41,
+          42,
+          41,
+          41,
+          40,
+          40,
+          39,
+          40,
+          42,
+          41,
+          40,
+          42,
+          41,
+          39,
+          42,
+          42,
+          42,
+          42,
+          39,
+          42,
+          41,
+          41,
+          39
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -33,6 +108,14 @@
       "top2_bucket": "44-47F",
       "top2_price": 0.23,
       "top2_sum": 0.66
+    },
+    {
+      "ts": "2026-11-27T20:00:38.276Z",
+      "top_bucket": "44-45F",
+      "top_price": 0.515,
+      "top2_bucket": "44-47F",
+      "top2_price": 0.305,
+      "top2_sum": 0.82
     }
   ],
   "all_outcomes": [
@@ -43,9 +126,9 @@
         -999,
         33
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 0
     },
@@ -56,11 +139,11 @@
         34,
         35
       ],
-      "bid": 0.05,
-      "ask": 0.05,
-      "price": 0.05,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 0
+      "volume": 35
     },
     {
       "question": "Will the highest temperature in Chicago be between 36-37°F on November 29?",
@@ -69,9 +152,9 @@
         36,
         37
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
       "volume": 0
     },
@@ -82,9 +165,9 @@
         38,
         39
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
       "volume": 0
     },
@@ -95,9 +178,9 @@
         40,
         41
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.04,
+      "ask": 0.04,
+      "price": 0.04,
       "spread": 0,
       "volume": 0
     },
@@ -108,11 +191,11 @@
         42,
         43
       ],
-      "bid": 0.18,
-      "ask": 0.18,
-      "price": 0.18,
+      "bid": 0.125,
+      "ask": 0.125,
+      "price": 0.125,
       "spread": 0,
-      "volume": 0
+      "volume": 126
     },
     {
       "question": "Will the highest temperature in Chicago be between 44-45°F on November 29?",
@@ -121,11 +204,11 @@
         44,
         45
       ],
-      "bid": 0.43,
-      "ask": 0.43,
-      "price": 0.43,
+      "bid": 0.515,
+      "ask": 0.515,
+      "price": 0.515,
       "spread": 0,
-      "volume": 0
+      "volume": 5
     },
     {
       "question": "Will the highest temperature in Chicago be between 46-47°F on November 29?",
@@ -134,11 +217,11 @@
         46,
         47
       ],
-      "bid": 0.23,
-      "ask": 0.23,
-      "price": 0.23,
+      "bid": 0.305,
+      "ask": 0.305,
+      "price": 0.305,
       "spread": 0,
-      "volume": 0
+      "volume": 91
     },
     {
       "question": "Will the highest temperature in Chicago be between 48-49°F on November 29?",
@@ -160,11 +243,11 @@
         50,
         51
       ],
-      "bid": 0.095,
-      "ask": 0.095,
-      "price": 0.095,
+      "bid": 0.0055,
+      "ask": 0.0055,
+      "price": 0.0055,
       "spread": 0,
-      "volume": 0
+      "volume": 20
     },
     {
       "question": "Will the highest temperature in Chicago be 52°F or higher on November 29?",
@@ -173,11 +256,11 @@
         52,
         999
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.0005,
+      "ask": 0.0005,
+      "price": 0.0005,
       "spread": 0,
-      "volume": 0
+      "volume": 35
     }
   ],
   "created_at": "2026-11-27T10:59:01.182Z"

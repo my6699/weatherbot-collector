@@ -6,10 +6,10 @@
   "station": "WSSS",
   "event_end_date": "2026-11-27T12:00:00Z",
   "hours_at_discovery": 45.5,
-  "status": "open",
+  "status": "resolved",
   "position": null,
   "positions": [],
-  "actual_temp": null,
+  "actual_temp": 32,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -460,6 +460,17 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-27T20:01:29.063Z",
+      "horizon": "D+0",
+      "hours_left": 0,
+      "ecmwf": null,
+      "hrrr": null,
+      "metar": 27,
+      "best": null,
+      "best_source": null,
+      "ens": null
     }
   ],
   "market_snapshots": [
@@ -510,6 +521,14 @@
       "top2_bucket": "31-32C",
       "top2_price": 0.9995,
       "top2_sum": 1
+    },
+    {
+      "ts": "2026-11-27T20:01:29.063Z",
+      "top_bucket": "32-32C",
+      "top_price": 1,
+      "top2_bucket": "31-32C",
+      "top2_price": 1,
+      "top2_sum": 1
     }
   ],
   "all_outcomes": [
@@ -520,9 +539,9 @@
         -999,
         26
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 105
     },
@@ -533,9 +552,9 @@
         27,
         27
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 293
     },
@@ -546,9 +565,9 @@
         28,
         28
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 386
     },
@@ -559,11 +578,11 @@
         29,
         29
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 993
+      "volume": 999
     },
     {
       "question": "Will the highest temperature in Singapore be 30°C on November 27?",
@@ -572,11 +591,11 @@
         30,
         30
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1924
+      "volume": 1929
     },
     {
       "question": "Will the highest temperature in Singapore be 31°C on November 27?",
@@ -585,9 +604,9 @@
         31,
         31
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 1994
     },
@@ -598,11 +617,11 @@
         32,
         32
       ],
-      "bid": 0.9995,
+      "bid": 1,
       "ask": 0.999,
-      "price": 0.9995,
-      "spread": -0.0005,
-      "volume": 4079
+      "price": 1,
+      "spread": -0.001,
+      "volume": 4358
     },
     {
       "question": "Will the highest temperature in Singapore be 33°C on November 27?",
@@ -611,11 +630,11 @@
         33,
         33
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 2537
+      "volume": 2542
     },
     {
       "question": "Will the highest temperature in Singapore be 34°C on November 27?",
@@ -624,11 +643,11 @@
         34,
         34
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
-      "volume": 1955
+      "volume": 1961
     },
     {
       "question": "Will the highest temperature in Singapore be 35°C on November 27?",
@@ -637,9 +656,9 @@
         35,
         35
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 383
     },
@@ -650,12 +669,13 @@
         36,
         999
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0,
+      "ask": 0,
+      "price": 0,
       "spread": 0,
       "volume": 368
     }
   ],
-  "created_at": "2026-11-25T14:31:30.973Z"
+  "created_at": "2026-11-25T14:31:30.973Z",
+  "metar_max": 30
 }
