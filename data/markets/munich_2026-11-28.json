@@ -162,6 +162,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-27T02:16:13.077Z",
+      "horizon": "D+1",
+      "hours_left": 33.7,
+      "ecmwf": 0,
+      "hrrr": 0.9,
+      "metar": null,
+      "best": 0.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 0,
+          "gfs_seamless": 0.9,
+          "icon_seamless": 1
+        },
+        "mean": 0.5,
+        "spread": 0.5,
+        "gap": 0.9,
+        "llmEnhanced": false,
+        "membersMax": [
+          0.7,
+          0.3,
+          -1.1,
+          0.7,
+          0.1,
+          -1.2,
+          0,
+          0.3,
+          0.1,
+          -0.1,
+          -1.4,
+          -0.9,
+          0.2,
+          -1,
+          -0.6,
+          -0.6,
+          0.3,
+          0.2,
+          0.3,
+          0.3,
+          0.6,
+          0.5,
+          0.2,
+          -0.3,
+          0.3,
+          -0.7,
+          -0.3,
+          0.3,
+          -0.2,
+          0,
+          0,
+          -0.4,
+          0.8,
+          0.2,
+          -0.7,
+          -1.5,
+          -1.7,
+          -0.3,
+          0.6,
+          -0.4,
+          0.5,
+          -0.4,
+          -0.3,
+          -0.8,
+          -1,
+          -1.5,
+          0,
+          -1,
+          -1.3,
+          0.8
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -180,6 +254,14 @@
       "top2_bucket": "0-1C",
       "top2_price": 0.365,
       "top2_sum": 0.86
+    },
+    {
+      "ts": "2026-11-27T02:16:13.077Z",
+      "top_bucket": "0-0C",
+      "top_price": 0.49,
+      "top2_bucket": "0-1C",
+      "top2_price": 0.395,
+      "top2_sum": 0.885
     }
   ],
   "all_outcomes": [
@@ -203,11 +285,11 @@
         -4,
         -4
       ],
-      "bid": 0.005,
-      "ask": 0.005,
-      "price": 0.005,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 75
+      "volume": 225
     },
     {
       "question": "Will the highest temperature in Munich be -3°C on November 28?",
@@ -216,11 +298,11 @@
         -3,
         -3
       ],
-      "bid": 0.003,
-      "ask": 0.003,
-      "price": 0.003,
+      "bid": 0.0015,
+      "ask": 0.0015,
+      "price": 0.0015,
       "spread": 0,
-      "volume": 75
+      "volume": 136
     },
     {
       "question": "Will the highest temperature in Munich be -2°C on November 28?",
@@ -242,11 +324,11 @@
         -1,
         -1
       ],
-      "bid": 0.07,
-      "ask": 0.07,
-      "price": 0.07,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 226
+      "volume": 411
     },
     {
       "question": "Will the highest temperature in Munich be 0°C on November 28?",
@@ -255,11 +337,11 @@
         0,
         0
       ],
-      "bid": 0.495,
-      "ask": 0.495,
-      "price": 0.495,
+      "bid": 0.49,
+      "ask": 0.49,
+      "price": 0.49,
       "spread": 0,
-      "volume": 2011
+      "volume": 2086
     },
     {
       "question": "Will the highest temperature in Munich be 1°C on November 28?",
@@ -268,11 +350,11 @@
         1,
         1
       ],
-      "bid": 0.365,
-      "ask": 0.365,
-      "price": 0.365,
+      "bid": 0.395,
+      "ask": 0.395,
+      "price": 0.395,
       "spread": 0,
-      "volume": 734
+      "volume": 782
     },
     {
       "question": "Will the highest temperature in Munich be 2°C on November 28?",
@@ -285,7 +367,7 @@
       "ask": 0.05,
       "price": 0.05,
       "spread": 0,
-      "volume": 327
+      "volume": 342
     },
     {
       "question": "Will the highest temperature in Munich be 3°C on November 28?",

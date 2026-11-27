@@ -7,8 +7,58 @@
   "event_end_date": "2026-11-28T12:00:00Z",
   "hours_at_discovery": 51.5,
   "status": "open",
-  "position": null,
-  "positions": [],
+  "position": {
+    "market_id": "7363808",
+    "question": "Will the highest temperature in Wellington be 20°C on November 28?",
+    "bucket_low": 20,
+    "bucket_high": 20,
+    "entry_price": 0.2,
+    "bid_at_entry": 0.17,
+    "spread": 0.03,
+    "shares": 200,
+    "cost": 40,
+    "p": 0.5,
+    "ev": 1.5,
+    "edge": 0.1773,
+    "kelly": 0.0966,
+    "forecast_temp": 22.65,
+    "forecast_src": "ensemble",
+    "sigma": 1.15,
+    "opened_at": "2026-11-27T02:16:28.920Z",
+    "status": "open",
+    "pnl": null,
+    "exit_price": null,
+    "close_reason": null,
+    "closed_at": null,
+    "stop_price": 0.136
+  },
+  "positions": [
+    {
+      "market_id": "7363808",
+      "question": "Will the highest temperature in Wellington be 20°C on November 28?",
+      "bucket_low": 20,
+      "bucket_high": 20,
+      "entry_price": 0.2,
+      "bid_at_entry": 0.17,
+      "spread": 0.03,
+      "shares": 200,
+      "cost": 40,
+      "p": 0.5,
+      "ev": 1.5,
+      "edge": 0.1773,
+      "kelly": 0.0966,
+      "forecast_temp": 22.65,
+      "forecast_src": "ensemble",
+      "sigma": 1.15,
+      "opened_at": "2026-11-27T02:16:28.920Z",
+      "status": "open",
+      "pnl": null,
+      "exit_price": null,
+      "close_reason": null,
+      "closed_at": null,
+      "stop_price": 0.136
+    }
+  ],
   "actual_temp": null,
   "resolved_outcome": null,
   "pnl": null,
@@ -160,6 +210,80 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-27T02:16:28.920Z",
+      "horizon": "D+1",
+      "hours_left": 33.7,
+      "ecmwf": 21.2,
+      "hrrr": 21.9,
+      "metar": null,
+      "best": 21.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 21.2,
+          "gfs_seamless": 21.9,
+          "icon_seamless": 21.7
+        },
+        "mean": 21.5,
+        "spread": 0.4,
+        "gap": 0.7,
+        "llmEnhanced": false,
+        "membersMax": [
+          20.8,
+          20.6,
+          19.9,
+          20.4,
+          20.7,
+          20.3,
+          20.7,
+          20.7,
+          20.5,
+          20.6,
+          20.8,
+          20.2,
+          20,
+          20.4,
+          20.7,
+          20.2,
+          20.7,
+          19.8,
+          20.7,
+          20.5,
+          20.1,
+          21,
+          20.9,
+          20,
+          20.5,
+          20.9,
+          20.5,
+          20.6,
+          20.2,
+          20,
+          20.4,
+          20.9,
+          20.6,
+          20.4,
+          20.6,
+          20.6,
+          21,
+          20.5,
+          20.4,
+          20.4,
+          20.7,
+          20.9,
+          20.7,
+          20.8,
+          20.6,
+          20.5,
+          20.5,
+          20.8,
+          20.5,
+          20.3
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -178,6 +302,14 @@
       "top2_bucket": "21-22C",
       "top2_price": 0.25,
       "top2_sum": 0.68
+    },
+    {
+      "ts": "2026-11-27T02:16:28.920Z",
+      "top_bucket": "21-21C",
+      "top_price": 0.405,
+      "top2_bucket": "21-22C",
+      "top2_price": 0.285,
+      "top2_sum": 0.69
     }
   ],
   "all_outcomes": [
@@ -188,11 +320,11 @@
         -999,
         17
       ],
-      "bid": 0.0035,
-      "ask": 0.0035,
-      "price": 0.0035,
+      "bid": 0.003,
+      "ask": 0.003,
+      "price": 0.003,
       "spread": 0,
-      "volume": 297
+      "volume": 332
     },
     {
       "question": "Will the highest temperature in Wellington be 18°C on November 28?",
@@ -201,11 +333,11 @@
         18,
         18
       ],
-      "bid": 0.0085,
-      "ask": 0.0085,
-      "price": 0.0085,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 198
+      "volume": 236
     },
     {
       "question": "Will the highest temperature in Wellington be 19°C on November 28?",
@@ -214,11 +346,11 @@
         19,
         19
       ],
-      "bid": 0.04,
-      "ask": 0.04,
-      "price": 0.04,
+      "bid": 0.0245,
+      "ask": 0.0245,
+      "price": 0.0245,
       "spread": 0,
-      "volume": 623
+      "volume": 680
     },
     {
       "question": "Will the highest temperature in Wellington be 20°C on November 28?",
@@ -227,11 +359,11 @@
         20,
         20
       ],
-      "bid": 0.23,
-      "ask": 0.23,
-      "price": 0.23,
+      "bid": 0.185,
+      "ask": 0.185,
+      "price": 0.185,
       "spread": 0,
-      "volume": 2585
+      "volume": 3110
     },
     {
       "question": "Will the highest temperature in Wellington be 21°C on November 28?",
@@ -240,11 +372,11 @@
         21,
         21
       ],
-      "bid": 0.43,
-      "ask": 0.43,
-      "price": 0.43,
+      "bid": 0.405,
+      "ask": 0.405,
+      "price": 0.405,
       "spread": 0,
-      "volume": 1407
+      "volume": 3189
     },
     {
       "question": "Will the highest temperature in Wellington be 22°C on November 28?",
@@ -253,11 +385,11 @@
         22,
         22
       ],
-      "bid": 0.25,
-      "ask": 0.25,
-      "price": 0.25,
+      "bid": 0.285,
+      "ask": 0.285,
+      "price": 0.285,
       "spread": 0,
-      "volume": 1771
+      "volume": 2180
     },
     {
       "question": "Will the highest temperature in Wellington be 23°C on November 28?",
@@ -266,11 +398,11 @@
         23,
         23
       ],
-      "bid": 0.0525,
-      "ask": 0.0525,
-      "price": 0.0525,
+      "bid": 0.083,
+      "ask": 0.083,
+      "price": 0.083,
       "spread": 0,
-      "volume": 790
+      "volume": 1323
     },
     {
       "question": "Will the highest temperature in Wellington be 24°C on November 28?",
@@ -279,11 +411,11 @@
         24,
         24
       ],
-      "bid": 0.007,
-      "ask": 0.007,
-      "price": 0.007,
+      "bid": 0.0065,
+      "ask": 0.0065,
+      "price": 0.0065,
       "spread": 0,
-      "volume": 373
+      "volume": 408
     },
     {
       "question": "Will the highest temperature in Wellington be 25°C on November 28?",
