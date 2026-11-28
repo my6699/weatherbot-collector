@@ -6,7 +6,7 @@
   "station": "EGLC",
   "event_end_date": "2026-11-27T12:00:00Z",
   "hours_at_discovery": 45.5,
-  "status": "closed",
+  "status": "resolved",
   "position": {
     "market_id": "7336587",
     "question": "Will the highest temperature in London be 4°C on November 27?",
@@ -57,10 +57,11 @@
       "close_reason": "forecast_changed",
       "closed_at": "2026-11-26T19:05:56.011Z",
       "stop_price": 0.12,
-      "forecast_change_streak": 2
+      "forecast_change_streak": 2,
+      "resolved_hit": false
     }
   ],
-  "actual_temp": null,
+  "actual_temp": 5,
   "resolved_outcome": null,
   "pnl": null,
   "forecast_snapshots": [
@@ -787,5 +788,6 @@
       "volume": 85
     }
   ],
-  "created_at": "2026-11-25T14:31:15.047Z"
+  "created_at": "2026-11-25T14:31:15.047Z",
+  "metar_max": 5
 }
