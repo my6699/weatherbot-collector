@@ -6,7 +6,7 @@
   "station": "CYYZ",
   "event_end_date": "2026-11-28T12:00:00Z",
   "hours_at_discovery": 40.9,
-  "status": "open",
+  "status": "closed",
   "position": null,
   "positions": [],
   "actual_temp": null,
@@ -386,6 +386,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-28T11:56:26.633Z",
+      "horizon": "D+0",
+      "hours_left": 0.1,
+      "ecmwf": 10.5,
+      "hrrr": 8.7,
+      "metar": 4,
+      "best": 9.5,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 10.5,
+          "gfs_seamless": 8.7,
+          "icon_seamless": 8.1
+        },
+        "mean": 9.5,
+        "spread": 1.4,
+        "gap": 1.8,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          10.2,
+          10.7,
+          11.1,
+          9.7,
+          10.6,
+          10.9,
+          9.4,
+          10.7,
+          9.9,
+          10.7,
+          11.6,
+          11,
+          11,
+          10.7,
+          10.2,
+          10.4,
+          10,
+          11.4,
+          10.8,
+          10.3,
+          10.7,
+          10,
+          10.3,
+          10.9,
+          10.2,
+          10.4,
+          9.7,
+          10.4,
+          10.6,
+          11.1,
+          10.2,
+          11,
+          11.1,
+          10.9,
+          10.7,
+          10.4,
+          10.5,
+          11,
+          10.3,
+          9.5,
+          10.2,
+          10.9,
+          11.1,
+          10.6,
+          11,
+          10.3,
+          10.6,
+          10,
+          10.2,
+          10.7
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -428,6 +503,14 @@
       "top2_bucket": "9-10C",
       "top2_price": 0.26,
       "top2_sum": 0.75
+    },
+    {
+      "ts": "2026-11-28T11:56:26.633Z",
+      "top_bucket": "9-9C",
+      "top_price": 0.44,
+      "top2_bucket": "9-10C",
+      "top2_price": 0.38,
+      "top2_sum": 0.82
     }
   ],
   "all_outcomes": [
@@ -503,11 +586,11 @@
         6,
         6
       ],
-      "bid": 0.0005,
-      "ask": 0.0005,
-      "price": 0.0005,
+      "bid": 0.0075,
+      "ask": 0.0075,
+      "price": 0.0075,
       "spread": 0,
-      "volume": 235
+      "volume": 292
     },
     {
       "question": "Will the highest temperature in Toronto be 7°C on November 28?",
@@ -516,11 +599,11 @@
         7,
         7
       ],
-      "bid": 0.0055,
-      "ask": 0.0055,
-      "price": 0.0055,
+      "bid": 0.0155,
+      "ask": 0.0155,
+      "price": 0.0155,
       "spread": 0,
-      "volume": 492
+      "volume": 518
     },
     {
       "question": "Will the highest temperature in Toronto be 8°C on November 28?",
@@ -529,11 +612,11 @@
         8,
         8
       ],
-      "bid": 0.205,
-      "ask": 0.205,
-      "price": 0.205,
+      "bid": 0.11,
+      "ask": 0.11,
+      "price": 0.11,
       "spread": 0,
-      "volume": 879
+      "volume": 1103
     },
     {
       "question": "Will the highest temperature in Toronto be 9°C on November 28?",
@@ -542,11 +625,11 @@
         9,
         9
       ],
-      "bid": 0.49,
-      "ask": 0.49,
-      "price": 0.49,
+      "bid": 0.44,
+      "ask": 0.44,
+      "price": 0.44,
       "spread": 0,
-      "volume": 722
+      "volume": 876
     },
     {
       "question": "Will the highest temperature in Toronto be 10°C on November 28?",
@@ -555,11 +638,11 @@
         10,
         10
       ],
-      "bid": 0.26,
-      "ask": 0.26,
-      "price": 0.26,
+      "bid": 0.38,
+      "ask": 0.38,
+      "price": 0.38,
       "spread": 0,
-      "volume": 1081
+      "volume": 1181
     },
     {
       "question": "Will the highest temperature in Toronto be 11°C or higher on November 28?",
@@ -568,11 +651,11 @@
         11,
         999
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.065,
+      "ask": 0.065,
+      "price": 0.065,
       "spread": 0,
-      "volume": 826
+      "volume": 882
     }
   ],
   "created_at": "2026-11-26T19:06:11.964Z"

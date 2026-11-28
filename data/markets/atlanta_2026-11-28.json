@@ -6,7 +6,7 @@
   "station": "KATL",
   "event_end_date": "2026-11-28T12:00:00Z",
   "hours_at_discovery": 51.5,
-  "status": "open",
+  "status": "closed",
   "position": {
     "market_id": "7365292",
     "question": "Will the highest temperature in Atlanta be between 58-59°F on November 28?",
@@ -510,6 +510,81 @@
         ],
         "membersSource": "ecmwf_ens"
       }
+    },
+    {
+      "ts": "2026-11-28T11:56:11.370Z",
+      "horizon": "D+0",
+      "hours_left": 0.1,
+      "ecmwf": 61,
+      "hrrr": 59,
+      "metar": 36,
+      "best": 59.8,
+      "best_source": "ensemble",
+      "ens": {
+        "models": {
+          "ecmwf_ifs025": 61,
+          "gfs_seamless": 59,
+          "icon_seamless": 58
+        },
+        "mean": 59.8,
+        "spread": 1.8,
+        "gap": 2,
+        "llmEnhanced": true,
+        "llmConfidence": 0.7,
+        "membersMax": [
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          60,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          60,
+          61,
+          61,
+          61,
+          60,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          61,
+          60,
+          61,
+          61,
+          61,
+          61,
+          61,
+          60,
+          61
+        ],
+        "membersSource": "ecmwf_ens"
+      }
     }
   ],
   "market_snapshots": [
@@ -560,6 +635,14 @@
       "top2_bucket": "60-63F",
       "top2_price": 0.535,
       "top2_sum": 0.89
+    },
+    {
+      "ts": "2026-11-28T11:56:11.370Z",
+      "top_bucket": "62-63F",
+      "top_price": 0.57,
+      "top2_bucket": "60-63F",
+      "top2_price": 0.57,
+      "top2_sum": 0.905
     }
   ],
   "all_outcomes": [
@@ -622,11 +705,11 @@
         56,
         57
       ],
-      "bid": 0.0045,
-      "ask": 0.0045,
-      "price": 0.0045,
+      "bid": 0.002,
+      "ask": 0.002,
+      "price": 0.002,
       "spread": 0,
-      "volume": 400
+      "volume": 472
     },
     {
       "question": "Will the highest temperature in Atlanta be between 58-59°F on November 28?",
@@ -635,11 +718,11 @@
         58,
         59
       ],
-      "bid": 0.045,
-      "ask": 0.045,
-      "price": 0.045,
+      "bid": 0.037,
+      "ask": 0.037,
+      "price": 0.037,
       "spread": 0,
-      "volume": 1755
+      "volume": 1910
     },
     {
       "question": "Will the highest temperature in Atlanta be between 60-61°F on November 28?",
@@ -648,11 +731,11 @@
         60,
         61
       ],
-      "bid": 0.355,
-      "ask": 0.355,
-      "price": 0.355,
+      "bid": 0.335,
+      "ask": 0.335,
+      "price": 0.335,
       "spread": 0,
-      "volume": 3285
+      "volume": 3900
     },
     {
       "question": "Will the highest temperature in Atlanta be between 62-63°F on November 28?",
@@ -661,11 +744,11 @@
         62,
         63
       ],
-      "bid": 0.535,
-      "ask": 0.535,
-      "price": 0.535,
+      "bid": 0.57,
+      "ask": 0.57,
+      "price": 0.57,
       "spread": 0,
-      "volume": 4602
+      "volume": 5492
     },
     {
       "question": "Will the highest temperature in Atlanta be between 64-65°F on November 28?",
@@ -674,11 +757,11 @@
         64,
         65
       ],
-      "bid": 0.055,
-      "ask": 0.055,
-      "price": 0.055,
+      "bid": 0.075,
+      "ask": 0.075,
+      "price": 0.075,
       "spread": 0,
-      "volume": 2838
+      "volume": 3351
     },
     {
       "question": "Will the highest temperature in Atlanta be between 66-67°F on November 28?",
@@ -687,11 +770,11 @@
         66,
         67
       ],
-      "bid": 0.004,
-      "ask": 0.004,
-      "price": 0.004,
+      "bid": 0.0035,
+      "ask": 0.0035,
+      "price": 0.0035,
       "spread": 0,
-      "volume": 840
+      "volume": 858
     },
     {
       "question": "Will the highest temperature in Atlanta be 68°F or higher on November 28?",
